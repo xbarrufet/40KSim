@@ -1,0 +1,147 @@
+{
+  "faction": "Chaos Knights",
+  "slug": "chaos-knights",
+  "units_count": 20,
+  "units": [
+    {
+      "name": "Chaos Cerastus Knight Acheron",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/chaos-cerastus-knight-acheron",
+      "slug": "chaos-cerastus-knight-acheron",
+      "points": "370"
+    },
+    {
+      "name": "Chaos Cerastus Knight Atrapos",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/chaos-cerastus-knight-atrapos",
+      "slug": "chaos-cerastus-knight-atrapos",
+      "points": "385"
+    },
+    {
+      "name": "Chaos Cerastus Knight Castigator",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/chaos-cerastus-knight-castigator",
+      "slug": "chaos-cerastus-knight-castigator",
+      "points": "370"
+    },
+    {
+      "name": "Chaos Cerastus Knight Lancer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/chaos-cerastus-knight-lancer",
+      "slug": "chaos-cerastus-knight-lancer",
+      "points": "385"
+    },
+    {
+      "name": "Chaos Questoris Knight Magaera",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/chaos-questoris-knight-magaera",
+      "slug": "chaos-questoris-knight-magaera",
+      "points": "375"
+    },
+    {
+      "name": "Chaos Questoris Knight Styrix",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/chaos-questoris-knight-styrix",
+      "slug": "chaos-questoris-knight-styrix",
+      "points": "365"
+    },
+    {
+      "name": "Knight Abominant",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/knight-abominant",
+      "slug": "knight-abominant",
+      "points": "350"
+    },
+    {
+      "name": "Knight Desecrator",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/knight-desecrator",
+      "slug": "knight-desecrator",
+      "points": "350"
+    },
+    {
+      "name": "Knight Despoiler",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/knight-despoiler",
+      "slug": "knight-despoiler",
+      "points": "360"
+    },
+    {
+      "name": "Knight Rampager",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/knight-rampager",
+      "slug": "knight-rampager",
+      "points": "350"
+    },
+    {
+      "name": "Knight Ruinator",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/knight-ruinator",
+      "slug": "knight-ruinator",
+      "points": "325"
+    },
+    {
+      "name": "Knight Tyrant",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/knight-tyrant",
+      "slug": "knight-tyrant",
+      "points": "390"
+    },
+    {
+      "name": "Chaos Acastus Knight Asterius",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/chaos-knights/units/chaos-acastus-knight-asterius",
+      "slug": "chaos-acastus-knight-asterius",
+      "points": "785"
+    },
+    {
+      "name": "Chaos Acastus Knight Porphyrion",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/chaos-knights/units/chaos-acastus-knight-porphyrion",
+      "slug": "chaos-acastus-knight-porphyrion",
+      "points": "725"
+    },
+    {
+      "name": "War Dog Brigand",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/war-dog-brigand",
+      "slug": "war-dog-brigand",
+      "points": "135"
+    },
+    {
+      "name": "War Dog Executioner",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/war-dog-executioner",
+      "slug": "war-dog-executioner",
+      "points": "130"
+    },
+    {
+      "name": "War Dog Huntsman",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/war-dog-huntsman",
+      "slug": "war-dog-huntsman",
+      "points": "135"
+    },
+    {
+      "name": "War Dog Karnivore",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/war-dog-karnivore",
+      "slug": "war-dog-karnivore",
+      "points": "145"
+    },
+    {
+      "name": "War Dog Moirax",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/war-dog-moirax",
+      "slug": "war-dog-moirax",
+      "points": "150"
+    },
+    {
+      "name": "War Dog Stalker",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-knights/units/war-dog-stalker",
+      "slug": "war-dog-stalker",
+      "points": "135"
+    }
+  ]
+}

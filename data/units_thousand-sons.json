@@ -1,0 +1,203 @@
+{
+  "faction": "Thousand Sons",
+  "slug": "thousand-sons",
+  "units_count": 28,
+  "units": [
+    {
+      "name": "Ahriman",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/thousand-sons/units/ahriman",
+      "slug": "ahriman",
+      "points": "105"
+    },
+    {
+      "name": "Magnus the Red",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/thousand-sons/units/magnus-the-red",
+      "slug": "magnus-the-red",
+      "points": "455"
+    },
+    {
+      "name": "Daemon Prince of Tzeentch",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/daemon-prince-of-tzeentch",
+      "slug": "daemon-prince-of-tzeentch",
+      "points": "170"
+    },
+    {
+      "name": "Daemon Prince of Tzeentch with Wings",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/daemon-prince-of-tzeentch-with-wings",
+      "slug": "daemon-prince-of-tzeentch-with-wings",
+      "points": "170"
+    },
+    {
+      "name": "Exalted Sorcerer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/exalted-sorcerer",
+      "slug": "exalted-sorcerer",
+      "points": "100"
+    },
+    {
+      "name": "Exalted Sorcerer on Disc of Tzeentch",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/exalted-sorcerer-on-disc-of-tzeentch",
+      "slug": "exalted-sorcerer-on-disc-of-tzeentch",
+      "points": "95"
+    },
+    {
+      "name": "Infernal Master",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/infernal-master",
+      "slug": "infernal-master",
+      "points": "105"
+    },
+    {
+      "name": "Sorcerer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/sorcerer",
+      "slug": "sorcerer",
+      "points": "100"
+    },
+    {
+      "name": "Sorcerer in Terminator Armour",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/sorcerer-in-terminator-armour",
+      "slug": "sorcerer-in-terminator-armour",
+      "points": "110"
+    },
+    {
+      "name": "Tzaangor Shaman",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/tzaangor-shaman",
+      "slug": "tzaangor-shaman",
+      "points": "65"
+    },
+    {
+      "name": "Rubric Marines",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/thousand-sons/units/rubric-marines",
+      "slug": "rubric-marines",
+      "points": "115"
+    },
+    {
+      "name": "Tzaangor Enlightened",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/thousand-sons/units/tzaangor-enlightened",
+      "slug": "tzaangor-enlightened",
+      "points": "50"
+    },
+    {
+      "name": "Tzaangor Enlightened with Fatecaster Greatbows",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/thousand-sons/units/tzaangor-enlightened-with-fatecaster-greatbows",
+      "slug": "tzaangor-enlightened-with-fatecaster-greatbows",
+      "points": "55"
+    },
+    {
+      "name": "Chaos Spawn",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/thousand-sons/units/chaos-spawn",
+      "slug": "chaos-spawn",
+      "points": "65"
+    },
+    {
+      "name": "Scarab Occult Terminators",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/thousand-sons/units/scarab-occult-terminators",
+      "slug": "scarab-occult-terminators",
+      "points": "200"
+    },
+    {
+      "name": "Tzaangors",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/thousand-sons/units/tzaangors",
+      "slug": "tzaangors",
+      "points": "75"
+    },
+    {
+      "name": "Chaos Rhino",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/thousand-sons/units/chaos-rhino",
+      "slug": "chaos-rhino",
+      "points": "80"
+    },
+    {
+      "name": "Chaos Land Raider",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/chaos-land-raider",
+      "slug": "chaos-land-raider",
+      "points": "220"
+    },
+    {
+      "name": "Chaos Predator Annihilator",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/chaos-predator-annihilator",
+      "slug": "chaos-predator-annihilator",
+      "points": "140"
+    },
+    {
+      "name": "Chaos Predator Destructor",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/chaos-predator-destructor",
+      "slug": "chaos-predator-destructor",
+      "points": "140"
+    },
+    {
+      "name": "Chaos Vindicator",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/chaos-vindicator",
+      "slug": "chaos-vindicator",
+      "points": "185"
+    },
+    {
+      "name": "Defiler",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/defiler",
+      "slug": "defiler",
+      "points": "300"
+    },
+    {
+      "name": "Forgefiend",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/forgefiend",
+      "slug": "forgefiend",
+      "points": "135"
+    },
+    {
+      "name": "Helbrute",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/helbrute",
+      "slug": "helbrute",
+      "points": "110"
+    },
+    {
+      "name": "Heldrake",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/heldrake",
+      "slug": "heldrake",
+      "points": "175"
+    },
+    {
+      "name": "Maulerfiend",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/maulerfiend",
+      "slug": "maulerfiend",
+      "points": "120"
+    },
+    {
+      "name": "Mutalith Vortex Beast",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/mutalith-vortex-beast",
+      "slug": "mutalith-vortex-beast",
+      "points": "170"
+    },
+    {
+      "name": "Sekhetar Robots",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/thousand-sons/units/sekhetar-robots",
+      "slug": "sekhetar-robots",
+      "points": "85"
+    }
+  ]
+}

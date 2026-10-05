@@ -1,0 +1,35 @@
+{
+  "faction": "Chaos Titan Legions",
+  "slug": "chaos-titan-legions",
+  "units_count": 4,
+  "units": [
+    {
+      "name": "Chaos Reaver Titan",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/chaos-titan-legions/units/chaos-reaver-titan",
+      "slug": "chaos-reaver-titan",
+      "points": "2200"
+    },
+    {
+      "name": "Chaos Warbringer Nemesis Titan",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/chaos-titan-legions/units/chaos-warbringer-nemesis-titan",
+      "slug": "chaos-warbringer-nemesis-titan",
+      "points": "2600"
+    },
+    {
+      "name": "Chaos Warhound Titan",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/chaos-titan-legions/units/chaos-warhound-titan",
+      "slug": "chaos-warhound-titan",
+      "points": "1100"
+    },
+    {
+      "name": "Chaos Warlord Titan",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/chaos-titan-legions/units/chaos-warlord-titan",
+      "slug": "chaos-warlord-titan",
+      "points": "3500"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "faction": "Grey Knights",
+  "slug": "grey-knights",
+  "units_count": 26,
+  "units": [
+    {
+      "name": "Castellan Crowe",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/grey-knights/units/castellan-crowe",
+      "slug": "castellan-crowe",
+      "points": "105"
+    },
+    {
+      "name": "Grand Master Voldus",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/grey-knights/units/grand-master-voldus",
+      "slug": "grand-master-voldus",
+      "points": "130"
+    },
+    {
+      "name": "Brother-Captain",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/grey-knights/units/brother-captain",
+      "slug": "brother-captain",
+      "points": "100"
+    },
+    {
+      "name": "Brotherhood Champion",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/grey-knights/units/brotherhood-champion",
+      "slug": "brotherhood-champion",
+      "points": "75"
+    },
+    {
+      "name": "Brotherhood Chaplain",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/grey-knights/units/brotherhood-chaplain",
+      "slug": "brotherhood-chaplain",
+      "points": "70"
+    },
+    {
+      "name": "Brotherhood Librarian",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/grey-knights/units/brotherhood-librarian",
+      "slug": "brotherhood-librarian",
+      "points": "95"
+    },
+    {
+      "name": "Brotherhood Techmarine",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/grey-knights/units/brotherhood-techmarine",
+      "slug": "brotherhood-techmarine",
+      "points": "75"
+    },
+    {
+      "name": "Grand Master",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/grey-knights/units/grand-master",
+      "slug": "grand-master",
+      "points": "100"
+    },
+    {
+      "name": "Grand Master in Nemesis Dreadknight",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/grey-knights/units/grand-master-in-nemesis-dreadknight",
+      "slug": "grand-master-in-nemesis-dreadknight",
+      "points": "210"
+    },
+    {
+      "name": "Venerable Dreadnought",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/grey-knights/units/venerable-dreadnought",
+      "slug": "venerable-dreadnought",
+      "points": "130"
+    },
+    {
+      "name": "Brotherhood Terminator Squad",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/grey-knights/units/brotherhood-terminator-squad",
+      "slug": "brotherhood-terminator-squad",
+      "points": "150"
+    },
+    {
+      "name": "Strike Squad",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/grey-knights/units/strike-squad",
+      "slug": "strike-squad",
+      "points": "125"
+    },
+    {
+      "name": "Interceptor Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/grey-knights/units/interceptor-squad",
+      "slug": "interceptor-squad",
+      "points": "135"
+    },
+    {
+      "name": "Paladin Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/grey-knights/units/paladin-squad",
+      "slug": "paladin-squad",
+      "points": "185"
+    },
+    {
+      "name": "Purgation Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/grey-knights/units/purgation-squad",
+      "slug": "purgation-squad",
+      "points": "115"
+    },
+    {
+      "name": "Purifier Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/grey-knights/units/purifier-squad",
+      "slug": "purifier-squad",
+      "points": "145"
+    },
+    {
+      "name": "Stormhawk Interceptor",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/grey-knights/units/stormhawk-interceptor",
+      "slug": "stormhawk-interceptor",
+      "points": "160"
+    },
+    {
+      "name": "Stormtalon Gunship",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/grey-knights/units/stormtalon-gunship",
+      "slug": "stormtalon-gunship",
+      "points": "170"
+    },
+    {
+      "name": "Grey Knights Thunderhawk Gunship",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/grey-knights/units/grey-knights-thunderhawk-gunship",
+      "slug": "grey-knights-thunderhawk-gunship",
+      "points": "805"
+    },
+    {
+      "name": "Razorback",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/grey-knights/units/razorback",
+      "slug": "razorback",
+      "points": "75"
+    },
+    {
+      "name": "Rhino",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/grey-knights/units/rhino",
+      "slug": "rhino",
+      "points": "70"
+    },
+    {
+      "name": "Land Raider",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/grey-knights/units/land-raider",
+      "slug": "land-raider",
+      "points": "220"
+    },
+    {
+      "name": "Land Raider Crusader",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/grey-knights/units/land-raider-crusader",
+      "slug": "land-raider-crusader",
+      "points": "220"
+    },
+    {
+      "name": "Land Raider Redeemer",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/grey-knights/units/land-raider-redeemer",
+      "slug": "land-raider-redeemer",
+      "points": "260"
+    },
+    {
+      "name": "Nemesis Dreadknight",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/grey-knights/units/nemesis-dreadknight",
+      "slug": "nemesis-dreadknight",
+      "points": "205"
+    },
+    {
+      "name": "Stormraven Gunship",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/grey-knights/units/stormraven-gunship",
+      "slug": "stormraven-gunship",
+      "points": "280"
+    }
+  ]
+}

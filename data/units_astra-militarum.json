@@ -1,0 +1,511 @@
+{
+  "faction": "Astra Militarum",
+  "slug": "astra-militarum",
+  "units_count": 72,
+  "units": [
+    {
+      "name": "Commissar Graves",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/astra-militarum/units/commissar-graves",
+      "slug": "commissar-graves",
+      "points": "125"
+    },
+    {
+      "name": "Commissar Graves on Foot",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/astra-militarum/units/commissar-graves-on-foot",
+      "slug": "commissar-graves-on-foot",
+      "points": "65"
+    },
+    {
+      "name": "Commissar Yarrick",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/astra-militarum/units/commissar-yarrick",
+      "slug": "commissar-yarrick",
+      "points": "110"
+    },
+    {
+      "name": "Gaunt’s Ghosts",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/astra-militarum/units/gaunts-ghosts",
+      "slug": "gaunts-ghosts",
+      "points": "95"
+    },
+    {
+      "name": "Lord Marshal Dreir",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/astra-militarum/units/lord-marshal-dreir",
+      "slug": "lord-marshal-dreir",
+      "points": "70"
+    },
+    {
+      "name": "Lord Solar Leontus",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/astra-militarum/units/lord-solar-leontus",
+      "slug": "lord-solar-leontus",
+      "points": "120"
+    },
+    {
+      "name": "Nork Deddog",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/astra-militarum/units/nork-deddog",
+      "slug": "nork-deddog",
+      "points": "60"
+    },
+    {
+      "name": "Sly Marbo",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/astra-militarum/units/sly-marbo",
+      "slug": "sly-marbo",
+      "points": "55"
+    },
+    {
+      "name": "Ursula Creed",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/astra-militarum/units/ursula-creed",
+      "slug": "ursula-creed",
+      "points": "85"
+    },
+    {
+      "name": "Cadian Castellan",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/cadian-castellan",
+      "slug": "cadian-castellan",
+      "points": "55"
+    },
+    {
+      "name": "Cadian Command Squad",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/cadian-command-squad",
+      "slug": "cadian-command-squad",
+      "points": "60"
+    },
+    {
+      "name": "Catachan Command Squad",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/catachan-command-squad",
+      "slug": "catachan-command-squad",
+      "points": "60"
+    },
+    {
+      "name": "Commissar",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/commissar",
+      "slug": "commissar",
+      "points": "30"
+    },
+    {
+      "name": "Krieg Command Squad",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/krieg-command-squad",
+      "slug": "krieg-command-squad",
+      "points": "60"
+    },
+    {
+      "name": "Leman Russ Commander",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/leman-russ-commander",
+      "slug": "leman-russ-commander",
+      "points": "195"
+    },
+    {
+      "name": "Militarum Tempestus Command Squad",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/militarum-tempestus-command-squad",
+      "slug": "militarum-tempestus-command-squad",
+      "points": "85"
+    },
+    {
+      "name": "Ministorum Priest",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/ministorum-priest",
+      "slug": "ministorum-priest",
+      "points": "35"
+    },
+    {
+      "name": "Ogryn Bodyguard",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/ogryn-bodyguard",
+      "slug": "ogryn-bodyguard",
+      "points": "40"
+    },
+    {
+      "name": "Primaris Psyker",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/primaris-psyker",
+      "slug": "primaris-psyker",
+      "points": "60"
+    },
+    {
+      "name": "Rogal Dorn Commander",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/rogal-dorn-commander",
+      "slug": "rogal-dorn-commander",
+      "points": "290"
+    },
+    {
+      "name": "Tech-Priest Enginseer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/tech-priest-enginseer",
+      "slug": "tech-priest-enginseer",
+      "points": "45"
+    },
+    {
+      "name": "Cadian Shock Troops",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/astra-militarum/units/cadian-shock-troops",
+      "slug": "cadian-shock-troops",
+      "points": "70"
+    },
+    {
+      "name": "Catachan Jungle Fighters",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/astra-militarum/units/catachan-jungle-fighters",
+      "slug": "catachan-jungle-fighters",
+      "points": "70"
+    },
+    {
+      "name": "Death Korps of Krieg",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/astra-militarum/units/death-korps-of-krieg",
+      "slug": "death-korps-of-krieg",
+      "points": "70"
+    },
+    {
+      "name": "Attilan Rough Riders",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/astra-militarum/units/attilan-rough-riders",
+      "slug": "attilan-rough-riders",
+      "points": "60"
+    },
+    {
+      "name": "Death Riders",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/astra-militarum/units/death-riders",
+      "slug": "death-riders",
+      "points": "60"
+    },
+    {
+      "name": "Artillery Team",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/astra-militarum/units/artillery-team",
+      "slug": "artillery-team",
+      "points": "95"
+    },
+    {
+      "name": "Bullgryn Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/astra-militarum/units/bullgryn-squad",
+      "slug": "bullgryn-squad",
+      "points": "90"
+    },
+    {
+      "name": "Cadian Heavy Weapons Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/astra-militarum/units/cadian-heavy-weapons-squad",
+      "slug": "cadian-heavy-weapons-squad",
+      "points": "65"
+    },
+    {
+      "name": "Cadian Recon Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/astra-militarum/units/cadian-recon-squad",
+      "slug": "cadian-recon-squad",
+      "points": "80"
+    },
+    {
+      "name": "Catachan Heavy Weapons Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/astra-militarum/units/catachan-heavy-weapons-squad",
+      "slug": "catachan-heavy-weapons-squad",
+      "points": "70"
+    },
+    {
+      "name": "Field Ordnance Battery",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/astra-militarum/units/field-ordnance-battery",
+      "slug": "field-ordnance-battery",
+      "points": "90"
+    },
+    {
+      "name": "Kasrkin",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/astra-militarum/units/kasrkin",
+      "slug": "kasrkin",
+      "points": "105"
+    },
+    {
+      "name": "Krieg Combat Engineers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/astra-militarum/units/krieg-combat-engineers",
+      "slug": "krieg-combat-engineers",
+      "points": "65"
+    },
+    {
+      "name": "Krieg Heavy Weapons Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/astra-militarum/units/krieg-heavy-weapons-squad",
+      "slug": "krieg-heavy-weapons-squad",
+      "points": "70"
+    },
+    {
+      "name": "Ogryn Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/astra-militarum/units/ogryn-squad",
+      "slug": "ogryn-squad",
+      "points": "60"
+    },
+    {
+      "name": "Ratlings",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/astra-militarum/units/ratlings",
+      "slug": "ratlings",
+      "points": "60"
+    },
+    {
+      "name": "Tempestus Aquilons",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/astra-militarum/units/tempestus-aquilons",
+      "slug": "tempestus-aquilons",
+      "points": "95"
+    },
+    {
+      "name": "Tempestus Scions",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/astra-militarum/units/tempestus-scions",
+      "slug": "tempestus-scions",
+      "points": "75"
+    },
+    {
+      "name": "Avenger Strike Fighter",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/astra-militarum/units/avenger-strike-fighter",
+      "slug": "avenger-strike-fighter",
+      "points": "130"
+    },
+    {
+      "name": "Baneblade",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/astra-militarum/units/baneblade",
+      "slug": "baneblade",
+      "points": "415"
+    },
+    {
+      "name": "Banehammer",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/astra-militarum/units/banehammer",
+      "slug": "banehammer",
+      "points": "385"
+    },
+    {
+      "name": "Banesword",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/astra-militarum/units/banesword",
+      "slug": "banesword",
+      "points": "415"
+    },
+    {
+      "name": "Doomhammer",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/astra-militarum/units/doomhammer",
+      "slug": "doomhammer",
+      "points": "380"
+    },
+    {
+      "name": "Hellhammer",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/astra-militarum/units/hellhammer",
+      "slug": "hellhammer",
+      "points": "385"
+    },
+    {
+      "name": "Shadowsword",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/astra-militarum/units/shadowsword",
+      "slug": "shadowsword",
+      "points": "375"
+    },
+    {
+      "name": "Stormlord",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/astra-militarum/units/stormlord",
+      "slug": "stormlord",
+      "points": "395"
+    },
+    {
+      "name": "Stormsword",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/astra-militarum/units/stormsword",
+      "slug": "stormsword",
+      "points": "430"
+    },
+    {
+      "name": "Centaur RSV",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/astra-militarum/units/centaur-rsv",
+      "slug": "centaur-rsv",
+      "points": "65"
+    },
+    {
+      "name": "Chimera",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/astra-militarum/units/chimera",
+      "slug": "chimera",
+      "points": "75"
+    },
+    {
+      "name": "Taurox",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/astra-militarum/units/taurox",
+      "slug": "taurox",
+      "points": "65"
+    },
+    {
+      "name": "Taurox Prime",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/astra-militarum/units/taurox-prime",
+      "slug": "taurox-prime",
+      "points": "75"
+    },
+    {
+      "name": "Armoured Sentinels",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/armoured-sentinels",
+      "slug": "armoured-sentinels",
+      "points": "65"
+    },
+    {
+      "name": "Basilisk",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/basilisk",
+      "slug": "basilisk",
+      "points": "115"
+    },
+    {
+      "name": "Cyclops Demolition Vehicle",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/cyclops-demolition-vehicle",
+      "slug": "cyclops-demolition-vehicle",
+      "points": "40"
+    },
+    {
+      "name": "Deathstrike",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/deathstrike",
+      "slug": "deathstrike",
+      "points": "125"
+    },
+    {
+      "name": "Hellhound",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/hellhound",
+      "slug": "hellhound",
+      "points": "115"
+    },
+    {
+      "name": "Hippogriff AFV",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/hippogriff-afv",
+      "slug": "hippogriff-afv",
+      "points": "70"
+    },
+    {
+      "name": "Hydra",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/hydra",
+      "slug": "hydra",
+      "points": "90"
+    },
+    {
+      "name": "Leman Russ Battle Tank",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/leman-russ-battle-tank",
+      "slug": "leman-russ-battle-tank",
+      "points": "160"
+    },
+    {
+      "name": "Leman Russ Demolisher",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/leman-russ-demolisher",
+      "slug": "leman-russ-demolisher",
+      "points": "160"
+    },
+    {
+      "name": "Leman Russ Eradicator",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/leman-russ-eradicator",
+      "slug": "leman-russ-eradicator",
+      "points": "145"
+    },
+    {
+      "name": "Leman Russ Executioner",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/leman-russ-executioner",
+      "slug": "leman-russ-executioner",
+      "points": "145"
+    },
+    {
+      "name": "Leman Russ Exterminator",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/leman-russ-exterminator",
+      "slug": "leman-russ-exterminator",
+      "points": "160"
+    },
+    {
+      "name": "Leman Russ Punisher",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/leman-russ-punisher",
+      "slug": "leman-russ-punisher",
+      "points": "130"
+    },
+    {
+      "name": "Leman Russ Vanquisher",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/leman-russ-vanquisher",
+      "slug": "leman-russ-vanquisher",
+      "points": "130"
+    },
+    {
+      "name": "Manticore",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/manticore",
+      "slug": "manticore",
+      "points": "150"
+    },
+    {
+      "name": "Rogal Dorn Battle Tank",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/rogal-dorn-battle-tank",
+      "slug": "rogal-dorn-battle-tank",
+      "points": "260"
+    },
+    {
+      "name": "Scout Sentinels",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/scout-sentinels",
+      "slug": "scout-sentinels",
+      "points": "55"
+    },
+    {
+      "name": "Valkyrie",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/valkyrie",
+      "slug": "valkyrie",
+      "points": "170"
+    },
+    {
+      "name": "Wyvern",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/astra-militarum/units/wyvern",
+      "slug": "wyvern",
+      "points": "95"
+    },
+    {
+      "name": "Aegis Defence Line",
+      "category": "Fortifications",
+      "url": "https://www.40k.app/factions/astra-militarum/units/aegis-defence-line",
+      "slug": "aegis-defence-line",
+      "points": "145"
+    }
+  ]
+}

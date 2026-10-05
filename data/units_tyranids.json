@@ -1,0 +1,371 @@
+{
+  "faction": "Tyranids",
+  "slug": "tyranids",
+  "units_count": 52,
+  "units": [
+    {
+      "name": "Deathleaper",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/tyranids/units/deathleaper",
+      "slug": "deathleaper",
+      "points": "80"
+    },
+    {
+      "name": "Old One Eye",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/tyranids/units/old-one-eye",
+      "slug": "old-one-eye",
+      "points": "130"
+    },
+    {
+      "name": "The Red Terror",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/tyranids/units/the-red-terror",
+      "slug": "the-red-terror",
+      "points": "120"
+    },
+    {
+      "name": "The Swarmlord",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/tyranids/units/the-swarmlord",
+      "slug": "the-swarmlord",
+      "points": "210"
+    },
+    {
+      "name": "Broodlord",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tyranids/units/broodlord",
+      "slug": "broodlord",
+      "points": "80"
+    },
+    {
+      "name": "Hive Tyrant",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tyranids/units/hive-tyrant",
+      "slug": "hive-tyrant",
+      "points": "195"
+    },
+    {
+      "name": "Hyperadapted Raveners",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tyranids/units/hyperadapted-raveners",
+      "slug": "hyperadapted-raveners",
+      "points": "165"
+    },
+    {
+      "name": "Neurotyrant",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tyranids/units/neurotyrant",
+      "slug": "neurotyrant",
+      "points": "120"
+    },
+    {
+      "name": "Parasite of Mortrex",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tyranids/units/parasite-of-mortrex",
+      "slug": "parasite-of-mortrex",
+      "points": "65"
+    },
+    {
+      "name": "Tervigon",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tyranids/units/tervigon",
+      "slug": "tervigon",
+      "points": "150"
+    },
+    {
+      "name": "Tyranid Prime with Lash Whip",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tyranids/units/tyranid-prime-with-lash-whip",
+      "slug": "tyranid-prime-with-lash-whip",
+      "points": "75"
+    },
+    {
+      "name": "Winged Hive Tyrant",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tyranids/units/winged-hive-tyrant",
+      "slug": "winged-hive-tyrant",
+      "points": "185"
+    },
+    {
+      "name": "Winged Tyranid Prime",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tyranids/units/winged-tyranid-prime",
+      "slug": "winged-tyranid-prime",
+      "points": "65"
+    },
+    {
+      "name": "Gargoyles",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/tyranids/units/gargoyles",
+      "slug": "gargoyles",
+      "points": "75"
+    },
+    {
+      "name": "Hormagaunts",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/tyranids/units/hormagaunts",
+      "slug": "hormagaunts",
+      "points": "70"
+    },
+    {
+      "name": "Termagants",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/tyranids/units/termagants",
+      "slug": "termagants",
+      "points": "55"
+    },
+    {
+      "name": "Barbgaunts",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/barbgaunts",
+      "slug": "barbgaunts",
+      "points": "50"
+    },
+    {
+      "name": "Biovores",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/biovores",
+      "slug": "biovores",
+      "points": "60"
+    },
+    {
+      "name": "Genestealers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/genestealers",
+      "slug": "genestealers",
+      "points": "75"
+    },
+    {
+      "name": "Hive Guard",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/hive-guard",
+      "slug": "hive-guard",
+      "points": "80"
+    },
+    {
+      "name": "Lictor",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/lictor",
+      "slug": "lictor",
+      "points": "60"
+    },
+    {
+      "name": "Mucolid Spores",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/mucolid-spores",
+      "slug": "mucolid-spores",
+      "points": "30"
+    },
+    {
+      "name": "Neurogaunts",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/neurogaunts",
+      "slug": "neurogaunts",
+      "points": "45"
+    },
+    {
+      "name": "Neurolictor",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/neurolictor",
+      "slug": "neurolictor",
+      "points": "80"
+    },
+    {
+      "name": "Pyrovores",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/pyrovores",
+      "slug": "pyrovores",
+      "points": "40"
+    },
+    {
+      "name": "Raveners",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/raveners",
+      "slug": "raveners",
+      "points": "125"
+    },
+    {
+      "name": "Ripper Swarms",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/ripper-swarms",
+      "slug": "ripper-swarms",
+      "points": "30"
+    },
+    {
+      "name": "Spore Mines",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/spore-mines",
+      "slug": "spore-mines",
+      "points": "55"
+    },
+    {
+      "name": "Tyranid Warriors with Melee Bio-weapons",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/tyranid-warriors-with-melee-bio-weapons",
+      "slug": "tyranid-warriors-with-melee-bio-weapons",
+      "points": "75"
+    },
+    {
+      "name": "Tyranid Warriors with Ranged Bio-weapons",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/tyranid-warriors-with-ranged-bio-weapons",
+      "slug": "tyranid-warriors-with-ranged-bio-weapons",
+      "points": "60"
+    },
+    {
+      "name": "Tyrant Guard",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/tyrant-guard",
+      "slug": "tyrant-guard",
+      "points": "80"
+    },
+    {
+      "name": "Venomthropes",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/venomthropes",
+      "slug": "venomthropes",
+      "points": "55"
+    },
+    {
+      "name": "Von Ryan’s Leapers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/von-ryans-leapers",
+      "slug": "von-ryans-leapers",
+      "points": "55"
+    },
+    {
+      "name": "Zoanthropes",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tyranids/units/zoanthropes",
+      "slug": "zoanthropes",
+      "points": "90"
+    },
+    {
+      "name": "Harpy",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/tyranids/units/harpy",
+      "slug": "harpy",
+      "points": "185"
+    },
+    {
+      "name": "Hive Crone",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/tyranids/units/hive-crone",
+      "slug": "hive-crone",
+      "points": "170"
+    },
+    {
+      "name": "Harridan",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/tyranids/units/harridan",
+      "slug": "harridan",
+      "points": "610"
+    },
+    {
+      "name": "Hierophant",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/tyranids/units/hierophant",
+      "slug": "hierophant",
+      "points": "810"
+    },
+    {
+      "name": "Tyrannocyte",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/tyranids/units/tyrannocyte",
+      "slug": "tyrannocyte",
+      "points": "80"
+    },
+    {
+      "name": "Carnifexes",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tyranids/units/carnifexes",
+      "slug": "carnifexes",
+      "points": "90"
+    },
+    {
+      "name": "Exocrine",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tyranids/units/exocrine",
+      "slug": "exocrine",
+      "points": "135"
+    },
+    {
+      "name": "Haruspex",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tyranids/units/haruspex",
+      "slug": "haruspex",
+      "points": "125"
+    },
+    {
+      "name": "Maleceptor",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tyranids/units/maleceptor",
+      "slug": "maleceptor",
+      "points": "180"
+    },
+    {
+      "name": "Mawloc",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tyranids/units/mawloc",
+      "slug": "mawloc",
+      "points": "130"
+    },
+    {
+      "name": "Norn Assimilator",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tyranids/units/norn-assimilator",
+      "slug": "norn-assimilator",
+      "points": "250"
+    },
+    {
+      "name": "Norn Emissary",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tyranids/units/norn-emissary",
+      "slug": "norn-emissary",
+      "points": "250"
+    },
+    {
+      "name": "Psychophage",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tyranids/units/psychophage",
+      "slug": "psychophage",
+      "points": "110"
+    },
+    {
+      "name": "Screamer-Killer",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tyranids/units/screamer-killer",
+      "slug": "screamer-killer",
+      "points": "125"
+    },
+    {
+      "name": "Sporocyst",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tyranids/units/sporocyst",
+      "slug": "sporocyst",
+      "points": "145"
+    },
+    {
+      "name": "Toxicrene",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tyranids/units/toxicrene",
+      "slug": "toxicrene",
+      "points": "120"
+    },
+    {
+      "name": "Trygon",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tyranids/units/trygon",
+      "slug": "trygon",
+      "points": "135"
+    },
+    {
+      "name": "Tyrannofex",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tyranids/units/tyrannofex",
+      "slug": "tyrannofex",
+      "points": "170"
+    }
+  ]
+}

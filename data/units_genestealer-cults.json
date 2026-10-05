@@ -1,0 +1,175 @@
+{
+  "faction": "Genestealer Cults",
+  "slug": "genestealer-cults",
+  "units_count": 24,
+  "units": [
+    {
+      "name": "Abominant",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/abominant",
+      "slug": "abominant",
+      "points": "85"
+    },
+    {
+      "name": "Acolyte Iconward",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/acolyte-iconward",
+      "slug": "acolyte-iconward",
+      "points": "50"
+    },
+    {
+      "name": "Benefictus",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/benefictus",
+      "slug": "benefictus",
+      "points": "75"
+    },
+    {
+      "name": "Biophagus",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/biophagus",
+      "slug": "biophagus",
+      "points": "50"
+    },
+    {
+      "name": "Clamavus",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/clamavus",
+      "slug": "clamavus",
+      "points": "50"
+    },
+    {
+      "name": "Jackal Alphus",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/jackal-alphus",
+      "slug": "jackal-alphus",
+      "points": "55"
+    },
+    {
+      "name": "Kelermorph",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/kelermorph",
+      "slug": "kelermorph",
+      "points": "60"
+    },
+    {
+      "name": "Locus",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/locus",
+      "slug": "locus",
+      "points": "35"
+    },
+    {
+      "name": "Magus",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/magus",
+      "slug": "magus",
+      "points": "50"
+    },
+    {
+      "name": "Nexos",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/nexos",
+      "slug": "nexos",
+      "points": "50"
+    },
+    {
+      "name": "Patriarch",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/patriarch",
+      "slug": "patriarch",
+      "points": "80"
+    },
+    {
+      "name": "Primus",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/primus",
+      "slug": "primus",
+      "points": "60"
+    },
+    {
+      "name": "Reductus Saboteur",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/reductus-saboteur",
+      "slug": "reductus-saboteur",
+      "points": "70"
+    },
+    {
+      "name": "Sanctus",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/sanctus",
+      "slug": "sanctus",
+      "points": "60"
+    },
+    {
+      "name": "Acolyte Hybrids with Autopistols",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/acolyte-hybrids-with-autopistols",
+      "slug": "acolyte-hybrids-with-autopistols",
+      "points": "65"
+    },
+    {
+      "name": "Acolyte Hybrids with Hand Flamers",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/acolyte-hybrids-with-hand-flamers",
+      "slug": "acolyte-hybrids-with-hand-flamers",
+      "points": "75"
+    },
+    {
+      "name": "Neophyte Hybrids",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/neophyte-hybrids",
+      "slug": "neophyte-hybrids",
+      "points": "70"
+    },
+    {
+      "name": "Atalan Jackals",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/atalan-jackals",
+      "slug": "atalan-jackals",
+      "points": "85"
+    },
+    {
+      "name": "Aberrants",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/aberrants",
+      "slug": "aberrants",
+      "points": "140"
+    },
+    {
+      "name": "Hybrid Metamorphs",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/hybrid-metamorphs",
+      "slug": "hybrid-metamorphs",
+      "points": "75"
+    },
+    {
+      "name": "Purestrain Genestealers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/purestrain-genestealers",
+      "slug": "purestrain-genestealers",
+      "points": "75"
+    },
+    {
+      "name": "Goliath Truck",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/goliath-truck",
+      "slug": "goliath-truck",
+      "points": "75"
+    },
+    {
+      "name": "Achilles Ridgerunners",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/achilles-ridgerunners",
+      "slug": "achilles-ridgerunners",
+      "points": "95"
+    },
+    {
+      "name": "Goliath Rockgrinder",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/genestealer-cults/units/goliath-rockgrinder",
+      "slug": "goliath-rockgrinder",
+      "points": "110"
+    }
+  ]
+}

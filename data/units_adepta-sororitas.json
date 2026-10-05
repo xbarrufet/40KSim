@@ -1,0 +1,238 @@
+{
+  "faction": "Adepta Sororitas",
+  "slug": "adepta-sororitas",
+  "units_count": 33,
+  "units": [
+    {
+      "name": "Aestred Thurga and Agathae Dolan",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/aestred-thurga-and-agathae-dolan",
+      "slug": "aestred-thurga-and-agathae-dolan",
+      "points": "80"
+    },
+    {
+      "name": "Daemonifuge",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/daemonifuge",
+      "slug": "daemonifuge",
+      "points": "85"
+    },
+    {
+      "name": "Intranzia Fraye",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/intranzia-fraye",
+      "slug": "intranzia-fraye",
+      "points": "135"
+    },
+    {
+      "name": "Junith Eruita",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/junith-eruita",
+      "slug": "junith-eruita",
+      "points": "105"
+    },
+    {
+      "name": "Morvenn Vahl",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/morvenn-vahl",
+      "slug": "morvenn-vahl",
+      "points": "215"
+    },
+    {
+      "name": "Saint Celestine",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/saint-celestine",
+      "slug": "saint-celestine",
+      "points": "135"
+    },
+    {
+      "name": "Triumph of Saint Katherine",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/triumph-of-saint-katherine",
+      "slug": "triumph-of-saint-katherine",
+      "points": "245"
+    },
+    {
+      "name": "Canoness",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/canoness",
+      "slug": "canoness",
+      "points": "60"
+    },
+    {
+      "name": "Canoness with Jump Pack",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/canoness-with-jump-pack",
+      "slug": "canoness-with-jump-pack",
+      "points": "75"
+    },
+    {
+      "name": "Dialogus",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/dialogus",
+      "slug": "dialogus",
+      "points": "40"
+    },
+    {
+      "name": "Dogmata",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/dogmata",
+      "slug": "dogmata",
+      "points": "45"
+    },
+    {
+      "name": "Hospitaller",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/hospitaller",
+      "slug": "hospitaller",
+      "points": "65"
+    },
+    {
+      "name": "Imagifier",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/imagifier",
+      "slug": "imagifier",
+      "points": "55"
+    },
+    {
+      "name": "Ministorum Priest",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/ministorum-priest",
+      "slug": "ministorum-priest",
+      "points": "50"
+    },
+    {
+      "name": "Palatine",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/palatine",
+      "slug": "palatine",
+      "points": "50"
+    },
+    {
+      "name": "Battle Sisters Squad",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/battle-sisters-squad",
+      "slug": "battle-sisters-squad",
+      "points": "100"
+    },
+    {
+      "name": "Arco-flagellants",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/arco-flagellants",
+      "slug": "arco-flagellants",
+      "points": "50"
+    },
+    {
+      "name": "Celestian Insidiants",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/celestian-insidiants",
+      "slug": "celestian-insidiants",
+      "points": "115"
+    },
+    {
+      "name": "Celestian Sacresants",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/celestian-sacresants",
+      "slug": "celestian-sacresants",
+      "points": "75"
+    },
+    {
+      "name": "Dominion Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/dominion-squad",
+      "slug": "dominion-squad",
+      "points": "90"
+    },
+    {
+      "name": "Repentia Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/repentia-squad",
+      "slug": "repentia-squad",
+      "points": "70"
+    },
+    {
+      "name": "Retributor Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/retributor-squad",
+      "slug": "retributor-squad",
+      "points": "105"
+    },
+    {
+      "name": "Sanctifiers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/sanctifiers",
+      "slug": "sanctifiers",
+      "points": "110"
+    },
+    {
+      "name": "Seraphim Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/seraphim-squad",
+      "slug": "seraphim-squad",
+      "points": "75"
+    },
+    {
+      "name": "Sisters Novitiate Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/sisters-novitiate-squad",
+      "slug": "sisters-novitiate-squad",
+      "points": "90"
+    },
+    {
+      "name": "Zephyrim Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/zephyrim-squad",
+      "slug": "zephyrim-squad",
+      "points": "75"
+    },
+    {
+      "name": "Immolator",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/immolator",
+      "slug": "immolator",
+      "points": "100"
+    },
+    {
+      "name": "Sororitas Rhino",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/sororitas-rhino",
+      "slug": "sororitas-rhino",
+      "points": "65"
+    },
+    {
+      "name": "Castigator",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/castigator",
+      "slug": "castigator",
+      "points": "165"
+    },
+    {
+      "name": "Exorcist",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/exorcist",
+      "slug": "exorcist",
+      "points": "180"
+    },
+    {
+      "name": "Mortifiers",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/mortifiers",
+      "slug": "mortifiers",
+      "points": "70"
+    },
+    {
+      "name": "Paragon Warsuits",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/paragon-warsuits",
+      "slug": "paragon-warsuits",
+      "points": "165"
+    },
+    {
+      "name": "Penitent Engines",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adepta-sororitas/units/penitent-engines",
+      "slug": "penitent-engines",
+      "points": "70"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "faction": "Death Guard",
+  "slug": "death-guard",
+  "units_count": 30,
+  "units": [
+    {
+      "name": "Mortarion",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/death-guard/units/mortarion",
+      "slug": "mortarion",
+      "points": "375"
+    },
+    {
+      "name": "Typhus",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/death-guard/units/typhus",
+      "slug": "typhus",
+      "points": "90"
+    },
+    {
+      "name": "Biologus Putrifier",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/death-guard/units/biologus-putrifier",
+      "slug": "biologus-putrifier",
+      "points": "60"
+    },
+    {
+      "name": "Daemon Prince of Nurgle",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/death-guard/units/daemon-prince-of-nurgle",
+      "slug": "daemon-prince-of-nurgle",
+      "points": "185"
+    },
+    {
+      "name": "Daemon Prince of Nurgle with Wings",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/death-guard/units/daemon-prince-of-nurgle-with-wings",
+      "slug": "daemon-prince-of-nurgle-with-wings",
+      "points": "160"
+    },
+    {
+      "name": "Foul Blightspawn",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/death-guard/units/foul-blightspawn",
+      "slug": "foul-blightspawn",
+      "points": "60"
+    },
+    {
+      "name": "Icon Bearer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/death-guard/units/icon-bearer",
+      "slug": "icon-bearer",
+      "points": "45"
+    },
+    {
+      "name": "Lord of Contagion",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/death-guard/units/lord-of-contagion",
+      "slug": "lord-of-contagion",
+      "points": "110"
+    },
+    {
+      "name": "Lord of Poxes",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/death-guard/units/lord-of-poxes",
+      "slug": "lord-of-poxes",
+      "points": "65"
+    },
+    {
+      "name": "Lord of Virulence",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/death-guard/units/lord-of-virulence",
+      "slug": "lord-of-virulence",
+      "points": "90"
+    },
+    {
+      "name": "Malignant Plaguecaster",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/death-guard/units/malignant-plaguecaster",
+      "slug": "malignant-plaguecaster",
+      "points": "60"
+    },
+    {
+      "name": "Noxious Blightbringer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/death-guard/units/noxious-blightbringer",
+      "slug": "noxious-blightbringer",
+      "points": "50"
+    },
+    {
+      "name": "Plague Surgeon",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/death-guard/units/plague-surgeon",
+      "slug": "plague-surgeon",
+      "points": "50"
+    },
+    {
+      "name": "Tallyman",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/death-guard/units/tallyman",
+      "slug": "tallyman",
+      "points": "60"
+    },
+    {
+      "name": "Plague Marines",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/death-guard/units/plague-marines",
+      "slug": "plague-marines",
+      "points": "90"
+    },
+    {
+      "name": "Blightlord Terminators",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/death-guard/units/blightlord-terminators",
+      "slug": "blightlord-terminators",
+      "points": "115"
+    },
+    {
+      "name": "Chaos Spawn",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/death-guard/units/chaos-spawn",
+      "slug": "chaos-spawn",
+      "points": "80"
+    },
+    {
+      "name": "Deathshroud Terminators",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/death-guard/units/deathshroud-terminators",
+      "slug": "deathshroud-terminators",
+      "points": "150"
+    },
+    {
+      "name": "Poxwalkers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/death-guard/units/poxwalkers",
+      "slug": "poxwalkers",
+      "points": "65"
+    },
+    {
+      "name": "Chaos Rhino",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/death-guard/units/chaos-rhino",
+      "slug": "chaos-rhino",
+      "points": "75"
+    },
+    {
+      "name": "Chaos Land Raider",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/death-guard/units/chaos-land-raider",
+      "slug": "chaos-land-raider",
+      "points": "220"
+    },
+    {
+      "name": "Chaos Predator Annihilator",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/death-guard/units/chaos-predator-annihilator",
+      "slug": "chaos-predator-annihilator",
+      "points": "130"
+    },
+    {
+      "name": "Chaos Predator Destructor",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/death-guard/units/chaos-predator-destructor",
+      "slug": "chaos-predator-destructor",
+      "points": "140"
+    },
+    {
+      "name": "Defiler",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/death-guard/units/defiler",
+      "slug": "defiler",
+      "points": "300"
+    },
+    {
+      "name": "Foetid Bloat-Drone",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/death-guard/units/foetid-bloat-drone",
+      "slug": "foetid-bloat-drone",
+      "points": "100"
+    },
+    {
+      "name": "Foetid Bloat-Drone with Heavy Blight Launcher",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/death-guard/units/foetid-bloat-drone-with-heavy-blight-launcher",
+      "slug": "foetid-bloat-drone-with-heavy-blight-launcher",
+      "points": "125"
+    },
+    {
+      "name": "Helbrute",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/death-guard/units/helbrute",
+      "slug": "helbrute",
+      "points": "105"
+    },
+    {
+      "name": "Myphitic Blight-haulers",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/death-guard/units/myphitic-blight-haulers",
+      "slug": "myphitic-blight-haulers",
+      "points": "95"
+    },
+    {
+      "name": "Plagueburst Crawler",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/death-guard/units/plagueburst-crawler",
+      "slug": "plagueburst-crawler",
+      "points": "170"
+    },
+    {
+      "name": "Miasmic Malignifier",
+      "category": "Fortifications",
+      "url": "https://www.40k.app/factions/death-guard/units/miasmic-malignifier",
+      "slug": "miasmic-malignifier",
+      "points": "105"
+    }
+  ]
+}

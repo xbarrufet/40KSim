@@ -1,0 +1,182 @@
+{
+  "faction": "World Eaters",
+  "slug": "world-eaters",
+  "units_count": 25,
+  "units": [
+    {
+      "name": "Angron",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/world-eaters/units/angron",
+      "slug": "angron",
+      "points": "330"
+    },
+    {
+      "name": "Khârn the Betrayer",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/world-eaters/units/kharn-the-betrayer",
+      "slug": "kharn-the-betrayer",
+      "points": "115"
+    },
+    {
+      "name": "Lord Invocatus",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/world-eaters/units/lord-invocatus",
+      "slug": "lord-invocatus",
+      "points": "100"
+    },
+    {
+      "name": "Daemon Prince of Khorne",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/world-eaters/units/daemon-prince-of-khorne",
+      "slug": "daemon-prince-of-khorne",
+      "points": "200"
+    },
+    {
+      "name": "Daemon Prince of Khorne with Wings",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/world-eaters/units/daemon-prince-of-khorne-with-wings",
+      "slug": "daemon-prince-of-khorne-with-wings",
+      "points": "170"
+    },
+    {
+      "name": "Lord on Juggernaut",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/world-eaters/units/lord-on-juggernaut",
+      "slug": "lord-on-juggernaut",
+      "points": "95"
+    },
+    {
+      "name": "Master of Executions",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/world-eaters/units/master-of-executions",
+      "slug": "master-of-executions",
+      "points": "60"
+    },
+    {
+      "name": "Slaughterbound",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/world-eaters/units/slaughterbound",
+      "slug": "slaughterbound",
+      "points": "90"
+    },
+    {
+      "name": "Khorne Berzerkers",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/world-eaters/units/khorne-berzerkers",
+      "slug": "khorne-berzerkers",
+      "points": "170"
+    },
+    {
+      "name": "Chaos Spawn",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/world-eaters/units/chaos-spawn",
+      "slug": "chaos-spawn",
+      "points": "95"
+    },
+    {
+      "name": "Chaos Terminators",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/world-eaters/units/chaos-terminators",
+      "slug": "chaos-terminators",
+      "points": "175"
+    },
+    {
+      "name": "Eightbound",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/world-eaters/units/eightbound",
+      "slug": "eightbound",
+      "points": "125"
+    },
+    {
+      "name": "Exalted Eightbound",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/world-eaters/units/exalted-eightbound",
+      "slug": "exalted-eightbound",
+      "points": "130"
+    },
+    {
+      "name": "Goremongers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/world-eaters/units/goremongers",
+      "slug": "goremongers",
+      "points": "70"
+    },
+    {
+      "name": "Jakhals",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/world-eaters/units/jakhals",
+      "slug": "jakhals",
+      "points": "65"
+    },
+    {
+      "name": "Khorne Lord of Skulls",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/world-eaters/units/khorne-lord-of-skulls",
+      "slug": "khorne-lord-of-skulls",
+      "points": "505"
+    },
+    {
+      "name": "Chaos Rhino",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/world-eaters/units/chaos-rhino",
+      "slug": "chaos-rhino",
+      "points": "75"
+    },
+    {
+      "name": "Chaos Land Raider",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/world-eaters/units/chaos-land-raider",
+      "slug": "chaos-land-raider",
+      "points": "200"
+    },
+    {
+      "name": "Chaos Predator Annihilator",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/world-eaters/units/chaos-predator-annihilator",
+      "slug": "chaos-predator-annihilator",
+      "points": "130"
+    },
+    {
+      "name": "Chaos Predator Destructor",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/world-eaters/units/chaos-predator-destructor",
+      "slug": "chaos-predator-destructor",
+      "points": "130"
+    },
+    {
+      "name": "Defiler",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/world-eaters/units/defiler",
+      "slug": "defiler",
+      "points": "270"
+    },
+    {
+      "name": "Forgefiend",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/world-eaters/units/forgefiend",
+      "slug": "forgefiend",
+      "points": "140"
+    },
+    {
+      "name": "Helbrute",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/world-eaters/units/helbrute",
+      "slug": "helbrute",
+      "points": "120"
+    },
+    {
+      "name": "Heldrake",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/world-eaters/units/heldrake",
+      "slug": "heldrake",
+      "points": "175"
+    },
+    {
+      "name": "Maulerfiend",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/world-eaters/units/maulerfiend",
+      "slug": "maulerfiend",
+      "points": "140"
+    }
+  ]
+}

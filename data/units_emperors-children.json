@@ -1,0 +1,133 @@
+{
+  "faction": "Emperor’s Children",
+  "slug": "emperors-children",
+  "units_count": 18,
+  "units": [
+    {
+      "name": "Fulgrim",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/emperors-children/units/fulgrim",
+      "slug": "fulgrim",
+      "points": "340"
+    },
+    {
+      "name": "Lucius the Eternal",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/emperors-children/units/lucius-the-eternal",
+      "slug": "lucius-the-eternal",
+      "points": "130"
+    },
+    {
+      "name": "Daemon Prince of Slaanesh",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/emperors-children/units/daemon-prince-of-slaanesh",
+      "slug": "daemon-prince-of-slaanesh",
+      "points": "165"
+    },
+    {
+      "name": "Daemon Prince of Slaanesh with Wings",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/emperors-children/units/daemon-prince-of-slaanesh-with-wings",
+      "slug": "daemon-prince-of-slaanesh-with-wings",
+      "points": "205"
+    },
+    {
+      "name": "Lord Exultant",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/emperors-children/units/lord-exultant",
+      "slug": "lord-exultant",
+      "points": "95"
+    },
+    {
+      "name": "Lord Kakophonist",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/emperors-children/units/lord-kakophonist",
+      "slug": "lord-kakophonist",
+      "points": "70"
+    },
+    {
+      "name": "Sorcerer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/emperors-children/units/sorcerer",
+      "slug": "sorcerer",
+      "points": "55"
+    },
+    {
+      "name": "Infractors",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/emperors-children/units/infractors",
+      "slug": "infractors",
+      "points": "95"
+    },
+    {
+      "name": "Tormentors",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/emperors-children/units/tormentors",
+      "slug": "tormentors",
+      "points": "85"
+    },
+    {
+      "name": "Chaos Spawn",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/emperors-children/units/chaos-spawn",
+      "slug": "chaos-spawn",
+      "points": "70"
+    },
+    {
+      "name": "Chaos Terminators",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/emperors-children/units/chaos-terminators",
+      "slug": "chaos-terminators",
+      "points": "155"
+    },
+    {
+      "name": "Flawless Blades",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/emperors-children/units/flawless-blades",
+      "slug": "flawless-blades",
+      "points": "95"
+    },
+    {
+      "name": "Noise Marines",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/emperors-children/units/noise-marines",
+      "slug": "noise-marines",
+      "points": "160"
+    },
+    {
+      "name": "Chaos Rhino",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/emperors-children/units/chaos-rhino",
+      "slug": "chaos-rhino",
+      "points": "70"
+    },
+    {
+      "name": "Chaos Land Raider",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/emperors-children/units/chaos-land-raider",
+      "slug": "chaos-land-raider",
+      "points": "210"
+    },
+    {
+      "name": "Defiler",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/emperors-children/units/defiler",
+      "slug": "defiler",
+      "points": "300"
+    },
+    {
+      "name": "Heldrake",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/emperors-children/units/heldrake",
+      "slug": "heldrake",
+      "points": "175"
+    },
+    {
+      "name": "Maulerfiend",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/emperors-children/units/maulerfiend",
+      "slug": "maulerfiend",
+      "points": "120"
+    }
+  ]
+}

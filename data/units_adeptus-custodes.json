@@ -1,0 +1,224 @@
+{
+  "faction": "Adeptus Custodes",
+  "slug": "adeptus-custodes",
+  "units_count": 31,
+  "units": [
+    {
+      "name": "Aleya",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/aleya",
+      "slug": "aleya",
+      "points": "55"
+    },
+    {
+      "name": "Trajann Valoris",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/trajann-valoris",
+      "slug": "trajann-valoris",
+      "points": "135"
+    },
+    {
+      "name": "Valerian",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/valerian",
+      "slug": "valerian",
+      "points": "120"
+    },
+    {
+      "name": "Blade Champion",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/blade-champion",
+      "slug": "blade-champion",
+      "points": "110"
+    },
+    {
+      "name": "Knight-Centura",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/knight-centura",
+      "slug": "knight-centura",
+      "points": "55"
+    },
+    {
+      "name": "Shield-Captain",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/shield-captain",
+      "slug": "shield-captain",
+      "points": "110"
+    },
+    {
+      "name": "Shield-Captain in Allarus Terminator Armour",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/shield-captain-in-allarus-terminator-armour",
+      "slug": "shield-captain-in-allarus-terminator-armour",
+      "points": "130"
+    },
+    {
+      "name": "Shield-Captain on Dawneagle Jetbike",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/shield-captain-on-dawneagle-jetbike",
+      "slug": "shield-captain-on-dawneagle-jetbike",
+      "points": "150"
+    },
+    {
+      "name": "Custodian Guard",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/custodian-guard",
+      "slug": "custodian-guard",
+      "points": "180"
+    },
+    {
+      "name": "Agamatus Custodians",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/agamatus-custodians",
+      "slug": "agamatus-custodians",
+      "points": "225"
+    },
+    {
+      "name": "Vertus Praetors",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/vertus-praetors",
+      "slug": "vertus-praetors",
+      "points": "155"
+    },
+    {
+      "name": "Allarus Custodians",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/allarus-custodians",
+      "slug": "allarus-custodians",
+      "points": "120"
+    },
+    {
+      "name": "Aquilon Custodians",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/aquilon-custodians",
+      "slug": "aquilon-custodians",
+      "points": "195"
+    },
+    {
+      "name": "Custodian Guard with Adrasite and Pyrithite Spears",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/custodian-guard-with-adrasite-and-pyrithite-spears",
+      "slug": "custodian-guard-with-adrasite-and-pyrithite-spears",
+      "points": "250"
+    },
+    {
+      "name": "Custodian Wardens",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/custodian-wardens",
+      "slug": "custodian-wardens",
+      "points": "210"
+    },
+    {
+      "name": "Prosecutors",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/prosecutors",
+      "slug": "prosecutors",
+      "points": "50"
+    },
+    {
+      "name": "Sagittarum Custodians",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/sagittarum-custodians",
+      "slug": "sagittarum-custodians",
+      "points": "225"
+    },
+    {
+      "name": "Venatari Custodians",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/venatari-custodians",
+      "slug": "venatari-custodians",
+      "points": "150"
+    },
+    {
+      "name": "Vigilators",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/vigilators",
+      "slug": "vigilators",
+      "points": "50"
+    },
+    {
+      "name": "Witchseekers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/witchseekers",
+      "slug": "witchseekers",
+      "points": "50"
+    },
+    {
+      "name": "Ares Gunship",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/ares-gunship",
+      "slug": "ares-gunship",
+      "points": "580"
+    },
+    {
+      "name": "Anathema Psykana Rhino",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/anathema-psykana-rhino",
+      "slug": "anathema-psykana-rhino",
+      "points": "65"
+    },
+    {
+      "name": "Caladius Grav-tank",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/caladius-grav-tank",
+      "slug": "caladius-grav-tank",
+      "points": "210"
+    },
+    {
+      "name": "Contemptor-Achillus Dreadnought",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/contemptor-achillus-dreadnought",
+      "slug": "contemptor-achillus-dreadnought",
+      "points": "155"
+    },
+    {
+      "name": "Contemptor-Galatus Dreadnought",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/contemptor-galatus-dreadnought",
+      "slug": "contemptor-galatus-dreadnought",
+      "points": "165"
+    },
+    {
+      "name": "Coronus Grav-carrier",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/coronus-grav-carrier",
+      "slug": "coronus-grav-carrier",
+      "points": "180"
+    },
+    {
+      "name": "Orion Assault Dropship",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/orion-assault-dropship",
+      "slug": "orion-assault-dropship",
+      "points": "690"
+    },
+    {
+      "name": "Pallas Grav-attack",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/pallas-grav-attack",
+      "slug": "pallas-grav-attack",
+      "points": "100"
+    },
+    {
+      "name": "Telemon Heavy Dreadnought",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/telemon-heavy-dreadnought",
+      "slug": "telemon-heavy-dreadnought",
+      "points": "225"
+    },
+    {
+      "name": "Venerable Contemptor Dreadnought",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/venerable-contemptor-dreadnought",
+      "slug": "venerable-contemptor-dreadnought",
+      "points": "170"
+    },
+    {
+      "name": "Venerable Land Raider",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-custodes/units/venerable-land-raider",
+      "slug": "venerable-land-raider",
+      "points": "220"
+    }
+  ]
+}

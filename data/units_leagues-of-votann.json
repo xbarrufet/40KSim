@@ -1,0 +1,161 @@
+{
+  "faction": "Leagues of Votann",
+  "slug": "leagues-of-votann",
+  "units_count": 22,
+  "units": [
+    {
+      "name": "Berehk Stornbröw",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/berehk-stornbrow",
+      "slug": "berehk-stornbrow",
+      "points": "85"
+    },
+    {
+      "name": "Buri Aegnirssen",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/buri-aegnirssen",
+      "slug": "buri-aegnirssen",
+      "points": "85"
+    },
+    {
+      "name": "Ûthar the Destined",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/uthar-the-destined",
+      "slug": "uthar-the-destined",
+      "points": "100"
+    },
+    {
+      "name": "Arkanyst Evaluator",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/arkanyst-evaluator",
+      "slug": "arkanyst-evaluator",
+      "points": "70"
+    },
+    {
+      "name": "Brôkhyr Iron-master",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/brokhyr-iron-master",
+      "slug": "brokhyr-iron-master",
+      "points": "70"
+    },
+    {
+      "name": "Einhyr Champion",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/einhyr-champion",
+      "slug": "einhyr-champion",
+      "points": "65"
+    },
+    {
+      "name": "Grimnyr",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/grimnyr",
+      "slug": "grimnyr",
+      "points": "65"
+    },
+    {
+      "name": "Kâhl",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/kahl",
+      "slug": "kahl",
+      "points": "65"
+    },
+    {
+      "name": "Memnyr Strategist",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/memnyr-strategist",
+      "slug": "memnyr-strategist",
+      "points": "45"
+    },
+    {
+      "name": "Hearthkyn Warriors",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/hearthkyn-warriors",
+      "slug": "hearthkyn-warriors",
+      "points": "90"
+    },
+    {
+      "name": "Hernkyn Pioneers",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/hernkyn-pioneers",
+      "slug": "hernkyn-pioneers",
+      "points": "85"
+    },
+    {
+      "name": "Brôkhyr Thunderkyn",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/brokhyr-thunderkyn",
+      "slug": "brokhyr-thunderkyn",
+      "points": "80"
+    },
+    {
+      "name": "Cthonian Beserks",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/cthonian-beserks",
+      "slug": "cthonian-beserks",
+      "points": "90"
+    },
+    {
+      "name": "Cthonian Earthshakers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/cthonian-earthshakers",
+      "slug": "cthonian-earthshakers",
+      "points": "100"
+    },
+    {
+      "name": "Einhyr Hearthguard",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/einhyr-hearthguard",
+      "slug": "einhyr-hearthguard",
+      "points": "130"
+    },
+    {
+      "name": "Hernkyn Yaegirs",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/hernkyn-yaegirs",
+      "slug": "hernkyn-yaegirs",
+      "points": "90"
+    },
+    {
+      "name": "Ironkin Steeljacks with Heavy Volkanite Disintegrators",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/ironkin-steeljacks-with-heavy-volkanite-disintegrators",
+      "slug": "ironkin-steeljacks-with-heavy-volkanite-disintegrators",
+      "points": "80"
+    },
+    {
+      "name": "Ironkin Steeljacks with Melee Weapons",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/ironkin-steeljacks-with-melee-weapons",
+      "slug": "ironkin-steeljacks-with-melee-weapons",
+      "points": "75"
+    },
+    {
+      "name": "Kapricus Carrier",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/kapricus-carrier",
+      "slug": "kapricus-carrier",
+      "points": "70"
+    },
+    {
+      "name": "Sagitaur",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/sagitaur",
+      "slug": "sagitaur",
+      "points": "85"
+    },
+    {
+      "name": "Hekaton Land Fortress",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/hekaton-land-fortress",
+      "slug": "hekaton-land-fortress",
+      "points": "250"
+    },
+    {
+      "name": "Kapricus Defenders",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/leagues-of-votann/units/kapricus-defenders",
+      "slug": "kapricus-defenders",
+      "points": "75"
+    }
+  ]
+}

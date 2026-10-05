@@ -1,0 +1,168 @@
+{
+  "faction": "Drukhari",
+  "slug": "drukhari",
+  "units_count": 23,
+  "units": [
+    {
+      "name": "Drazhar",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/drukhari/units/drazhar",
+      "slug": "drazhar",
+      "points": "85"
+    },
+    {
+      "name": "Lady Malys",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/drukhari/units/lady-malys",
+      "slug": "lady-malys",
+      "points": "100"
+    },
+    {
+      "name": "Lelith Hesperax",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/drukhari/units/lelith-hesperax",
+      "slug": "lelith-hesperax",
+      "points": "80"
+    },
+    {
+      "name": "Archon",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/drukhari/units/archon",
+      "slug": "archon",
+      "points": "80"
+    },
+    {
+      "name": "Haemonculus",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/drukhari/units/haemonculus",
+      "slug": "haemonculus",
+      "points": "50"
+    },
+    {
+      "name": "Succubus",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/drukhari/units/succubus",
+      "slug": "succubus",
+      "points": "50"
+    },
+    {
+      "name": "Kabalite Warriors",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/drukhari/units/kabalite-warriors",
+      "slug": "kabalite-warriors",
+      "points": "110"
+    },
+    {
+      "name": "Wracks",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/drukhari/units/wracks",
+      "slug": "wracks",
+      "points": "55"
+    },
+    {
+      "name": "Wyches",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/drukhari/units/wyches",
+      "slug": "wyches",
+      "points": "90"
+    },
+    {
+      "name": "Hellions",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/drukhari/units/hellions",
+      "slug": "hellions",
+      "points": "90"
+    },
+    {
+      "name": "Reavers",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/drukhari/units/reavers",
+      "slug": "reavers",
+      "points": "75"
+    },
+    {
+      "name": "Hand of the Archon",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/drukhari/units/hand-of-the-archon",
+      "slug": "hand-of-the-archon",
+      "points": "115"
+    },
+    {
+      "name": "Incubi",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/drukhari/units/incubi",
+      "slug": "incubi",
+      "points": "90"
+    },
+    {
+      "name": "Mandrakes",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/drukhari/units/mandrakes",
+      "slug": "mandrakes",
+      "points": "80"
+    },
+    {
+      "name": "Scourges with Heavy Weapons",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/drukhari/units/scourges-with-heavy-weapons",
+      "slug": "scourges-with-heavy-weapons",
+      "points": "110"
+    },
+    {
+      "name": "Scourges with Shardcarbines",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/drukhari/units/scourges-with-shardcarbines",
+      "slug": "scourges-with-shardcarbines",
+      "points": "75"
+    },
+    {
+      "name": "Razorwing Jetfighter",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/drukhari/units/razorwing-jetfighter",
+      "slug": "razorwing-jetfighter",
+      "points": "170"
+    },
+    {
+      "name": "Voidraven Bomber",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/drukhari/units/voidraven-bomber",
+      "slug": "voidraven-bomber",
+      "points": "245"
+    },
+    {
+      "name": "Raider",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/drukhari/units/raider",
+      "slug": "raider",
+      "points": "75"
+    },
+    {
+      "name": "Venom",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/drukhari/units/venom",
+      "slug": "venom",
+      "points": "65"
+    },
+    {
+      "name": "Cronos",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/drukhari/units/cronos",
+      "slug": "cronos",
+      "points": "55"
+    },
+    {
+      "name": "Ravager",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/drukhari/units/ravager",
+      "slug": "ravager",
+      "points": "110"
+    },
+    {
+      "name": "Talos",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/drukhari/units/talos",
+      "slug": "talos",
+      "points": "70"
+    }
+  ]
+}

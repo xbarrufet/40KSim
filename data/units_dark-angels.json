@@ -1,0 +1,602 @@
+{
+  "faction": "Dark Angels",
+  "slug": "dark-angels",
+  "units_count": 85,
+  "units": [
+    {
+      "name": "Asmodai",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/dark-angels/units/asmodai",
+      "slug": "asmodai",
+      "points": "80"
+    },
+    {
+      "name": "Azrael",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/dark-angels/units/azrael",
+      "slug": "azrael",
+      "points": "150"
+    },
+    {
+      "name": "Belial",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/dark-angels/units/belial",
+      "slug": "belial",
+      "points": "100"
+    },
+    {
+      "name": "Ezekiel",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/dark-angels/units/ezekiel",
+      "slug": "ezekiel",
+      "points": "110"
+    },
+    {
+      "name": "Lazarus",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/dark-angels/units/lazarus",
+      "slug": "lazarus",
+      "points": "80"
+    },
+    {
+      "name": "Lion El'Jonson",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/dark-angels/units/lion-eljonson",
+      "slug": "lion-eljonson",
+      "points": "415"
+    },
+    {
+      "name": "Sammael",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/dark-angels/units/sammael",
+      "slug": "sammael",
+      "points": "120"
+    },
+    {
+      "name": "Ancient",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/ancient",
+      "slug": "ancient",
+      "points": "40"
+    },
+    {
+      "name": "Ancient in Terminator Armour",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/ancient-in-terminator-armour",
+      "slug": "ancient-in-terminator-armour",
+      "points": "75"
+    },
+    {
+      "name": "Apothecary",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/apothecary",
+      "slug": "apothecary",
+      "points": "45"
+    },
+    {
+      "name": "Apothecary Biologis",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/apothecary-biologis",
+      "slug": "apothecary-biologis",
+      "points": "60"
+    },
+    {
+      "name": "Bladeguard Ancient",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/bladeguard-ancient",
+      "slug": "bladeguard-ancient",
+      "points": "70"
+    },
+    {
+      "name": "Captain",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/captain",
+      "slug": "captain",
+      "points": "90"
+    },
+    {
+      "name": "Captain in Gravis Armour",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/captain-in-gravis-armour",
+      "slug": "captain-in-gravis-armour",
+      "points": "90"
+    },
+    {
+      "name": "Captain in Phobos Armour",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/captain-in-phobos-armour",
+      "slug": "captain-in-phobos-armour",
+      "points": "75"
+    },
+    {
+      "name": "Captain in Terminator Armour",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/captain-in-terminator-armour",
+      "slug": "captain-in-terminator-armour",
+      "points": "90"
+    },
+    {
+      "name": "Captain on Bike",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/captain-on-bike",
+      "slug": "captain-on-bike",
+      "points": "110"
+    },
+    {
+      "name": "Captain with Jump Pack",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/captain-with-jump-pack",
+      "slug": "captain-with-jump-pack",
+      "points": "90"
+    },
+    {
+      "name": "Chaplain",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/chaplain",
+      "slug": "chaplain",
+      "points": "60"
+    },
+    {
+      "name": "Chaplain in Terminator Armour",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/chaplain-in-terminator-armour",
+      "slug": "chaplain-in-terminator-armour",
+      "points": "75"
+    },
+    {
+      "name": "Chaplain on Bike",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/chaplain-on-bike",
+      "slug": "chaplain-on-bike",
+      "points": "75"
+    },
+    {
+      "name": "Chaplain with Jump Pack",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/chaplain-with-jump-pack",
+      "slug": "chaplain-with-jump-pack",
+      "points": "75"
+    },
+    {
+      "name": "Judiciar",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/judiciar",
+      "slug": "judiciar",
+      "points": "50"
+    },
+    {
+      "name": "Librarian",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/librarian",
+      "slug": "librarian",
+      "points": "75"
+    },
+    {
+      "name": "Librarian in Phobos Armour",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/librarian-in-phobos-armour",
+      "slug": "librarian-in-phobos-armour",
+      "points": "75"
+    },
+    {
+      "name": "Librarian in Terminator Armour",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/librarian-in-terminator-armour",
+      "slug": "librarian-in-terminator-armour",
+      "points": "80"
+    },
+    {
+      "name": "Lieutenant",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/lieutenant",
+      "slug": "lieutenant",
+      "points": "50"
+    },
+    {
+      "name": "Lieutenant in Phobos Armour",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/lieutenant-in-phobos-armour",
+      "slug": "lieutenant-in-phobos-armour",
+      "points": "40"
+    },
+    {
+      "name": "Lieutenant with Combi-weapon",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/lieutenant-with-combi-weapon",
+      "slug": "lieutenant-with-combi-weapon",
+      "points": "85"
+    },
+    {
+      "name": "Techmarine",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/space-marines/units/techmarine",
+      "slug": "techmarine",
+      "points": "55"
+    },
+    {
+      "name": "Assault Intercessor Squad",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/space-marines/units/assault-intercessor-squad",
+      "slug": "assault-intercessor-squad",
+      "points": "85"
+    },
+    {
+      "name": "Heavy Intercessor Squad",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/space-marines/units/heavy-intercessor-squad",
+      "slug": "heavy-intercessor-squad",
+      "points": "115"
+    },
+    {
+      "name": "Intercessor Squad",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/space-marines/units/intercessor-squad",
+      "slug": "intercessor-squad",
+      "points": "85"
+    },
+    {
+      "name": "Ravenwing Black Knights",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/dark-angels/units/ravenwing-black-knights",
+      "slug": "ravenwing-black-knights",
+      "points": "85"
+    },
+    {
+      "name": "Ravenwing Command Squad",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/dark-angels/units/ravenwing-command-squad",
+      "slug": "ravenwing-command-squad",
+      "points": "115"
+    },
+    {
+      "name": "Invader ATVs",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/space-marines/units/invader-atvs",
+      "slug": "invader-atvs",
+      "points": "65"
+    },
+    {
+      "name": "Outrider Squad",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/space-marines/units/outrider-squad",
+      "slug": "outrider-squad",
+      "points": "80"
+    },
+    {
+      "name": "Deathwing Knights",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/dark-angels/units/deathwing-knights",
+      "slug": "deathwing-knights",
+      "points": "255"
+    },
+    {
+      "name": "Deathwing Terminator Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/dark-angels/units/deathwing-terminator-squad",
+      "slug": "deathwing-terminator-squad",
+      "points": "190"
+    },
+    {
+      "name": "Inner Circle Companions",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/dark-angels/units/inner-circle-companions",
+      "slug": "inner-circle-companions",
+      "points": "90"
+    },
+    {
+      "name": "Aggressor Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/aggressor-squad",
+      "slug": "aggressor-squad",
+      "points": "90"
+    },
+    {
+      "name": "Assault Intercessors with Jump Packs",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/assault-intercessors-with-jump-packs",
+      "slug": "assault-intercessors-with-jump-packs",
+      "points": "95"
+    },
+    {
+      "name": "Bladeguard Veteran Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/bladeguard-veteran-squad",
+      "slug": "bladeguard-veteran-squad",
+      "points": "90"
+    },
+    {
+      "name": "Company Heroes",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/company-heroes",
+      "slug": "company-heroes",
+      "points": "125"
+    },
+    {
+      "name": "Desolation Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/desolation-squad",
+      "slug": "desolation-squad",
+      "points": "140"
+    },
+    {
+      "name": "Eliminator Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/eliminator-squad",
+      "slug": "eliminator-squad",
+      "points": "85"
+    },
+    {
+      "name": "Eradicator Squad with heavy bolters",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/eradicator-squad-with-heavy-bolters",
+      "slug": "eradicator-squad-with-heavy-bolters",
+      "points": "100"
+    },
+    {
+      "name": "Eradicator Squad with melta rifles",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/eradicator-squad-with-melta-rifles",
+      "slug": "eradicator-squad-with-melta-rifles",
+      "points": "100"
+    },
+    {
+      "name": "Hellblaster Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/hellblaster-squad",
+      "slug": "hellblaster-squad",
+      "points": "115"
+    },
+    {
+      "name": "Inceptor Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/inceptor-squad",
+      "slug": "inceptor-squad",
+      "points": "130"
+    },
+    {
+      "name": "Incursor Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/incursor-squad",
+      "slug": "incursor-squad",
+      "points": "90"
+    },
+    {
+      "name": "Infernus Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/infernus-squad",
+      "slug": "infernus-squad",
+      "points": "95"
+    },
+    {
+      "name": "Infiltrator Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/infiltrator-squad",
+      "slug": "infiltrator-squad",
+      "points": "85"
+    },
+    {
+      "name": "Reiver Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/reiver-squad",
+      "slug": "reiver-squad",
+      "points": "85"
+    },
+    {
+      "name": "Scout Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/scout-squad",
+      "slug": "scout-squad",
+      "points": "65"
+    },
+    {
+      "name": "Sternguard Veteran Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/sternguard-veteran-squad",
+      "slug": "sternguard-veteran-squad",
+      "points": "105"
+    },
+    {
+      "name": "Terminator Assault Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/terminator-assault-squad",
+      "slug": "terminator-assault-squad",
+      "points": "170"
+    },
+    {
+      "name": "Terminator Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/terminator-squad",
+      "slug": "terminator-squad",
+      "points": "190"
+    },
+    {
+      "name": "Vanguard Veteran Squad with Jump Packs",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/space-marines/units/vanguard-veteran-squad-with-jump-packs",
+      "slug": "vanguard-veteran-squad-with-jump-packs",
+      "points": "110"
+    },
+    {
+      "name": "Nephilim Jetfighter",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/dark-angels/units/nephilim-jetfighter",
+      "slug": "nephilim-jetfighter",
+      "points": "200"
+    },
+    {
+      "name": "Ravenwing Dark Talon",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/dark-angels/units/ravenwing-dark-talon",
+      "slug": "ravenwing-dark-talon",
+      "points": "190"
+    },
+    {
+      "name": "Astraeus",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/space-marines/units/astraeus",
+      "slug": "astraeus",
+      "points": "550"
+    },
+    {
+      "name": "Thunderhawk Gunship",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/space-marines/units/thunderhawk-gunship",
+      "slug": "thunderhawk-gunship",
+      "points": "850"
+    },
+    {
+      "name": "Drop Pod",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/space-marines/units/drop-pod",
+      "slug": "drop-pod",
+      "points": "60"
+    },
+    {
+      "name": "Impulsor",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/space-marines/units/impulsor",
+      "slug": "impulsor",
+      "points": "70"
+    },
+    {
+      "name": "Rhino",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/space-marines/units/rhino",
+      "slug": "rhino",
+      "points": "70"
+    },
+    {
+      "name": "Land Speeder Vengeance",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/dark-angels/units/land-speeder-vengeance",
+      "slug": "land-speeder-vengeance",
+      "points": "150"
+    },
+    {
+      "name": "Ravenwing Darkshroud",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/dark-angels/units/ravenwing-darkshroud",
+      "slug": "ravenwing-darkshroud",
+      "points": "80"
+    },
+    {
+      "name": "Ballistus Dreadnought",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/ballistus-dreadnought",
+      "slug": "ballistus-dreadnought",
+      "points": "150"
+    },
+    {
+      "name": "Brutalis Dreadnought",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/brutalis-dreadnought",
+      "slug": "brutalis-dreadnought",
+      "points": "160"
+    },
+    {
+      "name": "Firestrike Servo-turrets",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/firestrike-servo-turrets",
+      "slug": "firestrike-servo-turrets",
+      "points": "80"
+    },
+    {
+      "name": "Gladiator Lancer",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/gladiator-lancer",
+      "slug": "gladiator-lancer",
+      "points": "160"
+    },
+    {
+      "name": "Gladiator Reaper",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/gladiator-reaper",
+      "slug": "gladiator-reaper",
+      "points": "165"
+    },
+    {
+      "name": "Gladiator Valiant",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/gladiator-valiant",
+      "slug": "gladiator-valiant",
+      "points": "165"
+    },
+    {
+      "name": "Invictor Tactical Warsuit",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/invictor-tactical-warsuit",
+      "slug": "invictor-tactical-warsuit",
+      "points": "135"
+    },
+    {
+      "name": "Land Raider",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/land-raider",
+      "slug": "land-raider",
+      "points": "245"
+    },
+    {
+      "name": "Land Raider Crusader",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/land-raider-crusader",
+      "slug": "land-raider-crusader",
+      "points": "230"
+    },
+    {
+      "name": "Land Raider Redeemer",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/land-raider-redeemer",
+      "slug": "land-raider-redeemer",
+      "points": "245"
+    },
+    {
+      "name": "Land Speeder",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/land-speeder",
+      "slug": "land-speeder",
+      "points": "105"
+    },
+    {
+      "name": "Redemptor Dreadnought",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/redemptor-dreadnought",
+      "slug": "redemptor-dreadnought",
+      "points": "170"
+    },
+    {
+      "name": "Repulsor",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/repulsor",
+      "slug": "repulsor",
+      "points": "190"
+    },
+    {
+      "name": "Repulsor Executioner",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/repulsor-executioner",
+      "slug": "repulsor-executioner",
+      "points": "260"
+    },
+    {
+      "name": "Storm Speeder Hailstrike",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/storm-speeder-hailstrike",
+      "slug": "storm-speeder-hailstrike",
+      "points": "110"
+    },
+    {
+      "name": "Storm Speeder Hammerstrike",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/storm-speeder-hammerstrike",
+      "slug": "storm-speeder-hammerstrike",
+      "points": "140"
+    },
+    {
+      "name": "Storm Speeder Thunderstrike",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/space-marines/units/storm-speeder-thunderstrike",
+      "slug": "storm-speeder-thunderstrike",
+      "points": "140"
+    }
+  ]
+}

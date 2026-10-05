@@ -1,0 +1,168 @@
+{
+  "faction": "Imperial Knights",
+  "slug": "imperial-knights",
+  "units_count": 23,
+  "units": [
+    {
+      "name": "Canis Rex",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/imperial-knights/units/canis-rex",
+      "slug": "canis-rex",
+      "points": "415"
+    },
+    {
+      "name": "Sir Hekhtur",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/imperial-knights/units/sir-hekhtur",
+      "slug": "sir-hekhtur",
+      "points": null
+    },
+    {
+      "name": "Cerastus Knight Acheron",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/cerastus-knight-acheron",
+      "slug": "cerastus-knight-acheron",
+      "points": "380"
+    },
+    {
+      "name": "Cerastus Knight Atrapos",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/cerastus-knight-atrapos",
+      "slug": "cerastus-knight-atrapos",
+      "points": "420"
+    },
+    {
+      "name": "Cerastus Knight Castigator",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/cerastus-knight-castigator",
+      "slug": "cerastus-knight-castigator",
+      "points": "380"
+    },
+    {
+      "name": "Cerastus Knight Lancer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/cerastus-knight-lancer",
+      "slug": "cerastus-knight-lancer",
+      "points": "415"
+    },
+    {
+      "name": "Knight Castellan",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/knight-castellan",
+      "slug": "knight-castellan",
+      "points": "425"
+    },
+    {
+      "name": "Knight Crusader",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/knight-crusader",
+      "slug": "knight-crusader",
+      "points": "395"
+    },
+    {
+      "name": "Knight Defender",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/knight-defender",
+      "slug": "knight-defender",
+      "points": "385"
+    },
+    {
+      "name": "Knight Destrier",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/knight-destrier",
+      "slug": "knight-destrier",
+      "points": "265"
+    },
+    {
+      "name": "Knight Errant",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/knight-errant",
+      "slug": "knight-errant",
+      "points": "355"
+    },
+    {
+      "name": "Knight Gallant",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/knight-gallant",
+      "slug": "knight-gallant",
+      "points": "355"
+    },
+    {
+      "name": "Knight Paladin",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/knight-paladin",
+      "slug": "knight-paladin",
+      "points": "375"
+    },
+    {
+      "name": "Knight Preceptor",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/knight-preceptor",
+      "slug": "knight-preceptor",
+      "points": "365"
+    },
+    {
+      "name": "Knight Valiant",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/knight-valiant",
+      "slug": "knight-valiant",
+      "points": "390"
+    },
+    {
+      "name": "Knight Warden",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/knight-warden",
+      "slug": "knight-warden",
+      "points": "365"
+    },
+    {
+      "name": "Questoris Knight Magaera",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/questoris-knight-magaera",
+      "slug": "questoris-knight-magaera",
+      "points": "385"
+    },
+    {
+      "name": "Questoris Knight Styrix",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/questoris-knight-styrix",
+      "slug": "questoris-knight-styrix",
+      "points": "375"
+    },
+    {
+      "name": "Acastus Knight Asterius",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/imperial-knights/units/acastus-knight-asterius",
+      "slug": "acastus-knight-asterius",
+      "points": "785"
+    },
+    {
+      "name": "Acastus Knight Porphyrion",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/imperial-knights/units/acastus-knight-porphyrion",
+      "slug": "acastus-knight-porphyrion",
+      "points": "725"
+    },
+    {
+      "name": "Armiger Helverin",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/armiger-helverin",
+      "slug": "armiger-helverin",
+      "points": "140"
+    },
+    {
+      "name": "Armiger Moirax",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/armiger-moirax",
+      "slug": "armiger-moirax",
+      "points": "150"
+    },
+    {
+      "name": "Armiger Warglaive",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/imperial-knights/units/armiger-warglaive",
+      "slug": "armiger-warglaive",
+      "points": "140"
+    }
+  ]
+}

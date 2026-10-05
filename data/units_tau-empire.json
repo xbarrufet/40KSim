@@ -1,0 +1,308 @@
+{
+  "faction": "T’au Empire",
+  "slug": "tau-empire",
+  "units_count": 43,
+  "units": [
+    {
+      "name": "Commander Farsight",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/tau-empire/units/commander-farsight",
+      "slug": "commander-farsight",
+      "points": "70"
+    },
+    {
+      "name": "Commander Shadowsun",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/tau-empire/units/commander-shadowsun",
+      "slug": "commander-shadowsun",
+      "points": "100"
+    },
+    {
+      "name": "Darkstrider",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/tau-empire/units/darkstrider",
+      "slug": "darkstrider",
+      "points": "60"
+    },
+    {
+      "name": "The Twin Lance",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/tau-empire/units/the-twin-lance",
+      "slug": "the-twin-lance",
+      "points": "240"
+    },
+    {
+      "name": "Cadre Fireblade",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tau-empire/units/cadre-fireblade",
+      "slug": "cadre-fireblade",
+      "points": "50"
+    },
+    {
+      "name": "Commander in Coldstar Battlesuit",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tau-empire/units/commander-in-coldstar-battlesuit",
+      "slug": "commander-in-coldstar-battlesuit",
+      "points": "95"
+    },
+    {
+      "name": "Commander in Enforcer Battlesuit",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tau-empire/units/commander-in-enforcer-battlesuit",
+      "slug": "commander-in-enforcer-battlesuit",
+      "points": "80"
+    },
+    {
+      "name": "Ethereal",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tau-empire/units/ethereal",
+      "slug": "ethereal",
+      "points": "50"
+    },
+    {
+      "name": "Firesight Team",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tau-empire/units/firesight-team",
+      "slug": "firesight-team",
+      "points": "55"
+    },
+    {
+      "name": "Kroot Flesh Shaper",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tau-empire/units/kroot-flesh-shaper",
+      "slug": "kroot-flesh-shaper",
+      "points": "45"
+    },
+    {
+      "name": "Kroot Lone-spear",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tau-empire/units/kroot-lone-spear",
+      "slug": "kroot-lone-spear",
+      "points": "80"
+    },
+    {
+      "name": "Kroot Trail Shaper",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tau-empire/units/kroot-trail-shaper",
+      "slug": "kroot-trail-shaper",
+      "points": "50"
+    },
+    {
+      "name": "Kroot War Shaper",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/tau-empire/units/kroot-war-shaper",
+      "slug": "kroot-war-shaper",
+      "points": "60"
+    },
+    {
+      "name": "Breacher Team",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/tau-empire/units/breacher-team",
+      "slug": "breacher-team",
+      "points": "80"
+    },
+    {
+      "name": "Strike Team",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/tau-empire/units/strike-team",
+      "slug": "strike-team",
+      "points": "70"
+    },
+    {
+      "name": "Krootox Rampagers",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/tau-empire/units/krootox-rampagers",
+      "slug": "krootox-rampagers",
+      "points": "85"
+    },
+    {
+      "name": "Krootox Riders",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/tau-empire/units/krootox-riders",
+      "slug": "krootox-riders",
+      "points": "45"
+    },
+    {
+      "name": "Kroot Carnivores",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tau-empire/units/kroot-carnivores",
+      "slug": "kroot-carnivores",
+      "points": "65"
+    },
+    {
+      "name": "Kroot Farstalkers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tau-empire/units/kroot-farstalkers",
+      "slug": "kroot-farstalkers",
+      "points": "75"
+    },
+    {
+      "name": "Kroot Hounds",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tau-empire/units/kroot-hounds",
+      "slug": "kroot-hounds",
+      "points": "45"
+    },
+    {
+      "name": "Pathfinder Team",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tau-empire/units/pathfinder-team",
+      "slug": "pathfinder-team",
+      "points": "85"
+    },
+    {
+      "name": "Stealth Battlesuits",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tau-empire/units/stealth-battlesuits",
+      "slug": "stealth-battlesuits",
+      "points": "100"
+    },
+    {
+      "name": "Vespid Stingwings",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/tau-empire/units/vespid-stingwings",
+      "slug": "vespid-stingwings",
+      "points": "70"
+    },
+    {
+      "name": "AX-1-0 Tiger Shark",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/tau-empire/units/ax-1-0-tiger-shark",
+      "slug": "ax-1-0-tiger-shark",
+      "points": "315"
+    },
+    {
+      "name": "Manta",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/tau-empire/units/manta",
+      "slug": "manta",
+      "points": "2100"
+    },
+    {
+      "name": "Razorshark Strike Fighter",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/tau-empire/units/razorshark-strike-fighter",
+      "slug": "razorshark-strike-fighter",
+      "points": "160"
+    },
+    {
+      "name": "Sun Shark Bomber",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/tau-empire/units/sun-shark-bomber",
+      "slug": "sun-shark-bomber",
+      "points": "150"
+    },
+    {
+      "name": "Tiger Shark",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/tau-empire/units/tiger-shark",
+      "slug": "tiger-shark",
+      "points": "395"
+    },
+    {
+      "name": "Stormsurge",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/tau-empire/units/stormsurge",
+      "slug": "stormsurge",
+      "points": "375"
+    },
+    {
+      "name": "Ta’unar Supremacy Armour",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/tau-empire/units/taunar-supremacy-armour",
+      "slug": "taunar-supremacy-armour",
+      "points": "790"
+    },
+    {
+      "name": "Devilfish",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/tau-empire/units/devilfish",
+      "slug": "devilfish",
+      "points": "75"
+    },
+    {
+      "name": "Broadside Battlesuits",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tau-empire/units/broadside-battlesuits",
+      "slug": "broadside-battlesuits",
+      "points": "75"
+    },
+    {
+      "name": "Crisis Fireknife Battlesuits",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tau-empire/units/crisis-fireknife-battlesuits",
+      "slug": "crisis-fireknife-battlesuits",
+      "points": "100"
+    },
+    {
+      "name": "Crisis Starscythe Battlesuits",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tau-empire/units/crisis-starscythe-battlesuits",
+      "slug": "crisis-starscythe-battlesuits",
+      "points": "100"
+    },
+    {
+      "name": "Crisis Sunforge Battlesuits",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tau-empire/units/crisis-sunforge-battlesuits",
+      "slug": "crisis-sunforge-battlesuits",
+      "points": "125"
+    },
+    {
+      "name": "Ghostkeel Battlesuit",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tau-empire/units/ghostkeel-battlesuit",
+      "slug": "ghostkeel-battlesuit",
+      "points": "150"
+    },
+    {
+      "name": "Hammerhead Gunship",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tau-empire/units/hammerhead-gunship",
+      "slug": "hammerhead-gunship",
+      "points": "150"
+    },
+    {
+      "name": "Piranhas",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tau-empire/units/piranhas",
+      "slug": "piranhas",
+      "points": "65"
+    },
+    {
+      "name": "Riptide Battlesuit",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tau-empire/units/riptide-battlesuit",
+      "slug": "riptide-battlesuit",
+      "points": "190"
+    },
+    {
+      "name": "Sky Ray Gunship",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tau-empire/units/sky-ray-gunship",
+      "slug": "sky-ray-gunship",
+      "points": "140"
+    },
+    {
+      "name": "Tidewall Droneport",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tau-empire/units/tidewall-droneport",
+      "slug": "tidewall-droneport",
+      "points": "85"
+    },
+    {
+      "name": "Tidewall Gunrig",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tau-empire/units/tidewall-gunrig",
+      "slug": "tidewall-gunrig",
+      "points": "90"
+    },
+    {
+      "name": "Tidewall Shieldline",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/tau-empire/units/tidewall-shieldline",
+      "slug": "tidewall-shieldline",
+      "points": "85"
+    }
+  ]
+}

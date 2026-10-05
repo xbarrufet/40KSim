@@ -1,0 +1,190 @@
+{
+  "Imperium": [
+    {
+      "name": "Adepta Sororitas",
+      "url": "https://www.40k.app/factions/adepta-sororitas",
+      "slug": "adepta-sororitas"
+    },
+    {
+      "name": "Adeptus Custodes",
+      "url": "https://www.40k.app/factions/adeptus-custodes",
+      "slug": "adeptus-custodes"
+    },
+    {
+      "name": "Adeptus Mechanicus",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus",
+      "slug": "adeptus-mechanicus"
+    },
+    {
+      "name": "Astra Militarum",
+      "url": "https://www.40k.app/factions/astra-militarum",
+      "slug": "astra-militarum"
+    },
+    {
+      "name": "Imperial Agents",
+      "url": "https://www.40k.app/factions/imperial-agents",
+      "slug": "imperial-agents"
+    },
+    {
+      "name": "Imperial Knights",
+      "url": "https://www.40k.app/factions/imperial-knights",
+      "slug": "imperial-knights"
+    },
+    {
+      "name": "Titan Legions",
+      "url": "https://www.40k.app/factions/titan-legions",
+      "slug": "titan-legions"
+    }
+  ],
+  "Space Marines": [
+    {
+      "name": "Black Templars",
+      "url": "https://www.40k.app/factions/black-templars",
+      "slug": "black-templars"
+    },
+    {
+      "name": "Blood Angels",
+      "url": "https://www.40k.app/factions/blood-angels",
+      "slug": "blood-angels"
+    },
+    {
+      "name": "Dark Angels",
+      "url": "https://www.40k.app/factions/dark-angels",
+      "slug": "dark-angels"
+    },
+    {
+      "name": "Deathwatch",
+      "url": "https://www.40k.app/factions/deathwatch",
+      "slug": "deathwatch"
+    },
+    {
+      "name": "Grey Knights",
+      "url": "https://www.40k.app/factions/grey-knights",
+      "slug": "grey-knights"
+    },
+    {
+      "name": "Imperial Fists",
+      "url": "https://www.40k.app/factions/imperial-fists",
+      "slug": "imperial-fists"
+    },
+    {
+      "name": "Iron Hands",
+      "url": "https://www.40k.app/factions/iron-hands",
+      "slug": "iron-hands"
+    },
+    {
+      "name": "Raven Guard",
+      "url": "https://www.40k.app/factions/raven-guard",
+      "slug": "raven-guard"
+    },
+    {
+      "name": "Salamanders",
+      "url": "https://www.40k.app/factions/salamanders",
+      "slug": "salamanders"
+    },
+    {
+      "name": "Space Marines",
+      "url": "https://www.40k.app/factions/space-marines",
+      "slug": "space-marines"
+    },
+    {
+      "name": "Space Wolves",
+      "url": "https://www.40k.app/factions/space-wolves",
+      "slug": "space-wolves"
+    },
+    {
+      "name": "Ultramarines",
+      "url": "https://www.40k.app/factions/ultramarines",
+      "slug": "ultramarines"
+    },
+    {
+      "name": "White Scars",
+      "url": "https://www.40k.app/factions/white-scars",
+      "slug": "white-scars"
+    }
+  ],
+  "Chaos": [
+    {
+      "name": "Chaos Daemons",
+      "url": "https://www.40k.app/factions/chaos-daemons",
+      "slug": "chaos-daemons"
+    },
+    {
+      "name": "Chaos Knights",
+      "url": "https://www.40k.app/factions/chaos-knights",
+      "slug": "chaos-knights"
+    },
+    {
+      "name": "Chaos Space Marines",
+      "url": "https://www.40k.app/factions/chaos-space-marines",
+      "slug": "chaos-space-marines"
+    },
+    {
+      "name": "Chaos Titan Legions",
+      "url": "https://www.40k.app/factions/chaos-titan-legions",
+      "slug": "chaos-titan-legions"
+    },
+    {
+      "name": "Death Guard",
+      "url": "https://www.40k.app/factions/death-guard",
+      "slug": "death-guard"
+    },
+    {
+      "name": "Emperor’s Children",
+      "url": "https://www.40k.app/factions/emperors-children",
+      "slug": "emperors-children"
+    },
+    {
+      "name": "Thousand Sons",
+      "url": "https://www.40k.app/factions/thousand-sons",
+      "slug": "thousand-sons"
+    },
+    {
+      "name": "World Eaters",
+      "url": "https://www.40k.app/factions/world-eaters",
+      "slug": "world-eaters"
+    }
+  ],
+  "Xenos": [
+    {
+      "name": "Aeldari",
+      "url": "https://www.40k.app/factions/aeldari",
+      "slug": "aeldari"
+    },
+    {
+      "name": "Drukhari",
+      "url": "https://www.40k.app/factions/drukhari",
+      "slug": "drukhari"
+    },
+    {
+      "name": "Genestealer Cults",
+      "url": "https://www.40k.app/factions/genestealer-cults",
+      "slug": "genestealer-cults"
+    },
+    {
+      "name": "Leagues of Votann",
+      "url": "https://www.40k.app/factions/leagues-of-votann",
+      "slug": "leagues-of-votann"
+    },
+    {
+      "name": "Necrons",
+      "url": "https://www.40k.app/factions/necrons",
+      "slug": "necrons"
+    },
+    {
+      "name": "Orks",
+      "url": "https://www.40k.app/factions/orks",
+      "slug": "orks"
+    },
+    {
+      "name": "Tyranids",
+      "url": "https://www.40k.app/factions/tyranids",
+      "slug": "tyranids"
+    },
+    {
+      "name": "T’au Empire",
+      "url": "https://www.40k.app/factions/tau-empire",
+      "slug": "tau-empire"
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "faction": "Adeptus Mechanicus",
+  "slug": "adeptus-mechanicus",
+  "units_count": 34,
+  "units": [
+    {
+      "name": "Belisarius Cawl",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/belisarius-cawl",
+      "slug": "belisarius-cawl",
+      "points": "220"
+    },
+    {
+      "name": "Thulia Ghuld",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/thulia-ghuld",
+      "slug": "thulia-ghuld",
+      "points": "180"
+    },
+    {
+      "name": "Cybernetica Datasmith",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/cybernetica-datasmith",
+      "slug": "cybernetica-datasmith",
+      "points": "20"
+    },
+    {
+      "name": "Skitarii Marshal",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/skitarii-marshal",
+      "slug": "skitarii-marshal",
+      "points": "35"
+    },
+    {
+      "name": "Sydonian Skatros",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/sydonian-skatros",
+      "slug": "sydonian-skatros",
+      "points": "45"
+    },
+    {
+      "name": "Tech-Priest Dominus",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/tech-priest-dominus",
+      "slug": "tech-priest-dominus",
+      "points": "60"
+    },
+    {
+      "name": "Tech-Priest Enginseer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/tech-priest-enginseer",
+      "slug": "tech-priest-enginseer",
+      "points": "55"
+    },
+    {
+      "name": "Tech-Priest Manipulus",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/tech-priest-manipulus",
+      "slug": "tech-priest-manipulus",
+      "points": "60"
+    },
+    {
+      "name": "Technoarcheologist",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/technoarcheologist",
+      "slug": "technoarcheologist",
+      "points": "45"
+    },
+    {
+      "name": "Skitarii Rangers",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/skitarii-rangers",
+      "slug": "skitarii-rangers",
+      "points": "85"
+    },
+    {
+      "name": "Skitarii Vanguard",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/skitarii-vanguard",
+      "slug": "skitarii-vanguard",
+      "points": "85"
+    },
+    {
+      "name": "Serberys Raiders",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/serberys-raiders",
+      "slug": "serberys-raiders",
+      "points": "60"
+    },
+    {
+      "name": "Serberys Sulphurhounds",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/serberys-sulphurhounds",
+      "slug": "serberys-sulphurhounds",
+      "points": "55"
+    },
+    {
+      "name": "Corpuscarii Electro-Priests",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/corpuscarii-electro-priests",
+      "slug": "corpuscarii-electro-priests",
+      "points": "60"
+    },
+    {
+      "name": "Fulgurite Electro-Priests",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/fulgurite-electro-priests",
+      "slug": "fulgurite-electro-priests",
+      "points": "65"
+    },
+    {
+      "name": "Hastarii Exterminators",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/hastarii-exterminators",
+      "slug": "hastarii-exterminators",
+      "points": "100"
+    },
+    {
+      "name": "Hastarii Fusiliers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/hastarii-fusiliers",
+      "slug": "hastarii-fusiliers",
+      "points": "105"
+    },
+    {
+      "name": "Kataphron Breachers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/kataphron-breachers",
+      "slug": "kataphron-breachers",
+      "points": "140"
+    },
+    {
+      "name": "Kataphron Destroyers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/kataphron-destroyers",
+      "slug": "kataphron-destroyers",
+      "points": "100"
+    },
+    {
+      "name": "Pteraxii Skystalkers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/pteraxii-skystalkers",
+      "slug": "pteraxii-skystalkers",
+      "points": "75"
+    },
+    {
+      "name": "Pteraxii Sterylizors",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/pteraxii-sterylizors",
+      "slug": "pteraxii-sterylizors",
+      "points": "75"
+    },
+    {
+      "name": "Servitor Battleclade",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/servitor-battleclade",
+      "slug": "servitor-battleclade",
+      "points": "75"
+    },
+    {
+      "name": "Sicarian Infiltrators",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/sicarian-infiltrators",
+      "slug": "sicarian-infiltrators",
+      "points": "75"
+    },
+    {
+      "name": "Sicarian Ruststalkers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/sicarian-ruststalkers",
+      "slug": "sicarian-ruststalkers",
+      "points": "75"
+    },
+    {
+      "name": "Archaeopter Fusilave",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/archaeopter-fusilave",
+      "slug": "archaeopter-fusilave",
+      "points": "160"
+    },
+    {
+      "name": "Archaeopter Stratoraptor",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/archaeopter-stratoraptor",
+      "slug": "archaeopter-stratoraptor",
+      "points": "185"
+    },
+    {
+      "name": "Skorpius Dunerider",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/skorpius-dunerider",
+      "slug": "skorpius-dunerider",
+      "points": "75"
+    },
+    {
+      "name": "Archaeopter Transvector",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/archaeopter-transvector",
+      "slug": "archaeopter-transvector",
+      "points": "145"
+    },
+    {
+      "name": "Ironstrider Ballistarii",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/ironstrider-ballistarii",
+      "slug": "ironstrider-ballistarii",
+      "points": "80"
+    },
+    {
+      "name": "Kastelan Robots",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/kastelan-robots",
+      "slug": "kastelan-robots",
+      "points": "150"
+    },
+    {
+      "name": "Onager Dunecrawler",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/onager-dunecrawler",
+      "slug": "onager-dunecrawler",
+      "points": "150"
+    },
+    {
+      "name": "Skorpius Disintegrator",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/skorpius-disintegrator",
+      "slug": "skorpius-disintegrator",
+      "points": "160"
+    },
+    {
+      "name": "Sydonian Dragoons with Radium Jezzails",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/sydonian-dragoons-with-radium-jezzails",
+      "slug": "sydonian-dragoons-with-radium-jezzails",
+      "points": "55"
+    },
+    {
+      "name": "Sydonian Dragoons with Taser Lances",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/adeptus-mechanicus/units/sydonian-dragoons-with-taser-lances",
+      "slug": "sydonian-dragoons-with-taser-lances",
+      "points": "60"
+    }
+  ]
+}

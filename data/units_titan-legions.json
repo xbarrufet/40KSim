@@ -1,0 +1,35 @@
+{
+  "faction": "Titan Legions",
+  "slug": "titan-legions",
+  "units_count": 4,
+  "units": [
+    {
+      "name": "Reaver Titan",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/titan-legions/units/reaver-titan",
+      "slug": "reaver-titan",
+      "points": "2200"
+    },
+    {
+      "name": "Warbringer Nemesis Titan",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/titan-legions/units/warbringer-nemesis-titan",
+      "slug": "warbringer-nemesis-titan",
+      "points": "2600"
+    },
+    {
+      "name": "Warhound Titan",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/titan-legions/units/warhound-titan",
+      "slug": "warhound-titan",
+      "points": "1100"
+    },
+    {
+      "name": "Warlord Titan",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/titan-legions/units/warlord-titan",
+      "slug": "warlord-titan",
+      "points": "3500"
+    }
+  ]
+}

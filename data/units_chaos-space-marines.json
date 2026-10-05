@@ -1,0 +1,385 @@
+{
+  "faction": "Chaos Space Marines",
+  "slug": "chaos-space-marines",
+  "units_count": 54,
+  "units": [
+    {
+      "name": "Abaddon the Despoiler",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/abaddon-the-despoiler",
+      "slug": "abaddon-the-despoiler",
+      "points": "300"
+    },
+    {
+      "name": "Cypher",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/cypher",
+      "slug": "cypher",
+      "points": "95"
+    },
+    {
+      "name": "Fabius Bile",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/fabius-bile",
+      "slug": "fabius-bile",
+      "points": "110"
+    },
+    {
+      "name": "Haarken Worldclaimer",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/haarken-worldclaimer",
+      "slug": "haarken-worldclaimer",
+      "points": "95"
+    },
+    {
+      "name": "Huron Blackheart",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/huron-blackheart",
+      "slug": "huron-blackheart",
+      "points": "135"
+    },
+    {
+      "name": "Kravek Morne",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/kravek-morne",
+      "slug": "kravek-morne",
+      "points": "130"
+    },
+    {
+      "name": "Masters of the Maelstrom",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/masters-of-the-maelstrom",
+      "slug": "masters-of-the-maelstrom",
+      "points": "150"
+    },
+    {
+      "name": "Vashtorr the Arkifane",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/vashtorr-the-arkifane",
+      "slug": "vashtorr-the-arkifane",
+      "points": "220"
+    },
+    {
+      "name": "Chaos Lord",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/chaos-lord",
+      "slug": "chaos-lord",
+      "points": "95"
+    },
+    {
+      "name": "Chaos Lord in Terminator Armour",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/chaos-lord-in-terminator-armour",
+      "slug": "chaos-lord-in-terminator-armour",
+      "points": "90"
+    },
+    {
+      "name": "Chaos Lord with Jump Pack",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/chaos-lord-with-jump-pack",
+      "slug": "chaos-lord-with-jump-pack",
+      "points": "85"
+    },
+    {
+      "name": "Cultist Firebrand",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/cultist-firebrand",
+      "slug": "cultist-firebrand",
+      "points": "45"
+    },
+    {
+      "name": "Dark Apostle",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/dark-apostle",
+      "slug": "dark-apostle",
+      "points": "70"
+    },
+    {
+      "name": "Dark Commune",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/dark-commune",
+      "slug": "dark-commune",
+      "points": "90"
+    },
+    {
+      "name": "Heretic Astartes Daemon Prince",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/heretic-astartes-daemon-prince",
+      "slug": "heretic-astartes-daemon-prince",
+      "points": "155"
+    },
+    {
+      "name": "Heretic Astartes Daemon Prince with Wings",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/heretic-astartes-daemon-prince-with-wings",
+      "slug": "heretic-astartes-daemon-prince-with-wings",
+      "points": "170"
+    },
+    {
+      "name": "Lord Discordant on Helstalker",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/lord-discordant-on-helstalker",
+      "slug": "lord-discordant-on-helstalker",
+      "points": "155"
+    },
+    {
+      "name": "Master of Executions",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/master-of-executions",
+      "slug": "master-of-executions",
+      "points": "75"
+    },
+    {
+      "name": "Master of Possession",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/master-of-possession",
+      "slug": "master-of-possession",
+      "points": "65"
+    },
+    {
+      "name": "Red Corsairs Reave-Captain",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/red-corsairs-reave-captain",
+      "slug": "red-corsairs-reave-captain",
+      "points": "65"
+    },
+    {
+      "name": "Sorcerer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/sorcerer",
+      "slug": "sorcerer",
+      "points": "65"
+    },
+    {
+      "name": "Sorcerer in Terminator Armour",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/sorcerer-in-terminator-armour",
+      "slug": "sorcerer-in-terminator-armour",
+      "points": "85"
+    },
+    {
+      "name": "Traitor Enforcer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/traitor-enforcer",
+      "slug": "traitor-enforcer",
+      "points": "70"
+    },
+    {
+      "name": "Warpsmith",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/warpsmith",
+      "slug": "warpsmith",
+      "points": "65"
+    },
+    {
+      "name": "Cultist Mob",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/cultist-mob",
+      "slug": "cultist-mob",
+      "points": "50"
+    },
+    {
+      "name": "Legionaries",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/legionaries",
+      "slug": "legionaries",
+      "points": "95"
+    },
+    {
+      "name": "Chaos Bikers",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/chaos-bikers",
+      "slug": "chaos-bikers",
+      "points": "80"
+    },
+    {
+      "name": "Accursed Cultists",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/accursed-cultists",
+      "slug": "accursed-cultists",
+      "points": "90"
+    },
+    {
+      "name": "Chaos Spawn",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/chaos-spawn",
+      "slug": "chaos-spawn",
+      "points": "60"
+    },
+    {
+      "name": "Chaos Terminator Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/chaos-terminator-squad",
+      "slug": "chaos-terminator-squad",
+      "points": "185"
+    },
+    {
+      "name": "Chosen",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/chosen",
+      "slug": "chosen",
+      "points": "140"
+    },
+    {
+      "name": "Fellgor Beastmen",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/fellgor-beastmen",
+      "slug": "fellgor-beastmen",
+      "points": "60"
+    },
+    {
+      "name": "Havocs",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/havocs",
+      "slug": "havocs",
+      "points": "135"
+    },
+    {
+      "name": "Mutilators",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/mutilators",
+      "slug": "mutilators",
+      "points": "165"
+    },
+    {
+      "name": "Nemesis Claw",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/nemesis-claw",
+      "slug": "nemesis-claw",
+      "points": "105"
+    },
+    {
+      "name": "Obliterators",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/obliterators",
+      "slug": "obliterators",
+      "points": "160"
+    },
+    {
+      "name": "Possessed",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/possessed",
+      "slug": "possessed",
+      "points": "130"
+    },
+    {
+      "name": "Raptors",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/raptors",
+      "slug": "raptors",
+      "points": "115"
+    },
+    {
+      "name": "Red Corsairs Raiders",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/red-corsairs-raiders",
+      "slug": "red-corsairs-raiders",
+      "points": "120"
+    },
+    {
+      "name": "Traitor Guardsmen Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/traitor-guardsmen-squad",
+      "slug": "traitor-guardsmen-squad",
+      "points": "65"
+    },
+    {
+      "name": "Warp Talons",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/warp-talons",
+      "slug": "warp-talons",
+      "points": "130"
+    },
+    {
+      "name": "Khorne Lord of Skulls",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/khorne-lord-of-skulls",
+      "slug": "khorne-lord-of-skulls",
+      "points": "450"
+    },
+    {
+      "name": "Chaos Rhino",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/chaos-rhino",
+      "slug": "chaos-rhino",
+      "points": "65"
+    },
+    {
+      "name": "Chaos Land Raider",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/chaos-land-raider",
+      "slug": "chaos-land-raider",
+      "points": "220"
+    },
+    {
+      "name": "Chaos Predator Annihilator",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/chaos-predator-annihilator",
+      "slug": "chaos-predator-annihilator",
+      "points": "140"
+    },
+    {
+      "name": "Chaos Predator Destructor",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/chaos-predator-destructor",
+      "slug": "chaos-predator-destructor",
+      "points": "145"
+    },
+    {
+      "name": "Chaos Vindicator",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/chaos-vindicator",
+      "slug": "chaos-vindicator",
+      "points": "180"
+    },
+    {
+      "name": "Defiler",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/defiler",
+      "slug": "defiler",
+      "points": "300"
+    },
+    {
+      "name": "Forgefiend",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/forgefiend",
+      "slug": "forgefiend",
+      "points": "155"
+    },
+    {
+      "name": "Helbrute",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/helbrute",
+      "slug": "helbrute",
+      "points": "125"
+    },
+    {
+      "name": "Heldrake",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/heldrake",
+      "slug": "heldrake",
+      "points": "175"
+    },
+    {
+      "name": "Maulerfiend",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/maulerfiend",
+      "slug": "maulerfiend",
+      "points": "125"
+    },
+    {
+      "name": "Venomcrawler",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/venomcrawler",
+      "slug": "venomcrawler",
+      "points": "120"
+    },
+    {
+      "name": "Noctilith Crown",
+      "category": "Fortifications",
+      "url": "https://www.40k.app/factions/chaos-space-marines/units/noctilith-crown",
+      "slug": "noctilith-crown",
+      "points": "125"
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "faction": "Aeldari",
+  "slug": "aeldari",
+  "units_count": 57,
+  "units": [
+    {
+      "name": "Asurmen",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/aeldari/units/asurmen",
+      "slug": "asurmen",
+      "points": "135"
+    },
+    {
+      "name": "Avatar of Khaine",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/aeldari/units/avatar-of-khaine",
+      "slug": "avatar-of-khaine",
+      "points": "250"
+    },
+    {
+      "name": "Baharroth",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/aeldari/units/baharroth",
+      "slug": "baharroth",
+      "points": "125"
+    },
+    {
+      "name": "Eldrad Ulthran",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/aeldari/units/eldrad-ulthran",
+      "slug": "eldrad-ulthran",
+      "points": "120"
+    },
+    {
+      "name": "Fuegan",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/aeldari/units/fuegan",
+      "slug": "fuegan",
+      "points": "130"
+    },
+    {
+      "name": "Jain Zar",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/aeldari/units/jain-zar",
+      "slug": "jain-zar",
+      "points": "105"
+    },
+    {
+      "name": "Kharseth",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/aeldari/units/kharseth",
+      "slug": "kharseth",
+      "points": "80"
+    },
+    {
+      "name": "Lhykhis",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/aeldari/units/lhykhis",
+      "slug": "lhykhis",
+      "points": "135"
+    },
+    {
+      "name": "Maugan Ra",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/aeldari/units/maugan-ra",
+      "slug": "maugan-ra",
+      "points": "100"
+    },
+    {
+      "name": "Prince Yriel",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/aeldari/units/prince-yriel",
+      "slug": "prince-yriel",
+      "points": "95"
+    },
+    {
+      "name": "Autarch",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/aeldari/units/autarch",
+      "slug": "autarch",
+      "points": "70"
+    },
+    {
+      "name": "Autarch Wayleaper",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/aeldari/units/autarch-wayleaper",
+      "slug": "autarch-wayleaper",
+      "points": "70"
+    },
+    {
+      "name": "Clanblade",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/aeldari/units/clanblade",
+      "slug": "clanblade",
+      "points": "70"
+    },
+    {
+      "name": "Farseer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/aeldari/units/farseer",
+      "slug": "farseer",
+      "points": "60"
+    },
+    {
+      "name": "Farseer Skyrunner",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/aeldari/units/farseer-skyrunner",
+      "slug": "farseer-skyrunner",
+      "points": "60"
+    },
+    {
+      "name": "Leystalker",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/aeldari/units/leystalker",
+      "slug": "leystalker",
+      "points": "75"
+    },
+    {
+      "name": "Spiritseer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/aeldari/units/spiritseer",
+      "slug": "spiritseer",
+      "points": "50"
+    },
+    {
+      "name": "Stonesinger",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/aeldari/units/stonesinger",
+      "slug": "stonesinger",
+      "points": "55"
+    },
+    {
+      "name": "Warlock",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/aeldari/units/warlock",
+      "slug": "warlock",
+      "points": "40"
+    },
+    {
+      "name": "Corsair Voidreavers",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/aeldari/units/corsair-voidreavers",
+      "slug": "corsair-voidreavers",
+      "points": "65"
+    },
+    {
+      "name": "Guardian Defenders",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/aeldari/units/guardian-defenders",
+      "slug": "guardian-defenders",
+      "points": "90"
+    },
+    {
+      "name": "Storm Guardians",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/aeldari/units/storm-guardians",
+      "slug": "storm-guardians",
+      "points": "100"
+    },
+    {
+      "name": "Dragon Knights",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/aeldari/units/dragon-knights",
+      "slug": "dragon-knights",
+      "points": "85"
+    },
+    {
+      "name": "Shining Spears",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/aeldari/units/shining-spears",
+      "slug": "shining-spears",
+      "points": "100"
+    },
+    {
+      "name": "Shroud Runners",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/aeldari/units/shroud-runners",
+      "slug": "shroud-runners",
+      "points": "90"
+    },
+    {
+      "name": "Warlock Skyrunners",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/aeldari/units/warlock-skyrunners",
+      "slug": "warlock-skyrunners",
+      "points": "45"
+    },
+    {
+      "name": "Windriders",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/aeldari/units/windriders",
+      "slug": "windriders",
+      "points": "80"
+    },
+    {
+      "name": "Corsair Skyreavers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/corsair-skyreavers",
+      "slug": "corsair-skyreavers",
+      "points": "75"
+    },
+    {
+      "name": "Corsair Voidscarred",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/corsair-voidscarred",
+      "slug": "corsair-voidscarred",
+      "points": "70"
+    },
+    {
+      "name": "D-cannon Platform",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/d-cannon-platform",
+      "slug": "d-cannon-platform",
+      "points": "110"
+    },
+    {
+      "name": "Dark Reapers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/dark-reapers",
+      "slug": "dark-reapers",
+      "points": "95"
+    },
+    {
+      "name": "Dire Avengers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/dire-avengers",
+      "slug": "dire-avengers",
+      "points": "70"
+    },
+    {
+      "name": "Fire Dragons",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/fire-dragons",
+      "slug": "fire-dragons",
+      "points": "110"
+    },
+    {
+      "name": "Howling Banshees",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/howling-banshees",
+      "slug": "howling-banshees",
+      "points": "85"
+    },
+    {
+      "name": "Rangers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/rangers",
+      "slug": "rangers",
+      "points": "60"
+    },
+    {
+      "name": "Shadow Weaver Platform",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/shadow-weaver-platform",
+      "slug": "shadow-weaver-platform",
+      "points": "60"
+    },
+    {
+      "name": "Striking Scorpions",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/striking-scorpions",
+      "slug": "striking-scorpions",
+      "points": "75"
+    },
+    {
+      "name": "Swooping Hawks",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/swooping-hawks",
+      "slug": "swooping-hawks",
+      "points": "95"
+    },
+    {
+      "name": "Vibro Cannon Platform",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/vibro-cannon-platform",
+      "slug": "vibro-cannon-platform",
+      "points": "60"
+    },
+    {
+      "name": "Warlock Conclave",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/warlock-conclave",
+      "slug": "warlock-conclave",
+      "points": "55"
+    },
+    {
+      "name": "Warp Spiders",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/warp-spiders",
+      "slug": "warp-spiders",
+      "points": "105"
+    },
+    {
+      "name": "Wraithblades",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/wraithblades",
+      "slug": "wraithblades",
+      "points": "140"
+    },
+    {
+      "name": "Wraithguard",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/aeldari/units/wraithguard",
+      "slug": "wraithguard",
+      "points": "145"
+    },
+    {
+      "name": "Crimson Hunter",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/aeldari/units/crimson-hunter",
+      "slug": "crimson-hunter",
+      "points": "160"
+    },
+    {
+      "name": "Hemlock Wraithfighter",
+      "category": "Aircraft",
+      "url": "https://www.40k.app/factions/aeldari/units/hemlock-wraithfighter",
+      "slug": "hemlock-wraithfighter",
+      "points": "155"
+    },
+    {
+      "name": "Phantom Titan",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/aeldari/units/phantom-titan",
+      "slug": "phantom-titan",
+      "points": "2100"
+    },
+    {
+      "name": "Revenant Titan",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/aeldari/units/revenant-titan",
+      "slug": "revenant-titan",
+      "points": "1100"
+    },
+    {
+      "name": "Wraithknight",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/aeldari/units/wraithknight",
+      "slug": "wraithknight",
+      "points": "385"
+    },
+    {
+      "name": "Wraithknight with Ghostglaive",
+      "category": "Titanic",
+      "url": "https://www.40k.app/factions/aeldari/units/wraithknight-with-ghostglaive",
+      "slug": "wraithknight-with-ghostglaive",
+      "points": "380"
+    },
+    {
+      "name": "Wave Serpent",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/aeldari/units/wave-serpent",
+      "slug": "wave-serpent",
+      "points": "115"
+    },
+    {
+      "name": "Falcon",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/aeldari/units/falcon",
+      "slug": "falcon",
+      "points": "130"
+    },
+    {
+      "name": "Fire Prism",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/aeldari/units/fire-prism",
+      "slug": "fire-prism",
+      "points": "150"
+    },
+    {
+      "name": "Night Spinner",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/aeldari/units/night-spinner",
+      "slug": "night-spinner",
+      "points": "165"
+    },
+    {
+      "name": "Starfangs",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/aeldari/units/starfangs",
+      "slug": "starfangs",
+      "points": "70"
+    },
+    {
+      "name": "Vyper",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/aeldari/units/vyper",
+      "slug": "vyper",
+      "points": "75"
+    },
+    {
+      "name": "War Walkers",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/aeldari/units/war-walkers",
+      "slug": "war-walkers",
+      "points": "80"
+    },
+    {
+      "name": "Wraithlord",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/aeldari/units/wraithlord",
+      "slug": "wraithlord",
+      "points": "125"
+    }
+  ]
+}

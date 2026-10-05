@@ -1,0 +1,378 @@
+{
+  "faction": "Chaos Daemons",
+  "slug": "chaos-daemons",
+  "units_count": 53,
+  "units": [
+    {
+      "name": "Be’lakor",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/belakor",
+      "slug": "belakor",
+      "points": "390"
+    },
+    {
+      "name": "Epidemius",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/epidemius",
+      "slug": "epidemius",
+      "points": "80"
+    },
+    {
+      "name": "Horticulous Slimux",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/horticulous-slimux",
+      "slug": "horticulous-slimux",
+      "points": "120"
+    },
+    {
+      "name": "Kairos Fateweaver",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/kairos-fateweaver",
+      "slug": "kairos-fateweaver",
+      "points": "305"
+    },
+    {
+      "name": "Karanak",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/karanak",
+      "slug": "karanak",
+      "points": "70"
+    },
+    {
+      "name": "Rotigus",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/rotigus",
+      "slug": "rotigus",
+      "points": "280"
+    },
+    {
+      "name": "Shalaxi Helbane",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/shalaxi-helbane",
+      "slug": "shalaxi-helbane",
+      "points": "315"
+    },
+    {
+      "name": "Skarbrand",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/skarbrand",
+      "slug": "skarbrand",
+      "points": "330"
+    },
+    {
+      "name": "Skulltaker",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/skulltaker",
+      "slug": "skulltaker",
+      "points": "85"
+    },
+    {
+      "name": "Syll’Esske",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/syllesske",
+      "slug": "syllesske",
+      "points": "120"
+    },
+    {
+      "name": "The Blue Scribes",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/the-blue-scribes",
+      "slug": "the-blue-scribes",
+      "points": "75"
+    },
+    {
+      "name": "The Changeling",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/the-changeling",
+      "slug": "the-changeling",
+      "points": "105"
+    },
+    {
+      "name": "The Masque of Slaanesh",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/the-masque-of-slaanesh",
+      "slug": "the-masque-of-slaanesh",
+      "points": "95"
+    },
+    {
+      "name": "Bloodmaster",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/bloodmaster",
+      "slug": "bloodmaster",
+      "points": "65"
+    },
+    {
+      "name": "Bloodthirster",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/bloodthirster",
+      "slug": "bloodthirster",
+      "points": "320"
+    },
+    {
+      "name": "Changecaster",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/changecaster",
+      "slug": "changecaster",
+      "points": "60"
+    },
+    {
+      "name": "Contorted Epitome",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/contorted-epitome",
+      "slug": "contorted-epitome",
+      "points": "115"
+    },
+    {
+      "name": "Daemon Prince of Chaos",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/daemon-prince-of-chaos",
+      "slug": "daemon-prince-of-chaos",
+      "points": "165"
+    },
+    {
+      "name": "Daemon Prince of Chaos with Wings",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/daemon-prince-of-chaos-with-wings",
+      "slug": "daemon-prince-of-chaos-with-wings",
+      "points": "190"
+    },
+    {
+      "name": "Exalted Flamer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/exalted-flamer",
+      "slug": "exalted-flamer",
+      "points": "65"
+    },
+    {
+      "name": "Fateskimmer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/fateskimmer",
+      "slug": "fateskimmer",
+      "points": "95"
+    },
+    {
+      "name": "Fluxmaster",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/fluxmaster",
+      "slug": "fluxmaster",
+      "points": "70"
+    },
+    {
+      "name": "Great Unclean One",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/great-unclean-one",
+      "slug": "great-unclean-one",
+      "points": "265"
+    },
+    {
+      "name": "Infernal Enrapturess",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/infernal-enrapturess",
+      "slug": "infernal-enrapturess",
+      "points": "60"
+    },
+    {
+      "name": "Keeper of Secrets",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/keeper-of-secrets",
+      "slug": "keeper-of-secrets",
+      "points": "265"
+    },
+    {
+      "name": "Lord of Change",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/lord-of-change",
+      "slug": "lord-of-change",
+      "points": "320"
+    },
+    {
+      "name": "Poxbringer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/poxbringer",
+      "slug": "poxbringer",
+      "points": "60"
+    },
+    {
+      "name": "Rendmaster on Blood Throne",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/rendmaster-on-blood-throne",
+      "slug": "rendmaster-on-blood-throne",
+      "points": "160"
+    },
+    {
+      "name": "Skullmaster",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/skullmaster",
+      "slug": "skullmaster",
+      "points": "85"
+    },
+    {
+      "name": "Sloppity Bilepiper",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/sloppity-bilepiper",
+      "slug": "sloppity-bilepiper",
+      "points": "55"
+    },
+    {
+      "name": "Spoilpox Scrivener",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/spoilpox-scrivener",
+      "slug": "spoilpox-scrivener",
+      "points": "60"
+    },
+    {
+      "name": "Tormentbringer",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/tormentbringer",
+      "slug": "tormentbringer",
+      "points": "135"
+    },
+    {
+      "name": "Tranceweaver",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/tranceweaver",
+      "slug": "tranceweaver",
+      "points": "60"
+    },
+    {
+      "name": "Bloodletters",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/bloodletters",
+      "slug": "bloodletters",
+      "points": "110"
+    },
+    {
+      "name": "Blue Horrors",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/blue-horrors",
+      "slug": "blue-horrors",
+      "points": "125"
+    },
+    {
+      "name": "Daemonettes",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/daemonettes",
+      "slug": "daemonettes",
+      "points": "100"
+    },
+    {
+      "name": "Nurglings",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/nurglings",
+      "slug": "nurglings",
+      "points": "45"
+    },
+    {
+      "name": "Pink Horrors",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/pink-horrors",
+      "slug": "pink-horrors",
+      "points": "150"
+    },
+    {
+      "name": "Plaguebearers",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/plaguebearers",
+      "slug": "plaguebearers",
+      "points": "115"
+    },
+    {
+      "name": "Bloodcrushers",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/bloodcrushers",
+      "slug": "bloodcrushers",
+      "points": "95"
+    },
+    {
+      "name": "Burning Chariot",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/burning-chariot",
+      "slug": "burning-chariot",
+      "points": "115"
+    },
+    {
+      "name": "Hellflayers",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/hellflayers",
+      "slug": "hellflayers",
+      "points": "80"
+    },
+    {
+      "name": "Plague Drones",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/plague-drones",
+      "slug": "plague-drones",
+      "points": "110"
+    },
+    {
+      "name": "Seekers",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/seekers",
+      "slug": "seekers",
+      "points": "85"
+    },
+    {
+      "name": "Skull Cannon",
+      "category": "Mounted",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/skull-cannon",
+      "slug": "skull-cannon",
+      "points": "100"
+    },
+    {
+      "name": "Beasts of Nurgle",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/beasts-of-nurgle",
+      "slug": "beasts-of-nurgle",
+      "points": "80"
+    },
+    {
+      "name": "Fiends",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/fiends",
+      "slug": "fiends",
+      "points": "90"
+    },
+    {
+      "name": "Flamers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/flamers",
+      "slug": "flamers",
+      "points": "65"
+    },
+    {
+      "name": "Flesh Hounds",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/flesh-hounds",
+      "slug": "flesh-hounds",
+      "points": "80"
+    },
+    {
+      "name": "Screamers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/screamers",
+      "slug": "screamers",
+      "points": "80"
+    },
+    {
+      "name": "Soul Grinder",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/soul-grinder",
+      "slug": "soul-grinder",
+      "points": "180"
+    },
+    {
+      "name": "Feculent Gnarlmaw",
+      "category": "Fortifications",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/feculent-gnarlmaw",
+      "slug": "feculent-gnarlmaw",
+      "points": "100"
+    },
+    {
+      "name": "Skull Altar",
+      "category": "Fortifications",
+      "url": "https://www.40k.app/factions/chaos-daemons/units/skull-altar",
+      "slug": "skull-altar",
+      "points": "105"
+    }
+  ]
+}

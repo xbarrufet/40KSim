@@ -1,0 +1,210 @@
+{
+  "faction": "Imperial Agents",
+  "slug": "imperial-agents",
+  "units_count": 29,
+  "units": [
+    {
+      "name": "Callidus Assassin",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/imperial-agents/units/callidus-assassin",
+      "slug": "callidus-assassin",
+      "points": "100"
+    },
+    {
+      "name": "Culexus Assassin",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/imperial-agents/units/culexus-assassin",
+      "slug": "culexus-assassin",
+      "points": "85"
+    },
+    {
+      "name": "Eversor Assassin",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/imperial-agents/units/eversor-assassin",
+      "slug": "eversor-assassin",
+      "points": "100"
+    },
+    {
+      "name": "Inquisitor Coteaz",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/imperial-agents/units/inquisitor-coteaz",
+      "slug": "inquisitor-coteaz",
+      "points": "75"
+    },
+    {
+      "name": "Inquisitor Draxus",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/imperial-agents/units/inquisitor-draxus",
+      "slug": "inquisitor-draxus",
+      "points": "75"
+    },
+    {
+      "name": "Inquisitor Greyfax",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/imperial-agents/units/inquisitor-greyfax",
+      "slug": "inquisitor-greyfax",
+      "points": "65"
+    },
+    {
+      "name": "Inquisitor Kroyle",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/imperial-agents/units/inquisitor-kroyle",
+      "slug": "inquisitor-kroyle",
+      "points": "100"
+    },
+    {
+      "name": "Vindicare Assassin",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/imperial-agents/units/vindicare-assassin",
+      "slug": "vindicare-assassin",
+      "points": "110"
+    },
+    {
+      "name": "Watch Captain Artemis",
+      "category": "Epic heroes",
+      "url": "https://www.40k.app/factions/imperial-agents/units/watch-captain-artemis",
+      "slug": "watch-captain-artemis",
+      "points": "75"
+    },
+    {
+      "name": "Inquisitor",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-agents/units/inquisitor",
+      "slug": "inquisitor",
+      "points": "55"
+    },
+    {
+      "name": "Ministorum Priest",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-agents/units/ministorum-priest",
+      "slug": "ministorum-priest",
+      "points": "40"
+    },
+    {
+      "name": "Navigator",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-agents/units/navigator",
+      "slug": "navigator",
+      "points": "60"
+    },
+    {
+      "name": "Rogue Trader Entourage",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-agents/units/rogue-trader-entourage",
+      "slug": "rogue-trader-entourage",
+      "points": "75"
+    },
+    {
+      "name": "Watch Master",
+      "category": "Leaders & Characters",
+      "url": "https://www.40k.app/factions/imperial-agents/units/watch-master",
+      "slug": "watch-master",
+      "points": "105"
+    },
+    {
+      "name": "Aquila Kill Team",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/imperial-agents/units/aquila-kill-team",
+      "slug": "aquila-kill-team",
+      "points": "110"
+    },
+    {
+      "name": "Deathwatch Kill Team",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/imperial-agents/units/deathwatch-kill-team",
+      "slug": "deathwatch-kill-team",
+      "points": "115"
+    },
+    {
+      "name": "Imperial Navy Breachers",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/imperial-agents/units/imperial-navy-breachers",
+      "slug": "imperial-navy-breachers",
+      "points": "90"
+    },
+    {
+      "name": "Vigilant Squad",
+      "category": "Battleline",
+      "url": "https://www.40k.app/factions/imperial-agents/units/vigilant-squad",
+      "slug": "vigilant-squad",
+      "points": "85"
+    },
+    {
+      "name": "Exaction Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/imperial-agents/units/exaction-squad",
+      "slug": "exaction-squad",
+      "points": "90"
+    },
+    {
+      "name": "Grey Knights Terminator Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/imperial-agents/units/grey-knights-terminator-squad",
+      "slug": "grey-knights-terminator-squad",
+      "points": "175"
+    },
+    {
+      "name": "Inquisitorial Agents",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/imperial-agents/units/inquisitorial-agents",
+      "slug": "inquisitorial-agents",
+      "points": "50"
+    },
+    {
+      "name": "Sanctifiers",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/imperial-agents/units/sanctifiers",
+      "slug": "sanctifiers",
+      "points": "100"
+    },
+    {
+      "name": "Sisters of Battle Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/imperial-agents/units/sisters-of-battle-squad",
+      "slug": "sisters-of-battle-squad",
+      "points": "100"
+    },
+    {
+      "name": "Subductor Squad",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/imperial-agents/units/subductor-squad",
+      "slug": "subductor-squad",
+      "points": "85"
+    },
+    {
+      "name": "Voidsmen-at-Arms",
+      "category": "Infantry, Swarms, Beasts",
+      "url": "https://www.40k.app/factions/imperial-agents/units/voidsmen-at-arms",
+      "slug": "voidsmen-at-arms",
+      "points": "50"
+    },
+    {
+      "name": "Imperial Rhino",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/imperial-agents/units/imperial-rhino",
+      "slug": "imperial-rhino",
+      "points": "65"
+    },
+    {
+      "name": "Inquisitorial Chimera",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/imperial-agents/units/inquisitorial-chimera",
+      "slug": "inquisitorial-chimera",
+      "points": "60"
+    },
+    {
+      "name": "Sisters of Battle Immolator",
+      "category": "Dedicated Transports",
+      "url": "https://www.40k.app/factions/imperial-agents/units/sisters-of-battle-immolator",
+      "slug": "sisters-of-battle-immolator",
+      "points": "90"
+    },
+    {
+      "name": "Corvus Blackstar",
+      "category": "Vehicles, Monsters",
+      "url": "https://www.40k.app/factions/imperial-agents/units/corvus-blackstar",
+      "slug": "corvus-blackstar",
+      "points": "180"
+    }
+  ]
+}
