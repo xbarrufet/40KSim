@@ -9,18 +9,10 @@ export function GameView() {
   const [attackerId, setAttackerId] = useState('')
   const [defenderId, setDefenderId] = useState('')
 
-  const units = catalogState.status === 'ready'
-    ? catalogState.catalog.factions.flatMap((faction) =>
-        faction.units.map((unit) => ({
-          id: `${faction.id}/${unit.id}`,
-          factionName: faction.name,
-          unit,
-        })),
-      )
-    : []
+  const units: { id: string; factionName: string; unit: UnitProfile }[] = []
   const catalogReady = catalogState.status === 'ready' && units.length > 0
-  const attacker = units.find((entry) => entry.id === attackerId)?.unit
-  const defender = units.find((entry) => entry.id === defenderId)?.unit
+  const attacker = units.find((entry: { id: string; factionName: string; unit: UnitProfile }) => entry.id === attackerId)?.unit
+  const defender = units.find((entry: { id: string; factionName: string; unit: UnitProfile }) => entry.id === defenderId)?.unit
 
   return (
     <section className="workspace" aria-labelledby="page-title">

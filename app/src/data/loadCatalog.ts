@@ -1,6 +1,10 @@
 import type { UnitCatalog } from './schema'
+import { isFactionsEmpty, seedFromCatalog, getAllFactions } from './db'
 
-export async function loadCatalog(): Promise<UnitCatalog> {
+export async function initCatalog(): Promise<void> {
+  const empty = await isFactionsEmpty()
+  if (!empty) return
+
   const response = await fetch('/data/units.json')
   if (!response.ok) {
     throw new Error(`No se pudo cargar el catálogo (${response.status}).`)
@@ -11,8 +15,10 @@ export async function loadCatalog(): Promise<UnitCatalog> {
     throw new Error('El catálogo local no coincide con el esquema esperado.')
   }
 
-  return value
+  await seedFromCatalog(value)
 }
+
+export { getAllFactions }
 
 function isUnitCatalog(value: unknown): value is UnitCatalog {
   if (typeof value !== 'object' || value === null) return false

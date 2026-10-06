@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Descarga los datasheets completos de todas las unidades de una faccion.
-Requiere que exista units_<slug>.json generado por fetch_units.py.
+Requiere que exista <slug>/units.json generado por fetch_units.py.
 
 Uso:
   python fetch_datasheets.py <nombre_faccion>

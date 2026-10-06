@@ -1,0 +1,33 @@
+schema: spec-driven
+
+context: |
+  40KSim is a PWA (Vite + React 19 + TypeScript 6) for simulating Warhammer 40K combat.
+  Runs entirely client-side — no backend. Designed for iOS Safari installation and offline use.
+  All runtime data stored in IndexedDB (seeded from static /data/units.json on first launch).
+  No routing library, no state management library, no CSS framework — plain CSS, local React state, tab-based navigation.
+  Icons from lucide-react. Linting with oxlint.
+  Data pipeline: Python 3 scripts scrape 40k.app locally to produce JSON files; users upload BaseData JSONs into the app via browser.
+  The codebase mixes Spanish (UI labels, specs, Python output) and English (component names, TypeScript interfaces). Follow existing convention per context.
+  Never invent Warhammer 40K game rules — ask the user if unsure.
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always state what is out of scope
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
+
+# Per-operation guidance (optional)
+# Add advisory guidance for how apply and archive work should be conducted.
+# This is separate from artifact rules above.
+# Example:
+#   operations:
+#     apply:
+#       guidance:
+#         - Keep test summaries concise
+#     archive:
+#       guidance:
+#         - Summarize the archive outcome before finishing

@@ -5,10 +5,16 @@ import { HomeView } from './home/HomeView'
 import { ListView } from './list/ListView'
 import './App.css'
 
-type Tab = 'home' | 'list' | 'game'
+type Tab = 'factions' | 'list' | 'game'
+
+interface SelectedFaction {
+  slug: string
+  name: string
+}
 
 function App() {
-  const [tab, setTab] = useState<Tab>('home')
+  const [tab, setTab] = useState<Tab>('factions')
+  const [selectedFaction, setSelectedFaction] = useState<SelectedFaction | null>(null)
 
   return (
     <main className="app-shell">
@@ -20,10 +26,13 @@ function App() {
         <nav className="main-nav">
           <button
             type="button"
-            className={tab === 'home' ? 'active' : ''}
-            onClick={() => setTab('home')}
+            className={tab === 'factions' ? 'active' : ''}
+            onClick={() => {
+              setTab('factions')
+              setSelectedFaction(null)
+            }}
           >
-            HOME
+            FACTIONS
           </button>
           <button
             type="button"
@@ -45,7 +54,13 @@ function App() {
         </div>
       </header>
 
-      {tab === 'home' && <HomeView />}
+      {tab === 'factions' && (
+        <HomeView
+          selectedFaction={selectedFaction}
+          onSelectFaction={setSelectedFaction}
+          onBack={() => setSelectedFaction(null)}
+        />
+      )}
       {tab === 'list' && <ListView />}
       {tab === 'game' && <GameView />}
 

@@ -1,10 +1,17 @@
 import { useEffect, useState } from 'react'
-import { loadCatalog } from './loadCatalog'
-import type { UnitCatalog } from './schema'
+import { initCatalog, getAllFactions } from './loadCatalog'
+
+interface FactionSummary {
+  id: string
+  slug: string
+  name: string
+  category?: string
+  unitCount: number
+}
 
 export type CatalogState =
   | { status: 'loading' }
-  | { status: 'ready'; catalog: UnitCatalog }
+  | { status: 'ready'; factions: FactionSummary[] }
   | { status: 'error'; message: string }
 
 export function useCatalog(): CatalogState {
@@ -13,9 +20,10 @@ export function useCatalog(): CatalogState {
   useEffect(() => {
     let active = true
 
-    loadCatalog()
-      .then((catalog) => {
-        if (active) setState({ status: 'ready', catalog })
+    initCatalog()
+      .then(() => getAllFactions())
+      .then((factions) => {
+        if (active) setState({ status: 'ready', factions })
       })
       .catch((error: unknown) => {
         if (active) {

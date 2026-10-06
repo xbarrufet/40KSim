@@ -8,12 +8,14 @@ Actualmente, el repositorio contiene scripts Python que recopilan datos publicad
 
 ## Datos disponibles
 
-- `data/factions.json`: facciones agrupadas por categoría.
-- `data/units_<faccion>.json`: unidades de una facción, con categoría, URL, slug y puntos cuando están disponibles.
-- `data/datasheets_<faccion>.json`: datasheets de unidades, incluidas características, armas y habilidades extraídas.
-- `data/faction_data_<faccion>.json`: reglas de ejército y destacamentos de una facción.
+Cada facción tiene su propio directorio en `data/<faction-slug>/`:
 
-En el repositorio hay listas de unidades para varias facciones, pero los datasheets y los datos de facción solo están descargados para Space Marines por ahora.
+- `data/factions.json`: facciones agrupadas por categoría.
+- `data/<faction-slug>/units.json`: unidades de una facción, con categoría, URL, slug y puntos cuando están disponibles.
+- `data/<faction-slug>/BaseData/<unit-slug>.json`: datasheet individual de cada unidad, con características, armas y habilidades extraídas.
+- `data/<faction-slug>/faction_data.json`: reglas de ejército y destacamentos de una facción.
+
+En el repositorio hay listas de unidades para todas las facciones, pero los datasheets (BaseData) y los datos de facción solo están descargados para Space Marines por ahora.
 
 ## Requisitos
 

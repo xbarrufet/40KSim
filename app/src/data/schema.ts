@@ -8,6 +8,7 @@ export interface UnitCatalog {
 
 export interface Faction {
   id: string
+  slug: string
   name: string
   category?: string
   units: UnitProfile[]
@@ -15,6 +16,7 @@ export interface Faction {
 
 export interface UnitProfile {
   id: string
+  slug: string
   name: string
   points?: number
   keywords: string[]
