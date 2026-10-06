@@ -11,6 +11,7 @@ export interface Faction {
   slug: string
   name: string
   category?: string
+  icon?: string
   units: UnitProfile[]
 }
 
@@ -19,10 +20,10 @@ export interface UnitProfile {
   slug: string
   name: string
   points?: number
-  keywords: string[]
-  models: ModelProfile[]
-  weapons: WeaponProfile[]
-  abilities: AbilityProfile[]
+  keywords?: string[]
+  models?: ModelProfile[]
+  weapons?: WeaponProfile[]
+  abilities?: AbilityProfile[]
 }
 
 export interface ModelProfile {

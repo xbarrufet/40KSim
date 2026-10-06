@@ -8,6 +8,7 @@ interface FactionRecord {
   slug: string
   name: string
   category?: string
+  icon?: string
   unitCount: number
 }
 
@@ -158,6 +159,44 @@ export async function putUnit(factionSlug: string, unit: UnitRecord): Promise<vo
   })
 }
 
+export async function getBaseDataCount(factionSlug: string): Promise<number> {
+  const db = await getDB()
+  return new Promise((resolve, reject) => {
+    const t = tx(db, 'baseData', 'readonly')
+    let count = 0
+    const request = t.objectStore('baseData').openKeyCursor()
+    request.onsuccess = () => {
+      const cursor = request.result
+      if (cursor) {
+        if ((cursor.key as string).startsWith(factionSlug + '/')) count++
+        cursor.continue()
+      } else {
+        resolve(count)
+      }
+    }
+    request.onerror = () => reject(request.error)
+  })
+}
+
+export async function getUnitDataCount(factionSlug: string): Promise<number> {
+  const db = await getDB()
+  return new Promise((resolve, reject) => {
+    const t = tx(db, 'unitData', 'readonly')
+    let count = 0
+    const request = t.objectStore('unitData').openKeyCursor()
+    request.onsuccess = () => {
+      const cursor = request.result
+      if (cursor) {
+        if ((cursor.key as string).startsWith(factionSlug + '/')) count++
+        cursor.continue()
+      } else {
+        resolve(count)
+      }
+    }
+    request.onerror = () => reject(request.error)
+  })
+}
+
 export async function isFactionsEmpty(): Promise<boolean> {
   const db = await getDB()
   return new Promise((resolve, reject) => {
@@ -180,6 +219,7 @@ export async function seedFromCatalog(catalog: UnitCatalog): Promise<void> {
       slug: faction.slug,
       name: faction.name,
       category: faction.category,
+      icon: faction.icon,
       unitCount: faction.units.length,
     }
     factionsStore.put(record)
@@ -191,7 +231,7 @@ export async function seedFromCatalog(catalog: UnitCatalog): Promise<void> {
         factionSlug: faction.slug,
         category: undefined,
         points: unit.points,
-        keywords: unit.keywords,
+        keywords: unit.keywords ?? [],
       }
       unitsStore.put(unitRecord, `${faction.slug}/${unit.slug}`)
     }

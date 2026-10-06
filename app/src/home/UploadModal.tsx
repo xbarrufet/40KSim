@@ -14,7 +14,6 @@ interface FileEntry {
   fileName: string
   data: unknown
   matchedUnit: string | null
-  action: 'replace' | 'create' | 'skip'
 }
 
 export function UploadModal({ factionSlug, units, onClose, onUploaded }: UploadModalProps) {
@@ -41,7 +40,6 @@ export function UploadModal({ factionSlug, units, onClose, onUploaded }: UploadM
         fileName: file.name,
         data,
         matchedUnit: matched?.name ?? null,
-        action: matched ? 'replace' : 'skip',
       })
     }
 
@@ -52,21 +50,11 @@ export function UploadModal({ factionSlug, units, onClose, onUploaded }: UploadM
     e.preventDefault()
   }
 
-  const toggleAction = (index: number) => {
-    setFiles((prev) =>
-      prev.map((f, i) => {
-        if (i !== index || f.matchedUnit) return f
-        return { ...f, action: f.action === 'skip' ? 'create' : 'skip' }
-      }),
-    )
-  }
-
   const handleConfirm = async () => {
     setConfirming(true)
     try {
       for (const entry of files) {
-        if (entry.action === 'skip') continue
-        if (entry.action === 'create') {
+        if (!entry.matchedUnit) {
           await putUnit(factionSlug, {
             slug: entry.slug,
             name: entry.slug,
@@ -82,8 +70,6 @@ export function UploadModal({ factionSlug, units, onClose, onUploaded }: UploadM
       setConfirming(false)
     }
   }
-
-  const hasActionableFiles = files.some((f) => f.action !== 'skip')
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -106,19 +92,13 @@ export function UploadModal({ factionSlug, units, onClose, onUploaded }: UploadM
         {files.length > 0 && (
           <div className="file-list">
             <ul>
-              {files.map((entry, i) => (
+              {files.map((entry) => (
                 <li key={entry.fileName} className="file-entry">
                   <span className="file-name">{entry.fileName}</span>
                   {entry.matchedUnit ? (
                     <span className="file-match">→ {entry.matchedUnit}</span>
                   ) : (
-                    <button
-                      type="button"
-                      className="file-action-toggle"
-                      onClick={() => toggleAction(i)}
-                    >
-                      {entry.action === 'skip' ? 'Crear unidad' : 'Omitir'}
-                    </button>
+                    <span className="file-new">+ new</span>
                   )}
                 </li>
               ))}
@@ -131,7 +111,7 @@ export function UploadModal({ factionSlug, units, onClose, onUploaded }: UploadM
           <button
             type="button"
             className="confirm-btn"
-            disabled={!hasActionableFiles || confirming}
+            disabled={files.length === 0 || confirming}
             onClick={handleConfirm}
           >
             {confirming ? 'Subiendo…' : 'Confirmar'}

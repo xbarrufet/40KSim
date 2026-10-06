@@ -137,7 +137,7 @@ function UnitPanel({
               {selectedUnit.points !== undefined && <span>{selectedUnit.points} PTS</span>}
             </div>
             <div className="profile-stats">
-              {selectedUnit.models[0] && (
+              {selectedUnit.models?.[0] && (
                 <>
                   <Stat label="T" value={selectedUnit.models[0].toughness} />
                   <Stat label="SV" value={`${selectedUnit.models[0].save}+`} />
@@ -147,7 +147,7 @@ function UnitPanel({
               )}
             </div>
             <p className="profile-meta">
-              {selectedUnit.weapons.length} WEAPON PROFILES <span>·</span> {selectedUnit.abilities.length} ABILITIES
+              {selectedUnit.weapons?.length ?? 0} WEAPON PROFILES <span>·</span> {selectedUnit.abilities?.length ?? 0} ABILITIES
             </p>
           </>
         ) : (

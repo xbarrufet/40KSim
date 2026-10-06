@@ -6,6 +6,7 @@ interface FactionSummary {
   slug: string
   name: string
   category?: string
+  icon?: string
   unitCount: number
 }
 

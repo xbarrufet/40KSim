@@ -2,37 +2,49 @@
 
 ## Context
 
-See proposal.md — Why. The scraped data in `data/` has 36 factions with 1,729 units but the seed file is empty. A build script is needed to bridge the gap.
+See proposal.md — Why. The seed file should only bootstrap factions into IndexedDB. Units are created by uploading BaseData files. Faction cards need data counters to show upload progress.
 
-The scraped per-unit data has: `name`, `slug`, `category`, `url`, `points` (as string or null). The `UnitCatalog` TypeScript interface expects `UnitProfile` with required arrays (`keywords`, `models`, `weapons`, `abilities`) that only exist in the full BaseData (downloaded by `fetch_datasheets.py`), not in the basic unit listing.
+Current state after `faction-unit-browser` implementation:
+- `db.ts`: 4 IndexedDB stores, `seedFromCatalog` seeds both factions and units
+- `FactionsView.tsx`: faction cards show name + unit count
+- `UploadModal.tsx`: matches files to existing units, prompts create-or-skip for unmatched
+- `schema.ts`: `Faction` has no `icon` field, `UnitProfile` arrays are required
 
 ## Goals / Non-Goals
 
 **Goals:**
-- Create a build script that produces a valid seed file from scraped data
-- Make the TypeScript interfaces tolerant of units without full datasheet data
-- Generate and commit a populated seed file
+- Create `data/build_seed.py` to produce a factions-only seed file
+- Add `icon` field to faction data
+- Show BaseData/UnitData counters on faction cards
+- Simplify upload modal — auto-create units, no create/skip prompt
+- Make `UnitProfile` arrays optional (units created from BaseData may lack them)
 
 **Non-Goals:**
-- Including BaseData (models, weapons, abilities) in the seed — that data is uploaded per-unit via the upload modal
-- Modifying the scraper scripts themselves
+- Actual icon SVG files (placeholder paths for now)
+- Processing BaseData into UnitData (future spec)
 
 ## Decisions
 
-### 1. Make `UnitProfile` arrays optional
+### 1. Seed file format: factions with empty units arrays
 
-**Choice**: Change `keywords`, `models`, `weapons`, `abilities` from required to optional (`?`) in `UnitProfile`.
+**Choice**: Keep the `UnitCatalog` shape (`schemaVersion`, `factions[]` with `units[]`) but each faction has `units: []`. This maintains backward compatibility with the TypeScript interface.
 
-**Why**: The seed file only needs enough data for the faction browser (name, slug, points, category). Full datasheet data arrives later via BaseData upload. Making these optional avoids generating empty arrays for 1,729 units and accurately reflects the data lifecycle: units exist in the catalog before their datasheets are loaded.
+**Why**: The schema validation in `loadCatalog.ts` checks `schemaVersion === 1 && Array.isArray(factions)`. Keeping the shape means no loader changes. Empty `units` array is valid — `seedFromCatalog` just won't write any unit records.
 
-**Impact**: `GameView.tsx` already accesses `models[0]` — currently inert (empty units array), but if wired up later it would need optional chaining. The `seedFromCatalog` function in `db.ts` reads `unit.keywords` — needs a `?? []` fallback.
+### 2. Faction counters: async count from IndexedDB
 
-### 2. Script reads factions.json categories
+**Choice**: Add `getBaseDataCount(factionSlug)` and `getUnitDataCount(factionSlug)` helpers to `db.ts` that iterate the respective stores counting keys starting with `<factionSlug>/`. `FactionsView` calls these per faction and renders the counts.
 
-**Choice**: The build script reads `data/factions.json` (keyed by category) to get both the faction list and the category grouping. For each faction, it reads `data/<slug>/units.json` to get the unit list.
+**Why**: The counts must reflect the live state (uploads change them). A cursor prefix scan is the simplest approach without adding indexes.
 
-**Why**: `factions.json` is the canonical source of categories (Imperium, Space Marines, Chaos, Xenos). The per-faction `units.json` has the unit-level categories (Leaders & Characters, etc.).
+### 3. Upload auto-creates units
 
-### 3. Points stored as number or undefined
+**Choice**: Remove the create/skip toggle from `UploadModal`. On confirm, every file gets its unit auto-created if it doesn't exist, then baseData is stored. The modal just shows the file list with matched/new labels.
 
-**Choice**: The scraped `points` field is a string (`"40"`) or null. The build script converts it to `number | undefined` to match the `UnitProfile.points` type.
+**Why**: The user confirmed this is the desired flow — uploading BaseData for a faction should populate everything in one step.
+
+### 4. Faction icon field
+
+**Choice**: Add `icon?: string` to the `Faction` interface and the IndexedDB `FactionRecord`. The seed file sets it to `/icons/<slug>-icon.svg`. `FactionsView` renders an `<img>` with an `onError` handler that hides it.
+
+**Why**: Optional because the icon files don't exist yet — the app must handle missing icons gracefully.

@@ -1,4 +1,293 @@
 {
   "schemaVersion": 1,
-  "factions": []
+  "factions": [
+    {
+      "id": "adepta-sororitas",
+      "slug": "adepta-sororitas",
+      "name": "Adepta Sororitas",
+      "category": "Imperium",
+      "icon": "/icons/adepta-sororitas-icon.svg",
+      "units": []
+    },
+    {
+      "id": "adeptus-custodes",
+      "slug": "adeptus-custodes",
+      "name": "Adeptus Custodes",
+      "category": "Imperium",
+      "icon": "/icons/adeptus-custodes-icon.svg",
+      "units": []
+    },
+    {
+      "id": "adeptus-mechanicus",
+      "slug": "adeptus-mechanicus",
+      "name": "Adeptus Mechanicus",
+      "category": "Imperium",
+      "icon": "/icons/adeptus-mechanicus-icon.svg",
+      "units": []
+    },
+    {
+      "id": "astra-militarum",
+      "slug": "astra-militarum",
+      "name": "Astra Militarum",
+      "category": "Imperium",
+      "icon": "/icons/astra-militarum-icon.svg",
+      "units": []
+    },
+    {
+      "id": "imperial-agents",
+      "slug": "imperial-agents",
+      "name": "Imperial Agents",
+      "category": "Imperium",
+      "icon": "/icons/imperial-agents-icon.svg",
+      "units": []
+    },
+    {
+      "id": "imperial-knights",
+      "slug": "imperial-knights",
+      "name": "Imperial Knights",
+      "category": "Imperium",
+      "icon": "/icons/imperial-knights-icon.svg",
+      "units": []
+    },
+    {
+      "id": "titan-legions",
+      "slug": "titan-legions",
+      "name": "Titan Legions",
+      "category": "Imperium",
+      "icon": "/icons/titan-legions-icon.svg",
+      "units": []
+    },
+    {
+      "id": "black-templars",
+      "slug": "black-templars",
+      "name": "Black Templars",
+      "category": "Space Marines",
+      "icon": "/icons/black-templars-icon.svg",
+      "units": []
+    },
+    {
+      "id": "blood-angels",
+      "slug": "blood-angels",
+      "name": "Blood Angels",
+      "category": "Space Marines",
+      "icon": "/icons/blood-angels-icon.svg",
+      "units": []
+    },
+    {
+      "id": "dark-angels",
+      "slug": "dark-angels",
+      "name": "Dark Angels",
+      "category": "Space Marines",
+      "icon": "/icons/dark-angels-icon.svg",
+      "units": []
+    },
+    {
+      "id": "deathwatch",
+      "slug": "deathwatch",
+      "name": "Deathwatch",
+      "category": "Space Marines",
+      "icon": "/icons/deathwatch-icon.svg",
+      "units": []
+    },
+    {
+      "id": "grey-knights",
+      "slug": "grey-knights",
+      "name": "Grey Knights",
+      "category": "Space Marines",
+      "icon": "/icons/grey-knights-icon.svg",
+      "units": []
+    },
+    {
+      "id": "imperial-fists",
+      "slug": "imperial-fists",
+      "name": "Imperial Fists",
+      "category": "Space Marines",
+      "icon": "/icons/imperial-fists-icon.svg",
+      "units": []
+    },
+    {
+      "id": "iron-hands",
+      "slug": "iron-hands",
+      "name": "Iron Hands",
+      "category": "Space Marines",
+      "icon": "/icons/iron-hands-icon.svg",
+      "units": []
+    },
+    {
+      "id": "raven-guard",
+      "slug": "raven-guard",
+      "name": "Raven Guard",
+      "category": "Space Marines",
+      "icon": "/icons/raven-guard-icon.svg",
+      "units": []
+    },
+    {
+      "id": "salamanders",
+      "slug": "salamanders",
+      "name": "Salamanders",
+      "category": "Space Marines",
+      "icon": "/icons/salamanders-icon.svg",
+      "units": []
+    },
+    {
+      "id": "space-marines",
+      "slug": "space-marines",
+      "name": "Space Marines",
+      "category": "Space Marines",
+      "icon": "/icons/space-marines-icon.svg",
+      "units": []
+    },
+    {
+      "id": "space-wolves",
+      "slug": "space-wolves",
+      "name": "Space Wolves",
+      "category": "Space Marines",
+      "icon": "/icons/space-wolves-icon.svg",
+      "units": []
+    },
+    {
+      "id": "ultramarines",
+      "slug": "ultramarines",
+      "name": "Ultramarines",
+      "category": "Space Marines",
+      "icon": "/icons/ultramarines-icon.svg",
+      "units": []
+    },
+    {
+      "id": "white-scars",
+      "slug": "white-scars",
+      "name": "White Scars",
+      "category": "Space Marines",
+      "icon": "/icons/white-scars-icon.svg",
+      "units": []
+    },
+    {
+      "id": "chaos-daemons",
+      "slug": "chaos-daemons",
+      "name": "Chaos Daemons",
+      "category": "Chaos",
+      "icon": "/icons/chaos-daemons-icon.svg",
+      "units": []
+    },
+    {
+      "id": "chaos-knights",
+      "slug": "chaos-knights",
+      "name": "Chaos Knights",
+      "category": "Chaos",
+      "icon": "/icons/chaos-knights-icon.svg",
+      "units": []
+    },
+    {
+      "id": "chaos-space-marines",
+      "slug": "chaos-space-marines",
+      "name": "Chaos Space Marines",
+      "category": "Chaos",
+      "icon": "/icons/chaos-space-marines-icon.svg",
+      "units": []
+    },
+    {
+      "id": "chaos-titan-legions",
+      "slug": "chaos-titan-legions",
+      "name": "Chaos Titan Legions",
+      "category": "Chaos",
+      "icon": "/icons/chaos-titan-legions-icon.svg",
+      "units": []
+    },
+    {
+      "id": "death-guard",
+      "slug": "death-guard",
+      "name": "Death Guard",
+      "category": "Chaos",
+      "icon": "/icons/death-guard-icon.svg",
+      "units": []
+    },
+    {
+      "id": "emperors-children",
+      "slug": "emperors-children",
+      "name": "Emperor’s Children",
+      "category": "Chaos",
+      "icon": "/icons/emperors-children-icon.svg",
+      "units": []
+    },
+    {
+      "id": "thousand-sons",
+      "slug": "thousand-sons",
+      "name": "Thousand Sons",
+      "category": "Chaos",
+      "icon": "/icons/thousand-sons-icon.svg",
+      "units": []
+    },
+    {
+      "id": "world-eaters",
+      "slug": "world-eaters",
+      "name": "World Eaters",
+      "category": "Chaos",
+      "icon": "/icons/world-eaters-icon.svg",
+      "units": []
+    },
+    {
+      "id": "aeldari",
+      "slug": "aeldari",
+      "name": "Aeldari",
+      "category": "Xenos",
+      "icon": "/icons/aeldari-icon.svg",
+      "units": []
+    },
+    {
+      "id": "drukhari",
+      "slug": "drukhari",
+      "name": "Drukhari",
+      "category": "Xenos",
+      "icon": "/icons/drukhari-icon.svg",
+      "units": []
+    },
+    {
+      "id": "genestealer-cults",
+      "slug": "genestealer-cults",
+      "name": "Genestealer Cults",
+      "category": "Xenos",
+      "icon": "/icons/genestealer-cults-icon.svg",
+      "units": []
+    },
+    {
+      "id": "leagues-of-votann",
+      "slug": "leagues-of-votann",
+      "name": "Leagues of Votann",
+      "category": "Xenos",
+      "icon": "/icons/leagues-of-votann-icon.svg",
+      "units": []
+    },
+    {
+      "id": "necrons",
+      "slug": "necrons",
+      "name": "Necrons",
+      "category": "Xenos",
+      "icon": "/icons/necrons-icon.svg",
+      "units": []
+    },
+    {
+      "id": "orks",
+      "slug": "orks",
+      "name": "Orks",
+      "category": "Xenos",
+      "icon": "/icons/orks-icon.svg",
+      "units": []
+    },
+    {
+      "id": "tyranids",
+      "slug": "tyranids",
+      "name": "Tyranids",
+      "category": "Xenos",
+      "icon": "/icons/tyranids-icon.svg",
+      "units": []
+    },
+    {
+      "id": "tau-empire",
+      "slug": "tau-empire",
+      "name": "T’au Empire",
+      "category": "Xenos",
+      "icon": "/icons/tau-empire-icon.svg",
+      "units": []
+    }
+  ]
 }
