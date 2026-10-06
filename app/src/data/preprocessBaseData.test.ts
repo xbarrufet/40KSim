@@ -2,8 +2,8 @@ import { readFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
-import { extractDatasheetContext, preprocessBaseData, type BaseData } from './preprocessBaseData'
-import type { RawAbility, WargearEntry, WeaponProfileData } from './schema'
+import { extractDatasheetContext, getUnitKeywords, getUnitWargear, seedStructuredAbilities, type BaseData } from './preprocessBaseData'
+import type { WargearEntry, WeaponProfileData } from './schema'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const repoRoot = resolve(__dirname, '../../..')
@@ -13,44 +13,23 @@ function loadFixture(faction: string, unitSlug: string): BaseData {
   return JSON.parse(readFileSync(path, 'utf-8'))
 }
 
-describe('preprocessBaseData', () => {
-  it('builds UnitData for a single-miniature datasheet (ancient)', () => {
-    const unitData = preprocessBaseData(loadFixture('space-marines', 'ancient'))
-
-    expect(unitData.tag).toBe('PENDING')
-    expect(unitData.id).toBe(47128)
-    expect(unitData.slug).toBe('ancient')
-    expect(unitData.stats).toEqual({
-      movement: 6,
-      toughness: 5,
-      save: 3,
-      invulnerableSave: null,
-      wounds: 4,
-      leadership: 6,
-      objectiveControl: 2,
-    })
-    expect(unitData.keywords).toEqual(['CHARACTER', 'EXPLOSIVES', 'IMPERIUM', 'INFANTRY', 'TACTICUS'])
-    expect(unitData.rawAbilities).toHaveLength(4)
-    expect(unitData.rawAbilities.map((a: RawAbility) => a.abilityType)).toEqual(['faction', 'datasheet', 'core', 'datasheet'])
-    expect(unitData.abilities).toEqual([])
+describe('getUnitKeywords', () => {
+  it('returns the representative miniature keywords for a single-miniature datasheet (ancient)', () => {
+    const keywords = getUnitKeywords(loadFixture('space-marines', 'ancient'))
+    expect(keywords).toEqual(['CHARACTER', 'EXPLOSIVES', 'IMPERIUM', 'INFANTRY', 'TACTICUS'])
   })
 
-  it('builds UnitData for a multi-miniature squad (aggressor-squad), picking the common trooper for stats', () => {
-    const unitData = preprocessBaseData(loadFixture('space-marines', 'aggressor-squad'))
+  it('picks the common trooper for a multi-miniature squad (aggressor-squad)', () => {
+    const keywords = getUnitKeywords(loadFixture('space-marines', 'aggressor-squad'))
+    expect(keywords).toEqual(['GRAVIS', 'IMPERIUM', 'INFANTRY'])
+  })
+})
 
-    expect(unitData.stats).toEqual({
-      movement: 5,
-      toughness: 6,
-      save: 3,
-      invulnerableSave: null,
-      wounds: 3,
-      leadership: 6,
-      objectiveControl: 1,
-    })
-    expect(unitData.keywords).toEqual(['GRAVIS', 'IMPERIUM', 'INFANTRY'])
-    expect(unitData.rawAbilities).toHaveLength(2)
+describe('getUnitWargear', () => {
+  it('builds the wargear catalogue for a multi-miniature squad (aggressor-squad)', () => {
+    const wargear = getUnitWargear(loadFixture('space-marines', 'aggressor-squad'))
 
-    const wargearNames = unitData.wargear.map((w: WargearEntry) => w.wargearItem.name).sort()
+    const wargearNames = wargear.map((w: WargearEntry) => w.wargearItem.name).sort()
     expect(wargearNames).toEqual([
       'Auto Boltstorm Gauntlets',
       'Flamestorm Gauntlets',
@@ -58,7 +37,7 @@ describe('preprocessBaseData', () => {
       'Twin Power Fists',
     ])
 
-    const flamestorm = unitData.wargear.find((w: WargearEntry) => w.wargearItem.name === 'Flamestorm Gauntlets')!
+    const flamestorm = wargear.find((w: WargearEntry) => w.wargearItem.name === 'Flamestorm Gauntlets')!
     expect(flamestorm.wargearItem.count).toBe(1)
     const rangedProfile = flamestorm.wargearItem.profiles.find((p: WeaponProfileData) => p.name === 'Ranged')!
     expect(rangedProfile.abilities).toEqual([
@@ -67,8 +46,25 @@ describe('preprocessBaseData', () => {
       { id: 3480, name: 'TWIN-LINKED', value: null },
     ])
 
-    const fragstorm = unitData.wargear.find((w: WargearEntry) => w.wargearItem.name === 'Fragstorm Grenade Launcher')!
+    const fragstorm = wargear.find((w: WargearEntry) => w.wargearItem.name === 'Fragstorm Grenade Launcher')!
     expect(fragstorm.wargearItem.profiles[0].abilities).toEqual([{ id: 3443, name: 'BLAST', value: '1' }])
+  })
+})
+
+describe('seedStructuredAbilities', () => {
+  it('seeds a PENDING review queue with no reviewed abilities yet (ancient)', () => {
+    const seeded = seedStructuredAbilities(loadFixture('space-marines', 'ancient'))
+
+    expect(seeded.tag).toBe('PENDING')
+    expect(seeded.abilities).toEqual([])
+    expect(seeded.rawAbilities).toHaveLength(4)
+    expect(seeded.rawAbilities.map((a) => a.abilityType)).toEqual(['faction', 'datasheet', 'core', 'datasheet'])
+  })
+
+  it('seeds the raw-ability queue for a multi-miniature squad (aggressor-squad)', () => {
+    const seeded = seedStructuredAbilities(loadFixture('space-marines', 'aggressor-squad'))
+    expect(seeded.rawAbilities).toHaveLength(2)
+    expect(seeded.abilities).toEqual([])
   })
 })
 

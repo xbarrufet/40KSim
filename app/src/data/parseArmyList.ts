@@ -1,4 +1,5 @@
-import { getAllFactions, getListByUrl, getUnitData, getUnitsByFaction, putList } from './db'
+import { getAllFactions, getBaseData, getBaseDataUnitsByFaction, getListByUrl, putList } from './db'
+import { getUnitWargear, type BaseData } from './preprocessBaseData'
 import type { ArmyList, ArmyListEntry, ArmyListWargearToken, MatchStatus } from './schema'
 
 export interface ParsedEntry {
@@ -32,6 +33,7 @@ const ATTACHMENT_PREFIXES = ['Attached to ', 'Led by ', 'Supported by ']
 const ENHANCEMENT_RE = /^Enhancement:/
 const LIST_URL_RE = /(https:\/\/(?:www\.)?40k\.app\/lists\/[A-Za-z0-9]+)/
 const COUNT_PREFIX_RE = /^\d+\s*[×x]\s*/i
+const COUNT_PREFIX_CAPTURE_RE = /^(\d+)\s*[×x]\s*/i
 
 /**
  * Parses a 40k.app army list TEXT export into its structural pieces, with no catalogue matching.
@@ -144,19 +146,38 @@ export function parseArmyListText(text: string): ParsedArmyList {
   return { title, factionName, armyName, detachment, mission, declaredPoints, listUrl, entries }
 }
 
-/** Splits a wargear line into individual weapon/wargear names, stripping any leading "N×" count. */
-export function tokenizeWargearLine(line: string): string[] {
+export interface WargearLineToken {
+  name: string
+  /** Number of models carrying this item, read from the slot's leading "N×" prefix (shared by every "+"-joined item in that slot); defaults to 1 when no prefix is present. */
+  count: number
+}
+
+/**
+ * Splits a wargear line into individual weapon/wargear names, keeping the model count each name
+ * was written with. A line is a "/"-separated list of slots; a slot's items are "+"-joined and
+ * share the slot's single leading "N×" count (only the first item carries the literal prefix).
+ */
+export function tokenizeWargearLineWithCounts(line: string): WargearLineToken[] {
   if (!line) return []
   return line
     .split('/')
-    .flatMap((slot) =>
-      slot
+    .flatMap((slot) => {
+      const parts = slot
         .split('+')
         .map((part) => part.trim())
         .filter(Boolean)
-        .map((part, index) => (index === 0 ? part.replace(COUNT_PREFIX_RE, '').trim() : part)),
-    )
-    .filter(Boolean)
+      if (parts.length === 0) return []
+      const countMatch = parts[0].match(COUNT_PREFIX_CAPTURE_RE)
+      const count = countMatch ? Number(countMatch[1]) : 1
+      const firstName = parts[0].replace(COUNT_PREFIX_RE, '').trim()
+      return [firstName, ...parts.slice(1)].map((name) => ({ name, count }))
+    })
+    .filter((token) => token.name)
+}
+
+/** Splits a wargear line into individual weapon/wargear names, stripping any leading "N×" count. */
+export function tokenizeWargearLine(line: string): string[] {
+  return tokenizeWargearLineWithCounts(line).map((token) => token.name)
 }
 
 /**
@@ -230,13 +251,14 @@ export function applyParentFallback(
  * Resolves wargear tokens by case-insensitive exact match against known wargear names.
  * `knownNames: null` means the unit has no `unitData` to check against — every token is unverified.
  */
-export function matchWargearTokens(tokenNames: string[], knownNames: string[] | null): ArmyListWargearToken[] {
+export function matchWargearTokens(tokens: WargearLineToken[], knownNames: string[] | null): ArmyListWargearToken[] {
   if (knownNames === null) {
-    return tokenNames.map((name) => ({ name, status: 'unverified' }))
+    return tokens.map(({ name, count }) => ({ name, count, status: 'unverified' }))
   }
   const known = new Set(knownNames.map((name) => name.toLowerCase()))
-  return tokenNames.map((name) => ({
+  return tokens.map(({ name, count }) => ({
     name,
+    count,
     status: known.has(name.toLowerCase()) ? 'matched' : 'unmatched',
   }))
 }
@@ -251,31 +273,32 @@ export async function parseAndValidateArmyList(text: string): Promise<ArmyList> 
     : undefined
   const factionSlug = faction?.slug ?? null
 
-  const knownUnits = factionSlug ? await getUnitsByFaction(factionSlug) : []
+  const knownUnits = factionSlug ? await getBaseDataUnitsByFaction(factionSlug) : []
   let matchedEntries = matchUnitNames(parsed.entries, knownUnits, factionSlug)
 
   const parentFactionSlug = factionSlug ? resolveParentFactionSlug(factionSlug, factions) : null
   if (parentFactionSlug && matchedEntries.some((entry) => entry.unitStatus === 'unmatched')) {
-    const parentUnits = await getUnitsByFaction(parentFactionSlug)
+    const parentUnits = await getBaseDataUnitsByFaction(parentFactionSlug)
     matchedEntries = applyParentFallback(matchedEntries, parentUnits, parentFactionSlug)
   }
 
   const entries: ArmyListEntry[] = await Promise.all(
     matchedEntries.map(async (entry) => {
-      const tokenNames = tokenizeWargearLine(entry.rawWargearText)
+      const tokens = tokenizeWargearLineWithCounts(entry.rawWargearText)
       let knownWargearNames: string[] | null = null
 
       if (entry.unitStatus === 'matched' && entry.matchedUnitSlug && entry.matchedFactionSlug) {
-        const unitData = await getUnitData(entry.matchedFactionSlug, entry.matchedUnitSlug)
-        if (unitData) {
-          knownWargearNames = unitData.wargear.flatMap((entryData) => [
+        const baseData = await getBaseData(entry.matchedFactionSlug, entry.matchedUnitSlug)
+        if (baseData) {
+          const wargear = getUnitWargear(baseData as BaseData)
+          knownWargearNames = wargear.flatMap((entryData) => [
             entryData.wargearItem.name,
             ...entryData.wargearItem.profiles.map((profile) => profile.name),
           ])
         }
       }
 
-      return { ...entry, wargearTokens: matchWargearTokens(tokenNames, knownWargearNames) }
+      return { ...entry, wargearTokens: matchWargearTokens(tokens, knownWargearNames) }
     }),
   )
 

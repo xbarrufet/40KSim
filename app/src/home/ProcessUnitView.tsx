@@ -1,26 +1,33 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { useEffect, useState } from 'react'
 import { ArrowLeft, RefreshCw } from 'lucide-react'
-import { getBaseData, getUnitData, putUnitData } from '../data/db'
-import { extractDatasheetContext, preprocessBaseData, type BaseData, type DatasheetContext } from '../data/preprocessBaseData'
+import { getBaseData, getStructuredAbilitiesData, putStructuredAbilitiesData } from '../data/db'
+import {
+  extractDatasheetContext,
+  getUnitKeywords,
+  getUnitWargear,
+  toRawAbilities,
+  type BaseData,
+  type DatasheetContext,
+} from '../data/preprocessBaseData'
 import type {
   AbilityContext,
   DiceThrow,
   RerollTarget,
   Rule,
-  UnitData,
+  StructuredAbilitiesData,
   UnitStat,
+  WargearEntry,
   WeaponStat,
   WeaponTarget,
 } from '../data/schema'
 import { KNOWN_WEAPON_KEYWORDS, type KnownAttribute } from '../data/weaponKeywords'
 import {
-  applyResync,
   buildOtherAbility,
   buildStructuredAbilities,
-  splitWeaponProfiles,
+  reconcileRawAbilities,
   type StructuringRow,
-  type WeaponRow,
 } from './processUnitLogic'
+import { UnitDatasheet } from './UnitDatasheet'
 
 interface ProcessUnitViewProps {
   faction: { slug: string; name: string }
@@ -29,15 +36,12 @@ interface ProcessUnitViewProps {
   onSaved: () => void
 }
 
-type Draft = Pick<UnitData, 'stats' | 'keywords' | 'wargear' | 'abilities' | 'rawAbilities'>
+type Draft = Pick<StructuredAbilitiesData, 'abilities' | 'rawAbilities'>
 
-function toDraft(unitData: UnitData): Draft {
+function toDraft(structuredAbilitiesData: StructuredAbilitiesData): Draft {
   return {
-    stats: unitData.stats,
-    keywords: unitData.keywords,
-    wargear: unitData.wargear,
-    abilities: unitData.abilities,
-    rawAbilities: unitData.rawAbilities,
+    abilities: structuredAbilitiesData.abilities,
+    rawAbilities: structuredAbilitiesData.rawAbilities,
   }
 }
 
@@ -70,22 +74,25 @@ function describeRule(rule: Rule): string {
 }
 
 export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessUnitViewProps) {
-  const [unitData, setUnitData] = useState<UnitData | null>(null)
+  const [structuredAbilitiesData, setStructuredAbilitiesData] = useState<StructuredAbilitiesData | null>(null)
   const [draft, setDraft] = useState<Draft | null>(null)
+  const [unitName, setUnitName] = useState(unitSlug)
   const [datasheet, setDatasheet] = useState<DatasheetContext | null>(null)
+  const [wargear, setWargear] = useState<WargearEntry[]>([])
+  const [keywords, setKeywords] = useState<string[]>([])
   const [error, setError] = useState<string | null>(null)
   const [saving, setSaving] = useState(false)
   const [structuringIndex, setStructuringIndex] = useState<number | null>(null)
   const [structuringRows, setStructuringRows] = useState<StructuringRow[]>([])
 
   useEffect(() => {
-    getUnitData(faction.slug, unitSlug)
+    getStructuredAbilitiesData(faction.slug, unitSlug)
       .then((data) => {
         if (!data) {
-          setError('Esta unidad no tiene UnitData todavía. Sube su BaseData primero.')
+          setError('Esta unidad no tiene datos todavía. Sube su BaseData primero.')
           return
         }
-        setUnitData(data)
+        setStructuredAbilitiesData(data)
         setDraft(toDraft(data))
       })
       .catch((err: unknown) => {
@@ -93,7 +100,12 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
       })
 
     getBaseData(faction.slug, unitSlug).then((baseData) => {
-      if (baseData) setDatasheet(extractDatasheetContext(baseData as BaseData))
+      if (!baseData) return
+      const data = baseData as BaseData
+      setUnitName(data.name)
+      setDatasheet(extractDatasheetContext(data))
+      setWargear(getUnitWargear(data))
+      setKeywords(getUnitKeywords(data))
     })
   }, [faction.slug, unitSlug])
 
@@ -106,7 +118,7 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
     )
   }
 
-  if (!unitData || !draft) {
+  if (!structuredAbilitiesData || !draft) {
     return (
       <section className="workspace">
         <TopBar name={unitSlug} onBack={onBack} />
@@ -204,25 +216,27 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
       setError('No se encontró BaseData para esta unidad.')
       return
     }
-    const refreshed = preprocessBaseData(baseData as BaseData)
-    setDraft((current) => (current ? applyResync(current, refreshed) : current))
-    setDatasheet(extractDatasheetContext(baseData as BaseData))
+    const data = baseData as BaseData
+    setUnitName(data.name)
+    setDatasheet(extractDatasheetContext(data))
+    setWargear(getUnitWargear(data))
+    setKeywords(getUnitKeywords(data))
+    setDraft((current) => {
+      if (!current) return current
+      return { ...current, rawAbilities: reconcileRawAbilities(current.abilities, current.rawAbilities, toRawAbilities(data)) }
+    })
   }
 
   const save = async () => {
     setSaving(true)
     try {
-      const confirmed: UnitData = {
-        ...unitData,
-        stats: draft.stats,
-        keywords: draft.keywords,
-        wargear: draft.wargear,
+      const confirmed: StructuredAbilitiesData = {
         abilities: draft.abilities,
         rawAbilities: draft.rawAbilities,
         tag: 'CONFIRMED',
       }
-      await putUnitData(faction.slug, unitSlug, confirmed)
-      setUnitData(confirmed)
+      await putStructuredAbilitiesData(faction.slug, unitSlug, confirmed)
+      setStructuredAbilitiesData(confirmed)
       onSaved()
     } finally {
       setSaving(false)
@@ -231,7 +245,7 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
 
   return (
     <section className="workspace">
-      <TopBar name={unitData.name} onBack={onBack} tag={unitData.tag} />
+      <TopBar name={unitName} onBack={onBack} tag={structuredAbilitiesData.tag} />
 
       <div className="process-unit-actions">
         <button type="button" className="resync-btn" onClick={resync}>
@@ -239,100 +253,7 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
         </button>
       </div>
 
-      {datasheet && datasheet.miniatures.length > 0 && (
-        <section className="process-unit-section">
-          <h2>Models</h2>
-          <table className="datasheet-table">
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>M</th>
-                <th>T</th>
-                <th>SV</th>
-                <th>W</th>
-                <th>LD</th>
-                <th>OC</th>
-              </tr>
-            </thead>
-            <tbody>
-              {datasheet.miniatures.map((miniature) => (
-                <tr key={miniature.name}>
-                  <td>
-                    {miniature.name}
-                    {miniature.baseSize && <span className="base-size-tag"> base: {miniature.baseSize}</span>}
-                  </td>
-                  <td>{miniature.stats.movement}"</td>
-                  <td>{miniature.stats.toughness}</td>
-                  <td>{miniature.stats.save}+</td>
-                  <td>{miniature.stats.wounds}</td>
-                  <td>{miniature.stats.leadership}+</td>
-                  <td>{miniature.stats.objectiveControl}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </section>
-      )}
-
-      {datasheet && datasheet.costs.length > 0 && (
-        <section className="process-unit-section">
-          <h2>Costs</h2>
-          <ul className="costs-list">
-            {datasheet.costs.map((cost, index) => (
-              <li key={index}>
-                {cost.models} models <span className="points-tag">{cost.points} pts</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      {datasheet?.unitComposition && (
-        <section className="process-unit-section">
-          <h2>Unit Composition</h2>
-          <p className="composition-text">{datasheet.unitComposition}</p>
-        </section>
-      )}
-
-      {datasheet && (datasheet.ledBy.length > 0 || datasheet.supportedBy.length > 0) && (
-        <section className="process-unit-section">
-          {datasheet.ledBy.length > 0 && (
-            <>
-              <h2>Led by</h2>
-              <div className="tag-chip-row">
-                {datasheet.ledBy.map((name) => (
-                  <span key={name} className="tag-chip">{name.toUpperCase()}</span>
-                ))}
-              </div>
-            </>
-          )}
-          {datasheet.supportedBy.length > 0 && (
-            <>
-              <h2>Supported by</h2>
-              <div className="tag-chip-row">
-                {datasheet.supportedBy.map((name) => (
-                  <span key={name} className="tag-chip">{name.toUpperCase()}</span>
-                ))}
-              </div>
-            </>
-          )}
-        </section>
-      )}
-
-      <section className="process-unit-section">
-        <h2>Simulation stats (UnitData)</h2>
-        <div className="profile-stats">
-          <Stat label="M" value={`${draft.stats.movement}"`} />
-          <Stat label="T" value={draft.stats.toughness} />
-          <Stat label="SV" value={`${draft.stats.save}+`} />
-          <Stat label="W" value={draft.stats.wounds} />
-          <Stat label="LD" value={`${draft.stats.leadership}+`} />
-          <Stat label="OC" value={draft.stats.objectiveControl} />
-        </div>
-        <p className="profile-meta">{draft.keywords.join(', ')}</p>
-      </section>
-
-      <WeaponTables wargear={draft.wargear} />
+      <UnitDatasheet datasheet={datasheet} wargear={wargear} keywords={keywords} />
 
       <section className="process-unit-section">
         <h2>Abilidades revisadas ({draft.abilities.length})</h2>
@@ -401,7 +322,7 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
   )
 }
 
-function TopBar({ name, onBack, tag }: { name: string; onBack: () => void; tag?: UnitData['tag'] }) {
+function TopBar({ name, onBack, tag }: { name: string; onBack: () => void; tag?: StructuredAbilitiesData['tag'] }) {
   return (
     <div className="unit-board-topbar">
       <button type="button" className="back-link" onClick={onBack}>
@@ -409,106 +330,6 @@ function TopBar({ name, onBack, tag }: { name: string; onBack: () => void; tag?:
       </button>
       <h1>{name}</h1>
       {tag && <span className={`status-light is-${tag === 'CONFIRMED' ? 'green' : 'red'}`} aria-hidden="true" />}
-    </div>
-  )
-}
-
-function WeaponTables({ wargear }: { wargear: UnitData['wargear'] }) {
-  const { ranged, melee } = splitWeaponProfiles(wargear)
-
-  return (
-    <>
-      {ranged.length > 0 && (
-        <section className="process-unit-section">
-          <h2>Ranged Weapons</h2>
-          <table className="datasheet-table">
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>RNG</th>
-                <th>A</th>
-                <th>BS</th>
-                <th>S</th>
-                <th>AP</th>
-                <th>D</th>
-              </tr>
-            </thead>
-            <tbody>
-              {ranged.map((row) => (
-                <WeaponRowGroup key={row.key} row={row}>
-                  <td>{row.profile.range}</td>
-                  <td>{row.profile.attacks}</td>
-                  <td>{row.profile.ballisticSkill ?? '-'}</td>
-                  <td>{row.profile.strength}</td>
-                  <td>{row.profile.armourPenetration}</td>
-                  <td>{row.profile.damage}</td>
-                </WeaponRowGroup>
-              ))}
-            </tbody>
-          </table>
-        </section>
-      )}
-
-      {melee.length > 0 && (
-        <section className="process-unit-section">
-          <h2>Melee Weapons</h2>
-          <table className="datasheet-table">
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>A</th>
-                <th>WS</th>
-                <th>S</th>
-                <th>AP</th>
-                <th>D</th>
-              </tr>
-            </thead>
-            <tbody>
-              {melee.map((row) => (
-                <WeaponRowGroup key={row.key} row={row}>
-                  <td>{row.profile.attacks}</td>
-                  <td>{row.profile.weaponSkill ?? '-'}</td>
-                  <td>{row.profile.strength}</td>
-                  <td>{row.profile.armourPenetration}</td>
-                  <td>{row.profile.damage}</td>
-                </WeaponRowGroup>
-              ))}
-            </tbody>
-          </table>
-        </section>
-      )}
-    </>
-  )
-}
-
-function WeaponRowGroup({ row, children }: { row: WeaponRow; children: ReactNode }) {
-  return (
-    <>
-      <tr>
-        <td>{row.label}</td>
-        {children}
-      </tr>
-      {row.profile.abilities.length > 0 && (
-        <tr className="ability-chip-row">
-          <td colSpan={6}>
-            {row.profile.abilities.map((ability) => (
-              <span key={ability.id} className="tag-chip">
-                {ability.name}
-                {ability.value ? ` ${ability.value}` : ''}
-              </span>
-            ))}
-          </td>
-        </tr>
-      )}
-    </>
-  )
-}
-
-function Stat({ label, value }: { label: string; value: string | number }) {
-  return (
-    <div className="stat-cell">
-      <span>{label}</span>
-      <strong>{value}</strong>
     </div>
   )
 }

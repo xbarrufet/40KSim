@@ -37,7 +37,7 @@ The FACTIONS tab SHALL display all factions as clickable cards grouped by catego
 
 #### Scenario: Faction card counters
 - **WHEN** a faction card is displayed
-- **THEN** it shows the count of units with BaseData and the count of units whose UnitData has `tag: "CONFIRMED"`
+- **THEN** it shows the count of units with BaseData and the count of units whose StructuredAbilitiesData has `tag: "CONFIRMED"`
 - **AND** the format is `N base / M processed` in smaller text below the faction name
 
 ### Requirement: Faction Detail Navigation
@@ -73,11 +73,11 @@ Units SHALL be listed grouped by category. Each unit row shows:
 - **THEN** the status light is **red**
 
 #### Scenario: Unit with BaseData only
-- **WHEN** BaseData exists for the unit but its UnitData has `tag: "PENDING"`
+- **WHEN** BaseData exists for the unit but its StructuredAbilitiesData has `tag: "PENDING"`
 - **THEN** the status light is **red**
 
 #### Scenario: Unit with both BaseData and UnitData
-- **WHEN** BaseData exists for the unit and its UnitData has `tag: "CONFIRMED"`
+- **WHEN** BaseData exists for the unit and its StructuredAbilitiesData has `tag: "CONFIRMED"`
 - **THEN** the status light is **green**
 
 ### Requirement: Upload Modal
@@ -92,11 +92,12 @@ The upload button SHALL open a modal overlay with two vertical sections: a drop 
 #### Scenario: File matches existing unit
 - **WHEN** a file's slug matches an existing unit in the current faction
 - **THEN** confirming will **replace** that unit's BaseData in IndexedDB
-- **AND** the unit's existing UnitData, if any, is left unchanged regardless of its `tag`
+- **AND** the unit's catalogue `name` is refreshed from the uploaded BaseData's own `name` field
+- **AND** the unit's existing StructuredAbilitiesData, if any, is left unchanged regardless of its `tag`
 
 #### Scenario: File does not match any unit
 - **WHEN** a file's slug does not match any unit in the current faction
-- **THEN** confirming will **create** the unit, store the BaseData automatically, and automatically generate UnitData for it with `tag: "PENDING"`
+- **THEN** confirming will **create** the unit using the uploaded BaseData's own `name` field (not the file slug) as the unit's catalogue name, store the BaseData automatically, and automatically generate StructuredAbilitiesData for it with `tag: "PENDING"`
 
 #### Scenario: Cancel upload
 - **WHEN** the user clicks Cancel
@@ -104,7 +105,7 @@ The upload button SHALL open a modal overlay with two vertical sections: a drop 
 
 #### Scenario: Confirm upload
 - **WHEN** the user clicks Confirm
-- **THEN** all files are written to IndexedDB: new units are auto-created with a `PENDING` UnitData proposal, existing units get their BaseData replaced and their UnitData left untouched
+- **THEN** all files are written to IndexedDB: new units are auto-created (named from their BaseData's own `name` field) with a `PENDING` StructuredAbilitiesData proposal, existing units get their BaseData replaced, their catalogue `name` refreshed from it, and their StructuredAbilitiesData left untouched
 - **AND** the unit list refreshes to reflect updated status lights
 
 ### Requirement: Admin Removal

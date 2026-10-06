@@ -20,20 +20,24 @@ The LIST tab SHALL provide a text area where the user can paste a 40k.app army l
 
 ### Requirement: List Parsing
 
-The system SHALL parse a pasted 40k.app army list export into: a title, a faction, a free-text army name, a free-text detachment name, a mission, a declared points total, an export list URL (if present), and one entry per unit block.
+The system SHALL parse a pasted 40k.app army list export into: a title, a faction, a free-text army name, a free-text detachment name, a mission, a declared points total, an export list URL (if present), and one entry per unit block. The export has no markdown decoration; hierarchy is conveyed by indentation depth alone: category headers are unindented, each unit entry's own line is indented one level deeper than its category header, and a unit entry's sub-lines (Attached to/Led by/Supported by/Enhancement/wargear) are indented one level deeper still.
 
 #### Scenario: Header line parsed
 - **WHEN** the pasted text's second line has the form `<Faction> · <army name> · <detachment>`
 - **THEN** the parsed list's faction, army name, and detachment are set from that line's three segments respectively
 
+#### Scenario: Category header parsed
+- **WHEN** an unindented line has the form `<CATEGORY NAME> [<points> pts]`
+- **THEN** subsequent unit entries are associated with that category, until the next category header
+
 #### Scenario: Unit entry parsed
-- **WHEN** a `## <category> [<points> pts]` section contains a `**<unit name>** [<points> pts] (<N> models)` block
-- **THEN** an entry is created with that category, unit name, points, and model count
-- **AND** any subsequent `- Attached to <name>`, `- Led by <name>`, `- Supported by <name>`, or `- Enhancement: <name> (+<points> pts)` lines belonging to that block are captured on the entry as free text
-- **AND** the block's wargear line (if present) is captured on the entry as free text
+- **WHEN** a line indented one level deeper than its category header has the form `<unit name> [<points> pts]`, optionally followed by ` (<N> models)`
+- **THEN** an entry is created under the current category, with that unit name, points, and model count
+- **AND** any subsequent sub-line reading `Attached to <name>`, `Led by <name>`, `Supported by <name>`, or `Enhancement: <name> (+<points> pts)` belonging to that entry is captured on the entry as free text
+- **AND** the entry's wargear sub-line (if present) is captured on the entry as free text
 
 #### Scenario: List URL captured
-- **WHEN** the pasted text's footer contains a 40k.app list URL (e.g. `https://www.40k.app/lists/<id>`)
+- **WHEN** the pasted text's footer contains a 40k.app list URL (e.g. `https://www.40k.app/lists/<id>`), whether inline or on its own line
 - **THEN** that URL is stored on the parsed list as its external list URL
 
 ### Requirement: Parent Faction Resolution
@@ -51,26 +55,26 @@ A faction SHALL be treated as having a parent faction when another faction share
 
 ### Requirement: Unit Name Validation
 
-Each parsed entry's unit name SHALL be checked against the units known for the parsed list's faction in IndexedDB, falling back to that faction's parent faction (per Parent Faction Resolution) when there is no match among the faction's own units, and marked as matched or unmatched.
+Each parsed entry's unit name SHALL be checked against the uploaded BaseData records' names for the parsed list's faction, falling back to that faction's parent faction (per Parent Faction Resolution) when there is no match among the faction's own BaseData, and marked as matched or unmatched.
 
-#### Scenario: Unit name matches catalogue
-- **WHEN** an entry's unit name exactly matches (case-insensitive) a unit's name for the parsed faction in the IndexedDB `units` store
-- **THEN** the entry is marked as a matched unit, recording that unit's slug and the parsed faction as the faction it was matched under
+#### Scenario: Unit name matches an uploaded BaseData record
+- **WHEN** an entry's unit name exactly matches (case-insensitive) the `name` of a BaseData record uploaded for the parsed faction
+- **THEN** the entry is marked as a matched unit, recording that BaseData record's slug and the parsed faction as the faction it was matched under
 
 #### Scenario: Unit name matches only in the parent faction
-- **WHEN** an entry's unit name has no match among the parsed faction's own units
-- **AND** the parsed faction has a parent faction, and the unit name matches a unit there
-- **THEN** the entry is marked as a matched unit, recording that unit's slug and the parent faction as the faction it was matched under
+- **WHEN** an entry's unit name has no match among the parsed faction's own BaseData records
+- **AND** the parsed faction has a parent faction, and the unit name matches a BaseData record's `name` there
+- **THEN** the entry is marked as a matched unit, recording that BaseData record's slug and the parent faction as the faction it was matched under
 
-#### Scenario: Unit name does not match catalogue
-- **WHEN** an entry's unit name has no match among the parsed faction's own units
-- **AND** either the parsed faction has no parent, or the unit name has no match among the parent faction's units either
+#### Scenario: Unit name does not match any uploaded BaseData
+- **WHEN** an entry's unit name has no match among the parsed faction's own BaseData records
+- **AND** either the parsed faction has no parent, or the unit name has no match among the parent faction's BaseData records either
 - **THEN** the entry is marked as an unmatched unit
 - **AND** parsing continues with the remaining entries in the list
 
 ### Requirement: Weapon Name Validation
 
-For each matched entry, the wargear line SHALL be tokenized into individual weapon/wargear names and each token checked against the matched unit's known wargear catalogue, read from whichever faction (the entry's own faction, or its parent) the unit was actually matched under.
+For each matched entry, the wargear line SHALL be tokenized into individual weapon/wargear names and each token checked against the matched unit's wargear catalogue derived live from its BaseData, read from whichever faction (the entry's own faction, or its parent) the unit was actually matched under.
 
 #### Scenario: Tokenizing a wargear line
 - **WHEN** an entry's wargear line is parsed
@@ -78,20 +82,20 @@ For each matched entry, the wargear line SHALL be tokenized into individual weap
 - **AND** the count prefixes themselves are not validated
 
 #### Scenario: Wargear token matches catalogue
-- **WHEN** a wargear token's name matches (case-insensitive) a `wargearItem.name` or weapon profile name in the matched unit's `unitData.wargear`, read from the faction the unit was matched under
+- **WHEN** a wargear token's name matches (case-insensitive) a `wargearItem.name` or weapon profile name in the wargear catalogue derived from the matched unit's BaseData, read from the faction the unit was matched under
 - **THEN** that token is marked as a matched weapon
 
 #### Scenario: Wargear token matched via the parent faction's unitData
 - **WHEN** an entry's unit was matched under its parent faction (per Unit Name Validation)
-- **AND** that parent faction has a `unitData` record for the unit
-- **THEN** the entry's wargear tokens are checked against that parent faction's `unitData.wargear`, exactly as they would be against the entry's own faction
+- **AND** that parent faction has a BaseData record for the unit
+- **THEN** the entry's wargear tokens are checked against the wargear catalogue derived from that parent faction's BaseData, exactly as they would be against the entry's own faction
 
 #### Scenario: Wargear token unverified — unit not yet processed
-- **WHEN** a matched entry's unit has no `unitData` record in IndexedDB for the faction it was matched under
+- **WHEN** a matched entry's unit has no BaseData record in IndexedDB for the faction it was matched under
 - **THEN** every wargear token for that entry is marked as unverified rather than failed
 
 #### Scenario: Wargear token does not match catalogue
-- **WHEN** the faction the unit was matched under has a `unitData` record for it, and a wargear token's name has no match in its wargear catalogue
+- **WHEN** the faction the unit was matched under has a BaseData record for it, and a wargear token's name has no match in its BaseData-derived wargear catalogue
 - **THEN** that token is marked as an unmatched weapon
 
 #### Scenario: Unmatched unit skips weapon validation
@@ -147,6 +151,18 @@ The LIST tab SHALL display all saved lists as a table — one row per list, orde
 #### Scenario: Deleting a saved list
 - **WHEN** the user clicks a row's delete button
 - **THEN** that list's record is removed from IndexedDB and its row no longer appears in the table
+
+### Requirement: Open List Detail From Saved Lists Table
+
+Selecting a saved list's row SHALL open the list-view screen for that list.
+
+#### Scenario: Selecting a row opens the detail screen
+- **WHEN** the user clicks a saved list's row, other than its delete button
+- **THEN** the list-view screen opens for that list
+
+#### Scenario: Back returns to the table
+- **WHEN** the user navigates back from the list-view screen opened from the LIST tab
+- **THEN** the saved lists table is shown again
 
 ### Requirement: Upload Timestamp Tracking
 

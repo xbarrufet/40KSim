@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { Plus, Trash2 } from 'lucide-react'
 import { deleteList, getAllFactions, getAllLists } from '../data/db'
 import { ImportListModal } from './ImportListModal'
+import { ListDetailView } from './ListDetailView'
 import type { ArmyList } from '../data/schema'
 
 export function ListView() {
@@ -9,6 +10,7 @@ export function ListView() {
   const [factionNames, setFactionNames] = useState<Map<string, string>>(new Map())
   const [importing, setImporting] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [openList, setOpenList] = useState<ArmyList | null>(null)
 
   const loadLists = useCallback(() => {
     Promise.all([getAllLists(), getAllFactions()])
@@ -31,6 +33,10 @@ export function ListView() {
   }
 
   const sortedLists = [...lists].sort((a, b) => (b.uploadedAt ?? '').localeCompare(a.uploadedAt ?? ''))
+
+  if (openList) {
+    return <ListDetailView list={openList} onBack={() => setOpenList(null)} />
+  }
 
   return (
     <section className="workspace">
@@ -71,6 +77,7 @@ export function ListView() {
                     key={list.id}
                     list={list}
                     factionName={list.factionSlug ? factionNames.get(list.factionSlug) : undefined}
+                    onOpen={() => setOpenList(list)}
                     onDelete={() => handleDelete(list.id)}
                   />
                 ))}
@@ -90,21 +97,31 @@ export function ListView() {
 function SavedListRow({
   list,
   factionName,
+  onOpen,
   onDelete,
 }: {
   list: ArmyList
   factionName: string | undefined
+  onOpen: () => void
   onDelete: () => void
 }) {
   return (
-    <tr>
+    <tr className="saved-list-row" onClick={onOpen}>
       <td className="saved-lists-date-col">{formatUploadedAt(list.uploadedAt)}</td>
       <td>{list.armyName ?? list.title}</td>
       <td>{factionName ?? 'Facción desconocida'}</td>
       <td>{list.detachment ?? '—'}</td>
       <td>{list.declaredPoints ? `${list.declaredPoints} pts` : '—'}</td>
       <td className="saved-lists-actions-col">
-        <button type="button" className="delete-list-btn" onClick={onDelete} aria-label="Borrar lista">
+        <button
+          type="button"
+          className="delete-list-btn"
+          onClick={(e) => {
+            e.stopPropagation()
+            onDelete()
+          }}
+          aria-label="Borrar lista"
+        >
           <Trash2 size={16} />
         </button>
       </td>

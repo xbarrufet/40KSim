@@ -1,6 +1,6 @@
 import 'fake-indexeddb/auto'
 import { describe, expect, it, vi } from 'vitest'
-import { seedFromCatalog, putUnitData, getListByUrl } from './db'
+import { seedFromCatalog, putBaseData, getListByUrl } from './db'
 import {
   applyParentFallback,
   matchUnitNames,
@@ -10,9 +10,11 @@ import {
   resolveParentFactionSlug,
   saveParsedList,
   tokenizeWargearLine,
+  tokenizeWargearLineWithCounts,
   type ParsedEntry,
 } from './parseArmyList'
-import type { ArmyListEntry, UnitCatalog, UnitData } from './schema'
+import type { BaseData } from './preprocessBaseData'
+import type { ArmyListEntry, UnitCatalog } from './schema'
 
 const SAMPLE_LIST = `04-10
 Imperial Fists · Ceramite Sentinels · Devastator Brethren
@@ -282,22 +284,51 @@ describe('resolveParentFactionSlug', () => {
 })
 
 describe('matchWargearTokens', () => {
-  it('marks a token matched when its name is in the known wargear names (case-insensitive)', () => {
-    const [result] = matchWargearTokens(['bolt pistol'], ['Bolt Pistol', 'Chainsword'])
-    expect(result).toEqual({ name: 'bolt pistol', status: 'matched' })
+  it('marks a token matched when its name is in the known wargear names (case-insensitive), carrying its count through', () => {
+    const [result] = matchWargearTokens([{ name: 'bolt pistol', count: 5 }], ['Bolt Pistol', 'Chainsword'])
+    expect(result).toEqual({ name: 'bolt pistol', count: 5, status: 'matched' })
   })
 
   it('marks a token unmatched when its name is not in the known wargear names', () => {
-    const [result] = matchWargearTokens(['Plasma Pistol'], ['Bolt Pistol', 'Chainsword'])
-    expect(result).toEqual({ name: 'Plasma Pistol', status: 'unmatched' })
+    const [result] = matchWargearTokens([{ name: 'Plasma Pistol', count: 1 }], ['Bolt Pistol', 'Chainsword'])
+    expect(result).toEqual({ name: 'Plasma Pistol', count: 1, status: 'unmatched' })
   })
 
   it('marks every token unverified when there is nothing to check against', () => {
-    const result = matchWargearTokens(['Bolt Pistol', 'Chainsword'], null)
+    const result = matchWargearTokens([{ name: 'Bolt Pistol', count: 10 }, { name: 'Chainsword', count: 2 }], null)
     expect(result).toEqual([
-      { name: 'Bolt Pistol', status: 'unverified' },
-      { name: 'Chainsword', status: 'unverified' },
+      { name: 'Bolt Pistol', count: 10, status: 'unverified' },
+      { name: 'Chainsword', count: 2, status: 'unverified' },
     ])
+  })
+})
+
+describe('tokenizeWargearLineWithCounts', () => {
+  it('reads the leading "N×" count on a single-weapon-per-slot line', () => {
+    expect(tokenizeWargearLineWithCounts('5× Heavy Bolt Pistol / 5× Chainsword')).toEqual([
+      { name: 'Heavy Bolt Pistol', count: 5 },
+      { name: 'Chainsword', count: 5 },
+    ])
+  })
+
+  it('shares a slot\'s leading count across every "+"-joined item in that slot', () => {
+    expect(tokenizeWargearLineWithCounts('10× Ceramite Fists + Bolt Pistol / 8× Heavy Bolt Rifle / 2× Heavy Bolter')).toEqual([
+      { name: 'Ceramite Fists', count: 10 },
+      { name: 'Bolt Pistol', count: 10 },
+      { name: 'Heavy Bolt Rifle', count: 8 },
+      { name: 'Heavy Bolter', count: 2 },
+    ])
+  })
+
+  it('defaults to a count of 1 when a slot has no leading "N×" prefix', () => {
+    expect(tokenizeWargearLineWithCounts('Storm Bolters + Ballistus Lascannon')).toEqual([
+      { name: 'Storm Bolters', count: 1 },
+      { name: 'Ballistus Lascannon', count: 1 },
+    ])
+  })
+
+  it('returns an empty array for an empty line', () => {
+    expect(tokenizeWargearLineWithCounts('')).toEqual([])
   })
 })
 
@@ -309,97 +340,68 @@ function sampleCatalog(): UnitCatalog {
         id: 'imperial-fists',
         slug: 'imperial-fists',
         name: 'Imperial Fists',
-        units: [
-          { id: 'tor-garadon', slug: 'tor-garadon', name: 'Tor Garadon' },
-          { id: 'heavy-intercessor-squad', slug: 'heavy-intercessor-squad', name: 'Heavy Intercessor Squad' },
-        ],
+        units: [],
       },
     ],
   }
 }
 
-function sampleUnitData(overrides: Partial<UnitData> = {}): UnitData {
+/** Minimal BaseData fixture: a single miniature whose default wargear is exactly the given names. */
+function sampleBaseData(options: { slug: string; name: string; wargearNames?: string[] }): BaseData {
   return {
-    tag: 'CONFIRMED',
     id: 1,
-    slug: 'heavy-intercessor-squad',
-    name: 'Heavy Intercessor Squad',
-    keywords: [],
-    stats: {
-      movement: 5,
-      toughness: 6,
-      save: 2,
-      invulnerableSave: null,
-      wounds: 3,
-      leadership: 6,
-      objectiveControl: 2,
-    },
-    wargear: [
+    slug: options.slug,
+    name: options.name,
+    abilities: [],
+    miniatures: [
       {
-        wargearItem: {
-          id: 1,
-          name: 'Ceramite Fists',
-          wargearType: 'weapon',
-          count: 1,
-          profiles: [],
-        },
+        id: 1,
+        name: options.name,
+        stats: { movement: '6"', toughness: '4', save: '3+', wounds: '2', leadership: '7+', objectiveControl: '1' },
+        keywords: [],
+        defaultWargear: (options.wargearNames ?? []).map((name, index) => ({
+          wargearItem: { id: index + 1, name, wargearType: 'weapon', profiles: [] },
+        })),
+        wargear: [],
       },
     ],
-    abilities: [],
-    rawAbilities: [],
-    ...overrides,
   }
 }
 
 describe('parseAndValidateArmyList', () => {
-  it('matches units against the seeded catalogue and marks their weapons unverified without unitData', async () => {
+  it('matches units against their uploaded BaseData and matches their wargear against that same BaseData', async () => {
     await seedFromCatalog(sampleCatalog())
+    await putBaseData(
+      'imperial-fists',
+      'tor-garadon',
+      sampleBaseData({ slug: 'tor-garadon', name: 'Tor Garadon', wargearNames: ['Artificer Grav-gun', 'Hand of Defiance'] }),
+    )
 
     const list = await parseAndValidateArmyList(SAMPLE_LIST)
 
     expect(list.factionSlug).toBe('imperial-fists')
     const garadon = list.entries.find((e) => e.unitName === 'Tor Garadon')
     expect(garadon?.unitStatus).toBe('matched')
-    expect(garadon?.wargearTokens.every((t) => t.status === 'unverified')).toBe(true)
+    expect(garadon?.wargearTokens.every((t) => t.status === 'matched')).toBe(true)
 
     const unknownUnit = list.entries.find((e) => e.unitName === 'Ballistus Dreadnought')
     expect(unknownUnit?.unitStatus).toBe('unmatched')
+    expect(unknownUnit?.wargearTokens.every((t) => t.status === 'unverified')).toBe(true)
   })
 
-  it('falls back to the parent faction for a unit the chapter has no entry for, matching its wargear against the parent unitData', async () => {
+  it('falls back to the parent faction for a unit the chapter has no BaseData for, matching its wargear against the parent BaseData', async () => {
     await seedFromCatalog({
       schemaVersion: 1,
       factions: [
-        {
-          id: 'imperial-fists',
-          slug: 'imperial-fists',
-          name: 'Imperial Fists',
-          category: 'Space Marines',
-          units: [
-            { id: 'tor-garadon', slug: 'tor-garadon', name: 'Tor Garadon' },
-            { id: 'heavy-intercessor-squad', slug: 'heavy-intercessor-squad', name: 'Heavy Intercessor Squad' },
-          ],
-        },
-        {
-          id: 'space-marines',
-          slug: 'space-marines',
-          name: 'Space Marines',
-          category: 'Space Marines',
-          units: [{ id: 'outrider-squad', slug: 'outrider-squad', name: 'Outrider Squad' }],
-        },
+        { id: 'imperial-fists', slug: 'imperial-fists', name: 'Imperial Fists', category: 'Space Marines', units: [] },
+        { id: 'space-marines', slug: 'space-marines', name: 'Space Marines', category: 'Space Marines', units: [] },
       ],
     })
-    await putUnitData(
+    await putBaseData('imperial-fists', 'tor-garadon', sampleBaseData({ slug: 'tor-garadon', name: 'Tor Garadon' }))
+    await putBaseData(
       'space-marines',
       'outrider-squad',
-      sampleUnitData({
-        slug: 'outrider-squad',
-        name: 'Outrider Squad',
-        wargear: [
-          { wargearItem: { id: 2, name: 'Chainsword', wargearType: 'weapon', count: 1, profiles: [] } },
-          { wargearItem: { id: 3, name: 'Heavy Bolt Pistol', wargearType: 'weapon', count: 1, profiles: [] } },
-        ],
-      }),
+      sampleBaseData({ slug: 'outrider-squad', name: 'Outrider Squad', wargearNames: ['Chainsword', 'Heavy Bolt Pistol'] }),
     )
 
     const list = await parseAndValidateArmyList(SAMPLE_LIST)
@@ -417,9 +419,13 @@ describe('parseAndValidateArmyList', () => {
     expect(garadon?.matchedFactionSlug).toBe('imperial-fists')
   })
 
-  it('matches wargear tokens against unitData when it exists for the unit', async () => {
+  it('matches wargear tokens against BaseData when it exists for the unit', async () => {
     await seedFromCatalog(sampleCatalog())
-    await putUnitData('imperial-fists', 'heavy-intercessor-squad', sampleUnitData())
+    await putBaseData(
+      'imperial-fists',
+      'heavy-intercessor-squad',
+      sampleBaseData({ slug: 'heavy-intercessor-squad', name: 'Heavy Intercessor Squad', wargearNames: ['Ceramite Fists'] }),
+    )
 
     const list = await parseAndValidateArmyList(SAMPLE_LIST)
 

@@ -1,7 +1,7 @@
 import { useState, type DragEvent } from 'react'
 import { X } from 'lucide-react'
-import { getUnitData, putBaseData, putUnit, putUnitData } from '../data/db'
-import { preprocessBaseData, type BaseData } from '../data/preprocessBaseData'
+import { getStructuredAbilitiesData, putBaseData, putStructuredAbilitiesData, putUnit } from '../data/db'
+import { seedStructuredAbilities, type BaseData } from '../data/preprocessBaseData'
 
 interface UploadModalProps {
   factionSlug: string
@@ -55,20 +55,18 @@ export function UploadModal({ factionSlug, units, onClose, onUploaded }: UploadM
     setConfirming(true)
     try {
       for (const entry of files) {
-        if (!entry.matchedUnit) {
-          await putUnit(factionSlug, {
-            slug: entry.slug,
-            name: entry.slug,
-            factionSlug,
-            keywords: [],
-          })
-        }
+        await putUnit(factionSlug, {
+          slug: entry.slug,
+          name: (entry.data as BaseData).name,
+          factionSlug,
+          keywords: [],
+        })
         await putBaseData(factionSlug, entry.slug, entry.data)
 
-        const existingUnitData = await getUnitData(factionSlug, entry.slug)
-        if (!existingUnitData) {
-          const unitData = preprocessBaseData(entry.data as BaseData)
-          await putUnitData(factionSlug, entry.slug, unitData)
+        const existingStructuredAbilitiesData = await getStructuredAbilitiesData(factionSlug, entry.slug)
+        if (!existingStructuredAbilitiesData) {
+          const structuredAbilitiesData = seedStructuredAbilities(entry.data as BaseData)
+          await putStructuredAbilitiesData(factionSlug, entry.slug, structuredAbilitiesData)
         }
       }
       onUploaded()

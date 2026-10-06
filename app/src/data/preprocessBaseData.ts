@@ -1,4 +1,4 @@
-import type { RawAbility, UnitData, UnitDataStats, WargearEntry, WeaponProfileData } from './schema'
+import type { RawAbility, StructuredAbilitiesData, UnitDataStats, WargearEntry, WeaponProfileData } from './schema'
 import { parseWeaponAbilityName } from './weaponKeywords'
 
 interface BaseDataAbility {
@@ -159,7 +159,7 @@ function buildWargearCatalogue(baseData: BaseData): WargearEntry[] {
   return [...byId.values()]
 }
 
-function toRawAbilities(baseData: BaseData): RawAbility[] {
+export function toRawAbilities(baseData: BaseData): RawAbility[] {
   return baseData.abilities.map((ability) => ({
     name: ability.name,
     text: ability.rules ?? '',
@@ -204,16 +204,18 @@ export function extractDatasheetContext(baseData: BaseData): DatasheetContext {
   }
 }
 
-export function preprocessBaseData(baseData: BaseData): UnitData {
+export function getUnitWargear(baseData: BaseData): WargearEntry[] {
+  return buildWargearCatalogue(baseData)
+}
+
+export function getUnitKeywords(baseData: BaseData): string[] {
   const representative = pickRepresentativeMiniature(baseData)
+  return representative.keywords.map((keyword) => keyword.name.toUpperCase())
+}
+
+export function seedStructuredAbilities(baseData: BaseData): StructuredAbilitiesData {
   return {
     tag: 'PENDING',
-    id: baseData.id,
-    slug: baseData.slug,
-    name: baseData.name,
-    keywords: representative.keywords.map((keyword) => keyword.name.toUpperCase()),
-    stats: toStats(representative),
-    wargear: buildWargearCatalogue(baseData),
     abilities: [],
     rawAbilities: toRawAbilities(baseData),
   }

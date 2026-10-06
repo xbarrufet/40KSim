@@ -169,14 +169,8 @@ export interface RawAbility {
   abilityType: string
 }
 
-export interface UnitData {
+export interface StructuredAbilitiesData {
   tag: UnitDataTag
-  id: number
-  slug: string
-  name: string
-  keywords: string[]
-  stats: UnitDataStats
-  wargear: WargearEntry[]
   abilities: UnitDataAbility[]
   rawAbilities: RawAbility[]
 }
@@ -186,6 +180,8 @@ export type WargearMatchStatus = 'matched' | 'unmatched' | 'unverified'
 
 export interface ArmyListWargearToken {
   name: string
+  /** Number of models carrying this item, per the list's own "N×" count (defaults to 1 when unspecified). */
+  count: number
   status: WargearMatchStatus
 }
 

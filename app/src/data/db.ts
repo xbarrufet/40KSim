@@ -1,4 +1,4 @@
-import type { ArmyList, UnitCatalog, UnitData } from './schema'
+import type { ArmyList, StructuredAbilitiesData, UnitCatalog } from './schema'
 
 const DB_NAME = '40ksim'
 const DB_VERSION = 2
@@ -88,6 +88,30 @@ export async function getUnitsByFaction(factionSlug: string): Promise<UnitRecord
   })
 }
 
+export async function getBaseDataUnitsByFaction(factionSlug: string): Promise<{ slug: string; name: string }[]> {
+  const db = await getDB()
+  return new Promise((resolve, reject) => {
+    const t = tx(db, 'baseData', 'readonly')
+    const store = t.objectStore('baseData')
+    const results: { slug: string; name: string }[] = []
+    const request = store.openCursor()
+    request.onsuccess = () => {
+      const cursor = request.result
+      if (cursor) {
+        const key = cursor.key as string
+        if (key.startsWith(factionSlug + '/')) {
+          const value = cursor.value as { slug: string; name: string }
+          results.push({ slug: value.slug, name: value.name })
+        }
+        cursor.continue()
+      } else {
+        resolve(results)
+      }
+    }
+    request.onerror = () => reject(request.error)
+  })
+}
+
 export async function getBaseData(factionSlug: string, unitSlug: string): Promise<unknown> {
   const db = await getDB()
   return new Promise((resolve, reject) => {
@@ -108,7 +132,7 @@ export async function hasBaseData(factionSlug: string, unitSlug: string): Promis
   })
 }
 
-export async function hasUnitData(factionSlug: string, unitSlug: string): Promise<boolean> {
+export async function hasStructuredAbilitiesData(factionSlug: string, unitSlug: string): Promise<boolean> {
   const db = await getDB()
   return new Promise((resolve, reject) => {
     const t = tx(db, 'unitData', 'readonly')
@@ -131,8 +155,8 @@ export async function getUnitStatuses(factionSlug: string, unitSlugs: string[]):
     return new Promise<void>((resolve, reject) => {
       const request = unitStore.get(key)
       request.onsuccess = () => {
-        const unitData = request.result as UnitData | undefined
-        result.set(unitSlug, unitData?.tag === 'CONFIRMED' ? 'green' : 'red')
+        const structuredAbilitiesData = request.result as StructuredAbilitiesData | undefined
+        result.set(unitSlug, structuredAbilitiesData?.tag === 'CONFIRMED' ? 'green' : 'red')
         resolve()
       }
       request.onerror = () => reject(request.error)
@@ -152,7 +176,7 @@ export async function putBaseData(factionSlug: string, unitSlug: string, data: u
   })
 }
 
-export async function getUnitData(factionSlug: string, unitSlug: string): Promise<UnitData | undefined> {
+export async function getStructuredAbilitiesData(factionSlug: string, unitSlug: string): Promise<StructuredAbilitiesData | undefined> {
   const db = await getDB()
   return new Promise((resolve, reject) => {
     const t = tx(db, 'unitData', 'readonly')
@@ -162,7 +186,7 @@ export async function getUnitData(factionSlug: string, unitSlug: string): Promis
   })
 }
 
-export async function putUnitData(factionSlug: string, unitSlug: string, data: UnitData): Promise<void> {
+export async function putStructuredAbilitiesData(factionSlug: string, unitSlug: string, data: StructuredAbilitiesData): Promise<void> {
   const db = await getDB()
   return new Promise((resolve, reject) => {
     const t = tx(db, 'unitData', 'readwrite')
@@ -211,8 +235,8 @@ export async function getConfirmedUnitDataCount(factionSlug: string): Promise<nu
       const cursor = request.result
       if (cursor) {
         const key = cursor.key as string
-        const unitData = cursor.value as UnitData
-        if (key.startsWith(factionSlug + '/') && unitData.tag === 'CONFIRMED') count++
+        const structuredAbilitiesData = cursor.value as StructuredAbilitiesData
+        if (key.startsWith(factionSlug + '/') && structuredAbilitiesData.tag === 'CONFIRMED') count++
         cursor.continue()
       } else {
         resolve(count)
