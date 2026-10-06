@@ -1,0 +1,732 @@
+{
+  "id": 46809,
+  "slug": "eradicator-squad-with-melta-rifles",
+  "name": "Eradicator Squad with melta rifles",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "<ul><li>1 Eradicator Sergeant model</li>\\r<li>2-5 Eradicator models</li></ul>\\rEvery model is equipped with: 1 Bolt Pistol; 1 Ceramite Fists; 1 Melta Rifle.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Total Obliteration",
+      "rules": "This unit’s ranged attacks can re-roll <b>damage rolls</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": 3,
+  "pointsStepPoints": 20,
+  "leads": [],
+  "ledBy": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46759,
+        "name": "Vulkan He’stan",
+        "slug": "vulkan-hestan",
+        "factionSlug": "salamanders"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47072,
+        "name": "Apothecary Biologis",
+        "slug": "apothecary-biologis",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47599,
+        "name": "Marneus Calgar",
+        "slug": "marneus-calgar",
+        "factionSlug": "ultramarines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47331,
+        "name": "Tor Garadon",
+        "slug": "tor-garadon",
+        "factionSlug": "imperial-fists"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47315,
+        "name": "Captain in Gravis Armour",
+        "slug": "captain-in-gravis-armour",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46991,
+        "name": "Iron Father Feirros",
+        "slug": "iron-father-feirros",
+        "factionSlug": "iron-hands"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1857,
+    "slug": "space-marines",
+    "name": "Adeptus Astartes",
+    "commonName": "Space Marines"
+  },
+  "miniatures": [
+    {
+      "id": 61761,
+      "name": "Eradicator",
+      "stats": {
+        "save": "3+",
+        "wounds": "3",
+        "movement": "5\"",
+        "toughness": "6",
+        "leadership": "6+",
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 50797,
+          "name": "Gravis"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107437,
+            "name": "Ceramite Fists",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113477,
+                "name": "Ceramite Fists",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105757,
+            "name": "Melta Rifle",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111646,
+                "name": "Melta Rifle",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-3",
+                "damage": "D3+2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3445,
+                    "name": "MELTA 2",
+                    "rules": "This ability always takes the form <b>[MELTA X]</b>. Each time a model makes an attack with a <b>[MELTA]</b> weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add <b>X</b> to that weapon’s <b>D</b> characteristic.\\n\\n<b>Example:</b> <i>A model targets a unit that is within half range of a <b>[MELTA 2]</b> weapon with a <b>D</b> characteristic of D6. While resolving those attacks, that weapon has a <b>D</b> characteristic of D6+2 </i>"
+                  }
+                ]
+              },
+              {
+                "id": 113630,
+                "name": "Hunter",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "12",
+                "armourPenetration": "-3",
+                "damage": "D3+2",
+                "hunterProfileKeyword": "MONSTER/VEHICLE",
+                "abilities": [
+                  {
+                    "id": 3445,
+                    "name": "MELTA 2",
+                    "rules": "This ability always takes the form <b>[MELTA X]</b>. Each time a model makes an attack with a <b>[MELTA]</b> weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add <b>X</b> to that weapon’s <b>D</b> characteristic.\\n\\n<b>Example:</b> <i>A model targets a unit that is within half range of a <b>[MELTA 2]</b> weapon with a <b>D</b> characteristic of D6. While resolving those attacks, that weapon has a <b>D</b> characteristic of D6+2 </i>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105794,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111687,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\\n\\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 105794,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111687,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\\n\\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107437,
+            "name": "Ceramite Fists",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113477,
+                "name": "Ceramite Fists",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105757,
+            "name": "Melta Rifle",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111646,
+                "name": "Melta Rifle",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-3",
+                "damage": "D3+2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3445,
+                    "name": "MELTA 2",
+                    "rules": "This ability always takes the form <b>[MELTA X]</b>. Each time a model makes an attack with a <b>[MELTA]</b> weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add <b>X</b> to that weapon’s <b>D</b> characteristic.\\n\\n<b>Example:</b> <i>A model targets a unit that is within half range of a <b>[MELTA 2]</b> weapon with a <b>D</b> characteristic of D6. While resolving those attacks, that weapon has a <b>D</b> characteristic of D6+2 </i>"
+                  }
+                ]
+              },
+              {
+                "id": 113630,
+                "name": "Hunter",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "12",
+                "armourPenetration": "-3",
+                "damage": "D3+2",
+                "hunterProfileKeyword": "MONSTER/VEHICLE",
+                "abilities": [
+                  {
+                    "id": 3445,
+                    "name": "MELTA 2",
+                    "rules": "This ability always takes the form <b>[MELTA X]</b>. Each time a model makes an attack with a <b>[MELTA]</b> weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add <b>X</b> to that weapon’s <b>D</b> characteristic.\\n\\n<b>Example:</b> <i>A model targets a unit that is within half range of a <b>[MELTA 2]</b> weapon with a <b>D</b> characteristic of D6. While resolving those attacks, that weapon has a <b>D</b> characteristic of D6+2 </i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 108046,
+            "name": "Multi-melta",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114123,
+                "name": "Multi-melta",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-3",
+                "damage": "D3+2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3462,
+                    "name": "MELTA 3",
+                    "rules": "This ability always takes the form <b>[MELTA X]</b>. Each time a model makes an attack with a <b>[MELTA]</b> weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add <b>X</b> to that weapon’s <b>D</b> characteristic.\\n\\n<b>Example:</b> <i>A model targets a unit that is within half range of a <b>[MELTA 2]</b> weapon with a <b>D</b> characteristic of D6. While resolving those attacks, that weapon has a <b>D</b> characteristic of D6+2 </i>"
+                  }
+                ]
+              },
+              {
+                "id": 114233,
+                "name": "Hunter",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "12",
+                "armourPenetration": "-3",
+                "damage": "D3+2",
+                "hunterProfileKeyword": "MONSTER/VEHICLE",
+                "abilities": [
+                  {
+                    "id": 3462,
+                    "name": "MELTA 3",
+                    "rules": "This ability always takes the form <b>[MELTA X]</b>. Each time a model makes an attack with a <b>[MELTA]</b> weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add <b>X</b> to that weapon’s <b>D</b> characteristic.\\n\\n<b>Example:</b> <i>A model targets a unit that is within half range of a <b>[MELTA 2]</b> weapon with a <b>D</b> characteristic of D6. While resolving those attacks, that weapon has a <b>D</b> characteristic of D6+2 </i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        }
+      ]
+    },
+    {
+      "id": 61966,
+      "name": "Eradicator Sergeant",
+      "stats": {
+        "save": "3+",
+        "wounds": "3",
+        "movement": "5\"",
+        "toughness": "6",
+        "leadership": "6+",
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 50797,
+          "name": "Gravis"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105757,
+            "name": "Melta Rifle",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111646,
+                "name": "Melta Rifle",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-3",
+                "damage": "D3+2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3445,
+                    "name": "MELTA 2",
+                    "rules": "This ability always takes the form <b>[MELTA X]</b>. Each time a model makes an attack with a <b>[MELTA]</b> weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add <b>X</b> to that weapon’s <b>D</b> characteristic.\\n\\n<b>Example:</b> <i>A model targets a unit that is within half range of a <b>[MELTA 2]</b> weapon with a <b>D</b> characteristic of D6. While resolving those attacks, that weapon has a <b>D</b> characteristic of D6+2 </i>"
+                  }
+                ]
+              },
+              {
+                "id": 113630,
+                "name": "Hunter",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "12",
+                "armourPenetration": "-3",
+                "damage": "D3+2",
+                "hunterProfileKeyword": "MONSTER/VEHICLE",
+                "abilities": [
+                  {
+                    "id": 3445,
+                    "name": "MELTA 2",
+                    "rules": "This ability always takes the form <b>[MELTA X]</b>. Each time a model makes an attack with a <b>[MELTA]</b> weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add <b>X</b> to that weapon’s <b>D</b> characteristic.\\n\\n<b>Example:</b> <i>A model targets a unit that is within half range of a <b>[MELTA 2]</b> weapon with a <b>D</b> characteristic of D6. While resolving those attacks, that weapon has a <b>D</b> characteristic of D6+2 </i>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105794,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111687,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\\n\\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107437,
+            "name": "Ceramite Fists",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113477,
+                "name": "Ceramite Fists",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 105794,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111687,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\\n\\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107437,
+            "name": "Ceramite Fists",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113477,
+                "name": "Ceramite Fists",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105757,
+            "name": "Melta Rifle",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111646,
+                "name": "Melta Rifle",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-3",
+                "damage": "D3+2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3445,
+                    "name": "MELTA 2",
+                    "rules": "This ability always takes the form <b>[MELTA X]</b>. Each time a model makes an attack with a <b>[MELTA]</b> weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add <b>X</b> to that weapon’s <b>D</b> characteristic.\\n\\n<b>Example:</b> <i>A model targets a unit that is within half range of a <b>[MELTA 2]</b> weapon with a <b>D</b> characteristic of D6. While resolving those attacks, that weapon has a <b>D</b> characteristic of D6+2 </i>"
+                  }
+                ]
+              },
+              {
+                "id": 113630,
+                "name": "Hunter",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "12",
+                "armourPenetration": "-3",
+                "damage": "D3+2",
+                "hunterProfileKeyword": "MONSTER/VEHICLE",
+                "abilities": [
+                  {
+                    "id": 3445,
+                    "name": "MELTA 2",
+                    "rules": "This ability always takes the form <b>[MELTA X]</b>. Each time a model makes an attack with a <b>[MELTA]</b> weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add <b>X</b> to that weapon’s <b>D</b> characteristic.\\n\\n<b>Example:</b> <i>A model targets a unit that is within half range of a <b>[MELTA 2]</b> weapon with a <b>D</b> characteristic of D6. While resolving those attacks, that weapon has a <b>D</b> characteristic of D6+2 </i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 42138,
+      "rulesText": "■ For every 3 models in this unit, 1 Eradicator model can have their Melta Rifle replaced with 1 Multi-melta.",
+      "displayOrder": 1
+    }
+  ],
+  "compositions": [
+    {
+      "id": 62336,
+      "points": 100,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 3,
+      "miniatures": [
+        {
+          "miniatureId": 61966,
+          "miniatureName": "Eradicator Sergeant",
+          "min": 1,
+          "max": 1
+        },
+        {
+          "miniatureId": 61761,
+          "miniatureName": "Eradicator",
+          "min": 2,
+          "max": 2
+        }
+      ]
+    },
+    {
+      "id": 62698,
+      "points": 200,
+      "displayOrder": 1,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 6,
+      "miniatures": [
+        {
+          "miniatureId": 61966,
+          "miniatureName": "Eradicator Sergeant",
+          "min": 1,
+          "max": 1
+        },
+        {
+          "miniatureId": 61761,
+          "miniatureName": "Eradicator",
+          "min": 5,
+          "max": 5
+        }
+      ]
+    }
+  ]
+}

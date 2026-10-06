@@ -106,7 +106,9 @@ def fetch_units(faction_url, faction_name):
     return units
 
 def save_units(units, faction_slug, faction_name):
-    output_file = Path(__file__).parent / f"units_{faction_slug}.json"
+    faction_dir = Path(__file__).parent / faction_slug
+    faction_dir.mkdir(parents=True, exist_ok=True)
+    output_file = faction_dir / "units.json"
     data = {
         "faction": faction_name,
         "slug": faction_slug,

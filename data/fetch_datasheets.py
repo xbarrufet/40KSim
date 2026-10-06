@@ -65,7 +65,7 @@ def extract_datasheet(url):
 
 
 def fetch_faction_datasheets(faction_slug, faction_name):
-    units_file = DATA_DIR / f"units_{faction_slug}.json"
+    units_file = DATA_DIR / faction_slug / "units.json"
     if not units_file.exists():
         print(f"Error: {units_file} no encontrado. Ejecuta primero fetch_units.py")
         return None
@@ -76,32 +76,31 @@ def fetch_faction_datasheets(faction_slug, faction_name):
     units = units_data['units']
     total = len(units)
 
-    output_file = DATA_DIR / f"datasheets_{faction_slug}.json"
-    existing = []
-    existing_names = set()
-    if output_file.exists():
-        with open(output_file, 'r', encoding='utf-8') as f:
-            prev = json.load(f)
-            existing = prev.get('units', [])
-            existing_names = {u['name'] for u in existing}
+    base_data_dir = DATA_DIR / faction_slug / "BaseData"
+    base_data_dir.mkdir(parents=True, exist_ok=True)
+
+    already = sum(1 for unit in units if (base_data_dir / f"{unit['slug']}.json").exists())
 
     print(f"\n{'='*60}")
     print(f"  {faction_name} — datasheets ({total} unidades)")
-    if existing_names:
-        print(f"  ({len(existing_names)} ya descargados, descargando restantes)")
+    if already:
+        print(f"  ({already} ya descargados, descargando restantes)")
     print(f"{'='*60}\n")
 
-    results = list(existing)
+    downloaded = 0
     errors = []
 
     for i, unit in enumerate(units):
-        if unit['name'] in existing_names:
+        target = base_data_dir / f"{unit['slug']}.json"
+        if target.exists():
             continue
         print(f"  [{i+1}/{total}] {unit['name']}...", end=' ', flush=True)
         try:
             ds = extract_datasheet(unit['url'])
             if ds:
-                results.append(ds)
+                with open(target, 'w', encoding='utf-8') as f:
+                    json.dump(ds, f, indent=2, ensure_ascii=False)
+                downloaded += 1
                 print("OK")
             else:
                 print("NO DATA")
@@ -111,22 +110,14 @@ def fetch_faction_datasheets(faction_slug, faction_name):
             errors.append(unit['name'])
         time.sleep(REQUEST_DELAY)
 
-    output = {
-        "faction": faction_name,
-        "slug": faction_slug,
-        "units_count": len(results),
-        "units": results
-    }
+    total_on_disk = sum(1 for unit in units if (base_data_dir / f"{unit['slug']}.json").exists())
 
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(output, f, indent=2, ensure_ascii=False)
-
-    print(f"\n  Guardado en {output_file}")
-    print(f"  Datasheets: {len(results)}/{total}")
+    print(f"\n  Guardados en {base_data_dir}")
+    print(f"  Datasheets: {total_on_disk}/{total} ({downloaded} nuevos esta ejecucion)")
     if errors:
         print(f"  Errores: {errors}")
 
-    return output
+    return {"faction": faction_name, "slug": faction_slug, "units_count": total_on_disk}
 
 
 def load_factions():

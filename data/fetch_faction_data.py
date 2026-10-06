@@ -239,7 +239,9 @@ def fetch_all_faction_data(faction_slug, faction_name):
         "detachments": detachments
     }
 
-    output_file = DATA_DIR / f"faction_data_{faction_slug}.json"
+    faction_dir = DATA_DIR / faction_slug
+    faction_dir.mkdir(parents=True, exist_ok=True)
+    output_file = faction_dir / "faction_data.json"
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
 

@@ -1,0 +1,58 @@
+.admin-shell { min-height: 100vh; background-color: var(--paper); }
+.admin-topbar { display: flex; justify-content: space-between; align-items: center; height: 64px; padding: 0 clamp(20px, 5vw, 56px); color: #f8f7ef; background: var(--ink); border-bottom: 3px solid var(--olive); }
+.admin-topbar h1 { margin: 0; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; }
+.admin-topbar h1 span { color: var(--olive); font-weight: 500; }
+.admin-tabs { display: flex; gap: 8px; }
+.admin-tabs button { height: 34px; padding: 0 16px; color: #d9d8cb; background: transparent; border: 1px solid #4a4e3f; border-radius: 2px; cursor: pointer; }
+.admin-tabs button.active { color: var(--ink); background: var(--olive); border-color: var(--olive); }
+
+.admin-body { width: min(960px, calc(100% - 48px)); margin: 0 auto; padding: 36px 0 64px; }
+
+.admin-alert { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding: 10px 14px; color: #853e2b; background: #f8e9df; border-left: 3px solid var(--rust); font-size: 13px; }
+
+.faction-list-toolbar { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.confirm-all { display: flex; align-items: center; gap: 8px; color: var(--rust); font-size: 12px; }
+
+button { display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 14px; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 2px; font-size: 12px; cursor: pointer; }
+button:disabled { color: #a1a295; cursor: not-allowed; opacity: 0.6; }
+
+.faction-category { margin-bottom: 28px; }
+.faction-category h2 { margin-bottom: 10px; color: var(--muted); font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px; }
+.faction-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+.faction-card { position: relative; flex-direction: column; align-items: flex-start; gap: 6px; height: auto; padding: 14px 14px 20px; text-align: left; background: var(--panel); border: 1px solid var(--line); }
+.faction-card:hover { border-color: var(--olive); }
+.faction-name { font-weight: 600; }
+.faction-counts { color: var(--muted); font-size: 11px; }
+.faction-status-light { position: absolute; left: 10px; bottom: 8px; width: 8px; height: 8px; border-radius: 50%; }
+.faction-status-light.is-red { background: var(--rust); }
+.faction-status-light.is-yellow { background: #d8b94a; }
+.faction-status-light.is-green { background: var(--olive); }
+
+.job-log { margin: 16px 0; padding: 12px 14px; background: var(--ink); border-left: 3px solid var(--olive); }
+.job-log-error { border-left-color: var(--rust); }
+.job-status { margin: 0 0 6px; color: #e1e1d6; font-size: 11px; font-weight: 700; }
+.job-log pre { margin: 0; max-height: 220px; overflow-y: auto; color: #c8c8bd; font-size: 11px; white-space: pre-wrap; }
+
+.back-link { margin-bottom: 16px; background: transparent; border: none; }
+.faction-detail-toolbar { display: flex; gap: 10px; margin-bottom: 16px; }
+
+.unit-checklist { display: flex; flex-direction: column; gap: 2px; margin: 0; padding: 0; list-style: none; }
+.unit-checklist li label { display: flex; align-items: center; gap: 12px; padding: 8px 10px; background: var(--panel); border: 1px solid var(--line); font-size: 12px; cursor: pointer; }
+.unit-name { flex: 1; }
+.unit-category { color: var(--muted); font-size: 10px; }
+.unit-points { color: var(--muted); font-size: 11px; }
+.unit-status { padding: 2px 6px; font-size: 10px; font-weight: 700; }
+.unit-status.is-ok { color: #4e6b2a; }
+.unit-status.is-missing { color: var(--rust); }
+
+.field-label { display: block; margin: 16px 0 6px; color: var(--muted); font-size: 11px; }
+.points-panel select,
+.points-panel textarea { width: 100%; padding: 8px 10px; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 2px; font: inherit; }
+.points-panel textarea { font-family: monospace; font-size: 12px; }
+.points-panel > button { margin-top: 10px; }
+
+.points-preview { width: 100%; margin-top: 20px; border-collapse: collapse; font-size: 12px; }
+.points-preview th, .points-preview td { padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--line); }
+.points-preview input { width: 120px; padding: 4px 6px; border: 1px solid var(--line); border-radius: 2px; }
+.result-ok { display: inline-flex; align-items: center; gap: 4px; color: #4e6b2a; }
+.result-error { display: inline-flex; align-items: center; gap: 4px; color: var(--rust); }
