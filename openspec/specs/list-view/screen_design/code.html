@@ -1,0 +1,583 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tactical In-Game Army Viewer | Warhammer 40,000</title>
+<!-- Tailwind CSS CDN with forms & container queries plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- FontAwesome for grimdark military icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<!-- Google Fonts: Inter & JetBrains Mono for military tactical readout -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            tactical: {
+              bg: '#111417',
+              panel: '#181d22',
+              card: '#1f2429',
+              cardHover: '#262d33',
+              border: '#2a3138',
+              borderSubtle: '#22272c',
+              accent: '#38bdf8',
+              gold: '#ca8a04',
+              goldMuted: '#854d0e',
+              greenDark: '#1a2e22',
+              greenText: '#4ade80',
+              blueDark: '#1b2c3a',
+              blueTag: '#263847',
+              blueTagText: '#93c5fd',
+              skull: '#94a3b8'
+            }
+          },
+          fontFamily: {
+            sans: ['Space Grotesk', 'sans-serif'],
+            display: ['Chakra Petch', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Tactical UI Styles -->
+<style data-purpose="custom-scrollbar">
+    /* Tactical thin scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #111417;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2b333a;
+      border-radius: 2px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3e4953;
+    }
+  </style>
+<style data-purpose="tactical-elements">
+    /* Subtle scanline and grid background */
+    body {
+      background-color: #111417;
+      color: #cbd5e1;
+      background-image: 
+        linear-gradient(rgba(24, 29, 34, 0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(24, 29, 34, 0.4) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    
+    .tactical-border-left {
+      position: relative;
+    }
+    .tactical-border-left::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+    }
+  </style>
+<!-- END: Custom Tactical UI Styles -->
+</head>
+<body class="min-h-screen flex flex-col font-sans antialiased text-slate-300 selection:bg-sky-900 selection:text-white">
+<!-- BEGIN: Master Top Navigation / Status Header -->
+<header class="w-full bg-[#14181c] border-b border-tactical-border px-4 py-2.5 flex items-center justify-between sticky top-0 z-30 shadow-md" data-purpose="global-header">
+<div class="flex items-center space-x-3">
+<!-- Faction Crest Placeholder Icon -->
+<div class="w-8 h-8 rounded bg-tactical-card flex items-center justify-center border border-tactical-border text-tactical-accent font-display text-sm font-bold tracking-wider">
+<i class="fa-solid fa-shield-halved text-sky-400"></i>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-display uppercase tracking-widest text-sm font-bold text-white">ADEPTUS ASTARTES</span>
+<span class="text-xs px-2 py-0.5 rounded bg-zinc-800 text-zinc-400 font-mono border border-zinc-700">10TH EDITION</span>
+</div>
+<div class="text-[11px] font-mono text-zinc-400 flex items-center gap-2">
+<span class="">DETACHMENT: <strong class="text-slate-200">ANVIL SIEGE FORCE</strong></span>
+<span class="">•</span>
+<span class="">BATTLE SIZE: <strong class="text-slate-200">INCURSION (1,000 PTS)</strong></span>
+</div>
+</div>
+</div>
+<!-- Quick Stats Readout (CP, Victory Points, Round Tracker) -->
+<div class="flex items-center space-x-4">
+<!-- Command Points Indicator -->
+<div class="flex items-center bg-[#1b2229] border border-tactical-border rounded px-2.5 py-1 gap-2 shadow-inner">
+<span class="text-[10px] uppercase font-mono tracking-wider text-slate-400">COMMAND POINTS</span>
+<div class="flex items-center space-x-1">
+<span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+<span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+<span class="w-2 h-2 rounded-full bg-slate-700"></span>
+</div>
+<span class="font-mono text-xs font-bold text-white ml-1">2 / 3 CP</span>
+</div>
+<!-- Turn Tracker -->
+<div class="hidden sm:flex items-center bg-[#1b2229] border border-tactical-border rounded px-2.5 py-1 gap-2 font-mono text-xs">
+<span class="text-[10px] text-zinc-400 uppercase">ROUND</span>
+<span class="text-white font-bold px-1.5 py-0.2 bg-zinc-800 rounded border border-zinc-700">2</span>
+<span class="text-zinc-500 text-[11px]">BATTLE-SHOCK PHASE</span>
+</div>
+<!-- Quick Quick Action Button -->
+<button class="px-3 py-1 bg-tactical-card hover:bg-tactical-cardHover border border-tactical-border rounded text-xs font-mono text-slate-200 transition flex items-center gap-1.5">
+<i class="fa-solid fa-book-skull text-xs text-amber-500"></i>
+<span class="">RULES REF</span>
+</button>
+</div>
+</header>
+<!-- END: Master Top Navigation / Status Header -->
+<!-- BEGIN: Main Tactical Two-Column Grid -->
+<main class="flex-1 flex flex-col lg:flex-row overflow-hidden max-w-[1920px] mx-auto w-full" data-purpose="army-dashboard">
+<!-- BEGIN: Column Left (Army List / Tactical Roster) -->
+<aside class="w-full lg:w-[35%] xl:w-[30%] bg-[#13161a] border-r border-tactical-border flex flex-col h-auto lg:h-[calc(100vh-53px)] overflow-y-auto" data-purpose="roster-sidebar">
+<!-- Sidebar Header Info Panel -->
+<div class="p-3.5 bg-[#171b20] border-b border-tactical-border sticky top-0 z-20 shadow">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="text-xs font-mono uppercase tracking-widest text-zinc-400 font-semibold">ARMY ROSTER SUMMARY</h1>
+<p class="text-base font-display font-bold text-white tracking-wide">STRIKE FORCE AETHELGARD</p>
+</div>
+<div class="text-right">
+<span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-emerald-950/80 border border-emerald-800 text-emerald-400">995 / 1000 PTS</span>
+<div class="text-[10px] font-mono text-zinc-400 mt-0.5">UNITS: 5 · WARLORD: ASSIGNED</div>
+</div>
+</div>
+<!-- Filter & Search Quick Bar -->
+<div class="mt-2.5 flex items-center gap-2">
+<div class="relative flex-1">
+<i class="fa-solid fa-magnifying-glass absolute left-2.5 top-1/2 -translate-y-1/2 text-zinc-500 text-xs"></i>
+<input class="w-full bg-[#101316] border border-tactical-border rounded pl-8 pr-2 py-1 text-xs font-mono text-slate-200 focus:outline-none focus:border-tactical-accent focus:ring-1 focus:ring-tactical-accent" placeholder="Filter units or keywords..." type="text">
+</div>
+<button class="px-2 py-1 bg-tactical-card border border-tactical-border rounded text-[11px] font-mono hover:text-white text-zinc-400 hover:border-zinc-500" title="Filter Battleline">
+            ALL
+          </button>
+</div>
+</div>
+<!-- Units Container Accordion / Grouped Categories -->
+<div class="p-3 space-y-4">
+<!-- CATEGORY: EPIC HEROES -->
+
+<!-- CATEGORY: LEADERS & CHARACTERS -->
+
+<!-- CATEGORY: BATTLELINE -->
+<section data-purpose="category-battleline">
+<div class="flex items-center justify-between text-[11px] font-mono tracking-widest uppercase text-zinc-400 mb-1.5 px-1 font-bold">
+<span class="">BATTLELINE</span>
+<span class="text-zinc-600">3 UNITS</span>
+</div>
+<div class="space-y-2">
+<!-- SELECTED UNIT: Assault Intercessor Squad -->
+<article class="bg-[#1f2730] border-l-4 border-l-sky-400 border-y border-r border-tactical-border rounded-r p-2.5 shadow-lg shadow-sky-950/20 relative" data-purpose="unit-card-selected"><div class="flex items-center justify-between"><div><div class="flex items-center space-x-1.5"><span class="font-display font-bold text-sm text-white">Assault Intercessor Squad</span><span class="text-[10px] font-mono text-cyan-400 bg-cyan-950/60 border border-cyan-800 px-1 rounded">ACTIVE</span></div><span class="text-[11px] font-mono text-zinc-400">· 5 models</span></div><div class="text-right"><span class="font-mono text-xs font-bold text-sky-400">75 pts</span><div class="text-[9px] font-mono text-zinc-500">+55 pts Leader</div></div></div><div class="mt-2 text-xs font-mono bg-[#16212b] border border-blue-900/50 rounded px-2 py-1 text-sky-300 flex items-center justify-between">   <div class="flex items-center gap-1.5"><i class="fa-solid fa-link text-[10px] text-sky-400"></i><span class="text-[11px]">Led by <span class="font-semibold text-white">Lt. in Phobos Armour</span></span></div><span class="text-[10px] font-bold text-sky-400 bg-sky-950/80 px-1.5 py-0.2 rounded border border-sky-800">55 pts</span></div><div class="mt-1.5 text-xs font-mono text-zinc-300 bg-[#161c22] p-1.5 rounded border border-zinc-800/80 flex items-center justify-between"><span class="">Heavy Bolt Pistol / Chainsword</span><i class="fa-solid fa-chevron-right text-xs text-sky-400"></i></div></article>
+<!-- Heavy Intercessor Squad -->
+<article class="bg-tactical-card hover:bg-tactical-cardHover border border-tactical-border rounded p-2.5 transition cursor-pointer" data-purpose="unit-card"><div class="flex items-center justify-between"><div><span class="font-display font-bold text-sm text-slate-200">Heavy Intercessor Squad</span><span class="text-[11px] font-mono text-zinc-400 block">· 10 models</span></div><div class="text-right"><span class="font-mono text-xs text-zinc-400">200 pts</span><div class="text-[9px] font-mono text-zinc-500">+90 pts Warlord</div></div></div><div class="mt-2 text-xs font-mono bg-[#16212b] border border-blue-900/40 rounded px-2 py-1 text-sky-300 flex items-center justify-between"><div class="flex items-center gap-1.5"><i class="fa-solid fa-crown text-[10px] text-amber-400"></i><span class="text-[11px]">Led by <span class="font-semibold text-white">Tor Garadon</span></span></div><span class="text-[10px] font-bold text-amber-400 bg-amber-950/50 px-1.5 py-0.2 rounded border border-amber-800">90 pts</span></div><div class="mt-1 text-[11px] font-mono text-zinc-400 truncate">7× Heavy Bolt Rifle / 2× Heavy Bolter</div></article>
+<!-- Intercessor Squad -->
+<article class="bg-tactical-card hover:bg-tactical-cardHover border border-tactical-border rounded p-2.5 transition cursor-pointer" data-purpose="unit-card">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-display font-bold text-sm text-slate-200">Intercessor Squad</span>
+<span class="text-[11px] font-mono text-zinc-400">· 5 models</span>
+</div>
+<span class="font-mono text-xs text-zinc-400">80 pts</span>
+</div>
+<div class="mt-1.5 text-[11px] font-mono text-zinc-400 truncate">
+                4× Bolt Rifle / Bolt Rifle + Knives / Grenade Launcher
+              </div>
+</article>
+</div>
+</section>
+</div>
+</aside>
+<!-- END: Column Left (Army List / Tactical Roster) -->
+<!-- BEGIN: Column Right (Datasheet Detail View) -->
+<section class="flex-1 bg-tactical-bg p-4 lg:p-6 overflow-y-auto h-auto lg:h-[calc(100vh-53px)]" data-purpose="unit-datasheet-view">
+<!-- Unit Banner & Main Header -->
+<div class="bg-tactical-panel border border-tactical-border rounded-lg p-4 mb-5 relative overflow-hidden shadow-md" data-purpose="datasheet-header">
+<div class="absolute -right-10 -bottom-10 opacity-5 pointer-events-none text-9xl text-white font-display">
+<i class="fa-solid fa-jet-fighter"></i>
+</div>
+<div class="flex flex-wrap items-start justify-between gap-4 relative z-10">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 text-[10px] font-mono font-bold uppercase rounded bg-sky-950 text-sky-300 border border-sky-800">
+                BATTLELINE
+              </span>
+<span class="px-2 py-0.5 text-[10px] font-mono font-bold uppercase rounded bg-zinc-800 text-zinc-300 border border-zinc-700">
+                INFANTRY
+              </span>
+<span class="px-2 py-0.5 text-[10px] font-mono text-zinc-400">
+                5 MODELS
+              </span>
+</div>
+<h1 class="text-2xl sm:text-3xl font-display font-bold text-white tracking-wide uppercase">
+              ASSAULT INTERCESSOR SQUAD
+            </h1>
+<p class="text-xs font-mono text-zinc-400 mt-0.5">
+              Rapid shock-assault infantry specialized in brutal close-quarters combat.
+            </p>
+</div>
+<!-- Unit Points & Quick Controls -->
+<div class="flex items-center gap-3">
+<div class="text-right">
+<div class="text-2xl font-mono font-bold text-white">75 <span class="text-xs text-sky-400">PTS</span></div>
+<div class="text-[10px] font-mono text-zinc-400">15 PTS / MODEL</div>
+</div>
+<div class="flex gap-1 border-l border-zinc-700 pl-3">
+<button class="w-8 h-8 rounded bg-tactical-card hover:bg-tactical-cardHover border border-tactical-border flex items-center justify-center text-zinc-300 hover:text-white transition" title="Quick Notes">
+<i class="fa-regular fa-bookmark text-xs"></i>
+</button>
+<button class="w-8 h-8 rounded bg-tactical-card hover:bg-tactical-cardHover border border-tactical-border flex items-center justify-center text-zinc-300 hover:text-white transition" title="Print / Share">
+<i class="fa-solid fa-share-nodes text-xs"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Tactical Profile / Stats Table Block -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-5 mb-5">
+<!-- Left Stats (2 cols on large screen) -->
+<div class="xl:col-span-2 space-y-5">
+<!-- BEGIN: Primary Characteristics Table (M T SV W LD OC) -->
+<div class="bg-tactical-panel border border-tactical-border rounded-lg overflow-hidden" data-purpose="stat-characteristics-table">
+<div class="px-4 py-2 bg-[#1b2026] border-b border-tactical-border flex items-center justify-between">
+<span class="font-mono text-xs uppercase font-bold text-zinc-300 tracking-wider">MODELS &amp; CHARACTERISTICS</span>
+<span class="text-[10px] font-mono text-zinc-500">STANDARD DEPLOYMENT PROFILE</span>
+</div>
+<!-- Table of Model Profiles -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-mono border-collapse min-w-[500px]">
+<thead>
+<tr class="text-[11px] text-zinc-400 uppercase bg-[#14181d] border-b border-tactical-border">
+<th class="py-2.5 px-4 font-semibold">UNIT MODEL</th>
+<th class="py-2.5 px-2 text-center w-12 font-bold text-zinc-300">M</th>
+<th class="py-2.5 px-2 text-center w-12 font-bold text-zinc-300">T</th>
+<th class="py-2.5 px-2 text-center w-12 font-bold text-zinc-300">SV</th>
+<th class="py-2.5 px-2 text-center w-12 font-bold text-zinc-300">W</th>
+<th class="py-2.5 px-2 text-center w-12 font-bold text-zinc-300">LD</th>
+<th class="py-2.5 px-3 text-center w-12 font-bold text-sky-400">OC</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-tactical-border text-xs">
+<!-- Assault Intercessor -->
+<tr class="hover:bg-tactical-card/50 transition bg-tactical-card/20">
+<td class="py-2.5 px-4">
+<span class="font-sans font-bold text-slate-100">Assault Intercessor</span>
+<span class="text-[10px] text-zinc-500 block font-mono">base: 32mm · 4 models</span>
+</td>
+<td class="py-2.5 px-2 text-center font-bold text-white text-sm">6"</td>
+<td class="py-2.5 px-2 text-center font-bold text-white text-sm">4</td>
+<td class="py-2.5 px-2 text-center font-bold text-white text-sm">3+</td>
+<td class="py-2.5 px-2 text-center font-bold text-white text-sm">2</td>
+<td class="py-2.5 px-2 text-center font-bold text-white text-sm">6+</td>
+<td class="py-2.5 px-3 text-center font-bold text-sky-300 text-sm bg-sky-950/20">2</td>
+</tr>
+<!-- Assault Intercessor Sergeant -->
+<tr class="hover:bg-tactical-card/50 transition">
+<td class="py-2.5 px-4">
+<span class="font-sans font-bold text-slate-100 flex items-center gap-1.5">
+                        Assault Intercessor Sergeant
+                        <i class="fa-solid fa-medal text-amber-500 text-[10px]"></i>
+</span>
+<span class="text-[10px] text-zinc-500 block font-mono">base: 32mm · 1 model · Unit Leader</span>
+</td>
+<td class="py-2.5 px-2 text-center font-bold text-white text-sm">6"</td>
+<td class="py-2.5 px-2 text-center font-bold text-white text-sm">4</td>
+<td class="py-2.5 px-2 text-center font-bold text-white text-sm">3+</td>
+<td class="py-2.5 px-2 text-center font-bold text-white text-sm">2</td>
+<td class="py-2.5 px-2 text-center font-bold text-white text-sm">6+</td>
+<td class="py-2.5 px-3 text-center font-bold text-sky-300 text-sm bg-sky-950/20">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- END: Primary Characteristics Table -->
+<!-- BEGIN: Leader Integration Toggle Block (Option for Attached Characters) -->
+<div class="bg-[#151c24] border border-blue-900/50 rounded-lg p-3" data-purpose="leader-integration-panel">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-sky-400"></span>
+<span class="text-xs font-mono font-bold uppercase text-sky-300 tracking-wider">ATTACHED LEADER DETACHMENT</span>
+</div>
+<span class="text-[10px] font-mono text-zinc-400">CAPTAIN / LIEUTENANT COMPATIBLE</span>
+</div>
+<div class="p-2.5 bg-tactical-card/90 rounded border border-tactical-border flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs font-mono">
+<div>
+<div class="font-bold text-slate-200">Attached Officer: Lieutenant in Phobos Armour</div>
+<div class="text-[11px] text-zinc-400">Wargear: Master-crafted Power Weapon · Neo-volkite Pistol</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] bg-sky-950 text-sky-300 border border-sky-800 px-2 py-0.5 rounded">LETHAL HITS [UNIT]</span>
+<span class="text-[10px] bg-zinc-800 text-zinc-300 border border-zinc-700 px-2 py-0.5 rounded">SHOOT &amp; FADE</span>
+</div>
+</div>
+</div>
+<!-- END: Leader Integration Toggle Block -->
+<!-- BEGIN: Ranged Weapons Table -->
+<div class="bg-tactical-panel border border-tactical-border rounded-lg overflow-hidden" data-purpose="weapons-ranged">
+<div class="px-4 py-2 bg-[#1b2026] border-b border-tactical-border flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-crosshairs text-sky-400 text-xs"></i>
+<span class="font-mono text-xs uppercase font-bold text-zinc-300 tracking-wider">RANGED WEAPONS</span>
+</div>
+<span class="text-[10px] font-mono text-zinc-500">BALLISTIC PROFILES</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-mono border-collapse min-w-[500px]">
+<thead>
+<tr class="text-[11px] text-zinc-400 uppercase bg-[#14181d] border-b border-tactical-border">
+<th class="py-2.5 px-4 font-semibold">WEAPON NAME</th>
+<th class="py-2.5 px-2 text-center w-12 font-bold text-zinc-300">RNG</th>
+<th class="py-2.5 px-2 text-center w-10 font-bold text-zinc-300">A</th>
+<th class="py-2.5 px-2 text-center w-12 font-bold text-zinc-300">BS</th>
+<th class="py-2.5 px-2 text-center w-10 font-bold text-zinc-300">S</th>
+<th class="py-2.5 px-2 text-center w-10 font-bold text-zinc-300">AP</th>
+<th class="py-2.5 px-2 text-center w-10 font-bold text-zinc-300">D</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-tactical-border text-xs">
+<tr class="hover:bg-tactical-card/50 transition">
+<td class="py-3 px-4">
+<div class="font-sans font-bold text-slate-100">Heavy Bolt Pistol</div>
+<!-- Weapon Keywords -->
+<div class="flex flex-wrap gap-1 mt-1 font-mono">
+<span class="text-[9px] uppercase tracking-wider bg-tactical-blueTag text-tactical-blueTagText px-1.5 py-0.2 rounded border border-blue-900/60 font-semibold">PISTOL</span>
+<span class="text-[9px] uppercase tracking-wider bg-tactical-blueTag text-tactical-blueTagText px-1.5 py-0.2 rounded border border-blue-900/60 font-semibold">CLOSE-QUARTERS</span>
+</div>
+</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">18"</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">1</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">3+</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">5</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">-1</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">1</td>
+</tr>
+<!-- Optional Plasma Pistol Profile -->
+<tr class="hover:bg-tactical-card/50 transition bg-zinc-900/20">
+<td class="py-3 px-4">
+<div class="font-sans font-bold text-slate-100 flex items-center justify-between">
+<span class="">Plasma Pistol [SUPERCHARGE]</span>
+<span class="text-[10px] text-amber-500 font-mono">Sergeant Option</span>
+</div>
+<div class="flex flex-wrap gap-1 mt-1 font-mono">
+<span class="text-[9px] uppercase tracking-wider bg-tactical-blueTag text-tactical-blueTagText px-1.5 py-0.2 rounded border border-blue-900/60 font-semibold">PISTOL</span>
+<span class="text-[9px] uppercase tracking-wider bg-amber-950/60 text-amber-300 px-1.5 py-0.2 rounded border border-amber-800 font-semibold">HAZARDOUS</span>
+</div>
+</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">12"</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">1</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">3+</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">8</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">-3</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">2</td>
+</tr>
+<tr class="hover:bg-tactical-card/50 transition bg-sky-950/20"><td class="py-3 px-4"><div class="font-sans font-bold text-slate-100 flex items-center justify-between"><span class="">Neo-volkite Pistol</span><span class="text-[10px] text-sky-400 font-mono bg-sky-950 px-1.5 py-0.2 rounded border border-sky-800">Leader Wargear</span></div><div class="flex flex-wrap gap-1 mt-1 font-mono"><span class="text-[9px] uppercase tracking-wider bg-tactical-blueTag text-tactical-blueTagText px-1.5 py-0.2 rounded border border-blue-900/60 font-semibold">PISTOL</span><span class="text-[9px] uppercase tracking-wider bg-amber-950/60 text-amber-300 px-1.5 py-0.2 rounded border border-amber-800 font-semibold">DEVASTATING WOUNDS</span></div></td><td class="py-3 px-2 text-center font-bold text-white text-sm">12"</td><td class="py-3 px-2 text-center font-bold text-white text-sm">2</td><td class="py-3 px-2 text-center font-bold text-white text-sm">2+</td><td class="py-3 px-2 text-center font-bold text-white text-sm">5</td><td class="py-3 px-2 text-center font-bold text-white text-sm">0</td><td class="py-3 px-2 text-center font-bold text-white text-sm">2</td></tr></tbody>
+</table>
+</div>
+</div>
+<!-- END: Ranged Weapons Table -->
+<!-- BEGIN: Melee Weapons Table -->
+<div class="bg-tactical-panel border border-tactical-border rounded-lg overflow-hidden" data-purpose="weapons-melee">
+<div class="px-4 py-2 bg-[#1b2026] border-b border-tactical-border flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-burst text-rose-400 text-xs"></i>
+<span class="font-mono text-xs uppercase font-bold text-zinc-300 tracking-wider">MELEE WEAPONS</span>
+</div>
+<span class="text-[10px] font-mono text-zinc-500">ENGAGEMENT PROFILES</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-mono border-collapse min-w-[500px]">
+<thead>
+<tr class="text-[11px] text-zinc-400 uppercase bg-[#14181d] border-b border-tactical-border">
+<th class="py-2.5 px-4 font-semibold">WEAPON NAME</th>
+<th class="py-2.5 px-2 text-center w-12 font-bold text-zinc-500">RNG</th>
+<th class="py-2.5 px-2 text-center w-10 font-bold text-zinc-300">A</th>
+<th class="py-2.5 px-2 text-center w-12 font-bold text-zinc-300">WS</th>
+<th class="py-2.5 px-2 text-center w-10 font-bold text-zinc-300">S</th>
+<th class="py-2.5 px-2 text-center w-10 font-bold text-zinc-300">AP</th>
+<th class="py-2.5 px-2 text-center w-10 font-bold text-zinc-300">D</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-tactical-border text-xs">
+<!-- Astartes Chainsword -->
+<tr class="hover:bg-tactical-card/50 transition">
+<td class="py-3 px-4">
+<div class="font-sans font-bold text-slate-100">Astartes Chainsword</div>
+<div class="text-[10px] text-zinc-400 font-mono mt-0.5">Standard Squad Issue</div>
+</td>
+<td class="py-3 px-2 text-center font-bold text-zinc-500 text-sm">Melee</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">4</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">3+</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">5</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">-1</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">1</td>
+</tr>
+<!-- Thunder Hammer -->
+<tr class="hover:bg-tactical-card/50 transition bg-zinc-900/20">
+<td class="py-3 px-4">
+<div class="font-sans font-bold text-slate-100 flex items-center justify-between">
+<span class="">Thunder Hammer</span>
+<span class="text-[10px] text-amber-500 font-mono">Sergeant Option</span>
+</div>
+<div class="flex flex-wrap gap-1 mt-1 font-mono">
+<span class="text-[9px] uppercase tracking-wider bg-rose-950/60 text-rose-300 px-1.5 py-0.2 rounded border border-rose-900 font-semibold">DEVASTATING WOUNDS</span>
+</div>
+</td>
+<td class="py-3 px-2 text-center font-bold text-zinc-500 text-sm">Melee</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">3</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">4+</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">8</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">-2</td>
+<td class="py-3 px-2 text-center font-bold text-white text-sm">2</td>
+</tr>
+<tr class="hover:bg-tactical-card/50 transition bg-sky-950/20"><td class="py-3 px-4"><div class="font-sans font-bold text-slate-100 flex items-center justify-between"><span class="">Master-crafted Power Weapon</span><span class="text-[10px] text-sky-400 font-mono bg-sky-950 px-1.5 py-0.2 rounded border border-sky-800">Leader Wargear</span></div><div class="flex flex-wrap gap-1 mt-1 font-mono"><span class="text-[9px] uppercase tracking-wider bg-tactical-blueTag text-tactical-blueTagText px-1.5 py-0.2 rounded border border-blue-900/60 font-semibold">LETHAL HITS</span></div></td><td class="py-3 px-2 text-center font-bold text-zinc-500 text-sm">Melee</td><td class="py-3 px-2 text-center font-bold text-white text-sm">5</td><td class="py-3 px-2 text-center font-bold text-white text-sm">2+</td><td class="py-3 px-2 text-center font-bold text-white text-sm">5</td><td class="py-3 px-2 text-center font-bold text-white text-sm">-2</td><td class="py-3 px-2 text-center font-bold text-white text-sm">2</td></tr></tbody>
+</table>
+</div>
+</div>
+<!-- END: Melee Weapons Table -->
+</div>
+<!-- Right Column: Abilities, Rules & Keywords (1 col on large screen) -->
+<div class="space-y-4">
+<!-- BEGIN: Faction Ability Card -->
+<div class="bg-tactical-panel border border-tactical-border rounded-lg p-3.5" data-purpose="faction-abilities">
+<div class="text-[11px] font-mono tracking-wider uppercase text-zinc-400 font-bold mb-2 flex items-center justify-between">
+<span class="">FACTION ABILITIES</span>
+<i class="fa-solid fa-flag text-zinc-500 text-xs"></i>
+</div>
+<div class="bg-[#1b2229] border border-tactical-border rounded p-3 mb-2">
+<div class="inline-block px-2 py-0.5 bg-[#233342] text-tactical-blueTagText font-mono text-xs font-bold rounded mb-2 border border-sky-800">
+                COMBAT DOCTRINES
+              </div>
+<p class="text-xs text-slate-300 font-sans leading-relaxed">
+                At the start of your Command phase, you can select one Combat Doctrine to become active for your army until your next Command phase:
+              </p>
+<div class="mt-2 space-y-1 text-[11px] font-mono">
+<div class="flex items-center text-zinc-300">
+<span class="w-1.5 h-1.5 rounded-full bg-sky-400 mr-2"></span>
+<span class="font-bold text-white mr-1">Devastator:</span> Eligible to shoot after Advanced.
+                </div>
+<div class="flex items-center text-zinc-300">
+<span class="w-1.5 h-1.5 rounded-full bg-sky-400 mr-2"></span>
+<span class="font-bold text-white mr-1">Tactical:</span> Eligible to shoot &amp; declare charge after Fell Back.
+                </div>
+<div class="flex items-center text-zinc-300">
+<span class="w-1.5 h-1.5 rounded-full bg-sky-400 mr-2"></span>
+<span class="font-bold text-white mr-1">Assault:</span> Eligible to declare charge after Advanced.
+                </div>
+</div>
+</div>
+</div>
+<!-- END: Faction Ability Card -->
+<!-- BEGIN: Unit Abilities Card -->
+<div class="bg-tactical-panel border border-tactical-border rounded-lg p-3.5" data-purpose="unit-abilities">
+<div class="text-[11px] font-mono tracking-wider uppercase text-zinc-400 font-bold mb-2 flex items-center justify-between">
+<span class="">UNIT ABILITIES</span>
+<i class="fa-solid fa-bolt text-amber-500 text-xs"></i>
+</div>
+<!-- Targeted Intercession -->
+<div class="bg-[#1b2229] border border-tactical-border rounded p-3 mb-3">
+<h4 class="font-mono text-xs font-bold text-white uppercase tracking-wide mb-1 flex items-center gap-1.5">
+<i class="fa-solid fa-angles-right text-sky-400 text-[10px]"></i>
+                Targeted Intercession
+              </h4>
+<p class="text-xs text-slate-300 font-sans leading-relaxed">
+                If this unit made a <strong class="text-white font-bold">charge move</strong> this turn, this unit’s melee attacks have <span class="text-sky-300 font-mono font-bold">+1 S</span> and <span class="text-sky-300 font-mono font-bold">AP</span>.
+              </p>
+</div>
+<!-- Leader Rites of Battle (If Attached) -->
+<div class="bg-[#19222a] border border-sky-950 rounded p-3">
+<div class="flex items-center justify-between mb-1">
+<h4 class="font-mono text-xs font-bold text-sky-300 uppercase tracking-wide flex items-center gap-1.5">
+<i class="fa-solid fa-award text-sky-400 text-[10px]"></i>
+                  Rites of Battle
+                </h4>
+<span class="text-[9px] font-mono px-1.5 py-0.2 rounded bg-sky-950 text-sky-400 border border-sky-800">LEADER</span>
+</div>
+<p class="text-xs text-slate-300 font-sans leading-relaxed">
+                Once per battle round, one unit from your army with this ability can be targeted with a Stratagem for <strong class="text-amber-400 font-mono">0CP</strong>, even if another unit has already been targeted with that Stratagem this phase.
+              </p>
+</div>
+</div>
+<!-- END: Unit Abilities Card -->
+<!-- BEGIN: Tactical Stratagem Quick Reference -->
+<div class="bg-tactical-panel border border-tactical-border rounded-lg p-3.5" data-purpose="stratagems-quickref">
+<div class="text-[11px] font-mono tracking-wider uppercase text-zinc-400 font-bold mb-2 flex items-center justify-between">
+<span class="">ACTIVE DETACHMENT STRATAGEMS</span>
+<span class="text-[10px] font-mono text-sky-400 cursor-pointer hover:underline">VIEW ALL</span>
+</div>
+<div class="space-y-1.5">
+<div class="p-2 bg-[#171c21] rounded border border-tactical-border hover:border-zinc-600 transition flex items-center justify-between cursor-pointer">
+<div>
+<span class="font-mono text-xs font-bold text-slate-200">ARMOUR OF CONTEMPT</span>
+<span class="text-[10px] text-zinc-400 block font-mono">Worsen AP of incoming attack by 1</span>
+</div>
+<span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-zinc-800 text-amber-400 border border-zinc-700">1 CP</span>
+</div>
+<div class="p-2 bg-[#171c21] rounded border border-tactical-border hover:border-zinc-600 transition flex items-center justify-between cursor-pointer">
+<div>
+<span class="font-mono text-xs font-bold text-slate-200">HONOUR THE CHAPTER</span>
+<span class="text-[10px] text-zinc-400 block font-mono">Lance in Fight phase (+1 to Wound)</span>
+</div>
+<span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-zinc-800 text-amber-400 border border-zinc-700">1 CP</span>
+</div>
+</div>
+</div>
+<!-- END: Tactical Stratagem Quick Reference -->
+</div>
+</div>
+<!-- BEGIN: Keywords & Tags Footer Section -->
+<footer class="bg-tactical-panel border border-tactical-border rounded-lg p-3.5" data-purpose="keywords-section">
+<div class="text-[11px] font-mono tracking-wider uppercase text-zinc-400 font-bold mb-2.5">
+          KEYWORDS &amp; FACTION IDENTIFIERS
+        </div>
+<div class="flex flex-wrap gap-2">
+<!-- Keyword Badges matching screenshot and wargame conventions -->
+<span class="px-2.5 py-1 text-xs font-mono font-bold tracking-wide uppercase rounded bg-[#1e2730] text-sky-200 border border-[#2b3a48] hover:border-sky-500 transition cursor-default">
+            BATTLELINE
+          </span>
+<span class="px-2.5 py-1 text-xs font-mono font-bold tracking-wide uppercase rounded bg-[#1e2730] text-sky-200 border border-[#2b3a48] hover:border-sky-500 transition cursor-default">
+            INFANTRY
+          </span>
+<span class="px-2.5 py-1 text-xs font-mono font-bold tracking-wide uppercase rounded bg-[#1e2730] text-sky-200 border border-[#2b3a48] hover:border-sky-500 transition cursor-default">
+            GRENADES
+          </span>
+<span class="px-2.5 py-1 text-xs font-mono font-bold tracking-wide uppercase rounded bg-[#1e2730] text-sky-200 border border-[#2b3a48] hover:border-sky-500 transition cursor-default">
+            IMPERIUM
+          </span>
+<span class="px-2.5 py-1 text-xs font-mono font-bold tracking-wide uppercase rounded bg-[#1e2730] text-sky-200 border border-[#2b3a48] hover:border-sky-500 transition cursor-default">
+            TACTICUS
+          </span>
+<span class="px-2.5 py-1 text-xs font-mono font-bold tracking-wide uppercase rounded bg-[#1e2730] text-sky-200 border border-[#2b3a48] hover:border-sky-500 transition cursor-default">
+            ASSAULT INTERCESSOR SQUAD
+          </span>
+</div>
+</footer>
+<!-- END: Keywords & Tags Footer Section -->
+</section>
+<!-- END: Column Right (Datasheet Detail View) -->
+</main>
+<!-- END: Main Tactical Two-Column Grid -->
+<!-- BEGIN: Interactive Logic for Tactical Viewer -->
+<script data-purpose="tactical-interactivity">
+    document.addEventListener('DOMContentLoaded', () => {
+      // Allow clicking units on the sidebar to highlight active unit
+      const unitCards = document.querySelectorAll('[data-purpose="unit-card"], [data-purpose="unit-card-inactive"], [data-purpose="unit-card-leader"]');
+      
+      unitCards.forEach(card => {
+        card.addEventListener('click', function() {
+          // Visual feedback for tactile UI feel
+          unitCards.forEach(c => c.classList.remove('ring-1', 'ring-sky-400'));
+          this.classList.add('ring-1', 'ring-sky-400');
+        });
+      });
+    });
+  </script>
+<!-- END: Interactive Logic for Tactical Viewer -->
+
+
+</body></html>

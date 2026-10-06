@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AlertTriangle } from 'lucide-react'
 import { useCatalog } from '../data/useCatalog'
-import { getBaseDataCount, getUnitDataCount } from '../data/db'
+import { getBaseDataCount, getConfirmedUnitDataCount } from '../data/db'
 
 interface FactionsViewProps {
   onSelectFaction: (faction: { slug: string; name: string }) => void
@@ -80,7 +80,7 @@ function FactionCard({ faction, onSelect }: { faction: FactionData; onSelect: ()
 
   useEffect(() => {
     getBaseDataCount(faction.slug).then(setBaseCount)
-    getUnitDataCount(faction.slug).then(setUnitDataCount)
+    getConfirmedUnitDataCount(faction.slug).then(setUnitDataCount)
   }, [faction.slug])
 
   return (

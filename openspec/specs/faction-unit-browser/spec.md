@@ -21,7 +21,7 @@ The FACTIONS tab SHALL display all factions as clickable cards grouped by catego
 #### Scenario: Factions are available
 - **WHEN** the user is on the FACTIONS tab
 - **THEN** all factions from IndexedDB are displayed as cards grouped by category
-- **AND** each card shows the faction name and unit count
+- **AND** each card shows the faction name, icon, and BaseData/UnitData counts
 
 #### Scenario: First launch (empty IndexedDB)
 - **WHEN** IndexedDB is empty
@@ -34,6 +34,11 @@ The FACTIONS tab SHALL display all factions as clickable cards grouped by catego
 - **THEN** each faction entry includes a `slug` field (e.g. `"space-marines"`)
 - **AND** each unit entry includes a `slug` field (e.g. `"ancient"`)
 - **AND** these slugs are used to construct IndexedDB keys (`"<faction-slug>/<unit-slug>"`)
+
+#### Scenario: Faction card counters
+- **WHEN** a faction card is displayed
+- **THEN** it shows the count of units with BaseData and the count of units whose UnitData has `tag: "CONFIRMED"`
+- **AND** the format is `N base / M processed` in smaller text below the faction name
 
 ### Requirement: Faction Detail Navigation
 
@@ -61,18 +66,18 @@ The faction detail view SHALL have a top bar with a back button, the faction nam
 Units SHALL be listed grouped by category. Each unit row shows:
 - Unit name — rendered as a **link** (dead link for now; future spec wires it to Process Unit screen)
 - Points (read-only; dash if null)
-- Status light (red / yellow / green)
+- Status light (red / green)
 
 #### Scenario: Unit with no BaseData
 - **WHEN** no BaseData exists in IndexedDB for the unit
 - **THEN** the status light is **red**
 
 #### Scenario: Unit with BaseData only
-- **WHEN** BaseData exists but no UnitData in IndexedDB
-- **THEN** the status light is **yellow**
+- **WHEN** BaseData exists for the unit but its UnitData has `tag: "PENDING"`
+- **THEN** the status light is **red**
 
 #### Scenario: Unit with both BaseData and UnitData
-- **WHEN** both BaseData and UnitData exist in IndexedDB
+- **WHEN** BaseData exists for the unit and its UnitData has `tag: "CONFIRMED"`
 - **THEN** the status light is **green**
 
 ### Requirement: Upload Modal
@@ -87,10 +92,11 @@ The upload button SHALL open a modal overlay with two vertical sections: a drop 
 #### Scenario: File matches existing unit
 - **WHEN** a file's slug matches an existing unit in the current faction
 - **THEN** confirming will **replace** that unit's BaseData in IndexedDB
+- **AND** the unit's existing UnitData, if any, is left unchanged regardless of its `tag`
 
 #### Scenario: File does not match any unit
 - **WHEN** a file's slug does not match any unit in the current faction
-- **THEN** the modal prompts the user: **create new unit** or **skip**
+- **THEN** confirming will **create** the unit, store the BaseData automatically, and automatically generate UnitData for it with `tag: "PENDING"`
 
 #### Scenario: Cancel upload
 - **WHEN** the user clicks Cancel
@@ -98,7 +104,7 @@ The upload button SHALL open a modal overlay with two vertical sections: a drop 
 
 #### Scenario: Confirm upload
 - **WHEN** the user clicks Confirm
-- **THEN** all matched/accepted files are written to IndexedDB
+- **THEN** all files are written to IndexedDB: new units are auto-created with a `PENDING` UnitData proposal, existing units get their BaseData replaced and their UnitData left untouched
 - **AND** the unit list refreshes to reflect updated status lights
 
 ### Requirement: Admin Removal
@@ -142,12 +148,38 @@ The empty-state message in the faction list SHALL NOT reference the `/admin` pan
 
 ### Requirement: No faction-level status lights
 
-Faction cards in the faction list SHALL NOT display aggregate status lights. Each card shows only the faction name and unit count. Status lights are displayed only at the unit level in the faction detail view.
+Faction cards in the faction list SHALL NOT display aggregate status lights. Each card shows the faction name, icon, and BaseData/UnitData counts. Status lights are displayed only at the unit level in the faction detail view.
 
 #### Scenario: Faction card content
 - **WHEN** the user views the faction list
-- **THEN** each faction card shows the faction name and unit count
+- **THEN** each faction card shows the faction name, icon, and data counters
 - **AND** no status light or color indicator appears on the faction card
+
+### Requirement: Faction icon
+
+Each faction card SHALL display an icon. The icon path is stored in the faction data as `/icons/<faction-slug>-icon.svg`. If the icon fails to load, the card SHALL display without it gracefully.
+
+#### Scenario: Faction has icon
+- **WHEN** a faction card is displayed
+- **THEN** it shows the faction icon from the stored icon path
+
+#### Scenario: Icon fails to load
+- **WHEN** the icon image fails to load
+- **THEN** the card displays without the icon — no broken image shown
+
+### Requirement: Seed file contains factions only
+
+The seed file (`/data/units.json`) SHALL contain only faction data (name, slug, category, icon). Units are NOT included in the seed file — they are created when BaseData is uploaded.
+
+#### Scenario: Seed file structure
+- **WHEN** the seed file is loaded
+- **THEN** each faction entry contains `id`, `slug`, `name`, `category`, and `icon`
+- **AND** the `units` array is empty for each faction
+
+#### Scenario: Units not in seed
+- **WHEN** the app seeds IndexedDB from the seed file
+- **THEN** only the `factions` store is populated
+- **AND** the `units` store remains empty
 
 ## Data Structures
 

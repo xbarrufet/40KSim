@@ -1,6 +1,7 @@
 import { useState, type DragEvent } from 'react'
 import { X } from 'lucide-react'
-import { putBaseData, putUnit } from '../data/db'
+import { getUnitData, putBaseData, putUnit, putUnitData } from '../data/db'
+import { preprocessBaseData, type BaseData } from '../data/preprocessBaseData'
 
 interface UploadModalProps {
   factionSlug: string
@@ -63,6 +64,12 @@ export function UploadModal({ factionSlug, units, onClose, onUploaded }: UploadM
           })
         }
         await putBaseData(factionSlug, entry.slug, entry.data)
+
+        const existingUnitData = await getUnitData(factionSlug, entry.slug)
+        if (!existingUnitData) {
+          const unitData = preprocessBaseData(entry.data as BaseData)
+          await putUnitData(factionSlug, entry.slug, unitData)
+        }
       }
       onUploaded()
       onClose()

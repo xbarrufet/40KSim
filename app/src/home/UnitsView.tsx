@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { ArrowLeft, Upload } from 'lucide-react'
 import { getUnitsByFaction, getUnitStatuses, type UnitStatus } from '../data/db'
+import { ProcessUnitView } from './ProcessUnitView'
 import { UploadModal } from './UploadModal'
 
 interface UnitsViewProps {
@@ -20,6 +21,7 @@ export function UnitsView({ faction, onBack }: UnitsViewProps) {
   const [units, setUnits] = useState<UnitRow[] | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [showUpload, setShowUpload] = useState(false)
+  const [selectedUnit, setSelectedUnit] = useState<string | null>(null)
 
   const loadUnits = useCallback(() => {
     getUnitsByFaction(faction.slug)
@@ -46,6 +48,20 @@ export function UnitsView({ faction, onBack }: UnitsViewProps) {
 
   const categories = units ? Array.from(new Set(units.map((u) => u.category ?? 'Unidades'))) : []
 
+  if (selectedUnit) {
+    return (
+      <ProcessUnitView
+        faction={faction}
+        unitSlug={selectedUnit}
+        onBack={() => setSelectedUnit(null)}
+        onSaved={() => {
+          setSelectedUnit(null)
+          loadUnits()
+        }}
+      />
+    )
+  }
+
   return (
     <section className="workspace">
       <div className="unit-board-topbar">
@@ -69,7 +85,13 @@ export function UnitsView({ faction, onBack }: UnitsViewProps) {
                 .filter((u) => (u.category ?? 'Unidades') === category)
                 .map((unit) => (
                   <li key={unit.slug} className="unit-row">
-                    <span className="unit-row-name unit-link">{unit.name}</span>
+                    <button
+                      type="button"
+                      className="unit-row-name unit-link"
+                      onClick={() => setSelectedUnit(unit.slug)}
+                    >
+                      {unit.name}
+                    </button>
                     <span className="unit-row-points">{unit.points ?? '—'}</span>
                     <span className={`status-light is-${unit.status}`} aria-hidden="true" />
                   </li>

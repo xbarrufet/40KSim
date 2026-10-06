@@ -1,7 +1,7 @@
-import type { UnitCatalog } from './schema'
+import type { ArmyList, UnitCatalog, UnitData } from './schema'
 
 const DB_NAME = '40ksim'
-const DB_VERSION = 1
+const DB_VERSION = 2
 
 interface FactionRecord {
   id: string
@@ -40,6 +40,9 @@ export function getDB(): Promise<IDBDatabase> {
       }
       if (!db.objectStoreNames.contains('unitData')) {
         db.createObjectStore('unitData')
+      }
+      if (!db.objectStoreNames.contains('lists')) {
+        db.createObjectStore('lists')
       }
     }
     request.onsuccess = () => resolve(request.result)
@@ -85,6 +88,16 @@ export async function getUnitsByFaction(factionSlug: string): Promise<UnitRecord
   })
 }
 
+export async function getBaseData(factionSlug: string, unitSlug: string): Promise<unknown> {
+  const db = await getDB()
+  return new Promise((resolve, reject) => {
+    const t = tx(db, 'baseData', 'readonly')
+    const request = t.objectStore('baseData').get(`${factionSlug}/${unitSlug}`)
+    request.onsuccess = () => resolve(request.result)
+    request.onerror = () => reject(request.error)
+  })
+}
+
 export async function hasBaseData(factionSlug: string, unitSlug: string): Promise<boolean> {
   const db = await getDB()
   return new Promise((resolve, reject) => {
@@ -105,34 +118,24 @@ export async function hasUnitData(factionSlug: string, unitSlug: string): Promis
   })
 }
 
-export type UnitStatus = 'red' | 'yellow' | 'green'
+export type UnitStatus = 'red' | 'green'
 
 export async function getUnitStatuses(factionSlug: string, unitSlugs: string[]): Promise<Map<string, UnitStatus>> {
   const db = await getDB()
   const result = new Map<string, UnitStatus>()
-  const t = tx(db, ['baseData', 'unitData'], 'readonly')
-  const baseStore = t.objectStore('baseData')
+  const t = tx(db, 'unitData', 'readonly')
   const unitStore = t.objectStore('unitData')
 
   await Promise.all(unitSlugs.map(unitSlug => {
     const key = `${factionSlug}/${unitSlug}`
     return new Promise<void>((resolve, reject) => {
-      const baseReq = baseStore.count(key)
-      baseReq.onsuccess = () => {
-        const hasBase = baseReq.result > 0
-        if (!hasBase) {
-          result.set(unitSlug, 'red')
-          resolve()
-          return
-        }
-        const unitReq = unitStore.count(key)
-        unitReq.onsuccess = () => {
-          result.set(unitSlug, unitReq.result > 0 ? 'green' : 'yellow')
-          resolve()
-        }
-        unitReq.onerror = () => reject(unitReq.error)
+      const request = unitStore.get(key)
+      request.onsuccess = () => {
+        const unitData = request.result as UnitData | undefined
+        result.set(unitSlug, unitData?.tag === 'CONFIRMED' ? 'green' : 'red')
+        resolve()
       }
-      baseReq.onerror = () => reject(baseReq.error)
+      request.onerror = () => reject(request.error)
     })
   }))
 
@@ -144,6 +147,26 @@ export async function putBaseData(factionSlug: string, unitSlug: string, data: u
   return new Promise((resolve, reject) => {
     const t = tx(db, 'baseData', 'readwrite')
     const request = t.objectStore('baseData').put(data, `${factionSlug}/${unitSlug}`)
+    request.onsuccess = () => resolve()
+    request.onerror = () => reject(request.error)
+  })
+}
+
+export async function getUnitData(factionSlug: string, unitSlug: string): Promise<UnitData | undefined> {
+  const db = await getDB()
+  return new Promise((resolve, reject) => {
+    const t = tx(db, 'unitData', 'readonly')
+    const request = t.objectStore('unitData').get(`${factionSlug}/${unitSlug}`)
+    request.onsuccess = () => resolve(request.result)
+    request.onerror = () => reject(request.error)
+  })
+}
+
+export async function putUnitData(factionSlug: string, unitSlug: string, data: UnitData): Promise<void> {
+  const db = await getDB()
+  return new Promise((resolve, reject) => {
+    const t = tx(db, 'unitData', 'readwrite')
+    const request = t.objectStore('unitData').put(data, `${factionSlug}/${unitSlug}`)
     request.onsuccess = () => resolve()
     request.onerror = () => reject(request.error)
   })
@@ -178,16 +201,18 @@ export async function getBaseDataCount(factionSlug: string): Promise<number> {
   })
 }
 
-export async function getUnitDataCount(factionSlug: string): Promise<number> {
+export async function getConfirmedUnitDataCount(factionSlug: string): Promise<number> {
   const db = await getDB()
   return new Promise((resolve, reject) => {
     const t = tx(db, 'unitData', 'readonly')
     let count = 0
-    const request = t.objectStore('unitData').openKeyCursor()
+    const request = t.objectStore('unitData').openCursor()
     request.onsuccess = () => {
       const cursor = request.result
       if (cursor) {
-        if ((cursor.key as string).startsWith(factionSlug + '/')) count++
+        const key = cursor.key as string
+        const unitData = cursor.value as UnitData
+        if (key.startsWith(factionSlug + '/') && unitData.tag === 'CONFIRMED') count++
         cursor.continue()
       } else {
         resolve(count)
@@ -203,6 +228,49 @@ export async function isFactionsEmpty(): Promise<boolean> {
     const t = tx(db, 'factions', 'readonly')
     const request = t.objectStore('factions').count()
     request.onsuccess = () => resolve(request.result === 0)
+    request.onerror = () => reject(request.error)
+  })
+}
+
+export async function getAllLists(): Promise<ArmyList[]> {
+  const db = await getDB()
+  return new Promise((resolve, reject) => {
+    const t = tx(db, 'lists', 'readonly')
+    const request = t.objectStore('lists').getAll()
+    request.onsuccess = () => resolve(request.result)
+    request.onerror = () => reject(request.error)
+  })
+}
+
+export async function getListByUrl(listUrl: string): Promise<ArmyList | undefined> {
+  const db = await getDB()
+  return new Promise((resolve, reject) => {
+    const t = tx(db, 'lists', 'readonly')
+    const request = t.objectStore('lists').getAll()
+    request.onsuccess = () => {
+      const lists = request.result as ArmyList[]
+      resolve(lists.find((list) => list.listUrl === listUrl))
+    }
+    request.onerror = () => reject(request.error)
+  })
+}
+
+export async function putList(list: ArmyList): Promise<void> {
+  const db = await getDB()
+  return new Promise((resolve, reject) => {
+    const t = tx(db, 'lists', 'readwrite')
+    const request = t.objectStore('lists').put(list, list.id)
+    request.onsuccess = () => resolve()
+    request.onerror = () => reject(request.error)
+  })
+}
+
+export async function deleteList(id: string): Promise<void> {
+  const db = await getDB()
+  return new Promise((resolve, reject) => {
+    const t = tx(db, 'lists', 'readwrite')
+    const request = t.objectStore('lists').delete(id)
+    request.onsuccess = () => resolve()
     request.onerror = () => reject(request.error)
   })
 }
