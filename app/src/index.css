@@ -1,27 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import '@fontsource/chakra-petch/500.css';
+@import '@fontsource/chakra-petch/600.css';
+@import '@fontsource/chakra-petch/700.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
+@import '@fontsource/jetbrains-mono/600.css';
+@import '@fontsource/jetbrains-mono/700.css';
+/* Kept for screens not yet restyled by the tactical theme (Factions grid, upload modal, LIST tab paste/import), which reference it by name directly */
+@import '@fontsource/barlow-condensed/500.css';
+@import '@fontsource/barlow-condensed/600.css';
+@import '@fontsource/barlow-condensed/700.css';
 
 :root {
-  font-family: 'DM Sans', sans-serif;
-  color: #20251e;
-  background: #f3f1e8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  color: #e6edf3;
+  background: #14181d;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --ink: #20251e;
-  --muted: #77796f;
-  --paper: #f3f1e8;
-  --panel: #fbfaf5;
-  --line: #d8d7cb;
-  --olive: #a6b847;
-  --rust: #c75b3a;
+  --ink: #e6edf3;
+  --muted: #9aa7b4;
+  --paper: #14181d;
+  --panel: #1b2027;
+  --line: #333c45;
+  --olive: #38bdf8;
+  --rust: #f87171;
+  --on-accent: #0b1116;
+  --heading: 'Chakra Petch', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --text-h: var(--ink);
+  --code-bg: var(--panel);
 }
 
 * { box-sizing: border-box; }
 body { min-width: 320px; min-height: 100vh; margin: 0; }
 button, select { font: inherit; }
 button:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid var(--olive); outline-offset: 3px; }
-::selection { color: var(--ink); background: #d9e39b; }
+::selection { color: var(--on-accent); background: var(--olive); }
 
 h1,
 h2 {

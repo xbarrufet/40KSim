@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import type { DatasheetContext } from '../data/preprocessBaseData'
 import type { WargearEntry } from '../data/schema'
+import { FormattedAbilityText } from './FormattedAbilityText'
 import { splitWeaponProfiles, type WeaponRow } from './processUnitLogic'
 
 interface UnitDatasheetProps {
@@ -76,7 +77,7 @@ export function UnitDatasheet({ datasheet, wargear, keywords, showExtendedContex
       {showExtendedContext && datasheet?.unitComposition && (
         <section className="process-unit-section">
           <h2>Unit Composition</h2>
-          <p className="composition-text">{datasheet.unitComposition}</p>
+          <div className="composition-text"><FormattedAbilityText text={datasheet.unitComposition} /></div>
         </section>
       )}
 
@@ -108,7 +109,7 @@ export function UnitDatasheet({ datasheet, wargear, keywords, showExtendedContex
       {ranged.length > 0 && (
         <section className="process-unit-section">
           <h2>Ranged Weapons</h2>
-          <table className="datasheet-table">
+          <table className="datasheet-table weapon-table">
             <thead>
               <tr>
                 {modelNames && <th>Modelo</th>}
@@ -123,8 +124,15 @@ export function UnitDatasheet({ datasheet, wargear, keywords, showExtendedContex
               </tr>
             </thead>
             <tbody>
-              {ranged.map((row) => (
-                <WeaponRowGroup key={row.key} row={row} modelCounts={modelCounts} modelNames={modelNames} columnCount={rangedColumnCount}>
+              {ranged.map((row, index) => (
+                <WeaponRowGroup
+                  key={row.key}
+                  row={row}
+                  modelCounts={modelCounts}
+                  modelNames={modelNames}
+                  columnCount={rangedColumnCount}
+                  isNewOwner={isNewOwnerGroup(ranged, index, modelNames)}
+                >
                   <td>{row.profile.range}</td>
                   <td>{row.profile.attacks}</td>
                   <td>{row.profile.ballisticSkill ?? '-'}</td>
@@ -141,7 +149,7 @@ export function UnitDatasheet({ datasheet, wargear, keywords, showExtendedContex
       {melee.length > 0 && (
         <section className="process-unit-section">
           <h2>Melee Weapons</h2>
-          <table className="datasheet-table">
+          <table className="datasheet-table weapon-table">
             <thead>
               <tr>
                 {modelNames && <th>Modelo</th>}
@@ -155,8 +163,15 @@ export function UnitDatasheet({ datasheet, wargear, keywords, showExtendedContex
               </tr>
             </thead>
             <tbody>
-              {melee.map((row) => (
-                <WeaponRowGroup key={row.key} row={row} modelCounts={modelCounts} modelNames={modelNames} columnCount={meleeColumnCount}>
+              {melee.map((row, index) => (
+                <WeaponRowGroup
+                  key={row.key}
+                  row={row}
+                  modelCounts={modelCounts}
+                  modelNames={modelNames}
+                  columnCount={meleeColumnCount}
+                  isNewOwner={isNewOwnerGroup(melee, index, modelNames)}
+                >
                   <td>{row.profile.attacks}</td>
                   <td>{row.profile.weaponSkill ?? '-'}</td>
                   <td>{row.profile.strength}</td>
@@ -172,23 +187,32 @@ export function UnitDatasheet({ datasheet, wargear, keywords, showExtendedContex
   )
 }
 
+/** True when this row's owning model/character differs from the previous row's — marks the
+ * boundary between a unit's own weapons and an attached leader/support's, merged in below them. */
+function isNewOwnerGroup(rows: WeaponRow[], index: number, modelNames?: Map<number, string>): boolean {
+  if (!modelNames || index === 0) return false
+  return modelNames.get(rows[index].wargearItemId) !== modelNames.get(rows[index - 1].wargearItemId)
+}
+
 function WeaponRowGroup({
   row,
   children,
   modelCounts,
   modelNames,
   columnCount,
+  isNewOwner,
 }: {
   row: WeaponRow
   children: ReactNode
   modelCounts?: Map<number, number>
   modelNames?: Map<number, string>
   columnCount: number
+  isNewOwner?: boolean
 }) {
   return (
     <>
-      <tr>
-        {modelNames && <td>{modelNames.get(row.wargearItemId) ?? '—'}</td>}
+      <tr className={isNewOwner ? 'weapon-owner-divider' : undefined}>
+        {modelNames && <td className="weapon-owner-cell">{modelNames.get(row.wargearItemId) ?? '—'}</td>}
         <td>{row.label}</td>
         {modelCounts && <td>×{modelCounts.get(row.wargearItemId) ?? '—'}</td>}
         {children}

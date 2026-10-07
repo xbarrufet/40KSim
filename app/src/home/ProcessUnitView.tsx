@@ -27,6 +27,7 @@ import {
   reconcileRawAbilities,
   type StructuringRow,
 } from './processUnitLogic'
+import { FormattedAbilityText } from './FormattedAbilityText'
 import { UnitDatasheet } from './UnitDatasheet'
 
 interface ProcessUnitViewProps {
@@ -266,7 +267,7 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
                 {'rule' in ability ? (
                   <span className="ability-detail">{describeRule(ability.rule)}</span>
                 ) : (
-                  <span className="ability-detail">OTHER — {ability.text}</span>
+                  <div className="ability-detail">OTHER — <FormattedAbilityText text={ability.text} /></div>
                 )}
               </div>
               <select
@@ -290,7 +291,7 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
             <li key={index} className="raw-ability-row">
               <div className="raw-ability-text">
                 <strong>{raw.name}</strong> <span className="ability-type-tag">{raw.abilityType}</span>
-                <p>{raw.text}</p>
+                <FormattedAbilityText text={raw.text} />
               </div>
               {structuringIndex === index ? (
                 <StructuringForm

@@ -3,6 +3,7 @@ import { ArrowLeft } from 'lucide-react'
 import { getBaseData } from '../data/db'
 import { extractDatasheetContext, getUnitWargear, toRawAbilities, type BaseData, type DatasheetContext } from '../data/preprocessBaseData'
 import type { ArmyList, ArmyListEntry, RawAbility, WargearEntry } from '../data/schema'
+import { FormattedAbilityText } from '../home/FormattedAbilityText'
 import { dedupeAbilitiesByName, matchLoadoutWargear, resolveAttachedEntry } from '../home/processUnitLogic'
 import { UnitDatasheet } from '../home/UnitDatasheet'
 
@@ -213,7 +214,7 @@ function EntryPanel({ entry, state }: { entry: ArmyListEntry; state: EntryDatash
                   <li key={index} className="raw-ability-row">
                     <div className="raw-ability-text">
                       <strong>{ability.name}</strong> <span className="ability-type-tag">{ability.abilityType}</span>
-                      <p>{ability.text}</p>
+                      <FormattedAbilityText text={ability.text} />
                     </div>
                   </li>
                 ))}

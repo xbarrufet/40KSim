@@ -14,8 +14,8 @@ export default defineConfig({
         name: '40KSim',
         short_name: '40KSim',
         description: 'Simulador local de combates de Warhammer 40,000.',
-        theme_color: '#20291f',
-        background_color: '#f3f1e8',
+        theme_color: '#1b2027',
+        background_color: '#14181d',
         display: 'standalone',
         icons: [
           {
@@ -27,7 +27,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{css,html,ico,js,json,svg}'],
+        globPatterns: ['**/*.{css,html,ico,js,json,svg,woff,woff2}'],
       },
     }),
   ],
