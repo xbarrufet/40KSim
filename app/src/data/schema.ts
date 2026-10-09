@@ -21,6 +21,7 @@ export interface UnitProfile {
   id: string
   slug: string
   name: string
+  category?: string
   points?: number
   keywords?: string[]
   models?: ModelProfile[]
@@ -59,7 +60,7 @@ export interface AbilityProfile {
   attributes: AttributeId[]
 }
 
-export type UnitDataTag = 'PENDING' | 'CONFIRMED'
+export type UnitDataTag = 'PENDING' | 'AI_PROPOSED' | 'CONFIRMED'
 
 export interface UnitDataStats {
   movement: number
@@ -103,10 +104,9 @@ export interface WargearEntry {
 
 export type AbilityContext = 'Alone' | 'AsLeader' | 'Always'
 
-interface RuleBase {
-  trigger: string
-  appliedTo: 'SelfModel' | 'SelfUnit' | 'Enemy' | 'Ally'
-}
+export type AttackType = 'SHOOTING' | 'FIGHT' | 'ANY'
+
+export type AppliesTo = 'SelfModel' | 'SelfUnit' | 'Enemy' | 'Ally'
 
 export type UnitStat = 'Movement' | 'Toughness' | 'Save' | 'Invulnerable' | 'Wounds' | 'ObjectiveControl' | 'Leadership'
 
@@ -114,44 +114,82 @@ export type WeaponTarget = 'ALL' | 'RANGE' | 'MELEE'
 
 export type WeaponStat = 'Strength' | 'Damage' | 'Range' | 'Attacks' | 'AP' | 'Skill'
 
-export type DiceThrow = 'Hit' | 'Wound' | 'Save' | 'Damage' | 'Battleshock'
-
-export type RerollTarget = '1' | 'ALL'
-
-export type DiceModifierEffect = { kind: 'adjust'; value: string } | { kind: 'reroll'; reroll: RerollTarget }
-
-export interface UnitStatsModifierRule extends RuleBase {
-  type: 'unitStatsModifier'
-  stat: UnitStat
-  value: string
+export interface StatModifierEffect {
+  category: 'statModifier'
+  appliedTo: AppliesTo
+  weaponTarget?: WeaponTarget
+  stat: UnitStat | WeaponStat
+  mode: 'add' | 'subtract' | 'setValue' | 'halve'
+  value?: number
 }
 
-export interface WeaponStatsModifierRule extends RuleBase {
-  type: 'weaponStatsModifier'
+export interface DiceModifierEffect {
+  category: 'diceModifier'
+  appliedTo: AppliesTo
+  roll: 'toHit' | 'toWound' | 'savingThrow'
+  action: 'rerollOnes' | 'rerollFailed' | 'rerollAll' | 'addToRoll' | 'subtractFromRoll' | 'autoSuccess' | 'ignoreModifiers'
+  attackType?: 'RANGE' | 'MELEE' | 'ALL'
+}
+
+export interface WeaponKeywordEffect {
+  category: 'weaponKeyword'
+  appliedTo: AppliesTo
   weaponTarget: WeaponTarget
-  stat: WeaponStat
-  value: string
-}
-
-export interface DiceModifierRule extends RuleBase {
-  type: 'diceModifier'
-  throw: DiceThrow
-  modifier: DiceModifierEffect
-}
-
-export interface AddAttributeRule extends RuleBase {
-  type: 'addAttribute'
-  weaponTarget: WeaponTarget
-  attribute: KnownAttribute
+  keyword: KnownAttribute
   value: string | null
 }
 
-export type Rule = UnitStatsModifierRule | WeaponStatsModifierRule | DiceModifierRule | AddAttributeRule
+export interface DamageMitigationEffect {
+  category: 'damageMitigation'
+  appliedTo: AppliesTo
+  kind: 'fnp' | 'damageReduction' | 'damageHalved' | 'fightOnDeath'
+  value?: number
+  condition?: 'any' | 'vsMortalWounds' | 'vsPsychic'
+}
+
+export type MortalWoundsGameEvent = 'onCharge' | 'activeAbility' | 'onDestroyed' | 'onMove'
+
+export type MortalWoundsTargetScope = 'engagedUnit' | 'selectedEnemyUnit' | 'allUnitsWithinRange' | 'movedOverUnit'
+
+export type MortalWoundsAmount =
+  | { kind: 'fixed'; value: number }
+  | { kind: 'roll'; dice: 'D3' | 'D6'; count?: number; modifier?: number }
+  | { kind: 'perModelRoll'; threshold: number; onSuccess: number }
+  | { kind: 'multiDiceCount'; diceCount: number; threshold: number; onSuccess: number }
+
+export interface MortalWoundsAmountByKeyword {
+  targetKeyword: string
+  amount: MortalWoundsAmount
+}
+
+export interface MortalWoundsPreRoll {
+  dice: 'D6' | 'D3'
+  threshold: number
+}
+
+export interface MortalWoundsEffect {
+  category: 'mortalWounds'
+  appliedTo: AppliesTo
+  gameEvent: MortalWoundsGameEvent
+  preRoll?: MortalWoundsPreRoll
+  targetScope: MortalWoundsTargetScope
+  range?: number
+  amount: MortalWoundsAmount
+  amountByKeyword?: MortalWoundsAmountByKeyword[]
+}
+
+export type Effect = StatModifierEffect | DiceModifierEffect | WeaponKeywordEffect | DamageMitigationEffect | MortalWoundsEffect
 
 export interface StructuredAbility {
   type: AbilityContext
   name: string
-  rule: Rule
+  attackType: AttackType
+  trigger: string
+  autoApply?: boolean
+  groupId?: string
+  groupOperator?: 'AND' | 'OR'
+  effects: Effect[]
+  originalText?: string
 }
 
 export interface OtherAbility {
@@ -173,6 +211,7 @@ export interface StructuredAbilitiesData {
   tag: UnitDataTag
   abilities: UnitDataAbility[]
   rawAbilities: RawAbility[]
+  baseDataHash?: string
 }
 
 export type MatchStatus = 'matched' | 'unmatched'

@@ -1,9 +1,10 @@
 import type {
   AbilityContext,
   ArmyListEntry,
+  AttackType,
+  Effect,
   OtherAbility,
   RawAbility,
-  Rule,
   StructuredAbility,
   UnitDataAbility,
   WargearEntry,
@@ -30,11 +31,25 @@ export function resolveAttachedEntry(entry: ArmyListEntry, allEntries: ArmyListE
 export interface StructuringRow {
   name: string
   type: AbilityContext
-  rule: Rule
+  attackType: AttackType
+  trigger: string
+  autoApply?: boolean
+  groupId?: string
+  groupOperator?: 'AND' | 'OR'
+  effects: Effect[]
 }
 
 export function buildStructuredAbilities(rows: StructuringRow[]): StructuredAbility[] {
-  return rows.map((row) => ({ type: row.type, name: row.name, rule: row.rule }))
+  return rows.map((row) => ({
+    type: row.type,
+    name: row.name,
+    attackType: row.attackType,
+    trigger: row.trigger,
+    autoApply: row.autoApply,
+    groupId: row.groupId,
+    groupOperator: row.groupOperator,
+    effects: row.effects,
+  }))
 }
 
 export function buildOtherAbility(raw: RawAbility, type: AbilityContext = 'Always'): OtherAbility {

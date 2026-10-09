@@ -5,7 +5,7 @@ import { seedStructuredAbilities, type BaseData } from '../data/preprocessBaseDa
 
 interface UploadModalProps {
   factionSlug: string
-  units: { slug: string; name: string }[]
+  units: { slug: string; name: string; category?: string }[]
   onClose: () => void
   onUploaded: () => void
 }
@@ -55,10 +55,14 @@ export function UploadModal({ factionSlug, units, onClose, onUploaded }: UploadM
     setConfirming(true)
     try {
       for (const entry of files) {
+        const bd = entry.data as BaseData
+        const matched = units.find((u) => u.slug === entry.slug)
         await putUnit(factionSlug, {
           slug: entry.slug,
-          name: (entry.data as BaseData).name,
+          name: bd.name,
           factionSlug,
+          category: matched?.category,
+          points: bd.compositions?.[0]?.points,
           keywords: [],
         })
         await putBaseData(factionSlug, entry.slug, entry.data)

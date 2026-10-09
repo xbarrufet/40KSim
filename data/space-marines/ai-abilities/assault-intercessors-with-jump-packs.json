@@ -1,0 +1,29 @@
+{
+  "space-marines/assault-intercessors-with-jump-packs": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Hammer of Wrath",
+        "attackType": "FIGHT",
+        "trigger": "¿Ha terminado este movimiento de carga?",
+        "appliedTo": "Enemy",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "damageReduction",
+            "value": 0,
+            "condition": "any"
+          }
+        ]
+      },
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone."
+      }
+    ],
+    "rawAbilities": []
+  }
+}

@@ -1,4 +1,50 @@
-import type { ArmyList, StructuredAbilitiesData, UnitCatalog } from './schema'
+import type { ArmyList, Effect, StructuredAbilitiesData, UnitDataAbility, WeaponTarget } from './schema'
+import type { UnitCatalog } from './schema'
+
+function migrateAbility(raw: unknown): UnitDataAbility {
+  const a = raw as Record<string, unknown>
+  if ('effects' in a) return a as unknown as UnitDataAbility
+  if (a.category === 'OTHER') return a as unknown as UnitDataAbility
+  const rule = a.rule as Record<string, unknown>
+  if (!rule) return a as unknown as UnitDataAbility
+
+  const trigger = (rule.trigger as string) ?? 'ALWAYS'
+  const appliedTo = (rule.appliedTo as string) ?? 'SelfModel'
+
+  let effect: Effect
+  const ruleType = rule.type as string
+
+  const ap = appliedTo as import('./schema').AppliesTo
+  if (ruleType === 'unitStatsModifier') {
+    const raw_value = rule.value as string
+    const num = parseFloat(raw_value?.replace('+', '') ?? '0')
+    effect = { category: 'statModifier', appliedTo: ap, stat: rule.stat as never, mode: num < 0 ? 'subtract' : 'add', value: Math.abs(num) }
+  } else if (ruleType === 'weaponStatsModifier') {
+    const raw_value = rule.value as string
+    const num = parseFloat(raw_value?.replace('+', '') ?? '0')
+    effect = { category: 'statModifier', appliedTo: ap, weaponTarget: (rule.weaponTarget as WeaponTarget) ?? 'ALL', stat: rule.stat as never, mode: num < 0 ? 'subtract' : 'add', value: Math.abs(num) }
+  } else if (ruleType === 'diceModifier') {
+    const modifier = rule.modifier as Record<string, unknown>
+    const rollMap: Record<string, 'toHit' | 'toWound' | 'savingThrow'> = { Hit: 'toHit', Wound: 'toWound', Save: 'savingThrow' }
+    const roll = rollMap[rule.throw as string] ?? 'toHit'
+    if (modifier?.kind === 'reroll') {
+      effect = { category: 'diceModifier', appliedTo: ap, roll, action: modifier.reroll === 'ALL' ? 'rerollAll' : 'rerollOnes' }
+    } else {
+      const val = parseFloat((modifier?.value as string)?.replace('+', '') ?? '0')
+      effect = { category: 'diceModifier', appliedTo: ap, roll, action: val < 0 ? 'subtractFromRoll' : 'addToRoll' }
+    }
+  } else {
+    effect = { category: 'weaponKeyword', appliedTo: ap, weaponTarget: (rule.weaponTarget as WeaponTarget) ?? 'ALL', keyword: rule.attribute as never, value: (rule.value as string) ?? null }
+  }
+
+  return {
+    type: (a.type as never) ?? 'Always',
+    name: (a.name as string) ?? '',
+    attackType: 'ANY',
+    trigger,
+    effects: [effect],
+  }
+}
 
 const DB_NAME = '40ksim'
 const DB_VERSION = 2
@@ -142,7 +188,7 @@ export async function hasStructuredAbilitiesData(factionSlug: string, unitSlug: 
   })
 }
 
-export type UnitStatus = 'red' | 'green'
+export type UnitStatus = 'red' | 'amber' | 'green'
 
 export async function getUnitStatuses(factionSlug: string, unitSlugs: string[]): Promise<Map<string, UnitStatus>> {
   const db = await getDB()
@@ -156,7 +202,8 @@ export async function getUnitStatuses(factionSlug: string, unitSlugs: string[]):
       const request = unitStore.get(key)
       request.onsuccess = () => {
         const structuredAbilitiesData = request.result as StructuredAbilitiesData | undefined
-        result.set(unitSlug, structuredAbilitiesData?.tag === 'CONFIRMED' ? 'green' : 'red')
+        const tag = structuredAbilitiesData?.tag
+        result.set(unitSlug, tag === 'CONFIRMED' ? 'green' : tag === 'AI_PROPOSED' ? 'amber' : 'red')
         resolve()
       }
       request.onerror = () => reject(request.error)
@@ -181,7 +228,11 @@ export async function getStructuredAbilitiesData(factionSlug: string, unitSlug: 
   return new Promise((resolve, reject) => {
     const t = tx(db, 'unitData', 'readonly')
     const request = t.objectStore('unitData').get(`${factionSlug}/${unitSlug}`)
-    request.onsuccess = () => resolve(request.result)
+    request.onsuccess = () => {
+      const raw = request.result as StructuredAbilitiesData | undefined
+      if (!raw) { resolve(undefined); return }
+      resolve({ ...raw, abilities: raw.abilities.map(migrateAbility) })
+    }
     request.onerror = () => reject(request.error)
   })
 }
@@ -193,6 +244,31 @@ export async function putStructuredAbilitiesData(factionSlug: string, unitSlug: 
     const request = t.objectStore('unitData').put(data, `${factionSlug}/${unitSlug}`)
     request.onsuccess = () => resolve()
     request.onerror = () => reject(request.error)
+  })
+}
+
+export async function syncUnitCatalog(
+  factionSlug: string,
+  catalogUnits: Array<{ slug: string; name: string; category?: string; points?: number }>,
+): Promise<{ added: number; updated: number }> {
+  const existing = await getUnitsByFaction(factionSlug)
+  const bySlug = new Map(existing.map((u) => [u.slug, u]))
+  const db = await getDB()
+  return new Promise((resolve, reject) => {
+    const t = tx(db, 'units', 'readwrite')
+    const store = t.objectStore('units')
+    let added = 0
+    let updated = 0
+    for (const unit of catalogUnits) {
+      const prev = bySlug.get(unit.slug)
+      const record: UnitRecord = prev
+        ? { ...prev, name: unit.name, category: unit.category, points: unit.points }
+        : { slug: unit.slug, name: unit.name, factionSlug, category: unit.category, points: unit.points, keywords: [] }
+      if (prev) updated++; else added++
+      store.put(record, `${factionSlug}/${unit.slug}`)
+    }
+    t.oncomplete = () => resolve({ added, updated })
+    t.onerror = () => reject(t.error)
   })
 }
 
@@ -321,7 +397,7 @@ export async function seedFromCatalog(catalog: UnitCatalog): Promise<void> {
         slug: unit.slug,
         name: unit.name,
         factionSlug: faction.slug,
-        category: undefined,
+        category: unit.category,
         points: unit.points,
         keywords: unit.keywords ?? [],
       }

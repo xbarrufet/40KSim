@@ -135,7 +135,560 @@
       "name": "Space Marines",
       "category": "Space Marines",
       "icon": "/icons/space-marines-icon.svg",
-      "units": []
+      "units": [
+        {
+          "id": "ancient",
+          "slug": "ancient",
+          "name": "Ancient",
+          "category": "Leaders & Characters",
+          "points": 40,
+          "keywords": []
+        },
+        {
+          "id": "ancient-in-terminator-armour",
+          "slug": "ancient-in-terminator-armour",
+          "name": "Ancient in Terminator Armour",
+          "category": "Leaders & Characters",
+          "points": 75,
+          "keywords": []
+        },
+        {
+          "id": "apothecary",
+          "slug": "apothecary",
+          "name": "Apothecary",
+          "category": "Leaders & Characters",
+          "points": 45,
+          "keywords": []
+        },
+        {
+          "id": "apothecary-biologis",
+          "slug": "apothecary-biologis",
+          "name": "Apothecary Biologis",
+          "category": "Leaders & Characters",
+          "points": 60,
+          "keywords": []
+        },
+        {
+          "id": "bladeguard-ancient",
+          "slug": "bladeguard-ancient",
+          "name": "Bladeguard Ancient",
+          "category": "Leaders & Characters",
+          "points": 70,
+          "keywords": []
+        },
+        {
+          "id": "captain",
+          "slug": "captain",
+          "name": "Captain",
+          "category": "Leaders & Characters",
+          "points": 90,
+          "keywords": []
+        },
+        {
+          "id": "captain-in-gravis-armour",
+          "slug": "captain-in-gravis-armour",
+          "name": "Captain in Gravis Armour",
+          "category": "Leaders & Characters",
+          "points": 90,
+          "keywords": []
+        },
+        {
+          "id": "captain-in-phobos-armour",
+          "slug": "captain-in-phobos-armour",
+          "name": "Captain in Phobos Armour",
+          "category": "Leaders & Characters",
+          "points": 75,
+          "keywords": []
+        },
+        {
+          "id": "captain-in-terminator-armour",
+          "slug": "captain-in-terminator-armour",
+          "name": "Captain in Terminator Armour",
+          "category": "Leaders & Characters",
+          "points": 90,
+          "keywords": []
+        },
+        {
+          "id": "captain-on-bike",
+          "slug": "captain-on-bike",
+          "name": "Captain on Bike",
+          "category": "Leaders & Characters",
+          "points": 110,
+          "keywords": []
+        },
+        {
+          "id": "captain-with-jump-pack",
+          "slug": "captain-with-jump-pack",
+          "name": "Captain with Jump Pack",
+          "category": "Leaders & Characters",
+          "points": 90,
+          "keywords": []
+        },
+        {
+          "id": "chaplain",
+          "slug": "chaplain",
+          "name": "Chaplain",
+          "category": "Leaders & Characters",
+          "points": 60,
+          "keywords": []
+        },
+        {
+          "id": "chaplain-in-terminator-armour",
+          "slug": "chaplain-in-terminator-armour",
+          "name": "Chaplain in Terminator Armour",
+          "category": "Leaders & Characters",
+          "points": 75,
+          "keywords": []
+        },
+        {
+          "id": "chaplain-on-bike",
+          "slug": "chaplain-on-bike",
+          "name": "Chaplain on Bike",
+          "category": "Leaders & Characters",
+          "points": 75,
+          "keywords": []
+        },
+        {
+          "id": "chaplain-with-jump-pack",
+          "slug": "chaplain-with-jump-pack",
+          "name": "Chaplain with Jump Pack",
+          "category": "Leaders & Characters",
+          "points": 75,
+          "keywords": []
+        },
+        {
+          "id": "judiciar",
+          "slug": "judiciar",
+          "name": "Judiciar",
+          "category": "Leaders & Characters",
+          "points": 50,
+          "keywords": []
+        },
+        {
+          "id": "librarian",
+          "slug": "librarian",
+          "name": "Librarian",
+          "category": "Leaders & Characters",
+          "points": 75,
+          "keywords": []
+        },
+        {
+          "id": "librarian-in-phobos-armour",
+          "slug": "librarian-in-phobos-armour",
+          "name": "Librarian in Phobos Armour",
+          "category": "Leaders & Characters",
+          "points": 75,
+          "keywords": []
+        },
+        {
+          "id": "librarian-in-terminator-armour",
+          "slug": "librarian-in-terminator-armour",
+          "name": "Librarian in Terminator Armour",
+          "category": "Leaders & Characters",
+          "points": 80,
+          "keywords": []
+        },
+        {
+          "id": "lieutenant",
+          "slug": "lieutenant",
+          "name": "Lieutenant",
+          "category": "Leaders & Characters",
+          "points": 50,
+          "keywords": []
+        },
+        {
+          "id": "lieutenant-in-phobos-armour",
+          "slug": "lieutenant-in-phobos-armour",
+          "name": "Lieutenant in Phobos Armour",
+          "category": "Leaders & Characters",
+          "points": 40,
+          "keywords": []
+        },
+        {
+          "id": "lieutenant-with-combi-weapon",
+          "slug": "lieutenant-with-combi-weapon",
+          "name": "Lieutenant with Combi-weapon",
+          "category": "Leaders & Characters",
+          "points": 85,
+          "keywords": []
+        },
+        {
+          "id": "techmarine",
+          "slug": "techmarine",
+          "name": "Techmarine",
+          "category": "Leaders & Characters",
+          "points": 55,
+          "keywords": []
+        },
+        {
+          "id": "assault-intercessor-squad",
+          "slug": "assault-intercessor-squad",
+          "name": "Assault Intercessor Squad",
+          "category": "Battleline",
+          "points": 85,
+          "keywords": []
+        },
+        {
+          "id": "heavy-intercessor-squad",
+          "slug": "heavy-intercessor-squad",
+          "name": "Heavy Intercessor Squad",
+          "category": "Battleline",
+          "points": 115,
+          "keywords": []
+        },
+        {
+          "id": "intercessor-squad",
+          "slug": "intercessor-squad",
+          "name": "Intercessor Squad",
+          "category": "Battleline",
+          "points": 85,
+          "keywords": []
+        },
+        {
+          "id": "invader-atvs",
+          "slug": "invader-atvs",
+          "name": "Invader ATVs",
+          "category": "Mounted",
+          "points": 65,
+          "keywords": []
+        },
+        {
+          "id": "outrider-squad",
+          "slug": "outrider-squad",
+          "name": "Outrider Squad",
+          "category": "Mounted",
+          "points": 80,
+          "keywords": []
+        },
+        {
+          "id": "aggressor-squad",
+          "slug": "aggressor-squad",
+          "name": "Aggressor Squad",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 90,
+          "keywords": []
+        },
+        {
+          "id": "assault-intercessors-with-jump-packs",
+          "slug": "assault-intercessors-with-jump-packs",
+          "name": "Assault Intercessors with Jump Packs",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 95,
+          "keywords": []
+        },
+        {
+          "id": "bladeguard-veteran-squad",
+          "slug": "bladeguard-veteran-squad",
+          "name": "Bladeguard Veteran Squad",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 90,
+          "keywords": []
+        },
+        {
+          "id": "company-heroes",
+          "slug": "company-heroes",
+          "name": "Company Heroes",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 125,
+          "keywords": []
+        },
+        {
+          "id": "desolation-squad",
+          "slug": "desolation-squad",
+          "name": "Desolation Squad",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 140,
+          "keywords": []
+        },
+        {
+          "id": "eliminator-squad",
+          "slug": "eliminator-squad",
+          "name": "Eliminator Squad",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 85,
+          "keywords": []
+        },
+        {
+          "id": "eradicator-squad-with-heavy-bolters",
+          "slug": "eradicator-squad-with-heavy-bolters",
+          "name": "Eradicator Squad with heavy bolters",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 100,
+          "keywords": []
+        },
+        {
+          "id": "eradicator-squad-with-melta-rifles",
+          "slug": "eradicator-squad-with-melta-rifles",
+          "name": "Eradicator Squad with melta rifles",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 100,
+          "keywords": []
+        },
+        {
+          "id": "hellblaster-squad",
+          "slug": "hellblaster-squad",
+          "name": "Hellblaster Squad",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 115,
+          "keywords": []
+        },
+        {
+          "id": "inceptor-squad",
+          "slug": "inceptor-squad",
+          "name": "Inceptor Squad",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 130,
+          "keywords": []
+        },
+        {
+          "id": "incursor-squad",
+          "slug": "incursor-squad",
+          "name": "Incursor Squad",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 90,
+          "keywords": []
+        },
+        {
+          "id": "infernus-squad",
+          "slug": "infernus-squad",
+          "name": "Infernus Squad",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 95,
+          "keywords": []
+        },
+        {
+          "id": "infiltrator-squad",
+          "slug": "infiltrator-squad",
+          "name": "Infiltrator Squad",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 85,
+          "keywords": []
+        },
+        {
+          "id": "reiver-squad",
+          "slug": "reiver-squad",
+          "name": "Reiver Squad",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 85,
+          "keywords": []
+        },
+        {
+          "id": "scout-squad",
+          "slug": "scout-squad",
+          "name": "Scout Squad",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 65,
+          "keywords": []
+        },
+        {
+          "id": "sternguard-veteran-squad",
+          "slug": "sternguard-veteran-squad",
+          "name": "Sternguard Veteran Squad",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 105,
+          "keywords": []
+        },
+        {
+          "id": "terminator-assault-squad",
+          "slug": "terminator-assault-squad",
+          "name": "Terminator Assault Squad",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 170,
+          "keywords": []
+        },
+        {
+          "id": "terminator-squad",
+          "slug": "terminator-squad",
+          "name": "Terminator Squad",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 190,
+          "keywords": []
+        },
+        {
+          "id": "vanguard-veteran-squad-with-jump-packs",
+          "slug": "vanguard-veteran-squad-with-jump-packs",
+          "name": "Vanguard Veteran Squad with Jump Packs",
+          "category": "Infantry, Swarms, Beasts",
+          "points": 110,
+          "keywords": []
+        },
+        {
+          "id": "astraeus",
+          "slug": "astraeus",
+          "name": "Astraeus",
+          "category": "Titanic",
+          "points": 550,
+          "keywords": []
+        },
+        {
+          "id": "thunderhawk-gunship",
+          "slug": "thunderhawk-gunship",
+          "name": "Thunderhawk Gunship",
+          "category": "Titanic",
+          "points": 850,
+          "keywords": []
+        },
+        {
+          "id": "drop-pod",
+          "slug": "drop-pod",
+          "name": "Drop Pod",
+          "category": "Dedicated Transports",
+          "points": 60,
+          "keywords": []
+        },
+        {
+          "id": "impulsor",
+          "slug": "impulsor",
+          "name": "Impulsor",
+          "category": "Dedicated Transports",
+          "points": 70,
+          "keywords": []
+        },
+        {
+          "id": "rhino",
+          "slug": "rhino",
+          "name": "Rhino",
+          "category": "Dedicated Transports",
+          "points": 70,
+          "keywords": []
+        },
+        {
+          "id": "ballistus-dreadnought",
+          "slug": "ballistus-dreadnought",
+          "name": "Ballistus Dreadnought",
+          "category": "Vehicles, Monsters",
+          "points": 150,
+          "keywords": []
+        },
+        {
+          "id": "brutalis-dreadnought",
+          "slug": "brutalis-dreadnought",
+          "name": "Brutalis Dreadnought",
+          "category": "Vehicles, Monsters",
+          "points": 160,
+          "keywords": []
+        },
+        {
+          "id": "firestrike-servo-turrets",
+          "slug": "firestrike-servo-turrets",
+          "name": "Firestrike Servo-turrets",
+          "category": "Vehicles, Monsters",
+          "points": 80,
+          "keywords": []
+        },
+        {
+          "id": "gladiator-lancer",
+          "slug": "gladiator-lancer",
+          "name": "Gladiator Lancer",
+          "category": "Vehicles, Monsters",
+          "points": 160,
+          "keywords": []
+        },
+        {
+          "id": "gladiator-reaper",
+          "slug": "gladiator-reaper",
+          "name": "Gladiator Reaper",
+          "category": "Vehicles, Monsters",
+          "points": 165,
+          "keywords": []
+        },
+        {
+          "id": "gladiator-valiant",
+          "slug": "gladiator-valiant",
+          "name": "Gladiator Valiant",
+          "category": "Vehicles, Monsters",
+          "points": 165,
+          "keywords": []
+        },
+        {
+          "id": "invictor-tactical-warsuit",
+          "slug": "invictor-tactical-warsuit",
+          "name": "Invictor Tactical Warsuit",
+          "category": "Vehicles, Monsters",
+          "points": 135,
+          "keywords": []
+        },
+        {
+          "id": "land-raider",
+          "slug": "land-raider",
+          "name": "Land Raider",
+          "category": "Vehicles, Monsters",
+          "points": 245,
+          "keywords": []
+        },
+        {
+          "id": "land-raider-crusader",
+          "slug": "land-raider-crusader",
+          "name": "Land Raider Crusader",
+          "category": "Vehicles, Monsters",
+          "points": 230,
+          "keywords": []
+        },
+        {
+          "id": "land-raider-redeemer",
+          "slug": "land-raider-redeemer",
+          "name": "Land Raider Redeemer",
+          "category": "Vehicles, Monsters",
+          "points": 245,
+          "keywords": []
+        },
+        {
+          "id": "land-speeder",
+          "slug": "land-speeder",
+          "name": "Land Speeder",
+          "category": "Vehicles, Monsters",
+          "points": 105,
+          "keywords": []
+        },
+        {
+          "id": "redemptor-dreadnought",
+          "slug": "redemptor-dreadnought",
+          "name": "Redemptor Dreadnought",
+          "category": "Vehicles, Monsters",
+          "points": 170,
+          "keywords": []
+        },
+        {
+          "id": "repulsor",
+          "slug": "repulsor",
+          "name": "Repulsor",
+          "category": "Vehicles, Monsters",
+          "points": 190,
+          "keywords": []
+        },
+        {
+          "id": "repulsor-executioner",
+          "slug": "repulsor-executioner",
+          "name": "Repulsor Executioner",
+          "category": "Vehicles, Monsters",
+          "points": 260,
+          "keywords": []
+        },
+        {
+          "id": "storm-speeder-hailstrike",
+          "slug": "storm-speeder-hailstrike",
+          "name": "Storm Speeder Hailstrike",
+          "category": "Vehicles, Monsters",
+          "points": 110,
+          "keywords": []
+        },
+        {
+          "id": "storm-speeder-hammerstrike",
+          "slug": "storm-speeder-hammerstrike",
+          "name": "Storm Speeder Hammerstrike",
+          "category": "Vehicles, Monsters",
+          "points": 140,
+          "keywords": []
+        },
+        {
+          "id": "storm-speeder-thunderstrike",
+          "slug": "storm-speeder-thunderstrike",
+          "name": "Storm Speeder Thunderstrike",
+          "category": "Vehicles, Monsters",
+          "points": 140,
+          "keywords": []
+        }
+      ]
     },
     {
       "id": "space-wolves",
