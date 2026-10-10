@@ -109,15 +109,15 @@ describe('buildOtherAbility', () => {
     expect(result).not.toHaveProperty('rule')
   })
 
-  it('uses the provided ability context instead of the Always default', () => {
+  it('builds an OTHER ability without a type field', () => {
     const raw: RawAbility = { name: 'Support', text: '-', abilityType: 'core' }
-    const result = buildOtherAbility(raw, 'AsLeader')
-    expect(result.type).toBe('AsLeader')
+    const result = buildOtherAbility(raw)
+    expect(result).not.toHaveProperty('type')
   })
 })
 
 describe('reconcileRawAbilities', () => {
-  const reviewedAbilities = [{ type: 'Always' as const, name: 'Already reviewed', rule: BASE_RULE }]
+  const reviewedAbilities = [{ name: 'Already reviewed', rule: BASE_RULE }]
   const pendingRawAbilities: RawAbility[] = [{ name: 'Not yet reviewed', text: '...', abilityType: 'datasheet' }]
 
   it('appends a newly-appeared live ability to the pending queue', () => {

@@ -1,5 +1,15 @@
 import type { ArmyList, Effect, StructuredAbilitiesData, UnitDataAbility, WeaponTarget } from './schema'
-import type { UnitCatalog } from './schema'
+import {
+  fetchFactions as sbFetchFactions,
+  fetchUnitsByFaction as sbFetchUnitsByFaction,
+  fetchBaseData as sbFetchBaseData,
+  fetchUnitData as sbFetchUnitData,
+  fetchAllBaseDataByFaction as sbFetchAllBaseDataByFaction,
+  fetchAllUnitDataByFaction as sbFetchAllUnitDataByFaction,
+  upsertBaseData as sbUpsertBaseData,
+  upsertUnitData as sbUpsertUnitData,
+  upsertUnit as sbUpsertUnit,
+} from './supabase'
 
 function migrateAbility(raw: unknown): UnitDataAbility {
   const a = raw as Record<string, unknown>
@@ -38,34 +48,19 @@ function migrateAbility(raw: unknown): UnitDataAbility {
   }
 
   return {
-    type: (a.type as never) ?? 'Always',
     name: (a.name as string) ?? '',
-    attackType: 'ANY',
+    phase: 'ANY',
     trigger,
     effects: [effect],
   }
 }
 
+// ---------------------------------------------------------------------------
+// IDB — only used for army lists (personal data)
+// ---------------------------------------------------------------------------
+
 const DB_NAME = '40ksim'
-const DB_VERSION = 2
-
-interface FactionRecord {
-  id: string
-  slug: string
-  name: string
-  category?: string
-  icon?: string
-  unitCount: number
-}
-
-interface UnitRecord {
-  slug: string
-  name: string
-  factionSlug: string
-  category?: string
-  points?: number
-  keywords: string[]
-}
+const DB_VERSION = 3
 
 let dbPromise: Promise<IDBDatabase> | null = null
 
@@ -75,20 +70,11 @@ export function getDB(): Promise<IDBDatabase> {
     const request = indexedDB.open(DB_NAME, DB_VERSION)
     request.onupgradeneeded = () => {
       const db = request.result
-      if (!db.objectStoreNames.contains('factions')) {
-        db.createObjectStore('factions', { keyPath: 'id' })
-      }
-      if (!db.objectStoreNames.contains('units')) {
-        db.createObjectStore('units')
-      }
-      if (!db.objectStoreNames.contains('baseData')) {
-        db.createObjectStore('baseData')
-      }
-      if (!db.objectStoreNames.contains('unitData')) {
-        db.createObjectStore('unitData')
-      }
       if (!db.objectStoreNames.contains('lists')) {
         db.createObjectStore('lists')
+      }
+      for (const name of ['factions', 'units', 'baseData', 'unitData']) {
+        if (db.objectStoreNames.contains(name)) db.deleteObjectStore(name)
       }
     }
     request.onsuccess = () => resolve(request.result)
@@ -99,237 +85,6 @@ export function getDB(): Promise<IDBDatabase> {
 
 function tx(db: IDBDatabase, stores: string | string[], mode: IDBTransactionMode) {
   return db.transaction(stores, mode)
-}
-
-export async function getAllFactions(): Promise<FactionRecord[]> {
-  const db = await getDB()
-  return new Promise((resolve, reject) => {
-    const t = tx(db, 'factions', 'readonly')
-    const request = t.objectStore('factions').getAll()
-    request.onsuccess = () => resolve(request.result)
-    request.onerror = () => reject(request.error)
-  })
-}
-
-export async function getUnitsByFaction(factionSlug: string): Promise<UnitRecord[]> {
-  const db = await getDB()
-  return new Promise((resolve, reject) => {
-    const t = tx(db, 'units', 'readonly')
-    const store = t.objectStore('units')
-    const results: UnitRecord[] = []
-    const request = store.openCursor()
-    request.onsuccess = () => {
-      const cursor = request.result
-      if (cursor) {
-        const key = cursor.key as string
-        if (key.startsWith(factionSlug + '/')) {
-          results.push(cursor.value)
-        }
-        cursor.continue()
-      } else {
-        resolve(results)
-      }
-    }
-    request.onerror = () => reject(request.error)
-  })
-}
-
-export async function getBaseDataUnitsByFaction(factionSlug: string): Promise<{ slug: string; name: string }[]> {
-  const db = await getDB()
-  return new Promise((resolve, reject) => {
-    const t = tx(db, 'baseData', 'readonly')
-    const store = t.objectStore('baseData')
-    const results: { slug: string; name: string }[] = []
-    const request = store.openCursor()
-    request.onsuccess = () => {
-      const cursor = request.result
-      if (cursor) {
-        const key = cursor.key as string
-        if (key.startsWith(factionSlug + '/')) {
-          const value = cursor.value as { slug: string; name: string }
-          results.push({ slug: value.slug, name: value.name })
-        }
-        cursor.continue()
-      } else {
-        resolve(results)
-      }
-    }
-    request.onerror = () => reject(request.error)
-  })
-}
-
-export async function getBaseData(factionSlug: string, unitSlug: string): Promise<unknown> {
-  const db = await getDB()
-  return new Promise((resolve, reject) => {
-    const t = tx(db, 'baseData', 'readonly')
-    const request = t.objectStore('baseData').get(`${factionSlug}/${unitSlug}`)
-    request.onsuccess = () => resolve(request.result)
-    request.onerror = () => reject(request.error)
-  })
-}
-
-export async function hasBaseData(factionSlug: string, unitSlug: string): Promise<boolean> {
-  const db = await getDB()
-  return new Promise((resolve, reject) => {
-    const t = tx(db, 'baseData', 'readonly')
-    const request = t.objectStore('baseData').count(`${factionSlug}/${unitSlug}`)
-    request.onsuccess = () => resolve(request.result > 0)
-    request.onerror = () => reject(request.error)
-  })
-}
-
-export async function hasStructuredAbilitiesData(factionSlug: string, unitSlug: string): Promise<boolean> {
-  const db = await getDB()
-  return new Promise((resolve, reject) => {
-    const t = tx(db, 'unitData', 'readonly')
-    const request = t.objectStore('unitData').count(`${factionSlug}/${unitSlug}`)
-    request.onsuccess = () => resolve(request.result > 0)
-    request.onerror = () => reject(request.error)
-  })
-}
-
-export type UnitStatus = 'red' | 'amber' | 'green'
-
-export async function getUnitStatuses(factionSlug: string, unitSlugs: string[]): Promise<Map<string, UnitStatus>> {
-  const db = await getDB()
-  const result = new Map<string, UnitStatus>()
-  const t = tx(db, 'unitData', 'readonly')
-  const unitStore = t.objectStore('unitData')
-
-  await Promise.all(unitSlugs.map(unitSlug => {
-    const key = `${factionSlug}/${unitSlug}`
-    return new Promise<void>((resolve, reject) => {
-      const request = unitStore.get(key)
-      request.onsuccess = () => {
-        const structuredAbilitiesData = request.result as StructuredAbilitiesData | undefined
-        const tag = structuredAbilitiesData?.tag
-        result.set(unitSlug, tag === 'CONFIRMED' ? 'green' : tag === 'AI_PROPOSED' ? 'amber' : 'red')
-        resolve()
-      }
-      request.onerror = () => reject(request.error)
-    })
-  }))
-
-  return result
-}
-
-export async function putBaseData(factionSlug: string, unitSlug: string, data: unknown): Promise<void> {
-  const db = await getDB()
-  return new Promise((resolve, reject) => {
-    const t = tx(db, 'baseData', 'readwrite')
-    const request = t.objectStore('baseData').put(data, `${factionSlug}/${unitSlug}`)
-    request.onsuccess = () => resolve()
-    request.onerror = () => reject(request.error)
-  })
-}
-
-export async function getStructuredAbilitiesData(factionSlug: string, unitSlug: string): Promise<StructuredAbilitiesData | undefined> {
-  const db = await getDB()
-  return new Promise((resolve, reject) => {
-    const t = tx(db, 'unitData', 'readonly')
-    const request = t.objectStore('unitData').get(`${factionSlug}/${unitSlug}`)
-    request.onsuccess = () => {
-      const raw = request.result as StructuredAbilitiesData | undefined
-      if (!raw) { resolve(undefined); return }
-      resolve({ ...raw, abilities: raw.abilities.map(migrateAbility) })
-    }
-    request.onerror = () => reject(request.error)
-  })
-}
-
-export async function putStructuredAbilitiesData(factionSlug: string, unitSlug: string, data: StructuredAbilitiesData): Promise<void> {
-  const db = await getDB()
-  return new Promise((resolve, reject) => {
-    const t = tx(db, 'unitData', 'readwrite')
-    const request = t.objectStore('unitData').put(data, `${factionSlug}/${unitSlug}`)
-    request.onsuccess = () => resolve()
-    request.onerror = () => reject(request.error)
-  })
-}
-
-export async function syncUnitCatalog(
-  factionSlug: string,
-  catalogUnits: Array<{ slug: string; name: string; category?: string; points?: number }>,
-): Promise<{ added: number; updated: number }> {
-  const existing = await getUnitsByFaction(factionSlug)
-  const bySlug = new Map(existing.map((u) => [u.slug, u]))
-  const db = await getDB()
-  return new Promise((resolve, reject) => {
-    const t = tx(db, 'units', 'readwrite')
-    const store = t.objectStore('units')
-    let added = 0
-    let updated = 0
-    for (const unit of catalogUnits) {
-      const prev = bySlug.get(unit.slug)
-      const record: UnitRecord = prev
-        ? { ...prev, name: unit.name, category: unit.category, points: unit.points }
-        : { slug: unit.slug, name: unit.name, factionSlug, category: unit.category, points: unit.points, keywords: [] }
-      if (prev) updated++; else added++
-      store.put(record, `${factionSlug}/${unit.slug}`)
-    }
-    t.oncomplete = () => resolve({ added, updated })
-    t.onerror = () => reject(t.error)
-  })
-}
-
-export async function putUnit(factionSlug: string, unit: UnitRecord): Promise<void> {
-  const db = await getDB()
-  return new Promise((resolve, reject) => {
-    const t = tx(db, 'units', 'readwrite')
-    const request = t.objectStore('units').put(unit, `${factionSlug}/${unit.slug}`)
-    request.onsuccess = () => resolve()
-    request.onerror = () => reject(request.error)
-  })
-}
-
-export async function getBaseDataCount(factionSlug: string): Promise<number> {
-  const db = await getDB()
-  return new Promise((resolve, reject) => {
-    const t = tx(db, 'baseData', 'readonly')
-    let count = 0
-    const request = t.objectStore('baseData').openKeyCursor()
-    request.onsuccess = () => {
-      const cursor = request.result
-      if (cursor) {
-        if ((cursor.key as string).startsWith(factionSlug + '/')) count++
-        cursor.continue()
-      } else {
-        resolve(count)
-      }
-    }
-    request.onerror = () => reject(request.error)
-  })
-}
-
-export async function getConfirmedUnitDataCount(factionSlug: string): Promise<number> {
-  const db = await getDB()
-  return new Promise((resolve, reject) => {
-    const t = tx(db, 'unitData', 'readonly')
-    let count = 0
-    const request = t.objectStore('unitData').openCursor()
-    request.onsuccess = () => {
-      const cursor = request.result
-      if (cursor) {
-        const key = cursor.key as string
-        const structuredAbilitiesData = cursor.value as StructuredAbilitiesData
-        if (key.startsWith(factionSlug + '/') && structuredAbilitiesData.tag === 'CONFIRMED') count++
-        cursor.continue()
-      } else {
-        resolve(count)
-      }
-    }
-    request.onerror = () => reject(request.error)
-  })
-}
-
-export async function isFactionsEmpty(): Promise<boolean> {
-  const db = await getDB()
-  return new Promise((resolve, reject) => {
-    const t = tx(db, 'factions', 'readonly')
-    const request = t.objectStore('factions').count()
-    request.onsuccess = () => resolve(request.result === 0)
-    request.onerror = () => reject(request.error)
-  })
 }
 
 export async function getAllLists(): Promise<ArmyList[]> {
@@ -375,38 +130,153 @@ export async function deleteList(id: string): Promise<void> {
   })
 }
 
-export async function seedFromCatalog(catalog: UnitCatalog): Promise<void> {
-  const db = await getDB()
-  const t = tx(db, ['factions', 'units'], 'readwrite')
-  const factionsStore = t.objectStore('factions')
-  const unitsStore = t.objectStore('units')
+// ---------------------------------------------------------------------------
+// Shared data — Supabase direct
+// ---------------------------------------------------------------------------
 
-  for (const faction of catalog.factions) {
-    const record: FactionRecord = {
-      id: faction.id,
-      slug: faction.slug,
-      name: faction.name,
-      category: faction.category,
-      icon: faction.icon,
-      unitCount: faction.units.length,
-    }
-    factionsStore.put(record)
+interface FactionRecord {
+  id: string
+  slug: string
+  name: string
+  category?: string
+  icon?: string
+  unitCount: number
+}
 
-    for (const unit of faction.units) {
-      const unitRecord: UnitRecord = {
-        slug: unit.slug,
-        name: unit.name,
-        factionSlug: faction.slug,
-        category: unit.category,
-        points: unit.points,
-        keywords: unit.keywords ?? [],
-      }
-      unitsStore.put(unitRecord, `${faction.slug}/${unit.slug}`)
-    }
+interface UnitRecord {
+  slug: string
+  name: string
+  factionSlug: string
+  category?: string
+  points?: number
+  keywords: string[]
+}
+
+function remoteToStructuredAbilitiesData(remote: { tag: string; abilities: unknown[]; raw_abilities: unknown[]; base_data_hash: string | null }): StructuredAbilitiesData {
+  return {
+    tag: remote.tag as StructuredAbilitiesData['tag'],
+    abilities: (remote.abilities as StructuredAbilitiesData['abilities']).map(migrateAbility),
+    rawAbilities: remote.raw_abilities as StructuredAbilitiesData['rawAbilities'],
+    baseDataHash: remote.base_data_hash ?? undefined,
+  }
+}
+
+export async function getAllFactions(): Promise<FactionRecord[]> {
+  const remote = await sbFetchFactions()
+  return remote.map(f => ({
+    id: f.slug,
+    slug: f.slug,
+    name: f.name,
+    category: f.category ?? undefined,
+    icon: f.icon ?? undefined,
+    unitCount: f.unit_count,
+  }))
+}
+
+export async function isFactionsEmpty(): Promise<boolean> {
+  const factions = await sbFetchFactions()
+  return factions.length === 0
+}
+
+export async function getUnitsByFaction(factionSlug: string): Promise<UnitRecord[]> {
+  const remote = await sbFetchUnitsByFaction(factionSlug)
+  return remote.map(u => ({
+    slug: u.slug,
+    name: u.name,
+    factionSlug: u.faction_slug,
+    category: u.category ?? undefined,
+    points: u.points ?? undefined,
+    keywords: u.keywords,
+  }))
+}
+
+export async function getBaseDataUnitsByFaction(factionSlug: string): Promise<{ slug: string; name: string }[]> {
+  const remote = await sbFetchAllBaseDataByFaction(factionSlug)
+  return remote.map(r => {
+    const data = r.data as { slug: string; name: string }
+    return { slug: data.slug, name: data.name }
+  })
+}
+
+export async function getBaseData(factionSlug: string, unitSlug: string): Promise<unknown> {
+  return await sbFetchBaseData(factionSlug, unitSlug) ?? undefined
+}
+
+export async function hasBaseData(factionSlug: string, unitSlug: string): Promise<boolean> {
+  const data = await sbFetchBaseData(factionSlug, unitSlug)
+  return data != null
+}
+
+export async function hasStructuredAbilitiesData(factionSlug: string, unitSlug: string): Promise<boolean> {
+  const data = await sbFetchUnitData(factionSlug, unitSlug)
+  return data != null
+}
+
+export type UnitStatus = 'red' | 'amber' | 'green'
+
+export async function getUnitStatuses(factionSlug: string, unitSlugs: string[]): Promise<Map<string, UnitStatus>> {
+  const allUnitData = await sbFetchAllUnitDataByFaction(factionSlug)
+  const tagMap = new Map(allUnitData.map(r => [r.unit_slug, r.tag]))
+  const result = new Map<string, UnitStatus>()
+  for (const slug of unitSlugs) {
+    const tag = tagMap.get(slug)
+    result.set(slug, tag === 'CONFIRMED' ? 'green' : tag === 'AI_PROPOSED' ? 'amber' : 'red')
+  }
+  return result
+}
+
+export async function getStructuredAbilitiesData(factionSlug: string, unitSlug: string): Promise<StructuredAbilitiesData | undefined> {
+  const remote = await sbFetchUnitData(factionSlug, unitSlug)
+  if (!remote) return undefined
+  return remoteToStructuredAbilitiesData(remote)
+}
+
+export async function putBaseData(factionSlug: string, unitSlug: string, data: unknown): Promise<void> {
+  await sbUpsertBaseData(factionSlug, unitSlug, data)
+}
+
+export async function putStructuredAbilitiesData(factionSlug: string, unitSlug: string, data: StructuredAbilitiesData): Promise<void> {
+  await sbUpsertUnitData(factionSlug, unitSlug, data)
+}
+
+export async function putUnit(factionSlug: string, unit: UnitRecord): Promise<void> {
+  await sbUpsertUnit({
+    faction_slug: factionSlug,
+    slug: unit.slug,
+    name: unit.name,
+    category: unit.category ?? null,
+    points: unit.points ?? null,
+    keywords: unit.keywords,
+  })
+}
+
+export async function syncUnitCatalog(
+  factionSlug: string,
+  catalogUnits: Array<{ slug: string; name: string; category?: string; points?: number }>,
+): Promise<{ added: number; updated: number }> {
+  const existing = await getUnitsByFaction(factionSlug)
+  const bySlug = new Map(existing.map(u => [u.slug, u]))
+  let added = 0
+  let updated = 0
+
+  for (const unit of catalogUnits) {
+    const prev = bySlug.get(unit.slug)
+    const record: UnitRecord = prev
+      ? { ...prev, name: unit.name, category: unit.category, points: unit.points }
+      : { slug: unit.slug, name: unit.name, factionSlug, category: unit.category, points: unit.points, keywords: [] }
+    if (prev) updated++; else added++
+    await putUnit(factionSlug, record)
   }
 
-  return new Promise((resolve, reject) => {
-    t.oncomplete = () => resolve()
-    t.onerror = () => reject(t.error)
-  })
+  return { added, updated }
+}
+
+export async function getBaseDataCount(factionSlug: string): Promise<number> {
+  const remote = await sbFetchAllBaseDataByFaction(factionSlug)
+  return remote.length
+}
+
+export async function getConfirmedUnitDataCount(factionSlug: string): Promise<number> {
+  const remote = await sbFetchAllUnitDataByFaction(factionSlug)
+  return remote.filter(r => r.tag === 'CONFIRMED').length
 }

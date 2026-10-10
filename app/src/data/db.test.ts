@@ -1,83 +1,25 @@
 import 'fake-indexeddb/auto'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
+
+vi.mock('./supabase', () => ({
+  fetchFactions: vi.fn(async () => []),
+  fetchUnitsByFaction: vi.fn(async () => []),
+  fetchBaseData: vi.fn(async () => null),
+  fetchUnitData: vi.fn(async () => null),
+  fetchAllBaseDataByFaction: vi.fn(async () => []),
+  fetchAllUnitDataByFaction: vi.fn(async () => []),
+  upsertBaseData: vi.fn(async () => {}),
+  upsertUnitData: vi.fn(async () => {}),
+  upsertUnit: vi.fn(async () => {}),
+}))
+
 import {
   deleteList,
   getAllLists,
-  getBaseDataUnitsByFaction,
   getListByUrl,
-  getStructuredAbilitiesData,
-  getUnitStatuses,
-  putBaseData,
   putList,
-  putStructuredAbilitiesData,
 } from './db'
-import type { ArmyList, StructuredAbilitiesData } from './schema'
-
-function sampleStructuredAbilitiesData(overrides: Partial<StructuredAbilitiesData> = {}): StructuredAbilitiesData {
-  return {
-    tag: 'PENDING',
-    abilities: [],
-    rawAbilities: [],
-    ...overrides,
-  }
-}
-
-describe('unitData store', () => {
-  it('round-trips a StructuredAbilitiesData record', async () => {
-    const structuredAbilitiesData = sampleStructuredAbilitiesData()
-
-    await putStructuredAbilitiesData('test-faction', 'test-unit', structuredAbilitiesData)
-    const result = await getStructuredAbilitiesData('test-faction', 'test-unit')
-
-    expect(result).toEqual(structuredAbilitiesData)
-  })
-
-  it('returns undefined for a unit with no StructuredAbilitiesData record', async () => {
-    const result = await getStructuredAbilitiesData('test-faction', 'never-uploaded')
-    expect(result).toBeUndefined()
-  })
-
-  it('overwrites the previous record on a second put', async () => {
-    await putStructuredAbilitiesData('test-faction', 'confirmed-unit', sampleStructuredAbilitiesData({ tag: 'PENDING' }))
-    await putStructuredAbilitiesData('test-faction', 'confirmed-unit', sampleStructuredAbilitiesData({ tag: 'CONFIRMED' }))
-
-    const result = await getStructuredAbilitiesData('test-faction', 'confirmed-unit')
-    expect(result?.tag).toBe('CONFIRMED')
-  })
-})
-
-describe('getUnitStatuses', () => {
-  it('maps missing, PENDING, and CONFIRMED StructuredAbilitiesData to the 2-state light', async () => {
-    await putStructuredAbilitiesData('status-faction', 'pending-unit', sampleStructuredAbilitiesData({ tag: 'PENDING' }))
-    await putStructuredAbilitiesData('status-faction', 'confirmed-unit', sampleStructuredAbilitiesData({ tag: 'CONFIRMED' }))
-
-    const statuses = await getUnitStatuses('status-faction', ['no-data-unit', 'pending-unit', 'confirmed-unit'])
-
-    expect(statuses.get('no-data-unit')).toBe('red')
-    expect(statuses.get('pending-unit')).toBe('red')
-    expect(statuses.get('confirmed-unit')).toBe('green')
-  })
-})
-
-describe('getBaseDataUnitsByFaction', () => {
-  it('returns only the slug/name pairs for BaseData uploaded under the given faction', async () => {
-    await putBaseData('faction-a', 'unit-one', { id: 1, slug: 'unit-one', name: 'Unit One', abilities: [], miniatures: [] })
-    await putBaseData('faction-a', 'unit-two', { id: 2, slug: 'unit-two', name: 'Unit Two', abilities: [], miniatures: [] })
-    await putBaseData('faction-b', 'unit-three', { id: 3, slug: 'unit-three', name: 'Unit Three', abilities: [], miniatures: [] })
-
-    const results = await getBaseDataUnitsByFaction('faction-a')
-
-    expect(results.sort((a, b) => a.slug.localeCompare(b.slug))).toEqual([
-      { slug: 'unit-one', name: 'Unit One' },
-      { slug: 'unit-two', name: 'Unit Two' },
-    ])
-  })
-
-  it('returns an empty array when the faction has no BaseData uploaded', async () => {
-    const results = await getBaseDataUnitsByFaction('empty-faction')
-    expect(results).toEqual([])
-  })
-})
+import type { ArmyList } from './schema'
 
 function sampleList(overrides: Partial<ArmyList> = {}): ArmyList {
   return {

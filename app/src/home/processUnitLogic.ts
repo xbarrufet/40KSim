@@ -1,7 +1,7 @@
 import type {
-  AbilityContext,
   ArmyListEntry,
-  AttackType,
+  Frequency,
+  Phase,
   Effect,
   OtherAbility,
   RawAbility,
@@ -30,10 +30,10 @@ export function resolveAttachedEntry(entry: ArmyListEntry, allEntries: ArmyListE
 
 export interface StructuringRow {
   name: string
-  type: AbilityContext
-  attackType: AttackType
+  phase: Phase
   trigger: string
   autoApply?: boolean
+  frequency?: Frequency
   groupId?: string
   groupOperator?: 'AND' | 'OR'
   effects: Effect[]
@@ -41,19 +41,19 @@ export interface StructuringRow {
 
 export function buildStructuredAbilities(rows: StructuringRow[]): StructuredAbility[] {
   return rows.map((row) => ({
-    type: row.type,
     name: row.name,
-    attackType: row.attackType,
+    phase: row.phase,
     trigger: row.trigger,
     autoApply: row.autoApply,
+    frequency: row.frequency,
     groupId: row.groupId,
     groupOperator: row.groupOperator,
     effects: row.effects,
   }))
 }
 
-export function buildOtherAbility(raw: RawAbility, type: AbilityContext = 'Always'): OtherAbility {
-  return { type, name: raw.name, category: 'OTHER', text: raw.text }
+export function buildOtherAbility(raw: RawAbility): OtherAbility {
+  return { name: raw.name, category: 'OTHER', text: raw.text }
 }
 
 /**

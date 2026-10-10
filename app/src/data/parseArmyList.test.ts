@@ -1,6 +1,34 @@
 import 'fake-indexeddb/auto'
-import { describe, expect, it, vi } from 'vitest'
-import { seedFromCatalog, putBaseData, getListByUrl } from './db'
+import { describe, expect, it, vi, beforeEach } from 'vitest'
+
+const factionStore: Array<{ slug: string; name: string; category: string | null; icon: string | null; unit_count: number }> = []
+const baseDataStore = new Map<string, unknown>()
+
+vi.mock('./supabase', () => ({
+  fetchFactions: vi.fn(async () => factionStore),
+  fetchUnitsByFaction: vi.fn(async () => []),
+  fetchBaseData: vi.fn(async (factionSlug: string, unitSlug: string) => {
+    return baseDataStore.get(`${factionSlug}/${unitSlug}`) ?? null
+  }),
+  fetchUnitData: vi.fn(async () => null),
+  fetchAllBaseDataByFaction: vi.fn(async (factionSlug: string) => {
+    const results: { unit_slug: string; data: unknown }[] = []
+    for (const [key, value] of baseDataStore) {
+      if (key.startsWith(factionSlug + '/')) {
+        results.push({ unit_slug: key.split('/')[1], data: value })
+      }
+    }
+    return results
+  }),
+  fetchAllUnitDataByFaction: vi.fn(async () => []),
+  upsertBaseData: vi.fn(async (factionSlug: string, unitSlug: string, data: unknown) => {
+    baseDataStore.set(`${factionSlug}/${unitSlug}`, data)
+  }),
+  upsertUnitData: vi.fn(async () => {}),
+  upsertUnit: vi.fn(async () => {}),
+}))
+
+import { putBaseData, getListByUrl } from './db'
 import {
   applyParentFallback,
   matchUnitNames,
@@ -14,7 +42,20 @@ import {
   type ParsedEntry,
 } from './parseArmyList'
 import type { BaseData } from './preprocessBaseData'
-import type { ArmyListEntry, UnitCatalog } from './schema'
+import type { ArmyListEntry } from './schema'
+
+function seedFactions(factions: Array<{ slug: string; name: string; category?: string }>) {
+  factionStore.length = 0
+  for (const f of factions) {
+    factionStore.push({ slug: f.slug, name: f.name, category: f.category ?? null, icon: null, unit_count: 0 })
+  }
+}
+
+beforeEach(() => {
+  factionStore.length = 0
+  baseDataStore.clear()
+  vi.clearAllMocks()
+})
 
 const SAMPLE_LIST = `04-10
 Imperial Fists · Ceramite Sentinels · Devastator Brethren
@@ -332,20 +373,6 @@ describe('tokenizeWargearLineWithCounts', () => {
   })
 })
 
-function sampleCatalog(): UnitCatalog {
-  return {
-    schemaVersion: 1,
-    factions: [
-      {
-        id: 'imperial-fists',
-        slug: 'imperial-fists',
-        name: 'Imperial Fists',
-        units: [],
-      },
-    ],
-  }
-}
-
 /** Minimal BaseData fixture: a single miniature whose default wargear is exactly the given names. */
 function sampleBaseData(options: { slug: string; name: string; wargearNames?: string[] }): BaseData {
   return {
@@ -370,7 +397,7 @@ function sampleBaseData(options: { slug: string; name: string; wargearNames?: st
 
 describe('parseAndValidateArmyList', () => {
   it('matches units against their uploaded BaseData and matches their wargear against that same BaseData', async () => {
-    await seedFromCatalog(sampleCatalog())
+    seedFactions([{ slug: 'imperial-fists', name: 'Imperial Fists' }])
     await putBaseData(
       'imperial-fists',
       'tor-garadon',
@@ -390,13 +417,10 @@ describe('parseAndValidateArmyList', () => {
   })
 
   it('falls back to the parent faction for a unit the chapter has no BaseData for, matching its wargear against the parent BaseData', async () => {
-    await seedFromCatalog({
-      schemaVersion: 1,
-      factions: [
-        { id: 'imperial-fists', slug: 'imperial-fists', name: 'Imperial Fists', category: 'Space Marines', units: [] },
-        { id: 'space-marines', slug: 'space-marines', name: 'Space Marines', category: 'Space Marines', units: [] },
-      ],
-    })
+    seedFactions([
+      { slug: 'imperial-fists', name: 'Imperial Fists', category: 'Space Marines' },
+      { slug: 'space-marines', name: 'Space Marines', category: 'Space Marines' },
+    ])
     await putBaseData('imperial-fists', 'tor-garadon', sampleBaseData({ slug: 'tor-garadon', name: 'Tor Garadon' }))
     await putBaseData(
       'space-marines',
@@ -420,7 +444,7 @@ describe('parseAndValidateArmyList', () => {
   })
 
   it('matches wargear tokens against BaseData when it exists for the unit', async () => {
-    await seedFromCatalog(sampleCatalog())
+    seedFactions([{ slug: 'imperial-fists', name: 'Imperial Fists' }])
     await putBaseData(
       'imperial-fists',
       'heavy-intercessor-squad',

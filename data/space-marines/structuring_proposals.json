@@ -5,9 +5,8 @@
       {
         "type": "Always",
         "name": "Close-quarters Firestorm",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿El objetivo está a 9\" o menos de esta unidad?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "statModifier",
@@ -15,7 +14,8 @@
             "weaponTarget": "ALL",
             "stat": "Strength",
             "mode": "add",
-            "value": 1
+            "value": 1,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s attacks that target an enemy unit within 9\" of this unit have +1 <b>S</b>."
@@ -41,15 +41,15 @@
       {
         "type": "Always",
         "name": "Never Shall the Standard Fall",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Esta unidad está dentro del rango de un objetivo?",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toWound",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "While this unit is within range of an <b>objective</b>, attacks that target this unit with a <b>S</b> greater than this unit’s <b>T</b> have -1 to <b>wound rolls</b>."
@@ -69,16 +69,16 @@
       {
         "type": "Always",
         "name": "Honour of the Company",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "statModifier",
             "target": "unit",
             "stat": "ObjectiveControl",
             "mode": "add",
-            "value": 1
+            "value": 1,
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "This unit has +1 <b>OC</b>."
@@ -110,15 +110,15 @@
       {
         "type": "Always",
         "name": "Vivispectral Analysis Targeting",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿El objetivo no es un VEHÍCULO?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "ALL",
             "keyword": "LETHAL HITS",
-            "value": null
+            "value": null,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s attacks have <k>[Lethal Hits:</k> <b>non-</b><k>Vehicle]</k>."
@@ -150,9 +150,8 @@
       {
         "type": "Always",
         "name": "Targeted Intercession",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "¿Ha realizado esta unidad un movimiento de carga este turno?",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "statModifier",
@@ -160,7 +159,8 @@
             "weaponTarget": "MELEE",
             "stat": "Strength",
             "mode": "add",
-            "value": 1
+            "value": 1,
+            "appliedTo": "SelfUnit"
           },
           {
             "category": "statModifier",
@@ -168,7 +168,8 @@
             "weaponTarget": "MELEE",
             "stat": "AP",
             "mode": "add",
-            "value": 1
+            "value": 1,
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "If this unit made a <b>charge move</b> this turn, this unit’s melee attacks have +1 <b>S</b> and <b>AP</b>."
@@ -182,19 +183,22 @@
       {
         "type": "Always",
         "name": "Hammer of Wrath",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "¿Esta unidad acaba de terminar un movimiento de carga?",
-        "appliedTo": "Enemy",
         "effects": [
           {
             "category": "mortalWounds",
-            "gameEvent": "onCharge",
-            "targetScope": "engagedUnit",
-            "amount": {
-              "kind": "perModelRoll",
-              "threshold": 4,
-              "onSuccess": 1
-            }
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "byStat",
+              "stat": "models"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 4
+            },
+            "damagePerSuccess": "1"
           }
         ],
         "originalText": "When this unit ends a <b>charge move</b>, you can select one enemy unit <b>engaged</b> with this unit. For each model in this unit <b>engaged</b> with that enemy unit, roll one D6:\\r<ul><li>On a 4+, that enemy unit suffers 1 <b>mortal wound</b>.</li></ul>"
@@ -214,15 +218,15 @@
       {
         "type": "Always",
         "name": "Damaged 8",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Las heridas restantes del modelo son iguales o inferiores a 8?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
@@ -236,14 +240,14 @@
       {
         "type": "Always",
         "name": "Deadly Demise D6+2",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
         "effects": [
           {
             "category": "damageMitigation",
             "kind": "fightOnDeath",
-            "value": 2
+            "value": 2,
+            "appliedTo": "Enemy"
           }
         ],
         "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
@@ -257,39 +261,21 @@
       {
         "type": "Always",
         "name": "Deadly Demise D3",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
-        "effects": [
-          {
-            "category": "mortalWounds",
-            "gameEvent": "onDestroyed",
-            "preRoll": {
-              "dice": "D6",
-              "threshold": 6
-            },
-            "targetScope": "allUnitsWithinRange",
-            "range": 6,
-            "amount": {
-              "kind": "roll",
-              "dice": "D3"
-            }
-          }
-        ],
-        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+        "category": "OTHER",
+        "text": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       },
       {
         "type": "Always",
         "name": "Ballistus Strike",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "¿El objetivo está dentro de 24\" de esta unidad?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "RANGE",
             "keyword": "SUSTAINED HITS",
-            "value": "1"
+            "value": "1",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s ranged attacks that target an enemy unit within 24\" of this unit have <k>[Sustained Hits 1]</k>."
@@ -297,15 +283,15 @@
       {
         "type": "Always",
         "name": "Damaged 4",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Las heridas restantes de este modelo son 4 o menos?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
@@ -325,9 +311,8 @@
       {
         "type": "Always",
         "name": "Deeds of Legend",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "¿Esta unidad está dentro del rango de un objetivo?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "statModifier",
@@ -335,7 +320,8 @@
             "weaponTarget": "MELEE",
             "stat": "Attacks",
             "mode": "add",
-            "value": 1
+            "value": 1,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "While this unit is within range of an <b>objective</b>, this unit’s melee attacks have +1 <b>A</b>."
@@ -355,32 +341,32 @@
       {
         "type": "Always",
         "name": "Bladeguard",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "¿Deseas aumentar el golpeo de esta unidad o reducir el golpeo enemigo?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "addToRoll",
             "attackType": "MELEE",
-            "value": 1
+            "value": 1,
+            "appliedTo": "SelfModel"
           }
         ]
       },
       {
         "type": "Always",
         "name": "Bladeguard (Defense)",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "¿Deseas reducir el golpeo enemigo contra esta unidad?",
-        "appliedTo": "Enemy",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
             "attackType": "MELEE",
-            "value": 1
+            "value": 1,
+            "appliedTo": "Enemy"
           }
         ]
       }
@@ -399,39 +385,21 @@
       {
         "type": "Always",
         "name": "Deadly Demise D3",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
-        "effects": [
-          {
-            "category": "mortalWounds",
-            "gameEvent": "onDestroyed",
-            "preRoll": {
-              "dice": "D6",
-              "threshold": 6
-            },
-            "targetScope": "allUnitsWithinRange",
-            "range": 6,
-            "amount": {
-              "kind": "roll",
-              "dice": "D3"
-            }
-          }
-        ],
-        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+        "category": "OTHER",
+        "text": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       },
       {
         "type": "Always",
         "name": "Damaged 4",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Las heridas restantes del modelo son iguales o menores que 4?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
@@ -445,9 +413,8 @@
       {
         "type": "Always",
         "name": "Refuse to Yield",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "statModifier",
@@ -455,7 +422,8 @@
             "weaponTarget": "ALL",
             "stat": "Damage",
             "mode": "subtract",
-            "value": 1
+            "value": 1,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "Attacks allocated to this model have -1 <b>D</b>."
@@ -481,16 +449,16 @@
       {
         "type": "Always",
         "name": "Stealth",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Todos los modelos de la unidad tienen esta habilidad?",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "statModifier",
             "target": "unit",
             "stat": "Save",
             "mode": "add",
-            "value": 0
+            "value": 0,
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the <b>benefit of cover</b> against that attack (13.08)."
@@ -546,14 +514,14 @@
       {
         "type": "Always",
         "name": "Unstoppable Valour",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
-            "action": "rerollAll"
+            "action": "rerollAll",
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "You can re-roll <b>charge rolls</b> for this unit."
@@ -585,15 +553,15 @@
       {
         "type": "Always",
         "name": "Into the Fray",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "¿Ha cargado esta unidad este turno?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "MELEE",
             "keyword": "CLEAVE",
-            "value": "1"
+            "value": "1",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "If this unit made a <b>charge move</b> this turn, this unit’s melee attacks have <k>[cleave 1]</k>."
@@ -631,16 +599,16 @@
       {
         "type": "Always",
         "name": "Angel's Wrath",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "statModifier",
             "target": "unit",
             "stat": "Movement",
             "mode": "add",
-            "value": 1
+            "value": 1,
+            "appliedTo": "SelfUnit"
           }
         ]
       }
@@ -665,9 +633,8 @@
       {
         "type": "Always",
         "name": "Finest Hour (Once per battle, per unit)",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "statModifier",
@@ -675,13 +642,15 @@
             "weaponTarget": "MELEE",
             "stat": "Attacks",
             "mode": "add",
-            "value": 3
+            "value": 3,
+            "appliedTo": "SelfModel"
           },
           {
             "category": "weaponKeyword",
             "weaponTarget": "MELEE",
             "keyword": "DEVASTATING WOUNDS",
-            "value": null
+            "value": null,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "In the Fight phase, when this unit is <b>selected to fight</b>, you can use this ability. If you do, this model’s melee attacks have:\\r<ul><li>+3 <b>A</b>.</li>\\r<li><k>[Devastating Wounds]</k>.</li></ul>"
@@ -701,15 +670,15 @@
       {
         "type": "Always",
         "name": "Litany of Hate",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "MELEE",
             "keyword": "LANCE",
-            "value": null
+            "value": null,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s melee attacks have <k>[Lance]</k>."
@@ -723,15 +692,15 @@
       {
         "type": "Always",
         "name": "Zealous Fortitude",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "damageMitigation",
             "kind": "fnp",
             "value": 4,
-            "condition": "vsMortalWounds"
+            "condition": "vsMortalWounds",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit has <b>Feel No Pain 4+</b> against <b>mortal wounds</b>."
@@ -751,15 +720,15 @@
       {
         "type": "Always",
         "name": "Litany of Hate",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "MELEE",
             "keyword": "LANCE",
-            "value": null
+            "value": null,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s melee attacks have <k>[Lance]</k>."
@@ -767,15 +736,15 @@
       {
         "type": "Always",
         "name": "Catechism of Fire",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "RANGE",
             "keyword": "DEVASTATING WOUNDS",
-            "value": null
+            "value": null,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "In your Shooting phase, when this unit is <b>selected to shoot</b>, you can select one <b>visible</b> enemy unit. This unit’s ranged attacks that target that unit have <k>[Devastating Wounds]</k>."
@@ -789,15 +758,15 @@
       {
         "type": "Always",
         "name": "Exhortation of Rage",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "¿La unidad está al 50% de su fuerza o menos?",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toWound",
             "action": "rerollFailed",
-            "attackType": "MELEE"
+            "attackType": "MELEE",
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "While this unit is at or below <b>half-strength</b>, this unit’s melee attacks can re-roll <b>wound rolls</b>."
@@ -811,15 +780,15 @@
       {
         "type": "Always",
         "name": "Litany of Hate",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "MELEE",
             "keyword": "LANCE",
-            "value": null
+            "value": null,
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "This unit’s melee attacks have <k>[Lance]</k>."
@@ -839,15 +808,15 @@
       {
         "type": "Always",
         "name": "Litany of Hate",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "MELEE",
             "keyword": "LANCE",
-            "value": null
+            "value": null,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s melee attacks have <k>[Lance]</k>."
@@ -873,15 +842,15 @@
       {
         "type": "Always",
         "name": "Command Squad",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toWound",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "Attacks that target this unit have -1 to <b>wound rolls</b>."
@@ -901,15 +870,15 @@
       {
         "type": "Always",
         "name": "Targeter Optics",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "RANGE",
             "keyword": "IGNORES COVER",
-            "value": null
+            "value": null,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s ranged attacks that target a <b>visible</b> enemy unit have <k>[Ignores Cover]</k>."
@@ -929,26 +898,8 @@
       {
         "type": "Always",
         "name": "Deadly Demise 1",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
-        "effects": [
-          {
-            "category": "mortalWounds",
-            "gameEvent": "onDestroyed",
-            "preRoll": {
-              "dice": "D6",
-              "threshold": 6
-            },
-            "targetScope": "allUnitsWithinRange",
-            "range": 6,
-            "amount": {
-              "kind": "fixed",
-              "value": 1
-            }
-          }
-        ],
-        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+        "category": "OTHER",
+        "text": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       },
       {
         "type": "Always",
@@ -983,15 +934,15 @@
       {
         "type": "Always",
         "name": "Stealth",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "RANGE"
+            "attackType": "RANGE",
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the <b>benefit of cover</b> against that attack (13.08)."
@@ -1011,15 +962,15 @@
       {
         "type": "Always",
         "name": "Overlapping Destruction",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "¿Se selecciona una unidad enemiga en la Fase de Disparo?",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "RANGE",
             "keyword": "BLAST",
-            "value": "1"
+            "value": "1",
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "In your Shooting phase, you can select one enemy unit. This unit’s Heavy Bolter weapons that target that enemy unit have <k>[Blast 1]</k>."
@@ -1033,15 +984,15 @@
       {
         "type": "Always",
         "name": "Total Obliteration",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "savingThrow",
             "action": "rerollAll",
-            "attackType": "RANGE"
+            "attackType": "RANGE",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s ranged attacks can re-roll <b>damage rolls</b>."
@@ -1067,51 +1018,35 @@
       {
         "type": "Always",
         "name": "Deadly Demise D3",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
-        "effects": [
-          {
-            "category": "mortalWounds",
-            "gameEvent": "onDestroyed",
-            "preRoll": {
-              "dice": "D6",
-              "threshold": 6
-            },
-            "targetScope": "allUnitsWithinRange",
-            "range": 6,
-            "amount": {
-              "kind": "roll",
-              "dice": "D3"
-            }
-          }
-        ],
-        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+        "category": "OTHER",
+        "text": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       },
       {
         "type": "Always",
         "name": "Aquilon Optics",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "¿El objetivo es un MONSTRUO o VEHÍCULO?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "rerollOnes",
-            "attackType": "RANGE"
+            "attackType": "RANGE",
+            "appliedTo": "SelfModel"
           },
           {
             "category": "diceModifier",
             "roll": "toWound",
             "action": "rerollOnes",
-            "attackType": "RANGE"
+            "attackType": "RANGE",
+            "appliedTo": "SelfModel"
           },
           {
             "category": "diceModifier",
             "roll": "savingThrow",
             "action": "rerollOnes",
-            "attackType": "RANGE"
+            "attackType": "RANGE",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s ranged attacks that target a <k>Monster/Vehicle</k> unit can:\\r<ul><li>Re-roll <u>one</u> <b>hit roll</b>.</li>\\r<li>Re-roll <u>one</u> <b>wound roll</b>.</li>\\r<li>Re-roll <u>one</u> <b>damage roll</b>.</li></ul>"
@@ -1119,15 +1054,15 @@
       {
         "type": "Always",
         "name": "Damaged 4",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Las heridas restantes del modelo son iguales o menores a 4?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
@@ -1141,9 +1076,8 @@
       {
         "type": "Always",
         "name": "Reaping Tally",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "¿El objetivo no es un MONSTRUO ni VEHÍCULO?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "statModifier",
@@ -1151,7 +1085,8 @@
             "weaponTarget": "RANGE",
             "stat": "AP",
             "mode": "add",
-            "value": 1
+            "value": 1,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s ranged attacks that target a unit (excluding <k>Monster/Vehicle</k> units) have +1 <b>AP</b>."
@@ -1159,39 +1094,21 @@
       {
         "type": "Always",
         "name": "Deadly Demise D3",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
-        "effects": [
-          {
-            "category": "mortalWounds",
-            "gameEvent": "onDestroyed",
-            "preRoll": {
-              "dice": "D6",
-              "threshold": 6
-            },
-            "targetScope": "allUnitsWithinRange",
-            "range": 6,
-            "amount": {
-              "kind": "roll",
-              "dice": "D3"
-            }
-          }
-        ],
-        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+        "category": "OTHER",
+        "text": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       },
       {
         "type": "Always",
         "name": "Damaged 4",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Las heridas restantes del modelo son iguales o menores a 4?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
@@ -1205,15 +1122,15 @@
       {
         "type": "Always",
         "name": "Damaged 4",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Las heridas restantes del modelo son iguales o menores a 4?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
@@ -1221,9 +1138,8 @@
       {
         "type": "Always",
         "name": "Priority Target Acquisition",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "¿El objetivo está a 12\" o menos de esta unidad?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "statModifier",
@@ -1231,7 +1147,8 @@
             "weaponTarget": "RANGE",
             "stat": "Strength",
             "mode": "add",
-            "value": 1
+            "value": 1,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s ranged attacks that target a unit within 12\" of this unit have +1 <b>S</b>."
@@ -1239,26 +1156,8 @@
       {
         "type": "Always",
         "name": "Deadly Demise D3",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
-        "effects": [
-          {
-            "category": "mortalWounds",
-            "gameEvent": "onDestroyed",
-            "preRoll": {
-              "dice": "D6",
-              "threshold": 6
-            },
-            "targetScope": "allUnitsWithinRange",
-            "range": 6,
-            "amount": {
-              "kind": "roll",
-              "dice": "D3"
-            }
-          }
-        ],
-        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+        "category": "OTHER",
+        "text": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       }
     ],
     "rawAbilities": []
@@ -1269,16 +1168,16 @@
       {
         "type": "Always",
         "name": "Unyielding in the Face of the Foe",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Esta unidad controla un objetivo?",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "statModifier",
             "target": "unit",
             "stat": "Save",
             "mode": "add",
-            "value": 1
+            "value": 1,
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "While this unit is controlling an <b>objective</b>, this unit has +1 to <b>save rolls</b>."
@@ -1292,15 +1191,15 @@
       {
         "type": "Always",
         "name": "Rites of Thermal Appeasement",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "addToRoll",
-            "attackType": "RANGE"
+            "attackType": "RANGE",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit has +1 to <b>hazard rolls</b> made for its Plasma Incinerator and Plasma Pistol weapons."
@@ -1314,26 +1213,8 @@
       {
         "type": "Always",
         "name": "Deadly Demise D3",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
-        "effects": [
-          {
-            "category": "mortalWounds",
-            "gameEvent": "onDestroyed",
-            "preRoll": {
-              "dice": "D6",
-              "threshold": 6
-            },
-            "targetScope": "allUnitsWithinRange",
-            "range": 6,
-            "amount": {
-              "kind": "roll",
-              "dice": "D3"
-            }
-          }
-        ],
-        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+        "category": "OTHER",
+        "text": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       },
       {
         "type": "Always",
@@ -1368,15 +1249,15 @@
       {
         "type": "Always",
         "name": "Meteoric Descent",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "¿Esta unidad realizó un movimiento de ingreso este turno?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "addToRoll",
-            "attackType": "RANGE"
+            "attackType": "RANGE",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "If this unit made an <b>ingress move</b> this turn, this unit’s ranged attacks have +1 to <b>hit rolls</b>."
@@ -1390,36 +1271,47 @@
       {
         "type": "Always",
         "name": "Haywire Mine (Once per battle, per unit)",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
         "effects": [
           {
             "category": "mortalWounds",
-            "gameEvent": "activeAbility",
-            "preRoll": {
-              "dice": "D6",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1"
+            },
+            "resolution": {
+              "kind": "roll",
               "threshold": 2
             },
-            "targetScope": "selectedEnemyUnit",
-            "range": 6,
-            "amount": {
-              "kind": "roll",
-              "dice": "D3"
-            },
-            "amountByKeyword": [
-              {
-                "targetKeyword": "VEHICLE",
-                "amount": {
-                  "kind": "roll",
-                  "dice": "D3",
-                  "count": 2
-                }
-              }
-            ]
+            "damagePerSuccess": "D3"
           }
         ],
         "originalText": "In your Shooting phase, you can select one <b>visible</b> enemy unit within 6\" of this unit and roll one D6. On a 2+:\\r<ul><li>That enemy unit suffers D3 <b>mortal wounds</b>.</li>\\r<li><u>Or:</u> If that enemy unit is a <k>Vehicle</k> unit, that enemy unit suffers 2D3 <b>mortal wounds</b>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Haywire Mine (Once per battle, per unit) (efecto 2)",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "VEHICLE",
+            "hits": {
+              "kind": "notation",
+              "value": "1"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 2
+            },
+            "damagePerSuccess": "2D3"
+          }
+        ]
       },
       {
         "type": "Always",
@@ -1430,15 +1322,15 @@
       {
         "type": "Always",
         "name": "Divinator-class Auspexes (Once per phase, per unit)",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "rerollOnes",
-            "attackType": "RANGE"
+            "attackType": "RANGE",
+            "appliedTo": "Enemy"
           }
         ],
         "originalText": "In your Shooting phase, when a friendly <k>Adeptus Astartes</k> unit is <b>selected to shoot</b>, you can use this ability. If you do, select one <b>visible</b> enemy unit within 18\" of this unit. That unit is <b>scanned</b>:\\r<ul><li>While a unit is <b>scanned</b>, ranged attacks that target that unit can re-roll <b>hit rolls</b> of 1.</li></ul>"
@@ -1482,16 +1374,16 @@
       {
         "type": "Always",
         "name": "Bolter Discipline",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "¿Esta unidad o el objetivo están dentro del rango de un objetivo?",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "addToRoll",
             "value": 1,
-            "attackType": "RANGE"
+            "attackType": "RANGE",
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 to <b>hit rolls</b>:\\r<ul><li>This unit is within range of an <b>objective</b>.</li>\\r<li>The target of that attack is within range of an <b>objective</b>.</li></ul>"
@@ -1511,16 +1403,16 @@
       {
         "type": "Always",
         "name": "Aggressive Reconnaissance",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "¿El objetivo enemigo no está a 6\" de ninguna otra unidad enemiga?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toWound",
             "action": "addToRoll",
             "value": 1,
-            "attackType": "RANGE"
+            "attackType": "RANGE",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "In your Shooting phase, this unit’s ranged attacks that target an enemy unit that is not within 6\" of any other enemy units have +1 to <b>wound rolls</b>."
@@ -1534,39 +1426,21 @@
       {
         "type": "Always",
         "name": "Deadly Demise D3",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
-        "effects": [
-          {
-            "category": "mortalWounds",
-            "gameEvent": "onDestroyed",
-            "preRoll": {
-              "dice": "D6",
-              "threshold": 6
-            },
-            "targetScope": "allUnitsWithinRange",
-            "range": 6,
-            "amount": {
-              "kind": "roll",
-              "dice": "D3"
-            }
-          }
-        ],
-        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+        "category": "OTHER",
+        "text": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       },
       {
         "type": "Always",
         "name": "Forward Assault Warsuit",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Es el objetivo la marca seleccionada de esta unidad?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toWound",
             "action": "rerollOnes",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "At the start of the first battle round, you can select one enemy unit to be this unit’s <b>mark</b>:\\r<ul><li>This unit’s attacks that target this unit’s <b>mark</b> can re-roll <b>wound rolls</b> of 1.</li>\\r<li>Each time this unit’s <b>mark</b> is <b>destroyed</b>, select one enemy unit to be this unit’s <b>mark</b>.</li></ul>"
@@ -1580,15 +1454,15 @@
       {
         "type": "Always",
         "name": "Damaged 4",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Las heridas restantes de este modelo son iguales o menores que 4?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
@@ -1602,15 +1476,15 @@
       {
         "type": "Always",
         "name": "Tempormortis",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "MELEE",
             "keyword": "FIGHTS FIRST",
-            "value": null
+            "value": null,
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "This unit has <b>Fights First</b>."
@@ -1642,15 +1516,15 @@
       {
         "type": "Always",
         "name": "Damaged 6",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Las heridas restantes del modelo son iguales o inferiores a 6?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
@@ -1658,15 +1532,15 @@
       {
         "type": "Always",
         "name": "Fury of the Machine Spirit",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "¿El objetivo está a 12\" o menos de esta unidad?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "RANGE",
             "keyword": "LETHAL HITS",
-            "value": null
+            "value": null,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s ranged attacks that target a unit within 12\" of this unit have <k>[Lethal Hits]</k>."
@@ -1674,26 +1548,8 @@
       {
         "type": "Always",
         "name": "Deadly Demise D6",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
-        "effects": [
-          {
-            "category": "mortalWounds",
-            "gameEvent": "onDestroyed",
-            "preRoll": {
-              "dice": "D6",
-              "threshold": 6
-            },
-            "targetScope": "allUnitsWithinRange",
-            "range": 6,
-            "amount": {
-              "kind": "roll",
-              "dice": "D6"
-            }
-          }
-        ],
-        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+        "category": "OTHER",
+        "text": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       }
     ],
     "rawAbilities": []
@@ -1704,15 +1560,15 @@
       {
         "type": "Always",
         "name": "Wrath of the Machine Spirit",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "¿El objetivo está dentro de 12\" de esta unidad y no es un MONSTRUO ni VEHÍCULO?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "RANGE",
             "keyword": "DEVASTATING WOUNDS",
-            "value": null
+            "value": null,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s ranged attacks that target a unit within 12\" of this unit have <k>[Devastating Wounds:</k> <b>non-</b><k>Monster/vehicle]</k>."
@@ -1720,24 +1576,23 @@
       {
         "type": "Always",
         "name": "Deadly Demise D6",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [],
         "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       },
       {
         "type": "Always",
         "name": "Damaged 6",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Las heridas restantes de este modelo son iguales o menores a 6?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
@@ -1757,15 +1612,15 @@
       {
         "type": "Always",
         "name": "Damaged 6",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Las heridas restantes del modelo son iguales o menores a 6?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
@@ -1773,21 +1628,22 @@
       {
         "type": "Always",
         "name": "Power of the Machine Spirit",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "rerollOnes",
-            "attackType": "RANGE"
+            "attackType": "RANGE",
+            "appliedTo": "SelfModel"
           },
           {
             "category": "diceModifier",
             "roll": "toWound",
             "action": "rerollOnes",
-            "attackType": "RANGE"
+            "attackType": "RANGE",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s ranged attacks can:\\r<ul><li>Re-roll <u>one</u> <b>hit roll</b>.</li>\\r<li>Re-roll <u>one</u> <b>wound roll</b>.</li></ul>"
@@ -1801,26 +1657,8 @@
       {
         "type": "Always",
         "name": "Deadly Demise D6",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
-        "effects": [
-          {
-            "category": "mortalWounds",
-            "gameEvent": "onDestroyed",
-            "preRoll": {
-              "dice": "D6",
-              "threshold": 6
-            },
-            "targetScope": "allUnitsWithinRange",
-            "range": 6,
-            "amount": {
-              "kind": "roll",
-              "dice": "D6"
-            }
-          }
-        ],
-        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+        "category": "OTHER",
+        "text": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       }
     ],
     "rawAbilities": []
@@ -1849,15 +1687,15 @@
       {
         "type": "Always",
         "name": "Psychic Hood (Psychic)",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "damageMitigation",
             "kind": "fnp",
             "value": 4,
-            "condition": "vsPsychic"
+            "condition": "vsPsychic",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit has <b>Feel No Pain 4+</b> against <b>psychic attacks</b>."
@@ -1889,16 +1727,16 @@
       {
         "type": "Always",
         "name": "Stealth",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "statModifier",
             "target": "unit",
             "stat": "Save",
             "mode": "add",
-            "value": 1
+            "value": 1,
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the <b>benefit of cover</b> against that attack (13.08)."
@@ -1918,15 +1756,15 @@
       {
         "type": "Always",
         "name": "Psychic Hood (Psychic)",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "damageMitigation",
             "kind": "fnp",
             "value": 4,
-            "condition": "vsPsychic"
+            "condition": "vsPsychic",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit has <b>Feel No Pain 4+</b> against <b>psychic attacks</b>."
@@ -1958,15 +1796,15 @@
       {
         "type": "Always",
         "name": "Psychic Hood (Psychic)",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "damageMitigation",
             "kind": "fnp",
             "value": 4,
-            "condition": "vsPsychic"
+            "condition": "vsPsychic",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit has <b>Feel No Pain 4+</b> against <b>psychic attacks</b>."
@@ -1998,15 +1836,15 @@
       {
         "type": "Always",
         "name": "Tactical Precision",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿El objetivo no es un MONSTRUO ni VEHÍCULO?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "ALL",
             "keyword": "LETHAL HITS",
-            "value": null
+            "value": null,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s attacks have <k>[Lethal Hits:</k> <b>non-</b><k>MONSTER/VEHICLE]</k>."
@@ -2056,14 +1894,14 @@
       {
         "type": "Always",
         "name": "Feel No Pain 5+",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "damageMitigation",
             "kind": "fnp",
-            "value": 5
+            "value": 5,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
@@ -2083,16 +1921,16 @@
       {
         "type": "Always",
         "name": "Stealth",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "statModifier",
             "target": "unit",
             "stat": "Save",
             "mode": "add",
-            "value": 1
+            "value": 1,
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the <b>benefit of cover</b> against that attack (13.08)."
@@ -2106,15 +1944,15 @@
       {
         "type": "Always",
         "name": "Tactical Precision",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿El objetivo no es un MONSTRUO ni VEHÍCULO?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "ALL",
             "keyword": "LETHAL HITS",
-            "value": null
+            "value": null,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s attacks have <k>[Lethal Hits:</k> <b>non-</b><k>MONSTER/VEHICLE]</k>."
@@ -2140,9 +1978,8 @@
       {
         "type": "Always",
         "name": "Full-throttle Assault",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "¿Ha realizado esta unidad un movimiento de carga este turno?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
@@ -2150,13 +1987,15 @@
             "action": "addToRoll",
             "attackType": "MELEE",
             "value": 1,
-            "condition": "Thunder Hammer weapons"
+            "condition": "Thunder Hammer weapons",
+            "appliedTo": "SelfModel"
           },
           {
             "category": "weaponKeyword",
             "weaponTarget": "MELEE",
             "keyword": "SUSTAINED HITS",
-            "value": "1"
+            "value": "1",
+            "appliedTo": "SelfModel"
           },
           {
             "category": "statModifier",
@@ -2165,7 +2004,8 @@
             "stat": "Damage",
             "mode": "add",
             "value": 1,
-            "condition": "Other melee weapons"
+            "condition": "Other melee weapons",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "If this unit made a <b>charge move</b> this turn, this unit’s:\\r<ul><li>Thunder Hammer weapons have +1 to <b>hit rolls</b> and <k>[Sustained Hits 1]</k>.</li>\\r<li>Other melee weapons have +1 <b>D</b> and <k>[Sustained Hits 1]</k>.</li></ul>"
@@ -2179,15 +2019,15 @@
       {
         "type": "Always",
         "name": "Damaged 4",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Las heridas restantes del modelo son 4 o menos?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
@@ -2195,15 +2035,15 @@
       {
         "type": "Always",
         "name": "Duty Eternal",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿La Fuerza del atacante es mayor que la Resistencia de este modelo?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toWound",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "Attacks that target this unit with a <b>S</b> greater than this unit’s <b>T</b> have -1 to <b>wound rolls</b>."
@@ -2211,26 +2051,8 @@
       {
         "type": "Always",
         "name": "Deadly Demise D3",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
-        "effects": [
-          {
-            "category": "mortalWounds",
-            "gameEvent": "onDestroyed",
-            "preRoll": {
-              "dice": "D6",
-              "threshold": 6
-            },
-            "targetScope": "allUnitsWithinRange",
-            "range": 6,
-            "amount": {
-              "kind": "roll",
-              "dice": "D3"
-            }
-          }
-        ],
-        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+        "category": "OTHER",
+        "text": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       }
     ],
     "rawAbilities": []
@@ -2241,16 +2063,16 @@
       {
         "type": "Always",
         "name": "Terror Troops (Aura)",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "Is an enemy model within 3\" of this unit?",
-        "appliedTo": "Enemy",
         "effects": [
           {
             "category": "statModifier",
             "target": "unit",
             "stat": "ObjectiveControl",
             "mode": "subtract",
-            "value": 1
+            "value": 1,
+            "appliedTo": "Enemy"
           }
         ],
         "originalText": "While an enemy model is within 3\" of this unit, that enemy model has -1 <b>OC</b>."
@@ -2264,15 +2086,15 @@
       {
         "type": "Always",
         "name": "Fearsome Assault",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "value": 1
+            "value": 1,
+            "appliedTo": "Enemy"
           }
         ],
         "originalText": "At the start of the Fight phase, each enemy unit <b>engaged</b> with a unit with this ability makes a <b>battle‑shock roll</b>, with -1 to that <b>battle-shock roll</b>."
@@ -2286,15 +2108,15 @@
       {
         "type": "Always",
         "name": "Executioner",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "¿El objetivo está por encima de la mitad de su capacidad?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "addToRoll",
-            "attackType": "RANGE"
+            "attackType": "RANGE",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s ranged attacks that target a unit not <b>below half-strength</b> have +1 to <b>hit rolls</b>."
@@ -2302,15 +2124,15 @@
       {
         "type": "Always",
         "name": "Damaged 6",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Las heridas restantes del modelo son iguales o menores a 6?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
@@ -2318,26 +2140,8 @@
       {
         "type": "Always",
         "name": "Deadly Demise D6",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
-        "effects": [
-          {
-            "category": "mortalWounds",
-            "gameEvent": "onDestroyed",
-            "preRoll": {
-              "dice": "D6",
-              "threshold": 6
-            },
-            "targetScope": "allUnitsWithinRange",
-            "range": 6,
-            "amount": {
-              "kind": "roll",
-              "dice": "D6"
-            }
-          }
-        ],
-        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+        "category": "OTHER",
+        "text": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       }
     ],
     "rawAbilities": []
@@ -2348,15 +2152,15 @@
       {
         "type": "Always",
         "name": "Damaged 6",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Las heridas restantes del modelo son iguales o menores a 6?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
@@ -2370,14 +2174,14 @@
       {
         "type": "Always",
         "name": "Deadly Demise D6",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Se destruye este modelo y se obtiene un 6 en la tirada de D6?",
-        "appliedTo": "Enemy",
         "effects": [
           {
             "category": "damageMitigation",
             "kind": "fnp",
-            "value": 6
+            "value": 6,
+            "appliedTo": "Enemy"
           }
         ],
         "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
@@ -2403,13 +2207,13 @@
       {
         "type": "Always",
         "name": "Deadly Demise D3",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Se destruye este modelo y se obtiene un 6 en el tirada de D6?",
-        "appliedTo": "Enemy",
         "effects": [
           {
             "category": "damageMitigation",
-            "kind": "damageHalved"
+            "kind": "damageHalved",
+            "appliedTo": "Enemy"
           }
         ],
         "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
@@ -2447,15 +2251,15 @@
       {
         "type": "Always",
         "name": "Veteran Marksmen",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "rerollOnes",
-            "attackType": "RANGE"
+            "attackType": "RANGE",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s ranged attacks can re-roll <b>hit rolls</b> of 1."
@@ -2475,15 +2279,15 @@
       {
         "type": "Always",
         "name": "Hailstrike",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "ALWAYS",
-        "appliedTo": "Ally",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "RANGE",
             "keyword": "IGNORES COVER",
-            "value": null
+            "value": null,
+            "appliedTo": "Ally"
           }
         ],
         "originalText": "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. Friendly <k>Adeptus Astartes</k> units’ ranged attacks that target that enemy unit have <k>[IGNORES COVER]</k>."
@@ -2491,26 +2295,8 @@
       {
         "type": "Always",
         "name": "Deadly Demise D3",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
-        "effects": [
-          {
-            "category": "mortalWounds",
-            "gameEvent": "onDestroyed",
-            "preRoll": {
-              "dice": "D6",
-              "threshold": 6
-            },
-            "targetScope": "allUnitsWithinRange",
-            "range": 6,
-            "amount": {
-              "kind": "fixed",
-              "value": 3
-            }
-          }
-        ],
-        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+        "category": "OTHER",
+        "text": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       }
     ],
     "rawAbilities": []
@@ -2527,15 +2313,15 @@
       {
         "type": "Always",
         "name": "Hammerstrike",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "¿El objetivo está dentro de un área de terreno?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "RANGE",
             "keyword": "SUSTAINED HITS",
-            "value": "1"
+            "value": "1",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s ranged attacks that target an enemy unit within a <b>terrain area</b> have <k>[Sustained Hits 1]</k>."
@@ -2543,26 +2329,8 @@
       {
         "type": "Always",
         "name": "Deadly Demise D3",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
-        "effects": [
-          {
-            "category": "mortalWounds",
-            "gameEvent": "onDestroyed",
-            "preRoll": {
-              "dice": "D6",
-              "threshold": 6
-            },
-            "targetScope": "allUnitsWithinRange",
-            "range": 6,
-            "amount": {
-              "kind": "fixed",
-              "value": 3
-            }
-          }
-        ],
-        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+        "category": "OTHER",
+        "text": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       }
     ],
     "rawAbilities": []
@@ -2573,9 +2341,8 @@
       {
         "type": "Always",
         "name": "Shattered Defences",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "¿El objetivo es un MONSTRUO o VEHÍCULO?",
-        "appliedTo": "Ally",
         "effects": [
           {
             "category": "statModifier",
@@ -2583,7 +2350,8 @@
             "weaponTarget": "RANGE",
             "stat": "AP",
             "mode": "add",
-            "value": 1
+            "value": 1,
+            "appliedTo": "Ally"
           }
         ],
         "originalText": "In your Shooting phase, when this unit has shot, select one enemy <k>Monster/Vehicle</k> unit hit by those attacks. Friendly <k>Adeptus Astartes</k> units’ ranged attacks that target that enemy unit have +1 <b>AP</b>."
@@ -2591,13 +2359,13 @@
       {
         "type": "Always",
         "name": "Deadly Demise D3",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "damageMitigation",
-            "kind": "fightOnDeath"
+            "kind": "fightOnDeath",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
@@ -2611,15 +2379,15 @@
       {
         "type": "Always",
         "name": "Thunderstrike",
-        "attackType": "SHOOTING",
+        "phase": "SHOOTING",
         "trigger": "¿El objetivo es un MONSTRUO o VEHÍCULO?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toWound",
             "action": "addToRoll",
-            "attackType": "RANGE"
+            "attackType": "RANGE",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s ranged attacks that target a <k>Monster/Vehicle</k> unit have +1 to <b>wound rolls</b>."
@@ -2633,9 +2401,8 @@
       {
         "type": "Alone",
         "name": "Techmarine",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Este modelo está a 3\" o menos de una unidad VEHÍCULO ADEPTUS ASTARTES aliada?",
-        "appliedTo": "SelfModel",
         "effects": [],
         "originalText": "While this model is within 3\" of a friendly <k>ADEPTUS ASTARTES VEHICLE</k> unit, this model has <b>Lone Operative</b>."
       },
@@ -2672,15 +2439,15 @@
       {
         "type": "Always",
         "name": "Terminatus Assault",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "¿Ha realizado esta unidad un movimiento de carga este turno?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "weaponKeyword",
             "weaponTarget": "MELEE",
             "keyword": "SUSTAINED HITS",
-            "value": "1"
+            "value": "1",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "If this unit made a <b>charge move</b> this turn, this unit’s:\\r<ul><li>Lightning Claws weapons have <k>[Sustained Hits 1: non-Monster/Vehicle]</k>.</li>\\r<li>Thunder Hammer weapons have <k>[Sustained Hits 1: Monster/Vehicle]</k>.</li></ul>"
@@ -2694,9 +2461,8 @@
       {
         "type": "Always",
         "name": "Fury of the First",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿El objetivo está dentro de 9\" de esta unidad?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "statModifier",
@@ -2704,7 +2470,8 @@
             "weaponTarget": "ALL",
             "stat": "AP",
             "mode": "add",
-            "value": 1
+            "value": 1,
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This unit’s attacks that target a unit within 9\" of this unit have +1 <b>AP.</b>"
@@ -2730,15 +2497,15 @@
       {
         "type": "Always",
         "name": "Thunderhawk Cluster Bombs",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Esta unidad se movió sobre unidades enemigas en su movimiento normal o avance?",
-        "appliedTo": "Enemy",
         "effects": [
           {
             "category": "damageMitigation",
             "kind": "damageReduction",
             "value": 0,
-            "condition": "any"
+            "condition": "any",
+            "appliedTo": "Enemy"
           }
         ],
         "originalText": "In your Movement phase, when this unit ends a <b>normal/advance move</b>, you can select one enemy unit this unit moved over during that move and roll six D6:<ul><li>For each 3+, that enemy unit suffers 1 <b>mortal wound</b>.</li></ul>"
@@ -2746,15 +2513,15 @@
       {
         "type": "Always",
         "name": "Damaged 10",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿Las heridas restantes de este modelo son iguales o menores a 10?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "diceModifier",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "attackType": "ALL",
+            "appliedTo": "SelfModel"
           }
         ],
         "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
@@ -2768,27 +2535,8 @@
       {
         "type": "Always",
         "name": "Deadly Demise D6+2",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
-        "effects": [
-          {
-            "category": "mortalWounds",
-            "gameEvent": "onDestroyed",
-            "preRoll": {
-              "dice": "D6",
-              "threshold": 6
-            },
-            "targetScope": "allUnitsWithinRange",
-            "range": 6,
-            "amount": {
-              "kind": "roll",
-              "dice": "D6",
-              "modifier": 2
-            }
-          }
-        ],
-        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+        "category": "OTHER",
+        "text": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
       },
       {
         "type": "Always",
@@ -2811,9 +2559,8 @@
       {
         "type": "Always",
         "name": "Vanguard Assault",
-        "attackType": "FIGHT",
+        "phase": "FIGHT",
         "trigger": "¿Esta unidad realizó un movimiento de carga este turno?",
-        "appliedTo": "SelfUnit",
         "effects": [
           {
             "category": "statModifier",
@@ -2821,7 +2568,8 @@
             "weaponTarget": "MELEE",
             "stat": "Attacks",
             "mode": "add",
-            "value": 1
+            "value": 1,
+            "appliedTo": "SelfUnit"
           }
         ],
         "originalText": "If this unit made a <b>charge move</b> this turn, this unit’s melee attacks have + 1 <b>A</b>."

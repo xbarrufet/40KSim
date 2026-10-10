@@ -74,10 +74,12 @@ A structured ability MAY include an `originalText` field containing the verbatim
 The `effects` array entries SHALL use a `category` field to identify their type. Each effect SHALL also carry an `appliedTo: AppliesTo` field identifying which unit entity the effect targets. `AppliesTo` values: `"SelfModel"`, `"SelfUnit"`, `"Enemy"`, `"Ally"`. Effect categories and their own required fields:
 
 - **`statModifier`** — modifies a characteristic. Fields: `appliedTo`, `weaponTarget` (required only when the selected `stat` is a `WeaponStat`: `"ALL"` | `"RANGE"` | `"MELEE"`), `stat` (`UnitStat` or `WeaponStat`), `mode` (`"add"` | `"subtract"` | `"setValue"` | `"halve"`), and `value` (number, absent for `"halve"`). The `target: "unit" | "weapon"` field is removed; the stat value itself determines whether it is a unit or weapon stat.
-- **`diceModifier`** — modifies a dice roll. Fields: `appliedTo`, `roll` (`"toHit"` | `"toWound"` | `"savingThrow"`), `action` (`"rerollOnes"` | `"rerollFailed"` | `"rerollAll"` | `"addToRoll"` | `"subtractFromRoll"` | `"autoSuccess"` | `"ignoreModifiers"`), optional `attackType` (`"RANGE"` | `"MELEE"` | `"ALL"`).
+- **`diceModifier`** — modifies a dice roll. Fields: `appliedTo`, `roll` (`"toHit"` | `"toWound"` | `"savingThrow"` | `"damage"` | `"hazard"`), `action` (`"rerollOnes"` | `"rerollFailed"` | `"rerollAll"` | `"addToRoll"` | `"subtractFromRoll"` | `"autoSuccess"` | `"ignoreModifiers"`), optional `attackType` (`"RANGE"` | `"MELEE"` | `"ALL"`).
 - **`weaponKeyword`** — grants a keyword to weapon profiles. Fields: `appliedTo`, `weaponTarget` (`"ALL"` | `"RANGE"` | `"MELEE"`), `keyword` (from the project's known ability vocabulary, e.g. `IGNORES COVER`, `LETHAL HITS`, `DEVASTATING WOUNDS`), optional `value`.
+- **`unitKeyword`** — grants a keyword to a unit. Fields: `appliedTo`, `keyword` (from a known unit keyword vocabulary: `BENEFIT OF COVER`, `STEALTH`, `SCOUTS`, `DEEP STRIKE`, `LONE OPERATIVE`, `FIGHTS FIRST`), optional `value` (string, for parameterised keywords like `SCOUTS 6"`).
 - **`damageMitigation`** — reduces or prevents damage. Fields: `appliedTo`, `kind`, optional `value`, optional `condition`.
-- **`mortalWounds`** — deals mortal wounds. Fields: `appliedTo`, plus all existing mortal wounds fields.
+- **`mortalWounds`** — deals mortal wounds. Fields: `appliedTo`, `unitType`, `hits`, `resolution`, `damagePerSuccess`. See Mortal Wounds Effect Category for details.
+- **`heal`** — placeholder category for future healing effects. Fields: `appliedTo` only. SHALL NOT be evaluated by the simulator until fully specified.
 
 The ability-level `appliedTo` field is removed. Each effect carries its own `appliedTo`.
 
@@ -106,6 +108,16 @@ The ability-level `appliedTo` field is removed. Each effect carries its own `app
 - **WHEN** a rule allows re-rolling failed wound rolls
 - **THEN** use `diceModifier` with `roll: "toWound"` and `action: "rerollFailed"`
 
+#### Scenario: Reroll damage rolls
+
+- **WHEN** a rule allows re-rolling damage rolls for ranged attacks
+- **THEN** use `diceModifier` with `roll: "damage"`, `action: "rerollAll"`, and `attackType: "RANGE"`
+
+#### Scenario: Modify hazard roll
+
+- **WHEN** a rule modifies the hazard roll (overcharge explosion check) for a weapon
+- **THEN** use `diceModifier` with `roll: "hazard"` and the appropriate action
+
 #### Scenario: Effect targeting the unit itself
 
 - **WHEN** an effect modifies the unit's own characteristics or dice rolls
@@ -123,6 +135,27 @@ The ability-level `appliedTo` field is removed. Each effect carries its own `app
 - **THEN** each effect carries its own `appliedTo` field
 - **AND** the simulator applies each effect to the correct target independently
 
+#### Scenario: Heal category is a stub
+
+- **WHEN** a `heal` effect is present on a structured ability
+- **THEN** the simulator ignores it and does not apply any modifier
+- **AND** the data is stored for future use
+
+#### Scenario: Unit keyword — Stealth granting benefit of cover
+
+- **WHEN** a unit ability grants Stealth (benefit of cover against ranged attacks)
+- **THEN** use `unitKeyword` with `appliedTo: "SelfUnit"`, `keyword: "BENEFIT OF COVER"`, `value: null`
+
+#### Scenario: Unit keyword — Scouts with distance
+
+- **WHEN** a unit ability grants Scouts 6"
+- **THEN** use `unitKeyword` with `appliedTo: "SelfUnit"`, `keyword: "SCOUTS"`, `value: "6\""`
+
+#### Scenario: Cover interaction with IGNORES COVER
+
+- **WHEN** a defending unit has a `unitKeyword` effect with `keyword: "BENEFIT OF COVER"` and the attacking weapon has `IGNORES COVER`
+- **THEN** the simulator SHALL NOT apply the +1 Save bonus from benefit of cover for that attack
+
 ### Requirement: Rule Target (appliesTo)
 
 The `appliedTo` field on a `StructuredAbility` SHALL default to `"SelfModel"`. Other values remain as defined: `SelfUnit`, `Enemy`, `Ally`. The field applies to the ability as a whole; all effects in `effects[]` share the same target.
@@ -139,17 +172,35 @@ The `appliedTo` field on a `StructuredAbility` SHALL default to `"SelfModel"`. O
 
 ### Requirement: Attack Type Field
 
-Each `StructuredAbility` SHALL include an `attackType` field (`"SHOOTING"` | `"FIGHT"` | `"ANY"`) indicating which attack phase the ability applies to. The simulator uses this field to auto-exclude abilities without asking the player.
+Each `StructuredAbility` SHALL include a `phase` field (`"ANY"` | `"MOVEMENT"` | `"SHOOTING"` | `"CHARGE"` | `"FIGHT"` | `"COMMAND"`) indicating which game phase the ability applies to. The simulator uses this field to auto-exclude abilities without asking the player. The field name in the data model changes from `attackType` to `phase`; the values `"SHOOTING"` and `"FIGHT"` retain their existing semantics.
 
 #### Scenario: Melee-only ability skipped during shooting
 
 - **WHEN** the simulator is resolving a shooting attack and evaluates a unit's abilities
-- **THEN** abilities with `attackType: "FIGHT"` are skipped without presenting their trigger to the player
+- **THEN** abilities with `phase: "FIGHT"` are skipped without presenting their trigger to the player
+- **AND** only abilities with `phase: "FIGHT"` or `"ANY"` are evaluated for melee attacks
 
 #### Scenario: Phase-neutral ability always evaluated
 
-- **WHEN** an ability applies regardless of attack phase (e.g. a stat bonus that is always active)
-- **THEN** `attackType` is `"ANY"` and the simulator evaluates it for both shooting and melee resolution
+- **WHEN** an ability applies regardless of game phase (e.g. a stat bonus that is always active)
+- **THEN** `phase` is `"ANY"` and the simulator evaluates it in all phases
+
+#### Scenario: Charge-phase ability evaluated only on charge
+
+- **WHEN** an ability has `phase: "CHARGE"` and the simulator is resolving a shooting attack
+- **THEN** the ability is skipped
+- **AND** it is only evaluated when the unit completes a charge move
+
+#### Scenario: Movement-phase ability evaluated only on move
+
+- **WHEN** an ability has `phase: "MOVEMENT"`
+- **THEN** the simulator evaluates it only during movement resolution
+- **AND** it is skipped during shooting, charge, fight, and command phases
+
+#### Scenario: Command-phase ability evaluated only in command
+
+- **WHEN** an ability has `phase: "COMMAND"`
+- **THEN** the simulator evaluates it only during command phase resolution
 
 ### Requirement: Unstructured (OTHER) Abilities
 
@@ -173,65 +224,97 @@ A StructuredAbilitiesData record SHALL include a `tag` field whose value is `"PE
 - **WHEN** a user saves the Process Unit screen for a unit
 - **THEN** its `tag` is `"CONFIRMED"`
 
-### Requirement: Ability Types
-
-Each ability SHALL have a `type` field indicating its context:
-- `Alone` — applies when the unit operates independently
-- `AsLeader` — applies when the unit is attached as a leader
-- `Always` — applies unconditionally
-
-#### Scenario: Ability context values
-- **WHEN** an ability's `type` is `Alone`, `AsLeader`, or `Always`
-- **THEN** the simulator applies it only in the corresponding context (operating independently, attached as a leader, or unconditionally)
-
 ### Requirement: Mortal Wounds Effect Category
 
-The `effects` array SHALL support a `mortalWounds` category for abilities that actively deal mortal wounds. A `mortalWounds` effect SHALL encode: `gameEvent` (when it fires), optional `preRoll` (gate roll), `targetScope` (which units are affected), optional `range`, base `amount`, and optional `amountByKeyword` overrides resolved most-restrictive-first.
+The `effects` array SHALL support a `mortalWounds` category for abilities that actively deal mortal wounds. A `mortalWounds` effect SHALL encode: `appliedTo`, `unitType` (target unit type filter), `hits` (how many impact attempts), `resolution` (always or roll threshold), and `damagePerSuccess` (mortal wounds per successful hit).
+
+The fields `gameEvent`, `preRoll`, `targetScope`, `range`, `amount`, and `amountByKeyword` are removed. Phase is now specified at the ability level via the `phase` field. The pre-roll gate is absorbed into `resolution`. Target scope is implicit from the selected phase. Keyword-based overrides are replaced by creating multiple effects with different `unitType` values.
 
 #### Scenario: Per-model charge roll (Hammer of Wrath pattern)
+
 - **WHEN** an ability deals mortal wounds for each model that lands a hit at the end of a charge
-- **THEN** the effect is `{ category: "mortalWounds", gameEvent: "onCharge", targetScope: "engagedUnit", amount: { kind: "perModelRoll", threshold: 4, onSuccess: 1 } }`
-- **AND** the simulator rolls one D6 per model in this unit engaged with the target, counts results at or above `threshold`, and multiplies by `onSuccess` to get the total mortal wounds
+- **THEN** the ability has `phase: "CHARGE"` and the effect is `{ category: "mortalWounds", appliedTo: "Enemy", unitType: "ALL", hits: { kind: "byStat", stat: "models" }, resolution: { kind: "roll", threshold: 4 }, damagePerSuccess: { kind: "fixed", value: 1 } }`
+- **AND** the simulator rolls one D6 per model engaged with the target, counts results at or above 4, and deals 1 mortal wound per success
 
-#### Scenario: Active ability with gate roll and keyword override (Haywire Mine pattern)
-- **WHEN** an ability is player-activated in the Shooting phase, has a gate roll, and deals different mortal wounds depending on the target's keywords
-- **THEN** the effect encodes `gameEvent: "activeAbility"`, a `preRoll` with `dice` and `threshold`, `targetScope: "selectedEnemyUnit"`, `range`, a base `amount`, and `amountByKeyword` listing each keyword override most-restrictive-first
-- **AND** the simulator first rolls the `preRoll` dice and stops if the result is below `threshold`
-- **AND** for the selected target, the simulator checks `amountByKeyword` in order and uses the first entry whose `targetKeyword` appears in the target unit's keyword list; if none match, the base `amount` is used
+#### Scenario: Active ability with gate roll and unit-type override (Haywire Mine pattern)
 
-#### Scenario: Gate roll fails — no mortal wounds
-- **WHEN** a `mortalWounds` effect has a `preRoll` and the rolled value is below `threshold`
-- **THEN** no mortal wounds are dealt and no further steps of that effect are evaluated
+- **WHEN** an ability is player-activated in the Shooting phase, has a gate roll, and deals different mortal wounds to vehicles
+- **THEN** the ability has `phase: "SHOOTING"` and two effects:
+  - `{ category: "mortalWounds", unitType: "ALL", hits: { kind: "fixed", value: 1 }, resolution: { kind: "roll", threshold: 2 }, damagePerSuccess: { kind: "roll", count: 1, dice: "D3" } }`
+  - `{ category: "mortalWounds", unitType: "VEHICLE", hits: { kind: "fixed", value: 1 }, resolution: { kind: "roll", threshold: 2 }, damagePerSuccess: { kind: "roll", count: 2, dice: "D3" } }`
+- **AND** the simulator uses the most restrictive matching `unitType` effect
 
-#### Scenario: Keyword override applies
-- **WHEN** the target unit has a keyword that matches an entry in `amountByKeyword`
-- **THEN** the matching entry's `amount` is used instead of the base `amount`
-- **AND** only the first matching entry is applied (most-restrictive-first ordering)
+#### Scenario: Multi-dice bombardment (Thunderhawk Cluster Bombs pattern)
 
-#### Scenario: No keyword override — base amount used
-- **WHEN** the target unit's keywords do not match any entry in `amountByKeyword`
-- **THEN** the base `amount` is used to calculate mortal wounds
+- **WHEN** an ability rolls multiple dice and each success deals mortal wounds
+- **THEN** the ability has `phase: "MOVEMENT"` and the effect is `{ category: "mortalWounds", unitType: "ALL", hits: { kind: "fixed", value: 6 }, resolution: { kind: "roll", threshold: 3 }, damagePerSuccess: { kind: "fixed", value: 1 } }`
 
-### Requirement: Mortal Wounds Amount Strategies
+#### Scenario: Simple flat mortal wounds
 
-A `mortalWounds` effect's `amount` SHALL be one of four strategies. `fixed` deals a constant number. `roll` sums `count` dice of size `dice` (D3 or D6) and adds `modifier`. `perModelRoll` rolls one D6 per eligible model, counts results at or above `threshold`, and multiplies by `onSuccess`. `multiDiceCount` rolls `diceCount` dice, counts results at or above `threshold`, and multiplies by `onSuccess`.
+- **WHEN** an ability deals a fixed number of mortal wounds with no roll
+- **THEN** the effect is `{ category: "mortalWounds", unitType: "ALL", hits: { kind: "fixed", value: 3 }, resolution: { kind: "always" }, damagePerSuccess: { kind: "fixed", value: 1 } }`
 
-#### Scenario: Fixed mortal wounds
-- **WHEN** `amount.kind` is `"fixed"`
-- **THEN** exactly `amount.value` mortal wounds are dealt
+#### Scenario: Unit type resolution order
 
-#### Scenario: Rolled mortal wounds (D3 variant)
-- **WHEN** `amount.kind` is `"roll"` with `dice: "D3"`
-- **THEN** the simulator rolls `count` D3 dice (default 1), sums them, adds `modifier` (default 0), and deals that many mortal wounds
+- **WHEN** a unit has two mortal wounds effects, one with `unitType: "ALL"` and another with `unitType: "VEHICLE"`
+- **THEN** the simulator checks the target's keywords and uses the most restrictive match (`VEHICLE` over `ALL`)
+- **AND** if no specific type matches, falls back to `ALL`
 
-#### Scenario: Rolled mortal wounds (2D3 variant)
-- **WHEN** `amount.kind` is `"roll"` with `dice: "D3"` and `count: 2`
-- **THEN** the simulator rolls two D3 dice, sums them, and deals that many mortal wounds
+### Requirement: Mortal Wounds Hit Strategies
 
-#### Scenario: Multi-dice count (Thunderhawk Cluster Bombs pattern — deferred)
-- **WHEN** `amount.kind` is `"multiDiceCount"`
-- **THEN** the simulator rolls `diceCount` D6 dice, counts how many meet or exceed `threshold`, multiplies by `onSuccess`, and deals that many mortal wounds
-- **AND** the `onMove` game event that triggers this pattern is deferred to v2 and not evaluated by the v1 simulator
+A `mortalWounds` effect's `hits` field SHALL be one of three strategies: `fixed` provides a constant number of impact attempts (value 1–10), `byStat` uses a unit stat value as the number of attempts (stat values: `"models"` plus all `UnitStat` values), `roll` rolls dice to determine the number (count 1–6 of D3 or D6).
+
+The `fixed` and `roll` variants are replaced by a single `notation` variant storing a dice notation string. The `byStat` variant is unchanged. `MortalWoundsHits` becomes:
+- `{ kind: 'notation'; value: string }` — a dice notation string (e.g. `"3"`, `"2D6"`, `"D3+1"`)
+- `{ kind: 'byStat'; stat: string }` — unchanged
+
+#### Scenario: Fixed hits via notation
+
+- **WHEN** `hits.kind` is `"notation"` and `hits.value` is `"6"`
+- **THEN** exactly 6 resolution attempts are made
+
+#### Scenario: Rolled hits via notation
+
+- **WHEN** `hits.kind` is `"notation"` and `hits.value` is `"2D3"`
+- **THEN** the simulator rolls 2D3, sums the result, and makes that many resolution attempts
+
+#### Scenario: Hits by stat (model count)
+
+- **WHEN** `hits.kind` is `"byStat"` and `hits.stat` is `"models"`
+- **THEN** the number of resolution attempts equals the number of eligible models in the unit
+
+### Requirement: Mortal Wounds Resolution
+
+A `mortalWounds` effect's `resolution` field SHALL be one of two strategies: `always` means every hit automatically succeeds, `roll` requires each hit to meet or exceed a threshold on 1D6.
+
+#### Scenario: Always resolves
+
+- **WHEN** `resolution.kind` is `"always"`
+- **THEN** every hit attempt automatically succeeds and deals `damagePerSuccess`
+
+#### Scenario: Roll to resolve
+
+- **WHEN** `resolution.kind` is `"roll"` with `resolution.threshold: 4`
+- **THEN** for each hit attempt, the simulator rolls 1D6; results of 4+ succeed and deal `damagePerSuccess`
+
+### Requirement: Mortal Wounds Damage Per Success
+
+A `mortalWounds` effect's `damagePerSuccess` field SHALL be a dice notation string. It defaults to `"1"`. The simulator parses it to determine how many mortal wounds each successful resolution attempt deals.
+
+#### Scenario: Fixed damage per success
+
+- **WHEN** `damagePerSuccess` is `"1"`
+- **THEN** each successful resolution attempt deals exactly 1 mortal wound
+
+#### Scenario: Rolled damage per success
+
+- **WHEN** `damagePerSuccess` is `"D3"`
+- **THEN** each successful resolution attempt rolls 1D3 and deals that many mortal wounds
+
+#### Scenario: Multiple dice damage
+
+- **WHEN** `damagePerSuccess` is `"2D3"`
+- **THEN** each successful resolution attempt rolls 2D3, sums them, and deals that many mortal wounds
 
 ### Requirement: Mortal Wounds Interact With FNP Defence
 
@@ -240,15 +323,6 @@ Each mortal wound dealt by a `mortalWounds` effect SHALL be applied individually
 #### Scenario: FNP roll per mortal wound
 - **WHEN** a unit with Feel No Pain 4+ against mortal wounds is targeted by a `mortalWounds` effect that deals 3 mortal wounds
 - **THEN** the simulator rolls three separate FNP dice, one per wound, and only wounds that fail the FNP roll are applied
-
-### Requirement: Deferred Game Events
-
-The game events `onDestroyed` (Deadly Demise) and `onMove` (movement-phase abilities) SHALL be valid values in the `MortalWoundsGameEvent` type for forward compatibility but SHALL NOT be evaluated by the v1 simulator.
-
-#### Scenario: onDestroyed event not simulated in v1
-- **WHEN** a `mortalWounds` effect has `gameEvent: "onDestroyed"`
-- **THEN** the v1 simulator does not evaluate or display it during combat resolution
-- **AND** the data is stored without modification so v2 can evaluate it without a re-structuring step
 
 ### Requirement: Auto-Apply Flag on Structured Abilities
 
@@ -285,6 +359,69 @@ A `StructuredAbility` SHALL support optional `groupId: string` and `groupOperato
 - **WHEN** abilities have no `groupId`, or share a `groupId` with `groupOperator: "AND"`
 - **THEN** the simulator evaluates each ability independently using its own trigger
 - **AND** each ability's effects apply or not based on its own trigger result
+
+### Requirement: Dice Notation Format
+
+The system SHALL support a dice notation string format for expressing fixed or random values. The format SHALL match the pattern `^(?:[1-9]\d*|(?:[1-6])?D[36](?:\+[1-9]\d*)?)$`. Valid notations: fixed integers (`1`, `10`), single die (`D3`, `D6`), multiple dice (`2D6`, `6D3`), dice with modifier (`D6+2`, `3D3+1`). The system SHALL provide `parseDiceNotation` and `serializeDiceNotation` utility functions to convert between the string format and runtime numeric values for the simulator.
+
+#### Scenario: Parse fixed notation
+
+- **WHEN** the notation string is `"3"`
+- **THEN** `parseDiceNotation` returns `{ count: 1, dice: null, modifier: 3 }` representing a fixed value of 3
+
+#### Scenario: Parse single die notation
+
+- **WHEN** the notation string is `"D6"`
+- **THEN** `parseDiceNotation` returns `{ count: 1, dice: 'D6', modifier: 0 }`
+
+#### Scenario: Parse multiple dice with modifier
+
+- **WHEN** the notation string is `"2D3+1"`
+- **THEN** `parseDiceNotation` returns `{ count: 2, dice: 'D3', modifier: 1 }`
+
+#### Scenario: Serialize fixed value
+
+- **WHEN** serializing `{ count: 1, dice: null, modifier: 5 }`
+- **THEN** `serializeDiceNotation` returns `"5"`
+
+#### Scenario: Serialize dice with count
+
+- **WHEN** serializing `{ count: 3, dice: 'D6', modifier: 0 }`
+- **THEN** `serializeDiceNotation` returns `"3D6"`
+
+#### Scenario: Invalid notation rejected
+
+- **WHEN** the notation string is `"0"`, `"D4"`, `"7D6"`, or `"abc"`
+- **THEN** `parseDiceNotation` returns `null`
+
+### Requirement: Ability Frequency
+
+A `StructuredAbility` SHALL support an optional `frequency` field with values `'always'` | `'perPhase'` | `'perRound'` | `'perBattle'`. When absent or `'always'`, the ability has no usage limit and is evaluated every time its trigger and phase conditions are met. Other values indicate the ability can only be activated once per the named scope.
+
+#### Scenario: No frequency field — unlimited use
+
+- **WHEN** a structured ability has no `frequency` field
+- **THEN** the simulator evaluates it every time its trigger and phase conditions are met, with no usage tracking
+
+#### Scenario: Frequency always — same as absent
+
+- **WHEN** a structured ability has `frequency: 'always'`
+- **THEN** the behavior is identical to an absent `frequency` field
+
+#### Scenario: Once per battle ability
+
+- **WHEN** a structured ability has `frequency: 'perBattle'` and has already been activated once during the game
+- **THEN** the simulator SHALL NOT present or evaluate the ability again for the remainder of the game
+
+#### Scenario: Once per phase ability
+
+- **WHEN** a structured ability has `frequency: 'perPhase'` and has been activated in the current phase
+- **THEN** the simulator SHALL NOT present or evaluate the ability again until the next occurrence of that phase
+
+#### Scenario: Once per round ability
+
+- **WHEN** a structured ability has `frequency: 'perRound'` and has been activated in the current battle round
+- **THEN** the simulator SHALL NOT present or evaluate the ability again until the next battle round
 
 ## Data Structures
 

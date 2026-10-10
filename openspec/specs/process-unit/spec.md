@@ -8,12 +8,16 @@ Defines the pipeline that turns a unit's BaseData into reviewable, confirmable U
 
 ### Requirement: Automatic Preprocessing on First Upload
 
-When BaseData is uploaded for a unit that has no existing StructuredAbilitiesData, the system SHALL automatically generate a StructuredAbilitiesData proposal tagged `PENDING`, without requiring any user action.
+When BaseData is uploaded for a unit that has no existing StructuredAbilitiesData, the system SHALL automatically generate a StructuredAbilitiesData proposal tagged `PENDING` and write it to Supabase first, then cache in IndexedDB.
 
-#### Scenario: New unit uploaded
-- **WHEN** a BaseData file is uploaded and matches no existing unit, or matches a unit with no StructuredAbilitiesData record
-- **THEN** a StructuredAbilitiesData record is created for that unit with `tag: "PENDING"` and its raw abilities copied from BaseData as the review queue
-- **AND** the record does not store stats, model profiles, or a wargear catalogue — those are always read live from BaseData
+#### Scenario: Auto-generate proposal with Supabase available
+- **WHEN** BaseData is uploaded for a new unit and Supabase is reachable
+- **THEN** a PENDING StructuredAbilitiesData record SHALL be written to Supabase
+- **AND** the same record SHALL be cached in IndexedDB
+
+#### Scenario: Auto-generate proposal with Supabase unavailable
+- **WHEN** BaseData is uploaded for a new unit but Supabase is unreachable
+- **THEN** the operation SHALL fail with an error message
 
 ### Requirement: Re-upload Does Not Affect Existing UnitData
 
@@ -40,20 +44,20 @@ Weapon profile abilities that match the known core/weapon ability vocabulary (e.
 
 ### Requirement: Per-Ability Review Actions
 
-On the Process Unit screen, for every raw ability present in a unit's BaseData — regardless of its BaseData `abilityType` — the user SHALL be able to choose exactly one of: structure it, remove it, or mark it as `OTHER`.
+On the Process Unit screen, for every raw ability present in a unit's BaseData — regardless of its BaseData `abilityType` — the user SHALL be able to choose exactly one of: structure it or mark it as `OTHER`. Removing a raw ability without classifying it is not permitted.
 
 #### Scenario: Structuring an ability
 - **WHEN** the user structures a raw ability
 - **THEN** one or more structured ability entries are added to the StructuredAbilitiesData proposal, each with its own `rule`, per the Fan-Out of Structured Abilities requirement
 
-#### Scenario: Removing an ability
-- **WHEN** the user removes a raw ability
-- **THEN** no entry for it appears in the StructuredAbilitiesData's abilities, and it has no effect on simulation
-
 #### Scenario: Marking an ability as OTHER
 - **WHEN** the user marks a raw ability as `OTHER`
 - **THEN** the ability's original text is preserved verbatim in the StructuredAbilitiesData for display during simulation
 - **AND** it is not translated into a `rule` and has no effect on simulation calculations
+
+#### Scenario: No delete action on raw abilities
+- **WHEN** a raw ability is in the unreviewed queue
+- **THEN** no action is offered to remove or discard it without classifying it
 
 #### Scenario: originalText set when structuring
 - **WHEN** the user structures a raw ability
@@ -95,6 +99,25 @@ On the Process Unit screen, for every raw ability present in a unit's BaseData �
 - **WHEN** the user opens the structuring form in the Process Unit screen
 - **THEN** the form background, effect row backgrounds, borders, and inputs use the application's dark theme CSS variables and are visually consistent with the rest of the screen
 
+#### Scenario: Type dropdown absent from collapsed reviewed row
+- **WHEN** a reviewed ability (structured or OTHER) is displayed in the collapsed listing
+- **THEN** no type dropdown (Always / Alone / AsLeader) is shown on the row
+- **AND** the type remains editable through the edit form for that ability
+
+#### Scenario: OTHER ability is editable
+- **WHEN** a reviewed ability has `category: "OTHER"`
+- **THEN** an "Editar" button is shown on the row alongside the existing "Quitar" button
+
+#### Scenario: Editing an OTHER ability — update text
+- **WHEN** the user opens the edit form for an OTHER ability
+- **THEN** an editable text area pre-filled with the ability's current text is shown
+- **AND** a "Guardar como OTHER" button saves the updated text back as an OtherAbility
+
+#### Scenario: Editing an OTHER ability — reclassify as structured
+- **WHEN** the user opens the edit form for an OTHER ability and clicks "Estructurar"
+- **THEN** the structuring form opens with the ability's text displayed above it
+- **AND** committing the structuring form replaces the OtherAbility with the new StructuredAbility at the same list position
+
 ### Requirement: Fan-Out of Structured Abilities
 
 A single raw ability SHALL be able to expand into multiple structured ability entries when the user structures it, each with an independent `rule`.
@@ -132,21 +155,17 @@ When a raw ability is fanned out into multiple structured ability entries, the u
 
 ### Requirement: Confirm Action
 
-Saving the Process Unit screen SHALL set the unit's StructuredAbilitiesData `tag` to `CONFIRMED`, regardless of whether the previous tag was `PENDING` or `AI_PROPOSED`.
+Saving the Process Unit screen SHALL write the StructuredAbilitiesData to Supabase first (with `tag` set to `CONFIRMED`), then update the IndexedDB cache. The save SHALL fail if the Supabase write fails, regardless of whether the previous tag was `PENDING` or `AI_PROPOSED`.
 
-#### Scenario: First confirmation from PENDING
-- **WHEN** the user saves the Process Unit screen for a unit whose StructuredAbilitiesData is `PENDING`
-- **THEN** the StructuredAbilitiesData record's `tag` is set to `CONFIRMED`
-- **AND** the reviewed abilities (structured, or OTHER) are persisted
+#### Scenario: Confirm with Supabase available
+- **WHEN** the user confirms a unit's structured abilities and Supabase is reachable
+- **THEN** the StructuredAbilitiesData SHALL be written to Supabase with `tag: CONFIRMED`
+- **AND** the IndexedDB cache SHALL be updated with the same data
 
-#### Scenario: Confirming AI proposals
-- **WHEN** the user saves the Process Unit screen for a unit whose StructuredAbilitiesData has `tag: "AI_PROPOSED"`
-- **THEN** the StructuredAbilitiesData record's `tag` is set to `"CONFIRMED"`
-- **AND** the reviewed abilities are persisted as the unit's confirmed StructuredAbilitiesData
-
-#### Scenario: Re-confirming an already-confirmed unit
-- **WHEN** the user edits and saves the Process Unit screen for a unit whose StructuredAbilitiesData is already `CONFIRMED`
-- **THEN** the StructuredAbilitiesData record is updated with the edits and `tag` remains `CONFIRMED`
+#### Scenario: Confirm with Supabase unavailable
+- **WHEN** the user confirms a unit's structured abilities but Supabase is unreachable
+- **THEN** the save SHALL fail with an error message
+- **AND** the IndexedDB cache SHALL NOT be updated
 
 ### Requirement: Manual Re-Sync
 
@@ -197,42 +216,129 @@ Wargear weapon profiles SHALL be displayed as separate ranged and melee tables (
 
 ### Requirement: Mortal Wounds Category in Structuring Form
 
-The per-ability structuring form SHALL offer a "mortalWounds" (`Heridas Mortales`) effect category. When selected, the form SHALL expose all sub-fields needed to fully specify a `MortalWoundsEffect`: `gameEvent`, optional `preRoll`, `targetScope`, optional `range`, `amount` (with strategy-specific sub-fields), and an optional repeatable `amountByKeyword` list.
+The per-ability structuring form SHALL offer a "mortalWounds" (`Heridas Mortales`) effect category. When selected, the form SHALL expose the following fields:
 
-#### Scenario: Selecting the mortal wounds category
-- **WHEN** a user selects "Heridas Mortales" as the effect category in the structuring form
-- **THEN** the form shows a `gameEvent` selector with options for `onCharge` and `activeAbility` (v1 only)
-- **AND** an optional `preRoll` toggle; when enabled, exposes a `dice` selector (D3 or D6) and a numeric `threshold` field
-- **AND** a `targetScope` selector with options `engagedUnit`, `selectedEnemyUnit`, and `allUnitsWithinRange`
-- **AND** a numeric `range` field when `targetScope` is not `engagedUnit`
-- **AND** an `amount.kind` selector with options `fixed`, `roll`, `perModelRoll`, `multiDiceCount`
-- **AND** amount sub-fields rendered according to the chosen kind
+- **Tipo Unidad**: dropdown with values `Todas`, `Vehicle`, `Infantry`, `Monster`, `Character`, `Mounted`, `Fly`, `Walker`, `Titanic`. Default: `Todas`.
+- **Impactos** (hits): a selector between two modes:
+  - `Notación`: a dice notation text input (e.g. `"1"`, `"D6"`, `"2D3+1"`). Default: `"1"`.
+  - `Por Stats`: dropdown of unit stats (`Nº Modelos`, `Movement`, `Toughness`, etc.).
+- **Resolución**: strategy selector with two options:
+  - `Siempre`: no additional fields.
+  - `Tirada`: threshold input (2–6) on 1D6.
+- **MW por éxito** (damagePerSuccess): a dice notation text input. Default: `"1"`.
 
-#### Scenario: Amount sub-fields for `fixed`
-- **WHEN** `amount.kind` is `fixed`
-- **THEN** the form shows a numeric `value` field
+The previous dropdown combos (Fijo/Tirada with sub-selectors for count and dice) are replaced by the dice notation text inputs.
 
-#### Scenario: Amount sub-fields for `roll`
-- **WHEN** `amount.kind` is `roll`
-- **THEN** the form shows a `dice` selector (D3 or D6), an optional numeric `count` field (default 1), and an optional numeric `modifier` field (default 0)
+#### Scenario: Default mortal wounds effect
 
-#### Scenario: Amount sub-fields for `perModelRoll`
-- **WHEN** `amount.kind` is `perModelRoll`
-- **THEN** the form shows a numeric `threshold` field (D6 result required to succeed) and a numeric `onSuccess` field (mortal wounds per success)
+- **WHEN** the user selects the "Heridas Mortales" category for a new effect
+- **THEN** the form shows Tipo Unidad=Todas, Impactos=Notación `"1"`, Resolución=Siempre, MW por éxito=`"1"`
 
-#### Scenario: Amount sub-fields for `multiDiceCount`
-- **WHEN** `amount.kind` is `multiDiceCount`
-- **THEN** the form shows a numeric `diceCount` field, a numeric `threshold` field, and a numeric `onSuccess` field
+#### Scenario: Configuring Haywire Mine damage
 
-#### Scenario: amountByKeyword overrides
-- **WHEN** the user adds an `amountByKeyword` entry
-- **THEN** the form shows a text `targetKeyword` field and the same amount sub-form as the base amount
-- **AND** the user can add multiple entries, which are ordered most-restrictive-first
-- **AND** the user can remove any entry
+- **WHEN** the user configures a mortal wounds effect with rolled damage
+- **THEN** the user types `"D3"` in the MW por éxito field instead of selecting Tirada > 1 > D3 from dropdowns
 
-#### Scenario: Form summary for mortal wounds effect
-- **WHEN** a structured ability has a `mortalWounds` effect
-- **THEN** the one-line summary displayed in the reviewed abilities list describes the game event, amount strategy, and any keyword overrides in human-readable form
+### Requirement: Dice Notation Input Component
+
+The structuring form SHALL provide a reusable text input for dice notation values. The input SHALL accept strings matching the dice notation format (e.g. `"3"`, `"D6"`, `"2D3+1"`). The input SHALL NOT validate on keystroke — validation occurs on save only.
+
+#### Scenario: User types valid notation
+
+- **WHEN** the user types `"2D6"` into a dice notation input
+- **THEN** the input accepts the text without error feedback
+- **AND** the value is stored as the string `"2D6"`
+
+#### Scenario: User types invalid notation
+
+- **WHEN** the user types `"abc"` into a dice notation input and saves
+- **THEN** the save is blocked and the input is highlighted with an error indicator
+- **AND** the user can correct the value and retry
+
+### Requirement: Save-Time Validation
+
+The "Guardar" action on the Process Unit screen SHALL validate all dice notation fields in structured abilities before saving. If any field contains an invalid notation string, the save SHALL be blocked and the invalid fields SHALL be visually highlighted.
+
+#### Scenario: All fields valid
+
+- **WHEN** the user clicks "Guardar" and all dice notation fields contain valid notation
+- **THEN** the save proceeds normally
+
+#### Scenario: Invalid field blocks save
+
+- **WHEN** the user clicks "Guardar" and one dice notation field contains `"D4"`
+- **THEN** the save is blocked
+- **AND** the invalid field is highlighted with an error style
+
+### Requirement: Extended Phase Selector
+
+The structuring form's phase selector (labelled "Fase") SHALL offer six values: `Cualquiera`, `Movimiento`, `Disparo`, `Carga`, `Combate`, `Mando`. These map to data model values `ANY`, `MOVEMENT`, `SHOOTING`, `CHARGE`, `FIGHT`, `COMMAND`.
+
+#### Scenario: All phases available in dropdown
+
+- **WHEN** the user opens the phase dropdown in the structuring form
+- **THEN** six options are visible: Cualquiera, Movimiento, Disparo, Carga, Combate, Mando
+
+#### Scenario: Default phase is Cualquiera
+
+- **WHEN** a new structuring row is created
+- **THEN** the phase selector defaults to Cualquiera (ANY)
+
+### Requirement: Trigger Toggle Switch
+
+The trigger input SHALL be an inline toggle switch instead of a checkbox. When the switch is OFF, the ability applies always (trigger = `"ALWAYS"`, `autoApply` = true) and no text input is shown. When the switch is ON, a text input appears inline for the trigger question. The layout is horizontal: label "Trigger", toggle switch, conditional text input — all on the same line.
+
+#### Scenario: Switch OFF hides text input
+
+- **WHEN** the trigger toggle is OFF
+- **THEN** no text input is visible for the trigger field
+- **AND** the ability's trigger is set to `"ALWAYS"` with `autoApply: true`
+
+#### Scenario: Switch ON shows text input
+
+- **WHEN** the trigger toggle is switched ON
+- **THEN** a text input appears inline to the right of the toggle
+- **AND** the user can type a trigger question
+
+#### Scenario: Default state is OFF
+
+- **WHEN** a new structuring row is created with trigger `"ALWAYS"`
+- **THEN** the toggle switch defaults to OFF
+
+### Requirement: Compact Form Layout
+
+The structuring form SHALL arrange its top-level fields in a compact row layout:
+- **Row 1**: Fase, Frecuencia, Trigger (toggle + text)
+- **Row 2**: Target, Categoría
+- **Row N**: Category-specific fields
+
+Target and Categoría SHALL always be visible on the same row regardless of the selected category. The "Contexto" dropdown is removed.
+
+#### Scenario: Target and Category on same row
+
+- **WHEN** the structuring form is displayed
+- **THEN** the Target dropdown and Categoría dropdown appear on the same horizontal row
+- **AND** this row is below the Fase/Frecuencia/Trigger row and above category-specific fields
+
+#### Scenario: No Contexto dropdown
+
+- **WHEN** the structuring form is displayed
+- **THEN** no "Contexto" (Always/AsLeader/Alone) dropdown is shown
+
+### Requirement: Heal Effect Category Stub
+
+The structuring form's category dropdown SHALL include a `Curar` (heal) option. When selected, no category-specific fields are shown beyond the Target dropdown. The effect is stored with `category: "heal"` and `appliedTo` only.
+
+#### Scenario: Heal category shows no extra fields
+
+- **WHEN** the user selects "Curar" from the category dropdown
+- **THEN** no additional fields appear below the Target/Category row
+- **AND** the effect is stored as `{ category: "heal", appliedTo: <selected target> }`
+
+#### Scenario: Heal category in dropdown
+
+- **WHEN** the user opens the category dropdown
+- **THEN** "Curar" appears as an option alongside Stats, Tirada, Palabra Clave, Mitigación Daño, and Heridas Mortales
 
 ### Requirement: BaseData Change Indicator
 
@@ -300,3 +406,68 @@ A reviewed ability with a structured `rule` SHALL be editable after it is added 
 #### Scenario: Cancelling an edit
 - **WHEN** the user cancels the edit form
 - **THEN** the ability's rule is unchanged
+
+### Requirement: Unit Keyword Category in Structuring Form
+
+The per-ability structuring form SHALL offer a "unitKeyword" (`Keyword Unidad`) effect category. When selected, the form SHALL expose:
+
+- **Keyword**: dropdown with known unit keywords: `BENEFIT OF COVER`, `STEALTH`, `SCOUTS`, `DEEP STRIKE`, `LONE OPERATIVE`, `FIGHTS FIRST`.
+- **Valor (opc.)**: optional text input for parameterised keywords (e.g. distance for SCOUTS).
+
+#### Scenario: Selecting unit keyword category
+
+- **WHEN** the user selects "Keyword Unidad" from the category dropdown
+- **THEN** the form shows a keyword dropdown and an optional value text input
+
+#### Scenario: Default unit keyword effect
+
+- **WHEN** the user selects "Keyword Unidad" for a new effect
+- **THEN** the keyword defaults to `BENEFIT OF COVER` and value is empty
+
+#### Scenario: Unit keyword in category dropdown
+
+- **WHEN** the user opens the category dropdown
+- **THEN** "Keyword Unidad" appears alongside the existing categories (Stats, Tirada, Palabra Clave, Mitigación Daño, Heridas Mortales, Curar)
+
+### Requirement: Frequency Selector in Structuring Form
+
+The structuring form SHALL include a "Frecuencia" dropdown on the first descriptor row (alongside Contexto, Fase, and Trigger). Values: `Siempre` (default), `1/fase`, `1/ronda`, `1/partida`. These map to data model values `'always'`, `'perPhase'`, `'perRound'`, `'perBattle'`.
+
+#### Scenario: Default frequency is Siempre
+
+- **WHEN** a new structuring row is created
+- **THEN** the frequency selector defaults to "Siempre"
+
+#### Scenario: All frequency options available
+
+- **WHEN** the user opens the frequency dropdown
+- **THEN** four options are visible: Siempre, 1/fase, 1/ronda, 1/partida
+
+#### Scenario: Frequency shown in ability summary
+
+- **WHEN** a reviewed ability has a non-default frequency (not 'always')
+- **THEN** the one-line summary includes the frequency label (e.g. "[1/partida]")
+
+#### Scenario: Frequency preserved on edit
+
+- **WHEN** the user edits a reviewed ability that has `frequency: 'perBattle'`
+- **THEN** the frequency dropdown shows "1/partida" pre-selected
+
+### Requirement: Damage Roll in Dice Modifier Form
+
+The dice modifier effect's roll dropdown SHALL include "Daño" and "Hazard" options mapping to `'damage'` and `'hazard'`, alongside the existing "Impactar", "Herir", and "Salvación" options.
+
+#### Scenario: All roll options in dropdown
+
+- **WHEN** the user opens the roll dropdown for a dice modifier effect
+- **THEN** five options are visible: Impactar, Herir, Salvación, Daño, Hazard
+
+#### Scenario: Structuring a reroll damage ability
+
+- **WHEN** the user structures "re-roll damage rolls" for ranged attacks
+- **THEN** the user selects roll=Daño, action=Reroll todos, arma=Distancia
+
+#### Scenario: Structuring a hazard roll modifier
+
+- **WHEN** the user structures an ability that modifies the hazard (overcharge) roll
+- **THEN** the user selects roll=Hazard and the appropriate action

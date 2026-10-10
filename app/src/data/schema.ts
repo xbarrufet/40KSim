@@ -102,9 +102,7 @@ export interface WargearEntry {
   }
 }
 
-export type AbilityContext = 'Alone' | 'AsLeader' | 'Always'
-
-export type AttackType = 'SHOOTING' | 'FIGHT' | 'ANY'
+export type Phase = 'ANY' | 'MOVEMENT' | 'SHOOTING' | 'CHARGE' | 'FIGHT' | 'COMMAND'
 
 export type AppliesTo = 'SelfModel' | 'SelfUnit' | 'Enemy' | 'Ally'
 
@@ -126,7 +124,7 @@ export interface StatModifierEffect {
 export interface DiceModifierEffect {
   category: 'diceModifier'
   appliedTo: AppliesTo
-  roll: 'toHit' | 'toWound' | 'savingThrow'
+  roll: 'toHit' | 'toWound' | 'savingThrow' | 'damage' | 'hazard'
   action: 'rerollOnes' | 'rerollFailed' | 'rerollAll' | 'addToRoll' | 'subtractFromRoll' | 'autoSuccess' | 'ignoreModifiers'
   attackType?: 'RANGE' | 'MELEE' | 'ALL'
 }
@@ -147,45 +145,51 @@ export interface DamageMitigationEffect {
   condition?: 'any' | 'vsMortalWounds' | 'vsPsychic'
 }
 
-export type MortalWoundsGameEvent = 'onCharge' | 'activeAbility' | 'onDestroyed' | 'onMove'
+export type MortalWoundsUnitType = 'ALL' | 'VEHICLE' | 'INFANTRY' | 'MONSTER' | 'CHARACTER' | 'MOUNTED' | 'FLY' | 'WALKER' | 'TITANIC'
 
-export type MortalWoundsTargetScope = 'engagedUnit' | 'selectedEnemyUnit' | 'allUnitsWithinRange' | 'movedOverUnit'
+export type MortalWoundsHits =
+  | { kind: 'notation'; value: string }
+  | { kind: 'byStat'; stat: string }
 
-export type MortalWoundsAmount =
-  | { kind: 'fixed'; value: number }
-  | { kind: 'roll'; dice: 'D3' | 'D6'; count?: number; modifier?: number }
-  | { kind: 'perModelRoll'; threshold: number; onSuccess: number }
-  | { kind: 'multiDiceCount'; diceCount: number; threshold: number; onSuccess: number }
-
-export interface MortalWoundsAmountByKeyword {
-  targetKeyword: string
-  amount: MortalWoundsAmount
-}
-
-export interface MortalWoundsPreRoll {
-  dice: 'D6' | 'D3'
-  threshold: number
-}
+export type MortalWoundsResolution =
+  | { kind: 'always' }
+  | { kind: 'roll'; threshold: number }
 
 export interface MortalWoundsEffect {
   category: 'mortalWounds'
   appliedTo: AppliesTo
-  gameEvent: MortalWoundsGameEvent
-  preRoll?: MortalWoundsPreRoll
-  targetScope: MortalWoundsTargetScope
-  range?: number
-  amount: MortalWoundsAmount
-  amountByKeyword?: MortalWoundsAmountByKeyword[]
+  unitType: MortalWoundsUnitType
+  hits: MortalWoundsHits
+  resolution: MortalWoundsResolution
+  damagePerSuccess: string
 }
 
-export type Effect = StatModifierEffect | DiceModifierEffect | WeaponKeywordEffect | DamageMitigationEffect | MortalWoundsEffect
+export type KnownUnitKeyword = 'BENEFIT OF COVER' | 'STEALTH' | 'SCOUTS' | 'DEEP STRIKE' | 'LONE OPERATIVE' | 'FIGHTS FIRST'
+
+export const KNOWN_UNIT_KEYWORDS: KnownUnitKeyword[] = ['BENEFIT OF COVER', 'STEALTH', 'SCOUTS', 'DEEP STRIKE', 'LONE OPERATIVE', 'FIGHTS FIRST']
+
+export interface UnitKeywordEffect {
+  category: 'unitKeyword'
+  appliedTo: AppliesTo
+  keyword: KnownUnitKeyword
+  value: string | null
+}
+
+export interface HealEffect {
+  category: 'heal'
+  appliedTo: AppliesTo
+}
+
+export type Effect = StatModifierEffect | DiceModifierEffect | WeaponKeywordEffect | UnitKeywordEffect | DamageMitigationEffect | MortalWoundsEffect | HealEffect
+
+export type Frequency = 'always' | 'perPhase' | 'perRound' | 'perBattle'
 
 export interface StructuredAbility {
-  type: AbilityContext
   name: string
-  attackType: AttackType
+  phase: Phase
   trigger: string
   autoApply?: boolean
+  frequency?: Frequency
   groupId?: string
   groupOperator?: 'AND' | 'OR'
   effects: Effect[]
@@ -193,7 +197,6 @@ export interface StructuredAbility {
 }
 
 export interface OtherAbility {
-  type: AbilityContext
   name: string
   category: 'OTHER'
   text: string

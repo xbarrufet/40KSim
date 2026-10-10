@@ -10,24 +10,27 @@ import {
   type DatasheetContext,
 } from '../data/preprocessBaseData'
 import type {
-  AbilityContext,
   AppliesTo,
-  AttackType,
+  Phase,
   DamageMitigationEffect,
   DiceModifierEffect,
   Effect,
-  MortalWoundsAmount,
-  MortalWoundsAmountByKeyword,
-  MortalWoundsEffect,
+  Frequency,
+  MortalWoundsHits,
+  MortalWoundsResolution,
+  MortalWoundsUnitType,
   OtherAbility,
   StatModifierEffect,
   StructuredAbilitiesData,
+  UnitKeywordEffect,
   UnitStat,
   WargearEntry,
   WeaponKeywordEffect,
   WeaponStat,
   WeaponTarget,
 } from '../data/schema'
+import { isValidDiceNotation } from '../data/diceNotation'
+import { KNOWN_UNIT_KEYWORDS, type KnownUnitKeyword } from '../data/schema'
 import { KNOWN_WEAPON_KEYWORDS, type KnownAttribute } from '../data/weaponKeywords'
 import {
   buildOtherAbility,
@@ -76,16 +79,18 @@ function defaultEffectForCategory(category: Effect['category']): Effect {
     case 'damageMitigation':
       return { category, appliedTo: 'SelfModel', kind: 'fnp', value: 5, condition: 'any' }
     case 'mortalWounds':
-      return { category, appliedTo: 'Enemy', gameEvent: 'onCharge', targetScope: 'engagedUnit', amount: { kind: 'fixed', value: 1 } }
+      return { category, appliedTo: 'Enemy', unitType: 'ALL', hits: { kind: 'notation', value: '1' }, resolution: { kind: 'always' }, damagePerSuccess: '1' }
+    case 'unitKeyword':
+      return { category, appliedTo: 'SelfUnit', keyword: 'BENEFIT OF COVER' as const, value: null }
+    case 'heal':
+      return { category, appliedTo: 'SelfUnit' }
   }
 }
 
-function describeAmount(amount: MortalWoundsAmount): string {
-  switch (amount.kind) {
-    case 'fixed': return `${amount.value}MW`
-    case 'roll': return `${amount.count && amount.count > 1 ? amount.count : ''}${amount.dice}${amount.modifier ? `+${amount.modifier}` : ''}MW`
-    case 'perModelRoll': return `perModel(${amount.threshold}+→${amount.onSuccess}MW)`
-    case 'multiDiceCount': return `${amount.diceCount}d(${amount.threshold}+→${amount.onSuccess}MW)`
+function describeHits(hits: MortalWoundsHits): string {
+  switch (hits.kind) {
+    case 'notation': return hits.value
+    case 'byStat': return hits.stat
   }
 }
 
@@ -100,22 +105,27 @@ function describeEffect(effect: Effect): string {
     case 'damageMitigation':
       return `${effect.kind}${effect.value !== undefined ? ` ${effect.value}` : ''}${effect.condition ? ` vs ${effect.condition}` : ''}`
     case 'mortalWounds': {
-      const amountStr = describeAmount(effect.amount)
-      const kwStr = effect.amountByKeyword && effect.amountByKeyword.length > 0
-        ? ` (+${effect.amountByKeyword.length} override${effect.amountByKeyword.length > 1 ? 's' : ''})`
-        : ''
-      return `MW ${effect.gameEvent} ${effect.targetScope} ${amountStr}${kwStr}`
+      const res = effect.resolution.kind === 'always' ? '' : ` ${effect.resolution.threshold}+`
+      const unitStr = effect.unitType !== 'ALL' ? ` vs${effect.unitType}` : ''
+      return `MW ${describeHits(effect.hits)}imp${res} →${effect.damagePerSuccess}MW${unitStr}`
     }
+    case 'unitKeyword':
+      return `${effect.keyword}${effect.value ? ` ${effect.value}` : ''}`
+    case 'heal':
+      return 'Curar (stub)'
   }
 }
 
-function describeAbility(ability: { trigger: string; autoApply?: boolean; attackType: string; effects: Effect[] }): string {
+const FREQUENCY_LABELS: Record<string, string> = { perPhase: '1/fase', perRound: '1/ronda', perBattle: '1/partida' }
+
+function describeAbility(ability: { trigger: string; autoApply?: boolean; phase: string; frequency?: string; effects: Effect[] }): string {
   const triggerPart = ability.trigger === 'ALWAYS'
     ? ''
     : ability.autoApply
       ? ' [AUTO]'
       : ` [${ability.trigger}]`
-  return `${ability.attackType}${triggerPart} · ${ability.effects.map(describeEffect).join(', ')}`
+  const freqPart = ability.frequency && ability.frequency !== 'always' ? ` [${FREQUENCY_LABELS[ability.frequency] ?? ability.frequency}]` : ''
+  return `${ability.phase}${freqPart}${triggerPart} · ${ability.effects.map(describeEffect).join(', ')}`
 }
 
 export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessUnitViewProps) {
@@ -135,6 +145,7 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
   const [editingOtherText, setEditingOtherText] = useState<string>('')
   const [baseDataAbilitiesMap, setBaseDataAbilitiesMap] = useState<Record<string, string>>({})
   const [baseDataChanged, setBaseDataChanged] = useState(false)
+  const [validationError, setValidationError] = useState<string | null>(null)
 
   useEffect(() => {
     const loadData = async () => {
@@ -194,7 +205,7 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
     const raw = draft.rawAbilities[index]
     setStructuringIndex(index)
     setStructuringRows([
-      { name: raw.name, type: 'Always', attackType: 'ANY', trigger: 'ALWAYS', effects: [defaultEffectForCategory('statModifier')] },
+      { name: raw.name, phase: 'ANY', trigger: 'ALWAYS', effects: [defaultEffectForCategory('statModifier')] },
     ])
   }
 
@@ -234,7 +245,7 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
     const ability = draft.abilities[editingOtherIndex] as OtherAbility
     setEditingAbilityIndex(editingOtherIndex)
     setEditingAbilityText(editingOtherText)
-    setStructuringRows([{ name: ability.name, type: ability.type, attackType: 'ANY', trigger: 'ALWAYS', effects: [defaultEffectForCategory('statModifier')] }])
+    setStructuringRows([{ name: ability.name, phase: 'ANY', trigger: 'ALWAYS', effects: [defaultEffectForCategory('statModifier')] }])
     cancelEditingOther()
   }
 
@@ -243,13 +254,15 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
     if (!('effects' in ability)) return
     setEditingAbilityIndex(index)
     const baseName = ability.name.replace(/\s+\(efecto \d+\)$/, '')
+    const baseDataText = baseDataAbilitiesMap[ability.name]
+      ?? baseDataAbilitiesMap[baseName]
+      ?? Object.entries(baseDataAbilitiesMap).find(([k]) => k.toLowerCase() === baseName.toLowerCase())?.[1]
     setEditingAbilityText(
       ability.originalText ??
-      baseDataAbilitiesMap[ability.name] ??
-      baseDataAbilitiesMap[baseName] ??
+      baseDataText ??
       (draft.rawAbilities.find((r) => r.name === baseName || r.name === ability.name)?.text ?? null)
     )
-    setStructuringRows([{ name: ability.name, type: ability.type, attackType: ability.attackType, trigger: ability.trigger, autoApply: ability.autoApply, groupId: ability.groupId, groupOperator: ability.groupOperator, effects: [...ability.effects] }])
+    setStructuringRows([{ name: ability.name, phase: ability.phase, trigger: ability.trigger, autoApply: ability.autoApply, frequency: ability.frequency, groupId: ability.groupId, groupOperator: ability.groupOperator, effects: [...ability.effects] }])
   }
 
   const commitEdit = () => {
@@ -273,7 +286,6 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
     if (editingAbilityIndex === null) return
     const ability = draft.abilities[editingAbilityIndex]
     const otherAbility: OtherAbility = {
-      type: ability.type,
       name: ability.name,
       category: 'OTHER',
       text: editingAbilityText ?? '',
@@ -294,7 +306,7 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
         : structuringRows[0]?.name ?? ''
     setStructuringRows((rows) => [
       ...rows,
-      { name: `${baseName} (efecto ${rows.length + 1})`, type: 'Always', attackType: 'ANY', trigger: 'ALWAYS', effects: [defaultEffectForCategory('statModifier')] },
+      { name: `${baseName} (efecto ${rows.length + 1})`, phase: 'ANY', trigger: 'ALWAYS', effects: [defaultEffectForCategory('statModifier')] },
     ])
   }
 
@@ -385,7 +397,27 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
     setBaseDataChanged(false)
   }
 
+  const validateDiceNotations = (): boolean => {
+    for (const ability of draft.abilities) {
+      if (!('effects' in ability)) continue
+      for (const effect of ability.effects) {
+        if (effect.category !== 'mortalWounds') continue
+        if (effect.hits.kind === 'notation' && !isValidDiceNotation(effect.hits.value)) {
+          setValidationError(`"${effect.hits.value}" no es notación de dados válida en "${ability.name}" (Impactos)`)
+          return false
+        }
+        if (!isValidDiceNotation(effect.damagePerSuccess)) {
+          setValidationError(`"${effect.damagePerSuccess}" no es notación de dados válida en "${ability.name}" (MW por éxito)`)
+          return false
+        }
+      }
+    }
+    setValidationError(null)
+    return true
+  }
+
   const save = async () => {
+    if (!validateDiceNotations()) return
     setSaving(true)
     try {
       const baseDataRaw = await getBaseData(faction.slug, unitSlug)
@@ -526,6 +558,9 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
         </ul>
       </section>
 
+      {validationError && (
+        <div className="board-alert">{validationError}</div>
+      )}
       <div className="modal-actions">
         <button type="button" onClick={onBack}>Cancelar</button>
         <button type="button" className="confirm-btn" disabled={saving} onClick={save}>
@@ -573,55 +608,72 @@ function StructuringForm({ rows, onChangeRow, onAddRow, onAddEffect, onRemoveEff
           </div>
           <div className="structuring-row-descriptors">
             <label>
-              Contexto
-              <select value={row.type} onChange={(e) => onChangeRow(rowIndex, { type: e.target.value as AbilityContext })}>
-                <option value="Always">Siempre</option>
-                <option value="AsLeader">Como Líder</option>
-                <option value="Alone">Como Lone Operative</option>
-              </select>
-            </label>
-            <label>
               Fase
-              <select value={row.attackType} onChange={(e) => onChangeRow(rowIndex, { attackType: e.target.value as AttackType })}>
+              <select value={row.phase} onChange={(e) => onChangeRow(rowIndex, { phase: e.target.value as Phase })}>
                 <option value="ANY">Cualquiera</option>
+                <option value="MOVEMENT">Movimiento</option>
                 <option value="SHOOTING">Disparo</option>
+                <option value="CHARGE">Carga</option>
                 <option value="FIGHT">Combate</option>
+                <option value="COMMAND">Mando</option>
               </select>
             </label>
             <label>
-              Trigger
-              <input
-                value={row.trigger}
-                disabled={!!row.autoApply}
-                onChange={(e) => onChangeRow(rowIndex, { trigger: e.target.value })}
-              />
+              Frecuencia
+              <select value={row.frequency ?? 'always'} onChange={(e) => onChangeRow(rowIndex, { frequency: e.target.value === 'always' ? undefined : e.target.value as Frequency })}>
+                <option value="always">Siempre</option>
+                <option value="perPhase">1/fase</option>
+                <option value="perRound">1/ronda</option>
+                <option value="perBattle">1/partida</option>
+              </select>
             </label>
-            <label>
-              <input
-                type="checkbox"
-                checked={!!row.autoApply}
-                onChange={() => onChangeRow(rowIndex, { autoApply: !row.autoApply })}
-              />
-              {' '}Aplicar siempre (sin preguntar)
-            </label>
+            <div className="trigger-row">
+              <span className="trigger-label">Trigger</span>
+              <button
+                type="button"
+                className={`toggle-switch ${row.trigger !== 'ALWAYS' ? 'is-on' : ''}`}
+                onClick={() => {
+                  if (row.trigger === 'ALWAYS') {
+                    onChangeRow(rowIndex, { trigger: '', autoApply: false })
+                  } else {
+                    onChangeRow(rowIndex, { trigger: 'ALWAYS', autoApply: true })
+                  }
+                }}
+                aria-label="Toggle trigger"
+              >
+                <span className="toggle-knob" />
+              </button>
+              {row.trigger !== 'ALWAYS' && (
+                <input
+                  className="trigger-input"
+                  value={row.trigger}
+                  placeholder="Condición del trigger..."
+                  onChange={(e) => onChangeRow(rowIndex, { trigger: e.target.value })}
+                />
+              )}
+            </div>
           </div>
           <div className="structuring-effects-list">
             {row.effects.map((effect, effectIndex) => (
               <div key={effectIndex} className="structuring-effect-row">
-                {TARGET_SELECT(effect, (e) => onUpdateEffect(rowIndex, effectIndex, e))}
-                <label>
-                  Categoría
-                  <select
-                    value={effect.category}
-                    onChange={(e) => onUpdateEffect(rowIndex, effectIndex, { ...defaultEffectForCategory(e.target.value as Effect['category']), appliedTo: effect.appliedTo })}
-                  >
-                    <option value="statModifier">Stats</option>
-                    <option value="diceModifier">Tirada</option>
-                    <option value="weaponKeyword">Palabra Clave</option>
-                    <option value="damageMitigation">Mitigación Daño</option>
-                    <option value="mortalWounds">Heridas Mortales</option>
-                  </select>
-                </label>
+                <div className="effect-target-category-row">
+                  {TARGET_SELECT(effect, (e) => onUpdateEffect(rowIndex, effectIndex, e))}
+                  <label>
+                    Categoría
+                    <select
+                      value={effect.category}
+                      onChange={(e) => onUpdateEffect(rowIndex, effectIndex, { ...defaultEffectForCategory(e.target.value as Effect['category']), appliedTo: effect.appliedTo })}
+                    >
+                      <option value="statModifier">Stats</option>
+                      <option value="diceModifier">Tirada</option>
+                      <option value="weaponKeyword">Palabra Clave</option>
+                      <option value="unitKeyword">Keyword Unidad</option>
+                      <option value="damageMitigation">Mitigación Daño</option>
+                      <option value="mortalWounds">Heridas Mortales</option>
+                      <option value="heal">Curar</option>
+                    </select>
+                  </label>
+                </div>
                 <EffectFields effect={effect} onChange={(e) => onUpdateEffect(rowIndex, effectIndex, e)} />
                 {row.effects.length > 1 && (
                   <button type="button" className="effect-remove-btn" onClick={() => onRemoveEffect(rowIndex, effectIndex)}>✕</button>
@@ -742,6 +794,8 @@ function EffectFields({ effect, onChange }: { effect: Effect; onChange: (e: Effe
               <option value="toHit">Impactar</option>
               <option value="toWound">Herir</option>
               <option value="savingThrow">Salvación</option>
+              <option value="damage">Daño</option>
+              <option value="hazard">Hazard</option>
             </select>
           </label>
           <label>
@@ -789,6 +843,21 @@ function EffectFields({ effect, onChange }: { effect: Effect; onChange: (e: Effe
           </label>
         </>
       )
+    case 'unitKeyword':
+      return (
+        <>
+          <label>
+            Keyword
+            <select value={effect.keyword} onChange={(e) => onChange({ ...effect, keyword: e.target.value as KnownUnitKeyword })}>
+              {KNOWN_UNIT_KEYWORDS.map((k) => <option key={k} value={k}>{k}</option>)}
+            </select>
+          </label>
+          <label>
+            Valor (opc.)
+            <input value={effect.value ?? ''} onChange={(e) => onChange({ ...effect, value: e.target.value || null } as UnitKeywordEffect)} />
+          </label>
+        </>
+      )
     case 'damageMitigation':
       return (
         <>
@@ -819,161 +888,114 @@ function EffectFields({ effect, onChange }: { effect: Effect; onChange: (e: Effe
           )}
         </>
       )
-    case 'mortalWounds':
+    case 'mortalWounds': {
       return (
         <>
           <label>
-            Evento
-            <select value={effect.gameEvent} onChange={(e) => onChange({ ...effect, gameEvent: e.target.value as MortalWoundsEffect['gameEvent'] })}>
-              <option value="onCharge">Al cargar</option>
-              <option value="activeAbility">Habilidad activa</option>
+            Tipo Unidad
+            <select value={effect.unitType} onChange={(e) => onChange({ ...effect, unitType: e.target.value as MortalWoundsUnitType })}>
+              <option value="ALL">Todas</option>
+              <option value="VEHICLE">Vehicle</option>
+              <option value="INFANTRY">Infantry</option>
+              <option value="MONSTER">Monster</option>
+              <option value="CHARACTER">Character</option>
+              <option value="MOUNTED">Mounted</option>
+              <option value="FLY">Fly</option>
+              <option value="WALKER">Walker</option>
+              <option value="TITANIC">Titanic</option>
             </select>
           </label>
-          <label>
-            Objetivo
-            <select value={effect.targetScope} onChange={(e) => onChange({ ...effect, targetScope: e.target.value as MortalWoundsEffect['targetScope'], range: undefined })}>
-              <option value="engagedUnit">Unidad trabada</option>
-              <option value="selectedEnemyUnit">Unidad enemiga seleccionada</option>
-            </select>
-          </label>
-          {effect.targetScope === 'selectedEnemyUnit' && (
-            <label>
-              Rango (cm)
-              <input type="number" value={effect.range ?? ''} onChange={(e) => onChange({ ...effect, range: e.target.value ? Number(e.target.value) : undefined })} />
-            </label>
-          )}
-          <label>
-            Pre-tirada
-            <input type="checkbox" checked={!!effect.preRoll} onChange={(e) => onChange({ ...effect, preRoll: e.target.checked ? { dice: 'D6', threshold: 2 } : undefined })} />
-          </label>
-          {effect.preRoll && (
-            <>
-              <label>
-                Dado
-                <select value={effect.preRoll.dice} onChange={(e) => onChange({ ...effect, preRoll: { ...effect.preRoll!, dice: e.target.value as 'D6' | 'D3' } })}>
-                  <option value="D6">D6</option>
-                  <option value="D3">D3</option>
-                </select>
-              </label>
-              <label>
-                Umbral (N+)
-                <input type="number" min={2} max={6} value={effect.preRoll.threshold} onChange={(e) => onChange({ ...effect, preRoll: { ...effect.preRoll!, threshold: Number(e.target.value) } })} />
-              </label>
-            </>
-          )}
           <fieldset>
-            <legend>Cantidad base</legend>
-            <MortalWoundsAmountFields
-              amount={effect.amount}
-              onChange={(amount) => onChange({ ...effect, amount })}
-            />
+            <legend>Impactos</legend>
+            <MortalWoundsHitsFields hits={effect.hits} onChange={(hits) => onChange({ ...effect, hits })} />
           </fieldset>
           <fieldset>
-            <legend>Modificadores por keyword</legend>
-            {(effect.amountByKeyword ?? []).map((entry, i) => (
-              <div key={i} className="mw-keyword-entry">
-                <label>
-                  Keyword
-                  <input value={entry.targetKeyword} onChange={(e) => {
-                    const updated = [...(effect.amountByKeyword ?? [])]
-                    updated[i] = { ...entry, targetKeyword: e.target.value }
-                    onChange({ ...effect, amountByKeyword: updated })
-                  }} />
-                </label>
-                <MortalWoundsAmountFields
-                  amount={entry.amount}
-                  onChange={(amount) => {
-                    const updated = [...(effect.amountByKeyword ?? [])]
-                    updated[i] = { ...entry, amount }
-                    onChange({ ...effect, amountByKeyword: updated })
-                  }}
-                />
-                <button type="button" onClick={() => {
-                  const updated = (effect.amountByKeyword ?? []).filter((_, j) => j !== i)
-                  onChange({ ...effect, amountByKeyword: updated.length ? updated : undefined })
-                }}>Quitar</button>
-              </div>
-            ))}
-            <button type="button" onClick={() => {
-              const newEntry: MortalWoundsAmountByKeyword = { targetKeyword: '', amount: { kind: 'fixed', value: 1 } }
-              onChange({ ...effect, amountByKeyword: [...(effect.amountByKeyword ?? []), newEntry] })
-            }}>+ Añadir override</button>
+            <legend>Resolución</legend>
+            <MortalWoundsResolutionFields resolution={effect.resolution} onChange={(resolution) => onChange({ ...effect, resolution })} />
           </fieldset>
+          <label>
+            MW por éxito
+            <DiceNotationInput value={effect.damagePerSuccess} onChange={(damagePerSuccess) => onChange({ ...effect, damagePerSuccess })} />
+          </label>
         </>
       )
+    }
+    case 'heal':
+      return null
   }
 }
 
-function MortalWoundsAmountFields({ amount, onChange }: { amount: MortalWoundsAmount; onChange: (a: MortalWoundsAmount) => void }) {
+function DiceNotationInput({ value, onChange, error }: { value: string; onChange: (v: string) => void; error?: boolean }) {
+  return (
+    <input
+      className={`dice-notation-input${error ? ' dice-notation-error' : ''}`}
+      value={value}
+      placeholder="ej: 3, D6, 2D3+1"
+      onChange={(e) => onChange(e.target.value)}
+    />
+  )
+}
+
+function MortalWoundsHitsFields({ hits, onChange }: { hits: MortalWoundsHits; onChange: (h: MortalWoundsHits) => void }) {
   return (
     <>
       <label>
-        Estrategia
-        <select value={amount.kind} onChange={(e) => {
-          const kind = e.target.value as MortalWoundsAmount['kind']
-          if (kind === 'fixed') onChange({ kind, value: 1 })
-          else if (kind === 'roll') onChange({ kind, dice: 'D6' })
-          else if (kind === 'perModelRoll') onChange({ kind, threshold: 4, onSuccess: 1 })
-          else onChange({ kind, diceCount: 6, threshold: 4, onSuccess: 1 })
+        Tipo
+        <select value={hits.kind} onChange={(e) => {
+          const kind = e.target.value as MortalWoundsHits['kind']
+          if (kind === 'notation') onChange({ kind, value: '1' })
+          else onChange({ kind, stat: 'models' })
         }}>
-          <option value="fixed">Fijo</option>
-          <option value="roll">Tirada de dado</option>
-          <option value="perModelRoll">Por modelo</option>
-          <option value="multiDiceCount">Múltiples dados</option>
+          <option value="notation">Notación</option>
+          <option value="byStat">Por Stats</option>
         </select>
       </label>
-      {amount.kind === 'fixed' && (
+      {hits.kind === 'notation' && (
         <label>
-          Heridas
-          <input type="number" min={1} value={amount.value} onChange={(e) => onChange({ ...amount, value: Number(e.target.value) })} />
+          Valor
+          <DiceNotationInput value={hits.value} onChange={(value) => onChange({ ...hits, value })} />
         </label>
       )}
-      {amount.kind === 'roll' && (
-        <>
-          <label>
-            Dado
-            <select value={amount.dice} onChange={(e) => onChange({ ...amount, dice: e.target.value as 'D3' | 'D6' })}>
-              <option value="D3">D3</option>
-              <option value="D6">D6</option>
-            </select>
-          </label>
-          <label>
-            Cantidad (opc.)
-            <input type="number" min={1} value={amount.count ?? 1} onChange={(e) => onChange({ ...amount, count: Number(e.target.value) || undefined })} />
-          </label>
-          <label>
-            Modificador (opc.)
-            <input type="number" value={amount.modifier ?? 0} onChange={(e) => onChange({ ...amount, modifier: Number(e.target.value) || undefined })} />
-          </label>
-        </>
+      {hits.kind === 'byStat' && (
+        <label>
+          Stat
+          <select value={hits.stat} onChange={(e) => onChange({ ...hits, stat: e.target.value })}>
+            <option value="models">Nº Modelos</option>
+            <option value="Movement">Movement</option>
+            <option value="Toughness">Toughness</option>
+            <option value="Save">Save</option>
+            <option value="Invulnerable">Invulnerable</option>
+            <option value="Wounds">Wounds</option>
+            <option value="ObjectiveControl">ObjectiveControl</option>
+            <option value="Leadership">Leadership</option>
+          </select>
+        </label>
       )}
-      {amount.kind === 'perModelRoll' && (
-        <>
-          <label>
-            Umbral (N+)
-            <input type="number" min={2} max={6} value={amount.threshold} onChange={(e) => onChange({ ...amount, threshold: Number(e.target.value) })} />
-          </label>
-          <label>
-            HM por éxito
-            <input type="number" min={1} value={amount.onSuccess} onChange={(e) => onChange({ ...amount, onSuccess: Number(e.target.value) })} />
-          </label>
-        </>
-      )}
-      {amount.kind === 'multiDiceCount' && (
-        <>
-          <label>
-            Nº dados
-            <input type="number" min={1} value={amount.diceCount} onChange={(e) => onChange({ ...amount, diceCount: Number(e.target.value) })} />
-          </label>
-          <label>
-            Umbral (N+)
-            <input type="number" min={2} max={6} value={amount.threshold} onChange={(e) => onChange({ ...amount, threshold: Number(e.target.value) })} />
-          </label>
-          <label>
-            HM por éxito
-            <input type="number" min={1} value={amount.onSuccess} onChange={(e) => onChange({ ...amount, onSuccess: Number(e.target.value) })} />
-          </label>
-        </>
+    </>
+  )
+}
+
+function MortalWoundsResolutionFields({ resolution, onChange }: { resolution: MortalWoundsResolution; onChange: (r: MortalWoundsResolution) => void }) {
+  return (
+    <>
+      <label>
+        Tipo
+        <select value={resolution.kind} onChange={(e) => {
+          const kind = e.target.value as MortalWoundsResolution['kind']
+          if (kind === 'always') onChange({ kind })
+          else onChange({ kind, threshold: 4 })
+        }}>
+          <option value="always">Siempre</option>
+          <option value="roll">Tirada</option>
+        </select>
+      </label>
+      {resolution.kind === 'roll' && (
+        <label>
+          Umbral (N+) en 1D6
+          <select value={resolution.threshold} onChange={(e) => onChange({ ...resolution, threshold: Number(e.target.value) })}>
+            {[2, 3, 4, 5, 6].map((v) => <option key={v} value={v}>{v}+</option>)}
+          </select>
+        </label>
       )}
     </>
   )

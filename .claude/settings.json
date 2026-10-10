@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(openspec context *)"
+      "Bash(openspec context *)",
+      "Bash(openspec instructions *)",
+      "Bash(openspec show *)"
     ]
   }
 }
