@@ -108,7 +108,7 @@ export type AppliesTo = 'SelfModel' | 'SelfUnit' | 'Enemy' | 'Ally'
 
 export type UnitStat = 'Movement' | 'Toughness' | 'Save' | 'Invulnerable' | 'Wounds' | 'ObjectiveControl' | 'Leadership'
 
-export type WeaponTarget = 'ALL' | 'RANGE' | 'MELEE'
+export type WeaponTarget = 'ALL' | 'RANGE' | 'MELEE' | (string & {})
 
 export type WeaponStat = 'Strength' | 'Damage' | 'Range' | 'Attacks' | 'AP' | 'Skill'
 
@@ -119,14 +119,16 @@ export interface StatModifierEffect {
   stat: UnitStat | WeaponStat
   mode: 'add' | 'subtract' | 'setValue' | 'halve'
   value?: number
+  targetCondition?: TargetCondition
 }
 
 export interface DiceModifierEffect {
   category: 'diceModifier'
   appliedTo: AppliesTo
-  roll: 'toHit' | 'toWound' | 'savingThrow' | 'damage' | 'hazard'
+  roll: 'toHit' | 'toWound' | 'savingThrow' | 'damage' | 'hazard' | 'charge' | 'battleshock'
   action: 'rerollOnes' | 'rerollFailed' | 'rerollAll' | 'addToRoll' | 'subtractFromRoll' | 'autoSuccess' | 'ignoreModifiers'
-  attackType?: 'RANGE' | 'MELEE' | 'ALL'
+  attackType?: WeaponTarget
+  targetCondition?: TargetCondition
 }
 
 export interface WeaponKeywordEffect {
@@ -135,6 +137,7 @@ export interface WeaponKeywordEffect {
   weaponTarget: WeaponTarget
   keyword: KnownAttribute
   value: string | null
+  targetCondition?: TargetCondition
 }
 
 export interface DamageMitigationEffect {
@@ -143,6 +146,15 @@ export interface DamageMitigationEffect {
   kind: 'fnp' | 'damageReduction' | 'damageHalved' | 'fightOnDeath'
   value?: number
   condition?: 'any' | 'vsMortalWounds' | 'vsPsychic'
+}
+
+export type TargetConditionKeyword = 'VEHICLE' | 'INFANTRY' | 'MONSTER' | 'CHARACTER' | 'MOUNTED' | 'FLY' | 'WALKER' | 'TITANIC'
+
+export const TARGET_CONDITION_KEYWORDS: TargetConditionKeyword[] = ['VEHICLE', 'INFANTRY', 'MONSTER', 'CHARACTER', 'MOUNTED', 'FLY', 'WALKER', 'TITANIC']
+
+export interface TargetCondition {
+  keywords: TargetConditionKeyword[]
+  mode: 'includes' | 'excludes'
 }
 
 export type MortalWoundsUnitType = 'ALL' | 'VEHICLE' | 'INFANTRY' | 'MONSTER' | 'CHARACTER' | 'MOUNTED' | 'FLY' | 'WALKER' | 'TITANIC'
@@ -178,6 +190,7 @@ export interface UnitKeywordEffect {
 export interface HealEffect {
   category: 'heal'
   appliedTo: AppliesTo
+  amount?: string
 }
 
 export type Effect = StatModifierEffect | DiceModifierEffect | WeaponKeywordEffect | UnitKeywordEffect | DamageMitigationEffect | MortalWoundsEffect | HealEffect
@@ -192,6 +205,7 @@ export interface StructuredAbility {
   frequency?: Frequency
   groupId?: string
   groupOperator?: 'AND' | 'OR'
+  effectsOperator?: 'AND' | 'OR'
   effects: Effect[]
   originalText?: string
 }

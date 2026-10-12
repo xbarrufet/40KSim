@@ -11,6 +11,7 @@ export const KNOWN_WEAPON_KEYWORDS = [
   'HEAVY',
   'IGNORES COVER',
   'INDIRECT FIRE',
+  'LANCE',
   'LETHAL HITS',
   'MELTA',
   'ONE SHOT',

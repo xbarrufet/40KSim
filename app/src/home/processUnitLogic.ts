@@ -36,6 +36,7 @@ export interface StructuringRow {
   frequency?: Frequency
   groupId?: string
   groupOperator?: 'AND' | 'OR'
+  effectsOperator?: 'AND' | 'OR'
   effects: Effect[]
 }
 
@@ -48,6 +49,7 @@ export function buildStructuredAbilities(rows: StructuringRow[]): StructuredAbil
     frequency: row.frequency,
     groupId: row.groupId,
     groupOperator: row.groupOperator,
+    effectsOperator: row.effectsOperator,
     effects: row.effects,
   }))
 }

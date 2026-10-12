@@ -44,15 +44,13 @@ def load_factions() -> dict[str, list[dict]]:
 def seed_faction(client, faction_slug: str, faction_name: str, category: str):
     faction_dir = DATA_DIR / faction_slug
 
-    units_path = faction_dir / "units.json"
-    if not units_path.exists():
-        print(f"  No se encontró {units_path}, saltando unidades.")
-        return
-
-    units_data = json.loads(units_path.read_text())
-    units = units_data.get("units", [])
-
     icon_path = f"/icons/{faction_slug}-icon.svg"
+
+    units_path = faction_dir / "units.json"
+    units = []
+    if units_path.exists():
+        units_data = json.loads(units_path.read_text())
+        units = units_data.get("units", [])
 
     print(f"  Upserting facción: {faction_name} ({len(units)} unidades)")
     client.table("factions").upsert({
@@ -62,6 +60,9 @@ def seed_faction(client, faction_slug: str, faction_name: str, category: str):
         "icon": icon_path,
         "unit_count": len(units),
     }).execute()
+
+    if not units:
+        return
 
     for unit in units:
         slug = unit["slug"]

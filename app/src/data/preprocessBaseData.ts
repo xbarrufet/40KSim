@@ -208,6 +208,24 @@ export function getUnitWargear(baseData: BaseData): WargearEntry[] {
   return buildWargearCatalogue(baseData)
 }
 
+export interface WeaponNameEntry {
+  name: string
+  type: 'ranged' | 'melee'
+}
+
+export function getWeaponNames(wargear: WargearEntry[]): WeaponNameEntry[] {
+  const seen = new Set<string>()
+  const result: WeaponNameEntry[] = []
+  for (const entry of wargear) {
+    const item = entry.wargearItem
+    if (item.profiles.length > 0 && !seen.has(item.name)) {
+      seen.add(item.name)
+      result.push({ name: item.name, type: item.profiles[0].type })
+    }
+  }
+  return result
+}
+
 export function getUnitKeywords(baseData: BaseData): string[] {
   const representative = pickRepresentativeMiniature(baseData)
   return representative.keywords.map((keyword) => keyword.name.toUpperCase())

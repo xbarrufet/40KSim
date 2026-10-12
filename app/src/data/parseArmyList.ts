@@ -1,4 +1,4 @@
-import { getAllFactions, getBaseData, getBaseDataUnitsByFaction, getListByUrl, putList } from './db'
+import { getAllFactionsUnfiltered, getBaseData, getBaseDataUnitsByFaction, getListByUrl, putList } from './db'
 import { getUnitWargear, type BaseData } from './preprocessBaseData'
 import type { ArmyList, ArmyListEntry, ArmyListWargearToken, MatchStatus } from './schema'
 
@@ -267,7 +267,7 @@ export function matchWargearTokens(tokens: WargearLineToken[], knownNames: strin
 export async function parseAndValidateArmyList(text: string): Promise<ArmyList> {
   const parsed = parseArmyListText(text)
 
-  const factions = await getAllFactions()
+  const factions = await getAllFactionsUnfiltered()
   const faction = parsed.factionName
     ? factions.find((candidate) => candidate.name.toLowerCase() === parsed.factionName?.toLowerCase())
     : undefined

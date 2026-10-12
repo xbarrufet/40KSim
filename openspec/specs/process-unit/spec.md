@@ -327,18 +327,22 @@ Target and Categoría SHALL always be visible on the same row regardless of the 
 
 ### Requirement: Heal Effect Category Stub
 
-The structuring form's category dropdown SHALL include a `Curar` (heal) option. When selected, no category-specific fields are shown beyond the Target dropdown. The effect is stored with `category: "heal"` and `appliedTo` only.
+The structuring form's category dropdown SHALL include a `Curar` (heal) option. When selected, the form SHALL expose an **Amount** field: a dice notation text input (e.g. `"1"`, `"D6"`, `"1D3+3"`). The effect is stored with `category: "heal"`, `appliedTo`, and `amount`.
 
-#### Scenario: Heal category shows no extra fields
+#### Scenario: Heal form fields
 
-- **WHEN** the user selects "Curar" from the category dropdown
-- **THEN** no additional fields appear below the Target/Category row
-- **AND** the effect is stored as `{ category: "heal", appliedTo: <selected target> }`
+- **WHEN** the user selects "Curar" as the effect category
+- **THEN** the form SHALL display a dice notation input labelled "Cantidad" with a default value of `"1"`
 
-#### Scenario: Heal category in dropdown
+#### Scenario: Dice notation validation on save
 
-- **WHEN** the user opens the category dropdown
-- **THEN** "Curar" appears as an option alongside Stats, Tirada, Palabra Clave, Mitigación Daño, and Heridas Mortales
+- **WHEN** the user saves a heal effect with an invalid notation string
+- **THEN** the save SHALL be blocked and the field SHALL be visually highlighted as invalid
+
+#### Scenario: Describe heal effect
+
+- **WHEN** a reviewed ability has a heal effect with `amount: "1D3+3"`
+- **THEN** the ability summary SHALL display `Curar 1D3+3` instead of `Curar (stub)`
 
 ### Requirement: BaseData Change Indicator
 
@@ -455,12 +459,12 @@ The structuring form SHALL include a "Frecuencia" dropdown on the first descript
 
 ### Requirement: Damage Roll in Dice Modifier Form
 
-The dice modifier effect's roll dropdown SHALL include "Daño" and "Hazard" options mapping to `'damage'` and `'hazard'`, alongside the existing "Impactar", "Herir", and "Salvación" options.
+The dice modifier effect's roll dropdown SHALL include "Daño", "Hazard", and "Carga" options mapping to `'damage'`, `'hazard'`, and `'charge'`, alongside the existing "Impactar", "Herir", and "Salvación" options.
 
 #### Scenario: All roll options in dropdown
 
 - **WHEN** the user opens the roll dropdown for a dice modifier effect
-- **THEN** five options are visible: Impactar, Herir, Salvación, Daño, Hazard
+- **THEN** six options are visible: Impactar, Herir, Salvación, Daño, Hazard, Carga
 
 #### Scenario: Structuring a reroll damage ability
 
@@ -471,3 +475,115 @@ The dice modifier effect's roll dropdown SHALL include "Daño" and "Hazard" opti
 
 - **WHEN** the user structures an ability that modifies the hazard (overcharge) roll
 - **THEN** the user selects roll=Hazard and the appropriate action
+
+#### Scenario: Structuring a charge roll modifier
+
+- **WHEN** the user structures an ability that adds +1 to the charge roll
+- **THEN** the user selects roll=Carga, action=+1 a la tirada
+
+### Requirement: Target Condition Selector in Structuring Form
+
+The per-effect structuring form SHALL show an optional "Condición objetivo" section for the effect categories `statModifier`, `diceModifier`, and `weaponKeyword`. The section SHALL contain:
+
+- **Activar**: a toggle (off by default) to enable/disable the target condition. When off, no `targetCondition` is stored on the effect.
+- **Modo**: a selector with two options: `Solo contra` (maps to `includes`) and `Excepto contra` (maps to `excludes`). Default: `excludes`.
+- **Keywords**: a multi-select of unit keywords (`Vehicle`, `Monster`, `Infantry`, `Character`, `Mounted`, `Fly`, `Walker`, `Titanic`). At least one must be selected when the condition is active.
+
+The section SHALL NOT be shown for `mortalWounds` (which already has its own `unitType` field), `damageMitigation`, `unitKeyword`, or `heal` categories.
+
+#### Scenario: Target condition hidden by default
+
+- **WHEN** the user creates a new `statModifier`, `diceModifier`, or `weaponKeyword` effect
+- **THEN** the "Condición objetivo" toggle is off and no condition fields are shown
+
+#### Scenario: Enabling target condition
+
+- **WHEN** the user turns on the "Condición objetivo" toggle
+- **THEN** the Modo selector and Keywords multi-select appear
+- **AND** Modo defaults to `Excepto contra` (excludes)
+
+#### Scenario: Configuring Lethal Hits non-Vehicle
+
+- **WHEN** the user configures a `weaponKeyword` effect with keyword `LETHAL HITS` and enables the target condition with Modo=`Excepto contra` and selects `Vehicle`
+- **THEN** the stored effect has `targetCondition: { keywords: ["VEHICLE"], mode: "excludes" }`
+
+#### Scenario: Disabling target condition clears data
+
+- **WHEN** the user turns off the "Condición objetivo" toggle after configuring it
+- **THEN** the `targetCondition` field is removed from the effect
+
+#### Scenario: Target condition not shown for mortalWounds
+
+- **WHEN** the user selects the `mortalWounds` effect category
+- **THEN** the "Condición objetivo" section is not visible (mortalWounds uses its own `unitType` field)
+
+#### Scenario: Validation requires at least one keyword
+
+- **WHEN** the user enables the target condition but selects no keywords and saves
+- **THEN** the save is blocked and the keywords selector is highlighted as invalid
+
+### Requirement: Tabular Reviewed Abilities Display
+
+The reviewed abilities section of the Process Unit screen SHALL display abilities in a table layout with five columns: Nombre, Fase, Freq, Trigger, and Acciones. Each structured ability's effects SHALL appear as indented sub-rows below the ability's main row, spanning all columns. Each effect sub-row SHALL show the effect category as a short label prefix followed by the effect description.
+
+#### Scenario: Structured ability with one effect
+
+- **WHEN** a reviewed structured ability has one effect
+- **THEN** the main row shows the ability name, phase label, frequency (or empty), trigger text (or "siempre"/"auto"), and Editar/Quitar buttons in aligned columns
+- **AND** one sub-row below shows the effect category label and description, indented from the left
+
+#### Scenario: Structured ability with multiple effects
+
+- **WHEN** a reviewed structured ability has two or more effects
+- **THEN** the main row shows the ability-level data in columns as above
+- **AND** each effect appears as a separate sub-row below the main row
+
+#### Scenario: OTHER ability in table
+
+- **WHEN** a reviewed ability has `category: "OTHER"`
+- **THEN** the main row shows the ability name, an "OTHER" tag in place of phase/freq/trigger, and Editar/Quitar buttons
+- **AND** the ability text appears as a sub-row spanning all columns
+
+#### Scenario: Editing replaces the table row
+
+- **WHEN** the user clicks Editar on a reviewed ability
+- **THEN** the StructuringForm replaces the ability's main row and sub-rows in the table
+- **AND** other abilities remain visible in the table above and below
+
+#### Scenario: Phase column shows Spanish labels
+
+- **WHEN** the phase column renders a phase value
+- **THEN** it displays the Spanish label: ANY=Cualq., MOVEMENT=Mov., SHOOTING=Disp., CHARGE=Carga, FIGHT=Comb., COMMAND=Mando
+
+#### Scenario: Trigger column shows abbreviated text
+
+- **WHEN** the trigger is `"ALWAYS"` and `autoApply` is absent or false
+- **THEN** the trigger column shows "siempre"
+- **WHEN** `autoApply` is true
+- **THEN** the trigger column shows "auto"
+- **WHEN** the trigger is a custom question
+- **THEN** the trigger column shows the question text truncated with ellipsis if it exceeds the column width
+
+### Requirement: Specific Weapon Options in Effect Dropdowns
+
+The weapon selector dropdowns in the structuring form (for `statModifier`, `diceModifier`, and `weaponKeyword` effect categories) SHALL display the unit's specific weapon names as additional options below the three generic options (`Todas`, `Distancia`, `Cuerpo a Cuerpo`). The weapon names SHALL be extracted from the unit's wargear data and grouped by type (ranged first, then melee), separated by optgroup headers.
+
+#### Scenario: Dropdown shows unit weapons for statModifier
+
+- **WHEN** the user selects a weapon stat (Strength, Damage, Range, Attacks, AP, Skill) in a `statModifier` effect for a unit that has weapons "Heavy Bolt Pistol", "Twin Bolt Rifle", "Chainsword", and "Thunder Hammer"
+- **THEN** the "Arma" dropdown SHALL show: `Todas`, `Distancia`, `Cuerpo a Cuerpo`, then an optgroup "Distancia" with `Heavy Bolt Pistol` and `Twin Bolt Rifle`, then an optgroup "Cuerpo a Cuerpo" with `Chainsword` and `Thunder Hammer`
+
+#### Scenario: Dropdown shows unit weapons for diceModifier
+
+- **WHEN** the user configures a `diceModifier` effect for a unit with weapons
+- **THEN** the "Arma" dropdown SHALL show the same structure: generic options followed by specific weapon names grouped by type
+
+#### Scenario: Dropdown shows unit weapons for weaponKeyword
+
+- **WHEN** the user configures a `weaponKeyword` effect for a unit with weapons
+- **THEN** the "Arma" dropdown SHALL show the same structure: generic options followed by specific weapon names grouped by type
+
+#### Scenario: Deduplication of weapon names
+
+- **WHEN** a unit has the same weapon name appearing across multiple models (e.g. both Outrider and Outrider Sergeant carry "Chainsword")
+- **THEN** the dropdown SHALL show that weapon name only once

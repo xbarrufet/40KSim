@@ -13,6 +13,7 @@ import {
 
 function migrateAbility(raw: unknown): UnitDataAbility {
   const a = raw as Record<string, unknown>
+  if (a.phase === 'ALL_COMBAT') a.phase = 'ANY'
   if ('effects' in a) return a as unknown as UnitDataAbility
   if (a.category === 'OTHER') return a as unknown as UnitDataAbility
   const rule = a.rule as Record<string, unknown>
@@ -161,16 +162,23 @@ function remoteToStructuredAbilitiesData(remote: { tag: string; abilities: unkno
   }
 }
 
+function mapFactionRow(f: { slug: string; name: string; category: string | null; icon: string | null; unit_count: number }): FactionRecord {
+  return { id: f.slug, slug: f.slug, name: f.name, category: f.category ?? undefined, icon: f.icon ?? undefined, unitCount: f.unit_count }
+}
+
 export async function getAllFactions(): Promise<FactionRecord[]> {
   const remote = await sbFetchFactions()
-  return remote.map(f => ({
-    id: f.slug,
-    slug: f.slug,
-    name: f.name,
-    category: f.category ?? undefined,
-    icon: f.icon ?? undefined,
-    unitCount: f.unit_count,
-  }))
+  return remote.map(mapFactionRow).filter(f => f.unitCount > 0)
+}
+
+export async function getAllFactionsUnfiltered(): Promise<FactionRecord[]> {
+  const remote = await sbFetchFactions()
+  return remote.map(mapFactionRow)
+}
+
+export async function getFactionsWithoutUnits(): Promise<FactionRecord[]> {
+  const remote = await sbFetchFactions()
+  return remote.map(mapFactionRow).filter(f => f.unitCount === 0).sort((a, b) => a.name.localeCompare(b.name))
 }
 
 export async function isFactionsEmpty(): Promise<boolean> {

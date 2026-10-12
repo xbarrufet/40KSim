@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react'
-import { AlertTriangle } from 'lucide-react'
+import { useEffect, useState, type DragEvent } from 'react'
+import { AlertTriangle, Plus } from 'lucide-react'
 import { useCatalog } from '../data/useCatalog'
-import { getBaseDataCount, getConfirmedUnitDataCount } from '../data/db'
+import { getBaseDataCount, getConfirmedUnitDataCount, getFactionsWithoutUnits, syncUnitCatalog } from '../data/db'
+import { upsertFaction } from '../data/supabase'
 
 interface FactionsViewProps {
   onSelectFaction: (faction: { slug: string; name: string }) => void
@@ -9,6 +10,7 @@ interface FactionsViewProps {
 
 export function FactionsView({ onSelectFaction }: FactionsViewProps) {
   const catalogState = useCatalog()
+  const [showAddModal, setShowAddModal] = useState(false)
 
   return (
     <section className="workspace">
@@ -17,6 +19,9 @@ export function FactionsView({ onSelectFaction }: FactionsViewProps) {
           <p className="eyebrow">40KSIM <span>·</span> CATÁLOGO</p>
           <h1>Choose your <span>army</span></h1>
         </div>
+        <button type="button" className="heading-action" onClick={() => setShowAddModal(true)}>
+          <Plus size={16} /> Añadir facción
+        </button>
       </div>
 
       {catalogState.status === 'error' && (
@@ -28,6 +33,13 @@ export function FactionsView({ onSelectFaction }: FactionsViewProps) {
 
       {catalogState.status === 'ready' && catalogState.factions.length > 0 && (
         <FactionCategories factions={catalogState.factions} onSelect={onSelectFaction} />
+      )}
+
+      {showAddModal && (
+        <AddFactionModal
+          onClose={() => setShowAddModal(false)}
+          onAdded={() => { setShowAddModal(false); catalogState.refresh() }}
+        />
       )}
     </section>
   )
@@ -96,5 +108,118 @@ function FactionCard({ faction, onSelect }: { faction: FactionData; onSelect: ()
       <span className="faction-name">{faction.name}</span>
       <span className="faction-counts">{baseCount} base / {unitDataCount} processed</span>
     </button>
+  )
+}
+
+interface ParsedUnitsFile {
+  units: Array<{ name: string; slug: string; category?: string; points?: string }>
+}
+
+function AddFactionModal({ onClose, onAdded }: { onClose: () => void; onAdded: () => void }) {
+  const [availableFactions, setAvailableFactions] = useState<FactionData[]>([])
+  const [selectedSlug, setSelectedSlug] = useState('')
+  const [unitsFile, setUnitsFile] = useState<ParsedUnitsFile | null>(null)
+  const [fileName, setFileName] = useState<string | null>(null)
+  const [dragging, setDragging] = useState(false)
+  const [confirming, setConfirming] = useState(false)
+
+  useEffect(() => {
+    getFactionsWithoutUnits().then(setAvailableFactions)
+  }, [])
+
+  const handleFile = async (file: File) => {
+    if (!file.name.endsWith('.json')) return
+    try {
+      const text = await file.text()
+      const data = JSON.parse(text) as ParsedUnitsFile
+      if (Array.isArray(data.units)) {
+        setUnitsFile(data)
+        setFileName(file.name)
+      }
+    } catch { /* ignore invalid files */ }
+  }
+
+  const handleDrop = (e: DragEvent) => {
+    e.preventDefault()
+    setDragging(false)
+    const file = e.dataTransfer.files[0]
+    if (file) handleFile(file)
+  }
+
+  const handleConfirm = async () => {
+    if (!selectedSlug || !unitsFile) return
+    setConfirming(true)
+    try {
+      const faction = availableFactions.find(f => f.slug === selectedSlug)
+      if (faction) {
+        await upsertFaction({
+          slug: faction.slug,
+          name: faction.name,
+          category: faction.category ?? null,
+          icon: faction.icon ?? null,
+          unit_count: unitsFile.units.length,
+        })
+      }
+      const catalogUnits = unitsFile.units.map(u => ({
+        slug: u.slug,
+        name: u.name,
+        category: u.category,
+        points: u.points ? parseInt(u.points, 10) : undefined,
+      }))
+      await syncUnitCatalog(selectedSlug, catalogUnits)
+      onAdded()
+    } catch (err) {
+      console.error('Error adding faction:', err)
+      setConfirming(false)
+    }
+  }
+
+  const canConfirm = !!selectedSlug && !!unitsFile && !confirming
+
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={e => e.stopPropagation()}>
+        <div className="modal-header">
+          <h2>Añadir facción</h2>
+        </div>
+        <div className="modal-body">
+          <label className="form-label">
+            Facción
+            <select value={selectedSlug} onChange={e => setSelectedSlug(e.target.value)}>
+              <option value="">— Seleccionar —</option>
+              {availableFactions.map(f => (
+                <option key={f.slug} value={f.slug}>{f.name}</option>
+              ))}
+            </select>
+          </label>
+
+          <label className="form-label">Unidades (units.json)</label>
+          <div
+            className={`drop-zone${dragging ? ' drag-over' : ''}`}
+            onDragOver={e => { e.preventDefault(); setDragging(true) }}
+            onDragLeave={() => setDragging(false)}
+            onDrop={handleDrop}
+            onClick={() => {
+              const input = document.createElement('input')
+              input.type = 'file'
+              input.accept = '.json'
+              input.onchange = () => { if (input.files?.[0]) handleFile(input.files[0]) }
+              input.click()
+            }}
+          >
+            {fileName
+              ? <span>{fileName} — {unitsFile?.units.length} unidades</span>
+              : <span>Arrastra el archivo units.json aquí</span>
+            }
+          </div>
+        </div>
+        <div className="modal-actions">
+          <button type="button" onClick={onClose}>Cancelar</button>
+          <button type="button" className="confirm-btn" disabled={!canConfirm} onClick={handleConfirm}>
+            {confirming ? 'Subiendo...' : 'Confirmar'}
+          </button>
+        </div>
+      </div>
+    </div>
   )
 }

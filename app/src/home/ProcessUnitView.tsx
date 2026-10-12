@@ -1,13 +1,15 @@
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { ArrowLeft, RefreshCw } from 'lucide-react'
 import { getBaseData, getStructuredAbilitiesData, putStructuredAbilitiesData } from '../data/db'
 import {
   extractDatasheetContext,
   getUnitKeywords,
   getUnitWargear,
+  getWeaponNames,
   toRawAbilities,
   type BaseData,
   type DatasheetContext,
+  type WeaponNameEntry,
 } from '../data/preprocessBaseData'
 import type {
   AppliesTo,
@@ -22,6 +24,8 @@ import type {
   OtherAbility,
   StatModifierEffect,
   StructuredAbilitiesData,
+  TargetCondition,
+  TargetConditionKeyword,
   UnitKeywordEffect,
   UnitStat,
   WargearEntry,
@@ -30,7 +34,7 @@ import type {
   WeaponTarget,
 } from '../data/schema'
 import { isValidDiceNotation } from '../data/diceNotation'
-import { KNOWN_UNIT_KEYWORDS, type KnownUnitKeyword } from '../data/schema'
+import { KNOWN_UNIT_KEYWORDS, TARGET_CONDITION_KEYWORDS, type KnownUnitKeyword } from '../data/schema'
 import { KNOWN_WEAPON_KEYWORDS, type KnownAttribute } from '../data/weaponKeywords'
 import {
   buildOtherAbility,
@@ -83,7 +87,7 @@ function defaultEffectForCategory(category: Effect['category']): Effect {
     case 'unitKeyword':
       return { category, appliedTo: 'SelfUnit', keyword: 'BENEFIT OF COVER' as const, value: null }
     case 'heal':
-      return { category, appliedTo: 'SelfUnit' }
+      return { category, appliedTo: 'SelfUnit', amount: '1' }
   }
 }
 
@@ -94,14 +98,20 @@ function describeHits(hits: MortalWoundsHits): string {
   }
 }
 
+function describeTargetCondition(tc?: TargetCondition): string {
+  if (!tc || tc.keywords.length === 0) return ''
+  const label = tc.mode === 'excludes' ? 'non-' : 'vs '
+  return ` [${label}${tc.keywords.join('/')}]`
+}
+
 function describeEffect(effect: Effect): string {
   switch (effect.category) {
     case 'statModifier':
-      return `${effect.mode} ${effect.stat}${effect.value !== undefined ? ` ${effect.value}` : ''}`
+      return `${effect.mode} ${effect.stat}${effect.value !== undefined ? ` ${effect.value}` : ''}${describeTargetCondition(effect.targetCondition)}`
     case 'diceModifier':
-      return `${effect.action} ${effect.roll}`
+      return `${effect.action} ${effect.roll}${describeTargetCondition(effect.targetCondition)}`
     case 'weaponKeyword':
-      return `${effect.keyword}${effect.value ? ` ${effect.value}` : ''} (${effect.weaponTarget})`
+      return `${effect.keyword}${effect.value ? ` ${effect.value}` : ''} (${effect.weaponTarget})${describeTargetCondition(effect.targetCondition)}`
     case 'damageMitigation':
       return `${effect.kind}${effect.value !== undefined ? ` ${effect.value}` : ''}${effect.condition ? ` vs ${effect.condition}` : ''}`
     case 'mortalWounds': {
@@ -112,21 +122,17 @@ function describeEffect(effect: Effect): string {
     case 'unitKeyword':
       return `${effect.keyword}${effect.value ? ` ${effect.value}` : ''}`
     case 'heal':
-      return 'Curar (stub)'
+      return `Curar ${effect.amount ?? '1'}`
   }
 }
 
 const FREQUENCY_LABELS: Record<string, string> = { perPhase: '1/fase', perRound: '1/ronda', perBattle: '1/partida' }
 
-function describeAbility(ability: { trigger: string; autoApply?: boolean; phase: string; frequency?: string; effects: Effect[] }): string {
-  const triggerPart = ability.trigger === 'ALWAYS'
-    ? ''
-    : ability.autoApply
-      ? ' [AUTO]'
-      : ` [${ability.trigger}]`
-  const freqPart = ability.frequency && ability.frequency !== 'always' ? ` [${FREQUENCY_LABELS[ability.frequency] ?? ability.frequency}]` : ''
-  return `${ability.phase}${freqPart}${triggerPart} · ${ability.effects.map(describeEffect).join(', ')}`
-}
+const PHASE_SHORT_LABELS: Record<string, string> = { ANY: 'Cualq.', MOVEMENT: 'Mov.', SHOOTING: 'Disp.', CHARGE: 'Carga', FIGHT: 'Comb.', COMMAND: 'Mando' }
+
+const EFFECT_CATEGORY_LABELS: Record<string, string> = { statModifier: 'stat', diceModifier: 'tirada', weaponKeyword: 'wkw', unitKeyword: 'ukw', damageMitigation: 'dmgMit', mortalWounds: 'MW', heal: 'heal' }
+
+
 
 export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessUnitViewProps) {
   const [structuredAbilitiesData, setStructuredAbilitiesData] = useState<StructuredAbilitiesData | null>(null)
@@ -134,6 +140,7 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
   const [unitName, setUnitName] = useState(unitSlug)
   const [datasheet, setDatasheet] = useState<DatasheetContext | null>(null)
   const [wargear, setWargear] = useState<WargearEntry[]>([])
+  const [weaponNames, setWeaponNames] = useState<WeaponNameEntry[]>([])
   const [keywords, setKeywords] = useState<string[]>([])
   const [error, setError] = useState<string | null>(null)
   const [saving, setSaving] = useState(false)
@@ -164,7 +171,9 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
           const data = baseDataRaw as BaseData
           setUnitName(data.name)
           setDatasheet(extractDatasheetContext(data))
-          setWargear(getUnitWargear(data))
+          const unitWargear = getUnitWargear(data)
+          setWargear(unitWargear)
+          setWeaponNames(getWeaponNames(unitWargear))
           setKeywords(getUnitKeywords(data))
           const abMap: Record<string, string> = {}
           for (const ab of data.abilities) {
@@ -262,7 +271,7 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
       baseDataText ??
       (draft.rawAbilities.find((r) => r.name === baseName || r.name === ability.name)?.text ?? null)
     )
-    setStructuringRows([{ name: ability.name, phase: ability.phase, trigger: ability.trigger, autoApply: ability.autoApply, frequency: ability.frequency, groupId: ability.groupId, groupOperator: ability.groupOperator, effects: [...ability.effects] }])
+    setStructuringRows([{ name: ability.name, phase: ability.phase, trigger: ability.trigger, autoApply: ability.autoApply, frequency: ability.frequency, groupId: ability.groupId, groupOperator: ability.groupOperator, effectsOperator: ability.effectsOperator, effects: [...ability.effects] }])
   }
 
   const commitEdit = () => {
@@ -322,7 +331,11 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
 
   const removeEffectFromRow = (rowIndex: number, effectIndex: number) => {
     setStructuringRows((rows) =>
-      rows.map((row, i) => i === rowIndex ? { ...row, effects: row.effects.filter((_, ei) => ei !== effectIndex) } : row)
+      rows.map((row, i) => {
+        if (i !== rowIndex) return row
+        const effects = row.effects.filter((_, ei) => ei !== effectIndex)
+        return { ...row, effects, effectsOperator: effects.length < 2 ? undefined : row.effectsOperator }
+      })
     )
   }
 
@@ -376,7 +389,9 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
     const data = baseData as BaseData
     setUnitName(data.name)
     setDatasheet(extractDatasheetContext(data))
-    setWargear(getUnitWargear(data))
+    const unitWargear = getUnitWargear(data)
+    setWargear(unitWargear)
+    setWeaponNames(getWeaponNames(unitWargear))
     setKeywords(getUnitKeywords(data))
     setDraft((current) => {
       if (!current) return current
@@ -401,13 +416,18 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
     for (const ability of draft.abilities) {
       if (!('effects' in ability)) continue
       for (const effect of ability.effects) {
-        if (effect.category !== 'mortalWounds') continue
-        if (effect.hits.kind === 'notation' && !isValidDiceNotation(effect.hits.value)) {
-          setValidationError(`"${effect.hits.value}" no es notación de dados válida en "${ability.name}" (Impactos)`)
-          return false
+        if (effect.category === 'mortalWounds') {
+          if (effect.hits.kind === 'notation' && !isValidDiceNotation(effect.hits.value)) {
+            setValidationError(`"${effect.hits.value}" no es notación de dados válida en "${ability.name}" (Impactos)`)
+            return false
+          }
+          if (!isValidDiceNotation(effect.damagePerSuccess)) {
+            setValidationError(`"${effect.damagePerSuccess}" no es notación de dados válida en "${ability.name}" (MW por éxito)`)
+            return false
+          }
         }
-        if (!isValidDiceNotation(effect.damagePerSuccess)) {
-          setValidationError(`"${effect.damagePerSuccess}" no es notación de dados válida en "${ability.name}" (MW por éxito)`)
+        if ('targetCondition' in effect && effect.targetCondition && effect.targetCondition.keywords.length === 0) {
+          setValidationError(`Condición objetivo sin keywords en "${ability.name}"`)
           return false
         }
       }
@@ -463,68 +483,131 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
       <section className="process-unit-section">
         <h2>Abilidades revisadas ({draft.abilities.length})</h2>
         {draft.abilities.length === 0 && <p className="profile-meta">Ninguna todavía.</p>}
-        <ul className="ability-list">
-          {draft.abilities.map((ability, index) => (
-            <li key={index} className="ability-row">
-              {editingAbilityIndex === index ? (
-                <>
-                  {editingAbilityText && (
-                    <div className="raw-ability-text">
-                      <FormattedAbilityText text={editingAbilityText} />
-                    </div>
-                  )}
-                  <StructuringForm
-                    rows={structuringRows}
-                    onChangeRow={updateStructuringRow}
-                    onAddRow={addStructuringRow}
-                    onAddEffect={addEffectToRow}
-                    onRemoveEffect={removeEffectFromRow}
-                    onUpdateEffect={updateEffectInRow}
-                    onCancel={cancelStructuring}
-                    onCommit={commitEdit}
-                    onMarkAsOther={markEditingAbilityAsOther}
-                  />
-                </>
-              ) : editingOtherIndex === index ? (
-                <div className="structuring-form">
-                  <textarea
-                    style={{ width: '100%', minHeight: 80, background: 'var(--paper)', color: 'var(--ink)', border: '1px solid var(--line)', borderRadius: 2, padding: 8, fontSize: 12, fontFamily: 'inherit', resize: 'vertical' }}
-                    value={editingOtherText}
-                    onChange={(e) => setEditingOtherText(e.target.value)}
-                  />
-                  <div className="structuring-form-actions">
-                    <button type="button" onClick={structureFromOther}>Estructurar</button>
-                    <button type="button" onClick={cancelEditingOther}>Cancelar</button>
-                    <button type="button" className="confirm-btn" onClick={saveOther}>Guardar como OTHER</button>
-                  </div>
-                </div>
-              ) : (
-                <>
-                  <div>
-                    <strong>{ability.name}</strong>{' '}
-                    {'effects' in ability ? (
-                      <span className="ability-detail">{describeAbility(ability)}</span>
-                    ) : (
-                      <div className="ability-detail">OTHER — <FormattedAbilityText text={ability.text} /></div>
-                    )}
-                    {'originalText' in ability && ability.originalText && (
-                      <div className="raw-ability-text">
-                        <FormattedAbilityText text={ability.originalText} />
+        <table className="reviewed-abilities-table">
+          <colgroup>
+            <col />
+            <col style={{ width: 70 }} />
+            <col style={{ width: 60 }} />
+            <col style={{ width: 180 }} />
+            <col style={{ width: 120 }} />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Fase</th>
+              <th>Freq</th>
+              <th>Trigger</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {draft.abilities.map((ability, index) => {
+              if (editingAbilityIndex === index) {
+                return (
+                  <tr key={index}>
+                    <td colSpan={5}>
+                      {editingAbilityText && (
+                        <div className="raw-ability-text">
+                          <FormattedAbilityText text={editingAbilityText} />
+                        </div>
+                      )}
+                      <StructuringForm
+                        rows={structuringRows}
+                        weaponNames={weaponNames}
+                        onChangeRow={updateStructuringRow}
+                        onAddRow={addStructuringRow}
+                        onAddEffect={addEffectToRow}
+                        onRemoveEffect={removeEffectFromRow}
+                        onUpdateEffect={updateEffectInRow}
+                        onCancel={cancelStructuring}
+                        onCommit={commitEdit}
+                        onMarkAsOther={markEditingAbilityAsOther}
+                      />
+                    </td>
+                  </tr>
+                )
+              }
+              if (editingOtherIndex === index) {
+                return (
+                  <tr key={index}>
+                    <td colSpan={5}>
+                      <div className="structuring-form">
+                        <textarea
+                          style={{ width: '100%', minHeight: 80, background: 'var(--paper)', color: 'var(--ink)', border: '1px solid var(--line)', borderRadius: 2, padding: 8, fontSize: 12, fontFamily: 'inherit', resize: 'vertical' }}
+                          value={editingOtherText}
+                          onChange={(e) => setEditingOtherText(e.target.value)}
+                        />
+                        <div className="structuring-form-actions">
+                          <button type="button" onClick={structureFromOther}>Estructurar</button>
+                          <button type="button" onClick={cancelEditingOther}>Cancelar</button>
+                          <button type="button" className="confirm-btn" onClick={saveOther}>Guardar como OTHER</button>
+                        </div>
                       </div>
+                    </td>
+                  </tr>
+                )
+              }
+              const isStructured = 'effects' in ability
+              const isOther = 'category' in ability && ability.category === 'OTHER'
+              return (
+                <Fragment key={index}>
+                  <tr className="ability-main-row">
+                    <td>{ability.name}</td>
+                    {isStructured ? (
+                      <>
+                        <td>{PHASE_SHORT_LABELS[ability.phase] ?? ability.phase}</td>
+                        <td>{ability.frequency && ability.frequency !== 'always' ? FREQUENCY_LABELS[ability.frequency] ?? ability.frequency : ''}</td>
+                        <td className="trigger-cell">
+                          {ability.trigger === 'ALWAYS'
+                            ? (ability.autoApply ? 'auto' : 'siempre')
+                            : ability.trigger}
+                        </td>
+                      </>
+                    ) : (
+                      <td colSpan={3}><span className="ability-type-tag">OTHER</span></td>
                     )}
-                  </div>
-                  {'effects' in ability && (
-                    <button type="button" onClick={() => startEditing(index)}>Editar</button>
+                    <td className="actions-cell">
+                      {isStructured && <button type="button" onClick={() => startEditing(index)}>Editar</button>}
+                      {isOther && <button type="button" onClick={() => startEditingOther(index)}>Editar</button>}
+                      <button type="button" onClick={() => removeReviewedAbility(index)}>Quitar</button>
+                    </td>
+                  </tr>
+                  {(() => {
+                    if (!isStructured) return null
+                    const baseName = ability.name.replace(/\s+\(efecto \d+\)$/, '')
+                    const text = ability.originalText
+                      ?? baseDataAbilitiesMap[ability.name]
+                      ?? baseDataAbilitiesMap[baseName]
+                      ?? Object.entries(baseDataAbilitiesMap).find(([k]) => k.toLowerCase() === baseName.toLowerCase())?.[1]
+                    if (!text) return null
+                    return (
+                      <tr className="original-text-subrow">
+                        <td colSpan={5}>
+                          <FormattedAbilityText text={text} />
+                        </td>
+                      </tr>
+                    )
+                  })()}
+                  {isStructured && ability.effects.map((effect, ei) => (
+                    <tr key={ei} className="effect-subrow">
+                      <td colSpan={5}>
+                        <span className="effect-category-label">{EFFECT_CATEGORY_LABELS[effect.category] ?? effect.category}</span>
+                        {describeEffect(effect)}
+                      </td>
+                    </tr>
+                  ))}
+                  {isOther && (
+                    <tr className="effect-subrow">
+                      <td colSpan={5}>
+                        <FormattedAbilityText text={ability.text} />
+                      </td>
+                    </tr>
                   )}
-                  {'category' in ability && ability.category === 'OTHER' && (
-                    <button type="button" onClick={() => startEditingOther(index)}>Editar</button>
-                  )}
-                  <button type="button" onClick={() => removeReviewedAbility(index)}>Quitar</button>
-                </>
-              )}
-            </li>
-          ))}
-        </ul>
+                </Fragment>
+              )
+            })}
+          </tbody>
+        </table>
       </section>
 
       <section className="process-unit-section">
@@ -539,6 +622,7 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
               {structuringIndex === index ? (
                 <StructuringForm
                   rows={structuringRows}
+                  weaponNames={weaponNames}
                   onChangeRow={updateStructuringRow}
                   onAddRow={addStructuringRow}
                   onAddEffect={addEffectToRow}
@@ -585,6 +669,7 @@ function TopBar({ name, onBack, tag }: { name: string; onBack: () => void; tag?:
 
 type StructuringFormProps = {
   rows: StructuringRow[]
+  weaponNames: WeaponNameEntry[]
   onChangeRow: (index: number, patch: Partial<StructuringRow>) => void
   onAddRow: () => void
   onAddEffect: (rowIndex: number) => void
@@ -595,7 +680,7 @@ type StructuringFormProps = {
   onMarkAsOther?: () => void
 }
 
-function StructuringForm({ rows, onChangeRow, onAddRow, onAddEffect, onRemoveEffect, onUpdateEffect, onCancel, onCommit, onMarkAsOther }: StructuringFormProps) {
+function StructuringForm({ rows, weaponNames, onChangeRow, onAddRow, onAddEffect, onRemoveEffect, onUpdateEffect, onCancel, onCommit, onMarkAsOther }: StructuringFormProps) {
   return (
     <div className="structuring-form">
       {rows.map((row, rowIndex) => (
@@ -652,6 +737,18 @@ function StructuringForm({ rows, onChangeRow, onAddRow, onAddEffect, onRemoveEff
                 />
               )}
             </div>
+            {row.effects.length >= 2 && (
+              <label>
+                Op. efectos
+                <select
+                  value={row.effectsOperator ?? 'AND'}
+                  onChange={(e) => onChangeRow(rowIndex, { effectsOperator: e.target.value === 'AND' ? undefined : e.target.value as 'AND' | 'OR' })}
+                >
+                  <option value="AND">AND — Aplicar todos</option>
+                  <option value="OR">OR — Según condición</option>
+                </select>
+              </label>
+            )}
           </div>
           <div className="structuring-effects-list">
             {row.effects.map((effect, effectIndex) => (
@@ -674,7 +771,7 @@ function StructuringForm({ rows, onChangeRow, onAddRow, onAddEffect, onRemoveEff
                     </select>
                   </label>
                 </div>
-                <EffectFields effect={effect} onChange={(e) => onUpdateEffect(rowIndex, effectIndex, e)} />
+                <EffectFields effect={effect} weaponNames={weaponNames} onChange={(e) => onUpdateEffect(rowIndex, effectIndex, e)} />
                 {row.effects.length > 1 && (
                   <button type="button" className="effect-remove-btn" onClick={() => onRemoveEffect(rowIndex, effectIndex)}>✕</button>
                 )}
@@ -731,7 +828,29 @@ const TARGET_SELECT = (effect: Effect, onChange: (e: Effect) => void) => (
   </label>
 )
 
-function EffectFields({ effect, onChange }: { effect: Effect; onChange: (e: Effect) => void }) {
+function WeaponSelect({ value, weaponNames, onChange }: { value: string; weaponNames: WeaponNameEntry[]; onChange: (v: string) => void }) {
+  const ranged = weaponNames.filter((w) => w.type === 'ranged')
+  const melee = weaponNames.filter((w) => w.type === 'melee')
+  return (
+    <select value={value} onChange={(e) => onChange(e.target.value)}>
+      <option value="ALL">Todas</option>
+      <option value="RANGE">Distancia</option>
+      <option value="MELEE">Cuerpo a Cuerpo</option>
+      {ranged.length > 0 && (
+        <optgroup label="Distancia">
+          {ranged.map((w) => <option key={w.name} value={w.name}>{w.name}</option>)}
+        </optgroup>
+      )}
+      {melee.length > 0 && (
+        <optgroup label="Cuerpo a Cuerpo">
+          {melee.map((w) => <option key={w.name} value={w.name}>{w.name}</option>)}
+        </optgroup>
+      )}
+    </select>
+  )
+}
+
+function EffectFields({ effect, weaponNames, onChange }: { effect: Effect; weaponNames: WeaponNameEntry[]; onChange: (e: Effect) => void }) {
   switch (effect.category) {
     case 'statModifier':
       return (
@@ -739,11 +858,7 @@ function EffectFields({ effect, onChange }: { effect: Effect; onChange: (e: Effe
           {isWeaponStat(effect.stat) && (
             <label>
               Arma
-              <select value={effect.weaponTarget ?? 'ALL'} onChange={(e) => onChange({ ...effect, weaponTarget: e.target.value as WeaponTarget })}>
-                <option value="ALL">Todas</option>
-                <option value="RANGE">Distancia</option>
-                <option value="MELEE">Cuerpo a Cuerpo</option>
-              </select>
+              <WeaponSelect value={effect.weaponTarget ?? 'ALL'} weaponNames={weaponNames} onChange={(v) => onChange({ ...effect, weaponTarget: v as WeaponTarget })} />
             </label>
           )}
           <label>
@@ -783,6 +898,7 @@ function EffectFields({ effect, onChange }: { effect: Effect; onChange: (e: Effe
               <input type="number" value={effect.value ?? ''} onChange={(e) => onChange({ ...effect, value: e.target.value ? Number(e.target.value) : undefined })} />
             </label>
           )}
+          <TargetConditionFields condition={effect.targetCondition} onChange={(tc) => onChange({ ...effect, targetCondition: tc })} />
         </>
       )
     case 'diceModifier':
@@ -796,6 +912,8 @@ function EffectFields({ effect, onChange }: { effect: Effect; onChange: (e: Effe
               <option value="savingThrow">Salvación</option>
               <option value="damage">Daño</option>
               <option value="hazard">Hazard</option>
+              <option value="charge">Carga</option>
+              <option value="battleshock">Battleshock</option>
             </select>
           </label>
           <label>
@@ -812,12 +930,9 @@ function EffectFields({ effect, onChange }: { effect: Effect; onChange: (e: Effe
           </label>
           <label>
             Arma
-            <select value={effect.attackType ?? 'ALL'} onChange={(e) => onChange({ ...effect, attackType: e.target.value as DiceModifierEffect['attackType'] })}>
-              <option value="ALL">Todas</option>
-              <option value="RANGE">Distancia</option>
-              <option value="MELEE">Cuerpo a Cuerpo</option>
-            </select>
+            <WeaponSelect value={effect.attackType ?? 'ALL'} weaponNames={weaponNames} onChange={(v) => onChange({ ...effect, attackType: v as DiceModifierEffect['attackType'] })} />
           </label>
+          <TargetConditionFields condition={effect.targetCondition} onChange={(tc) => onChange({ ...effect, targetCondition: tc })} />
         </>
       )
     case 'weaponKeyword':
@@ -825,11 +940,7 @@ function EffectFields({ effect, onChange }: { effect: Effect; onChange: (e: Effe
         <>
           <label>
             Arma
-            <select value={effect.weaponTarget} onChange={(e) => onChange({ ...effect, weaponTarget: e.target.value as WeaponTarget })}>
-              <option value="ALL">Todas</option>
-              <option value="RANGE">Distancia</option>
-              <option value="MELEE">Cuerpo a Cuerpo</option>
-            </select>
+            <WeaponSelect value={effect.weaponTarget} weaponNames={weaponNames} onChange={(v) => onChange({ ...effect, weaponTarget: v as WeaponTarget })} />
           </label>
           <label>
             Keyword
@@ -841,6 +952,7 @@ function EffectFields({ effect, onChange }: { effect: Effect; onChange: (e: Effe
             Valor (opc.)
             <input value={effect.value ?? ''} onChange={(e) => onChange({ ...effect, value: e.target.value || null } as WeaponKeywordEffect)} />
           </label>
+          <TargetConditionFields condition={effect.targetCondition} onChange={(tc) => onChange({ ...effect, targetCondition: tc })} />
         </>
       )
     case 'unitKeyword':
@@ -921,7 +1033,15 @@ function EffectFields({ effect, onChange }: { effect: Effect; onChange: (e: Effe
       )
     }
     case 'heal':
-      return null
+      return (
+        <label>
+          Cantidad
+          <DiceNotationInput
+            value={effect.amount ?? '1'}
+            onChange={v => onChange({ ...effect, amount: v })}
+          />
+        </label>
+      )
   }
 }
 
@@ -933,6 +1053,59 @@ function DiceNotationInput({ value, onChange, error }: { value: string; onChange
       placeholder="ej: 3, D6, 2D3+1"
       onChange={(e) => onChange(e.target.value)}
     />
+  )
+}
+
+function TargetConditionFields({ condition, onChange }: { condition: TargetCondition | undefined; onChange: (tc: TargetCondition | undefined) => void }) {
+  const active = condition !== undefined
+  return (
+    <div className="target-condition-block">
+      <label className="target-condition-toggle">
+        <input
+          type="checkbox"
+          checked={active}
+          onChange={(e) => {
+            if (e.target.checked) {
+              onChange({ keywords: [], mode: 'excludes' })
+            } else {
+              onChange(undefined)
+            }
+          }}
+        />
+        Condición objetivo
+      </label>
+      {active && condition && (
+        <div className="target-condition-fields">
+          <select
+            value={condition.mode}
+            onChange={(e) => onChange({ ...condition, mode: e.target.value as TargetCondition['mode'] })}
+          >
+            <option value="excludes">Excepto contra</option>
+            <option value="includes">Solo contra</option>
+          </select>
+          <div className="target-condition-chips">
+            {TARGET_CONDITION_KEYWORDS.map((kw) => {
+              const selected = condition.keywords.includes(kw)
+              return (
+                <button
+                  key={kw}
+                  type="button"
+                  className={`target-condition-chip${selected ? ' selected' : ''}`}
+                  onClick={() => {
+                    const next = selected
+                      ? condition.keywords.filter((k: TargetConditionKeyword) => k !== kw)
+                      : [...condition.keywords, kw]
+                    onChange({ ...condition, keywords: next })
+                  }}
+                >
+                  {kw}
+                </button>
+              )
+            })}
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
 

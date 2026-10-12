@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Plus, Trash2 } from 'lucide-react'
-import { deleteList, getAllFactions, getAllLists } from '../data/db'
+import { deleteList, getAllFactionsUnfiltered, getAllLists } from '../data/db'
 import { ImportListModal } from './ImportListModal'
 import { ListDetailView } from './ListDetailView'
 import type { ArmyList } from '../data/schema'
@@ -13,7 +13,7 @@ export function ListView() {
   const [openList, setOpenList] = useState<ArmyList | null>(null)
 
   const loadLists = useCallback(() => {
-    Promise.all([getAllLists(), getAllFactions()])
+    Promise.all([getAllLists(), getAllFactionsUnfiltered()])
       .then(([allLists, factions]) => {
         setLists(allLists)
         setFactionNames(new Map(factions.map((faction) => [faction.slug, faction.name])))

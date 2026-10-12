@@ -117,6 +117,10 @@ h1 span { color: #86877c; font-weight: 500; }
 .file-match { color: #6a9a3a; font-size: 12px; }
 .file-new { color: var(--olive); font-size: 12px; font-weight: 600; }
 .file-skip { color: var(--muted); font-size: 12px; }
+.heading-action { display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 16px; color: var(--on-accent); background: var(--olive); border: none; border-radius: 2px; font-size: 12px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap; }
+.modal-body { padding: 16px 20px; display: flex; flex-direction: column; gap: 12px; }
+.form-label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; color: var(--ink); }
+.form-label select { height: 36px; padding: 0 10px; border: 1px solid var(--line); background: var(--paper); font-size: 13px; font-family: inherit; }
 .modal-actions { display: flex; justify-content: flex-end; gap: 10px; padding: 16px 20px; border-top: 1px solid var(--line); }
 .modal-actions button { height: 36px; padding: 0 18px; border: 1px solid #ddded0; border-radius: 2px; font-size: 12px; font-weight: 600; cursor: pointer; }
 .modal-actions .confirm-btn { color: var(--on-accent); background: var(--olive); border-color: var(--olive); }
@@ -127,9 +131,19 @@ h1 span { color: #86877c; font-weight: 500; }
 .resync-btn { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 14px; color: var(--ink); background: none; border: 1px solid #ddded0; border-radius: 2px; font-size: 12px; font-weight: 600; cursor: pointer; }
 .process-unit-section { margin-bottom: 28px; }
 .process-unit-section h2 { font-family: var(--mono); color: var(--muted); font-size: 15px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; margin-bottom: 10px; }
-.ability-list, .raw-ability-list { list-style: none; margin: 0; padding: 0; }
-.ability-row, .raw-ability-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
-.ability-detail { color: var(--muted); font-size: 12px; }
+.raw-ability-list { list-style: none; margin: 0; padding: 0; }
+.raw-ability-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+.reviewed-abilities-table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 13px; }
+.reviewed-abilities-table th { text-align: left; padding: 4px 8px; font-size: 11px; font-weight: 700; color: var(--muted); border-bottom: 1px solid var(--line); }
+.reviewed-abilities-table td { padding: 4px 8px; vertical-align: top; }
+.reviewed-abilities-table .ability-main-row td { padding-top: 8px; border-top: 1px solid var(--line); }
+.reviewed-abilities-table .ability-main-row td:first-child { font-weight: 600; }
+.reviewed-abilities-table .trigger-cell { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--muted); font-size: 12px; }
+.reviewed-abilities-table .actions-cell { display: flex; gap: 6px; }
+.reviewed-abilities-table .actions-cell button { height: 26px; padding: 0 10px; background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 2px; font-size: 11px; font-weight: 600; cursor: pointer; }
+.reviewed-abilities-table .effect-subrow td { padding: 2px 8px 2px 24px; color: var(--muted); font-size: 12px; }
+.reviewed-abilities-table .original-text-subrow td { padding: 2px 8px 2px 24px; color: var(--muted); font-size: 12px; }
+.effect-category-label { display: inline-block; min-width: 48px; padding: 1px 5px; margin-right: 6px; background: #262e37; border-radius: 2px; font-family: var(--mono); font-size: 11px; font-weight: 700; text-align: center; }
 .ability-type-tag { padding: 2px 7px; color: var(--muted); background: #262e37; border-radius: 2px; font-family: var(--mono); font-size: 12px; font-weight: 700; text-transform: uppercase; }
 .raw-ability-row { flex-direction: column; align-items: stretch; }
 .raw-ability-text p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
@@ -162,6 +176,14 @@ h1 span { color: #86877c; font-weight: 500; }
 .structuring-effect-row input, .structuring-effect-row select { height: 28px; padding: 0 6px; background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 2px; font-size: 12px; }
 .effect-remove-btn { height: 28px; padding: 0 8px; background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 2px; font-size: 12px; cursor: pointer; align-self: flex-end; }
 .add-effect-btn { height: 28px; padding: 0 10px; border: 1px dashed var(--line); border-radius: 2px; font-size: 11px; font-weight: 600; cursor: pointer; background: transparent; color: var(--muted); align-self: flex-start; }
+.target-condition-block { width: 100%; padding-top: 4px; }
+.target-condition-toggle { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; color: var(--muted); cursor: pointer; }
+.target-condition-toggle input[type="checkbox"] { margin: 0; }
+.target-condition-fields { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 4px; }
+.target-condition-fields select { height: 28px; padding: 0 6px; background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 2px; font-size: 12px; }
+.target-condition-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.target-condition-chip { height: 24px; padding: 0 8px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); color: var(--muted); font-size: 11px; font-weight: 600; cursor: pointer; }
+.target-condition-chip.selected { background: var(--accent, #4a9eff); color: #fff; border-color: var(--accent, #4a9eff); }
 .structuring-form-actions { display: flex; gap: 8px; }
 .structuring-form-actions button { height: 32px; padding: 0 14px; background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 2px; font-size: 12px; font-weight: 600; cursor: pointer; }
 .basedata-changed-banner { padding: 8px 12px; background: #fff3cd; border: 1px solid #e6c24a; border-radius: 2px; font-size: 13px; color: #7a5c00; margin-bottom: 8px; }

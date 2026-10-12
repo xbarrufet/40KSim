@@ -73,13 +73,13 @@ A structured ability MAY include an `originalText` field containing the verbatim
 
 The `effects` array entries SHALL use a `category` field to identify their type. Each effect SHALL also carry an `appliedTo: AppliesTo` field identifying which unit entity the effect targets. `AppliesTo` values: `"SelfModel"`, `"SelfUnit"`, `"Enemy"`, `"Ally"`. Effect categories and their own required fields:
 
-- **`statModifier`** — modifies a characteristic. Fields: `appliedTo`, `weaponTarget` (required only when the selected `stat` is a `WeaponStat`: `"ALL"` | `"RANGE"` | `"MELEE"`), `stat` (`UnitStat` or `WeaponStat`), `mode` (`"add"` | `"subtract"` | `"setValue"` | `"halve"`), and `value` (number, absent for `"halve"`). The `target: "unit" | "weapon"` field is removed; the stat value itself determines whether it is a unit or weapon stat.
-- **`diceModifier`** — modifies a dice roll. Fields: `appliedTo`, `roll` (`"toHit"` | `"toWound"` | `"savingThrow"` | `"damage"` | `"hazard"`), `action` (`"rerollOnes"` | `"rerollFailed"` | `"rerollAll"` | `"addToRoll"` | `"subtractFromRoll"` | `"autoSuccess"` | `"ignoreModifiers"`), optional `attackType` (`"RANGE"` | `"MELEE"` | `"ALL"`).
-- **`weaponKeyword`** — grants a keyword to weapon profiles. Fields: `appliedTo`, `weaponTarget` (`"ALL"` | `"RANGE"` | `"MELEE"`), `keyword` (from the project's known ability vocabulary, e.g. `IGNORES COVER`, `LETHAL HITS`, `DEVASTATING WOUNDS`), optional `value`.
+- **`statModifier`** — modifies a characteristic. Fields: `appliedTo`, `weaponTarget` (required only when the selected `stat` is a `WeaponStat`: `"ALL"` | `"RANGE"` | `"MELEE"` | `<weapon-name>`), `stat` (`UnitStat` or `WeaponStat`), `mode` (`"add"` | `"subtract"` | `"setValue"` | `"halve"`), and `value` (number, absent for `"halve"`). When `weaponTarget` is a string that is not `"ALL"`, `"RANGE"`, or `"MELEE"`, it SHALL be interpreted as a specific weapon name and the effect SHALL apply only to weapon profiles whose name matches that string (case-insensitive). The `target: "unit" | "weapon"` field is removed; the stat value itself determines whether it is a unit or weapon stat.
+- **`diceModifier`** — modifies a dice roll. Fields: `appliedTo`, `roll` (`"toHit"` | `"toWound"` | `"savingThrow"` | `"damage"` | `"hazard"` | `"charge"`), `action` (`"rerollOnes"` | `"rerollFailed"` | `"rerollAll"` | `"addToRoll"` | `"subtractFromRoll"` | `"autoSuccess"` | `"ignoreModifiers"`), optional `attackType` (`"RANGE"` | `"MELEE"` | `"ALL"` | `<weapon-name>`). When `attackType` is a string that is not `"RANGE"`, `"MELEE"`, or `"ALL"`, it SHALL be interpreted as a specific weapon name and the effect SHALL apply only to attacks made with weapon profiles whose name matches that string (case-insensitive).
+- **`weaponKeyword`** — grants a keyword to weapon profiles. Fields: `appliedTo`, `weaponTarget` (`"ALL"` | `"RANGE"` | `"MELEE"` | `<weapon-name>`), `keyword` (from the project's known ability vocabulary, e.g. `IGNORES COVER`, `LETHAL HITS`, `DEVASTATING WOUNDS`), optional `value`. When `weaponTarget` is a specific weapon name, the keyword SHALL be granted only to that weapon's profiles.
 - **`unitKeyword`** — grants a keyword to a unit. Fields: `appliedTo`, `keyword` (from a known unit keyword vocabulary: `BENEFIT OF COVER`, `STEALTH`, `SCOUTS`, `DEEP STRIKE`, `LONE OPERATIVE`, `FIGHTS FIRST`), optional `value` (string, for parameterised keywords like `SCOUTS 6"`).
 - **`damageMitigation`** — reduces or prevents damage. Fields: `appliedTo`, `kind`, optional `value`, optional `condition`.
 - **`mortalWounds`** — deals mortal wounds. Fields: `appliedTo`, `unitType`, `hits`, `resolution`, `damagePerSuccess`. See Mortal Wounds Effect Category for details.
-- **`heal`** — placeholder category for future healing effects. Fields: `appliedTo` only. SHALL NOT be evaluated by the simulator until fully specified.
+- **`heal`** — restores lost wounds to models. Fields: `appliedTo`, `amount` (dice notation string, e.g. `"1D3+3"`, `"1"`, `"D6"`). The `amount` field uses the same dice notation format as other notation fields in the system.
 
 The ability-level `appliedTo` field is removed. Each effect carries its own `appliedTo`.
 
@@ -118,6 +118,11 @@ The ability-level `appliedTo` field is removed. Each effect carries its own `app
 - **WHEN** a rule modifies the hazard roll (overcharge explosion check) for a weapon
 - **THEN** use `diceModifier` with `roll: "hazard"` and the appropriate action
 
+#### Scenario: Modify charge roll
+
+- **WHEN** a rule adds +1 to the charge roll
+- **THEN** use `diceModifier` with `roll: "charge"` and `action: "addToRoll"`
+
 #### Scenario: Effect targeting the unit itself
 
 - **WHEN** an effect modifies the unit's own characteristics or dice rolls
@@ -135,11 +140,15 @@ The ability-level `appliedTo` field is removed. Each effect carries its own `app
 - **THEN** each effect carries its own `appliedTo` field
 - **AND** the simulator applies each effect to the correct target independently
 
-#### Scenario: Heal category is a stub
+#### Scenario: Heal effect with amount
 
-- **WHEN** a `heal` effect is present on a structured ability
-- **THEN** the simulator ignores it and does not apply any modifier
-- **AND** the data is stored for future use
+- **WHEN** a structured ability has a heal effect with `amount: "1D3+3"`
+- **THEN** the simulator SHALL use the dice notation to determine how many wounds are restored
+
+#### Scenario: Heal effect backward compatibility
+
+- **WHEN** a heal effect has no `amount` field (legacy data)
+- **THEN** the system SHALL treat it as `amount: "1"` by default
 
 #### Scenario: Unit keyword — Stealth granting benefit of cover
 
@@ -155,6 +164,31 @@ The ability-level `appliedTo` field is removed. Each effect carries its own `app
 
 - **WHEN** a defending unit has a `unitKeyword` effect with `keyword: "BENEFIT OF COVER"` and the attacking weapon has `IGNORES COVER`
 - **THEN** the simulator SHALL NOT apply the +1 Save bonus from benefit of cover for that attack
+
+#### Scenario: Stat modifier targets a specific weapon by name
+
+- **WHEN** a `statModifier` effect has `weaponTarget` set to `"Thunder Hammer"`
+- **THEN** the effect SHALL apply only to weapon profiles whose name is "Thunder Hammer" (case-insensitive match) and SHALL NOT affect other weapon profiles
+
+#### Scenario: Dice modifier targets a specific weapon by name
+
+- **WHEN** a `diceModifier` effect has `attackType` set to `"Twin Bolt Rifle"`
+- **THEN** the effect SHALL apply only to attacks made with the "Twin Bolt Rifle" weapon profile and SHALL NOT affect attacks with other weapons
+
+#### Scenario: Weapon keyword targets a specific weapon by name
+
+- **WHEN** a `weaponKeyword` effect has `weaponTarget` set to `"Chainsword"`
+- **THEN** the keyword SHALL be granted only to the "Chainsword" weapon profile
+
+#### Scenario: Generic weapon targets remain unchanged
+
+- **WHEN** an effect has `weaponTarget` or `attackType` set to `"ALL"`, `"RANGE"`, or `"MELEE"`
+- **THEN** the effect SHALL apply to all weapons, all ranged weapons, or all melee weapons respectively, as before
+
+#### Scenario: Case-insensitive weapon name matching
+
+- **WHEN** a `statModifier` effect has `weaponTarget` set to `"thunder hammer"` and the unit has a weapon named `"Thunder Hammer"`
+- **THEN** the effect SHALL match and apply to that weapon profile
 
 ### Requirement: Rule Target (appliesTo)
 
@@ -526,6 +560,58 @@ Army Data is built by combining an imported army list with Simulation Unit data.
 - `wargear[].wargearItemId` references a `wargearItem.id` in the Simulation Unit; stats resolved at simulation time
 - `points` is informational only (not recalculated)
 - Army list construction (slots, points validation, wargear combos) is out of scope — the imported list is assumed correct
+
+### Requirement: Target Condition on Combat Effects
+
+The effect categories `statModifier`, `diceModifier`, and `weaponKeyword` SHALL support an optional `targetCondition` field that filters effect application based on the defending unit's keywords. When present, the simulator SHALL check the defending unit's keywords before applying the effect. When absent, the effect applies unconditionally (existing behavior).
+
+`TargetCondition` SHALL have two fields:
+- `keywords`: a non-empty array of unit keyword strings (e.g. `["VEHICLE"]`, `["MONSTER", "VEHICLE"]`)
+- `mode`: `"includes"` (effect applies only when the defender has at least one listed keyword) or `"excludes"` (effect applies only when the defender has none of the listed keywords)
+
+#### Scenario: Lethal Hits non-Vehicle (excludes mode)
+
+- **WHEN** a `weaponKeyword` effect has `targetCondition: { keywords: ["VEHICLE"], mode: "excludes" }` and the defending unit has the `VEHICLE` keyword
+- **THEN** the effect is NOT applied to attacks against that unit
+
+#### Scenario: Lethal Hits non-Vehicle against Infantry (excludes mode, no match)
+
+- **WHEN** a `weaponKeyword` effect has `targetCondition: { keywords: ["VEHICLE"], mode: "excludes" }` and the defending unit does NOT have the `VEHICLE` keyword
+- **THEN** the effect IS applied to attacks against that unit
+
+#### Scenario: Reroll vs Monster/Vehicle (includes mode)
+
+- **WHEN** a `diceModifier` effect has `targetCondition: { keywords: ["MONSTER", "VEHICLE"], mode: "includes" }` and the defending unit has the `MONSTER` keyword
+- **THEN** the effect IS applied to attacks against that unit
+
+#### Scenario: Reroll vs Monster/Vehicle against Infantry (includes mode, no match)
+
+- **WHEN** a `diceModifier` effect has `targetCondition: { keywords: ["MONSTER", "VEHICLE"], mode: "includes" }` and the defending unit has neither `MONSTER` nor `VEHICLE` keyword
+- **THEN** the effect is NOT applied to attacks against that unit
+
+#### Scenario: No targetCondition means unconditional
+
+- **WHEN** an effect does not have a `targetCondition` field
+- **THEN** the effect applies regardless of the defending unit's keywords (backward compatible)
+
+#### Scenario: Multiple keywords in excludes mode
+
+- **WHEN** a `statModifier` effect has `targetCondition: { keywords: ["MONSTER", "VEHICLE"], mode: "excludes" }` and the defending unit has the `VEHICLE` keyword
+- **THEN** the effect is NOT applied (any match in excludes mode blocks the effect)
+
+### Requirement: Target Condition Keyword Vocabulary
+
+The keywords available for `targetCondition` SHALL be: `VEHICLE`, `MONSTER`, `INFANTRY`, `CHARACTER`, `MOUNTED`, `FLY`, `WALKER`, `TITANIC`. These match the `MortalWoundsUnitType` values (excluding `ALL`, which is implicit when no `targetCondition` is set).
+
+#### Scenario: Known keyword used in condition
+
+- **WHEN** the user selects `VEHICLE` as a target condition keyword
+- **THEN** it matches units whose keywords include `VEHICLE`
+
+#### Scenario: Vocabulary matches MortalWoundsUnitType
+
+- **WHEN** listing available keywords for targetCondition
+- **THEN** they are identical to `MortalWoundsUnitType` values minus `ALL`
 
 ## Out of Scope
 
