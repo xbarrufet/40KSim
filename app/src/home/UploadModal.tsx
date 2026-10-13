@@ -67,8 +67,8 @@ export function UploadModal({ factionSlug, units, onClose, onUploaded }: UploadM
         })
         await putBaseData(factionSlug, entry.slug, entry.data)
 
-        const existingStructuredAbilitiesData = await getStructuredAbilitiesData(factionSlug, entry.slug)
-        if (!existingStructuredAbilitiesData) {
+        const existingResult = await getStructuredAbilitiesData(factionSlug, entry.slug)
+        if (!existingResult) {
           const structuredAbilitiesData = seedStructuredAbilities(entry.data as BaseData)
           await putStructuredAbilitiesData(factionSlug, entry.slug, structuredAbilitiesData)
         }

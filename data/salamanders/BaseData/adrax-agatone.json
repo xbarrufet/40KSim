@@ -1,0 +1,391 @@
+{
+  "id": 47322,
+  "slug": "adrax-agatone",
+  "name": "Adrax Agatone",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "<ul><li>1 Adrax Agatone model</li></ul>\rThis model is equipped with: 1 Drakkis; 1 Malleus Noctum.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Lord of the Pyroclasts",
+      "rules": "While an enemy unit is <b>engaged</b> with this unit, that enemy unit has -1 <b>OC</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Mighty heroes fight at the forefront of battle.",
+      "name": "Leader",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Transhuman Strategist",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Unto the Anvil",
+      "rules": "This unit’s melee attacks can:\r<ul><li>Re-roll <b>wound rolls</b> of 1.</li>\r<li><u>Or:</u> If the <b>assault doctrine</b> is active for this unit, re-roll <b>wound rolls</b>.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Leader",
+      "rules": "This model can be attached to the following units:\n\n■ **ASSAULT INTERCESSOR SQUAD**\n■ **BLADEGUARD VETERAN SQUAD**\n■ **COMPANY HEROES**\n■ **INFERNUS SQUAD**\n■ **INTERCESSOR SQUAD**\n■ **STERNGUARD VETERAN SQUAD**\n■ **VANGUARD VETERAN SQUAD**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47702,
+        "name": "Sternguard Veteran Squad",
+        "slug": "sternguard-veteran-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46861,
+        "name": "Intercessor Squad",
+        "slug": "intercessor-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46938,
+        "name": "Assault Intercessor Squad",
+        "slug": "assault-intercessor-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47595,
+        "name": "Vanguard Veteran Squad",
+        "slug": "vanguard-veteran-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47730,
+        "name": "Company Heroes",
+        "slug": "company-heroes",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47231,
+        "name": "Infernus Squad",
+        "slug": "infernus-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46687,
+        "name": "Bladeguard Veteran Squad",
+        "slug": "bladeguard-veteran-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1872,
+    "slug": "salamanders",
+    "name": "Salamanders",
+    "commonName": "Salamanders"
+  },
+  "miniatures": [
+    {
+      "id": 61912,
+      "name": "Adrax Agatone",
+      "stats": {
+        "save": "2+",
+        "wounds": "5",
+        "movement": "6\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51106,
+          "name": "Captain"
+        },
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50746,
+          "name": "Epic Hero"
+        },
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51004,
+          "name": "Tacticus"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108009,
+            "name": "Drakkis",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114082,
+                "name": "Drakkis",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "D6+3",
+                "ballisticSkill": "-",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  },
+                  {
+                    "id": 3364,
+                    "name": "TORRENT",
+                    "rules": "Each time an attack is made with a <b>[TORRENT]</b> weapon, that attack automatically hits the target."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106843,
+            "name": "Malleus Noctum",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112839,
+                "name": "Malleus Noctum",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3494,
+                    "name": "DEVASTATING WOUNDS",
+                    "rules": "Each time an attack made with a <b>[DEVASTATING WOUNDS]</b> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <b>[DEVASTATING WOUNDS]</b> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <b>[DEVASTATING WOUNDS]</b> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 108009,
+            "name": "Drakkis",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114082,
+                "name": "Drakkis",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "D6+3",
+                "ballisticSkill": "-",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  },
+                  {
+                    "id": 3364,
+                    "name": "TORRENT",
+                    "rules": "Each time an attack is made with a <b>[TORRENT]</b> weapon, that attack automatically hits the target."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106843,
+            "name": "Malleus Noctum",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112839,
+                "name": "Malleus Noctum",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3494,
+                    "name": "DEVASTATING WOUNDS",
+                    "rules": "Each time an attack made with a <b>[DEVASTATING WOUNDS]</b> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <b>[DEVASTATING WOUNDS]</b> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <b>[DEVASTATING WOUNDS]</b> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 61374,
+      "points": 90,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61912,
+          "miniatureName": "Adrax Agatone",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

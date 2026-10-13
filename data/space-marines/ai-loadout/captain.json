@@ -1,0 +1,98 @@
+{
+  "space-marines/captain": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Master-crafted Bolter",
+            "wargearItemId": 106195
+          },
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 107345
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Neo-volkite Pistol",
+                "wargearItemId": 107525
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 108745
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41018,
+        "originalText": "■ This model's Master-crafted Bolter and Heavy Bolt Pistol can be replaced with one of the following:\n▫ 1 Neo-volkite Pistol\n▫ 1 Plasma Pistol"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Master-crafted Bolter",
+            "wargearItemId": 106195
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Relic Shield",
+                "wargearItemId": 107174
+              }
+            ],
+            "locks": [
+              105583
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42246,
+        "originalText": "■ This model's Master-crafted Bolter can be replaced with 1 Relic Shield (this model's Master-crafted Power Weapon cannot be replaced)."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Master-crafted Power Weapon",
+            "wargearItemId": 105583
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 107647
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41541,
+        "originalText": "■ This model's Master-crafted Power Weapon can be replaced with 1 Power Fist."
+      }
+    ]
+  }
+}

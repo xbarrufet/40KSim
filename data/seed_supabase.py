@@ -41,8 +41,56 @@ def load_factions() -> dict[str, list[dict]]:
         sys.exit(1)
     return json.loads(factions_path.read_text())
 
-def seed_faction(client, faction_slug: str, faction_name: str, category: str):
+def seed_loadout(client, faction_slug: str, override_confirmed: bool = False):
     faction_dir = DATA_DIR / faction_slug
+    loadout_proposals = {}
+
+    loadout_path = faction_dir / "loadout_proposals.json"
+    if loadout_path.exists():
+        loadout_proposals = json.loads(loadout_path.read_text())
+
+    ai_loadout_dir = faction_dir / "ai-loadout"
+    if ai_loadout_dir.exists():
+        for f in ai_loadout_dir.glob("*.json"):
+            data = json.loads(f.read_text())
+            loadout_proposals.update(data)
+
+    confirmed = set() if override_confirmed else get_confirmed_slugs(client, "loadout_data", faction_slug)
+    count = 0
+    skipped = 0
+    for key, value in loadout_proposals.items():
+        parts = key.split("/")
+        if len(parts) != 2 or parts[0] != faction_slug:
+            continue
+        unit_slug = parts[1]
+        if unit_slug in confirmed:
+            skipped += 1
+            continue
+        client.table("loadout_data").upsert({
+            "faction_slug": faction_slug,
+            "unit_slug": unit_slug,
+            "tag": value.get("tag", "AI_PROPOSED"),
+            "options": value.get("options", []),
+        }).execute()
+        count += 1
+    if count:
+        print(f"  Subiendo {count} loadout proposals...")
+    if skipped:
+        print(f"  Saltando {skipped} loadouts ya CONFIRMED (usa --override-confirmed para forzar)")
+
+
+def get_confirmed_slugs(client, table: str, faction_slug: str) -> set[str]:
+    result = client.table(table).select("unit_slug").eq("faction_slug", faction_slug).eq("tag", "CONFIRMED").execute()
+    return {row["unit_slug"] for row in (result.data or [])}
+
+
+def seed_faction(client, faction_slug: str, faction_name: str, category: str, loadout_only: bool = False, override_confirmed: bool = False):
+    faction_dir = DATA_DIR / faction_slug
+
+    if loadout_only:
+        print(f"  Solo loadout para {faction_name}")
+        seed_loadout(client, faction_slug, override_confirmed=override_confirmed)
+        return
 
     icon_path = f"/icons/{faction_slug}-icon.svg"
 
@@ -93,13 +141,18 @@ def seed_faction(client, faction_slug: str, faction_name: str, category: str):
 
     proposals_path = faction_dir / "structuring_proposals.json"
     if proposals_path.exists():
+        confirmed = set() if override_confirmed else get_confirmed_slugs(client, "unit_data", faction_slug)
         proposals = json.loads(proposals_path.read_text())
         count = 0
+        skipped = 0
         for key, value in proposals.items():
             parts = key.split("/")
             if len(parts) != 2 or parts[0] != faction_slug:
                 continue
             unit_slug = parts[1]
+            if unit_slug in confirmed:
+                skipped += 1
+                continue
             client.table("unit_data").upsert({
                 "faction_slug": faction_slug,
                 "unit_slug": unit_slug,
@@ -111,12 +164,18 @@ def seed_faction(client, faction_slug: str, faction_name: str, category: str):
             count += 1
         if count:
             print(f"  Subiendo {count} structured abilities (proposals)...")
+        if skipped:
+            print(f"  Saltando {skipped} unidades ya CONFIRMED (usa --override-confirmed para forzar)")
+
+    seed_loadout(client, faction_slug, override_confirmed=override_confirmed)
 
 def main():
-    if len(sys.argv) < 2:
-        print("Uso: python3 data/seed_supabase.py <faction-name-or-slug>")
-        print("     python3 data/seed_supabase.py --all")
-        sys.exit(1)
+    import argparse
+    parser = argparse.ArgumentParser(description='Seed Supabase tables from local data files.')
+    parser.add_argument('faction', help='Nombre de la facción o --all')
+    parser.add_argument('--loadout-only', action='store_true', help='Solo subir loadout proposals (desde loadout_proposals.json y ai-loadout/)')
+    parser.add_argument('--override-confirmed', action='store_true', help='Sobreescribir registros CONFIRMED (por defecto se saltan)')
+    args = parser.parse_args()
 
     client = get_client()
     factions_by_category = load_factions()
@@ -126,21 +185,21 @@ def main():
         for f in factions:
             all_factions.append({**f, "category": category})
 
-    if sys.argv[1] == "--all":
+    if args.faction == "--all":
         targets = all_factions
     else:
-        query = sys.argv[1].lower()
+        query = args.faction.lower()
         targets = [f for f in all_factions if f["slug"] == query or f["name"].lower() == query]
         if not targets:
-            slug_guess = slugify(sys.argv[1])
+            slug_guess = slugify(args.faction)
             targets = [f for f in all_factions if f["slug"] == slug_guess]
         if not targets:
-            print(f"Facción no encontrada: {sys.argv[1]}")
+            print(f"Facción no encontrada: {args.faction}")
             sys.exit(1)
 
     for faction in targets:
         print(f"\n--- {faction['name']} ({faction['slug']}) ---")
-        seed_faction(client, faction["slug"], faction["name"], faction["category"])
+        seed_faction(client, faction["slug"], faction["name"], faction["category"], loadout_only=args.loadout_only, override_confirmed=args.override_confirmed)
 
     print("\nSeed completado.")
 

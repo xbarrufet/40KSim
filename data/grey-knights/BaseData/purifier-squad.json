@@ -1,0 +1,717 @@
+{
+  "id": 46734,
+  "slug": "purifier-squad",
+  "name": "Purifier Squad",
+  "baseSize": "32mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **1 Knight of the Flame**\n■ **4-9 Purifiers**\n\n**Every model is equipped with:** Purifying Flame; storm bolter; Nemesis force weapon.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "There are many ways by which to deploy troops to the field of battle including tunnels, teleportation devices and other esoteric means of transportation.",
+      "name": "Deep Strike",
+      "rules": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Gate of Infinity",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Sanctity of Purpose",
+      "rules": "Each time a model in this unit makes an attack, re-roll a Wound roll of 1. lf the target is within range of an objective marker, you can re-roll the Wound roll instead.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 3,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": 3,
+  "pointsStepPoints": 10,
+  "leads": [],
+  "ledBy": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47389,
+        "name": "Castellan Crowe",
+        "slug": "castellan-crowe",
+        "factionSlug": "grey-knights"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47005,
+        "name": "Brotherhood Techmarine",
+        "slug": "brotherhood-techmarine",
+        "factionSlug": "grey-knights"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1882,
+    "slug": "grey-knights",
+    "name": "Grey Knights",
+    "commonName": "Grey Knights"
+  },
+  "miniatures": [
+    {
+      "id": 61207,
+      "name": "Knight of the Flame",
+      "stats": {
+        "save": "2+",
+        "wounds": "2",
+        "movement": "6\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51377,
+          "name": "Grenades"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51716,
+          "name": "Psyker"
+        },
+        {
+          "id": 50731,
+          "name": "Purifier Squad"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107540,
+            "name": "Storm Bolter",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114889,
+                "name": "Storm Bolter",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3431,
+                    "name": "Rapid Fire 2",
+                    "rules": "This ability always takes the form <k>[RAPID FIRE X]</k>. Each time you gather <b>attack dice</b> for a <k>[RAPID FIRE]</k> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <k>[RAPID FIRE 1]</k> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105823,
+            "name": "Purifying Flame",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113473,
+                "name": "Purifying Flame",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3426,
+                    "name": "Anti-infantry 2+",
+                    "rules": "This ability always takes the form <k>[ANTI‑X Y+]</k>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <k>[ANTI‑VEHICLE 4+]</k> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <k>[ANTI‑PSYKER 2+]</k> weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  },
+                  {
+                    "id": 3468,
+                    "name": "Ignores Cover",
+                    "rules": "Each time an attack is made with an <k>[IGNORES COVER]</k> weapon, the target cannot have the <b>benefit of cover</b> against that attack (13.08), including from rules that give a model or unit the <b>benefit of cover</b> (e.g. <b>Stealth</b>)."
+                  },
+                  {
+                    "id": 3405,
+                    "name": "Psychic",
+                    "rules": "Each time an attack is made with a <k>[PSYCHIC]</k> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <k>[PSYCHIC]</k> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 106400,
+            "name": "Nemesis force weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112630,
+                "name": "Nemesis force weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3405,
+                    "name": "Psychic",
+                    "rules": "Each time an attack is made with a <k>[PSYCHIC]</k> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <k>[PSYCHIC]</k> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105823,
+            "name": "Purifying Flame",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113473,
+                "name": "Purifying Flame",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3426,
+                    "name": "Anti-infantry 2+",
+                    "rules": "This ability always takes the form <k>[ANTI‑X Y+]</k>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <k>[ANTI‑VEHICLE 4+]</k> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <k>[ANTI‑PSYKER 2+]</k> weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  },
+                  {
+                    "id": 3468,
+                    "name": "Ignores Cover",
+                    "rules": "Each time an attack is made with an <k>[IGNORES COVER]</k> weapon, the target cannot have the <b>benefit of cover</b> against that attack (13.08), including from rules that give a model or unit the <b>benefit of cover</b> (e.g. <b>Stealth</b>)."
+                  },
+                  {
+                    "id": 3405,
+                    "name": "Psychic",
+                    "rules": "Each time an attack is made with a <k>[PSYCHIC]</k> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <k>[PSYCHIC]</k> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107540,
+            "name": "Storm Bolter",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114889,
+                "name": "Storm Bolter",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3431,
+                    "name": "Rapid Fire 2",
+                    "rules": "This ability always takes the form <k>[RAPID FIRE X]</k>. Each time you gather <b>attack dice</b> for a <k>[RAPID FIRE]</k> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <k>[RAPID FIRE 1]</k> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    },
+    {
+      "id": 62215,
+      "name": "Purifier",
+      "stats": {
+        "save": "2+",
+        "wounds": "2",
+        "movement": "6\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51377,
+          "name": "Grenades"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51716,
+          "name": "Psyker"
+        },
+        {
+          "id": 50731,
+          "name": "Purifier Squad"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107540,
+            "name": "Storm Bolter",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114889,
+                "name": "Storm Bolter",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3431,
+                    "name": "Rapid Fire 2",
+                    "rules": "This ability always takes the form <k>[RAPID FIRE X]</k>. Each time you gather <b>attack dice</b> for a <k>[RAPID FIRE]</k> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <k>[RAPID FIRE 1]</k> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105823,
+            "name": "Purifying Flame",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113473,
+                "name": "Purifying Flame",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3426,
+                    "name": "Anti-infantry 2+",
+                    "rules": "This ability always takes the form <k>[ANTI‑X Y+]</k>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <k>[ANTI‑VEHICLE 4+]</k> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <k>[ANTI‑PSYKER 2+]</k> weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  },
+                  {
+                    "id": 3468,
+                    "name": "Ignores Cover",
+                    "rules": "Each time an attack is made with an <k>[IGNORES COVER]</k> weapon, the target cannot have the <b>benefit of cover</b> against that attack (13.08), including from rules that give a model or unit the <b>benefit of cover</b> (e.g. <b>Stealth</b>)."
+                  },
+                  {
+                    "id": 3405,
+                    "name": "Psychic",
+                    "rules": "Each time an attack is made with a <k>[PSYCHIC]</k> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <k>[PSYCHIC]</k> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 104924,
+            "name": "Close combat weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112741,
+                "name": "Close combat weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106123,
+            "name": "Incinerator",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113125,
+                "name": "Incinerator",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "D6",
+                "ballisticSkill": "-",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3468,
+                    "name": "Ignores Cover",
+                    "rules": "Each time an attack is made with an <k>[IGNORES COVER]</k> weapon, the target cannot have the <b>benefit of cover</b> against that attack (13.08), including from rules that give a model or unit the <b>benefit of cover</b> (e.g. <b>Stealth</b>)."
+                  },
+                  {
+                    "id": 3358,
+                    "name": "Torrent",
+                    "rules": "Each time an attack is made with a <k>[TORRENT]</k> weapon, that attack automatically hits the target."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106400,
+            "name": "Nemesis force weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112630,
+                "name": "Nemesis force weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3405,
+                    "name": "Psychic",
+                    "rules": "Each time an attack is made with a <k>[PSYCHIC]</k> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <k>[PSYCHIC]</k> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106510,
+            "name": "Psilencer",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111134,
+                "name": "Psilencer",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "6",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3479,
+                    "name": "Precision",
+                    "rules": "While resolving attacks made with one or more <k>[PRECISION]</k> weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more <b>CHARACTER</b> models <b>visible</b> to one or more of the attacking models, the active player can select one allocation group that contains one of those <b>visible</b> <k>CHARACTER</k> models. If they do, until those attacks are resolved, or until that <k>CHARACTER</k> group is destroyed (whichever happens first), that <k>CHARACTER</k> group is the current allocation group."
+                  },
+                  {
+                    "id": 3405,
+                    "name": "Psychic",
+                    "rules": "Each time an attack is made with a <k>[PSYCHIC]</k> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <k>[PSYCHIC]</k> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  },
+                  {
+                    "id": 3402,
+                    "name": "Sustained Hits 1",
+                    "rules": "This ability always takes the form <k>[SUSTAINED HITS X]</k>. Each time an attack made with a <k>[SUSTAINED HITS]</k> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <k>[SUSTAINED HITS 2]</k> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <k>[SUSTAINED HITS 2]</k> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106089,
+            "name": "Psycannon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112209,
+                "name": "Psycannon",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "3",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3405,
+                    "name": "Psychic",
+                    "rules": "Each time an attack is made with a <k>[PSYCHIC]</k> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <k>[PSYCHIC]</k> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105823,
+            "name": "Purifying Flame",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113473,
+                "name": "Purifying Flame",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3426,
+                    "name": "Anti-infantry 2+",
+                    "rules": "This ability always takes the form <k>[ANTI‑X Y+]</k>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <k>[ANTI‑VEHICLE 4+]</k> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <k>[ANTI‑PSYKER 2+]</k> weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  },
+                  {
+                    "id": 3468,
+                    "name": "Ignores Cover",
+                    "rules": "Each time an attack is made with an <k>[IGNORES COVER]</k> weapon, the target cannot have the <b>benefit of cover</b> against that attack (13.08), including from rules that give a model or unit the <b>benefit of cover</b> (e.g. <b>Stealth</b>)."
+                  },
+                  {
+                    "id": 3405,
+                    "name": "Psychic",
+                    "rules": "Each time an attack is made with a <k>[PSYCHIC]</k> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <k>[PSYCHIC]</k> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107540,
+            "name": "Storm Bolter",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114889,
+                "name": "Storm Bolter",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3431,
+                    "name": "Rapid Fire 2",
+                    "rules": "This ability always takes the form <k>[RAPID FIRE X]</k>. Each time you gather <b>attack dice</b> for a <k>[RAPID FIRE]</k> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <k>[RAPID FIRE 1]</k> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 41689,
+      "rulesText": "■ For every 5 models in this unit, up to 2 Purifiers can each have their storm bolter and Nemesis force weapon replaced with one of the following:\n◦ 1 incinerator and 1 close combat weapon\n◦ 1 psilencer and 1 close combat weapon\n◦ 1 psycannon and 1 close combat weapon",
+      "displayOrder": 1
+    }
+  ],
+  "compositions": [
+    {
+      "id": 61658,
+      "points": 145,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 5,
+      "miniatures": [
+        {
+          "miniatureId": 61207,
+          "miniatureName": "Knight of the Flame",
+          "min": 1,
+          "max": 1
+        },
+        {
+          "miniatureId": 62215,
+          "miniatureName": "Purifier",
+          "min": 4,
+          "max": 4
+        }
+      ]
+    },
+    {
+      "id": 62000,
+      "points": 290,
+      "displayOrder": 2,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 10,
+      "miniatures": [
+        {
+          "miniatureId": 61207,
+          "miniatureName": "Knight of the Flame",
+          "min": 1,
+          "max": 1
+        },
+        {
+          "miniatureId": 62215,
+          "miniatureName": "Purifier",
+          "min": 5,
+          "max": 9
+        }
+      ]
+    }
+  ]
+}

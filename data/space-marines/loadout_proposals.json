@@ -1,0 +1,2828 @@
+{
+  "space-marines/aggressor-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "allModels"
+        },
+        "replaces": [
+          {
+            "name": "Flamestorm Gauntlets",
+            "wargearItemId": 106572
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Auto Boltstorm Gauntlets",
+                "wargearItemId": 107468
+              },
+              {
+                "count": 1,
+                "name": "Fragstorm Grenade Launcher",
+                "wargearItemId": 106192
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41964,
+        "originalText": "■ All models in this unit can each have their Flamestorm Gauntlets replaced with 1 Auto Boltstorm Gauntlets and 1 Fragstorm Grenade Launcher."
+      }
+    ]
+  },
+  "space-marines/ancient": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Bolt Rifle",
+            "wargearItemId": 108237
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 105211
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42068,
+        "originalText": "■ This model's Bolt Rifle can be replaced with 1 Power Weapon."
+      }
+    ]
+  },
+  "space-marines/assault-intercessor-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Assault Intercessor Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 106388
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hand Flamer",
+                "wargearItemId": 0
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 0
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41400,
+        "originalText": "■ The Assault Intercessor Sergeant can have their Heavy Bolt Pistol replaced with one of the following:\n▫ 1 Hand Flamer\n▫ 1 Plasma Pistol"
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Assault Intercessor Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 106051
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 0
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 0
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Thunder Hammer",
+                "wargearItemId": 0
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41067,
+        "originalText": "■ The Assault Intercessor Sergeant can have their Chainsword replaced with one of the following:\n▫ 1 Power Fist\n▫ 1 Power Weapon\n▫ 1 Thunder Hammer"
+      }
+    ]
+  },
+  "space-marines/assault-intercessors-with-jump-packs": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Assault Intercessor Sergeant with Jump Pack"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 107781
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hand Flamer",
+                "wargearItemId": 105271
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 106082
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42307,
+        "originalText": "■ The Assault Intercessor Sergeant with Jump Pack can have their Heavy Bolt Pistol replaced with one of the following:\n▫ 1 Hand Flamer\n▫ 1 Plasma Pistol"
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Assault Intercessor Sergeant with Jump Pack"
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 108282
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 104946
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 106748
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41763,
+        "originalText": "■ The Assault Intercessor Sergeant with Jump Pack can have their Chainsword replaced with one of the following:\n▫ 1 Power Fist\n▫ 1 Power Weapon"
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 107781
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 106082
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42260,
+        "originalText": "■ For every 5 models in this unit, 1 Assault Intercessor with Jump Pack model can have their Heavy Bolt Pistol replaced with 1 Plasma Pistol."
+      }
+    ]
+  },
+  "space-marines/astraeus": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Astareus Las-ripper",
+            "wargearItemId": 107213
+          },
+          {
+            "name": "Astareus Las-ripper",
+            "wargearItemId": 107213
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 2,
+                "name": "Plasma Eradicator",
+                "wargearItemId": 107389
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41059,
+        "originalText": "This model's 2 Astareus Las-rippers can be replaced with 2 Plasma Eradicator - Standards."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Ironhail Heavy Stubber",
+                "wargearItemId": 104723
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41631,
+        "originalText": "This model can be equipped with 1 Ironhail Heavy Stubber"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Astareus Las-ripper",
+            "wargearItemId": 107213
+          },
+          {
+            "name": "Astareus Las-ripper",
+            "wargearItemId": 107213
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 2,
+                "name": "Plasma Eradicator",
+                "wargearItemId": 107389
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41679,
+        "originalText": "■ This model's 2 Astraeus las-rippers can be replaced with 2 plasma eradicators."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Twin Heavy Bolter",
+            "wargearItemId": 106448
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin Lascannon",
+                "wargearItemId": 105376
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41735,
+        "originalText": "This model's Twin Heavy Bolter can be replaced with 1 Twin Lascannon."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Twin Heavy Bolter",
+            "wargearItemId": 106448
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin Lascannon",
+                "wargearItemId": 105376
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41988,
+        "originalText": "■ This model's twin heavy bolter can be replaced with 1 twin lascannon."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Ironhail Heavy Stubber",
+                "wargearItemId": 104723
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42290,
+        "originalText": "■ This model can be equipped with 1 ironhail heavy stubber."
+      }
+    ]
+  },
+  "space-marines/bladeguard-veteran-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Bladeguard Veteran Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 106064
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Neo-volkite Pistol",
+                "wargearItemId": 106628
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 104833
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41412,
+        "originalText": "■ The Bladeguard Veteran Sergeant can have their Heavy bolt pistol replaced with one of the following:\n▫ 1 Neo-volkite Pistol\n▫ 1 Plasma Pistol"
+      }
+    ]
+  },
+  "space-marines/brutalis-dreadnought": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Bolt Rifles",
+            "wargearItemId": 106418
+          },
+          {
+            "name": "Brutalis Fists",
+            "wargearItemId": 105223
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Brutalis Talons",
+                "wargearItemId": 107250
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41428,
+        "originalText": "■ This model's Bolt Rifles and Brutalis Fists can be replaced with 1 Brutalis Talons."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Twin Heavy Bolter",
+            "wargearItemId": 107837
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin Multi-melta",
+                "wargearItemId": 105982
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41350,
+        "originalText": "■ This model's Twin Heavy Bolter can be replaced with 1 Twin Multi-melta."
+      }
+    ]
+  },
+  "space-marines/captain-in-gravis-armour": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Master-crafted Heavy Bolt Rifle",
+            "wargearItemId": 107052
+          },
+          {
+            "name": "Master-crafted Power Weapon",
+            "wargearItemId": 108704
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Boltstorm Gauntlet",
+                "wargearItemId": 106976
+              },
+              {
+                "count": 1,
+                "name": "Relic Blade",
+                "wargearItemId": 108055
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Boltstorm Gauntlet",
+                "wargearItemId": 106976
+              },
+              {
+                "count": 1,
+                "name": "Relic Chainsword",
+                "wargearItemId": 106944
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Boltstorm Gauntlet",
+                "wargearItemId": 106976
+              },
+              {
+                "count": 1,
+                "name": "Relic Power Fist",
+                "wargearItemId": 105287
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42092,
+        "originalText": "■ This model's Master-crafted Heavy Bolt Rifle and Master-crafted Power Weapon can be replaced with one of the following:\n▫ 1 Boltstorm Gauntlet and 1 Relic Blade\n▫ 1 Boltstorm Gauntlet and 1 Relic Chainsword\n▫ 1 Boltstorm Gauntlet and 1 Relic Power Fist"
+      }
+    ]
+  },
+  "space-marines/captain-in-terminator-armour": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Relic Weapon",
+            "wargearItemId": 108699
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Relic Fist",
+                "wargearItemId": 105707
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41621,
+        "originalText": "■ This model's Relic Weapon can be replaced with 1 Relic Fist."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 105558
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Combi-weapon",
+                "wargearItemId": 105650
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41639,
+        "originalText": "■ This model's Storm Bolter can be replaced with 1 Combi-weapon."
+      }
+    ]
+  },
+  "space-marines/captain-on-bike": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 105318
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 104727
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42017,
+        "originalText": "■ This model's Heavy Bolt Pistol can be replaced with 1 Plasma Pistol."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Master-crafted Power Weapon",
+            "wargearItemId": 108245
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Thunder Hammer",
+                "wargearItemId": 106135
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41007,
+        "originalText": "■ This model's Master-crafted Power Weapon can be replaced with 1 Thunder Hammer."
+      }
+    ]
+  },
+  "space-marines/captain-with-jump-pack": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 108116
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hand Flamer",
+                "wargearItemId": 106170
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 105326
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41761,
+        "originalText": "■ This model's Heavy Bolt Pistol can be replaced with one of the following:\n▫ 1 Hand Flamer\n▫ 1 Plasma Pistol"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 105454
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 106062
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Relic Weapon",
+                "wargearItemId": 107872
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41648,
+        "originalText": "■ This model's Chainsword can be replaced with one of the following:\n▫ 1 Power Fist\n▫ 1 Relic Weapon"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 108116
+          },
+          {
+            "name": "Chainsword",
+            "wargearItemId": 105454
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Thunder Hammer",
+                "wargearItemId": 106017
+              },
+              {
+                "count": 1,
+                "name": "Relic Shield",
+                "wargearItemId": 107174
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Chainsword",
+                "wargearItemId": 105454
+              },
+              {
+                "count": 1,
+                "name": "Relic Shield",
+                "wargearItemId": 107174
+              }
+            ],
+            "locks": [
+              105454
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42050,
+        "originalText": "■ This model's Heavy Bolt Pistol and Chainsword can be replaced with one of the following:\n▫ 1 Thunder Hammer and 1 Relic Shield\n▫ 1 Chainsword and 1 Relic Shield"
+      }
+    ]
+  },
+  "space-marines/captain": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Master-crafted Bolter",
+            "wargearItemId": 106195
+          },
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 107345
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Neo-volkite Pistol",
+                "wargearItemId": 107525
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 108745
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41018,
+        "originalText": "■ This model's Master-crafted Bolter and Heavy Bolt Pistol can be replaced with one of the following:\n▫ 1 Neo-volkite Pistol\n▫ 1 Plasma Pistol"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Master-crafted Bolter",
+            "wargearItemId": 106195
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Relic Shield",
+                "wargearItemId": 107174
+              }
+            ],
+            "locks": [
+              105583
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42246,
+        "originalText": "■ This model's Master-crafted Bolter can be replaced with 1 Relic Shield (this model's Master-crafted Power Weapon cannot be replaced)."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Master-crafted Power Weapon",
+            "wargearItemId": 105583
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 107647
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41541,
+        "originalText": "■ This model's Master-crafted Power Weapon can be replaced with 1 Power Fist."
+      }
+    ]
+  },
+  "space-marines/chaplain-in-terminator-armour": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 105204
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Relic Shield",
+                "wargearItemId": 107174
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41460,
+        "originalText": "■ This model's Storm Bolter can be replaced with 1 Relic Shield."
+      }
+    ]
+  },
+  "space-marines/desolation-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Desolation Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Superfrag Rocket Launcher",
+            "wargearItemId": 107813
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Vengor Launcher",
+                "wargearItemId": 108184
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41298,
+        "originalText": "■ The Desolation Sergeant can have their Superfrag Rocket Launcher replaced with 1 Vengor Launcher."
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Desolation Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Superkrak Rocket Launcher",
+            "wargearItemId": 107430
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Vengor Launcher",
+                "wargearItemId": 108184
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41513,
+        "originalText": "■ The Desolation Sergeant can have their Superkrak Rocket Launcher replaced with 1 Vengor Launcher."
+      },
+      {
+        "scope": {
+          "type": "allModels"
+        },
+        "replaces": [
+          {
+            "name": "Superfrag Rocket Launcher",
+            "wargearItemId": 107813
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Superkrak Rocket Launcher",
+                "wargearItemId": 107430
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41437,
+        "originalText": "■ All models in this unit can each have their Superfrag Rocket Launcher replaced with 1 Superkrak Rocket Launcher."
+      }
+    ]
+  },
+  "space-marines/eliminator-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Eliminator Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Bolt Sniper Rifle",
+            "wargearItemId": 105328
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Instigator Bolt Carbine",
+                "wargearItemId": 105328
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Las Fusil",
+                "wargearItemId": 105218
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41665,
+        "originalText": "■ The Eliminator Sergeant can have their Bolt Sniper Rifle replaced with one of the following:\n▫ 1 Instigator Bolt Carbine\n▫ 1 Las Fusil"
+      },
+      {
+        "scope": {
+          "type": "allModels"
+        },
+        "replaces": [
+          {
+            "name": "Bolt Sniper Rifle",
+            "wargearItemId": 105328
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Las Fusil",
+                "wargearItemId": 105218
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41850,
+        "originalText": "■ All Eliminator models in this unit can each have their Bolt Sniper Rifle replaced with 1 Las Fusil."
+      }
+    ]
+  },
+  "space-marines/eradicator-squad-with-melta-rifles": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 3,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Melta Rifle",
+            "wargearItemId": 105757
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Multi-melta",
+                "wargearItemId": 108046
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42138,
+        "originalText": "■ For every 3 models in this unit, 1 Eradicator model can have their Melta Rifle replaced with 1 Multi-melta."
+      }
+    ]
+  },
+  "space-marines/firestrike-servo-turrets": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Twin Firestrike Las-talon",
+            "wargearItemId": 107570
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin Firestrike Autocannon",
+                "wargearItemId": 105150
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42343,
+        "originalText": "■ Any number of models can each have their Twin Firestrike Las-talon replaced with 1 Twin Firestrike Autocannon."
+      }
+    ]
+  },
+  "space-marines/heavy-intercessor-squad": {
+    "tag": "AI_PROPOSED",
+    "options": []
+  },
+  "space-marines/hellblaster-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Hellblaster Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Bolt Pistol",
+            "wargearItemId": 104779
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 107154
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41877,
+        "originalText": "■ The Hellblaster Sergeant can have their Bolt Pistol replaced with 1 Plasma Pistol."
+      }
+    ]
+  },
+  "space-marines/impulsor": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Bellicatus Missile Array",
+                "wargearItemId": 107654
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Orbital Comms Array",
+                "wargearItemId": 106312
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Ironhail Skytalon Array",
+                "wargearItemId": 108211
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Shield Dome",
+                "wargearItemId": 107720
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": -84196,
+        "originalText": "This model can be equipped with one of the following:\n▫ 1 Bellicatus Missile Array\n▫ 1 Orbital Comms Array\n▫ 1 Ironhail Skytalon Array\n▫ 1 Shield Dome"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolters",
+            "wargearItemId": 106219
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Fragstorm Grenade Launchers",
+                "wargearItemId": 106797
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": -85802,
+        "originalText": "This model’s Storm Bolters can be replaced with 1 Fragstorm Grenade Launchers."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Ironhail Heavy Stubber",
+                "wargearItemId": 106440
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": -84593,
+        "originalText": "This model can be equipped with 1 Ironhail Heavy Stubber."
+      }
+    ]
+  },
+  "space-marines/inceptor-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "allModels"
+        },
+        "replaces": [
+          {
+            "name": "Assault Bolters",
+            "wargearItemId": 105763
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Exterminators",
+                "wargearItemId": 107324
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41496,
+        "originalText": "■ All models in this unit can each have their Assault Bolters replaced with 1 Plasma Exterminators."
+      }
+    ]
+  },
+  "space-marines/infiltrator-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Helix Gauntlet",
+                "wargearItemId": 105527
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41088,
+        "originalText": "■ 1 model can be equipped with 1 Helix Gauntlet."
+      }
+    ]
+  },
+  "space-marines/intercessor-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Intercessor Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Knives and Fists",
+            "wargearItemId": 105105
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Chainsword",
+                "wargearItemId": 107419
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 105690
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 107952
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Thunder Hammer",
+                "wargearItemId": 108727
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41300,
+        "originalText": "■ The Intercessor Sergeant can have their Knives and Fists replaced with one of the following:\n▫ 1 Chainsword\n▫ 1 Power Fist\n▫ 1 Power Weapon\n▫ 1 Thunder Hammer"
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Intercessor Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Bolt Rifle",
+            "wargearItemId": 106073
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Chainsword",
+                "wargearItemId": 107419
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hand Flamer",
+                "wargearItemId": 105729
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 105071
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 107952
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42306,
+        "originalText": "■ The Intercessor Sergeant can have their Bolt Rifle replaced with one of the following:\n▫ 1 Chainsword\n▫ 1 Hand Flamer\n▫ 1 Plasma Pistol\n▫ 1 Power Weapon"
+      }
+    ]
+  },
+  "space-marines/invader-atvs": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "allModels"
+        },
+        "replaces": [
+          {
+            "name": "Onslaught Gatling Cannon",
+            "wargearItemId": 107807
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Multi-melta",
+                "wargearItemId": 107464
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41043,
+        "originalText": "■ All models in this unit can each have their Onslaught Gatling Cannon replaced with 1 Multi-melta."
+      }
+    ]
+  },
+  "space-marines/invictor-tactical-warsuit": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Incendium Cannon",
+            "wargearItemId": 106259
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin Ironhail Autocannon",
+                "wargearItemId": 108382
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42056,
+        "originalText": "■ This model's Incendium Cannon can be replaced with 1 Twin Ironhail Autocannon."
+      }
+    ]
+  },
+  "space-marines/land-raider-crusader": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hunter-killer Missile",
+                "wargearItemId": 107797
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41090,
+        "originalText": "■ This model can be equipped with 1 Hunter-killer Missile."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Multi-melta",
+                "wargearItemId": 107049
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41021,
+        "originalText": "■ This model can be equipped with 1 Multi-melta."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Bolter",
+                "wargearItemId": 107828
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41227,
+        "originalText": "■ This model can be equipped with 1 Storm Bolter."
+      }
+    ]
+  },
+  "space-marines/land-raider-redeemer": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hunter-killer Missile",
+                "wargearItemId": 105363
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41671,
+        "originalText": "■ This model can be equipped with 1 Hunter-killer Missile."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Multi-melta",
+                "wargearItemId": 107360
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41555,
+        "originalText": "■ This model can be equipped with 1 Multi-melta."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Bolter",
+                "wargearItemId": 107859
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41208,
+        "originalText": "■ This model can be equipped with 1 Storm Bolter."
+      }
+    ]
+  },
+  "space-marines/land-raider": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hunter-killer Missile",
+                "wargearItemId": 106069
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42317,
+        "originalText": "■ This model can be equipped with 1 Hunter-killer Missile."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Multi-melta",
+                "wargearItemId": 105671
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42298,
+        "originalText": "■ This model can be equipped with 1 Multi-melta."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Bolter",
+                "wargearItemId": 105015
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41491,
+        "originalText": "■ This model can be equipped with 1 Storm Bolter."
+      }
+    ]
+  },
+  "space-marines/land-speeder": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Onslaught Gatling Cannon",
+            "wargearItemId": 108428
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Pyrecannon",
+                "wargearItemId": 105551
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42243,
+        "originalText": "■ This model's Onslaught Gatling Cannon can be replaced with 1 Pyrecannon."
+      }
+    ]
+  },
+  "space-marines/lieutenant-in-phobos-armour": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Special-issue Bolt Pistol",
+            "wargearItemId": 105772
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Master-crafted bolt carbine",
+                "wargearItemId": 107229
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42234,
+        "originalText": "■ This model's Special-issue Bolt Pistol can be replaced with 1 Master-crafted Bolt Carbine."
+      }
+    ]
+  },
+  "space-marines/lieutenant": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Master-crafted Bolter",
+            "wargearItemId": 105844
+          },
+          {
+            "name": "Bolt Pistol",
+            "wargearItemId": 104917
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Neo-volkite Pistol",
+                "wargearItemId": 106336
+              },
+              {
+                "count": 1,
+                "name": "Master-crafted Power Weapon",
+                "wargearItemId": 105939
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42170,
+        "originalText": "■ This model's Master-crafted Bolter and Bolt Pistol can be replaced with 1 Neo-volkite Pistol and 1 Master-crafted Power Weapon."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Shield",
+                "wargearItemId": 106640
+              }
+            ],
+            "locks": [
+              106336
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41707,
+        "originalText": "■ If this model is equipped with 1 Neo-volkite Pistol, it can be equipped with 1 Storm Shield (this model's 1 Neo-volkite Pistol cannot be replaced)."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Bolt Pistol",
+            "wargearItemId": 104917
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Heavy Bolt Pistol",
+                "wargearItemId": 105933
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41273,
+        "originalText": "■ This model's Bolt Pistol can be replaced with 1 Heavy Bolt Pistol."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Master-crafted Bolter",
+            "wargearItemId": 105844
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Master-crafted Power Weapon",
+                "wargearItemId": 105939
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 107739
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 106579
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41674,
+        "originalText": "■ This model's Master-crafted Bolter can be replaced with one of the following:\n▫ 1 Master-crafted Power Weapon\n▫ 1 Plasma Pistol\n▫ 1 Power Fist"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Ceramite Fists",
+            "wargearItemId": 105142
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Master-crafted Power Weapon",
+                "wargearItemId": 105939
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 106579
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41287,
+        "originalText": "■ This model's Ceramite Fists can be replaced with one of the following:\n▫ 1 Master-crafted Power Weapon\n▫ 1 Power Fist"
+      }
+    ]
+  },
+  "space-marines/outrider-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Outrider Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 105614
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 105614
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Thunder Hammer",
+                "wargearItemId": 105614
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42328,
+        "originalText": "■ The Outrider Sergeant can have their Chainsword replaced with one of the following:\n▫ 1 Power Weapon\n▫ 1 Thunder Hammer"
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 3,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 106695
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 105647
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41489,
+        "originalText": "■ For every 3 models in this unit, 1 model can have their Heavy Bolt Pistol replaced with 1 Plasma Pistol."
+      }
+    ]
+  },
+  "space-marines/redemptor-dreadnought": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Icarus Rocket Pod",
+                "wargearItemId": 105843
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41725,
+        "originalText": "■ This model can be equipped with 1 Icarus Rocket Pod."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Fragstorm Grenade Launchers",
+            "wargearItemId": 106767
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Bolters",
+                "wargearItemId": 106285
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41885,
+        "originalText": "■ This model's Fragstorm Grenade Launchers can be replaced with 1 Storm Bolters."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Flamer",
+            "wargearItemId": 107399
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Onslaught Gatling Cannon",
+                "wargearItemId": 107107
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41805,
+        "originalText": "■ This model's Heavy Flamer can be replaced with 1 Onslaught Gatling Cannon."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Onslaught Gatling Cannon",
+            "wargearItemId": 106113
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Macro Plasma Incinerator",
+                "wargearItemId": 108044
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41791,
+        "originalText": "■ This model's Heavy Onslaught Gatling Cannon can be replaced with 1 Macro Plasma Incinerator."
+      }
+    ]
+  },
+  "space-marines/reiver-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "allModels"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Grav-chutes",
+                "wargearItemId": 107865
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42258,
+        "originalText": "■ This unit can be equipped with 1 Grav-chutes"
+      },
+      {
+        "scope": {
+          "type": "allModels"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Grapnel Launchers",
+                "wargearItemId": 108700
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41184,
+        "originalText": "■ This unit can be equipped with 1 Grapnel Launchers"
+      }
+    ]
+  },
+  "space-marines/repulsor-executioner": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Laser Destroyer",
+            "wargearItemId": 107592
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Macro Plasma Incinerator",
+                "wargearItemId": 105768
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": -85798,
+        "originalText": "This model's Heavy Laser Destroyer can be replaced with 1 Macro Plasma Incinerator."
+      }
+    ]
+  },
+  "space-marines/repulsor": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Onslaught Gatling Cannon",
+            "wargearItemId": 105013
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Las-talon",
+                "wargearItemId": 106078
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": -85390,
+        "originalText": "This model's Heavy Onslaught Gatling Cannon can be replaced with 1 Las-talon."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Twin Heavy Bolter",
+            "wargearItemId": 108483
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin Lascannon",
+                "wargearItemId": 107004
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": -86340,
+        "originalText": "This model's Twin Heavy Bolter can be replaced with 1 Twin Lascannon."
+      }
+    ]
+  },
+  "space-marines/rhino": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hunter-killer Missile",
+                "wargearItemId": 108337
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41498,
+        "originalText": "■ This model can be equipped with 1 Hunter-killer Missile."
+      }
+    ]
+  },
+  "space-marines/scout-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Scout Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Boltgun",
+            "wargearItemId": 105764
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Shotgun",
+                "wargearItemId": 105958
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41769,
+        "originalText": "■ The Scout Sergeant can have their Boltgun replaced with 1 Shotgun."
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Scout Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Combat Knife",
+            "wargearItemId": 105483
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Chainsword",
+                "wargearItemId": 105483
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41078,
+        "originalText": "■ The Scout Sergeant can have their Combat Knife replaced with 1 Chainsword."
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Boltgun",
+            "wargearItemId": 105764
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Shotgun",
+                "wargearItemId": 105958
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41889,
+        "originalText": "■ Any number of Scout models can each have their Boltgun replaced with 1 Shotgun."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Boltgun",
+            "wargearItemId": 105764
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Sniper Rifle",
+                "wargearItemId": 107802
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41994,
+        "originalText": "■ For every 5 models in this unit, 1 Scout model can have their Boltgun replaced with 1 Sniper Rifle."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Boltgun",
+            "wargearItemId": 105764
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Heavy Bolter",
+                "wargearItemId": 107357
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Missile Launcher",
+                "wargearItemId": 105216
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41204,
+        "originalText": "■ For every 5 models in this unit, 1 Scout model can have their Boltgun replaced with one of the following:\n▫ 1 Heavy Bolter\n▫ 1 Missile Launcher"
+      }
+    ]
+  },
+  "space-marines/sternguard-veteran-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Sternguard Veteran Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 108185
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 106848
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 107081
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42039,
+        "originalText": "■ The Sternguard Veteran Sergeant can have their Chainsword replaced with one of the following:\n▫ 1 Power Fist\n▫ 1 Power Weapon"
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Artificer Firearm",
+            "wargearItemId": 106902
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Heavy Bolter",
+                "wargearItemId": 106902
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Pyrecannon",
+                "wargearItemId": 106902
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41587,
+        "originalText": "■ For every 5 models in this unit, 1 Sternguard Veteran model can have their Artificer Firearm replaced with one of the following:\n▫ 1 Heavy Bolter\n▫ 1 Pyrecannon"
+      }
+    ]
+  },
+  "space-marines/terminator-assault-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Twin Lightning Claws",
+            "wargearItemId": 107904
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Shield",
+                "wargearItemId": 105561
+              },
+              {
+                "count": 1,
+                "name": "Thunder Hammer",
+                "wargearItemId": 107219
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41266,
+        "originalText": "■ Any number of models can each have their Twin Lightning Claws replaced with 1 Storm Shield and 1 Thunder Hammer."
+      }
+    ]
+  },
+  "space-marines/terminator-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Terminator Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Power Fist",
+            "wargearItemId": 107750
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Chainfist",
+                "wargearItemId": 106466
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": null
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41212,
+        "originalText": "■ The Terminator Sergeant can have their Power Fist replaced with one of the following:\n▫ 1 Chainfist\n▫ 1 Power Weapon"
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Power Fist",
+            "wargearItemId": 107750
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Chainfist",
+                "wargearItemId": 106466
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42141,
+        "originalText": "■ Any number of Terminator models can each have their Power Fist replaced with 1 Chainfist."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 106548
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Assault Cannon",
+                "wargearItemId": 108312
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Heavy Flamer",
+                "wargearItemId": 107002
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Cyclone Missile Launcher",
+                "wargearItemId": 108720
+              },
+              {
+                "count": 1,
+                "name": "Storm Bolter",
+                "wargearItemId": 106548
+              }
+            ],
+            "locks": [
+              106548
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41446,
+        "originalText": "■ For every 5 models in this unit, 1 Terminator model can have their Storm Bolter replaced with one of the following:\n▫ 1 Assault Cannon\n▫ 1 Heavy Flamer\n▫ 1 Cyclone Missile Launcher and 1 Storm Bolter (that model's Storm Bolter cannot be replaced)."
+      }
+    ]
+  },
+  "space-marines/thunderhawk-gunship": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Thunderhawk Heavy Cannon",
+            "wargearItemId": 107876
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Turbo-laser Destructor",
+                "wargearItemId": 108493
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41332,
+        "originalText": "This model's Thunderhawk Heavy Cannon can be replaced with 1 Turbo-laser Destructor."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Thunderhawk Heavy Cannon",
+            "wargearItemId": 107876
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Turbo-laser Destructor",
+                "wargearItemId": 108493
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41999,
+        "originalText": "■ This model's Thunderhawk heavy cannon can be replaced with 1 turbo-laser destructor."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Hellstrike Missile Battery",
+            "wargearItemId": 107924
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hellstrike Missile Battery",
+                "wargearItemId": 107924
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41474,
+        "originalText": "■ This model's Thunderhawk cluster bombs can be replaced with 1 hellstrike missile battery."
+      }
+    ]
+  },
+  "space-marines/vanguard-veteran-squad-with-jump-packs": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Vanguard Veteran Sergeant with Jump Pack"
+        },
+        "replaces": [
+          {
+            "name": "Relic Blade",
+            "wargearItemId": 106782
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 104811
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Thunder Hammer",
+                "wargearItemId": 108473
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41299,
+        "originalText": "■ The Vanguard Veteran Sergeant with Jump Pack can have their Relic Blade replaced with one of the following:\n▫ 1 Power Fist\n▫ 1 Thunder Hammer"
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Vanguard Veteran Sergeant with Jump Pack"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 106072
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma pistol",
+                "wargearItemId": 106855
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41941,
+        "originalText": "■ The Vanguard Veteran Sergeant with Jump Pack can have their Heavy Bolt Pistol replaced with 1 Plasma Pistol."
+      },
+      {
+        "scope": {
+          "type": "allModels"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 106072
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Combat Shield",
+                "wargearItemId": 106202
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41627,
+        "originalText": "■ All models in this unit can each have their Heavy Bolt Pistol replaced with 1 Combat Shield."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 2
+          }
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 106072
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma pistol",
+                "wargearItemId": 106855
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41853,
+        "originalText": "■ For every 5 models in this unit, up to 2 Vanguard Veteran with Jump Pack models can each have their Heavy Bolt Pistol replaced with 1 Plasma Pistol."
+      }
+    ]
+  }
+}

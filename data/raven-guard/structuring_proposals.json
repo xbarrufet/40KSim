@@ -1,0 +1,94 @@
+{
+  "raven-guard/aethon-shaan": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Master of Shadows",
+        "category": "OTHER",
+        "text": "In your Command phase, you can select one friendly Adeptus Astartes Infantry unit. You can re-roll charge rolls for that unit until the start of your next Command phase.",
+        "originalText": "In your Command phase, you can select one friendly <k>Adeptus Astartes Infantry</k> unit. You can re-roll <b>charge rolls</b> for that unit until the start of your next Command phase."
+      },
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "Always",
+        "name": "Blackwing Mantle (Once per phase, per army)",
+        "category": "OTHER",
+        "text": "You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: That use is -1 CP. That use does not prevent any uses of that stratagem on other units this phase.",
+        "originalText": "You can target this unit with the <b>Heroic Intervention stratagem</b>, regardless of any other uses of that <b>stratagem</b> this phase. If you do:\r<ul><li>That use is -1 CP.</li>\r<li>That use does not prevent any uses of that <b>stratagem</b> on other units this phase.</li></ul>"
+      },
+      {
+        "type": "Alone",
+        "name": "Lone Operative",
+        "category": "OTHER",
+        "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by INDIRECT FIRE weapons unless the attacking model is within 12\" of this unit.",
+        "originalText": "Unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within 12\" of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within 12\" of this unit.\n\nIf this ability takes the form <b>Lone Operative X\"</b>, unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within <b>X\"</b> of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within <b>X\"</b> of this unit."
+      },
+      {
+        "type": "Always",
+        "name": "Stealth",
+        "attackType": "SHOOTING",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "unit",
+            "stat": "Save",
+            "mode": "add",
+            "value": 1
+          }
+        ],
+        "originalText": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the <b>benefit of cover</b> against that attack (13.08)."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "raven-guard/kayvaan-shrike": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Trifold Path of Shadow",
+        "category": "OTHER",
+        "text": "This unit has: Stealth. -3\" detection range.",
+        "originalText": "This unit has:\r<ul><li><b>Stealth</b>.</li>\r<li>-3\" <b>detection range</b>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "Always",
+        "name": "Echo of the Ravenspire",
+        "category": "OTHER",
+        "text": "At the end of your opponent's Fight phase, if this unit is unengaged, you can place this unit in strategic reserves.",
+        "originalText": "At the end of your opponent’s Fight phase, if this unit is <b>unengaged</b>, you can place this unit in <b>strategic reserves</b>."
+      },
+      {
+        "type": "Alone",
+        "name": "Lone Operative",
+        "category": "OTHER",
+        "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by INDIRECT FIRE weapons unless the attacking model is within 12\" of this unit.",
+        "originalText": "Unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within 12\" of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within 12\" of this unit.\n\nIf this ability takes the form <b>Lone Operative X\"</b>, unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within <b>X\"</b> of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within <b>X\"</b> of this unit."
+      }
+    ],
+    "rawAbilities": []
+  }
+}

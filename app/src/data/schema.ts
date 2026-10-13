@@ -231,6 +231,75 @@ export interface StructuredAbilitiesData {
   baseDataHash?: string
 }
 
+export interface WargearRef {
+  name: string
+  wargearItemId: number
+}
+
+export interface WargearScope {
+  type: 'model' | 'allModels' | 'anyNumber' | 'ratio'
+  role?: string
+  ratio?: { per: number; count: number }
+}
+
+export interface WargearChoice {
+  items: { count: number; name: string; wargearItemId: number }[]
+  grants?: WargearRef[]
+  locks?: number[]
+}
+
+export interface WargearOption {
+  scope: WargearScope
+  replaces: WargearRef[]
+  choices: WargearChoice[]
+  isAdditional: boolean
+  originalRuleId: number
+  originalText: string
+}
+
+export interface StructuredLoadoutData {
+  tag: UnitDataTag
+  options: WargearOption[]
+}
+
+export interface FactionBackupUnit {
+  slug: string
+  name: string
+  category?: string
+  points?: number
+  keywords: string[]
+}
+
+export interface FactionBackupBaseData {
+  unitSlug: string
+  data: unknown
+}
+
+export interface FactionBackupUnitData {
+  unitSlug: string
+  tag: string
+  abilities: unknown[]
+  rawAbilities: unknown[]
+  baseDataHash?: string
+}
+
+export interface FactionBackupLoadoutData {
+  unitSlug: string
+  tag: string
+  options: unknown[]
+}
+
+export interface FactionBackup {
+  format: '40ksim-faction-backup'
+  version: 1
+  factionSlug: string
+  exportedAt: string
+  units: FactionBackupUnit[]
+  baseData: FactionBackupBaseData[]
+  unitData: FactionBackupUnitData[]
+  loadoutData: FactionBackupLoadoutData[]
+}
+
 export type MatchStatus = 'matched' | 'unmatched'
 export type WargearMatchStatus = 'matched' | 'unmatched' | 'unverified'
 

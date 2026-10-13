@@ -1,4 +1,5 @@
-import type { ArmyList, Effect, StructuredAbilitiesData, UnitDataAbility, WeaponTarget } from './schema'
+import type { ArmyList, Effect, StructuredAbilitiesData, StructuredLoadoutData, UnitDataAbility, WargearOption, WeaponTarget } from './schema'
+import { getParentFaction } from './factions'
 import {
   fetchFactions as sbFetchFactions,
   fetchUnitsByFaction as sbFetchUnitsByFaction,
@@ -9,6 +10,8 @@ import {
   upsertBaseData as sbUpsertBaseData,
   upsertUnitData as sbUpsertUnitData,
   upsertUnit as sbUpsertUnit,
+  fetchLoadoutData as sbFetchLoadoutData,
+  upsertLoadoutData as sbUpsertLoadoutData,
 } from './supabase'
 
 function migrateAbility(raw: unknown): UnitDataAbility {
@@ -207,24 +210,43 @@ export async function getBaseDataUnitsByFaction(factionSlug: string): Promise<{ 
 }
 
 export async function getBaseData(factionSlug: string, unitSlug: string): Promise<unknown> {
-  return await sbFetchBaseData(factionSlug, unitSlug) ?? undefined
+  const own = await sbFetchBaseData(factionSlug, unitSlug)
+  if (own != null) return own
+  const parent = getParentFaction(factionSlug)
+  if (parent) return await sbFetchBaseData(parent, unitSlug) ?? undefined
+  return undefined
 }
 
 export async function hasBaseData(factionSlug: string, unitSlug: string): Promise<boolean> {
   const data = await sbFetchBaseData(factionSlug, unitSlug)
-  return data != null
+  if (data != null) return true
+  const parent = getParentFaction(factionSlug)
+  if (parent) return (await sbFetchBaseData(parent, unitSlug)) != null
+  return false
 }
 
 export async function hasStructuredAbilitiesData(factionSlug: string, unitSlug: string): Promise<boolean> {
   const data = await sbFetchUnitData(factionSlug, unitSlug)
-  return data != null
+  if (data != null) return true
+  const parent = getParentFaction(factionSlug)
+  if (parent) return (await sbFetchUnitData(parent, unitSlug)) != null
+  return false
 }
 
 export type UnitStatus = 'red' | 'amber' | 'green'
 
 export async function getUnitStatuses(factionSlug: string, unitSlugs: string[]): Promise<Map<string, UnitStatus>> {
-  const allUnitData = await sbFetchAllUnitDataByFaction(factionSlug)
-  const tagMap = new Map(allUnitData.map(r => [r.unit_slug, r.tag]))
+  const parent = getParentFaction(factionSlug)
+  const fetches: Promise<{ unit_slug: string; tag: string }[]>[] = [sbFetchAllUnitDataByFaction(factionSlug)]
+  if (parent) fetches.push(sbFetchAllUnitDataByFaction(parent))
+  const [ownData, parentData] = await Promise.all(fetches)
+
+  const tagMap = new Map<string, string>()
+  if (parentData) {
+    for (const r of parentData) tagMap.set(r.unit_slug, r.tag)
+  }
+  for (const r of ownData) tagMap.set(r.unit_slug, r.tag)
+
   const result = new Map<string, UnitStatus>()
   for (const slug of unitSlugs) {
     const tag = tagMap.get(slug)
@@ -233,10 +255,15 @@ export async function getUnitStatuses(factionSlug: string, unitSlugs: string[]):
   return result
 }
 
-export async function getStructuredAbilitiesData(factionSlug: string, unitSlug: string): Promise<StructuredAbilitiesData | undefined> {
+export async function getStructuredAbilitiesData(factionSlug: string, unitSlug: string): Promise<{ data: StructuredAbilitiesData; resolvedFaction: string } | undefined> {
   const remote = await sbFetchUnitData(factionSlug, unitSlug)
-  if (!remote) return undefined
-  return remoteToStructuredAbilitiesData(remote)
+  if (remote) return { data: remoteToStructuredAbilitiesData(remote), resolvedFaction: factionSlug }
+  const parent = getParentFaction(factionSlug)
+  if (parent) {
+    const parentRemote = await sbFetchUnitData(parent, unitSlug)
+    if (parentRemote) return { data: remoteToStructuredAbilitiesData(parentRemote), resolvedFaction: parent }
+  }
+  return undefined
 }
 
 export async function putBaseData(factionSlug: string, unitSlug: string, data: unknown): Promise<void> {
@@ -287,4 +314,19 @@ export async function getBaseDataCount(factionSlug: string): Promise<number> {
 export async function getConfirmedUnitDataCount(factionSlug: string): Promise<number> {
   const remote = await sbFetchAllUnitDataByFaction(factionSlug)
   return remote.filter(r => r.tag === 'CONFIRMED').length
+}
+
+export async function getLoadoutData(factionSlug: string, unitSlug: string): Promise<{ data: StructuredLoadoutData; resolvedFaction: string } | undefined> {
+  const remote = await sbFetchLoadoutData(factionSlug, unitSlug)
+  if (remote) return { data: { tag: remote.tag as StructuredLoadoutData['tag'], options: remote.options as WargearOption[] }, resolvedFaction: factionSlug }
+  const parent = getParentFaction(factionSlug)
+  if (parent) {
+    const parentRemote = await sbFetchLoadoutData(parent, unitSlug)
+    if (parentRemote) return { data: { tag: parentRemote.tag as StructuredLoadoutData['tag'], options: parentRemote.options as WargearOption[] }, resolvedFaction: parent }
+  }
+  return undefined
+}
+
+export async function putLoadoutData(factionSlug: string, unitSlug: string, data: StructuredLoadoutData): Promise<void> {
+  await sbUpsertLoadoutData(factionSlug, unitSlug, data)
 }

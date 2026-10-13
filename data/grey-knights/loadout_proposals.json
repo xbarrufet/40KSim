@@ -1,0 +1,1291 @@
+{
+  "grey-knights/brother-captain": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 104881
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Incinerator",
+                "wargearItemId": 106123
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psilencer",
+                "wargearItemId": 105865
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psycannon",
+                "wargearItemId": 106600
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41482,
+        "originalText": "■ This model's storm bolter can be replaced with one of the following:\n◆ 1 incinerator\n◆ 1 psilencer\n◆ 1 psycannon"
+      }
+    ]
+  },
+  "grey-knights/brotherhood-librarian": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Combi-weapon",
+                "wargearItemId": 106270
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Bolter",
+                "wargearItemId": 104881
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41518,
+        "originalText": "■ This model can be equipped with one of the following:\n▫ 1 combi-weapon\n▫ 1 storm bolter"
+      }
+    ]
+  },
+  "grey-knights/brotherhood-terminator-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 107540
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Incinerator",
+                "wargearItemId": 106123
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psilencer",
+                "wargearItemId": 106510
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psycannon",
+                "wargearItemId": 106089
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41434,
+        "originalText": "■ For every 5 models in this unit, 1 Terminator's storm bolter can be replaced with one of the following:\n▫ 1 incinerator\n▫ 1 psilencer\n▫ 1 psycannon"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 107540
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Apothecary's Narthecium",
+                "wargearItemId": 105648
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41497,
+        "originalText": "■ 1 Terminator can have its storm bolter replaced with 1 Apothecary's narthecium."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 107540
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Incinerator",
+                "wargearItemId": 106123
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psilencer",
+                "wargearItemId": 106510
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psycannon",
+                "wargearItemId": 106089
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Bolter",
+                "wargearItemId": 107540
+              }
+            ],
+            "locks": [
+              107540
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41337,
+        "originalText": "■ 1 Terminator's storm bolter can be replaced with one of the following:\n▫ 1 incinerator and 1 Ancient's banner\n▫ 1 psilencer and 1 Ancient's banner\n▫ 1 psycannon and 1 Ancient's banner\n▫ 1 storm bolter and 1 Ancient's banner*\n* *That model's storm bolter cannot be replaced.*"
+      }
+    ]
+  },
+  "grey-knights/grand-master-in-nemesis-dreadknight": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Dreadfists",
+            "wargearItemId": 107913
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Nemesis daemon greathammer",
+                "wargearItemId": 107209
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Nemesis flail",
+                "wargearItemId": 107585
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Nemesis greatsword",
+                "wargearItemId": 106385
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Nemesis mace",
+                "wargearItemId": 105769
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41574,
+        "originalText": "■ This model's dreadfists can be replaced with one of the following:\n▫ 1 Nemesis daemon greathammer\n▫ 1 Nemesis flail\n▫ 1 Nemesis greatsword\n▫ 1 Nemesis mace"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "gatling psilencer",
+                "wargearItemId": 108471
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "heavy incinerator",
+                "wargearItemId": 108570
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "heavy psycannon",
+                "wargearItemId": 106778
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "sublimator",
+                "wargearItemId": 105887
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42129,
+        "originalText": "■ This model can be equipped with up to two of the following, but cannot take duplicates:\n▫ 1 gatling psilencer\n▫ 1 heavy incinerator\n▫ 1 heavy psycannon\n▫ 1 sublimator"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Fragstorm grenade launcher",
+                "wargearItemId": 106298
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42327,
+        "originalText": "■ This model can be equipped with 1 fragstorm grenade launcher"
+      }
+    ]
+  },
+  "grey-knights/grand-master": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 104881
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Incinerator",
+                "wargearItemId": 106123
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psilencer",
+                "wargearItemId": 105865
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psycannon",
+                "wargearItemId": 106600
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41288,
+        "originalText": "■ This model's storm bolter can be replaced with one of the following:\n▫ 1 incinerator\n▫ 1 psilencer\n▫ 1 psycannon"
+      }
+    ]
+  },
+  "grey-knights/grey-knights-thunderhawk-gunship": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Thunderhawk heavy cannon",
+            "wargearItemId": 107984
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Turbo-laser destructor",
+                "wargearItemId": 104795
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41640,
+        "originalText": "■ This model's Thunderhawk heavy cannon can be replaced with 1 turbo-laser destructor."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Thunderhawk Cluster Bombs",
+            "wargearItemId": 107961
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hellstrike missile battery",
+                "wargearItemId": 108318
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41862,
+        "originalText": "■ This model's Thunderhawk cluster bombs can be replaced with 1 hellstrike missile battery."
+      }
+    ]
+  },
+  "grey-knights/interceptor-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 107540
+          },
+          {
+            "name": "Nemesis force weapon",
+            "wargearItemId": 106400
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Incinerator",
+                "wargearItemId": 106123
+              },
+              {
+                "count": 1,
+                "name": "Close combat weapon",
+                "wargearItemId": 104889
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psilencer",
+                "wargearItemId": 106510
+              },
+              {
+                "count": 1,
+                "name": "Close combat weapon",
+                "wargearItemId": 104889
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psycannon",
+                "wargearItemId": 106089
+              },
+              {
+                "count": 1,
+                "name": "Close combat weapon",
+                "wargearItemId": 104889
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41874,
+        "originalText": "■ For every 5 models in this unit, 1 Interceptor's storm bolter and Nemesis force weapon can be replaced with one of the following:\n▫ 1 incinerator and 1 close combat weapon\n▫ 1 psilencer and 1 close combat weapon\n▫ 1 psycannon and 1 close combat weapon"
+      }
+    ]
+  },
+  "grey-knights/nemesis-dreadknight": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Dreadfists",
+            "wargearItemId": 107913
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Nemesis daemon greathammer",
+                "wargearItemId": 107209
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Nemesis greatsword",
+                "wargearItemId": 106385
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41257,
+        "originalText": "■ This model's dreadfists can be replaced with one of the following:\n▫ 1 Nemesis daemon greathammer\n▫ 1 Nemesis greatsword"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "gatling psilencer",
+                "wargearItemId": 108471
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "heavy incinerator",
+                "wargearItemId": 108570
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "heavy psycannon",
+                "wargearItemId": 106778
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42281,
+        "originalText": "■ This model can be equipped with up to two of the following, but cannot take duplicates:\n▫ 1 gatling psilencer\n▫ 1 heavy incinerator\n▫ 1 heavy psycannon"
+      }
+    ]
+  },
+  "grey-knights/paladin-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 2
+          }
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 104881
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Incinerator",
+                "wargearItemId": 106123
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psilencer",
+                "wargearItemId": 105865
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psycannon",
+                "wargearItemId": 106600
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42116,
+        "originalText": "■ For every 5 models in this unit, up to 2 Paladins can each have their storm bolter replaced with one of the following:\n▫ 1 incinerator\n▫ 1 psilencer\n▫ 1 psycannon"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 104881
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Apothecary's narthecium",
+                "wargearItemId": 0
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41438,
+        "originalText": "■ 1 Paladin can have its storm bolter replaced with 1 Apothecary's narthecium."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 104881
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Incinerator",
+                "wargearItemId": 106123
+              },
+              {
+                "count": 1,
+                "name": "Ancient's Banner",
+                "wargearItemId": 105515
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psilencer",
+                "wargearItemId": 105865
+              },
+              {
+                "count": 1,
+                "name": "Ancient's Banner",
+                "wargearItemId": 105515
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psycannon",
+                "wargearItemId": 106600
+              },
+              {
+                "count": 1,
+                "name": "Ancient's Banner",
+                "wargearItemId": 105515
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Bolter",
+                "wargearItemId": 104881
+              },
+              {
+                "count": 1,
+                "name": "Ancient's Banner",
+                "wargearItemId": 105515
+              }
+            ],
+            "locks": [
+              104881
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42357,
+        "originalText": "■ 1 Paladin's storm bolter can be replaced with one of the following:\n▫ 1 incinerator and 1 Ancient's banner\n▫ 1 psilencer and 1 Ancient's banner\n▫ 1 psycannon and 1 Ancient's banner\n▫ 1 storm bolter and 1 Ancient's banner*\n**That model's storm bolter cannot be replaced*."
+      }
+    ]
+  },
+  "grey-knights/purgation-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 104881
+          },
+          {
+            "name": "Nemesis force weapon",
+            "wargearItemId": 106400
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "incinerator",
+                "wargearItemId": 0
+              },
+              {
+                "count": 1,
+                "name": "close combat weapon",
+                "wargearItemId": 0
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "psilencer",
+                "wargearItemId": 0
+              },
+              {
+                "count": 1,
+                "name": "close combat weapon",
+                "wargearItemId": 0
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "psycannon",
+                "wargearItemId": 0
+              },
+              {
+                "count": 1,
+                "name": "close combat weapon",
+                "wargearItemId": 0
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41324,
+        "originalText": "■ Up to 4 Purgators can each have their storm bolter and Nemesis force weapon replaced with one of the following:\n◆ 1 incinerator and 1 close combat weapon\n◆ 1 psilencer and 1 close combat weapon\n◆ 1 psycannon and 1 close combat weapon"
+      }
+    ]
+  },
+  "grey-knights/purifier-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 2
+          }
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 107540
+          },
+          {
+            "name": "Nemesis force weapon",
+            "wargearItemId": 106400
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "incinerator",
+                "wargearItemId": 105823
+              },
+              {
+                "count": 1,
+                "name": "close combat weapon",
+                "wargearItemId": 106400
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "psilencer",
+                "wargearItemId": 105823
+              },
+              {
+                "count": 1,
+                "name": "close combat weapon",
+                "wargearItemId": 106400
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "psycannon",
+                "wargearItemId": 105823
+              },
+              {
+                "count": 1,
+                "name": "close combat weapon",
+                "wargearItemId": 106400
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41689,
+        "originalText": "■ For every 5 models in this unit, up to 2 Purifiers can each have their storm bolter and Nemesis force weapon replaced with one of the following:\n◆ 1 incinerator and 1 close combat weapon\n◆ 1 psilencer and 1 close combat weapon\n◆ 1 psycannon and 1 close combat weapon"
+      }
+    ]
+  },
+  "grey-knights/razorback": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hunter-killer missile",
+                "wargearItemId": 105922
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41770,
+        "originalText": "■ This model can be equipped with 1 hunter-killer missile."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Bolter",
+                "wargearItemId": 107540
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41207,
+        "originalText": "■ This model can be equipped with 1 storm bolter."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Twin heavy bolter",
+            "wargearItemId": 108711
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin lascannon",
+                "wargearItemId": 106150
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41164,
+        "originalText": "■ This model's twin heavy bolter can be replaced with 1 twin lascannon."
+      }
+    ]
+  },
+  "grey-knights/stormhawk-interceptor": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Las-talon",
+            "wargearItemId": 105255
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Icarus stormcannon",
+                "wargearItemId": 108748
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 40995,
+        "originalText": "■ This model's las-talon can be replaced with 1 icarus stormcannon."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Skyhammer missile launcher",
+            "wargearItemId": 108344
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin heavy bolter",
+                "wargearItemId": 108711
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Typhoon missile launcher",
+                "wargearItemId": 105049
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42248,
+        "originalText": "■ This model's skyhammer missile launcher can be replaced with one of the following:\n◆ 1 twin heavy bolter\n◆ 1 typhoon missile launcher"
+      }
+    ]
+  },
+  "grey-knights/stormraven-gunship": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 2,
+                "name": "Hurricane bolter",
+                "wargearItemId": 105693
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41344,
+        "originalText": "■ This model can be equipped with 2 hurricane bolters."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Twin assault cannon",
+            "wargearItemId": 104729
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin heavy plasma cannon",
+                "wargearItemId": 107988
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin lascannon",
+                "wargearItemId": 106150
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42242,
+        "originalText": "■ This model's twin assault cannon can be replaced with one of the following:\n◆ 1 twin heavy plasma cannon\n◆ 1 twin lascannon"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Typhoon missile launcher",
+            "wargearItemId": 105049
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin heavy bolter",
+                "wargearItemId": 108711
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin multi-melta",
+                "wargearItemId": 106681
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41189,
+        "originalText": "■ This model's typhoon missile launcher can be replaced with one of the following:\n◆ 1 twin heavy bolter\n◆ 1 twin multi-melta"
+      }
+    ]
+  },
+  "grey-knights/stormtalon-gunship": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Skyhammer missile launcher",
+            "wargearItemId": 108344
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin heavy bolter",
+                "wargearItemId": 108711
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin lascannon",
+                "wargearItemId": 106150
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Typhoon missile launcher",
+                "wargearItemId": 105049
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41079,
+        "originalText": "■ This model's skyhammer missile launcher can be replaced with one of the following:\n▫ 1 twin heavy bolter\n▫ 1 twin lascannon\n▫ 1 typhoon missile launcher"
+      }
+    ]
+  },
+  "grey-knights/strike-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 107540
+          },
+          {
+            "name": "Nemesis force weapon",
+            "wargearItemId": 106400
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Incinerator",
+                "wargearItemId": 106123
+              },
+              {
+                "count": 1,
+                "name": "Close combat weapon",
+                "wargearItemId": 104889
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psilencer",
+                "wargearItemId": 106510
+              },
+              {
+                "count": 1,
+                "name": "Close combat weapon",
+                "wargearItemId": 104889
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Psycannon",
+                "wargearItemId": 106089
+              },
+              {
+                "count": 1,
+                "name": "Close combat weapon",
+                "wargearItemId": 104889
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41837,
+        "originalText": "■ For every 5 models in this unit, 1 Grey Knight's storm bolter and Nemesis force weapon can be replaced with one of the following:\n▫ 1 incinerator and 1 close combat weapon\n▫ 1 psilencer and 1 close combat weapon\n▫ 1 psycannon and 1 close combat weapon"
+      }
+    ]
+  },
+  "grey-knights/venerable-dreadnought": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Assault cannon",
+            "wargearItemId": 106444
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Heavy plasma cannon",
+                "wargearItemId": 106314
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin lascannon",
+                "wargearItemId": 106150
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41218,
+        "originalText": "■ This model's assault cannon can be replaced with one of the following:\n▫ 1 heavy plasma cannon\n▫ 1 twin lascannon"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 107540
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Heavy flamer",
+                "wargearItemId": 105741
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41302,
+        "originalText": "■ This model's storm bolter can be replaced with 1 heavy flamer."
+      }
+    ]
+  }
+}

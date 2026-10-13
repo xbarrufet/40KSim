@@ -1,0 +1,314 @@
+{
+  "id": 46972,
+  "slug": "ragnar-blackmane",
+  "name": "Ragnar Blackmane",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Ragnar Blackmane model\n\nThis model is equipped with: 1 Bolt Pistol; 1 Frostfang.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "War Howl",
+      "rules": "<ul><li>While this model is attached to a <k>Blood Claws</k> unit, this unit's melee attacks have +1 <b>S</b> and <k>[SUSTAINED HITS 1]</k>.</li><li>While this model is attached to a <k>Wolf Guard Headtakers</k> unit, when this unit is selected to make an <b>advance move</b>, that <b>advance move</b> does not prevent this unit from being <b>eligible to declare a charge</b>.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Mighty heroes fight at the forefront of battle.",
+      "name": "Leader",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Battle-lust",
+      "rules": "If this unit made a <b>charge move</b> this turn, this model's melee attacks have +2 <b>A</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Transhuman Strategist",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Leader",
+      "rules": "This model can be attached to the following units:\n\n■ **BLOOD CLAWS**\n■ **WOLF GUARD HEADTAKERS**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47028,
+        "name": "Blood Claws",
+        "slug": "blood-claws",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47295,
+        "name": "Wolf Guard Headtakers",
+        "slug": "wolf-guard-headtakers",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1892,
+    "slug": "space-wolves",
+    "name": "Space Wolves",
+    "commonName": "Space Wolves"
+  },
+  "miniatures": [
+    {
+      "id": 61367,
+      "name": "Ragnar Blackmane",
+      "stats": {
+        "save": "3+",
+        "wounds": "5",
+        "movement": "7\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51106,
+          "name": "Captain"
+        },
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50746,
+          "name": "Epic Hero"
+        },
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51004,
+          "name": "Tacticus"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106427,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112403,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108507,
+            "name": "Frostfang",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114636,
+                "name": "Frostfang",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "8",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3450,
+                    "name": "SUSTAINED HITS 1",
+                    "rules": "This ability always takes the form <b>[SUSTAINED HITS X]</b>. Each time an attack made with a <b>[SUSTAINED HITS]</b> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <b>[SUSTAINED HITS 2]</b> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <b>[SUSTAINED HITS 2]</b> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 106427,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112403,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 108507,
+            "name": "Frostfang",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114636,
+                "name": "Frostfang",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "8",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3450,
+                    "name": "SUSTAINED HITS 1",
+                    "rules": "This ability always takes the form <b>[SUSTAINED HITS X]</b>. Each time an attack made with a <b>[SUSTAINED HITS]</b> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <b>[SUSTAINED HITS 2]</b> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <b>[SUSTAINED HITS 2]</b> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 62600,
+      "points": 100,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61367,
+          "miniatureName": "Ragnar Blackmane",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

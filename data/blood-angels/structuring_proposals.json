@@ -1,0 +1,761 @@
+{
+  "blood-angels/astorath": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Mass of Doom",
+        "attackType": "FIGHT",
+        "trigger": "¿Esta unidad realizó un movimiento de carga este turno?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "MELEE",
+            "keyword": "DEVASTATING WOUNDS",
+            "value": null
+          }
+        ],
+        "originalText": "If this unit made a <b>charge move</b> this turn, this unit's melee attacks have <k>[DEVASTATING WOUNDS: </k>non<k>-MONSTER/VEHICLE]</k>."
+      },
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "Always",
+        "name": "Redeemer of the Lost",
+        "category": "OTHER",
+        "text": "In the Fight phase, when a model in this unit is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to that roll if that model was engaged with an enemy unit with a T greater than or equal to this unit's T: On a 4+, do not remove that model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.",
+        "originalText": "In the Fight phase, when a model in this unit is <b>destroyed</b>, if this unit has not been <b>selected to fight</b> this phase, roll one D6, with +1 to that roll if that model was <b>engaged</b> with an enemy unit with a <b>T</b> greater than or equal to this unit's <b>T</b>:<ul><li>On a 4+, do not remove that model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "blood-angels/baal-predator": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Overcharged Engines",
+        "category": "OTHER",
+        "text": "This unit can re-roll advance rolls.",
+        "originalText": "This unit can re-roll <b>advance rolls</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Deadly Demise D3",
+        "category": "OTHER",
+        "text": "Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\").",
+        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "type": "Always",
+        "name": "Damaged 4",
+        "attackType": "ANY",
+        "trigger": "¿Las heridas restantes del modelo son iguales o inferiores a 4?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "blood-angels/blood-angels-captain": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Finest Hour (Once per battle, per unit)",
+        "attackType": "FIGHT",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "weapon",
+            "weaponTarget": "MELEE",
+            "stat": "Attacks",
+            "mode": "add",
+            "value": 3
+          },
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "MELEE",
+            "keyword": "DEVASTATING WOUNDS",
+            "value": null
+          }
+        ],
+        "originalText": "In the Fight phase, when this unit is <b>selected to fight</b>, you can use this ability. If you do, this model’s melee attacks have:\n<ul><li>+3 <b>A</b>.</li><li><k>[Devastating Wounds]</k>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Strategic Acumen",
+        "category": "OTHER",
+        "text": "In your Command phase, you can use this ability. If you do, select one combat doctrine to be active for this unit until the start of your next Command phase.",
+        "originalText": "In your Command phase, you can use this ability. If you do, select one <b>combat doctrine</b> to be active for this unit until the start of your next Command phase."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "blood-angels/chief-librarian-mephiston": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Alone",
+        "name": "Lone Operative",
+        "category": "OTHER",
+        "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by INDIRECT FIRE weapons unless the attacking model is within 12\" of this unit.",
+        "originalText": "Unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within 12\" of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within 12\" of this unit.\n\nIf this ability takes the form <b>Lone Operative X\"</b>, unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within <b>X\"</b> of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within <b>X\"</b> of this unit."
+      },
+      {
+        "type": "Always",
+        "name": "Chief Librarian (psyker level 3)",
+        "category": "OTHER",
+        "text": "This model has the psychic abilities listed in the Psychic Abilities section.",
+        "originalText": "This model has the <b>psychic abilities</b> listed in the Psychic Abilities section."
+      },
+      {
+        "type": "Always",
+        "name": "Feel No Pain 5+",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 5
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
+      },
+      {
+        "type": "Always",
+        "name": "Fights First",
+        "category": "OTHER",
+        "text": "While every model in a unit has this ability, that unit is a Fights First unit.",
+        "originalText": "While every model in a unit has this ability, that unit is a <b>Fights First</b> unit.\n\nSee the Resolve Fights First Combats step in the Fight phase (12.04)."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "blood-angels/commander-dante": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Death Mask of Sanguinius",
+        "attackType": "FIGHT",
+        "trigger": "ALWAYS",
+        "appliedTo": "Enemy",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "At the start of the Fight phase, each enemy unit within 6\" of this model makes a <b>battle-shock roll</b>, with -1 to that <b>battle-shock roll</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Warden of the Imperium Nihilus",
+        "category": "OTHER",
+        "text": "The assault doctrine and tactical doctrine are active for this unit in addition to any other combat doctrine.",
+        "originalText": "The <b>assault doctrine</b> and <b>tactical doctrine</b> are active for this unit <u>in addition</u> to any other <b>combat doctrine</b>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "blood-angels/death-company-captain-with-jump-pack": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "Always",
+        "name": "Death Visions of Sanguinius",
+        "category": "OTHER",
+        "text": "In the Fight phase, when an enemy unit has fought, if this model was destroyed by those attacks, you can use this ability. If you do, roll one D6, with +2 to that roll if this model was engaged with an enemy warlord unit: On a 2-3, that enemy unit suffers D3 mortal wounds. On a 4-5, that enemy unit suffers 3 mortal wounds. On a 6+, that enemy unit suffers D3+3 mortal wounds.",
+        "originalText": "In the Fight phase, when an enemy unit has fought, if this model was <b>destroyed</b> by those attacks, you can use this ability. If you do, roll one D6, with +2 to that roll if this model was <b>engaged</b> with an enemy <k>warlord</k> unit:<ul><li>On a 2-3, that enemy unit suffers D3 <b>mortal wounds</b>.</li><li>On a 4-5, that enemy unit suffers 3 <b>mortal wounds</b>.</li><li>On a 6+, that enemy unit suffers D3+3 <b>mortal wounds</b>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Feel No Pain 6+",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 6
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
+      },
+      {
+        "type": "Always",
+        "name": "Lost to Fury",
+        "attackType": "FIGHT",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "MELEE",
+            "keyword": "SUSTAINED HITS",
+            "value": "1"
+          }
+        ],
+        "originalText": "This unit's melee attacks have <k>[SUSTAINED HITS 1]</k>."
+      },
+      {
+        "type": "Always",
+        "name": "Black Rage",
+        "attackType": "FIGHT",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "rerollOnes",
+            "attackType": "MELEE"
+          }
+        ],
+        "originalText": "<ul><li>This unit's melee attacks can re-roll <b>hit rolls</b> of 1.</li><li>While this unit is not within 6\" of one or more friendly <k>Blood Angels Character</k> models, or not within 12\" of one or more friendly <k>Chaplain</k> models, it cannot make a <b>fall-back</b> move and it's <b>OC</b> is modified to 0.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Black Rage - Fallback Restriction",
+        "category": "OTHER",
+        "text": "While this unit is not within 6\" of one or more friendly Blood Angels Character models, or not within 12\" of one or more friendly Chaplain models, it cannot make a fall-back move and its OC is modified to 0."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "blood-angels/death-company-captain": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Forlorn Hero",
+        "category": "OTHER",
+        "text": "This unit has Scouts 6\".",
+        "originalText": "This unit has <b>Scouts 6\"</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Black Rage",
+        "attackType": "FIGHT",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "rerollOnes",
+            "attackType": "MELEE"
+          }
+        ],
+        "originalText": "<ul><li>This unit's melee attacks can re-roll <b>hit rolls</b> of 1.</li><li>While this unit is not within 6\" of one or more friendly <k>Blood Angels Character</k> models, or not within 12\" of one or more friendly <k>Chaplain</k> models, it cannot make a <b>fall-back</b> move and it's <b>OC</b> is modified to 0.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Black Rage Retreat Restriction",
+        "category": "OTHER",
+        "text": "While this unit is not within 6\" of one or more friendly Blood Angels Character models, or not within 12\" of one or more friendly Chaplain models, it cannot make a fall-back move and its OC is modified to 0."
+      },
+      {
+        "type": "Always",
+        "name": "Feel No Pain 6+",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 6
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
+      },
+      {
+        "type": "Always",
+        "name": "Death Visions of Sanguinius",
+        "category": "OTHER",
+        "text": "In the Fight phase, when an enemy unit has fought, if this model was destroyed by those attacks, you can use this ability. If you do, roll one D6, with +2 to that roll if this model was engaged with an enemy warlord unit: On a 2-3, that enemy unit suffers D3 mortal wounds. On a 4-5, that enemy unit suffers 3 mortal wounds. On a 6+, that enemy unit suffers D3+3 mortal wounds.",
+        "originalText": "In the Fight phase, when an enemy unit has fought, if this model was <b>destroyed</b> by those attacks, you can use this ability. If you do, roll one D6, with +2 to that roll if this model was <b>engaged</b> with an enemy <k>warlord</k> unit:<ul><li>On a 2-3, that enemy unit suffers D3 <b>mortal wounds</b>.</li><li>On a 4-5, that enemy unit suffers 3 <b>mortal wounds</b>.</li><li>On a 6+, that enemy unit suffers D3+3 <b>mortal wounds</b>.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "blood-angels/death-company-dreadnought": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deadly Demise D3",
+        "category": "OTHER",
+        "text": "Each time this model is destroyed, after any embarked units have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers D3 mortal wounds (roll separately for each unit within 6\").",
+        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "type": "Always",
+        "name": "Black Rage",
+        "attackType": "FIGHT",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "rerollOnes",
+            "attackType": "MELEE"
+          }
+        ],
+        "originalText": "<ul><li>This unit's melee attacks can re-roll <b>hit rolls</b> of 1.</li><li>While this unit is not within 6\" of one or more friendly <k>Blood Angels Character</k> models, or not within 12\" of one or more friendly <k>Chaplain</k> models, it cannot make a <b>fall-back</b> move and it's <b>OC</b> is modified to 0.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Black Rage Restriction",
+        "category": "OTHER",
+        "text": "While this unit is not within 6\" of one or more friendly Blood Angels Character models, or not within 12\" of one or more friendly Chaplain models, it cannot make a fall-back move and its OC is modified to 0."
+      },
+      {
+        "type": "Always",
+        "name": "Driven by Fury",
+        "category": "OTHER",
+        "text": "In your opponent's Shooting phase, when an enemy unit has shot, if this unit was hit by those attacks, it can make a surge move of up to D6+1\".",
+        "originalText": "In your opponent's Shooting phase, when an enemy unit has shot, if this unit was hit by those attacks, it can make a <b>surge move</b> of up to D6+1\"."
+      },
+      {
+        "type": "Always",
+        "name": "Feel No Pain 6+",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 6
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
+      },
+      {
+        "type": "Always",
+        "name": "Damaged 4",
+        "attackType": "FIGHT",
+        "trigger": "¿Las heridas restantes son iguales o menores a 4?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "attackType": "MELEE"
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "blood-angels/death-company-marines-with-jump-packs": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "Always",
+        "name": "Savage Fury",
+        "attackType": "FIGHT",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "unit",
+            "stat": "Movement",
+            "mode": "add",
+            "value": 1
+          }
+        ],
+        "originalText": "This unit has +1 to <b>charge rolls</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Black Rage",
+        "attackType": "FIGHT",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "rerollOnes",
+            "attackType": "MELEE"
+          }
+        ],
+        "originalText": "<ul><li>This unit's melee attacks can re-roll <b>hit rolls</b> of 1.</li><li>While this unit is not within 6\" of one or more friendly <k>Blood Angels Character</k> models, or not within 12\" of one or more friendly <k>Chaplain</k> models, it cannot make a <b>fall-back</b> move and it's <b>OC</b> is modified to 0.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Black Rage Restriction",
+        "category": "OTHER",
+        "text": "While this unit is not within 6\" of one or more friendly Blood Angels Character models, or not within 12\" of one or more friendly Chaplain models, it cannot make a fall-back move and its OC is modified to 0."
+      },
+      {
+        "type": "Always",
+        "name": "Feel No Pain 6+",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 6
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "blood-angels/death-company-marines": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Feel No Pain 6+",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 6
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
+      },
+      {
+        "type": "Always",
+        "name": "Black Rage",
+        "attackType": "FIGHT",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "rerollOnes",
+            "attackType": "MELEE"
+          }
+        ],
+        "originalText": "<ul><li>This unit's melee attacks can re-roll <b>hit rolls</b> of 1.</li><li>While this unit is not within 6\" of one or more friendly <k>Blood Angels Character</k> models, or not within 12\" of one or more friendly <k>Chaplain</k> models, it cannot make a <b>fall-back move</b> and it's <b>OC</b> is modified to 0.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Black Rage - Penalties",
+        "category": "OTHER",
+        "text": "While this unit is not within 6\" of one or more friendly Blood Angels Character models, or not within 12\" of one or more friendly Chaplain models, it cannot make a fall-back move and its OC is modified to 0."
+      },
+      {
+        "type": "Always",
+        "name": "An Honourable Death in Combat",
+        "attackType": "ANY",
+        "trigger": "¿Esta unidad está por debajo de su fuerza inicial?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "ALL",
+            "keyword": "SUSTAINED HITS",
+            "value": "1"
+          }
+        ],
+        "originalText": "This unit's attacks:<ul><li>Have <k>[SUSTAINED HITS 1]</k>, if this unit is below <b>starting strength</b>.</li><li><u>Or:</u> have <k>[SUSTAINED HITS 2]</k>, if this unit is below <b>half-strength</b>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "An Honourable Death in Combat - Half Strength",
+        "attackType": "ANY",
+        "trigger": "¿Esta unidad está por debajo de la mitad de su fuerza inicial?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "ALL",
+            "keyword": "SUSTAINED HITS",
+            "value": "2"
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "blood-angels/lemartes": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Fury Unbound",
+        "attackType": "FIGHT",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "MELEE",
+            "keyword": "LETHAL HITS",
+            "value": null
+          }
+        ],
+        "originalText": "This unit's melee attacks have <k>[LETHAL HITS]</k>."
+      },
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Guardian of the Lost",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "weapon",
+            "weaponTarget": "ALL",
+            "stat": "Damage",
+            "mode": "subtract",
+            "value": 1
+          }
+        ],
+        "originalText": "Attacks that target this unit have -1 <b>D</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Feel No Pain 6+",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 6
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "blood-angels/sanguinary-guard": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Angelic Visage",
+        "attackType": "FIGHT",
+        "trigger": "ALWAYS",
+        "appliedTo": "Enemy",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "attackType": "MELEE"
+          }
+        ],
+        "originalText": "Melee attacks that target this unit have -1 to <b>hit rolls</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8 horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "Always",
+        "name": "Heirs of Azkaellon",
+        "attackType": "ANY",
+        "trigger": "¿La Fortaleza del atacante es mayor que la Resistencia de esta unidad?",
+        "appliedTo": "Enemy",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toWound",
+            "action": "subtractFromRoll"
+          }
+        ],
+        "originalText": "Attacks that target this unit with a <b>S</b> greater than this unit’s <b>T</b> have ‑1 to <b>wound rolls</b>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "blood-angels/sanguinary-priest": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Blood Chalice",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "unit",
+            "stat": "Toughness",
+            "mode": "add",
+            "value": 1
+          }
+        ],
+        "originalText": "This unit has +1 <b>T</b>."
+      },
+      {
+        "type": "AsLeader",
+        "name": "Support",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it. \n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)."
+      },
+      {
+        "type": "Always",
+        "name": "Narthecium (Once per turn, per unit)",
+        "category": "OTHER",
+        "text": "In your Command phase, this unit heals D3+1 wounds.",
+        "originalText": "In your Command phase, this unit <b>heals</b> D3+1 wounds."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "blood-angels/the-sanguinor": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "Always",
+        "name": "Aura of Fervour",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "Ally",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "rerollFailed",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "Friendly <k>ADEPTUS ASTARTES</k> units within 12\" of this model can re-roll <b>leadership rolls</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Fights First",
+        "category": "OTHER",
+        "text": "While every model in a unit has this ability, that unit is a Fights First unit. See the Resolve Fights First Combats step in the Fight phase.",
+        "originalText": "While every model in a unit has this ability, that unit is a <b>Fights First</b> unit.\n\nSee the Resolve Fights First Combats step in the Fight phase (12.04)."
+      },
+      {
+        "type": "Always",
+        "name": "Miraculous Saviour (Once per battle, per army)",
+        "category": "OTHER",
+        "text": "At the end of your opponent's Charge phase (excluding the first battle round), select up to one enemy unit that made a charge move this phase. This unit can make an ingress move and must be set up engaged with that enemy unit. That move does not prevent this unit from being eligible to move.",
+        "originalText": "At the end of your opponent's Charge phase (excluding the first battle round), select up to one enemy unit that made a <b>charge move</b> this phase. This unit can make an <b>ingress move</b> and must be set up <b>engaged</b> with that enemy unit. That move does not prevent this unit from being <b>eligible to move</b>."
+      },
+      {
+        "type": "Alone",
+        "name": "Lone Operative",
+        "category": "OTHER",
+        "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by INDIRECT FIRE weapons unless the attacking model is within 12\" of this unit.",
+        "originalText": "Unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within 12\" of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within 12\" of this unit.\n\nIf this ability takes the form <b>Lone Operative X\"</b>, unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within <b>X\"</b> of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within <b>X\"</b> of this unit."
+      }
+    ],
+    "rawAbilities": []
+  }
+}

@@ -1,0 +1,1085 @@
+{
+  "deathwatch/corvus-blackstar": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hurricane Bolter",
+                "wargearItemId": 107371
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41495,
+        "originalText": "This model can be equipped with 1 Hurricane Bolter"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Blackstar Rocket Launcher",
+            "wargearItemId": 108596
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 2,
+                "name": "Stormstrike Missile Launcher",
+                "wargearItemId": 105894
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41704,
+        "originalText": "This model's 2 Blackstar Rocket Launchers can be replaced with 2 Stormstrike Missile Launchers."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Twin Assault Cannon",
+            "wargearItemId": 106812
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin Lascannon",
+                "wargearItemId": 107373
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42336,
+        "originalText": "This model's Twin Assault Cannon can be replaced with 1 Twin Lascannon."
+      }
+    ]
+  },
+  "deathwatch/deathwatch-terminator-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 107104
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Assault Cannon",
+                "wargearItemId": 107498
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Cyclone Missile Launcher",
+                "wargearItemId": 105682
+              },
+              {
+                "count": 1,
+                "name": "Storm Bolter",
+                "wargearItemId": 107104
+              }
+            ],
+            "locks": [
+              107104
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Heavy Flamer",
+                "wargearItemId": 105673
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Cannon",
+                "wargearItemId": 108170
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41055,
+        "originalText": "Up to 3 Deathwatch Terminator models can each have their Storm Bolter replaced with one of the following: 1 Assault Cannon, 1 Cyclone Missile Launcher and 1 Storm Bolter, 1 Heavy Flamer, 1 Plasma Cannon"
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Power Fist",
+            "wargearItemId": 108506
+          },
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 107104
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Bolter",
+                "wargearItemId": 107104
+              },
+              {
+                "count": 1,
+                "name": "Chainfist",
+                "wargearItemId": 106727
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Bolter",
+                "wargearItemId": 107104
+              },
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 106168
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Thunder Hammer",
+                "wargearItemId": 105687
+              },
+              {
+                "count": 1,
+                "name": "Storm Shield",
+                "wargearItemId": 105561
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin Lightning Claws",
+                "wargearItemId": 107348
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42275,
+        "originalText": "Any number of models can each have their Power Fist and Storm Bolter replaced with one of the following: 1 Storm Bolter and 1 Chainfist, 1 Storm Bolter and 1 Power Weapon, 1 Thunder Hammer and 1 Storm Shield, 1 Twin Lightning Claws"
+      }
+    ]
+  },
+  "deathwatch/deathwatch-veterans": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Watch Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Boltgun",
+            "wargearItemId": 107975
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Combi-weapon",
+                "wargearItemId": 105127
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41095,
+        "originalText": "The Watch Sergeant can have their Boltgun replaced with 1 Combi-weapon."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Boltgun",
+            "wargearItemId": 107975
+          },
+          {
+            "name": "Power Weapon",
+            "wargearItemId": 105115
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Boltgun",
+                "wargearItemId": 107975
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41401,
+        "originalText": "For every 5 models in this unit, 1 Deathwatch Veteran model can have their Boltgun and Power Weapon replaced with 1 Stalker-pattern Boltgun and 1 Knives and Fists."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Boltgun",
+            "wargearItemId": 107975
+          },
+          {
+            "name": "Power Weapon",
+            "wargearItemId": 105115
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Boltgun",
+                "wargearItemId": 107975
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41415,
+        "originalText": "For every 5 models in this unit, 1 Deathwatch Veteran model can have their Boltgun and Power Weapon replaced with 1 Infernus Heavy Bolter and 1 Knives and Fists."
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Watch Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Power Weapon",
+            "wargearItemId": 105115
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Xenophase Blade",
+                "wargearItemId": 107853
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41548,
+        "originalText": "The Watch Sergeant can have their Power Weapon replaced with 1 Xenophase Blade."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 2
+          }
+        },
+        "replaces": [
+          {
+            "name": "Boltgun",
+            "wargearItemId": 107975
+          },
+          {
+            "name": "Power Weapon",
+            "wargearItemId": 105115
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Boltgun",
+                "wargearItemId": 107975
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41658,
+        "originalText": "For every 5 models in this unit, up to 2 Deathwatch Veteran models can each have their Boltgun and Power Weapon replaced with 1 Deathwatch Shotgun and 1 Knives and Fists."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 2
+          }
+        },
+        "replaces": [
+          {
+            "name": "Boltgun",
+            "wargearItemId": 107975
+          },
+          {
+            "name": "Power Weapon",
+            "wargearItemId": 105115
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Boltgun",
+                "wargearItemId": 107975
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41827,
+        "originalText": "For every 5 models in this unit, up to 2 Deathwatch Veteran models can each have their Boltgun and Power Weapon replaced with 1 Heavy Thunder Hammer."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Boltgun",
+            "wargearItemId": 107975
+          },
+          {
+            "name": "Power Weapon",
+            "wargearItemId": 105115
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Boltgun",
+                "wargearItemId": 107975
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41986,
+        "originalText": "For every 5 models in this unit, 1 Deathwatch Veteran model can have their Boltgun and Power Weapon replaced with 1 Frag Cannon and 1 Knives and Fists."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Boltgun",
+            "wargearItemId": 107975
+          },
+          {
+            "name": "Power Weapon",
+            "wargearItemId": 105115
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Boltgun",
+                "wargearItemId": 107975
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42122,
+        "originalText": "1 Deathwatch Veteran model can have their Boltgun and Power Weapon replaced with 1 Black Shield Blades."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 2
+          }
+        },
+        "replaces": [
+          {
+            "name": "Boltgun",
+            "wargearItemId": 107975
+          },
+          {
+            "name": "Power Weapon",
+            "wargearItemId": 105115
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Boltgun",
+                "wargearItemId": 107975
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 105115
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42331,
+        "originalText": "For every 5 models in this unit, up to 2 Deathwatch Veteran models can each have their Boltgun and Power Weapon replaced with one of the following: 1 Boltgun and 1 Storm Shield, 1 Power Weapon and 1 Storm Shield"
+      }
+    ]
+  },
+  "deathwatch/decimus-kill-team": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Infernus Heavy Bolter",
+            "wargearItemId": 106886
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Frag Cannon",
+                "wargearItemId": 106109
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hellstorm Bolt Rifle",
+                "wargearItemId": 106569
+              },
+              {
+                "count": 1,
+                "name": "Grenade Launcher",
+                "wargearItemId": 107808
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41321,
+        "originalText": "For every 5 models in this unit, 1 Gravis Veteran model can have their Infernus Heavy Bolter replaced with one of the following: 1 Frag Cannon, 1 Hellstorm Bolt Rifle and 1 Grenade Launcher"
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Bolt Pistol",
+            "wargearItemId": 104944
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Bolt Pistol",
+                "wargearItemId": 104944
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41905,
+        "originalText": "For every 5 models in this unit, 1 Deathwatch Veteran with Stalker Bolt Rifle, Bolt Pistol and Knives and Fist model can have their Stalker Bolt Rifle replaced with 1 Plasma Incinerator."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Bolt Pistol",
+            "wargearItemId": 104944
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Bolt Pistol",
+                "wargearItemId": 104944
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42370,
+        "originalText": "For every 5 models in this unit, 1 Deathwatch Veteran with Heavy Thunder Hammer and Bolt Pistol model can have their Heavy Thunder Hammer replaced with 1 Power Weapon and 1 Storm Shield."
+      }
+    ]
+  },
+  "deathwatch/fortis-kill-team": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Kill Team Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Knives and Fists",
+            "wargearItemId": 107403
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Chainsword",
+                "wargearItemId": null
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": null
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": null
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Thunder Hammer",
+                "wargearItemId": null
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 40987,
+        "originalText": "The Kill Team Sergeant can have their Knives and Fists replaced with one of the following: 1 Chainsword, 1 Power Fist, 1 Power Weapon, 1 Thunder Hammer"
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Kill Team Intercessor with Castellan Launcher, Superfrag Rocket Launcher and Knives and Fist"
+        },
+        "replaces": [
+          {
+            "name": "Superfrag Rocket Launcher",
+            "wargearItemId": null
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Superkrak Rocket Launcher",
+                "wargearItemId": null
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41507,
+        "originalText": "The Kill Team Intercessor with Castellan Launcher, Superfrag Rocket Launcher and Knives and Fist can have their Superfrag Rocket Launcher replaced with 1 Superkrak Rocket Launcher."
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Kill Team Intercessor with Castellan Launcher, Superfrag Rocket Launcher and Knives and Fist"
+        },
+        "replaces": [
+          {
+            "name": "Superfrag Rocket Launcher",
+            "wargearItemId": null
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Vengor Launcher",
+                "wargearItemId": null
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41934,
+        "originalText": "1 Kill Team Intercessor with Castellan Launcher, Superfrag Rocket Launcher and Knives and Fist model can have their Superfrag Rocket Launcher replaced with 1 Vengor Launcher."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Astartes Grenade Launcher",
+                "wargearItemId": null
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42022,
+        "originalText": "For every 5 models in this unit, 1 model equipped with a Deathwatch Bolt Rifle can be equipped with 1 Astartes Grenade Launcher."
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Deathwatch Intercessor with Plasma Incinerator, Bolt Pistol and Knives and Fist"
+        },
+        "replaces": [
+          {
+            "name": "Bolt Pistol",
+            "wargearItemId": 106735
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": null
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42075,
+        "originalText": "1 Deathwatch Intercessor with Plasma Incinerator, Bolt Pistol and Knives and Fist model can have their Bolt Pistol replaced with 1 Plasma Pistol."
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Kill Team Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Deathwatch Bolt Rifle",
+            "wargearItemId": null
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Chainsword",
+                "wargearItemId": null
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hand Flamer",
+                "wargearItemId": null
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": null
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": null
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42193,
+        "originalText": "The Kill Team Sergeant can have their Deathwatch Bolt Rifle replaced with one of the following: 1 Chainsword, 1 Hand Flamer, 1 Plasma Pistol, 1 Power Weapon"
+      }
+    ]
+  },
+  "deathwatch/indomitor-kill-team": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Deathwatch Heavy Bolt Rifle",
+            "wargearItemId": 105197
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Deathwatch Heavy Bolter",
+                "wargearItemId": 105885
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41142,
+        "originalText": "For every 5 models in this unit, 1 Kill Team Heavy Intercessor with Deathwatch Heavy Bolt Rifle and Ceramite Fists. model can have their Deathwatch Heavy Bolt Rifle replaced with 1 Deathwatch Heavy Bolter."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [],
+        "isAdditional": false,
+        "originalRuleId": 41225,
+        "originalText": "1 Kill Team Heavy Intercessor with Melta Rifle, Bolt Pistol and Ceramite Fist model can have their Melta Rifle replaced with 1 Multi-melta."
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [],
+        "choices": [],
+        "isAdditional": false,
+        "originalRuleId": 42020,
+        "originalText": "Any number of Kill Team Heavy Intercessor with Flamestorm Gauntlets and Twin Power Fist models can each have their Flamestorm Gauntlets replaced with 1 Auto Boltstorm Gauntlets and 1 Fragstorm Grenade Launcher."
+      }
+    ]
+  },
+  "deathwatch/spectrus-kill-team": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Deathwatch Occulus Bolt Carbine",
+            "wargearItemId": 105495
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Instigator Bolt Carbine",
+                "wargearItemId": 105495
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41190,
+        "originalText": "Any number of Kill Team Infiltrator with Bolt Sniper Rifle, Bolt Pistol and Ceramite Fist models can each have their Bolt Sniper Rifle replaced with 1 Instigator Bolt Carbine."
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Paired Combat Blades",
+            "wargearItemId": 104735
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Deathwatch Occulus Bolt Carbine",
+                "wargearItemId": 105495
+              },
+              {
+                "count": 1,
+                "name": "Paired Combat Blades",
+                "wargearItemId": 104735
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41246,
+        "originalText": "Any number of Kill Team Infiltrator with Special-issue Bolt Pistol and Combat Knife models can each have their Combat Knife replaced with 1 Deathwatch Bolt Carbine and 1 Ceramite Fists."
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Deathwatch Occulus Bolt Carbine",
+            "wargearItemId": 105495
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Las Fusil",
+                "wargearItemId": 105495
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41654,
+        "originalText": "Any number of Kill Team Infiltrator with Bolt Sniper Rifle, Bolt Pistol and Ceramite Fist models can each have their Bolt Sniper Rifle replaced with 1 Las Fusil."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Deathwatch Occulus Bolt Carbine",
+            "wargearItemId": 105495
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Helix Gauntlet",
+                "wargearItemId": 105495
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42219,
+        "originalText": "1 Kill Team Infiltrator with Deathwatch Marksman Bolt Carbine, Bolt Pistol and Ceramite Fist model can have their Deathwatch Marksman Bolt Carbine replaced with 1 Helix Gauntlet."
+      }
+    ]
+  },
+  "deathwatch/talonstrike-kill-team": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [],
+        "choices": [],
+        "isAdditional": false,
+        "originalRuleId": 41131,
+        "originalText": "Any number of Kill Team Heavy Intercessor with Jump Pack models can each have their Assault Bolters replaced with 1 Plasma Exterminator."
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Kill Team Sergeant with Jump Pack"
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 106452
+          }
+        ],
+        "choices": [
+          {
+            "items": []
+          },
+          {
+            "items": []
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41589,
+        "originalText": "The Kill Team Sergeant with Jump Pack can have their Chainsword replaced with one of the following: 1 Power Fist, 1 Power Weapon"
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 105849
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 108663
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42083,
+        "originalText": "For every 5 models in this unit, 1 Kill Team Intercessor with Jump Pack model can have their Heavy Bolt Pistol replaced with 1 Plasma Pistol."
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Kill Team Sergeant with Jump Pack"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 105849
+          }
+        ],
+        "choices": [
+          {
+            "items": []
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 108663
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42332,
+        "originalText": "The Kill Team Sergeant with Jump Pack can have their Heavy Bolt Pistol replaced with one of the following: 1 Hand Flamer, 1 Plasma Pistol"
+      }
+    ]
+  }
+}

@@ -1,0 +1,385 @@
+{
+  "id": 46708,
+  "slug": "lazarus",
+  "name": "Lazarus",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Lazarus model\n\nThis model is equipped with: 1 Bolt Pistol; 1 Enmity's Edge.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Mighty heroes fight at the forefront of battle.",
+      "name": "Leader",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "The Spiritshield Helm",
+      "rules": "This unit has <b>Feel No Pain 3+</b> against <b>psychic attacks</b> and <b>mortal wounds</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Intractable Will",
+      "rules": "In the Fight phase, when a model in this unit is <b>destroyed</b>, if this unit has not been <b>selected to fight</b> this phase, roll one D6:<ul><li>On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Transhuman Strategist",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Leader",
+      "rules": "This model can be attached to the following units:\n\n■ **ASSAULT INTERCESSOR SQUAD**\n■ **BLADEGUARD VETERAN SQUAD**\n■ **COMPANY HEROES**\n■ **INFERNUS SQUAD**\n■ **INNER CIRCLE COMPANIONS**\n■ **INTERCESSOR SQUAD**\n■ **STERNGUARD VETERAN SQUAD**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47231,
+        "name": "Infernus Squad",
+        "slug": "infernus-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46938,
+        "name": "Assault Intercessor Squad",
+        "slug": "assault-intercessor-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47730,
+        "name": "Company Heroes",
+        "slug": "company-heroes",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47702,
+        "name": "Sternguard Veteran Squad",
+        "slug": "sternguard-veteran-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47305,
+        "name": "Inner Circle Companions",
+        "slug": "inner-circle-companions",
+        "factionSlug": "dark-angels"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46861,
+        "name": "Intercessor Squad",
+        "slug": "intercessor-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46687,
+        "name": "Bladeguard Veteran Squad",
+        "slug": "bladeguard-veteran-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1897,
+    "slug": "dark-angels",
+    "name": "Dark Angels",
+    "commonName": "Dark Angels"
+  },
+  "miniatures": [
+    {
+      "id": 62488,
+      "name": "Lazarus",
+      "stats": {
+        "save": "3+",
+        "wounds": "5",
+        "movement": "6\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51106,
+          "name": "Captain"
+        },
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 51617,
+          "name": "Deathwing"
+        },
+        {
+          "id": 50746,
+          "name": "Epic Hero"
+        },
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51004,
+          "name": "Tacticus"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107508,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113536,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105897,
+            "name": "Enmity's Edge",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111795,
+                "name": "Enmity's Edge",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3417,
+                    "name": "ANTI-PSYKER 2+",
+                    "rules": "This ability always takes the form <b>[ANTI‑X Y+]</b>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <b>[ANTI‑VEHICLE 4+]</b> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <b>[ANTI‑PSYKER 2+]</b>  weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 107508,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113536,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105897,
+            "name": "Enmity's Edge",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111795,
+                "name": "Enmity's Edge",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3417,
+                    "name": "ANTI-PSYKER 2+",
+                    "rules": "This ability always takes the form <b>[ANTI‑X Y+]</b>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <b>[ANTI‑VEHICLE 4+]</b> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <b>[ANTI‑PSYKER 2+]</b>  weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 62233,
+      "points": 80,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 62488,
+          "miniatureName": "Lazarus",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

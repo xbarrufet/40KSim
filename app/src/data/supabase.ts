@@ -1,5 +1,5 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
-import type { StructuredAbilitiesData } from './schema'
+import type { StructuredAbilitiesData, StructuredLoadoutData } from './schema'
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined
@@ -132,6 +132,52 @@ export async function fetchAllBaseDataByFaction(factionSlug: string): Promise<{ 
   const { data, error } = await sb
     .from('base_data')
     .select('unit_slug, data')
+    .eq('faction_slug', factionSlug)
+  if (error) throw error
+  return data ?? []
+}
+
+interface LoadoutDataRow {
+  faction_slug: string
+  unit_slug: string
+  tag: string
+  options: unknown[]
+}
+
+export async function fetchLoadoutData(factionSlug: string, unitSlug: string): Promise<LoadoutDataRow | null> {
+  const sb = getClient()
+  if (!sb) return null
+  const { data, error } = await sb
+    .from('loadout_data')
+    .select('*')
+    .eq('faction_slug', factionSlug)
+    .eq('unit_slug', unitSlug)
+    .maybeSingle()
+  if (error) throw error
+  return data ?? null
+}
+
+export async function upsertLoadoutData(factionSlug: string, unitSlug: string, loadoutData: StructuredLoadoutData): Promise<void> {
+  const sb = getClient()
+  if (!sb) return
+  const { error } = await sb.from('loadout_data').upsert(
+    {
+      faction_slug: factionSlug,
+      unit_slug: unitSlug,
+      tag: loadoutData.tag,
+      options: loadoutData.options as unknown[],
+    },
+    { onConflict: 'faction_slug,unit_slug' },
+  )
+  if (error) throw error
+}
+
+export async function fetchAllLoadoutDataByFaction(factionSlug: string): Promise<LoadoutDataRow[]> {
+  const sb = getClient()
+  if (!sb) return []
+  const { data, error } = await sb
+    .from('loadout_data')
+    .select('*')
     .eq('faction_slug', factionSlug)
   if (error) throw error
   return data ?? []

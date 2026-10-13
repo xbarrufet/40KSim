@@ -64,7 +64,7 @@ def extract_datasheet(url):
     return None
 
 
-def fetch_faction_datasheets(faction_slug, faction_name):
+def fetch_faction_datasheets(faction_slug, faction_name, skip_parent=None):
     units_file = DATA_DIR / faction_slug / "units.json"
     if not units_file.exists():
         print(f"Error: {units_file} no encontrado. Ejecuta primero fetch_units.py")
@@ -76,13 +76,22 @@ def fetch_faction_datasheets(faction_slug, faction_name):
     units = units_data['units']
     total = len(units)
 
+    parent_slugs = set()
+    if skip_parent:
+        parent_bd = DATA_DIR / skip_parent / "BaseData"
+        if parent_bd.exists():
+            parent_slugs = {f.stem for f in parent_bd.glob("*.json")}
+
     base_data_dir = DATA_DIR / faction_slug / "BaseData"
     base_data_dir.mkdir(parents=True, exist_ok=True)
 
     already = sum(1 for unit in units if (base_data_dir / f"{unit['slug']}.json").exists())
+    skipped_parent = sum(1 for unit in units if unit['slug'] in parent_slugs)
 
     print(f"\n{'='*60}")
     print(f"  {faction_name} — datasheets ({total} unidades)")
+    if skip_parent and skipped_parent:
+        print(f"  ({skipped_parent} heredadas de {skip_parent}, {total - skipped_parent} propias)")
     if already:
         print(f"  ({already} ya descargados, descargando restantes)")
     print(f"{'='*60}\n")
@@ -93,6 +102,8 @@ def fetch_faction_datasheets(faction_slug, faction_name):
     for i, unit in enumerate(units):
         target = base_data_dir / f"{unit['slug']}.json"
         if target.exists():
+            continue
+        if unit['slug'] in parent_slugs:
             continue
         print(f"  [{i+1}/{total}] {unit['name']}...", end=' ', flush=True)
         try:
@@ -145,35 +156,35 @@ def find_faction(factions, search_term):
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("Uso:")
-        print("  python fetch_datasheets.py <nombre_faccion>")
-        print("  python fetch_datasheets.py --all")
-        print("\nEjemplos:")
-        print("  python fetch_datasheets.py 'Space Marines'")
-        print("  python fetch_datasheets.py necrons")
-        print("  python fetch_datasheets.py --all")
+    import argparse
+    parser = argparse.ArgumentParser(description='Descarga datasheets de una facción.')
+    parser.add_argument('faction', nargs='?', help='Nombre de la facción o --all')
+    parser.add_argument('--all', action='store_true', help='Descargar todas las facciones')
+    parser.add_argument('--skip-parent', help='Slug de la facción padre para saltar unidades heredadas (e.g. space-marines)')
+    args = parser.parse_args()
+
+    if not args.faction and not args.all:
+        parser.print_help()
         sys.exit(1)
 
     factions = load_factions()
 
-    if sys.argv[1] == '--all':
+    if args.all:
         all_factions = []
         for category, faction_list in factions.items():
             all_factions.extend(faction_list)
         print(f"Descargando datasheets de {len(all_factions)} facciones...")
         for faction in all_factions:
             try:
-                fetch_faction_datasheets(faction['slug'], faction['name'])
+                fetch_faction_datasheets(faction['slug'], faction['name'], skip_parent=args.skip_parent)
             except Exception as e:
                 print(f"  ERROR con {faction['name']}: {e}")
     else:
-        search_term = ' '.join(sys.argv[1:])
-        faction = find_faction(factions, search_term)
+        faction = find_faction(factions, args.faction)
         if not faction:
-            print(f"Faccion '{search_term}' no encontrada")
+            print(f"Faccion '{args.faction}' no encontrada")
             sys.exit(1)
-        fetch_faction_datasheets(faction['slug'], faction['name'])
+        fetch_faction_datasheets(faction['slug'], faction['name'], skip_parent=args.skip_parent)
 
 
 if __name__ == "__main__":

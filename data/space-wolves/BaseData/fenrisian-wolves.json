@@ -1,0 +1,184 @@
+{
+  "id": 46916,
+  "slug": "fenrisian-wolves",
+  "name": "Fenrisian Wolves",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "• 5-10 Fenrisian Wolf models\n\nEvery model is equipped with: 1 Teeth and Claws.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Predatory Instinct (Once per battle round, per unit)",
+      "rules": "In your opponent's Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is <b>unengaged</b>, this unit can make a <b>normal move</b> of up to D6\".",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Hunting Hounds",
+      "rules": "While this unit is within 6\" of a friendly <k>Space Wolves Character</k> model (excluding <k>Wulfen</k>), if this unit is not <b>battle-shocked</b>, this unit has +1 <b>OC</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": 3,
+  "pointsStepPoints": 5,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1892,
+    "slug": "space-wolves",
+    "name": "Space Wolves",
+    "commonName": "Space Wolves"
+  },
+  "miniatures": [
+    {
+      "id": 61397,
+      "name": "Fenrisian Wolf",
+      "stats": {
+        "save": "6+",
+        "wounds": "1",
+        "movement": "10\"",
+        "toughness": "4",
+        "leadership": "8+",
+        "objectiveControl": "0"
+      },
+      "keywords": [
+        {
+          "id": 50944,
+          "name": "Beasts"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105019,
+            "name": "Teeth and Claws",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110837,
+                "name": "Teeth and Claws",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 105019,
+            "name": "Teeth and Claws",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110837,
+                "name": "Teeth and Claws",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 62614,
+      "points": 45,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 5,
+      "miniatures": [
+        {
+          "miniatureId": 61397,
+          "miniatureName": "Fenrisian Wolf",
+          "min": 5,
+          "max": 5
+        }
+      ]
+    },
+    {
+      "id": 61871,
+      "points": 75,
+      "displayOrder": 1,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 10,
+      "miniatures": [
+        {
+          "miniatureId": 61397,
+          "miniatureName": "Fenrisian Wolf",
+          "min": 10,
+          "max": 10
+        }
+      ]
+    }
+  ]
+}

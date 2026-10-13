@@ -1,0 +1,854 @@
+{
+  "space-wolves/arjac-rockfist": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "Always",
+        "name": "Anvil of Endurance",
+        "attackType": "FIGHT",
+        "trigger": "¿Ha sido esta unidad seleccionada para luchar en esta fase?",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fightOnDeath",
+            "value": 4
+          }
+        ],
+        "originalText": "In the Fight phase, when a model in this unit is <b>destroyed</b>, if this unit has not been <b>selected to fight</b> this phase, roll one D6:<ul><li>On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is then removed from the battlefield.</li></ul>"
+      },
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Champion of the Kingsguard",
+        "attackType": "ANY",
+        "trigger": "¿El objetivo es una unidad Personaje?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "rerollOnes"
+          },
+          {
+            "category": "diceModifier",
+            "roll": "toWound",
+            "action": "rerollOnes"
+          }
+        ],
+        "originalText": "This model’s attacks that target a <k>Character</k> unit: <ul><li>Can re-roll <b>hit rolls</b> of 1.</li><li>Can re-roll <b>wound rolls</b> of 1.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/bjorn-the-fell-handed": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deadly Demise 1",
+        "attackType": "ANY",
+        "trigger": "¿Fue destruido este modelo?",
+        "appliedTo": "Enemy",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fightOnDeath",
+            "value": 1
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "type": "Always",
+        "name": "Legendary Tenacity",
+        "attackType": "SHOOTING",
+        "trigger": "¿La Fuerza del atacante es mayor que la Resistencia de este modelo?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toWound",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "Attacks that target this unit with a <b>S</b> greater than this unit's <b>T</b> have -1 to <b>wound rolls</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Ancient Tactician (Once per turn, per army)",
+        "category": "OTHER",
+        "text": "When you target this unit with a stratagem, that use is -1CP",
+        "originalText": "When you target this unit with a <b>stratagem</b>, that use is -1CP"
+      },
+      {
+        "type": "Always",
+        "name": "Feel No Pain 5+",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 5
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/blood-claws": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Berserk Charge",
+        "category": "OTHER",
+        "text": "When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge.",
+        "originalText": "When this unit is selected to make an <b>advance move</b>, that <b>advance move</b> does not prevent this unit from being <b>eligible to declare a charge</b>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/fenrisian-wolves": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Predatory Instinct (Once per battle round, per unit)",
+        "category": "OTHER",
+        "text": "In your opponent's Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can make a normal move of up to D6\".",
+        "originalText": "In your opponent's Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is <b>unengaged</b>, this unit can make a <b>normal move</b> of up to D6\"."
+      },
+      {
+        "type": "Always",
+        "name": "Hunting Hounds",
+        "attackType": "ANY",
+        "trigger": "¿Está esta unidad dentro de 6\" de un modelo de Carácter aliado de los Lobos del Espacio (excluyendo Wulfen) y no está en pánico?",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "unit",
+            "stat": "ObjectiveControl",
+            "mode": "add",
+            "value": 1
+          }
+        ],
+        "originalText": "While this unit is within 6\" of a friendly <k>Space Wolves Character</k> model (excluding <k>Wulfen</k>), if this unit is not <b>battle-shocked</b>, this unit has +1 <b>OC</b>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/grey-hunters": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Cunning Hunters",
+        "attackType": "FIGHT",
+        "trigger": "¿Está esta unidad dentro del rango de un objetivo?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "weapon",
+            "weaponTarget": "MELEE",
+            "stat": "Strength",
+            "mode": "add",
+            "value": 1
+          },
+          {
+            "category": "statModifier",
+            "target": "weapon",
+            "weaponTarget": "MELEE",
+            "stat": "AP",
+            "mode": "add",
+            "value": 1
+          }
+        ],
+        "originalText": "In the Fight phase, if this unit is within range of an <b>objective</b>, this unit’s melee attacks: <ul><li>Have +1 <b>S</b>.</li><li>Have +1 <b>AP</b>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Old Greymanes",
+        "category": "OTHER",
+        "text": "In the Declare Battle Formations step, you can split this unit into two units, each containing as equal a number of models as possible (when splitting a unit in this way, make a note of which models form each of the two new units).",
+        "originalText": "In the Declare Battle Formations step, you can split this unit into two units, each containing as equal a number of models as possible (when splitting a unit in this way, make a note of which models form each of the two new units)."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/iron-priest": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Gift of the Iron Wolf",
+        "category": "OTHER",
+        "text": "In your Movement phase, at the start or end of this unit's move, select up to one friendly Space Wolves Vehicle model within 3\" of this model: That Vehicle model heals D3 wounds. That VEHICLE model's attacks can ignore modifiers to hit rolls and wound rolls until the start of your next Movement phase. You cannot select the same VEHICLE model for this ability more than once per phase.",
+        "originalText": "In your Movement phase, at the start or end of this unit's move, select up to one friendly <k>Space Wolves Vehicle</k> model within 3\" of this model:<ul><li>That <k>Vehicle</k> model <b>heals</b> D3 wounds.</li><li>That <k>VEHICLE</k> model’s attacks can ignore modifiers to <b>hit rolls</b> and <b>wound rolls</b> until the start of your next Movement phase.</li></ul>You cannot select the same <k>VEHICLE</k> model for this ability more than once per phase."
+      },
+      {
+        "type": "Alone",
+        "name": "Iron Priest",
+        "attackType": "ANY",
+        "trigger": "¿Este modelo está a 3\" o menos de una unidad amiga Space Wolves Vehicle?",
+        "appliedTo": "SelfModel",
+        "effects": [],
+        "originalText": "While this model is within 3\" of a friendly <k>Space Wolves Vehicle</k> unit, this model has <b>Lone Operative</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Judgement of the Omnissiah",
+        "attackType": "FIGHT",
+        "trigger": "¿El objetivo está en combate con una unidad amiga Space Wolves Vehicle?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toWound",
+            "action": "rerollFailed",
+            "attackType": "MELEE"
+          }
+        ],
+        "originalText": "This model's attacks that target an enemy unit <b>engaged</b> with a friendly <k>Space Wolves Vehicle</k> can re-roll <b>wound rolls</b>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/logan-grimnar": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Guile of the Wolf",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfUnit",
+        "category": "OTHER",
+        "text": "At the start of each phase, the assault doctrine, devastator doctrine and tactical doctrine are active for this unit.",
+        "originalText": "At the start of each phase, the <b>assault doctrine</b>, <b>devastator doctrine</b> and <b>tactical doctrine</b> are active for this unit."
+      },
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfUnit",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "High King of Fenris (Once per battle round, per unit)",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "Ally",
+        "category": "OTHER",
+        "text": "In your Movement phase, select up to one friendly Space Wolves unit in strategic reserves. If you do, when that unit makes an ingress move, treat the current battle round number as being one higher than it actually is.",
+        "originalText": "In your Movement phase, select up to one friendly <k>Space Wolves</k> unit in <b>strategic reserves</b>. If you do, when that unit makes an <b>ingress move</b>, treat the current battle round number as being one higher than it actually is."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/murderfang": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Murder-maker",
+        "category": "OTHER",
+        "text": "In the Fight phase, when a friendly Wulfen model within 6\" of this unit is destroyed, if that model's unit has not been selected to fight this phase, roll one D6: On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.",
+        "originalText": "In the Fight phase, when a friendly <k>Wulfen</k> model within 6\" of this unit is <b>destroyed</b>, if that model's unit has not been <b>selected to fight</b> this phase, roll one D6:<ul><li>On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Deadly Demise 1",
+        "attackType": "ANY",
+        "trigger": "¿Ha sido destruido este modelo?",
+        "appliedTo": "Enemy",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "damageReduction",
+            "value": 1,
+            "condition": "any"
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "type": "Always",
+        "name": "Feel No Pain 6+",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 6
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
+      },
+      {
+        "type": "Always",
+        "name": "Bestial Fury",
+        "category": "OTHER",
+        "text": "This unit: Can re-roll advance rolls. Can re-roll charge rolls.",
+        "originalText": "This unit: <ul><li>Can re-roll <b>advance rolls</b>.</li><li>Can re-roll <b>charge rolls</b>.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/njal-stormcaller": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Wind Walker",
+        "attackType": "SHOOTING",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "RANGE",
+            "keyword": "ASSAULT",
+            "value": null
+          }
+        ],
+        "originalText": "<ul><li>This unit's ranged attacks have <k>[ASSAULT]</k>.</li><li>When this unit is selected to make an <b>advance move</b>, this unit can change <b>advance rolls</b> to a 6.</li></ul>"
+      },
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "High Rune Priest (psyker level 3)",
+        "category": "OTHER",
+        "text": "This model has the psychic abilities listed in the Runic Abilities section.",
+        "originalText": "This model has the <b>psychic abilities</b> listed in the Runic Abilities section."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/ragnar-blackmane": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "War Howl",
+        "attackType": "FIGHT",
+        "trigger": "¿Esta unidad está adherida a una unidad de Blood Claws o Wolf Guard Headtakers?",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "weapon",
+            "weaponTarget": "MELEE",
+            "stat": "Strength",
+            "mode": "add",
+            "value": 1
+          },
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "MELEE",
+            "keyword": "SUSTAINED HITS",
+            "value": "1"
+          }
+        ],
+        "originalText": "<ul><li>While this model is attached to a <k>Blood Claws</k> unit, this unit's melee attacks have +1 <b>S</b> and <k>[SUSTAINED HITS 1]</k>.</li><li>While this model is attached to a <k>Wolf Guard Headtakers</k> unit, when this unit is selected to make an <b>advance move</b>, that <b>advance move</b> does not prevent this unit from being <b>eligible to declare a charge</b>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Battle-lust",
+        "attackType": "FIGHT",
+        "trigger": "¿Esta unidad realizó un movimiento de carga este turno?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "weapon",
+            "weaponTarget": "MELEE",
+            "stat": "Attacks",
+            "mode": "add",
+            "value": 2
+          }
+        ],
+        "originalText": "If this unit made a <b>charge move</b> this turn, this model's melee attacks have +2 <b>A</b>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/thunderwolf-cavalry": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Thunderous Charge",
+        "attackType": "FIGHT",
+        "trigger": "¿Esta unidad realizó un movimiento de carga este turno?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "weapon",
+            "weaponTarget": "MELEE",
+            "stat": "Strength",
+            "mode": "add",
+            "value": 1
+          },
+          {
+            "category": "statModifier",
+            "target": "weapon",
+            "weaponTarget": "MELEE",
+            "stat": "Damage",
+            "mode": "add",
+            "value": 1
+          }
+        ],
+        "originalText": "If this unit made a <b>charge move</b> this turn, this unit's melee attacks have:<ul><li>+1 <b>S</b>.</li><li>+1 <b>D</b>.</ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/ulrik-the-slayer": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Feel No Pain 6+",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 6
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
+      },
+      {
+        "type": "Always",
+        "name": "Slayer's Oath",
+        "attackType": "ANY",
+        "trigger": "¿El objetivo es la oath de este unit?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "ignoreModifiers"
+          }
+        ],
+        "originalText": "At the start of the first battle round, you select up to one enemy <k>Character/Monster/Vehicle</k> unit to be this unit's <b>slayer's oath</b>:<ul><li>This unit's attacks that target this unit's <b>slayer's oath</b> can ignore modifiers to your unit's:</li><ul><li><b>BS</b> and <b>WS</b>.</li><li><b>Hit rolls</b>.</li></ul></ul>"
+      },
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Oathbound",
+        "attackType": "FIGHT",
+        "trigger": "¿El objetivo es la oath de este unit?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "attackType": "MELEE"
+          },
+          {
+            "category": "diceModifier",
+            "roll": "toWound",
+            "action": "addToRoll",
+            "attackType": "MELEE"
+          }
+        ],
+        "originalText": "<ul><li>This unit's melee attacks have +1 to <b>hit rolls</b>.</li><li><u>Or:</u> This unit's melee attacks that target this unit's <b>slayer's oath</b> have +1 to <b>hit rolls</b> and <b>wound rolls</b>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/venerable-dreadnought": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deadly Demise 1",
+        "category": "OTHER",
+        "text": "Each time this model is destroyed, after any embarked units have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers 1 mortal wound.",
+        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "type": "Always",
+        "name": "Fervour of the Ancients",
+        "category": "OTHER",
+        "text": "Friendly Space Wolves units within 6\" of this unit: Have +1 to advance rolls. Have +1 to charge rolls.",
+        "originalText": "Friendly <k>Space Wolves</k> units within 6\" of this unit: <ul><li>Have +1 to <b>advance rolls</b>.</li><li>Have +1 to <b>charge rolls</b>.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/wolf-guard-battle-leader": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Tempered Ferocity",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "ALL",
+            "keyword": "SUSTAINED HITS",
+            "value": "1"
+          },
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "rerollOnes",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "<ul><li>This unit's attacks have <k>[SUSTAINED HITS 1]</k>.</li><li>This unit's attacks that target an enemy unit within 6\" of this unit can re-roll <b>hit rolls</b> of 1.</li></ul>"
+      },
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Heroic Last Stand",
+        "attackType": "FIGHT",
+        "trigger": "¿Ha sido destruido este modelo en la fase de Lucha sin haber sido seleccionado para luchar esta fase?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fightOnDeath"
+          }
+        ],
+        "originalText": "In the Fight phase, when this model is <b>destroyed</b>, if this unit has not been <b>selected to fight</b> this phase, roll one D6:<ul><li>On a 2+, do not remove this model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/wolf-guard-headtakers": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Let Loose the Wolves",
+        "category": "OTHER",
+        "text": "At the start of the Declare Battle Formations step, you can split this unit into two units, one containing all Wolf Guard Headtaker models and all leader/support models, the other containing all Hunting Wolves models, with new starting strengths accordingly.",
+        "originalText": "At the start of the Declare Battle Formations step, you can split this unit into two units, one containing all Wolf Guard Headtaker models and all <b>leader/support</b> models, the other containing all Hunting Wolves models, with new <b>starting strengths</b> accordingly."
+      },
+      {
+        "type": "Always",
+        "name": "Hunting Hounds",
+        "attackType": "ANY",
+        "trigger": "¿Esta unidad está a menos de 6\" de un modelo de Personaje aliado de Space Wolves (excluyendo Wulfen) y no está en shock de batalla?",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "unit",
+            "stat": "ObjectiveControl",
+            "mode": "add",
+            "value": 1
+          }
+        ],
+        "originalText": "While this unit is within 6\" of a friendly <k>Space Wolves Character</k> model (excluding <k>Wulfen</k>), if this unit is not <b>battle-shocked</b>, Hunting Wolf models have +1 <b>OC</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Headhunters",
+        "attackType": "ANY",
+        "trigger": "¿El objetivo es la presa de esta unidad?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "ALL",
+            "keyword": "DEVASTATING WOUNDS",
+            "value": null
+          },
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "ALL",
+            "keyword": "PRECISION",
+            "value": null
+          }
+        ],
+        "originalText": "At the start of the first battle round, select up to one enemy unit to be this unit's <b>quarry</b>:<ul><li>This unit's attacks that target this unit's <b>quarry</b> have <k>[DEVASTATING WOUNDS]</k> and <k>[PRECISION]</k>.</li><li>Each time this unit's <b>quarry</b> is <b>destroyed</b>, select one enemy unit to be this unit's <b>quarry</b>.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/wolf-guard-terminators": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "Always",
+        "name": "Rugged Resilience",
+        "attackType": "ANY",
+        "trigger": "¿La Fuerza del atacante es mayor que la Resistencia de esta unidad?",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toWound",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "Attacks that target this unit with a <b>S</b> greater than this unit's <b>T</b> have -1 to <b>wound rolls</b>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/wolf-priest": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Litany of Hate",
+        "attackType": "FIGHT",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "MELEE",
+            "keyword": "LANCE",
+            "value": null
+          }
+        ],
+        "originalText": "This unit's melee attacks have <k>[LANCE]</k>."
+      },
+      {
+        "type": "Always",
+        "name": "Healing Balms",
+        "category": "OTHER",
+        "text": "In your Command phase, this unit heals D3+1 wounds.",
+        "originalText": "In your Command phase, this unit <b>heals</b> D3+1 wounds."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/wolf-scouts": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Infiltrators",
+        "category": "OTHER",
+        "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent's deployment zone and all enemy units.",
+        "originalText": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+      },
+      {
+        "type": "Always",
+        "name": "Scouts 8\"",
+        "category": "OTHER",
+        "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. If that unit is wholly within your deployment zone, it can make a scout move. If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+        "originalText": "This ability always takes the form <b>Scouts X\"</b>. In the Resolve Pre‑battle Abilities step, if every model in a unit has this ability, you can do <u>one</u> of the following:\n<ul><li>If that unit is in <b>strategic reserves</b>, you can set up that unit anywhere that is wholly within your deployment zone.</li><li>If that unit is wholly within your deployment zone, it can make a <b>scout move</b> (24.32).</li><li>If that unit is embarked within a <k>DEDICATED TRANSPORT</k> that is wholly within your deployment zone, and if every model embarked within that <k>DEDICATED TRANSPORT</k> has the <b>Scouts</b> ability, that <k>DEDICATED TRANSPORT</k> can make a <b>scout move</b>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Hunting Hounds",
+        "attackType": "ANY",
+        "trigger": "¿Está esta unidad a 6\" o menos de un modelo CHARACTER de los Lobos Espaciales aliados (excluyendo Wulfen) y no está conmocionada?",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "unit",
+            "stat": "ObjectiveControl",
+            "mode": "add",
+            "value": 1
+          }
+        ],
+        "originalText": "While this unit is within 6\" of a friendly <k>Space Wolves Character</k> model (excluding <k>Wulfen</k>), if this unit is not <b>battle-shocked</b>, Hunting Wolf models have +1 <b>OC</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Deadly Stalkers",
+        "attackType": "SHOOTING",
+        "trigger": "¿El objetivo enemigo está a más de 6\" de todas las otras unidades enemigas?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toWound",
+            "action": "addToRoll",
+            "attackType": "RANGE"
+          }
+        ],
+        "originalText": "This unit's attacks that target an enemy unit more than 6\" from any other enemy units have +1 to <b>wound rolls</b>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/wulfen-dreadnought": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deadly Demise 1",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "OTHER"
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "type": "Always",
+        "name": "Deadly Demise 1",
+        "category": "OTHER",
+        "text": "Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers 1 mortal wound.",
+        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "type": "Always",
+        "name": "Bestial Rage",
+        "category": "OTHER",
+        "text": "In your opponent's Shooting phase, when an enemy unit has shot, if this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+1\".",
+        "originalText": "In your opponent's Shooting phase, when an enemy unit has shot, if this unit lost a wound as a result of those attacks, this unit can make a <b>surge move</b> of up to D6+1\"."
+      },
+      {
+        "type": "Always",
+        "name": "Feel No Pain 6+",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 6
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
+      },
+      {
+        "type": "Always",
+        "name": "Violent Fury",
+        "attackType": "FIGHT",
+        "trigger": "¿Este modelo está equipado con dos armas de combate cuerpo a cuerpo?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "MELEE",
+            "keyword": "TWIN-LINKED",
+            "value": null
+          }
+        ],
+        "originalText": "If this model is equipped with two melee weapons, melee attacks made by this unit have <k>[TWIN-LINKED]</k>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/wulfen-with-storm-shields": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Hammer Blow",
+        "category": "OTHER",
+        "text": "In the Fight phase, when this unit has fought, select up to one enemy Monster/Vehicle unit hit by those attacks. If you do, that enemy unit is suppressed until the start of your next turn: While a unit is suppressed, that unit's attacks have -1 to hit rolls.",
+        "originalText": "In the Fight phase, when this unit has fought, select up to one enemy <k>Monster/Vehicle</k> unit hit by those attacks. If you do, that enemy unit is <b>suppressed</b> until the start of your next turn:<ul><li>While a unit is <b>suppressed</b>, that unit's attacks have -1 to <b>hit rolls</b>.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "space-wolves/wulfen": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Savage Frenzy",
+        "category": "OTHER",
+        "text": "When an enemy unit engaged with your unit (excluding Monster/Vehicle units) makes a fall-back move that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.",
+        "originalText": "When an enemy unit <b>engaged</b> with your unit (excluding <k>Monster/Vehicle</k> units) makes a <b>fall-back move</b> that enemy unit must use the <b>desperate escape mode</b>. If that enemy unit is <b>battle-shocked</b>, -1 from those <b>hazard rolls</b>."
+      }
+    ],
+    "rawAbilities": []
+  }
+}

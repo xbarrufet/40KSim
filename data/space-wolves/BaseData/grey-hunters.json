@@ -1,0 +1,723 @@
+{
+  "id": 47608,
+  "slug": "grey-hunters",
+  "name": "Grey Hunters",
+  "baseSize": "32mm",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Grey Hunter Pack Leader model\n• 9 Grey Hunter models\n\nEvery model is equipped with: 1 Bolt Carbine; 1 Bolt Pistol; 1 Chainsword.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Cunning Hunters",
+      "rules": "In the Fight phase, if this unit is within range of an <b>objective</b>, this unit’s melee attacks: <ul><li>Have +1 <b>S</b>.</li><li>Have +1 <b>AP</b>.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Old Greymanes",
+      "rules": "In the Declare Battle Formations step, you can split this unit into two units, each containing as equal a number of models as possible (when splitting a unit in this way, make a note of which models form each of the two new units).",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [],
+  "ledBy": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47259,
+        "name": "Ulrik the Slayer",
+        "slug": "ulrik-the-slayer",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47357,
+        "name": "Njal Stormcaller",
+        "slug": "njal-stormcaller",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47192,
+        "name": "Iron Priest",
+        "slug": "iron-priest",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46818,
+        "name": "Wolf Guard Battle Leader",
+        "slug": "wolf-guard-battle-leader",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47499,
+        "name": "Wolf Priest",
+        "slug": "wolf-priest",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1892,
+    "slug": "space-wolves",
+    "name": "Space Wolves",
+    "commonName": "Space Wolves"
+  },
+  "miniatures": [
+    {
+      "id": 61724,
+      "name": "Grey Hunter",
+      "stats": {
+        "save": "3+",
+        "wounds": "2",
+        "movement": "7\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "objectiveControl": "3"
+      },
+      "keywords": [
+        {
+          "id": 50780,
+          "name": "Battleline"
+        },
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51004,
+          "name": "Tacticus"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105907,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111808,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107451,
+            "name": "Bolt Carbine",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113488,
+                "name": "Bolt Carbine",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "3",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106034,
+            "name": "Chainsword",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111955,
+                "name": "Chainsword",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 107451,
+            "name": "Bolt Carbine",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113488,
+                "name": "Bolt Carbine",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "3",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105907,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111808,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106034,
+            "name": "Chainsword",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111955,
+                "name": "Chainsword",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    },
+    {
+      "id": 61997,
+      "name": "Grey Hunter Pack Leader",
+      "stats": {
+        "save": "3+",
+        "wounds": "2",
+        "movement": "7\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "objectiveControl": "3"
+      },
+      "keywords": [
+        {
+          "id": 50780,
+          "name": "Battleline"
+        },
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51004,
+          "name": "Tacticus"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106034,
+            "name": "Chainsword",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111955,
+                "name": "Chainsword",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105907,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111808,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107451,
+            "name": "Bolt Carbine",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113488,
+                "name": "Bolt Carbine",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "3",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 107451,
+            "name": "Bolt Carbine",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113488,
+                "name": "Bolt Carbine",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "3",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105907,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111808,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106034,
+            "name": "Chainsword",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111955,
+                "name": "Chainsword",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106667,
+            "name": "Plasma Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112674,
+                "name": "Standard",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              },
+              {
+                "id": 110662,
+                "name": "Supercharge",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  },
+                  {
+                    "id": 3348,
+                    "name": "HAZARDOUS",
+                    "rules": "Each time a unit is <b>selected to shoot</b> or <b>selected to fight</b>, after that unit has resolved all of its attacks, make a number of <b>hazard rolls</b> (06.03) for that unit equal to the number of <b>[HAZARDOUS]</b> weapons you selected in the Select Weapons step."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 108162,
+            "name": "Power Fist",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114249,
+                "name": "Power Fist",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "8",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105179,
+            "name": "Power Weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110995,
+                "name": "Power Weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 41600,
+      "rulesText": "The Grey Hunter Pack Leader can have their Chainsword replaced with one of the following: 1 Power Fist, 1 Power Weapon",
+      "displayOrder": 0
+    },
+    {
+      "id": 41718,
+      "rulesText": "The Grey Hunter Pack Leader can have their Bolt Pistol replaced with 1 Plasma Pistol.",
+      "displayOrder": 1
+    }
+  ],
+  "compositions": [
+    {
+      "id": 61984,
+      "points": 180,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 10,
+      "miniatures": [
+        {
+          "miniatureId": 61997,
+          "miniatureName": "Grey Hunter Pack Leader",
+          "min": 1,
+          "max": 1
+        },
+        {
+          "miniatureId": 61724,
+          "miniatureName": "Grey Hunter",
+          "min": 9,
+          "max": 9
+        }
+      ]
+    }
+  ]
+}

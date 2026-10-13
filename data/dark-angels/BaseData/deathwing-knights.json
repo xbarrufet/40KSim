@@ -1,0 +1,479 @@
+{
+  "id": 47690,
+  "slug": "deathwing-knights",
+  "name": "Deathwing Knights",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Knight Master model\n• 4 Deathwing Knights models\n\nThe Knight Master is equipped with: 1 Great Weapon of the Unforgiven.\nEvery Deathwing Knights is equipped with: 1 Mace of Absolution.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "There are many ways by which to deploy troops to the field of battle including tunnels, teleportation devices and other esoteric means of transportation.",
+      "name": "Deep Strike",
+      "rules": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Inner Circle",
+      "rules": "<ul><li>Attacks that target this unit have -1<b>D</b>.</li><li>This unit cannot be targeted with the <b>Tactical Dreadnought Fortitude stratagem</b>.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Teleport Homer (Once per battle, per unit)",
+      "rules": "At the start of the battle, you can set up one Teleport Homer token for this unit on the battlefield. If you do:\n<ul><li>When you target this unit with the <b>Rapid Ingress stratagem</b>, you can use that Teleport Homer token. If you do, that use is -1 CP, but when resolving that <b>stratagem</b>, this unit must be set up within 3\" of that Teleport Homer token and not within 8\" of an enemy unit. That Teleport Homer token is then removed from the battlefield. </li>\n<li>If an enemy unit ends a move within 1\" of that Teleport Homer token, that Teleport Homer token is removed from the battlefield.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": 3,
+  "pointsStepPoints": 20,
+  "leads": [],
+  "ledBy": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46823,
+        "name": "Belial",
+        "slug": "belial",
+        "factionSlug": "dark-angels"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47436,
+        "name": "Chaplain in Terminator Armour",
+        "slug": "chaplain-in-terminator-armour",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47669,
+        "name": "Ancient in Terminator Armour",
+        "slug": "ancient-in-terminator-armour",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46957,
+        "name": "Captain in Terminator Armour",
+        "slug": "captain-in-terminator-armour",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46846,
+        "name": "Librarian in Terminator Armour",
+        "slug": "librarian-in-terminator-armour",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1897,
+    "slug": "dark-angels",
+    "name": "Dark Angels",
+    "commonName": "Dark Angels"
+  },
+  "miniatures": [
+    {
+      "id": 62010,
+      "name": "Deathwing Knights",
+      "stats": {
+        "save": "2+",
+        "wounds": "4",
+        "movement": "5\"",
+        "toughness": "6",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51617,
+          "name": "Deathwing"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51550,
+          "name": "Terminator"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108176,
+            "name": "Mace of Absolution",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114262,
+                "name": "Mace of Absolution",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3427,
+                    "name": "ANTI-MONSTER/VEHICLE 4+",
+                    "rules": "This ability always takes the form <b>[ANTI‑X Y+]</b>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <b>[ANTI‑VEHICLE 4+]</b> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <b>[ANTI‑PSYKER 2+]</b>  weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 107531,
+            "name": "Watcher in the Dark",
+            "wargearType": "wargear",
+            "ruleText": "Once per battle, in any phase, just after a mortal wound is allocated to an **ADEPTUS ASTARTES** model in this unit, this unit can summon a Watcher in the Dark. When it does, until the end of the phase, models in this unit have the Feel No Pain 4+ ability against mortal wounds.\n\n***Designer’s Note**: Place a Watcher in the Dark token next to the unit, removing it when this ability has been used.*",
+            "profiles": []
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 108176,
+            "name": "Mace of Absolution",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114262,
+                "name": "Mace of Absolution",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3427,
+                    "name": "ANTI-MONSTER/VEHICLE 4+",
+                    "rules": "This ability always takes the form <b>[ANTI‑X Y+]</b>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <b>[ANTI‑VEHICLE 4+]</b> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <b>[ANTI‑PSYKER 2+]</b>  weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106801,
+            "name": "Power Weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112787,
+                "name": "Power Weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        }
+      ]
+    },
+    {
+      "id": 62061,
+      "name": "Knight Master",
+      "stats": {
+        "save": "2+",
+        "wounds": "4",
+        "movement": "5\"",
+        "toughness": "6",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51617,
+          "name": "Deathwing"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51550,
+          "name": "Terminator"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107295,
+            "name": "Great Weapon of the Unforgiven",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113325,
+                "name": "Great Weapon of the Unforgiven",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3494,
+                    "name": "DEVASTATING WOUNDS",
+                    "rules": "Each time an attack made with a <b>[DEVASTATING WOUNDS]</b> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <b>[DEVASTATING WOUNDS]</b> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <b>[DEVASTATING WOUNDS]</b> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  },
+                  {
+                    "id": 3450,
+                    "name": "SUSTAINED HITS 1",
+                    "rules": "This ability always takes the form <b>[SUSTAINED HITS X]</b>. Each time an attack made with a <b>[SUSTAINED HITS]</b> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <b>[SUSTAINED HITS 2]</b> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <b>[SUSTAINED HITS 2]</b> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 107531,
+            "name": "Watcher in the Dark",
+            "wargearType": "wargear",
+            "ruleText": "Once per battle, in any phase, just after a mortal wound is allocated to an **ADEPTUS ASTARTES** model in this unit, this unit can summon a Watcher in the Dark. When it does, until the end of the phase, models in this unit have the Feel No Pain 4+ ability against mortal wounds.\n\n***Designer’s Note**: Place a Watcher in the Dark token next to the unit, removing it when this ability has been used.*",
+            "profiles": []
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107295,
+            "name": "Great Weapon of the Unforgiven",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113325,
+                "name": "Great Weapon of the Unforgiven",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3494,
+                    "name": "DEVASTATING WOUNDS",
+                    "rules": "Each time an attack made with a <b>[DEVASTATING WOUNDS]</b> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <b>[DEVASTATING WOUNDS]</b> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <b>[DEVASTATING WOUNDS]</b> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  },
+                  {
+                    "id": 3450,
+                    "name": "SUSTAINED HITS 1",
+                    "rules": "This ability always takes the form <b>[SUSTAINED HITS X]</b>. Each time an attack made with a <b>[SUSTAINED HITS]</b> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <b>[SUSTAINED HITS 2]</b> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <b>[SUSTAINED HITS 2]</b> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105195,
+            "name": "Relic Weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111015,
+                "name": "Relic Weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3351,
+                    "name": "LETHAL HITS",
+                    "rules": "Each time an attack made with a <b>[LETHAL HITS]</b> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <b>[DEVASTATING WOUNDS]</b>.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 41379,
+      "rulesText": "This unit can be equipped with 1 Watcher in the Dark",
+      "displayOrder": 0
+    },
+    {
+      "id": 41727,
+      "rulesText": "All Deathwing Knight models in this unit can each have their Mace of Absolution replaced with 1 Power Weapon.",
+      "displayOrder": 1
+    },
+    {
+      "id": 41902,
+      "rulesText": "The Knight Master can have their Great Weapon of the Unforgiven replaced with 1 Relic Weapon.",
+      "displayOrder": 2
+    }
+  ],
+  "compositions": [
+    {
+      "id": 62410,
+      "points": 255,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 5,
+      "miniatures": [
+        {
+          "miniatureId": 62061,
+          "miniatureName": "Knight Master",
+          "min": 1,
+          "max": 1
+        },
+        {
+          "miniatureId": 62010,
+          "miniatureName": "Deathwing Knights",
+          "min": 4,
+          "max": 4
+        }
+      ]
+    }
+  ]
+}

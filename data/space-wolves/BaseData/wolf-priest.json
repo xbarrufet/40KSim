@@ -1,0 +1,332 @@
+{
+  "id": 47499,
+  "slug": "wolf-priest",
+  "name": "Wolf Priest",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Wolf Priest model\n\nThis model is equipped with: 1 Absolvor Bolt Pistol; 1 Crozius Arcanum.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Mighty heroes fight at the forefront of battle.",
+      "name": "Leader",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Litany of Hate",
+      "rules": "This unit's melee attacks have <k>[LANCE]</k>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Healing Balms",
+      "rules": "In your Command phase, this unit <b>heals</b> D3+1 wounds.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Leader",
+      "rules": "This model can be attached to the following units:\n\n■ **ASSAULT INTERCESSOR SQUAD**\n■ **BLADEGUARD VETERAN SQUAD**\n■ **BLOOD CLAWS**\n■ **GREY HUNTERS**\n■ **INTERCESSOR SQUAD**\n■ **WOLF GUARD HEADTAKERS**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46938,
+        "name": "Assault Intercessor Squad",
+        "slug": "assault-intercessor-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47295,
+        "name": "Wolf Guard Headtakers",
+        "slug": "wolf-guard-headtakers",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46687,
+        "name": "Bladeguard Veteran Squad",
+        "slug": "bladeguard-veteran-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46861,
+        "name": "Intercessor Squad",
+        "slug": "intercessor-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47028,
+        "name": "Blood Claws",
+        "slug": "blood-claws",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47608,
+        "name": "Grey Hunters",
+        "slug": "grey-hunters",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1892,
+    "slug": "space-wolves",
+    "name": "Space Wolves",
+    "commonName": "Space Wolves"
+  },
+  "miniatures": [
+    {
+      "id": 61899,
+      "name": "Wolf Priest",
+      "stats": {
+        "save": "3+",
+        "wounds": "4",
+        "movement": "7\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51004,
+          "name": "Tacticus"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108306,
+            "name": "Crozius Arcanum",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114413,
+                "name": "Crozius Arcanum",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105675,
+            "name": "Absolvor Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111554,
+                "name": "Absolvor Bolt Pistol",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 105675,
+            "name": "Absolvor Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111554,
+                "name": "Absolvor Bolt Pistol",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 108306,
+            "name": "Crozius Arcanum",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114413,
+                "name": "Crozius Arcanum",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 61977,
+      "points": 75,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61899,
+          "miniatureName": "Wolf Priest",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

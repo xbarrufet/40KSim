@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from 'react'
 import { ArrowLeft, RefreshCw } from 'lucide-react'
-import { getBaseData, getStructuredAbilitiesData, putStructuredAbilitiesData } from '../data/db'
+import { getBaseData, getLoadoutData, getStructuredAbilitiesData, putLoadoutData, putStructuredAbilitiesData } from '../data/db'
 import {
   extractDatasheetContext,
   getUnitKeywords,
@@ -24,11 +24,13 @@ import type {
   OtherAbility,
   StatModifierEffect,
   StructuredAbilitiesData,
+  StructuredLoadoutData,
   TargetCondition,
   TargetConditionKeyword,
   UnitKeywordEffect,
   UnitStat,
   WargearEntry,
+  WargearOption,
   WeaponKeywordEffect,
   WeaponStat,
   WeaponTarget,
@@ -153,18 +155,35 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
   const [baseDataAbilitiesMap, setBaseDataAbilitiesMap] = useState<Record<string, string>>({})
   const [baseDataChanged, setBaseDataChanged] = useState(false)
   const [validationError, setValidationError] = useState<string | null>(null)
+  const [loadoutData, setLoadoutData] = useState<StructuredLoadoutData | null>(null)
+  const [loadoutDecisions, setLoadoutDecisions] = useState<Map<number, 'approved' | 'rejected'>>(new Map())
+  const [savingLoadout, setSavingLoadout] = useState(false)
+  const [resolvedAbilitiesFaction, setResolvedAbilitiesFaction] = useState(faction.slug)
+  const [resolvedLoadoutFaction, setResolvedLoadoutFaction] = useState(faction.slug)
 
   useEffect(() => {
     const loadData = async () => {
       try {
-        const [structuredData, baseDataRaw] = await Promise.all([
+        const [abilitiesResult, baseDataRaw, loadoutResult] = await Promise.all([
           getStructuredAbilitiesData(faction.slug, unitSlug),
           getBaseData(faction.slug, unitSlug),
+          getLoadoutData(faction.slug, unitSlug),
         ])
-        if (!structuredData) {
+        if (loadoutResult) {
+          setLoadoutData(loadoutResult.data)
+          setResolvedLoadoutFaction(loadoutResult.resolvedFaction)
+          if (loadoutResult.data.tag === 'CONFIRMED') {
+            const decisions = new Map<number, 'approved' | 'rejected'>()
+            loadoutResult.data.options.forEach((_, i) => decisions.set(i, 'approved'))
+            setLoadoutDecisions(decisions)
+          }
+        }
+        if (!abilitiesResult) {
           setError('Esta unidad no tiene datos todavía. Sube su BaseData primero.')
           return
         }
+        const structuredData = abilitiesResult.data
+        setResolvedAbilitiesFaction(abilitiesResult.resolvedFaction)
         setStructuredAbilitiesData(structuredData)
         setDraft(toDraft(structuredData))
         if (baseDataRaw) {
@@ -448,12 +467,43 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
         tag: 'CONFIRMED',
         baseDataHash,
       }
-      await putStructuredAbilitiesData(faction.slug, unitSlug, confirmed)
+      await putStructuredAbilitiesData(resolvedAbilitiesFaction, unitSlug, confirmed)
       setStructuredAbilitiesData(confirmed)
       setBaseDataChanged(false)
       onSaved()
     } finally {
       setSaving(false)
+    }
+  }
+
+  const setLoadoutDecision = (index: number, value: 'approved' | 'rejected') => {
+    setLoadoutDecisions(prev => {
+      const next = new Map(prev)
+      const current = next.get(index)
+      if (current === value) next.delete(index)
+      else next.set(index, value)
+      return next
+    })
+  }
+
+  const allLoadoutDecided = loadoutData != null && loadoutData.options.length > 0 && loadoutDecisions.size === loadoutData.options.length
+
+  const saveLoadout = async () => {
+    if (!loadoutData || !allLoadoutDecided) return
+    setSavingLoadout(true)
+    try {
+      const approvedOptions = loadoutData.options.filter((_, i) => loadoutDecisions.get(i) === 'approved')
+      const confirmed: StructuredLoadoutData = {
+        tag: 'CONFIRMED',
+        options: approvedOptions,
+      }
+      await putLoadoutData(resolvedLoadoutFaction, unitSlug, confirmed)
+      setLoadoutData(confirmed)
+      const decisions = new Map<number, 'approved' | 'rejected'>()
+      confirmed.options.forEach((_, i) => decisions.set(i, 'approved'))
+      setLoadoutDecisions(decisions)
+    } finally {
+      setSavingLoadout(false)
     }
   }
 
@@ -642,6 +692,17 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
         </ul>
       </section>
 
+      {loadoutData && loadoutData.options.length > 0 && (
+        <LoadoutSection
+          loadoutData={loadoutData}
+          decisions={loadoutDecisions}
+          onDecide={setLoadoutDecision}
+          onSave={saveLoadout}
+          saving={savingLoadout}
+          allDecided={allLoadoutDecided}
+        />
+      )}
+
       {validationError && (
         <div className="board-alert">{validationError}</div>
       )}
@@ -649,6 +710,82 @@ export function ProcessUnitView({ faction, unitSlug, onBack, onSaved }: ProcessU
         <button type="button" onClick={onBack}>Cancelar</button>
         <button type="button" className="confirm-btn" disabled={saving} onClick={save}>
           {saving ? 'Guardando…' : 'Guardar y confirmar'}
+        </button>
+      </div>
+    </section>
+  )
+}
+
+function formatScope(option: WargearOption): string {
+  const { scope } = option
+  if (scope.role) return scope.role
+  switch (scope.type) {
+    case 'model': return 'Modelo'
+    case 'allModels': return 'Todos los modelos'
+    case 'anyNumber': return 'Cualquier número'
+    case 'ratio': return `${scope.ratio?.count ?? 1} por cada ${scope.ratio?.per ?? 5} modelos`
+  }
+}
+
+function LoadoutSection({ loadoutData, decisions, onDecide, onSave, saving, allDecided }: {
+  loadoutData: StructuredLoadoutData
+  decisions: Map<number, 'approved' | 'rejected'>
+  onDecide: (index: number, value: 'approved' | 'rejected') => void
+  onSave: () => void
+  saving: boolean
+  allDecided: boolean
+}) {
+  return (
+    <section className="reviewed-section" style={{ marginTop: '2rem' }}>
+      <h2>Opciones de Loadout <span className={`status-light is-${loadoutData.tag === 'CONFIRMED' ? 'green' : 'red'}`} aria-hidden="true" /></h2>
+      <ul className="raw-abilities-list">
+        {loadoutData.options.map((option, index) => {
+          const decision = decisions.get(index)
+          return (
+            <li key={index} className={`raw-ability-card ${decision === 'approved' ? 'is-approved' : decision === 'rejected' ? 'is-rejected' : ''}`}>
+              <div className="raw-ability-text" style={{ whiteSpace: 'pre-wrap', fontStyle: 'italic', marginBottom: '0.5rem', opacity: 0.8 }}>
+                {option.originalText}
+              </div>
+              <div style={{ fontSize: '0.85rem', display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                <div><strong>Alcance:</strong> {formatScope(option)}</div>
+                {option.isAdditional ? (
+                  <div><strong>Equipar adicional</strong></div>
+                ) : option.replaces.length > 0 && (
+                  <div><strong>Reemplaza:</strong> {option.replaces.map(r => r.name).join(', ')}</div>
+                )}
+                <div><strong>Opciones:</strong></div>
+                <ul style={{ margin: 0, paddingLeft: '1.2rem' }}>
+                  {option.choices.map((choice, ci) => (
+                    <li key={ci}>
+                      {choice.items.map(it => `${it.count}× ${it.name}`).join(' + ')}
+                      {choice.locks && choice.locks.length > 0 && ' 🔒'}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="raw-ability-actions" style={{ marginTop: '0.5rem' }}>
+                <button
+                  type="button"
+                  className={decision === 'approved' ? 'confirm-btn' : undefined}
+                  onClick={() => onDecide(index, 'approved')}
+                >
+                  {decision === 'approved' ? '✓ Aprobada' : 'Aprobar'}
+                </button>
+                <button
+                  type="button"
+                  style={decision === 'rejected' ? { background: 'var(--rust)', color: 'var(--on-accent)', borderColor: 'var(--rust)' } : undefined}
+                  onClick={() => onDecide(index, 'rejected')}
+                >
+                  {decision === 'rejected' ? '✗ Rechazada' : 'Rechazar'}
+                </button>
+              </div>
+            </li>
+          )
+        })}
+      </ul>
+      <div className="modal-actions">
+        <button type="button" className="confirm-btn" disabled={saving || !allDecided} onClick={onSave}>
+          {saving ? 'Guardando…' : 'Guardar Loadout'}
         </button>
       </div>
     </section>

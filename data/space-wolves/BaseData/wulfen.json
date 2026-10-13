@@ -1,0 +1,264 @@
+{
+  "id": 47634,
+  "slug": "wulfen",
+  "name": "Wulfen",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "• 5-10 Wulfen models\n\nEvery model is equipped with: Death Totem; 1 Wulfen Weapons.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Savage Frenzy",
+      "rules": "When an enemy unit <b>engaged</b> with your unit (excluding <k>Monster/Vehicle</k> units) makes a <b>fall-back move</b> that enemy unit must use the <b>desperate escape mode</b>. If that enemy unit is <b>battle-shocked</b>, -1 from those <b>hazard rolls</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Curse of the Wulfen",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": 3,
+  "pointsStepPoints": 15,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1892,
+    "slug": "space-wolves",
+    "name": "Space Wolves",
+    "commonName": "Space Wolves"
+  },
+  "miniatures": [
+    {
+      "id": 62038,
+      "name": "Wulfen",
+      "stats": {
+        "save": "4+",
+        "wounds": "2",
+        "movement": "9\"",
+        "toughness": "6",
+        "leadership": "7+",
+        "objectiveControl": "0"
+      },
+      "keywords": [
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51746,
+          "name": "Wulfen"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106372,
+            "name": "Death Totem",
+            "wargearType": "wargear",
+            "ruleText": "This unit's melee attacks can re-roll <b>hit rolls</b> of 1.",
+            "profiles": []
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 104878,
+            "name": "Wulfen Weapons",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110681,
+                "name": "Wulfen Weapons",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3450,
+                    "name": "SUSTAINED HITS 1",
+                    "rules": "This ability always takes the form <b>[SUSTAINED HITS X]</b>. Each time an attack made with a <b>[SUSTAINED HITS]</b> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <b>[SUSTAINED HITS 2]</b> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <b>[SUSTAINED HITS 2]</b> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 106372,
+            "name": "Death Totem",
+            "wargearType": "wargear",
+            "ruleText": "This unit's melee attacks can re-roll <b>hit rolls</b> of 1.",
+            "profiles": []
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107341,
+            "name": "Stormfrag Auto-launcher",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113383,
+                "name": "Stormfrag Auto-launcher",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "2",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3443,
+                    "name": "BLAST 1",
+                    "rules": "Each time you gather <b>attack dice</b> for a <b>[BLAST]</b> weapon, add one additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\nIf this ability takes the form <b>[BLAST X]</b>, each time you gather <b>attack dice</b> for such a weapon, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n\n<b>Example:</b> <i>If a <b>[BLAST 2]</b> weapon with an <b>A</b> characteristic of 3 targets a unit containing 12 models, you would gather four additional <b>attack dice</b> for that weapon (for a total of seven for that weapon).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 104878,
+            "name": "Wulfen Weapons",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110681,
+                "name": "Wulfen Weapons",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3450,
+                    "name": "SUSTAINED HITS 1",
+                    "rules": "This ability always takes the form <b>[SUSTAINED HITS X]</b>. Each time an attack made with a <b>[SUSTAINED HITS]</b> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <b>[SUSTAINED HITS 2]</b> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <b>[SUSTAINED HITS 2]</b> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": -86315,
+      "rulesText": "Any number of models can each have their death totem replaced with 1 stormfrag auto‑launcher.",
+      "displayOrder": 1427
+    }
+  ],
+  "compositions": [
+    {
+      "id": 61737,
+      "points": 90,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 5,
+      "miniatures": [
+        {
+          "miniatureId": 62038,
+          "miniatureName": "Wulfen",
+          "min": 5,
+          "max": 5
+        }
+      ]
+    },
+    {
+      "id": 62221,
+      "points": 180,
+      "displayOrder": 1,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 10,
+      "miniatures": [
+        {
+          "miniatureId": 62038,
+          "miniatureName": "Wulfen",
+          "min": 10,
+          "max": 10
+        }
+      ]
+    }
+  ]
+}

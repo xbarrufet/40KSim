@@ -1,0 +1,486 @@
+{
+  "id": 46991,
+  "slug": "iron-father-feirros",
+  "name": "Iron Father Feirros",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "<ul><li>1 Iron Father Feirros model</li></ul>\rThis model is equipped with: 1 Bolt Pistol; 1 Gorgon’s Wrath; 1 Harrowhand; 1 Medusan Manipuli.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Transhuman Strategist",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "The hardiest warriors refuse to be laid low, even by wounds that should by all rights prove lethal.",
+      "name": "Feel No Pain 5+",
+      "rules": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Master of the Forge",
+      "rules": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly <k>Adeptus Astartes Vehicle</k> model within 3\" of this model: \r<ul><li>That <k>Vehicle</k> model <b>heals</b> 3 wounds.</li>\r<li>That <k>Vehicle</k> model’s attacks can ignore modifiers to the following until the start of your next Movement phase:</li>\r<ul><li><b>BS</b>.</li>\r<li><b>Hit rolls</b> and <b>wound rolls</b>.</li></ul></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Rites of Tempering",
+      "rules": "Attacks that target this unit with a <b>S</b> greater than this unit’s <b>T</b> have -1 to <b>wound rolls</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Mighty heroes fight at the forefront of battle.",
+      "name": "Leader",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Iron Father",
+      "rules": "While this model is within 3\" of a friendly <k>ADEPTUS ASTARTES VEHICLE</k> unit, this model has <b>Lone Operative</b>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Leader",
+      "rules": "This model can be attached to the following units:\n\n■ **AGGRESSOR SQUAD**\n■ **ERADICATOR SQUAD WITH HEAVY BOLTERS**\n■ **ERADICATOR SQUAD WITH MELTA RIFLES**\n■ **HEAVY INTERCESSOR SQUAD**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46815,
+        "name": "Heavy Intercessor Squad",
+        "slug": "heavy-intercessor-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47699,
+        "name": "Aggressor Squad",
+        "slug": "aggressor-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47309,
+        "name": "Eradicator Squad with heavy bolters",
+        "slug": "eradicator-squad-with-heavy-bolters",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46809,
+        "name": "Eradicator Squad with melta rifles",
+        "slug": "eradicator-squad-with-melta-rifles",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1877,
+    "slug": "iron-hands",
+    "name": "Iron Hands",
+    "commonName": "Iron Hands"
+  },
+  "miniatures": [
+    {
+      "id": 62369,
+      "name": "Iron Father Feirros",
+      "stats": {
+        "save": "2+",
+        "wounds": "6",
+        "movement": "5\"",
+        "toughness": "6",
+        "leadership": "6+",
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50746,
+          "name": "Epic Hero"
+        },
+        {
+          "id": 50797,
+          "name": "Gravis"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 104790,
+            "name": "Gorgon’s Wrath",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110611,
+                "name": "Gorgon’s Wrath",
+                "type": "ranged",
+                "range": "36\"",
+                "attacks": "3",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3390,
+                    "name": "RAPID FIRE 2",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  },
+                  {
+                    "id": 3391,
+                    "name": "SUSTAINED HITS 2",
+                    "rules": "This ability always takes the form <b>[SUSTAINED HITS X]</b>. Each time an attack made with a <b>[SUSTAINED HITS]</b> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <b>[SUSTAINED HITS 2]</b> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <b>[SUSTAINED HITS 2]</b> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106297,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112269,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 104972,
+            "name": "Harrowhand",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110779,
+                "name": "Harrowhand",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107895,
+            "name": "Medusan Manipuli",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113940,
+                "name": "Medusan Manipuli",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "2",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3482,
+                    "name": "EXTRA ATTACKS",
+                    "rules": "Each time a unit containing one or more models with an <b>[EXTRA ATTACKS]</b> weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:\n<ul><li>All of that model’s <b>[EXTRA ATTACKS]</b> weapons.</li><li>One of that model’s other melee weapons, if possible.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 106297,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112269,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 104790,
+            "name": "Gorgon’s Wrath",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110611,
+                "name": "Gorgon’s Wrath",
+                "type": "ranged",
+                "range": "36\"",
+                "attacks": "3",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3390,
+                    "name": "RAPID FIRE 2",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  },
+                  {
+                    "id": 3391,
+                    "name": "SUSTAINED HITS 2",
+                    "rules": "This ability always takes the form <b>[SUSTAINED HITS X]</b>. Each time an attack made with a <b>[SUSTAINED HITS]</b> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <b>[SUSTAINED HITS 2]</b> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <b>[SUSTAINED HITS 2]</b> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 104972,
+            "name": "Harrowhand",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110779,
+                "name": "Harrowhand",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107895,
+            "name": "Medusan Manipuli",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113940,
+                "name": "Medusan Manipuli",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "2",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3482,
+                    "name": "EXTRA ATTACKS",
+                    "rules": "Each time a unit containing one or more models with an <b>[EXTRA ATTACKS]</b> weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:\n<ul><li>All of that model’s <b>[EXTRA ATTACKS]</b> weapons.</li><li>One of that model’s other melee weapons, if possible.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 61780,
+      "points": 85,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 62369,
+          "miniatureName": "Iron Father Feirros",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

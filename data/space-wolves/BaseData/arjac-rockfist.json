@@ -1,0 +1,326 @@
+{
+  "id": 47368,
+  "slug": "arjac-rockfist",
+  "name": "Arjac Rockfist",
+  "baseSize": "50mm",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Arjac Rockfist model\n\nThis model is equipped with: 1 Foehammer.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "There are many ways by which to deploy troops to the field of battle including tunnels, teleportation devices and other esoteric means of transportation.",
+      "name": "Deep Strike",
+      "rules": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Anvil of Endurance",
+      "rules": "In the Fight phase, when a model in this unit is <b>destroyed</b>, if this unit has not been <b>selected to fight</b> this phase, roll one D6:<ul><li>On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is then removed from the battlefield.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Mighty heroes fight at the forefront of battle.",
+      "name": "Leader",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Champion of the Kingsguard",
+      "rules": "This model’s attacks that target a <k>Character</k> unit: <ul><li>Can re-roll <b>hit rolls</b> of 1.</li><li>Can re-roll <b>wound rolls</b> of 1.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Leader",
+      "rules": "This model can be attached to the following units:\n\n■ **TERMINATOR ASSAULT SQUAD**\n■ **TERMINATOR SQUAD**\n■ **WOLF GUARD TERMINATORS**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47117,
+        "name": "Terminator Squad",
+        "slug": "terminator-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47145,
+        "name": "Wolf Guard Terminators",
+        "slug": "wolf-guard-terminators",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47688,
+        "name": "Terminator Assault Squad",
+        "slug": "terminator-assault-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1892,
+    "slug": "space-wolves",
+    "name": "Space Wolves",
+    "commonName": "Space Wolves"
+  },
+  "miniatures": [
+    {
+      "id": 61881,
+      "name": "Arjac Rockfist",
+      "stats": {
+        "save": "2+",
+        "wounds": "6",
+        "movement": "6\"",
+        "toughness": "6",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50746,
+          "name": "Epic Hero"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51550,
+          "name": "Terminator"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108747,
+            "name": "Foehammer",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114885,
+                "name": "Foehammer",
+                "type": "ranged",
+                "range": "9\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3376,
+                    "name": "ANTI-MONSTER/VEHICLE 3+",
+                    "rules": "This ability always takes the form <b>[ANTI‑X Y+]</b>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <b>[ANTI‑VEHICLE 4+]</b> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <b>[ANTI‑PSYKER 2+]</b>  weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  },
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  }
+                ]
+              },
+              {
+                "id": 113719,
+                "name": "Foehammer",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3376,
+                    "name": "ANTI-MONSTER/VEHICLE 3+",
+                    "rules": "This ability always takes the form <b>[ANTI‑X Y+]</b>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <b>[ANTI‑VEHICLE 4+]</b> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <b>[ANTI‑PSYKER 2+]</b>  weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  },
+                  {
+                    "id": 3489,
+                    "name": "PRECISION",
+                    "rules": "While resolving attacks made with one or more <b>[PRECISION]</b> weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more <b>CHARACTER</b> models <b>visible</b> to one or more of the attacking models, the active player can select one allocation group that contains one of those <b>visible</b> <k>CHARACTER</k> models. If they do, until those attacks are resolved, or until that <k>CHARACTER</k> group is destroyed (whichever happens first), that <k>CHARACTER</k> group is the current allocation group."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 108747,
+            "name": "Foehammer",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114885,
+                "name": "Foehammer",
+                "type": "ranged",
+                "range": "9\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3376,
+                    "name": "ANTI-MONSTER/VEHICLE 3+",
+                    "rules": "This ability always takes the form <b>[ANTI‑X Y+]</b>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <b>[ANTI‑VEHICLE 4+]</b> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <b>[ANTI‑PSYKER 2+]</b>  weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  },
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  }
+                ]
+              },
+              {
+                "id": 113719,
+                "name": "Foehammer",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3376,
+                    "name": "ANTI-MONSTER/VEHICLE 3+",
+                    "rules": "This ability always takes the form <b>[ANTI‑X Y+]</b>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <b>[ANTI‑VEHICLE 4+]</b> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <b>[ANTI‑PSYKER 2+]</b>  weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  },
+                  {
+                    "id": 3489,
+                    "name": "PRECISION",
+                    "rules": "While resolving attacks made with one or more <b>[PRECISION]</b> weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more <b>CHARACTER</b> models <b>visible</b> to one or more of the attacking models, the active player can select one allocation group that contains one of those <b>visible</b> <k>CHARACTER</k> models. If they do, until those attacks are resolved, or until that <k>CHARACTER</k> group is destroyed (whichever happens first), that <k>CHARACTER</k> group is the current allocation group."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 61556,
+      "points": 105,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61881,
+          "miniatureName": "Arjac Rockfist",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

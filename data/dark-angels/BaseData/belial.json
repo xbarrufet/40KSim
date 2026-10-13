@@ -1,0 +1,339 @@
+{
+  "id": 46823,
+  "slug": "belial",
+  "name": "Belial",
+  "baseSize": "50mm",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Belial model\n\nThis model is equipped with: 1 Master-crafted Storm Bolter; 1 The Sword of Silence.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "There are many ways by which to deploy troops to the field of battle including tunnels, teleportation devices and other esoteric means of transportation.",
+      "name": "Deep Strike",
+      "rules": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Grand Master of the Deathwing",
+      "rules": "This unit's attacks that target an enemy <k>Character</k> unit have +1 to <b>wound rolls</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Mighty heroes fight at the forefront of battle.",
+      "name": "Leader",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Transhuman Strategist",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Strikes of Retribution",
+      "rules": "In the fight phase, when this model is <b>destroyed</b>, if this unit has not been <b>selected to fight</b> this phase, roll one D6:\n<ul><li>On a 2+, do not remove this model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Leader",
+      "rules": "This model can be attached to the following units:\n\n■ **DEATHWING COMMAND SQUAD**\n■ **DEATHWING KNIGHTS**\n■ **DEATHWING TERMINATOR SQUAD**\n■ **TERMINATOR SQUAD**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47690,
+        "name": "Deathwing Knights",
+        "slug": "deathwing-knights",
+        "factionSlug": "dark-angels"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47258,
+        "name": "Deathwing Terminator Squad",
+        "slug": "deathwing-terminator-squad",
+        "factionSlug": "dark-angels"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47117,
+        "name": "Terminator Squad",
+        "slug": "terminator-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1897,
+    "slug": "dark-angels",
+    "name": "Dark Angels",
+    "commonName": "Dark Angels"
+  },
+  "miniatures": [
+    {
+      "id": 61986,
+      "name": "Belial",
+      "stats": {
+        "save": "2+",
+        "wounds": "6",
+        "movement": "5\"",
+        "toughness": "6",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51106,
+          "name": "Captain"
+        },
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 51617,
+          "name": "Deathwing"
+        },
+        {
+          "id": 50746,
+          "name": "Epic Hero"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51550,
+          "name": "Terminator"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105986,
+            "name": "The Sword of Silence",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111910,
+                "name": "The Sword of Silence",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108491,
+            "name": "Master-crafted Storm Bolter",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114611,
+                "name": "Master-crafted Storm Bolter",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "2",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3489,
+                    "name": "PRECISION",
+                    "rules": "While resolving attacks made with one or more <b>[PRECISION]</b> weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more <b>CHARACTER</b> models <b>visible</b> to one or more of the attacking models, the active player can select one allocation group that contains one of those <b>visible</b> <k>CHARACTER</k> models. If they do, until those attacks are resolved, or until that <k>CHARACTER</k> group is destroyed (whichever happens first), that <k>CHARACTER</k> group is the current allocation group."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 108491,
+            "name": "Master-crafted Storm Bolter",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114611,
+                "name": "Master-crafted Storm Bolter",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "2",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3489,
+                    "name": "PRECISION",
+                    "rules": "While resolving attacks made with one or more <b>[PRECISION]</b> weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more <b>CHARACTER</b> models <b>visible</b> to one or more of the attacking models, the active player can select one allocation group that contains one of those <b>visible</b> <k>CHARACTER</k> models. If they do, until those attacks are resolved, or until that <k>CHARACTER</k> group is destroyed (whichever happens first), that <k>CHARACTER</k> group is the current allocation group."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105986,
+            "name": "The Sword of Silence",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111910,
+                "name": "The Sword of Silence",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 61431,
+      "points": 100,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61986,
+          "miniatureName": "Belial",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

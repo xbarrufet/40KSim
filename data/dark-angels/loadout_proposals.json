@@ -1,0 +1,341 @@
+{
+  "dark-angels/deathwing-knights": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Watcher in the Dark",
+                "wargearItemId": 107531
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41379,
+        "originalText": "This unit can be equipped with 1 Watcher in the Dark"
+      },
+      {
+        "scope": {
+          "type": "allModels"
+        },
+        "replaces": [
+          {
+            "name": "Mace of Absolution",
+            "wargearItemId": 108176
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 106801
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41727,
+        "originalText": "All Deathwing Knight models in this unit can each have their Mace of Absolution replaced with 1 Power Weapon."
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Knight Master"
+        },
+        "replaces": [],
+        "choices": [],
+        "isAdditional": false,
+        "originalRuleId": 41902,
+        "originalText": "The Knight Master can have their Great Weapon of the Unforgiven replaced with 1 Relic Weapon."
+      }
+    ]
+  },
+  "dark-angels/deathwing-terminator-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Power Fist",
+            "wargearItemId": 107528
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Chainfist",
+                "wargearItemId": 108110
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41066,
+        "originalText": "Any number of Deathwing Terminator models can each have their Power Fist replaced with 1 Chainfist."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 105923
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Assault Cannon",
+                "wargearItemId": 106359
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Heavy Flamer",
+                "wargearItemId": 106323
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Cannon",
+                "wargearItemId": 104911
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Bolter",
+                "wargearItemId": 105923
+              },
+              {
+                "count": 1,
+                "name": "Cyclone Missile Launcher",
+                "wargearItemId": 107251
+              }
+            ],
+            "locks": [
+              105923
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41235,
+        "originalText": "For every 5 models in this unit, 1 Deathwing Terminator model can have their Storm Bolter replaced with one of the following: 1 Assault Cannon, 1 Heavy Flamer, 1 Plasma Cannon, 1 Storm Bolter and 1 Cyclone Missile Launcher (that model’s Storm Bolter cannot be replaced)"
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Deathwing Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Power Fist",
+            "wargearItemId": 107528
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Chainfist",
+                "wargearItemId": 108110
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41789,
+        "originalText": "The Deathwing Sergeant can have their Power Fist replaced with one of the following: 1 Chainfist, 1 Power Weapon"
+      }
+    ]
+  },
+  "dark-angels/land-speeder-vengeance": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolter",
+            "wargearItemId": 107465
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Assault Cannon",
+                "wargearItemId": 106698
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41508,
+        "originalText": "This model's Heavy Bolter can be replaced with 1 Assault Cannon."
+      }
+    ]
+  },
+  "dark-angels/nephilim-jetfighter": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Twin Heavy Bolter",
+            "wargearItemId": 108693
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Nephilim Lascannons",
+                "wargearItemId": 107061
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42285,
+        "originalText": "This model's Twin Heavy Bolter can be replaced with 1 Nephilim Lascannons."
+      }
+    ]
+  },
+  "dark-angels/ravenwing-black-knights": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 3,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Plasma Talon",
+            "wargearItemId": 108636
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Grenade Launcher",
+                "wargearItemId": 105225
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41638,
+        "originalText": "For every 3 models in this unit, 1 model can have their Plasma Talon replaced with 1 Grenade Launcher."
+      }
+    ]
+  },
+  "dark-angels/ravenwing-command-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 3,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Plasma Talon",
+            "wargearItemId": 105960
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Grenade Launcher",
+                "wargearItemId": 107424
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41141,
+        "originalText": "For every 3 models in this unit, 1 model can have their Plasma Talon replaced with 1 Grenade Launcher."
+      }
+    ]
+  },
+  "dark-angels/ravenwing-darkshroud": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolter",
+            "wargearItemId": 104902
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Assault Cannon",
+                "wargearItemId": 107001
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42374,
+        "originalText": "This model's Heavy Bolter can be replaced with 1 Assault Cannon."
+      }
+    ]
+  }
+}

@@ -1,0 +1,1147 @@
+{
+  "id": 47009,
+  "slug": "ravenwing-command-squad",
+  "name": "Ravenwing Command Squad",
+  "baseSize": "75x42mm Oval Base",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Ravenwing Ancient model\n• 1 Ravenwing Apothecary model\n• 1 Ravenwing Champion model\n\nThe Ravenwing Ancient is equipped with: 1 Bolt Pistol; 1 Corvus Hammers; 1 Plasma Talon.\nThe Ravenwing Apothecary is equipped with: 1 Bolt Pistol; 1 Corvus Hammers; 1 Plasma Talon.\nThe Ravenwing Champion is equipped with: 1 Bolt Pistol; 1 Master-crafted Power Weapon; 1 Plasma Talon.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "Specialist combatants may be assigned to front-line squads to bolster their fighting effectiveness.",
+      "name": "Support",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it. \n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19).",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Narthecium",
+      "rules": "While this unit contains a <k>Ravenwing Apothecary</k>, in your Command phase, this unit <b>heals</b> D3+1 wounds.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Astartes Banner",
+      "rules": "While this unit contains a <k>Ravenwing Ancient</k>, this unit has +1 <b>OC</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Honour or Death",
+      "rules": "While this unit contains a <k>Ravenwing Champion</k>:<ul><li>This unit has +1 to <b>advance rolls</b> and <b>charge rolls</b>.</li><li>When you target this unit with the <b>Heroic Intervention stratagem</b>, that use is -1CP.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Support",
+      "rules": "This model can be attached to the following units:\n\n■ **OUTRIDER SQUAD**\n■ **RAVENWING BLACK KNIGHTS**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": 3,
+  "pointsStepPoints": 20,
+  "leads": [
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47564,
+        "name": "Outrider Squad",
+        "slug": "outrider-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47621,
+        "name": "Ravenwing Black Knights",
+        "slug": "ravenwing-black-knights",
+        "factionSlug": "dark-angels"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1897,
+    "slug": "dark-angels",
+    "name": "Dark Angels",
+    "commonName": "Dark Angels"
+  },
+  "miniatures": [
+    {
+      "id": 61614,
+      "name": "Ravenwing Ancient",
+      "stats": {
+        "save": "3+",
+        "wounds": "4",
+        "movement": "12\"",
+        "toughness": "6",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "5+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "2"
+      },
+      "keywords": [
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51563,
+          "name": "Mounted"
+        },
+        {
+          "id": 51454,
+          "name": "Ravenwing"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106273,
+            "name": "Corvus Hammers",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112241,
+                "name": "Corvus Hammers",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3494,
+                    "name": "DEVASTATING WOUNDS",
+                    "rules": "Each time an attack made with a <b>[DEVASTATING WOUNDS]</b> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <b>[DEVASTATING WOUNDS]</b> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <b>[DEVASTATING WOUNDS]</b> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105960,
+            "name": "Plasma Talon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111870,
+                "name": "Standard",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              },
+              {
+                "id": 112199,
+                "name": "Supercharge",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3348,
+                    "name": "HAZARDOUS",
+                    "rules": "Each time a unit is <b>selected to shoot</b> or <b>selected to fight</b>, after that unit has resolved all of its attacks, make a number of <b>hazard rolls</b> (06.03) for that unit equal to the number of <b>[HAZARDOUS]</b> weapons you selected in the Select Weapons step."
+                  },
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105399,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111249,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 105399,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111249,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106273,
+            "name": "Corvus Hammers",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112241,
+                "name": "Corvus Hammers",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3494,
+                    "name": "DEVASTATING WOUNDS",
+                    "rules": "Each time an attack made with a <b>[DEVASTATING WOUNDS]</b> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <b>[DEVASTATING WOUNDS]</b> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <b>[DEVASTATING WOUNDS]</b> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107424,
+            "name": "Grenade Launcher",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113465,
+                "name": "Frag",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "4",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3443,
+                    "name": "BLAST 1",
+                    "rules": "Each time you gather <b>attack dice</b> for a <b>[BLAST]</b> weapon, add one additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\nIf this ability takes the form <b>[BLAST X]</b>, each time you gather <b>attack dice</b> for such a weapon, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n\n<b>Example:</b> <i>If a <b>[BLAST 2]</b> weapon with an <b>A</b> characteristic of 3 targets a unit containing 12 models, you would gather four additional <b>attack dice</b> for that weapon (for a total of seven for that weapon).</i>"
+                  }
+                ]
+              },
+              {
+                "id": 114580,
+                "name": "Krak",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105960,
+            "name": "Plasma Talon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111870,
+                "name": "Standard",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              },
+              {
+                "id": 112199,
+                "name": "Supercharge",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3348,
+                    "name": "HAZARDOUS",
+                    "rules": "Each time a unit is <b>selected to shoot</b> or <b>selected to fight</b>, after that unit has resolved all of its attacks, make a number of <b>hazard rolls</b> (06.03) for that unit equal to the number of <b>[HAZARDOUS]</b> weapons you selected in the Select Weapons step."
+                  },
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    },
+    {
+      "id": 62131,
+      "name": "Ravenwing Apothecary",
+      "stats": {
+        "save": "3+",
+        "wounds": "4",
+        "movement": "12\"",
+        "toughness": "6",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "5+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "2"
+      },
+      "keywords": [
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51563,
+          "name": "Mounted"
+        },
+        {
+          "id": 51454,
+          "name": "Ravenwing"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106273,
+            "name": "Corvus Hammers",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112241,
+                "name": "Corvus Hammers",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3494,
+                    "name": "DEVASTATING WOUNDS",
+                    "rules": "Each time an attack made with a <b>[DEVASTATING WOUNDS]</b> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <b>[DEVASTATING WOUNDS]</b> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <b>[DEVASTATING WOUNDS]</b> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105960,
+            "name": "Plasma Talon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111870,
+                "name": "Standard",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              },
+              {
+                "id": 112199,
+                "name": "Supercharge",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3348,
+                    "name": "HAZARDOUS",
+                    "rules": "Each time a unit is <b>selected to shoot</b> or <b>selected to fight</b>, after that unit has resolved all of its attacks, make a number of <b>hazard rolls</b> (06.03) for that unit equal to the number of <b>[HAZARDOUS]</b> weapons you selected in the Select Weapons step."
+                  },
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105399,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111249,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 105399,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111249,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106273,
+            "name": "Corvus Hammers",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112241,
+                "name": "Corvus Hammers",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3494,
+                    "name": "DEVASTATING WOUNDS",
+                    "rules": "Each time an attack made with a <b>[DEVASTATING WOUNDS]</b> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <b>[DEVASTATING WOUNDS]</b> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <b>[DEVASTATING WOUNDS]</b> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107424,
+            "name": "Grenade Launcher",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113465,
+                "name": "Frag",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "4",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3443,
+                    "name": "BLAST 1",
+                    "rules": "Each time you gather <b>attack dice</b> for a <b>[BLAST]</b> weapon, add one additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\nIf this ability takes the form <b>[BLAST X]</b>, each time you gather <b>attack dice</b> for such a weapon, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n\n<b>Example:</b> <i>If a <b>[BLAST 2]</b> weapon with an <b>A</b> characteristic of 3 targets a unit containing 12 models, you would gather four additional <b>attack dice</b> for that weapon (for a total of seven for that weapon).</i>"
+                  }
+                ]
+              },
+              {
+                "id": 114580,
+                "name": "Krak",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105960,
+            "name": "Plasma Talon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111870,
+                "name": "Standard",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              },
+              {
+                "id": 112199,
+                "name": "Supercharge",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3348,
+                    "name": "HAZARDOUS",
+                    "rules": "Each time a unit is <b>selected to shoot</b> or <b>selected to fight</b>, after that unit has resolved all of its attacks, make a number of <b>hazard rolls</b> (06.03) for that unit equal to the number of <b>[HAZARDOUS]</b> weapons you selected in the Select Weapons step."
+                  },
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    },
+    {
+      "id": 62467,
+      "name": "Ravenwing Champion",
+      "stats": {
+        "save": "3+",
+        "wounds": "4",
+        "movement": "12\"",
+        "toughness": "6",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "5+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "2"
+      },
+      "keywords": [
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51563,
+          "name": "Mounted"
+        },
+        {
+          "id": 51454,
+          "name": "Ravenwing"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105122,
+            "name": "Master-crafted Power Weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110936,
+                "name": "Master-crafted Power Weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105399,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111249,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105960,
+            "name": "Plasma Talon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111870,
+                "name": "Standard",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              },
+              {
+                "id": 112199,
+                "name": "Supercharge",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3348,
+                    "name": "HAZARDOUS",
+                    "rules": "Each time a unit is <b>selected to shoot</b> or <b>selected to fight</b>, after that unit has resolved all of its attacks, make a number of <b>hazard rolls</b> (06.03) for that unit equal to the number of <b>[HAZARDOUS]</b> weapons you selected in the Select Weapons step."
+                  },
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 105399,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111249,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107424,
+            "name": "Grenade Launcher",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113465,
+                "name": "Frag",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "4",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3443,
+                    "name": "BLAST 1",
+                    "rules": "Each time you gather <b>attack dice</b> for a <b>[BLAST]</b> weapon, add one additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\nIf this ability takes the form <b>[BLAST X]</b>, each time you gather <b>attack dice</b> for such a weapon, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n\n<b>Example:</b> <i>If a <b>[BLAST 2]</b> weapon with an <b>A</b> characteristic of 3 targets a unit containing 12 models, you would gather four additional <b>attack dice</b> for that weapon (for a total of seven for that weapon).</i>"
+                  }
+                ]
+              },
+              {
+                "id": 114580,
+                "name": "Krak",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105122,
+            "name": "Master-crafted Power Weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110936,
+                "name": "Master-crafted Power Weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105960,
+            "name": "Plasma Talon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111870,
+                "name": "Standard",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              },
+              {
+                "id": 112199,
+                "name": "Supercharge",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3348,
+                    "name": "HAZARDOUS",
+                    "rules": "Each time a unit is <b>selected to shoot</b> or <b>selected to fight</b>, after that unit has resolved all of its attacks, make a number of <b>hazard rolls</b> (06.03) for that unit equal to the number of <b>[HAZARDOUS]</b> weapons you selected in the Select Weapons step."
+                  },
+                  {
+                    "id": 3461,
+                    "name": "RAPID FIRE 1",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 41141,
+      "rulesText": "For every 3 models in this unit, 1 model can have their Plasma Talon replaced with 1 Grenade Launcher.",
+      "displayOrder": 0
+    }
+  ],
+  "compositions": [
+    {
+      "id": 61346,
+      "points": 115,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 3,
+      "miniatures": [
+        {
+          "miniatureId": 61614,
+          "miniatureName": "Ravenwing Ancient",
+          "min": 1,
+          "max": 1
+        },
+        {
+          "miniatureId": 62131,
+          "miniatureName": "Ravenwing Apothecary",
+          "min": 1,
+          "max": 1
+        },
+        {
+          "miniatureId": 62467,
+          "miniatureName": "Ravenwing Champion",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,507 @@
+{
+  "id": 47075,
+  "slug": "castellan",
+  "name": "Castellan",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Castellan model\n\nThis model is equipped with: 1 Combi-weapon; 1 Master-crafted Power Weapon.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Vehement Aggression",
+      "rules": "In the Fight phase, when this unit is <b>selected to fight</b>, you can use this ability. If you do, make a <b>leadership roll</b> for this unit:<ul><li>This unit's melee attacks can re-roll <b>hit rolls</b> of 1.</li><li><u>Or:</u> If that roll succeeds:<ul>This unit's melee attacks: <ul><li>Can re-roll <b>hit rolls</b> of 1.</li><li>Can re-roll <b>wound rolls</b> of 1.</li></ul></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Specialist combatants may be assigned to front-line squads to bolster their fighting effectiveness.",
+      "name": "Support",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it. \n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19).",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Support",
+      "rules": "This model can be attached to the following units:\n\n■ **ASSAULT INTERCESSOR SQUAD**\n■ **BLADEGUARD VETERAN SQUAD**\n■ **COMPANY HEROES**\n■ **CRUSADER SQUAD**\n■ **INFERNUS SQUAD**\n■ **INTERCESSOR SQUAD**\n■ **STERNGUARD VETERAN SQUAD**\n■ **SWORD BRETHREN SQUAD**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 46861,
+        "name": "Intercessor Squad",
+        "slug": "intercessor-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47730,
+        "name": "Company Heroes",
+        "slug": "company-heroes",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 46724,
+        "name": "Sword Brethren Squad",
+        "slug": "sword-brethren-squad",
+        "factionSlug": "black-templars"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 46938,
+        "name": "Assault Intercessor Squad",
+        "slug": "assault-intercessor-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 46687,
+        "name": "Bladeguard Veteran Squad",
+        "slug": "bladeguard-veteran-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47231,
+        "name": "Infernus Squad",
+        "slug": "infernus-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47191,
+        "name": "Crusader Squad",
+        "slug": "crusader-squad",
+        "factionSlug": "black-templars"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47702,
+        "name": "Sternguard Veteran Squad",
+        "slug": "sternguard-veteran-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1863,
+    "slug": "black-templars",
+    "name": "Black Templars",
+    "commonName": "Black Templars"
+  },
+  "miniatures": [
+    {
+      "id": 62147,
+      "name": "Castellan",
+      "stats": {
+        "save": "3+",
+        "wounds": "4",
+        "movement": "6\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 50756,
+          "name": "Lieutenant"
+        },
+        {
+          "id": 51004,
+          "name": "Tacticus"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 104740,
+            "name": "Master-crafted Power Weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110562,
+                "name": "Master-crafted Power Weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3351,
+                    "name": "LETHAL HITS",
+                    "rules": "Each time an attack made with a <b>[LETHAL HITS]</b> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <b>[DEVASTATING WOUNDS]</b>.</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108230,
+            "name": "Combi-weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114333,
+                "name": "Damnatus",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "9",
+                "armourPenetration": "-3",
+                "damage": "D3+2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3445,
+                    "name": "MELTA 2",
+                    "rules": "This ability always takes the form <b>[MELTA X]</b>. Each time a model makes an attack with a <b>[MELTA]</b> weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add <b>X</b> to that weapon’s <b>D</b> characteristic.\n\n<b>Example:</b> <i>A model targets a unit that is within half range of a <b>[MELTA 2]</b> weapon with a <b>D</b> characteristic of D6. While resolving those attacks, that weapon has a <b>D</b> characteristic of D6+2 </i>"
+                  }
+                ]
+              },
+              {
+                "id": 114773,
+                "name": "Infernus",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "3",
+                "ballisticSkill": "-",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3443,
+                    "name": "BLAST 1",
+                    "rules": "Each time you gather <b>attack dice</b> for a <b>[BLAST]</b> weapon, add one additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\nIf this ability takes the form <b>[BLAST X]</b>, each time you gather <b>attack dice</b> for such a weapon, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n\n<b>Example:</b> <i>If a <b>[BLAST 2]</b> weapon with an <b>A</b> characteristic of 3 targets a unit containing 12 models, you would gather four additional <b>attack dice</b> for that weapon (for a total of seven for that weapon).</i>"
+                  },
+                  {
+                    "id": 3364,
+                    "name": "TORRENT",
+                    "rules": "Each time an attack is made with a <b>[TORRENT]</b> weapon, that attack automatically hits the target."
+                  }
+                ]
+              },
+              {
+                "id": 111159,
+                "name": "Purgatus",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "2",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 107471,
+            "name": "Astartes chainsword",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114066,
+                "name": "Astartes chainsword",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "7",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "4",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3402,
+                    "name": "Sustained Hits 1",
+                    "rules": "This ability always takes the form <k>[SUSTAINED HITS X]</k>. Each time an attack made with a <k>[SUSTAINED HITS]</k> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <k>[SUSTAINED HITS 2]</k> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <k>[SUSTAINED HITS 2]</k> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 108230,
+            "name": "Combi-weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114333,
+                "name": "Damnatus",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "9",
+                "armourPenetration": "-3",
+                "damage": "D3+2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3445,
+                    "name": "MELTA 2",
+                    "rules": "This ability always takes the form <b>[MELTA X]</b>. Each time a model makes an attack with a <b>[MELTA]</b> weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add <b>X</b> to that weapon’s <b>D</b> characteristic.\n\n<b>Example:</b> <i>A model targets a unit that is within half range of a <b>[MELTA 2]</b> weapon with a <b>D</b> characteristic of D6. While resolving those attacks, that weapon has a <b>D</b> characteristic of D6+2 </i>"
+                  }
+                ]
+              },
+              {
+                "id": 114773,
+                "name": "Infernus",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "3",
+                "ballisticSkill": "-",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3443,
+                    "name": "BLAST 1",
+                    "rules": "Each time you gather <b>attack dice</b> for a <b>[BLAST]</b> weapon, add one additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\nIf this ability takes the form <b>[BLAST X]</b>, each time you gather <b>attack dice</b> for such a weapon, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n\n<b>Example:</b> <i>If a <b>[BLAST 2]</b> weapon with an <b>A</b> characteristic of 3 targets a unit containing 12 models, you would gather four additional <b>attack dice</b> for that weapon (for a total of seven for that weapon).</i>"
+                  },
+                  {
+                    "id": 3364,
+                    "name": "TORRENT",
+                    "rules": "Each time an attack is made with a <b>[TORRENT]</b> weapon, that attack automatically hits the target."
+                  }
+                ]
+              },
+              {
+                "id": 111159,
+                "name": "Purgatus",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "2",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105657,
+            "name": "Heavy bolt pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112344,
+                "name": "Heavy Bolt Pistol",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3375,
+                    "name": "Pistol",
+                    "rules": "Units containing one or more models with a <k>[CLOSE‑QUARTERS]</k> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <k>[CLOSE‑QUARTERS]</k> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 104740,
+            "name": "Master-crafted Power Weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110562,
+                "name": "Master-crafted Power Weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3351,
+                    "name": "LETHAL HITS",
+                    "rules": "Each time an attack made with a <b>[LETHAL HITS]</b> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <b>[DEVASTATING WOUNDS]</b>.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 41653,
+      "rulesText": "This model's Combi-weapon can be replaced with 1 Heavy Bolt Pistol.",
+      "displayOrder": 0
+    },
+    {
+      "id": 42009,
+      "rulesText": "This model's Master-crafted Power Weapon can be replaced with 1 Chainsword.",
+      "displayOrder": 1
+    }
+  ],
+  "compositions": [
+    {
+      "id": 62394,
+      "points": 75,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 62147,
+          "miniatureName": "Castellan",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

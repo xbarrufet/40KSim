@@ -1,0 +1,423 @@
+{
+  "id": 47115,
+  "slug": "wulfen-dreadnought",
+  "name": "Wulfen Dreadnought",
+  "baseSize": "60mm",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Wulfen Dreadnought model\n\nThis model is equipped with: 1 Fenrisian Great Axe; 1 Great Wolf Claw; 1 Storm Bolter.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "From detonating ammo stores to corrosive innards or frenzied death throes, some targets are deadly even in defeat.",
+      "name": "Deadly Demise 1",
+      "rules": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\").",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Curse of the Wulfen",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Bestial Rage",
+      "rules": "In your opponent's Shooting phase, when an enemy unit has shot, if this unit lost a wound as a result of those attacks, this unit can make a <b>surge move</b> of up to D6+1\".",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "The hardiest warriors refuse to be laid low, even by wounds that should by all rights prove lethal.",
+      "name": "Feel No Pain 6+",
+      "rules": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Violent Fury",
+      "rules": "If this model is equipped with two melee weapons, melee attacks made by this unit have <k>[TWIN-LINKED]</k>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": 3,
+  "pointsStepPoints": 10,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1892,
+    "slug": "space-wolves",
+    "name": "Space Wolves",
+    "commonName": "Space Wolves"
+  },
+  "miniatures": [
+    {
+      "id": 61933,
+      "name": "Wulfen Dreadnought",
+      "stats": {
+        "save": "2+",
+        "wounds": "8",
+        "movement": "9\"",
+        "toughness": "9",
+        "leadership": "6+",
+        "objectiveControl": "0"
+      },
+      "keywords": [
+        {
+          "id": 51131,
+          "name": "Dreadnought"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51775,
+          "name": "Vehicle"
+        },
+        {
+          "id": 51447,
+          "name": "Walker"
+        },
+        {
+          "id": 51746,
+          "name": "Wulfen"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105993,
+            "name": "Great Wolf Claw",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111916,
+                "name": "Great Wolf Claw",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "10",
+                "armourPenetration": "-3",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 104850,
+            "name": "Storm Bolter",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110661,
+                "name": "Storm Bolter",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3390,
+                    "name": "RAPID FIRE 2",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106100,
+            "name": "Fenrisian Great Axe",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112043,
+                "name": "Strike",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "D3+3",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              },
+              {
+                "id": 114733,
+                "name": "Sweep",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "12",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 108582,
+            "name": "Blizzard Shield",
+            "wargearType": "wargear",
+            "ruleText": "This model has 4+ <b>InSv</b>",
+            "profiles": []
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106100,
+            "name": "Fenrisian Great Axe",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112043,
+                "name": "Strike",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "D3+3",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              },
+              {
+                "id": 114733,
+                "name": "Sweep",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "12",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105993,
+            "name": "Great Wolf Claw",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111916,
+                "name": "Great Wolf Claw",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "10",
+                "armourPenetration": "-3",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 108374,
+            "name": "Heavy Flamer",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114478,
+                "name": "Heavy Flamer",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "3",
+                "ballisticSkill": "7+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3452,
+                    "name": "BLAST 2",
+                    "rules": "Each time you gather <b>attack dice</b> for a <b>[BLAST]</b> weapon, add one additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\nIf this ability takes the form <b>[BLAST X]</b>, each time you gather <b>attack dice</b> for such a weapon, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n\n<b>Example:</b> <i>If a <b>[BLAST 2]</b> weapon with an <b>A</b> characteristic of 3 targets a unit containing 12 models, you would gather four additional <b>attack dice</b> for that weapon (for a total of seven for that weapon).</i>"
+                  },
+                  {
+                    "id": 3364,
+                    "name": "TORRENT",
+                    "rules": "Each time an attack is made with a <b>[TORRENT]</b> weapon, that attack automatically hits the target."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 104850,
+            "name": "Storm Bolter",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110661,
+                "name": "Storm Bolter",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "2",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3390,
+                    "name": "RAPID FIRE 2",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 40983,
+      "rulesText": "This model's Storm Bolter can be replaced with 1 Heavy Flamer.",
+      "displayOrder": 0
+    },
+    {
+      "id": 42266,
+      "rulesText": "This model's Fenrisian Great Axe can be replaced with 1 Blizzard Shield.",
+      "displayOrder": 1
+    }
+  ],
+  "compositions": [
+    {
+      "id": 61366,
+      "points": 140,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61933,
+          "miniatureName": "Wulfen Dreadnought",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

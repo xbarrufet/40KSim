@@ -1,0 +1,379 @@
+{
+  "id": 47192,
+  "slug": "iron-priest",
+  "name": "Iron Priest",
+  "baseSize": "32mm",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Iron Priest model\n\nThis model is equipped with: 1 Helfrost Pistol; 1 Tempest Hammer and Servo-arm.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "Mighty heroes fight at the forefront of battle.",
+      "name": "Leader",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Gift of the Iron Wolf",
+      "rules": "In your Movement phase, at the start or end of this unit's move, select up to one friendly <k>Space Wolves Vehicle</k> model within 3\" of this model:<ul><li>That <k>Vehicle</k> model <b>heals</b> D3 wounds.</li><li>That <k>VEHICLE</k> model’s attacks can ignore modifiers to <b>hit rolls</b> and <b>wound rolls</b> until the start of your next Movement phase.</li></ul>You cannot select the same <k>VEHICLE</k> model for this ability more than once per phase.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Iron Priest",
+      "rules": "While this model is within 3\" of a friendly <k>Space Wolves Vehicle</k> unit, this model has <b>Lone Operative</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Judgement of the Omnissiah",
+      "rules": "This model's attacks that target an enemy unit <b>engaged</b> with a friendly <k>Space Wolves Vehicle</k> can re-roll <b>wound rolls</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Leader",
+      "rules": "This model can be attached to the following units:\n\n■ **ASSAULT INTERCESSOR SQUAD**\n■ **BLOOD CLAWS**\n■ **GREY HUNTERS**\n■ **INTERCESSOR SQUAD**\n■ **WOLF GUARD HEADTAKERS**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46861,
+        "name": "Intercessor Squad",
+        "slug": "intercessor-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47295,
+        "name": "Wolf Guard Headtakers",
+        "slug": "wolf-guard-headtakers",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47028,
+        "name": "Blood Claws",
+        "slug": "blood-claws",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46938,
+        "name": "Assault Intercessor Squad",
+        "slug": "assault-intercessor-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47608,
+        "name": "Grey Hunters",
+        "slug": "grey-hunters",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1892,
+    "slug": "space-wolves",
+    "name": "Space Wolves",
+    "commonName": "Space Wolves"
+  },
+  "miniatures": [
+    {
+      "id": 61325,
+      "name": "Iron Priest",
+      "stats": {
+        "save": "2+",
+        "wounds": "4",
+        "movement": "7\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51389,
+          "name": "Techmarine"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107840,
+            "name": "Tempest Hammer and Servo-arm",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113880,
+                "name": "Tempest Hammer and Servo-arm",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "8",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106517,
+            "name": "Helfrost Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112497,
+                "name": "Dispersed",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "3",
+                "ballisticSkill": "7+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  },
+                  {
+                    "id": 3364,
+                    "name": "TORRENT",
+                    "rules": "Each time an attack is made with a <b>[TORRENT]</b> weapon, that attack automatically hits the target."
+                  }
+                ]
+              },
+              {
+                "id": 114626,
+                "name": "Focused",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-3",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 106517,
+            "name": "Helfrost Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112497,
+                "name": "Dispersed",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "3",
+                "ballisticSkill": "7+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  },
+                  {
+                    "id": 3364,
+                    "name": "TORRENT",
+                    "rules": "Each time an attack is made with a <b>[TORRENT]</b> weapon, that attack automatically hits the target."
+                  }
+                ]
+              },
+              {
+                "id": 114626,
+                "name": "Focused",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-3",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107840,
+            "name": "Tempest Hammer and Servo-arm",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113880,
+                "name": "Tempest Hammer and Servo-arm",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "8",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 61729,
+      "points": 60,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61325,
+          "miniatureName": "Iron Priest",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

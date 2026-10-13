@@ -1,0 +1,329 @@
+{
+  "id": 47167,
+  "slug": "ravenwing-darkshroud",
+  "name": "Ravenwing Darkshroud",
+  "baseSize": "Large Flying Base",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Ravenwing Darkshroud model\n\nThis model is equipped with: 1 Armoured Hull; 1 Heavy Bolter.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Icon of Old Caliban",
+      "rules": "While a friendly <k>Dark Angels</k> unit is within 6\" of this unit, that unit has <b>Stealth</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "From detonating ammo stores to corrosive innards or frenzied death throes, some targets are deadly even in defeat.",
+      "name": "Deadly Demise D3",
+      "rules": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\").",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "There are many ways by which to deploy troops to the field of battle including tunnels, teleportation devices and other esoteric means of transportation.",
+      "name": "Deep Strike",
+      "rules": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Assassins and other covert agents are difficult to pinpoint in the storm of battle.",
+      "name": "Lone Operative 15\"",
+      "rules": "Unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within 12\" of this unit, and it cannot be targeted by <k>[INDIRECT FIRE]</k> weapons unless the attacking model is within 12\" of this unit.\n\nIf this ability takes the form <b>Lone Operative X\"</b>, unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within <b>X\"</b> of this unit, and it cannot be targeted by <k>[INDIRECT FIRE]</k> weapons unless the attacking model is within <b>X\"</b> of this unit.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1897,
+    "slug": "dark-angels",
+    "name": "Dark Angels",
+    "commonName": "Dark Angels"
+  },
+  "miniatures": [
+    {
+      "id": 61859,
+      "name": "Ravenwing Darkshroud",
+      "stats": {
+        "save": "3+",
+        "wounds": "10",
+        "movement": "14\"",
+        "toughness": "8",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "5+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "3"
+      },
+      "keywords": [
+        {
+          "id": 51013,
+          "name": "Fly"
+        },
+        {
+          "id": 51499,
+          "name": "Frame"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51454,
+          "name": "Ravenwing"
+        },
+        {
+          "id": 51414,
+          "name": "Speeder"
+        },
+        {
+          "id": 51775,
+          "name": "Vehicle"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107264,
+            "name": "Armoured Hull",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113291,
+                "name": "Armoured Hull",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "6",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 104902,
+            "name": "Heavy Bolter",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110712,
+                "name": "Heavy Bolter",
+                "type": "ranged",
+                "range": "36\"",
+                "attacks": "3",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3390,
+                    "name": "RAPID FIRE 2",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  },
+                  {
+                    "id": 3450,
+                    "name": "SUSTAINED HITS 1",
+                    "rules": "This ability always takes the form <b>[SUSTAINED HITS X]</b>. Each time an attack made with a <b>[SUSTAINED HITS]</b> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <b>[SUSTAINED HITS 2]</b> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <b>[SUSTAINED HITS 2]</b> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 107264,
+            "name": "Armoured Hull",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113291,
+                "name": "Armoured Hull",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "6",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107001,
+            "name": "Assault Cannon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113026,
+                "name": "Assault Cannon",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "6",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3450,
+                    "name": "SUSTAINED HITS 1",
+                    "rules": "This ability always takes the form <b>[SUSTAINED HITS X]</b>. Each time an attack made with a <b>[SUSTAINED HITS]</b> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <b>[SUSTAINED HITS 2]</b> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <b>[SUSTAINED HITS 2]</b> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 104902,
+            "name": "Heavy Bolter",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110712,
+                "name": "Heavy Bolter",
+                "type": "ranged",
+                "range": "36\"",
+                "attacks": "3",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3390,
+                    "name": "RAPID FIRE 2",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  },
+                  {
+                    "id": 3450,
+                    "name": "SUSTAINED HITS 1",
+                    "rules": "This ability always takes the form <b>[SUSTAINED HITS X]</b>. Each time an attack made with a <b>[SUSTAINED HITS]</b> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <b>[SUSTAINED HITS 2]</b> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <b>[SUSTAINED HITS 2]</b> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 42374,
+      "rulesText": "This model's Heavy Bolter can be replaced with 1 Assault Cannon.",
+      "displayOrder": 0
+    }
+  ],
+  "compositions": [
+    {
+      "id": 62352,
+      "points": 80,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61859,
+          "miniatureName": "Ravenwing Darkshroud",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

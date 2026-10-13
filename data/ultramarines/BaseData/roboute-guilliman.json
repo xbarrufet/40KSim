@@ -1,0 +1,387 @@
+{
+  "id": 47596,
+  "slug": "roboute-guilliman",
+  "name": "Roboute Guilliman",
+  "baseSize": "60mm",
+  "maxModelCount": null,
+  "unitComposition": "<ul><li>1 Roboute Guilliman model</li></ul>\rThis model is equipped with: 1 Emperor’s Sword; 1 Hand of Dominion.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Codex Adept",
+      "rules": "The <b>assault doctrine</b>, <b>devastator doctrine</b> and <b>tactical doctrine</b> are active for this unit.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "The hardiest warriors refuse to be laid low, even by wounds that should by all rights prove lethal.",
+      "name": "Feel No Pain 5+",
+      "rules": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Transhuman Strategist",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Primarch of the XIII (Aura)",
+      "rules": "While a friendly <k>Adeptus Astartes</k> unit is within 6\" of this unit, that unit’s attacks can:\r<ul><li>Re-roll <b>hit rolls</b> of 1.</li>\r<li>Re-roll <b>wound rolls</b> of 1.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Author of the Codex",
+      "rules": "In your Movement phase, you can select one <b>visible</b> friendly <k>ADEPTUS ASTARTES</k> unit within 12\" of this model, and select one <b>combat doctrine</b>. That <b>combat doctrine</b> is active for that unit <u>in addition</u> to any other <b>combat doctrines</b> that are active for that unit until the start of your next Command phase.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Leader of Astartes",
+      "rules": "While this unit is within 3\" of a friendly <k>Adeptus Astartes Infantry</k> unit, this unit has <b>Lone Operative</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 3,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "SUPREME COMMANDER",
+      "rules": "If this model is in your army, it must be your <k>Warlord</k>.",
+      "displayOrder": 0
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1890,
+    "slug": "ultramarines",
+    "name": "Ultramarines",
+    "commonName": "Ultramarines"
+  },
+  "miniatures": [
+    {
+      "id": 61490,
+      "name": "Roboute Guilliman",
+      "stats": {
+        "save": "2+",
+        "wounds": "16",
+        "movement": "8\"",
+        "toughness": "10",
+        "leadership": "5+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "4"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50746,
+          "name": "Epic Hero"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51307,
+          "name": "Mobile"
+        },
+        {
+          "id": 51249,
+          "name": "Monster"
+        },
+        {
+          "id": 51432,
+          "name": "Primarch"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105360,
+            "name": "Emperor’s Sword",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111209,
+                "name": "Emperor’s Sword",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "10",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3463,
+                    "name": "CLEAVE 2",
+                    "rules": "This ability always takes the form <b>[CLEAVE X]</b>. Each time you gather <b>attack dice</b> for a <b>[CLEAVE]</b> weapon, if you only selected one target for all of that weapon’s attacks, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\n<b>Example:</b> <i>If a <b>[CLEAVE 1]</b> weapon with an <b>A</b> characteristic of 3 targets one unit containing 16 models, you would gather three additional <b>attack dice</b> for that weapon (for a total of six for that weapon).</i>"
+                  },
+                  {
+                    "id": 3494,
+                    "name": "DEVASTATING WOUNDS",
+                    "rules": "Each time an attack made with a <b>[DEVASTATING WOUNDS]</b> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <b>[DEVASTATING WOUNDS]</b> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <b>[DEVASTATING WOUNDS]</b> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106672,
+            "name": "Hand of Dominion",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112681,
+                "name": "Hand of Dominion",
+                "type": "ranged",
+                "range": "36\"",
+                "attacks": "4",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3390,
+                    "name": "RAPID FIRE 2",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  },
+                  {
+                    "id": 3450,
+                    "name": "SUSTAINED HITS 1",
+                    "rules": "This ability always takes the form <b>[SUSTAINED HITS X]</b>. Each time an attack made with a <b>[SUSTAINED HITS]</b> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <b>[SUSTAINED HITS 2]</b> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <b>[SUSTAINED HITS 2]</b> ability).</i>"
+                  }
+                ]
+              },
+              {
+                "id": 114363,
+                "name": "Hand of Dominion",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "7",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "14",
+                "armourPenetration": "-4",
+                "damage": "4",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3351,
+                    "name": "LETHAL HITS",
+                    "rules": "Each time an attack made with a <b>[LETHAL HITS]</b> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <b>[DEVASTATING WOUNDS]</b>.</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 105360,
+            "name": "Emperor’s Sword",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111209,
+                "name": "Emperor’s Sword",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "10",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3463,
+                    "name": "CLEAVE 2",
+                    "rules": "This ability always takes the form <b>[CLEAVE X]</b>. Each time you gather <b>attack dice</b> for a <b>[CLEAVE]</b> weapon, if you only selected one target for all of that weapon’s attacks, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\n<b>Example:</b> <i>If a <b>[CLEAVE 1]</b> weapon with an <b>A</b> characteristic of 3 targets one unit containing 16 models, you would gather three additional <b>attack dice</b> for that weapon (for a total of six for that weapon).</i>"
+                  },
+                  {
+                    "id": 3494,
+                    "name": "DEVASTATING WOUNDS",
+                    "rules": "Each time an attack made with a <b>[DEVASTATING WOUNDS]</b> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <b>[DEVASTATING WOUNDS]</b> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <b>[DEVASTATING WOUNDS]</b> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106672,
+            "name": "Hand of Dominion",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112681,
+                "name": "Hand of Dominion",
+                "type": "ranged",
+                "range": "36\"",
+                "attacks": "4",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3390,
+                    "name": "RAPID FIRE 2",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  },
+                  {
+                    "id": 3450,
+                    "name": "SUSTAINED HITS 1",
+                    "rules": "This ability always takes the form <b>[SUSTAINED HITS X]</b>. Each time an attack made with a <b>[SUSTAINED HITS]</b> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <b>[SUSTAINED HITS 2]</b> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <b>[SUSTAINED HITS 2]</b> ability).</i>"
+                  }
+                ]
+              },
+              {
+                "id": 114363,
+                "name": "Hand of Dominion",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "7",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "14",
+                "armourPenetration": "-4",
+                "damage": "4",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3351,
+                    "name": "LETHAL HITS",
+                    "rules": "Each time an attack made with a <b>[LETHAL HITS]</b> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <b>[DEVASTATING WOUNDS]</b>.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 62420,
+      "points": 415,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61490,
+          "miniatureName": "Roboute Guilliman",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

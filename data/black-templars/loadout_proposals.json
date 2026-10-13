@@ -1,0 +1,364 @@
+{
+  "black-templars/castellan": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Combi-weapon",
+            "wargearItemId": 108230
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Heavy bolt pistol",
+                "wargearItemId": 105657
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41653,
+        "originalText": "This model's Combi-weapon can be replaced with 1 Heavy Bolt Pistol."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Master-crafted Power Weapon",
+            "wargearItemId": 104740
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Astartes chainsword",
+                "wargearItemId": 107471
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42009,
+        "originalText": "This model's Master-crafted Power Weapon can be replaced with 1 Chainsword."
+      }
+    ]
+  },
+  "black-templars/crusader-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Bolt Pistol",
+                "wargearItemId": 107351
+              },
+              {
+                "count": 1,
+                "name": "Neophyte Chainsword",
+                "wargearItemId": 105808
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41450,
+        "originalText": "Any number of Neophyte models can each have their Bolt Pistol and Neophyte Chainsword replaced with 1 Shotgun and 1 Combat Knife."
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Sword Brother"
+        },
+        "replaces": [],
+        "choices": [],
+        "isAdditional": false,
+        "originalRuleId": 41502,
+        "originalText": "The Sword Brother can have their Heavy Bolt Pistol replaced with 1 Hand Flamer."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 10,
+            "count": 2
+          }
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Bolt Pistol",
+                "wargearItemId": 107351
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Shotgun",
+                "wargearItemId": 106139
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41995,
+        "originalText": "For every 10 models in this unit, up to 2 Initiate models can each have their Bolt Rifle replaced with one of the following: 1 Heavy Bolt Pistol and 1 Power Fist, 1 Pyreblaster"
+      }
+    ]
+  },
+  "black-templars/execrator": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Absolvor Bolt Pistol",
+            "wargearItemId": 108602
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hand Flamer",
+                "wargearItemId": 108135
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41715,
+        "originalText": "This model's Absolvor Bolt Pistol can be replaced with 1 Hand Flamer."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Master-crafted Power Weapon",
+                "wargearItemId": 105518
+              }
+            ],
+            "locks": [
+              108602
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41910,
+        "originalText": "If this model is equipped with 1 Absolvor Bolt Pistol, it can be equipped with 1 Master-crafted Power Weapon (this model's 1 Absolvor Bolt Pistol cannot be replaced)."
+      }
+    ]
+  },
+  "black-templars/marshal": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Plasma Pistol",
+            "wargearItemId": 105501
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Combi-weapon",
+                "wargearItemId": 106800
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41861,
+        "originalText": "This model's Plasma Pistol can be replaced with 1 Combi-weapon."
+      }
+    ]
+  },
+  "black-templars/sword-brethren-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 4,
+            "count": 2
+          }
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 105859
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hand Flamer",
+                "wargearItemId": 105900
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41353,
+        "originalText": "For every 4 models in this unit, up to 2 models can each have their Heavy Bolt Pistol replaced with 1 Hand Flamer."
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 107661
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Master-crafted Power Weapon",
+                "wargearItemId": 105391
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41514,
+        "originalText": "Any number of models can each have their Chainsword replaced with 1 Master-crafted Power Weapon."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 4,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 107661
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Thunder Hammer",
+                "wargearItemId": 104835
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42074,
+        "originalText": "For every 4 models in this unit, 1 model can have their Chainsword replaced with 1 Thunder Hammer."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 4,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 105859
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 107083
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42078,
+        "originalText": "For every 4 models in this unit, 1 model can have their Heavy Bolt Pistol replaced with 1 Plasma Pistol."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 4,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 105859
+          },
+          {
+            "name": "Chainsword",
+            "wargearItemId": 107661
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin Lightning Claws",
+                "wargearItemId": 108690
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42368,
+        "originalText": "For every 4 models in this unit, 1 model can have their Heavy Bolt Pistol and Chainsword replaced with 1 Twin Lightning Claws."
+      }
+    ]
+  }
+}

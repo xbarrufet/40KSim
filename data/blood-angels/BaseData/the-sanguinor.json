@@ -1,0 +1,248 @@
+{
+  "id": 46877,
+  "slug": "the-sanguinor",
+  "name": "The Sanguinor",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "• 1 The Sanguinor model\n\nThis model is equipped with: 1 Encarmine Broadsword.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "There are many ways by which to deploy troops to the field of battle including tunnels, teleportation devices and other esoteric means of transportation.",
+      "name": "Deep Strike",
+      "rules": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Aura of Fervour",
+      "rules": "Friendly <k>ADEPTUS ASTARTES</k> units within 12\" of this model can re-roll <b>leadership rolls</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Those possessed of lightning‑fast reactions may strike before the opponent can react.",
+      "name": "Fights First",
+      "rules": "While every model in a unit has this ability, that unit is a <b>Fights First</b> unit.\n\nSee the Resolve Fights First Combats step in the Fight phase (12.04).",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Miraculous Saviour (Once per battle, per army)",
+      "rules": "At the end of your opponent's Charge phase (excluding the first battle round), select up to one enemy unit that made a <b>charge move</b> this phase. This unit can make an <b>ingress move</b> and must be set up <b>engaged</b> with that enemy unit. That move does not prevent this unit from being <b>eligible to move</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Assassins and other covert agents are difficult to pinpoint in the storm of battle.",
+      "name": "Lone Operative",
+      "rules": "Unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within 12\" of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within 12\" of this unit.\n\nIf this ability takes the form <b>Lone Operative X\"</b>, unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within <b>X\"</b> of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within <b>X\"</b> of this unit.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1879,
+    "slug": "blood-angels",
+    "name": "Blood Angels",
+    "commonName": "Blood Angels"
+  },
+  "miniatures": [
+    {
+      "id": 62141,
+      "name": "The Sanguinor",
+      "stats": {
+        "save": "2+",
+        "wounds": "7",
+        "movement": "12\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50746,
+          "name": "Epic Hero"
+        },
+        {
+          "id": 51013,
+          "name": "Fly"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51069,
+          "name": "Jump Pack"
+        },
+        {
+          "id": 51004,
+          "name": "Tacticus"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106238,
+            "name": "Encarmine Broadsword",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112206,
+                "name": "Encarmine Broadsword",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "8",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3494,
+                    "name": "DEVASTATING WOUNDS",
+                    "rules": "Each time an attack made with a <b>[DEVASTATING WOUNDS]</b> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <b>[DEVASTATING WOUNDS]</b> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <b>[DEVASTATING WOUNDS]</b> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 106238,
+            "name": "Encarmine Broadsword",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112206,
+                "name": "Encarmine Broadsword",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "8",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3494,
+                    "name": "DEVASTATING WOUNDS",
+                    "rules": "Each time an attack made with a <b>[DEVASTATING WOUNDS]</b> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <b>[DEVASTATING WOUNDS]</b> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <b>[DEVASTATING WOUNDS]</b> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 62589,
+      "points": 120,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 62141,
+          "miniatureName": "The Sanguinor",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

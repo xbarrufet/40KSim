@@ -1,0 +1,496 @@
+{
+  "id": 47295,
+  "slug": "wolf-guard-headtakers",
+  "name": "Wolf Guard Headtakers",
+  "baseSize": "40mm, 60x35.5mm Oval Base",
+  "maxModelCount": null,
+  "unitComposition": "• 3-6 Hunting Wolf models\n• 3-6 Wolf Guard Headtaker models\n\nEvery Hunting Wolf is equipped with: 1 Teeth and Claws.\nEvery Wolf Guard Headtaker is equipped with: 1 Heavy Bolt Pistol; 1 Paired Master-crafted Power Weapons.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Let Loose the Wolves",
+      "rules": "At the start of the Declare Battle Formations step, you can split this unit into two units, one containing all Wolf Guard Headtaker models and all <b>leader/support</b> models, the other containing all Hunting Wolves models, with new <b>starting strengths</b> accordingly.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Hunting Hounds",
+      "rules": "While this unit is within 6\" of a friendly <k>Space Wolves Character</k> model (excluding <k>Wulfen</k>), if this unit is not <b>battle-shocked</b>, Hunting Wolf models have +1 <b>OC</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Headhunters",
+      "rules": "At the start of the first battle round, select up to one enemy unit to be this unit's <b>quarry</b>:<ul><li>This unit's attacks that target this unit's <b>quarry</b> have <k>[DEVASTATING WOUNDS]</k> and <k>[PRECISION]</k>.</li><li>Each time this unit's <b>quarry</b> is <b>destroyed</b>, select one enemy unit to be this unit's <b>quarry</b>.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 3,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": 3,
+  "pointsStepPoints": 10,
+  "leads": [],
+  "ledBy": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47192,
+        "name": "Iron Priest",
+        "slug": "iron-priest",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47259,
+        "name": "Ulrik the Slayer",
+        "slug": "ulrik-the-slayer",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47499,
+        "name": "Wolf Priest",
+        "slug": "wolf-priest",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46818,
+        "name": "Wolf Guard Battle Leader",
+        "slug": "wolf-guard-battle-leader",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47357,
+        "name": "Njal Stormcaller",
+        "slug": "njal-stormcaller",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46972,
+        "name": "Ragnar Blackmane",
+        "slug": "ragnar-blackmane",
+        "factionSlug": "space-wolves"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1892,
+    "slug": "space-wolves",
+    "name": "Space Wolves",
+    "commonName": "Space Wolves"
+  },
+  "miniatures": [
+    {
+      "id": 62558,
+      "name": "Wolf Guard Headtaker",
+      "stats": {
+        "save": "3+",
+        "wounds": "3",
+        "movement": "7\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51004,
+          "name": "Tacticus"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105774,
+            "name": "Paired Master-crafted Power Weapons",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111666,
+                "name": "Paired Master-crafted Power Weapons",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106838,
+            "name": "Heavy Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112833,
+                "name": "Heavy Bolt Pistol",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 106640,
+            "name": "Storm Shield",
+            "wargearType": "wargear",
+            "ruleText": "This model has a 4+ <b>InSv</b>.",
+            "profiles": []
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106838,
+            "name": "Heavy Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112833,
+                "name": "Heavy Bolt Pistol",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107760,
+            "name": "Master-crafted Power Weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113812,
+                "name": "Master-crafted Power Weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105774,
+            "name": "Paired Master-crafted Power Weapons",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111666,
+                "name": "Paired Master-crafted Power Weapons",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    },
+    {
+      "id": 62559,
+      "name": "Hunting Wolf",
+      "stats": {
+        "save": "6+",
+        "wounds": "1",
+        "movement": "10\"",
+        "toughness": "4",
+        "leadership": "8+",
+        "objectiveControl": "0"
+      },
+      "keywords": [
+        {
+          "id": 51464,
+          "name": "Beast"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105035,
+            "name": "Teeth and Claws",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110860,
+                "name": "Teeth and Claws",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 105035,
+            "name": "Teeth and Claws",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110860,
+                "name": "Teeth and Claws",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 42302,
+      "rulesText": "Any number of Wolf Guard Headtaker models can each have their Paired Master-crafted Power Weapons replaced with 1 Master-crafted Power Weapon and 1 Storm Shield.",
+      "displayOrder": 0
+    }
+  ],
+  "compositions": [
+    {
+      "id": 62712,
+      "points": 85,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 3,
+      "miniatures": [
+        {
+          "miniatureId": 62558,
+          "miniatureName": "Wolf Guard Headtaker",
+          "min": 3,
+          "max": 3
+        }
+      ]
+    },
+    {
+      "id": 61375,
+      "points": 170,
+      "displayOrder": 1,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 6,
+      "miniatures": [
+        {
+          "miniatureId": 62558,
+          "miniatureName": "Wolf Guard Headtaker",
+          "min": 6,
+          "max": 6
+        }
+      ]
+    },
+    {
+      "id": 62104,
+      "points": 115,
+      "displayOrder": 2,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 6,
+      "miniatures": [
+        {
+          "miniatureId": 62558,
+          "miniatureName": "Wolf Guard Headtaker",
+          "min": 3,
+          "max": 3
+        },
+        {
+          "miniatureId": 62559,
+          "miniatureName": "Hunting Wolf",
+          "min": 3,
+          "max": 3
+        }
+      ]
+    },
+    {
+      "id": 62584,
+      "points": 230,
+      "displayOrder": 3,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 12,
+      "miniatures": [
+        {
+          "miniatureId": 62558,
+          "miniatureName": "Wolf Guard Headtaker",
+          "min": 6,
+          "max": 6
+        },
+        {
+          "miniatureId": 62559,
+          "miniatureName": "Hunting Wolf",
+          "min": 6,
+          "max": 6
+        }
+      ]
+    }
+  ]
+}

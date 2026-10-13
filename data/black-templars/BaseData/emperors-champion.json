@@ -1,0 +1,413 @@
+{
+  "id": 47239,
+  "slug": "emperors-champion",
+  "name": "Emperor's Champion",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Emperor's Champion model\n\nThis model is equipped with: 1 Black Sword; 1 Bolt Pistol.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Assassins and other covert agents are difficult to pinpoint in the storm of battle.",
+      "name": "Lone Operative",
+      "rules": "Unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within 12\" of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within 12\" of this unit.\n\nIf this ability takes the form <b>Lone Operative X\"</b>, unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within <b>X\"</b> of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within <b>X\"</b> of this unit.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Chosen of the Emperor",
+      "rules": "You cannot include more than one <k>Emperor's Champion</k> unit in your army.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Mighty heroes fight at the forefront of battle.",
+      "name": "Leader",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Armour of Faith",
+      "rules": "Attacks allocated to this model have ‑1 <b>D</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Sigismund's Heir",
+      "rules": "This unit has +1 to <b>charge rolls</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Leader",
+      "rules": "This model can be attached to the following units:\n\n■ **ASSAULT INTERCESSOR SQUAD**\n■ **CRUSADER SQUAD**\n■ **INTERCESSOR SQUAD**\n■ **STERNGUARD VETERAN SQUAD**\n■ **SWORD BRETHREN SQUAD**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46724,
+        "name": "Sword Brethren Squad",
+        "slug": "sword-brethren-squad",
+        "factionSlug": "black-templars"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47702,
+        "name": "Sternguard Veteran Squad",
+        "slug": "sternguard-veteran-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47191,
+        "name": "Crusader Squad",
+        "slug": "crusader-squad",
+        "factionSlug": "black-templars"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46861,
+        "name": "Intercessor Squad",
+        "slug": "intercessor-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46938,
+        "name": "Assault Intercessor Squad",
+        "slug": "assault-intercessor-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1863,
+    "slug": "black-templars",
+    "name": "Black Templars",
+    "commonName": "Black Templars"
+  },
+  "miniatures": [
+    {
+      "id": 61344,
+      "name": "Emperor's Champion",
+      "stats": {
+        "save": "2+",
+        "wounds": "5",
+        "movement": "8\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51004,
+          "name": "Tacticus"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105569,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111437,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108592,
+            "name": "Black Sword",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114723,
+                "name": "Strike",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "8",
+                "armourPenetration": "-3",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3395,
+                    "name": "ANTI-CHARACTER 5+",
+                    "rules": "This ability always takes the form <b>[ANTI‑X Y+]</b>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <b>[ANTI‑VEHICLE 4+]</b> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <b>[ANTI‑PSYKER 2+]</b>  weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  },
+                  {
+                    "id": 3494,
+                    "name": "DEVASTATING WOUNDS",
+                    "rules": "Each time an attack made with a <b>[DEVASTATING WOUNDS]</b> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <b>[DEVASTATING WOUNDS]</b> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <b>[DEVASTATING WOUNDS]</b> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  },
+                  {
+                    "id": 3489,
+                    "name": "PRECISION",
+                    "rules": "While resolving attacks made with one or more <b>[PRECISION]</b> weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more <b>CHARACTER</b> models <b>visible</b> to one or more of the attacking models, the active player can select one allocation group that contains one of those <b>visible</b> <k>CHARACTER</k> models. If they do, until those attacks are resolved, or until that <k>CHARACTER</k> group is destroyed (whichever happens first), that <k>CHARACTER</k> group is the current allocation group."
+                  }
+                ]
+              },
+              {
+                "id": 111760,
+                "name": "Sweep",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "10",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 108592,
+            "name": "Black Sword",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114723,
+                "name": "Strike",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "8",
+                "armourPenetration": "-3",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3395,
+                    "name": "ANTI-CHARACTER 5+",
+                    "rules": "This ability always takes the form <b>[ANTI‑X Y+]</b>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <b>[ANTI‑VEHICLE 4+]</b> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <b>[ANTI‑PSYKER 2+]</b>  weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  },
+                  {
+                    "id": 3494,
+                    "name": "DEVASTATING WOUNDS",
+                    "rules": "Each time an attack made with a <b>[DEVASTATING WOUNDS]</b> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <b>[DEVASTATING WOUNDS]</b> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <b>[DEVASTATING WOUNDS]</b> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  },
+                  {
+                    "id": 3489,
+                    "name": "PRECISION",
+                    "rules": "While resolving attacks made with one or more <b>[PRECISION]</b> weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more <b>CHARACTER</b> models <b>visible</b> to one or more of the attacking models, the active player can select one allocation group that contains one of those <b>visible</b> <k>CHARACTER</k> models. If they do, until those attacks are resolved, or until that <k>CHARACTER</k> group is destroyed (whichever happens first), that <k>CHARACTER</k> group is the current allocation group."
+                  }
+                ]
+              },
+              {
+                "id": 111760,
+                "name": "Sweep",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "10",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105569,
+            "name": "Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111437,
+                "name": "Bolt Pistol",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 61895,
+      "points": 100,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61344,
+          "miniatureName": "Emperor's Champion",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "space-marines/intercessor-squad": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Intercessor Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Knives and Fists",
+            "wargearItemId": 105105
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Chainsword",
+                "wargearItemId": 107419
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 105690
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 107952
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Thunder Hammer",
+                "wargearItemId": 108727
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41300,
+        "originalText": "■ The Intercessor Sergeant can have their Knives and Fists replaced with one of the following:\n▫ 1 Chainsword\n▫ 1 Power Fist\n▫ 1 Power Weapon\n▫ 1 Thunder Hammer"
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Intercessor Sergeant"
+        },
+        "replaces": [
+          {
+            "name": "Bolt Rifle",
+            "wargearItemId": 106073
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Chainsword",
+                "wargearItemId": 107419
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hand Flamer",
+                "wargearItemId": 105729
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 105071
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 107952
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42306,
+        "originalText": "■ The Intercessor Sergeant can have their Bolt Rifle replaced with one of the following:\n▫ 1 Chainsword\n▫ 1 Hand Flamer\n▫ 1 Plasma Pistol\n▫ 1 Power Weapon"
+      }
+    ]
+  }
+}

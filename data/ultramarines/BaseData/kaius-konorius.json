@@ -1,0 +1,366 @@
+{
+  "id": 47083,
+  "slug": "kaius-konorius",
+  "name": "Kaius Konorius",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "<ul><li>1 Kaius Konorius model</li></ul>\rThis model is equipped with: 1 Heavy Bolt Pistol; 1 Severance and Rebuke.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Veteran Bodyguard",
+      "rules": "While this model is attached to a unit, other <k>Character</k> models in this unit have <b>Feel No Pain 4+</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Specialist combatants may be assigned to front-line squads to bolster their fighting effectiveness.",
+      "name": "Support",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it. \n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19).",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Calgar’s Champion",
+      "rules": "This model’s attacks that target a <k>Character</k> unit can:\r<ul><li>Re-roll <b>hit rolls</b> of 1.</li>\r<li>Re-roll <b>wound rolls</b> of 1.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Support",
+      "rules": "This model can be attached to the following units:\n\n■ **ASSAULT INTERCESSOR SQUAD**\n■ **BLADEGUARD VETERAN SQUAD**\n■ **STERNGUARD VETERAN SQUAD**\n■ **VICTRIX HONOUR GUARD**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47046,
+        "name": "Victrix Honour Guard",
+        "slug": "victrix-honour-guard",
+        "factionSlug": "ultramarines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47702,
+        "name": "Sternguard Veteran Squad",
+        "slug": "sternguard-veteran-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 46687,
+        "name": "Bladeguard Veteran Squad",
+        "slug": "bladeguard-veteran-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 46938,
+        "name": "Assault Intercessor Squad",
+        "slug": "assault-intercessor-squad",
+        "factionSlug": "space-marines"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1890,
+    "slug": "ultramarines",
+    "name": "Ultramarines",
+    "commonName": "Ultramarines"
+  },
+  "miniatures": [
+    {
+      "id": 61885,
+      "name": "Kaius Konorius",
+      "stats": {
+        "save": "2+",
+        "wounds": "5",
+        "movement": "6\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50746,
+          "name": "Epic Hero"
+        },
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51004,
+          "name": "Tacticus"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106252,
+            "name": "Severance and Rebuke",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112222,
+                "name": "Strike",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-3",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3489,
+                    "name": "PRECISION",
+                    "rules": "While resolving attacks made with one or more <b>[PRECISION]</b> weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more <b>CHARACTER</b> models <b>visible</b> to one or more of the attacking models, the active player can select one allocation group that contains one of those <b>visible</b> <k>CHARACTER</k> models. If they do, until those attacks are resolved, or until that <k>CHARACTER</k> group is destroyed (whichever happens first), that <k>CHARACTER</k> group is the current allocation group."
+                  }
+                ]
+              },
+              {
+                "id": 112925,
+                "name": "Sweep",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3463,
+                    "name": "CLEAVE 2",
+                    "rules": "This ability always takes the form <b>[CLEAVE X]</b>. Each time you gather <b>attack dice</b> for a <b>[CLEAVE]</b> weapon, if you only selected one target for all of that weapon’s attacks, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\n<b>Example:</b> <i>If a <b>[CLEAVE 1]</b> weapon with an <b>A</b> characteristic of 3 targets one unit containing 16 models, you would gather three additional <b>attack dice</b> for that weapon (for a total of six for that weapon).</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106107,
+            "name": "Heavy Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112050,
+                "name": "Heavy Bolt Pistol",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 106107,
+            "name": "Heavy Bolt Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112050,
+                "name": "Heavy Bolt Pistol",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106252,
+            "name": "Severance and Rebuke",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112222,
+                "name": "Strike",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-3",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3489,
+                    "name": "PRECISION",
+                    "rules": "While resolving attacks made with one or more <b>[PRECISION]</b> weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more <b>CHARACTER</b> models <b>visible</b> to one or more of the attacking models, the active player can select one allocation group that contains one of those <b>visible</b> <k>CHARACTER</k> models. If they do, until those attacks are resolved, or until that <k>CHARACTER</k> group is destroyed (whichever happens first), that <k>CHARACTER</k> group is the current allocation group."
+                  }
+                ]
+              },
+              {
+                "id": 112925,
+                "name": "Sweep",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3463,
+                    "name": "CLEAVE 2",
+                    "rules": "This ability always takes the form <b>[CLEAVE X]</b>. Each time you gather <b>attack dice</b> for a <b>[CLEAVE]</b> weapon, if you only selected one target for all of that weapon’s attacks, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\n<b>Example:</b> <i>If a <b>[CLEAVE 1]</b> weapon with an <b>A</b> characteristic of 3 targets one unit containing 16 models, you would gather three additional <b>attack dice</b> for that weapon (for a total of six for that weapon).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 62337,
+      "points": 100,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61885,
+          "miniatureName": "Kaius Konorius",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

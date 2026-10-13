@@ -1,0 +1,687 @@
+{
+  "space-wolves/bjorn-the-fell-handed": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Assault Cannon",
+            "wargearItemId": 108106
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Helfrost Cannon",
+                "wargearItemId": 107217
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Multi-melta",
+                "wargearItemId": 106186
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41558,
+        "originalText": "This model's Assault Cannon can be replaced with one of the following: 1 Helfrost Cannon, 1 Multi-melta"
+      }
+    ]
+  },
+  "space-wolves/blood-claws": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Blood Claw Pack Leader"
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 106975
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 106280
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 40999,
+        "originalText": "The Blood Claw Pack Leader can have their Chainsword replaced with 1 Power Weapon."
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Blood Claw Pack Leader"
+        },
+        "replaces": [
+          {
+            "name": "Bolt Pistol",
+            "wargearItemId": 108302
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 107718
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41872,
+        "originalText": "The Blood Claw Pack Leader can have their Bolt Pistol replaced with 1 Plasma Pistol."
+      }
+    ]
+  },
+  "space-wolves/grey-hunters": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Grey Hunter Pack Leader"
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 106034
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 0
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 0
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41600,
+        "originalText": "The Grey Hunter Pack Leader can have their Chainsword replaced with one of the following: 1 Power Fist, 1 Power Weapon"
+      },
+      {
+        "scope": {
+          "type": "model",
+          "role": "Grey Hunter Pack Leader"
+        },
+        "replaces": [
+          {
+            "name": "Bolt Pistol",
+            "wargearItemId": 105907
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 0
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41718,
+        "originalText": "The Grey Hunter Pack Leader can have their Bolt Pistol replaced with 1 Plasma Pistol."
+      }
+    ]
+  },
+  "space-wolves/thunderwolf-cavalry": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 3,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Bolt Pistol",
+            "wargearItemId": 108178
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 105017
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41326,
+        "originalText": "For every 3 models in this unit, 1 model can have their Bolt Pistol replaced with 1 Plasma Pistol."
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Bolt Pistol",
+            "wargearItemId": 108178
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Boltgun",
+                "wargearItemId": 105434
+              },
+              {
+                "count": 1,
+                "name": "Storm Shield",
+                "wargearItemId": 106640
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41595,
+        "originalText": "Any number of models can each have their Bolt Pistol replaced with 1 Boltgun and 1 Storm Shield."
+      }
+    ]
+  },
+  "space-wolves/venerable-dreadnought": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Assault Cannon",
+            "wargearItemId": 106079
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Helfrost Cannon",
+                "wargearItemId": 105107
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Multi-melta",
+                "wargearItemId": 107917
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": -86381,
+        "originalText": "This model's Assault Cannon can be replaced with one of the following: 1 Helfrost Cannon, 1 Multi-melta"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 106560
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Heavy Flamer",
+                "wargearItemId": 106187
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": -86138,
+        "originalText": "This model's Storm Bolter can be replaced with 1 Heavy Flamer."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Assault Cannon",
+            "wargearItemId": 106079
+          },
+          {
+            "name": "Dreadnought Combat Weapon",
+            "wargearItemId": 106551
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Fenrisian Great Axe",
+                "wargearItemId": 106389
+              },
+              {
+                "count": 1,
+                "name": "Blizzard Shield",
+                "wargearItemId": 108582
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": -84777,
+        "originalText": "This model's Assault Cannon and Dreadnought Combat Weapon can be replaced with 1 Fenrisian Great Axe and 1 Blizzard Shield."
+      }
+    ]
+  },
+  "space-wolves/wolf-guard-battle-leader": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Master-crafted Power Weapon",
+            "wargearItemId": 106205
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Thunder Hammer",
+                "wargearItemId": 108148
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41100,
+        "originalText": "This model's Master-crafted Power Weapon can be replaced with 1 Thunder Hammer."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Plasma Pistol",
+            "wargearItemId": 105361
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Shield",
+                "wargearItemId": 105561
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42049,
+        "originalText": "This model's Plasma Pistol can be replaced with 1 Storm Shield."
+      }
+    ]
+  },
+  "space-wolves/wolf-guard-headtakers": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Paired Master-crafted Power Weapons",
+            "wargearItemId": 105774
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Master-crafted Power Weapon",
+                "wargearItemId": 107760
+              },
+              {
+                "count": 1,
+                "name": "Storm Shield",
+                "wargearItemId": 106640
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42302,
+        "originalText": "Any number of Wolf Guard Headtaker models can each have their Paired Master-crafted Power Weapons replaced with 1 Master-crafted Power Weapon and 1 Storm Shield."
+      }
+    ]
+  },
+  "space-wolves/wolf-guard-terminators": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Wolf Guard Terminator Pack Leader"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 108435
+          },
+          {
+            "name": "Master-crafted Power Weapon",
+            "wargearItemId": 105975
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Relic Greataxe",
+                "wargearItemId": 0
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin Lightning Claws",
+                "wargearItemId": 0
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41433,
+        "originalText": "The Wolf Guard Terminator Pack Leader can have their Storm Bolter and Master-crafted Power Weapon replaced with one of the following: 1 Relic Greataxe, 1 Twin Lightning Claws"
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 108435
+          },
+          {
+            "name": "Master-crafted Power Weapon",
+            "wargearItemId": 105975
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Assault Cannon",
+                "wargearItemId": 107333
+              },
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 104826
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41836,
+        "originalText": "For every 5 models in this unit, 1 Wolf Guard Terminator model can have their Storm Bolter and Master-crafted Power Weapon replaced with 1 Assault Cannon and 1 Power Fist."
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 108435
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Shield",
+                "wargearItemId": 105561
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41985,
+        "originalText": "Any number of models can each have their Storm Bolter replaced with 1 Storm Shield."
+      }
+    ]
+  },
+  "space-wolves/wolf-scouts": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Haywire Mine (Once per battle, per unit)",
+                "wargearItemId": 108111
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41675,
+        "originalText": "1 model equipped with 1 Plasma Pistol can be equipped with 1 Haywire Mine"
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 12,
+            "count": 1
+          }
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Instigator Bolt Carbine",
+                "wargearItemId": 108400
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41544,
+        "originalText": "For every 12 models in this unit, 1 Wolf Scout model can have their Plasma Pistol replaced with 1 Instigator Bolt Carbine."
+      }
+    ]
+  },
+  "space-wolves/wulfen-dreadnought": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Storm Bolter",
+            "wargearItemId": 104850
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Heavy Flamer",
+                "wargearItemId": 108374
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 40983,
+        "originalText": "This model's Storm Bolter can be replaced with 1 Heavy Flamer."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Fenrisian Great Axe",
+            "wargearItemId": 106100
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Blizzard Shield",
+                "wargearItemId": 108582
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42266,
+        "originalText": "This model's Fenrisian Great Axe can be replaced with 1 Blizzard Shield."
+      }
+    ]
+  },
+  "space-wolves/wulfen-with-storm-shields": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Stormfrag Auto-launcher",
+            "wargearItemId": 107605
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Death Totem",
+                "wargearItemId": 106372
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41122,
+        "originalText": "Any number of models can each have their Stormfrag Auto-launcher replaced with 1 Death Totem."
+      }
+    ]
+  },
+  "space-wolves/wulfen": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Death Totem",
+            "wargearItemId": 106372
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Stormfrag Auto-launcher",
+                "wargearItemId": 107341
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": -86315,
+        "originalText": "Any number of models can each have their death totem replaced with 1 stormfrag auto‑launcher."
+      }
+    ]
+  }
+}

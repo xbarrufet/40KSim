@@ -1,0 +1,819 @@
+{
+  "blood-angels/baal-predator": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 2,
+                "name": "Heavy Bolter",
+                "wargearItemId": 106029
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 2,
+                "name": "Heavy Flamer",
+                "wargearItemId": 108174
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41291,
+        "originalText": "This model can be equipped with one of the following: 2 Heavy Bolters, 2 Heavy Flamers"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Twin Assault Cannon",
+            "wargearItemId": 108547
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Baal Flamestorm Cannon",
+                "wargearItemId": 106745
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41475,
+        "originalText": "This model's Twin Assault Cannon can be replaced with 1 Baal Flamestorm Cannon."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Storm Bolter",
+                "wargearItemId": 107252
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41831,
+        "originalText": "This model can be equipped with 1 Storm Bolter"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hunter-killer Missile",
+                "wargearItemId": 107180
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42181,
+        "originalText": "This model can be equipped with 1 Hunter-killer Missile"
+      }
+    ]
+  },
+  "blood-angels/blood-angels-captain": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Master-crafted Chainsword",
+            "wargearItemId": 105937
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 106204
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Relic Weapon",
+                "wargearItemId": 104897
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41523,
+        "originalText": "This model's Master-crafted Chainsword can be replaced with one of the following: 1 Power Fist, 1 Relic Weapon"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 108683
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Inferno Pistol",
+                "wargearItemId": 108222
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41810,
+        "originalText": "This model's Heavy Bolt Pistol can be replaced with 1 Inferno Pistol."
+      }
+    ]
+  },
+  "blood-angels/death-company-captain-with-jump-pack": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 104785
+          },
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 106973
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Thunder Hammer",
+                "wargearItemId": 105702
+              },
+              {
+                "count": 1,
+                "name": "Relic Shield",
+                "wargearItemId": 107174
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41044,
+        "originalText": "This model's Astartes Chainsword and Heavy Bolt Pistol can be replaced with 1 Thunder Hammer and 1 Relic Shield."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 104785
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 108587
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Relic Weapon",
+                "wargearItemId": 106582
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41461,
+        "originalText": "This model's Astartes Chainsword can be replaced with one of the following: 1 Power Fist, 1 Relic Weapon"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 104785
+          },
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 106973
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Chainsword",
+                "wargearItemId": 104785
+              },
+              {
+                "count": 1,
+                "name": "Relic Shield",
+                "wargearItemId": 107174
+              }
+            ],
+            "locks": [
+              104785
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41692,
+        "originalText": "This model's Astartes Chainsword and Heavy Bolt Pistol can be replaced with 1 Astartes Chainsword and 1 Relic Shield (that model’s Astartes Chainsword cannot be replaced)."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 106973
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hand Flamer",
+                "wargearItemId": 106146
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 105163
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42055,
+        "originalText": "This model's Heavy Bolt Pistol can be replaced with one of the following: 1 Hand Flamer, 1 Plasma Pistol"
+      }
+    ]
+  },
+  "blood-angels/death-company-captain": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Master-crafted Chainsword",
+            "wargearItemId": 107479
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 106239
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Relic Weapon",
+                "wargearItemId": 105222
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42262,
+        "originalText": "This model's Master-crafted Chainsword can be replaced with one of the following: 1 Power Fist, 1 Relic Weapon"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 105824
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Inferno Pistol",
+                "wargearItemId": 108354
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42301,
+        "originalText": "This model's Heavy Bolt Pistol can be replaced with 1 Inferno Pistol."
+      }
+    ]
+  },
+  "blood-angels/death-company-dreadnought": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Twin Heavy Bolter",
+            "wargearItemId": 108478
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin Multi-melta",
+                "wargearItemId": 108041
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41313,
+        "originalText": "This model's Twin Heavy Bolter can be replaced with 1 Twin Multi-melta."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Blood Fist Bolt Rifles",
+            "wargearItemId": 107796
+          },
+          {
+            "name": "Blood Fists",
+            "wargearItemId": 107803
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Blood Talons",
+                "wargearItemId": 106503
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42073,
+        "originalText": "This model's Blood Fist Bolt Rifles and Blood Fists can be replaced with 1 Blood Talons."
+      }
+    ]
+  },
+  "blood-angels/death-company-marines-with-jump-packs": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 107765
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 107572
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41174,
+        "originalText": "For every 5 models in this unit, 1 model can have their Chainsword replaced with 1 Power Fist."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 105816
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hand Flamer",
+                "wargearItemId": 107627
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41775,
+        "originalText": "For every 5 models in this unit, 1 model can have their Heavy Bolt Pistol replaced with 1 Hand Flamer."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 2
+          }
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 107765
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 105924
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41966,
+        "originalText": "For every 5 models in this unit, up to 2 models can each have their Chainsword replaced with 1 Power Weapon."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 105816
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Inferno Pistol",
+                "wargearItemId": 108717
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41991,
+        "originalText": "For every 5 models in this unit, 1 model can have their Heavy Bolt Pistol replaced with 1 Inferno Pistol."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 2
+          }
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 105816
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 106214
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42206,
+        "originalText": "For every 5 models in this unit, up to 2 models can each have their Heavy Bolt Pistol replaced with 1 Plasma Pistol."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 107765
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Eviscerator",
+                "wargearItemId": 108049
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42268,
+        "originalText": "For every 5 models in this unit, 1 model can have their Chainsword replaced with 1 Eviscerator."
+      }
+    ]
+  },
+  "blood-angels/death-company-marines": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 107848
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Bolt Rifle",
+                "wargearItemId": 107841
+              },
+              {
+                "count": 1,
+                "name": "Combat Blade",
+                "wargearItemId": 106159
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41308,
+        "originalText": "Any number of models can each have their Chainsword replaced with 1 Bolt Rifle Fire and 1 Combat Blade."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 107848
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Eviscerator",
+                "wargearItemId": 107388
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41410,
+        "originalText": "For every 5 models in this unit, 1 model can have their Chainsword replaced with 1 Eviscerator."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "wargearItemId": 107850
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hand Flamer",
+                "wargearItemId": 107121
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Inferno Pistol",
+                "wargearItemId": 108648
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasma Pistol",
+                "wargearItemId": 107668
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41441,
+        "originalText": "1 model can have their Heavy Bolt Pistol replaced with one of the following: 1 Hand Flamer, 1 Inferno Pistol, 1 Plasma Pistol"
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Grenade Launcher",
+                "wargearItemId": 107343
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41500,
+        "originalText": "For every 5 models in this unit, 1 model equipped with 1 Bolt Rifle can be equipped with 1 Grenade Launcher."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Chainsword",
+            "wargearItemId": 107848
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Fist",
+                "wargearItemId": 105919
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Weapon",
+                "wargearItemId": 108665
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Thunder Hammer",
+                "wargearItemId": 106398
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41590,
+        "originalText": "1 model can have their Chainsword replaced with one of the following: 1 Power Fist, 1 Power Weapon, 1 Thunder Hammer"
+      }
+    ]
+  },
+  "blood-angels/sanguinary-guard": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 3,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Angelus Boltgun",
+            "wargearItemId": 105372
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Inferno Pistol",
+                "wargearItemId": 105565
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42347,
+        "originalText": "For every 3 models in this unit, 1 model can have their Angelus Boltgun replaced with 1 Inferno Pistol."
+      }
+    ]
+  }
+}

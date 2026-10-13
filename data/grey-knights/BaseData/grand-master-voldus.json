@@ -1,0 +1,399 @@
+{
+  "id": 46968,
+  "slug": "grand-master-voldus",
+  "name": "Grand Master Voldus",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **1 Grand Master Voldus – EPIC HERO**\n\n**This model is equipped with:** Searing Purity; storm bolter; Malleus Argyrum.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "There are many ways by which to deploy troops to the field of battle including tunnels, teleportation devices and other esoteric means of transportation.",
+      "name": "Deep Strike",
+      "rules": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Mighty heroes fight at the forefront of battle.",
+      "name": "Leader",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it. \n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Gate of Infinity",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 3,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Sanctuary",
+      "rules": "■ This unit has **Stealth**.\n■ Melee attacks that target this unit have ‐1 to **hit rolls**.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": true,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 4,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Hammer Aflame",
+      "rules": "Each time this model’s unit fight, you can select one enemy unit within Engagement Range of this model’s unit and roll one D6: on a 2-3, that enemy unit suffers 1 mortal wound; on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": true,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 5,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Leader",
+      "rules": "This model can be attached to the following units:\n\n■ **BROTHERHOOD TERMINATOR SQUAD**\n■ **PALADIN SQUAD**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47493,
+        "name": "Brotherhood Terminator Squad",
+        "slug": "brotherhood-terminator-squad",
+        "factionSlug": "grey-knights"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46990,
+        "name": "Paladin Squad",
+        "slug": "paladin-squad",
+        "factionSlug": "grey-knights"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1882,
+    "slug": "grey-knights",
+    "name": "Grey Knights",
+    "commonName": "Grey Knights"
+  },
+  "miniatures": [
+    {
+      "id": 61323,
+      "name": "Grand Master Voldus",
+      "stats": {
+        "save": "2+",
+        "wounds": "7",
+        "movement": "5\"",
+        "toughness": "6",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50746,
+          "name": "Epic Hero"
+        },
+        {
+          "id": 50948,
+          "name": "Grand Master Voldus"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51716,
+          "name": "Psyker"
+        },
+        {
+          "id": 51550,
+          "name": "Terminator"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 104881,
+            "name": "Storm Bolter",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112346,
+                "name": "Storm Bolter",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "2",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3390,
+                    "name": "RAPID FIRE 2",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107676,
+            "name": "Searing Purity",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111799,
+                "name": "Searing Purity",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "D3+1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "12",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3350,
+                    "name": "Devastating Wounds",
+                    "rules": "Each time an attack made with a <k>[DEVASTATING WOUNDS]</k> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <k>[DEVASTATING WOUNDS]</k> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <k>[DEVASTATING WOUNDS]</k> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  },
+                  {
+                    "id": 3405,
+                    "name": "Psychic",
+                    "rules": "Each time an attack is made with a <k>[PSYCHIC]</k> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <k>[PSYCHIC]</k> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108633,
+            "name": "Malleus Argyrum",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113776,
+                "name": "Malleus Argyrum",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3405,
+                    "name": "Psychic",
+                    "rules": "Each time an attack is made with a <k>[PSYCHIC]</k> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <k>[PSYCHIC]</k> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 108633,
+            "name": "Malleus Argyrum",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113776,
+                "name": "Malleus Argyrum",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3405,
+                    "name": "Psychic",
+                    "rules": "Each time an attack is made with a <k>[PSYCHIC]</k> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <k>[PSYCHIC]</k> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107676,
+            "name": "Searing Purity",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111799,
+                "name": "Searing Purity",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "D3+1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "12",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3350,
+                    "name": "Devastating Wounds",
+                    "rules": "Each time an attack made with a <k>[DEVASTATING WOUNDS]</k> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <k>[DEVASTATING WOUNDS]</k> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <k>[DEVASTATING WOUNDS]</k> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  },
+                  {
+                    "id": 3405,
+                    "name": "Psychic",
+                    "rules": "Each time an attack is made with a <k>[PSYCHIC]</k> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <k>[PSYCHIC]</k> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 104881,
+            "name": "Storm Bolter",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112346,
+                "name": "Storm Bolter",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "2",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3390,
+                    "name": "RAPID FIRE 2",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 62321,
+      "points": 130,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61323,
+          "miniatureName": "Grand Master Voldus",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

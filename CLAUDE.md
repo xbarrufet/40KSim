@@ -11,10 +11,16 @@ data/                              Local-only: Python-scraped raw data from 40k.
   fetch_units.py                   Scrape units for a faction (arg: faction name)
   fetch_datasheets.py              Scrape datasheets (arg: faction name or --all)
   fetch_faction_data.py            Scrape army rules (arg: faction name or --all)
+  auto_structure.py                AI: genera propuestas de habilidades estructuradas
+  auto_loadout.py                  AI: genera propuestas de loadout estructurado
+  seed_supabase.py                 Sube datos a Supabase (--loadout-only, --override-confirmed)
   <faction-slug>/
     units.json                     Unit list (name, category, slug, points)
     faction_data.json              Army rules and detachments (Space Marines only)
     BaseData/<unit-slug>.json      Scraped datasheet per unit (Space Marines only)
+    structuring_proposals.json     AI ability proposals (auto_structure.py output)
+    loadout_proposals.json         AI loadout proposals (auto_loadout.py output, batch)
+    ai-loadout/<unit-slug>.json    AI loadout proposals (auto_loadout.py --unit output)
 
 app/                               Vite + React 19 + TypeScript 6
   public/data/units.json           Seed file: imported into IndexedDB on first launch
@@ -32,6 +38,9 @@ openspec/                          OpenSpec specifications
   specs/
     faction-unit-browser/spec.md   Faction browsing, unit list, upload modal, IndexedDB
     simulation-unit-data/spec.md   Simulation-ready unit data format and rules
+    structured-loadout/spec.md     Loadout data format, AI pipeline, approve/reject flow
+    supabase-data-layer/spec.md    Supabase tables, client functions, write semantics
+    process-unit/spec.md           Process Unit screen: abilities + loadout review
   changes/                         Active OpenSpec changes
 ```
 
@@ -50,6 +59,21 @@ python3 data/fetch_units.py "Space Marines"
 python3 data/fetch_datasheets.py "Space Marines"
 python3 data/fetch_datasheets.py --all
 python3 data/fetch_faction_data.py "Space Marines"
+
+# AI structuring (need anthropic: pip install "anthropic[bedrock]")
+# Genera propuestas de habilidades estructuradas
+python3 data/auto_structure.py "Space Marines"           # toda la facción
+python3 data/auto_structure.py "Space Marines" --unit captain  # una unidad
+
+# Genera propuestas de loadout estructurado
+python3 data/auto_loadout.py "Space Marines"             # toda la facción
+python3 data/auto_loadout.py "Space Marines" --unit intercessor-squad  # una unidad
+
+# Subir datos a Supabase (need supabase: pip install supabase)
+# Requiere SUPABASE_URL y SUPABASE_SERVICE_KEY
+python3 data/seed_supabase.py "Space Marines"            # todo (respeta CONFIRMED)
+python3 data/seed_supabase.py "Space Marines" --loadout-only  # solo loadout
+python3 data/seed_supabase.py "Space Marines" --override-confirmed  # fuerza sobreescritura
 ```
 
 ## Key conventions

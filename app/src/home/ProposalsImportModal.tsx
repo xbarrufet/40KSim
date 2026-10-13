@@ -47,7 +47,8 @@ export function ProposalsImportModal({ factionSlug, onClose, onImported }: Propo
       const parts = key.split('/')
       if (parts.length !== 2 || parts[0] !== factionSlug) continue
       const unitSlug = parts[1]
-      const existing = await getStructuredAbilitiesData(factionSlug, unitSlug)
+      const result = await getStructuredAbilitiesData(factionSlug, unitSlug)
+      const existing = result?.data
       const currentTag: UnitTag = existing?.tag === 'CONFIRMED'
         ? 'CONFIRMED'
         : existing?.tag === 'AI_PROPOSED'

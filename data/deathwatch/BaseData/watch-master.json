@@ -1,0 +1,312 @@
+{
+  "id": 46847,
+  "slug": "watch-master",
+  "name": "Watch Master",
+  "baseSize": "32mm",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Watch Master model\n\nThis model is equipped with: 1 Vigil Spear.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Watch Master",
+      "rules": "This model’s attacks that target a <k>Character</k> unit can:<ul><li>Re-roll <b>hit rolls</b> of 1.</li><li>Re-roll <b>wound rolls</b> of 1.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Mighty heroes fight at the forefront of battle.",
+      "name": "Leader",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Strategic Knowledge",
+      "rules": "▪ This unit’s ranged attacks have <k>[ASSAULT]</k>. \n▪ When this unit is selected to make an <b>advance move</b>, that <b>advance move</b> does not prevent this unit from being <b>eligible to declare a charge</b>. \n▪ When this unit is selected to make a <b>fall-back move</b>, that <b>fall-back move</b> does not prevent this unit from being <b>eligible to shoot</b> and <b>eligible to declare a charge</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Transhuman Strategist",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Purgatus Quarry",
+      "rules": "At the start of the first battle round, select up to one enemy unit to be this unit’s <b>hunted</b>:<ul><li>This unit’s attacks that target this unit’s <b>hunted</b> unit can re-roll <b>wound rolls</b> of 1.</li><li>Each time this unit’s <b>hunted</b> is <b>destroyed</b>, select up to one enemy unit to be this unit’s <b>hunted</b>.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Leader",
+      "rules": "This model can be attached to the following units:\n\n■ **DEATHWATCH VETERANS**\n■ **DECIMUS KILL TEAM**\n■ **FORTIS KILL TEAM**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46768,
+        "name": "Fortis Kill Team",
+        "slug": "fortis-kill-team",
+        "factionSlug": "deathwatch"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46922,
+        "name": "Deathwatch Veterans",
+        "slug": "deathwatch-veterans",
+        "factionSlug": "deathwatch"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47458,
+        "name": "Decimus Kill Team",
+        "slug": "decimus-kill-team",
+        "factionSlug": "deathwatch"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1873,
+    "slug": "deathwatch",
+    "name": "Deathwatch",
+    "commonName": "Deathwatch"
+  },
+  "miniatures": [
+    {
+      "id": 62025,
+      "name": "Watch Master",
+      "stats": {
+        "save": "2+",
+        "wounds": "5",
+        "movement": "6\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51106,
+          "name": "Captain"
+        },
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51393,
+          "name": "Kill Team"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106030,
+            "name": "Vigil Spear",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111950,
+                "name": "Vigil Spear",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "2",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              },
+              {
+                "id": 112502,
+                "name": "Vigil Spear",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3493,
+                    "name": "LANCE",
+                    "rules": "Each time an attack is made with a <b>[LANCE]</b> weapon, if the attacking model’s unit made a <b>charge</b> move this turn, add 1 to the <b>wound roll</b>."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 106030,
+            "name": "Vigil Spear",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111950,
+                "name": "Vigil Spear",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "2",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              },
+              {
+                "id": 112502,
+                "name": "Vigil Spear",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3493,
+                    "name": "LANCE",
+                    "rules": "Each time an attack is made with a <b>[LANCE]</b> weapon, if the attacking model’s unit made a <b>charge</b> move this turn, add 1 to the <b>wound roll</b>."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 61932,
+      "points": 105,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 62025,
+          "miniatureName": "Watch Master",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

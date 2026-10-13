@@ -1,0 +1,545 @@
+{
+  "id": 47158,
+  "slug": "chief-librarian-mephiston",
+  "name": "Chief Librarian Mephiston",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Chief Librarian Mephiston model\n\nThis model is equipped with: 1 Fury of the Ancients; 1 Plasma Pistol; 1 Vitarus.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "Assassins and other covert agents are difficult to pinpoint in the storm of battle.",
+      "name": "Lone Operative",
+      "rules": "Unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within 12\" of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within 12\" of this unit.\n\nIf this ability takes the form <b>Lone Operative X\"</b>, unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within <b>X\"</b> of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within <b>X\"</b> of this unit.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Chief Librarian (psyker level 3)",
+      "rules": "This model has the <b>psychic abilities</b> listed in the Psychic Abilities section.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [
+        {
+          "name": "Quickening (psychic level 1)",
+          "rules": "In your Command phase, if this unit is  not <b>battle-shocked</b>, you can make a <b>psychic roll</b> for this unit by rolling one D6. If you do:<ul><li>On a 1, this unit is <b>battle-shocked</b>.</li><li>The <b>assault doctrine</b> is active for this unit <u>in addition</u> to any other <b>combat doctrine</b> until the start of your next Command phase.</li></li></ul></ul>",
+          "displayOrder": 0
+        },
+        {
+          "name": "Transfixing Gaze (psychic level 2)",
+          "rules": "Start of your opponent's Movement phase, if this unit is not <b>battle-shocked</b>, you can make a <b>psychic roll</b> for this unit by rolling one D6. If you do:<ul><li>On a 1, this unit is <b>battle-shocked</b>.</li><li>When an enemy unit within 6\" makes a <b>fall-back move</b>, that enemy unit must take a <b>leadership roll</b>. If that test is failed, that enemy unit must Remain Stationary (Core Rules, 09.04).</li></ul>",
+          "displayOrder": 1
+        }
+      ],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Combat Doctrines",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "The hardiest warriors refuse to be laid low, even by wounds that should by all rights prove lethal.",
+      "name": "Feel No Pain 5+",
+      "rules": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Transhuman Strategist",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Those possessed of lightning‑fast reactions may strike before the opponent can react.",
+      "name": "Fights First",
+      "rules": "While every model in a unit has this ability, that unit is a <b>Fights First</b> unit.\n\nSee the Resolve Fights First Combats step in the Fight phase (12.04).",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1879,
+    "slug": "blood-angels",
+    "name": "Blood Angels",
+    "commonName": "Blood Angels"
+  },
+  "miniatures": [
+    {
+      "id": 61458,
+      "name": "Chief Librarian Mephiston",
+      "stats": {
+        "save": "2+",
+        "wounds": "6",
+        "movement": "8\"",
+        "toughness": "6",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50746,
+          "name": "Epic Hero"
+        },
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 51444,
+          "name": "Imperium"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51716,
+          "name": "Psyker"
+        },
+        {
+          "id": 51004,
+          "name": "Tacticus"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107257,
+            "name": "Fury of the Ancients",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113284,
+                "name": "Focused Witchfire",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "3",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  },
+                  {
+                    "id": 3348,
+                    "name": "HAZARDOUS",
+                    "rules": "Each time a unit is <b>selected to shoot</b> or <b>selected to fight</b>, after that unit has resolved all of its attacks, make a number of <b>hazard rolls</b> (06.03) for that unit equal to the number of <b>[HAZARDOUS]</b> weapons you selected in the Select Weapons step."
+                  },
+                  {
+                    "id": 3437,
+                    "name": "PSYCHIC",
+                    "rules": "Each time an attack is made with a <b>[PSYCHIC]</b> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <b>[PSYCHIC]</b> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              },
+              {
+                "id": 112431,
+                "name": "Witchfire",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "3",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  },
+                  {
+                    "id": 3437,
+                    "name": "PSYCHIC",
+                    "rules": "Each time an attack is made with a <b>[PSYCHIC]</b> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <b>[PSYCHIC]</b> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107299,
+            "name": "Plasma Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113332,
+                "name": "Standard",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              },
+              {
+                "id": 111370,
+                "name": "Supercharge",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106809,
+            "name": "Vitarus",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112800,
+                "name": "Vitarus",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-3",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3351,
+                    "name": "LETHAL HITS",
+                    "rules": "Each time an attack made with a <b>[LETHAL HITS]</b> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <b>[DEVASTATING WOUNDS]</b>.</i>"
+                  },
+                  {
+                    "id": 3437,
+                    "name": "PSYCHIC",
+                    "rules": "Each time an attack is made with a <b>[PSYCHIC]</b> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <b>[PSYCHIC]</b> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 107257,
+            "name": "Fury of the Ancients",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113284,
+                "name": "Focused Witchfire",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "3",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  },
+                  {
+                    "id": 3348,
+                    "name": "HAZARDOUS",
+                    "rules": "Each time a unit is <b>selected to shoot</b> or <b>selected to fight</b>, after that unit has resolved all of its attacks, make a number of <b>hazard rolls</b> (06.03) for that unit equal to the number of <b>[HAZARDOUS]</b> weapons you selected in the Select Weapons step."
+                  },
+                  {
+                    "id": 3437,
+                    "name": "PSYCHIC",
+                    "rules": "Each time an attack is made with a <b>[PSYCHIC]</b> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <b>[PSYCHIC]</b> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              },
+              {
+                "id": 112431,
+                "name": "Witchfire",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "3",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  },
+                  {
+                    "id": 3437,
+                    "name": "PSYCHIC",
+                    "rules": "Each time an attack is made with a <b>[PSYCHIC]</b> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <b>[PSYCHIC]</b> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107299,
+            "name": "Plasma Pistol",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113332,
+                "name": "Standard",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              },
+              {
+                "id": 111370,
+                "name": "Supercharge",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106809,
+            "name": "Vitarus",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112800,
+                "name": "Vitarus",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-3",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3351,
+                    "name": "LETHAL HITS",
+                    "rules": "Each time an attack made with a <b>[LETHAL HITS]</b> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <b>[DEVASTATING WOUNDS]</b>.</i>"
+                  },
+                  {
+                    "id": 3437,
+                    "name": "PSYCHIC",
+                    "rules": "Each time an attack is made with a <b>[PSYCHIC]</b> weapon, you can ignore any or all modifiers to that attack’s <b>BS</b> or <b>WS</b> characteristic and any or all modifiers to the <b>hit roll</b>. Attacks made with <b>[PSYCHIC]</b> weapons are known as <b>psychic attacks</b> (this can be important for the triggering of other rules)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 61989,
+      "points": 175,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61458,
+          "miniatureName": "Chief Librarian Mephiston",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

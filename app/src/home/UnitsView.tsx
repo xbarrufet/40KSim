@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
-import { ArrowLeft, RefreshCw, Upload } from 'lucide-react'
+import { ArrowLeft, Download, RefreshCw, Upload } from 'lucide-react'
 import { getUnitsByFaction, getUnitStatuses, syncUnitCatalog, type UnitStatus } from '../data/db'
-import type { UnitCatalog } from '../data/schema'
+import type { FactionBackup, UnitCatalog } from '../data/schema'
+import { exportFactionBackup, importFactionBackup, validateBackupFile } from '../data/backup'
 import { ProcessUnitView } from './ProcessUnitView'
 import { UploadModal } from './UploadModal'
 import { ProposalsImportModal } from './ProposalsImportModal'
@@ -47,6 +48,10 @@ export function UnitsView({ faction, onBack }: UnitsViewProps) {
   const [selectedUnit, setSelectedUnit] = useState<string | null>(null)
   const [syncing, setSyncing] = useState(false)
   const [syncResult, setSyncResult] = useState<string | null>(null)
+  const [exporting, setExporting] = useState(false)
+  const [importing, setImporting] = useState(false)
+  const [backupToConfirm, setBackupToConfirm] = useState<FactionBackup | null>(null)
+  const [backupError, setBackupError] = useState<string | null>(null)
 
   const loadUnits = useCallback(() => {
     getUnitsByFaction(faction.slug)
@@ -92,6 +97,48 @@ export function UnitsView({ faction, onBack }: UnitsViewProps) {
       setSyncing(false)
     }
   }, [faction.slug, loadUnits])
+
+  const handleExport = useCallback(async () => {
+    setExporting(true)
+    try {
+      await exportFactionBackup(faction.slug)
+    } catch (err) {
+      setBackupError(err instanceof Error ? err.message : 'Error al exportar')
+    } finally {
+      setExporting(false)
+    }
+  }, [faction.slug])
+
+  const handleRestoreFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setBackupError(null)
+    const file = e.target.files?.[0]
+    if (!file) return
+    const reader = new FileReader()
+    reader.onload = () => {
+      const result = validateBackupFile(reader.result as string, faction.slug)
+      if (!result.ok) {
+        setBackupError(result.error)
+      } else {
+        setBackupToConfirm(result.backup)
+      }
+    }
+    reader.readAsText(file)
+    e.target.value = ''
+  }, [faction.slug])
+
+  const confirmImport = useCallback(async () => {
+    if (!backupToConfirm) return
+    setImporting(true)
+    setBackupToConfirm(null)
+    try {
+      await importFactionBackup(faction.slug, backupToConfirm)
+      loadUnits()
+    } catch (err) {
+      setBackupError(err instanceof Error ? err.message : 'Error al importar')
+    } finally {
+      setImporting(false)
+    }
+  }, [faction.slug, backupToConfirm, loadUnits])
 
   const categories = units ? Array.from(new Set(units.map((u) => u.category ?? 'Unidades'))) : []
 
@@ -142,6 +189,13 @@ export function UnitsView({ faction, onBack }: UnitsViewProps) {
         <button type="button" className="upload-btn" onClick={() => setShowProposalsImport(true)} title="Importar propuestas IA">
           IA
         </button>
+        <button type="button" className="upload-btn" onClick={handleExport} disabled={exporting} title="Descargar backup">
+          <Download size={16} />
+        </button>
+        <label className="upload-btn" title="Restaurar backup" style={{ cursor: importing ? 'not-allowed' : 'pointer' }}>
+          <Upload size={16} />
+          <input type="file" accept=".json" onChange={handleRestoreFile} disabled={importing} hidden />
+        </label>
       </div>
 
       {error && <p className="board-alert">{error}</p>}
@@ -192,6 +246,28 @@ export function UnitsView({ faction, onBack }: UnitsViewProps) {
           onClose={() => setShowProposalsImport(false)}
           onImported={loadUnits}
         />
+      )}
+      {backupError && <p className="board-alert">{backupError}</p>}
+      {importing && <p>Importando backup…</p>}
+      {backupToConfirm && (
+        <div className="modal-overlay" onClick={() => setBackupToConfirm(null)}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <h2>Restaurar backup</h2>
+            <p>Facción: <strong>{backupToConfirm.factionSlug}</strong></p>
+            <p>Exportado: {new Date(backupToConfirm.exportedAt).toLocaleString()}</p>
+            <ul style={{ margin: '1rem 0', paddingLeft: '1.2rem' }}>
+              <li>{backupToConfirm.units.length} unidades</li>
+              <li>{backupToConfirm.baseData.length} base data</li>
+              <li>{backupToConfirm.unitData.length} habilidades estructuradas</li>
+              <li>{backupToConfirm.loadoutData.length} loadout</li>
+            </ul>
+            <p>Los registros existentes serán sobreescritos.</p>
+            <div className="modal-actions">
+              <button type="button" onClick={() => setBackupToConfirm(null)}>Cancelar</button>
+              <button type="button" className="confirm-btn" onClick={confirmImport}>Importar</button>
+            </div>
+          </div>
+        </div>
       )}
     </section>
   )

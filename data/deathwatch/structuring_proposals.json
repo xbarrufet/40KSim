@@ -1,0 +1,431 @@
+{
+  "deathwatch/corvus-blackstar": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deadly Demise D6",
+        "category": "OTHER",
+        "text": "Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\").",
+        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "type": "Always",
+        "name": "Blackstar Cluster Launcher",
+        "category": "OTHER",
+        "text": "In your Movement phase, when this unit ends a normal move, select up to one enemy unit this unit moved over during that move and roll six D6: For each 4+, that unit suffers 1 mortal wound.",
+        "originalText": "In your Movement phase, when this unit ends a <b>normal move</b>, select up to one enemy unit this unit moved over during that move and roll six D6:<ul><li>For each 4+, that unit suffers 1 <b>mortal wound</b>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Damaged 5",
+        "attackType": "ANY",
+        "trigger": "¿Las heridas restantes del modelo son iguales o menores a 5?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Hover",
+        "category": "OTHER",
+        "text": "Each time this unit takes to the skies, do not subtract 2\" from the maximum distance.",
+        "originalText": "Each time this unit <b>takes to the skies</b> (21.03), do not subtract 2\" from the <b>maximum distance</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Stealth",
+        "attackType": "SHOOTING",
+        "trigger": "¿Todos los modelos en la unidad tienen esta habilidad?",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "unit",
+            "stat": "Save",
+            "mode": "setValue",
+            "value": 999
+          }
+        ],
+        "originalText": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the <b>benefit of cover</b> against that attack (13.08)."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "deathwatch/deathwatch-terminator-squad": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "Always",
+        "name": "Terminatus Assault",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "rerollAll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "<ul><li>This unit can re-roll <b>charge rolls</b>.</li><li>After this unit ends a <b>charge move</b>, each enemy unit <b>engaged</b> with this unit makes a <b>battle-shock roll</b>, with -1 to that <b>battle-shock roll</b> if it's a <k>non-Imperium/Chaos</k> unit.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Teleport Homer",
+        "category": "OTHER",
+        "text": "At the start of the battle, you can set up one Teleport Homer token for this unit on the battlefield. If you do: When you target this unit with the Rapid Ingress stratagem, you can use that Teleport Homer token. If you do, that use is -1 CP, but when resolving that stratagem, this unit must be set up within 3\" of that Teleport Homer token and not within 8\" of an enemy unit. That Teleport Homer token is then removed from the battlefield. If an enemy unit ends a move within 1\" of that Teleport Homer token, that Teleport Homer token is removed from the battlefield.",
+        "originalText": "At the start of the battle, you can set up one Teleport Homer token for this unit on the battlefield. If you do:\n<ul><li>When you target this unit with the <b>Rapid Ingress stratagem</b>, you can use that Teleport Homer token. If you do, that use is -1 CP, but when resolving that <b>stratagem</b>, this unit must be set up within 3\" of that Teleport Homer token and not within 8\" of an enemy unit. That Teleport Homer token is then removed from the battlefield. </li>\n<li>If an enemy unit ends a move within 1\" of that Teleport Homer token, that Teleport Homer token is removed from the battlefield.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "deathwatch/deathwatch-veterans": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Death to the Alien",
+        "attackType": "ANY",
+        "trigger": "¿El objetivo no tiene la palabra clave IMPERIUM o CHAOS?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "rerollAll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This unit's attacks can:<ul><li>Re-roll <b>hit rolls</b> of 1.</li><li><u>Or:</u> If the target of those attacks does not have <k>IMPERIUM/CHAOS</k>, re-roll <b>hit rolls</b>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Death to the Alien",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "rerollOnes",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This unit's attacks can:<ul><li>Re-roll <b>hit rolls</b> of 1.</li><li><u>Or:</u> If the target of those attacks does not have <k>IMPERIUM/CHAOS</k>, re-roll <b>hit rolls</b>.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "deathwatch/decimus-kill-team": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Death to the Alien",
+        "attackType": "ANY",
+        "trigger": "¿El objetivo no tiene IMPERIUM ni CHAOS?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "rerollFailed",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This unit's attacks can:<ul><li>Re-roll <b>hit rolls</b> of 1.</li><li><u>Or:</u> If the target of those attacks does not have <k>IMPERIUM/CHAOS</k>, re-roll <b>hit rolls</b>.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "deathwatch/fortis-kill-team": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Fortis Doctrines",
+        "attackType": "ANY",
+        "trigger": "¿Es el objetivo una unidad por debajo de su fuerza inicial o a la mitad o menos de su fuerza inicial?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "attackType": "ALL"
+          },
+          {
+            "category": "diceModifier",
+            "roll": "toWound",
+            "action": "addToRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This unit's attacks that target a unit <ul><li><b>Below starting strength</b>, have +1 to <b>hit rolls</b>.</li><li><u>Or:</u> at or <b>below half-strength</b> have +1 to <b>hit rolls</b> and <b>wound rolls</b>.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "deathwatch/indomitor-kill-team": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Indomitor Doctrines",
+        "attackType": "SHOOTING",
+        "trigger": "¿El objetivo es la unidad enemiga más cercana elegible?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "weapon",
+            "weaponTarget": "RANGE",
+            "stat": "Strength",
+            "mode": "add",
+            "value": 1
+          }
+        ],
+        "originalText": "<ul><li>This unit's ranged attacks that target the closest eligible enemy unit, have +1 <b>S</b>.</li><li>If this unit made a <b>charge move</b> this turn, this unit's melee attacks have +1 <b>S</b>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Indomitor Doctrines",
+        "attackType": "FIGHT",
+        "trigger": "¿Esta unidad realizó un movimiento de carga este turno?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "weapon",
+            "weaponTarget": "MELEE",
+            "stat": "Strength",
+            "mode": "add",
+            "value": 1
+          }
+        ],
+        "originalText": "<ul><li>This unit's ranged attacks that target the closest eligible enemy unit, have +1 <b>S</b>.</li><li>If this unit made a <b>charge move</b> this turn, this unit's melee attacks have +1 <b>S</b>.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "deathwatch/spectrus-kill-team": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Infiltrators",
+        "category": "OTHER",
+        "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent's deployment zone and all enemy units.",
+        "originalText": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+      },
+      {
+        "type": "Always",
+        "name": "Helix Gauntlet",
+        "category": "OTHER",
+        "text": "In your Command phase, this unit heals D3 wounds.",
+        "originalText": "In your Command phase, this unit <b>heals</b> D3 wounds."
+      },
+      {
+        "type": "Always",
+        "name": "Scouts 6\"",
+        "category": "OTHER",
+        "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. If that unit is wholly within your deployment zone, it can make a scout move. If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+        "originalText": "This ability always takes the form <b>Scouts X\"</b>. In the Resolve Pre‑battle Abilities step, if every model in a unit has this ability, you can do <u>one</u> of the following:\n<ul><li>If that unit is in <b>strategic reserves</b>, you can set up that unit anywhere that is wholly within your deployment zone.</li><li>If that unit is wholly within your deployment zone, it can make a <b>scout move</b> (24.32).</li><li>If that unit is embarked within a <k>DEDICATED TRANSPORT</k> that is wholly within your deployment zone, and if every model embarked within that <k>DEDICATED TRANSPORT</k> has the <b>Scouts</b> ability, that <k>DEDICATED TRANSPORT</k> can make a <b>scout move</b>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Spectrus Doctrines",
+        "category": "OTHER",
+        "text": "At the end of your opponent's Fight phase, if this unit is unengaged, you can place this unit in strategic reserves.",
+        "originalText": "At the end of your opponent's Fight phase, if this unit is <b>unengaged</b>, you can place this unit in <b>strategic reserves</b>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "deathwatch/talonstrike-kill-team": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Talonstrike Doctrines",
+        "attackType": "ANY",
+        "trigger": "¿Se configuró esta unidad en el campo de batalla este turno?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "weapon",
+            "weaponTarget": "ALL",
+            "stat": "AP",
+            "mode": "add",
+            "value": 1
+          },
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "MELEE",
+            "keyword": "LANCE",
+            "value": null
+          }
+        ],
+        "originalText": "In a turn this unit was set up on the battlefield:<ul><li>This unit's attacks have +1 <b>AP</b>.</li><li>This unit's melee attacks have <k>[LANCE]</k>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "deathwatch/watch-captain-artemis": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Feel No Pain 6+",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 6
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
+      },
+      {
+        "type": "Always",
+        "name": "Tactical Instinct",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "ALL",
+            "keyword": "SUSTAINED HITS",
+            "value": "1"
+          }
+        ],
+        "originalText": "This unit's attacks have <k>[Sustained Hits 1]</k>."
+      },
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Unstoppable Champion (Once per battle, per army)",
+        "category": "OTHER",
+        "text": "At the end of a phase in which this model is destroyed, roll one D6: On a 2+, set this model back up on the battlefield as close as possible to where it was destroyed, unengaged with 3 wounds remaining.",
+        "originalText": "At the end of a phase in which this model is <b>destroyed</b>, roll one D6:<ul><li>On a 2+, set this model back up on the battlefield as close as possible to where it was <b>destroyed, unengaged</b> with 3 wounds remaining.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "deathwatch/watch-master": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Watch Master",
+        "attackType": "ANY",
+        "trigger": "¿El objetivo es una unidad de PERSONAJE?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "rerollOnes",
+            "attackType": "ALL"
+          },
+          {
+            "category": "diceModifier",
+            "roll": "toWound",
+            "action": "rerollOnes",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This model’s attacks that target a <k>Character</k> unit can:<ul><li>Re-roll <b>hit rolls</b> of 1.</li><li>Re-roll <b>wound rolls</b> of 1.</li></ul>"
+      },
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Strategic Knowledge",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "RANGE",
+            "keyword": "ASSAULT",
+            "value": null
+          }
+        ],
+        "originalText": "▪ This unit’s ranged attacks have <k>[ASSAULT]</k>. \n▪ When this unit is selected to make an <b>advance move</b>, that <b>advance move</b> does not prevent this unit from being <b>eligible to declare a charge</b>. \n▪ When this unit is selected to make a <b>fall-back move</b>, that <b>fall-back move</b> does not prevent this unit from being <b>eligible to shoot</b> and <b>eligible to declare a charge</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Strategic Knowledge",
+        "category": "OTHER",
+        "text": "When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge. When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge.",
+        "originalText": "▪ This unit’s ranged attacks have <k>[ASSAULT]</k>. \n▪ When this unit is selected to make an <b>advance move</b>, that <b>advance move</b> does not prevent this unit from being <b>eligible to declare a charge</b>. \n▪ When this unit is selected to make a <b>fall-back move</b>, that <b>fall-back move</b> does not prevent this unit from being <b>eligible to shoot</b> and <b>eligible to declare a charge</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Purgatus Quarry",
+        "attackType": "ANY",
+        "trigger": "¿El objetivo es la unidad acosada de esta unidad?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toWound",
+            "action": "rerollOnes",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "At the start of the first battle round, select up to one enemy unit to be this unit’s <b>hunted</b>:<ul><li>This unit’s attacks that target this unit’s <b>hunted</b> unit can re-roll <b>wound rolls</b> of 1.</li><li>Each time this unit’s <b>hunted</b> is <b>destroyed</b>, select up to one enemy unit to be this unit’s <b>hunted</b>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Purgatus Quarry",
+        "category": "OTHER",
+        "text": "At the start of the first battle round, select up to one enemy unit to be this unit's hunted. Each time this unit's hunted is destroyed, select up to one enemy unit to be this unit's hunted.",
+        "originalText": "At the start of the first battle round, select up to one enemy unit to be this unit’s <b>hunted</b>:<ul><li>This unit’s attacks that target this unit’s <b>hunted</b> unit can re-roll <b>wound rolls</b> of 1.</li><li>Each time this unit’s <b>hunted</b> is <b>destroyed</b>, select up to one enemy unit to be this unit’s <b>hunted</b>.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  }
+}

@@ -1,0 +1,716 @@
+{
+  "dark-angels/asmodai": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Feared Interrogator",
+        "attackType": "ANY",
+        "trigger": "¿Hay unidades de CABALLERO enemigo dentro de 6\" al inicio de la fase de Combate?",
+        "appliedTo": "Enemy",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "At the start of the Fight phase, each enemy <k>Character</k> unit within 6\" of this model makes a <b>battle-shock roll</b>, with -1 to that <b>battle-shock roll</b>."
+      },
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Exemplar of Hate",
+        "attackType": "FIGHT",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "rerollFailed",
+            "attackType": "MELEE"
+          }
+        ],
+        "originalText": "This unit's melee attacks can re-roll <b>hit rolls</b>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "dark-angels/azrael": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Masterful Tactician",
+        "category": "OTHER",
+        "text": "In your Movement phase, select up to one visible friendly Adeptus Astartes unit within 9 of this model, and select one combat doctrine. That combat doctrine is active for that unit until the start of your next Command phase.",
+        "originalText": "In your Movement phase, select up to one <b>visible</b> friendly <k>Adeptus Astartes</k> unit within 9\" of this model, and select one <b>combat doctrine</b>. That <b>combat doctrine</b> is active for that unit until the start of your next Command phase."
+      },
+      {
+        "type": "Always",
+        "name": "Watcher in the Dark (Once per battle, per unit)",
+        "attackType": "ANY",
+        "trigger": "¿Esta unidad sufre una herida mortal?",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 4,
+            "condition": "vsMortalWounds"
+          }
+        ],
+        "originalText": "In any phase, when this unit suffers a <b>mortal wound</b>, this unit can summon a Watcher in the Dark. If it does, this unit has <b>Feel No Pain 4+</b> against <b>mortal wounds</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Supreme Grand Master",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "ALL",
+            "keyword": "SUSTAINED HITS",
+            "value": "1"
+          }
+        ],
+        "originalText": "This unit's attacks have <k>[SUSTAINED HITS 1]</k>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "dark-angels/belial": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "Always",
+        "name": "Grand Master of the Deathwing",
+        "attackType": "FIGHT",
+        "trigger": "¿El objetivo es una unidad CARÁCTER enemiga?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toWound",
+            "action": "addToRoll",
+            "attackType": "MELEE"
+          }
+        ],
+        "originalText": "This unit's attacks that target an enemy <k>Character</k> unit have +1 to <b>wound rolls</b>."
+      },
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Strikes of Retribution",
+        "category": "OTHER",
+        "text": "In the fight phase, when this model is destroyed, if this unit has not been selected to fight this phase, roll one D6: On a 2+, do not remove this model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.",
+        "originalText": "In the fight phase, when this model is <b>destroyed</b>, if this unit has not been <b>selected to fight</b> this phase, roll one D6:\n<ul><li>On a 2+, do not remove this model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "dark-angels/deathwing-knights": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "Always",
+        "name": "Inner Circle",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "unit",
+            "stat": "Wounds",
+            "mode": "add",
+            "value": 0
+          },
+          {
+            "category": "damageMitigation",
+            "kind": "damageReduction",
+            "value": 1
+          }
+        ],
+        "originalText": "<ul><li>Attacks that target this unit have -1<b>D</b>.</li><li>This unit cannot be targeted with the <b>Tactical Dreadnought Fortitude stratagem</b>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Teleport Homer (Once per battle, per unit)",
+        "category": "OTHER",
+        "text": "At the start of the battle, you can set up one Teleport Homer token for this unit on the battlefield. If you do: When you target this unit with the Rapid Ingress stratagem, you can use that Teleport Homer token. If you do, that use is -1 CP, but when resolving that stratagem, this unit must be set up within 3\" of that Teleport Homer token and not within 8\" of an enemy unit. That Teleport Homer token is then removed from the battlefield. If an enemy unit ends a move within 1\" of that Teleport Homer token, that Teleport Homer token is removed from the battlefield.",
+        "originalText": "At the start of the battle, you can set up one Teleport Homer token for this unit on the battlefield. If you do:\n<ul><li>When you target this unit with the <b>Rapid Ingress stratagem</b>, you can use that Teleport Homer token. If you do, that use is -1 CP, but when resolving that <b>stratagem</b>, this unit must be set up within 3\" of that Teleport Homer token and not within 8\" of an enemy unit. That Teleport Homer token is then removed from the battlefield. </li>\n<li>If an enemy unit ends a move within 1\" of that Teleport Homer token, that Teleport Homer token is removed from the battlefield.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "dark-angels/deathwing-terminator-squad": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "Always",
+        "name": "Deathwing",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "ignoreModifiers",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This unit's attacks can ignore modifiers to:<ul><li><b>BS</b> and <b>WS</b>.</li><li><b>Hit rolls</b>.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "dark-angels/ezekiel": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Psychic Hood",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 4,
+            "condition": "vsMortalWounds"
+          },
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 4,
+            "condition": "vsPsychic"
+          }
+        ],
+        "originalText": "This unit has <b>Feel No Pain 4+</b> against <b>psychic attacks</b> and <b>mortal wounds</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Book of Salvation",
+        "attackType": "FIGHT",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "weapon",
+            "weaponTarget": "MELEE",
+            "stat": "Attacks",
+            "mode": "add",
+            "value": 1
+          }
+        ],
+        "originalText": "This unit's melee attacks have +1 <b>A</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Chief Librarian (psyker level 3)",
+        "category": "OTHER",
+        "text": "This model has the psychic abilities listed in the Psychic Abilities section.",
+        "originalText": "This model has the <b>psychic abilities</b> listed in the Psychic Abilities section."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "dark-angels/inner-circle-companions": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Braziers of Judgement",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "attackType": "MELEE",
+            "value": 1
+          }
+        ],
+        "originalText": "<ul><li>This unit has <b>Stealth</b>.</li><li>Melee attacks that target this unit have -1 to <b>hit rolls</b>.</li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Emnity for the Unworthy",
+        "attackType": "ANY",
+        "trigger": "¿El objetivo es un PERSONAJE?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "value": 1
+          }
+        ],
+        "originalText": "This unit's attacks that target a <k>Character</k> unit have +1 to <b>hit rolls</b>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "dark-angels/land-speeder-vengeance": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deadly Demise D3",
+        "attackType": "ANY",
+        "trigger": "¿Esta unidad es destruida?",
+        "appliedTo": "Enemy",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fightOnDeath",
+            "value": 3
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "type": "Always",
+        "name": "Storm of Vengeance (Once per turn, per unit)",
+        "attackType": "SHOOTING",
+        "trigger": "¿Una unidad enemiga ha disparado y destruido una unidad amiga de Dark Angels dentro de 6\" de esta unidad?",
+        "appliedTo": "SelfUnit",
+        "effects": [],
+        "originalText": "In your opponent's Shooting phase, when an enemy unit has shot, if those attacks <b>destroyed</b> a friendly <k>Dark Angels</k> unit within 6\" of this unit, you can use this ability. If you do, this unit shoots using <b>normal shooting</b> but while doing so this unit can only target that enemy unit."
+      },
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "dark-angels/lazarus": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "The Spiritshield Helm",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 3,
+            "condition": "vsPsychic"
+          },
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 3,
+            "condition": "vsMortalWounds"
+          }
+        ],
+        "originalText": "This unit has <b>Feel No Pain 3+</b> against <b>psychic attacks</b> and <b>mortal wounds</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Intractable Will",
+        "category": "OTHER",
+        "text": "In the Fight phase, when a model in this unit is destroyed, if this unit has not been selected to fight this phase, roll one D6: On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.",
+        "originalText": "In the Fight phase, when a model in this unit is <b>destroyed</b>, if this unit has not been <b>selected to fight</b> this phase, roll one D6:<ul><li>On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "dark-angels/lion-eljonson": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "The Emperor's Shield",
+        "attackType": "ANY",
+        "trigger": "¿La fuerza del ataque es mayor que la resistencia de esta unidad?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toWound",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "Attacks that target this unit with a <b>S</b> greater than this unit's <b>T</b> have -1 to <b>wound rolls</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "Always",
+        "name": "Dark Angels Bodyguard",
+        "category": "OTHER",
+        "text": "While this unit is within 3\" of a friendly Dark Angels Infantry unit, this unit has Lone Operative.",
+        "originalText": "While this unit is within 3\" of a friendly <k>Dark Angels Infantry</k> unit, this unit has <b>Lone Operative</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Fights First",
+        "category": "OTHER",
+        "text": "While every model in a unit has this ability, that unit is a Fights First unit.",
+        "originalText": "While every model in a unit has this ability, that unit is a <b>Fights First</b> unit.\n\nSee the Resolve Fights First Combats step in the Fight phase (12.04)."
+      },
+      {
+        "type": "Always",
+        "name": "Master Strategist",
+        "category": "OTHER",
+        "text": "In your Command phase, you can use this ability. If you do, select one combat doctrine to be active for this unit until the start of your next Command phase, in addition to any other combat doctrine.",
+        "originalText": "In your Command phase, you can use this ability. If you do, select one <b>combat doctrine</b> to be active for this unit until the start of your next Command phase, <u>in addition</u> to any other <b>combat doctrine</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Primarch of the First Legion",
+        "category": "OTHER",
+        "text": "At the start of your Command phase, you can select up to two of the abilities in the Primarch of the First Legion section. Until the start of your next Command phase, this model has those abilities.",
+        "originalText": "At the start of your Command phase, you can select up to two of the abilities in the Primarch of the First Legion section. Until the start of your next Command phase, this model has those abilities."
+      },
+      {
+        "type": "Always",
+        "name": "The Watchers",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 4,
+            "condition": "vsPsychic"
+          },
+          {
+            "category": "damageMitigation",
+            "kind": "fnp",
+            "value": 4,
+            "condition": "vsMortalWounds"
+          }
+        ],
+        "originalText": "This unit has <b>Feel No Pain 4+</b> against <b>psychic attacks</b> and <b>mortal wounds</b>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "dark-angels/nephilim-jetfighter": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deadly Demise D3",
+        "attackType": "ANY",
+        "trigger": "¿Ha sido este modelo destruido?",
+        "appliedTo": "Enemy",
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "kind": "fightOnDeath",
+            "value": 3
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "type": "Always",
+        "name": "Lightning-fast Manoeuvres",
+        "attackType": "SHOOTING",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toWound",
+            "action": "subtractFromRoll",
+            "attackType": "RANGE"
+          }
+        ],
+        "originalText": "Ranged attacks that target this unit have -1 to <b>wound rolls</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Damaged 3",
+        "attackType": "ANY",
+        "trigger": "¿Las heridas restantes son menores o iguales a 3?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "subtractFromRoll"
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "dark-angels/ravenwing-black-knights": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Knights of Caliban",
+        "attackType": "FIGHT",
+        "trigger": "¿Ha cargado esta unidad este turno?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "weaponTarget": "MELEE",
+            "keyword": "ANTI-MONSTER/VEHICLE",
+            "value": "4+"
+          }
+        ],
+        "originalText": "If this unit made a <b>charge move</b> this turn, this unit's melee attacks have <k>[ANTI-MONSTER/VEHICLE 4+]</k>."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "dark-angels/ravenwing-command-squad": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Support",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it. \n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)."
+      },
+      {
+        "type": "Always",
+        "name": "Narthecium",
+        "category": "OTHER",
+        "text": "While this unit contains a Ravenwing Apothecary, in your Command phase, this unit heals D3+1 wounds.",
+        "originalText": "While this unit contains a <k>Ravenwing Apothecary</k>, in your Command phase, this unit <b>heals</b> D3+1 wounds."
+      },
+      {
+        "type": "Always",
+        "name": "Astartes Banner",
+        "attackType": "ANY",
+        "trigger": "¿Contiene esta unidad un Antiguo Ravenwing?",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "statModifier",
+            "target": "unit",
+            "stat": "ObjectiveControl",
+            "mode": "add",
+            "value": 1
+          }
+        ],
+        "originalText": "While this unit contains a <k>Ravenwing Ancient</k>, this unit has +1 <b>OC</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Honour or Death",
+        "attackType": "ANY",
+        "trigger": "¿Contiene esta unidad un Campeón Ravenwing?",
+        "appliedTo": "SelfUnit",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "While this unit contains a <k>Ravenwing Champion</k>:<ul><li>This unit has +1 to <b>advance rolls</b> and <b>charge rolls</b>.</li><li>When you target this unit with the <b>Heroic Intervention stratagem</b>, that use is -1CP.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "dark-angels/ravenwing-dark-talon": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Deadly Demise D3",
+        "attackType": "ANY",
+        "trigger": "ALWAYS",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "OTHER"
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "type": "Always",
+        "name": "Deadly Demise D3",
+        "category": "OTHER",
+        "text": "Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\").",
+        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "type": "Always",
+        "name": "Stasis Bomb",
+        "category": "OTHER",
+        "text": "At the end of your opponent's Fight phase, select one visible enemy unit (excluding AIRCRAFT/Lone Operative units) within 24\" of this unit. That enemy unit is slowed until the end of your opponent's next Movement phase: While a unit is slowed, in your opponent's Movement phase, when that unit is selected to move, unless that unit remains stationary, roll one D6: On a 1-4, that unit suffers D3 mortal wounds and that unit has -2\" M. On a 5-6, that unit suffers 2D3 mortal wounds and that unit has -3\" M.",
+        "originalText": "At the end of your opponent’s Fight phase, select one visible enemy unit (excluding <k>AIRCRAFT</k>/<b>Lone Operative</b> units) within 24\" of this unit. That enemy unit is <b>slowed</b> until the end of your opponent's next Movement phase:<ul><li>While a unit is <b>slowed</b>, in your opponent's Movement phase, when that unit is <b>selected to move</b>, unless that unit <b>remains stationary</b>, roll one D6:<ul><li>On a 1-4, that unit suffers D3 <b>mortal wounds</b> and that unit has -2” <b>M</b>.</li><li>On a 5-6, that unit suffers 2D3 <b>mortal wounds</b> and that unit has -3” <b>M</b>.</li></ul></li></ul>"
+      },
+      {
+        "type": "Always",
+        "name": "Damaged 3",
+        "attackType": "ANY",
+        "trigger": "¿Quedan heridas del modelo iguales o menores a 3?",
+        "appliedTo": "SelfModel",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  },
+  "dark-angels/ravenwing-darkshroud": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "Always",
+        "name": "Icon of Old Caliban",
+        "category": "OTHER",
+        "text": "While a friendly Dark Angels unit is within 6\" of this unit, that unit has Stealth.",
+        "originalText": "While a friendly <k>Dark Angels</k> unit is within 6\" of this unit, that unit has <b>Stealth</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Deadly Demise D3",
+        "category": "OTHER",
+        "text": "Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\").",
+        "originalText": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "type": "Always",
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "type": "Alone",
+        "name": "Lone Operative 15\"",
+        "category": "OTHER",
+        "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by INDIRECT FIRE weapons unless the attacking model is within 12\" of this unit.",
+        "originalText": "Unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within 12\" of this unit, and it cannot be targeted by <k>[INDIRECT FIRE]</k> weapons unless the attacking model is within 12\" of this unit.\n\nIf this ability takes the form <b>Lone Operative X\"</b>, unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within <b>X\"</b> of this unit, and it cannot be targeted by <k>[INDIRECT FIRE]</k> weapons unless the attacking model is within <b>X\"</b> of this unit."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "dark-angels/sammael": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "type": "AsLeader",
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+      },
+      {
+        "type": "Always",
+        "name": "Cut Off Their Escape",
+        "attackType": "ANY",
+        "trigger": "¿Se está enfrentando a una unidad enemiga que no es un MONSTRUO ni VEHÍCULO?",
+        "appliedTo": "Enemy",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "roll": "savingThrow",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "When an enemy unit <b>engaged</b> with this unit (excluding <k>Monster/Vehicle</k> units) makes a <b>fall-back move</b>, that enemy unit must use the <b>desperate escape mode</b>. If that enemy unit is <b>battle‑shocked</b>, ‑1 from those <b>hazard rolls</b>."
+      },
+      {
+        "type": "Always",
+        "name": "Grand Master of the Ravenwing",
+        "category": "OTHER",
+        "text": "This unit has Mobile. In your Command phase, you can use this ability. If you do, select one combat doctrine to be active for this unit until the start of your next Command phase.",
+        "originalText": "<ul><li>This unit has <k>Mobile</k>.</li><li>In your Command phase, you can use this ability. If you do, select one <b>combat doctrine</b> to be active for this unit until the start of your next Command phase.</li></ul>"
+      }
+    ],
+    "rawAbilities": []
+  }
+}

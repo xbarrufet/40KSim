@@ -3,7 +3,9 @@
     "allow": [
       "Bash(openspec context *)",
       "Bash(openspec instructions *)",
-      "Bash(openspec show *)"
+      "Bash(openspec show *)",
+      "Bash(openspec new *)",
+      "Bash(openspec status *)"
     ]
   }
 }
