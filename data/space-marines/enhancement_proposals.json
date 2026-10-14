@@ -1,0 +1,982 @@
+{
+  "space-marines/assault-brethren": [
+    {
+      "slug": "furious-assault-upgrade",
+      "name": "Furious Assault (Upgrade)",
+      "points": 10,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Infantry"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "MELEE",
+          "keyword": "SUSTAINED HITS",
+          "value": "1",
+          "targetCondition": {
+            "keywords": [
+              "MONSTER",
+              "VEHICLE"
+            ],
+            "mode": "excludes"
+          }
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Infantry unit only. This unit's melee attacks have [Sustained Hits 1: non-Monster/Vehicle]."
+    },
+    {
+      "slug": "imperiums-sword",
+      "name": "Imperium's Sword",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. This model has the following weapon:"
+    }
+  ],
+  "space-marines/deathwatch-support": [
+    {
+      "slug": "beacon-angelis",
+      "name": "Beacon Angelis",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "ADEPTUS ASTARTES model only. If this unit is a Kill Team unit, this unit has: Deep Strike. When you target this unit with the Rapid Ingress Stratagem, that use is -1CP."
+    }
+  ],
+  "space-marines/devastator-brethren": [
+    {
+      "slug": "honour-of-vigilance",
+      "name": "Honour of Vigilance",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "keyword": "LETHAL HITS",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [
+        {
+          "condition": "devastator_doctrine",
+          "effects": [
+            {
+              "category": "diceModifier",
+              "appliedTo": "SelfUnit",
+              "roll": "charge",
+              "action": "rerollAll"
+            }
+          ]
+        }
+      ],
+      "originalText": "Adeptus Astartes model only. This unit's ranged attacks have [Lethal Hits]. If the devastator doctrine is active for this unit, this unit can re-roll advance rolls."
+    },
+    {
+      "slug": "master-forged-firearms",
+      "name": "Master-forged Firearms",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry",
+          "Mounted"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "RANGE",
+          "stat": "Attacks",
+          "mode": "add",
+          "value": 1,
+          "targetCondition": {
+            "keywords": [
+              "PSYCHIC"
+            ],
+            "mode": "excludes"
+          }
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "RANGE",
+          "stat": "Strength",
+          "mode": "add",
+          "value": 1,
+          "targetCondition": {
+            "keywords": [
+              "PSYCHIC"
+            ],
+            "mode": "excludes"
+          }
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "RANGE",
+          "stat": "AP",
+          "mode": "add",
+          "value": 1,
+          "targetCondition": {
+            "keywords": [
+              "PSYCHIC"
+            ],
+            "mode": "excludes"
+          }
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "RANGE",
+          "stat": "Damage",
+          "mode": "add",
+          "value": 1,
+          "targetCondition": {
+            "keywords": [
+              "PSYCHIC"
+            ],
+            "mode": "excludes"
+          }
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Infantry/Mounted model only. This model's ranged attacks (excluding [Psychic] attacks) have +1 A, S, AP and D."
+    }
+  ],
+  "space-marines/gauntlet-task-force": [
+    {
+      "slug": "damocles-class-uplink",
+      "name": "Damocles-class Uplink",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Captain"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Captain model only. In your Movement phase, if this unit is embarked within a Transport unit, you can select one friendly Adeptus Astartes Infantry unit within 6\" of that Transport unit and select one combat doctrine. That combat doctrine is active for that Infantry unit."
+    },
+    {
+      "slug": "linebreaker-onslaught",
+      "name": "Linebreaker Onslaught",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "charge",
+          "action": "rerollAll"
+        },
+        {
+          "category": "unitKeyword",
+          "appliedTo": "Enemy",
+          "keyword": "SNAP SHOOTING",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Infantry model only. If this unit disembarked this turn: This unit can re-roll charge rolls. Enemy units cannot target this unit with snap shooting attacks."
+    }
+  ],
+  "space-marines/gladius-task-force": [
+    {
+      "slug": "adept-of-the-codex",
+      "name": "Adept of the Codex",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Captain"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "TACTICAL_DOCTRINE",
+          "value": "active"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Captain model only. The tactical doctrine is active for this unit in addition to any other combat doctrine."
+    },
+    {
+      "slug": "artificer-armour",
+      "name": "Artificer Armour",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "stat": "Save",
+          "mode": "setValue",
+          "value": 2
+        },
+        {
+          "category": "damageMitigation",
+          "appliedTo": "SelfModel",
+          "kind": "fnp",
+          "value": 5,
+          "condition": "any"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. This model has: 2+ Sv. Feel No Pain 5+."
+    },
+    {
+      "slug": "laurels-of-triumph",
+      "name": "Laurels of Triumph",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "MELEE",
+          "stat": "Strength",
+          "mode": "add",
+          "value": 1
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "MELEE",
+          "stat": "AP",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [
+        {
+          "condition": "assault_doctrine",
+          "effects": [
+            {
+              "category": "statModifier",
+              "appliedTo": "SelfUnit",
+              "weaponTarget": "MELEE",
+              "stat": "Strength",
+              "mode": "add",
+              "value": 2
+            },
+            {
+              "category": "statModifier",
+              "appliedTo": "SelfUnit",
+              "weaponTarget": "MELEE",
+              "stat": "AP",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "originalText": "Adeptus Astartes model only. This model's melee attacks have: +1 S and AP. Or: If the assault doctrine is active for this unit, +2 S and AP."
+    },
+    {
+      "slug": "standard-of-the-emperor-ascendant",
+      "name": "Standard of the Emperor Ascendant",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Ancient"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "stat": "ObjectiveControl",
+          "mode": "add",
+          "value": 1
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "stat": "Leadership",
+          "mode": "add",
+          "value": 1
+        },
+        {
+          "category": "damageMitigation",
+          "appliedTo": "SelfModel",
+          "kind": "fnp",
+          "value": 5,
+          "condition": "any"
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "MELEE",
+          "stat": "Attacks",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Ancient model only. This model has: +1 OC and Ld. Feel No Pain 5+. The following ability: Ancient Exhortation (Once per battle, per army): When this unit is selected to fight, you can use this ability. If you do, this unit's melee attacks have +1 A until the end of the phase."
+    }
+  ],
+  "space-marines/gravis-linebreaker-force": [
+    {
+      "slug": "indefatigable-fortitude",
+      "name": "Indefatigable Fortitude",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Gravis"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "Enemy",
+          "roll": "toWound",
+          "action": "subtractFromRoll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Gravis model only. Attacks that target this unit with a S greater than this unit's T have -1 to wound rolls."
+    },
+    {
+      "slug": "relentless-advance",
+      "name": "Relentless Advance",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Gravis"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "SCOUTS",
+          "value": "5\""
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Gravis model only. This unit has Scouts 5\"."
+    }
+  ],
+  "space-marines/gravis-siege-force": [
+    {
+      "slug": "immovable-conquerors-upgrade",
+      "name": "Immovable Conquerors (Upgrade)",
+      "points": 15,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Gravis"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "stat": "ObjectiveControl",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Gravis unit only. This unit has +1 OC."
+    },
+    {
+      "slug": "narthecis-gauntlet",
+      "name": "Narthecis Gauntlet",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "heal",
+          "appliedTo": "SelfUnit",
+          "amount": "D3+1"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Apothecary Biologis model only. in your Command phase, this unit heals D3+1 wounds."
+    }
+  ],
+  "space-marines/ironclad-champions": [
+    {
+      "slug": "artificer-sarcophagus-upgrade",
+      "name": "Artificer Sarcophagus (Upgrade)",
+      "points": 40,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Dreadnought"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "Enemy",
+          "roll": "damage",
+          "action": "subtractFromRoll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Dreadnought unit only. Attacks that target this unit have -1 D."
+    },
+    {
+      "slug": "venerable-champion-aura-upgrade",
+      "name": "Venerable Champion (Aura) (Upgrade)",
+      "points": 30,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Dreadnought"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "Ally",
+          "roll": "toHit",
+          "action": "rerollOnes",
+          "targetCondition": {
+            "keywords": [
+              "INFANTRY",
+              "MOUNTED"
+            ],
+            "mode": "includes"
+          }
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Dreadnought unit only. While a friendly Adeptus Astartes Infantry/Mounted unit is within 6\" of this unit, that unit's attacks can re-roll hit rolls of 1."
+    }
+  ],
+  "space-marines/ironstorm-spearhead": [
+    {
+      "slug": "gunnery-honours-upgrade",
+      "name": "Gunnery Honours (Upgrade)",
+      "points": 15,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Vehicle"
+        ],
+        "excludedKeywords": [
+          "Fly",
+          "Walker",
+          "Dedicated Transport"
+        ],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "keyword": "HEAVY",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Vehicle unit only (excluding Dedicated Transport/Fly/Walker units). This unit's ranged attacks have [Heavy]."
+    },
+    {
+      "slug": "redoubtable-machine-spirit-upgrade",
+      "name": "Redoubtable Machine Spirit (Upgrade)",
+      "points": 25,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Vehicle"
+        ],
+        "excludedKeywords": [
+          "Fly",
+          "Walker",
+          "Dedicated Transport"
+        ],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "stat": "Invulnerable",
+          "mode": "setValue",
+          "value": 5
+        },
+        {
+          "category": "heal",
+          "appliedTo": "SelfUnit",
+          "amount": "1"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Vehicle unit only (excluding Dedicated Transport/Fly/Walker units). This unit: Has 5+ InSv. At the end of your Command phase, heals 1 wound."
+    }
+  ],
+  "space-marines/phobos-shadow-force": [
+    {
+      "slug": "execute-and-redeploy",
+      "name": "Execute and Redeploy",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Phobos"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Phobos model only. In your Shooting phase, after this unit has shot, if this unit is unengaged, this unit can make a normal move of up to 6\". If it does, this unit is not eligible to declare a charge until the end of the turn."
+    },
+    {
+      "slug": "venator-omni-auspex",
+      "name": "Venator Omni-auspex",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Phobos"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "toWound",
+          "action": "rerollOnes",
+          "attackType": "ALL"
+        }
+      ],
+      "conditionalEffects": [
+        {
+          "condition": "assault_doctrine",
+          "effects": [
+            {
+              "category": "diceModifier",
+              "appliedTo": "SelfUnit",
+              "roll": "toWound",
+              "action": "rerollFailed",
+              "attackType": "ALL"
+            }
+          ]
+        }
+      ],
+      "originalText": "Phobos model only. This unit's attacks that target a hidden unit can: Re-roll wound rolls of 1. Or: If the assault doctrine is active for this unit, re-roll wound rolls of 1 and 2."
+    }
+  ],
+  "space-marines/phobos-shock-force": [
+    {
+      "slug": "seal-of-shrouding",
+      "name": "Seal of Shrouding",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Phobos"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Phobos model only. Enemy units cannot target this unit with snap shooting attacks."
+    },
+    {
+      "slug": "venator-omni-auspex",
+      "name": "Venator Omni-auspex",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Phobos"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "toWound",
+          "action": "rerollOnes",
+          "attackType": "ALL"
+        }
+      ],
+      "conditionalEffects": [
+        {
+          "condition": "assault_doctrine",
+          "effects": [
+            {
+              "category": "diceModifier",
+              "appliedTo": "SelfUnit",
+              "roll": "toWound",
+              "action": "rerollFailed",
+              "attackType": "ALL"
+            }
+          ]
+        }
+      ],
+      "originalText": "Phobos model only. This unit's attacks that target a hidden unit can: Re-roll wound rolls of 1. Or: If the assault doctrine is active for this unit, re-roll wound rolls of 1-2."
+    }
+  ],
+  "space-marines/stormlance-task-force": [
+    {
+      "slug": "auspex-triangulation-shrines-upgrade",
+      "name": "Auspex Triangulation Shrines (Upgrade)",
+      "points": 10,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Speeder"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes speeder unit only. At the start of your Shooting phase, select one visible enemy unit within 12\" of this unit. That enemy unit is spotted: While a unit is spotted, that unit has +3\" detection range."
+    },
+    {
+      "slug": "supercharged-engines-upgrade",
+      "name": "Supercharged Engines (Upgrade)",
+      "points": 10,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Mounted"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "charge",
+          "action": "rerollAll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Mounted unit only. This unit can re-roll advance rolls."
+    }
+  ],
+  "space-marines/tactical-brethren": [
+    {
+      "slug": "laurels-of-vigilance",
+      "name": "Laurels of Vigilance",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. (Once per battle round, per army) When you use the Fire Overwatch/Heroic Intervention stratagem, if you target a friendly Adeptus Astartes Battleline unit within 12\" of this model with that stratagem, that use is -1 CP."
+    },
+    {
+      "slug": "tactical-insight",
+      "name": "Tactical Insight",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Captain"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "TACTICAL DOCTRINE",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Captain model only. The tactical doctrine is active for this unit in addition to any other combat doctrine."
+    }
+  ],
+  "space-marines/tacticus-attack-force": [
+    {
+      "slug": "martial-paragon",
+      "name": "Martial Paragon",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Tacticus"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfModel",
+          "roll": "toHit",
+          "action": "rerollOnes",
+          "attackType": "ALL"
+        },
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfModel",
+          "roll": "toWound",
+          "action": "rerollOnes",
+          "attackType": "ALL"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Tacticus model only. This unit's attacks can: Re-roll one hit roll. Re-roll one wound roll."
+    },
+    {
+      "slug": "spearpoint-war-leader",
+      "name": "Spearpoint War Leader",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Tacticus"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "SCOUTS",
+          "value": "6\""
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Tacticus model only. This unit has Scouts 6\"."
+    }
+  ],
+  "space-marines/tacticus-firestorm-force": [
+    {
+      "slug": "cyber-familiar",
+      "name": "Cyber-familiar",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Tacticus"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Tacticus model only. When both players have deployed their armies, you can redeploy up to three friendly Adeptus Astartes Infantry units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves."
+    },
+    {
+      "slug": "tempered-in-battle-aura",
+      "name": "Tempered in Battle (Aura)",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Tacticus"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "Ally",
+          "roll": "battleshock",
+          "action": "rerollAll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Tacticus model only. Friendly Adeptus Astartes units within 6\" of this model can re-roll leadership rolls."
+    }
+  ],
+  "space-marines/terminator-storm-force": [
+    {
+      "slug": "champion-of-the-first-company",
+      "name": "Champion of the First Company",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Terminator"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "keyword": "LETHAL HITS",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Terminator model only. This unit's melee attacks have [Lethal Hits]."
+    },
+    {
+      "slug": "corporeum-reliquary",
+      "name": "Corporeum Reliquary",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Terminator"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Terminator model only. In your first Movement phase, this unit can make an ingress move."
+    }
+  ]
+}

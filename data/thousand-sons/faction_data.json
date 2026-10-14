@@ -1,0 +1,1825 @@
+{
+  "faction": "Thousand Sons",
+  "slug": "thousand-sons",
+  "army_rules": [
+    {
+      "id": 1741,
+      "name": "Cabal of Sorcerers",
+      "excludedFactionIds": [
+        1894
+      ],
+      "components": [
+        {
+          "id": 48909,
+          "type": "text",
+          "textContent": "If your Army Faction is **THOUSAND SONS**, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed on the right. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48510,
+          "type": "header",
+          "textContent": "Psychic Test Sequence",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49446,
+          "type": "text",
+          "textContent": "**Roll 2D6**",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49880,
+          "type": "image",
+          "textContent": "-",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": "https://d3ocysny7bghv8.cloudfront.net/c6dd3547-2fd3-4546-8e5d-0197f28397fa",
+          "altText": "Roll 2D6",
+          "bulletPoints": []
+        },
+        {
+          "id": 48847,
+          "type": "text",
+          "textContent": "**Channel the Warp**\n(Optional)",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49217,
+          "type": "image",
+          "textContent": "-",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": "https://d3ocysny7bghv8.cloudfront.net/fde5cb75-b34e-4f5d-b218-468f59705963",
+          "altText": "Optionally, you can roll one additional D6.",
+          "bulletPoints": []
+        },
+        {
+          "id": 49615,
+          "type": "text",
+          "textContent": "Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48691,
+          "type": "text",
+          "textContent": "If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48791,
+          "type": "accordion",
+          "textContent": "Select one enemy unit within 24\" of and visible to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.",
+          "title": "Destiny’s Ruin (Psychic)",
+          "subtitle": "Warp Charge - 5",
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48525,
+          "type": "accordion",
+          "textContent": "Select one friendly **THOUSAND SONS** or **SCINTILLATING LEGIONS** unit that is not within Engagement Range of one or more enemy units and is within 24\" of and visible to the manifesting model. That unit can make a Normal move of up to D6\". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6\" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.",
+          "title": "Temporal Surge (Psychic)",
+          "subtitle": "Warp Charge - 6",
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48949,
+          "type": "accordion",
+          "textContent": "Select one enemy unit within 24\" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12\" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.",
+          "title": "Doombolt (Psychic)",
+          "subtitle": "Warp Charge - 7",
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49346,
+          "type": "accordion",
+          "textContent": "Select one enemy unit within 24\" of and visible to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.",
+          "title": "Twist of Fate (Psychic)",
+          "subtitle": "Warp Charge - 9",
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49150,
+          "type": "loreAccordion",
+          "textContent": "The Thousand Sons are wreathed in the energies of the Warp. It is the gift of their sorcerous leaders to channel this power through battlefield ritual, to divine forbidden knowledge, to weave illusory magicks or to ravage their foes with empyric fire and mutation.",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    },
+    {
+      "id": 1749,
+      "name": "Pact of Sorcery",
+      "excludedFactionIds": [],
+      "components": [
+        {
+          "id": 49083,
+          "type": "text",
+          "textContent": "When mustering your army, unless specifically stated otherwise, you cannot select **SCINTILLATING LEGIONS** as your Army Faction.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48815,
+          "type": "loreAccordion",
+          "textContent": "The daemons of Tzeentch are drawn through the barriers of the Warp by rituals of transmutation.",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    }
+  ],
+  "detachments_count": 8,
+  "detachments": [
+    {
+      "id": 10382,
+      "slug": "grand-coven",
+      "name": "Grand Coven",
+      "pointsCost": 3,
+      "forceDispositions": [
+        "Disruption",
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1862,
+        "slug": "thousand-sons",
+        "name": "Thousand Sons",
+        "commonName": "Thousand Sons"
+      },
+      "enhancements": [
+        {
+          "id": 37585,
+          "name": "Eldritch Vortex of E’Taph",
+          "points": 35,
+          "rules": "**THOUSAND SONS** model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37008,
+          "name": "Incandaeum",
+          "points": 15,
+          "rules": "**EXALTED SORCERER** model only. Once per battle, when selecting a Ritual for the bearer to attempt, you can select Doombolt, even if a model from your army has already attempted to manifest that Ritual this phase.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Exalted Sorcerer"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37021,
+          "name": "Lord of Forbidden Lore",
+          "points": 20,
+          "rules": "**THOUSAND SONS** model only. Each time the bearer manifests a Ritual, while resolving that Ritual, add 6\" to its range.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Psyker"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37539,
+          "name": "Umbralefic Crystal",
+          "points": 30,
+          "rules": "**THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:\n▪ Place this unit in **strategic reserves**.\n▪ This unit has **Deep Strike** until the start of your next Shooting phase.\n▪ This unit must make an **ingress move** in your next Movement phase (including in your first turn).",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44825,
+          "name": "Psychic Dominion",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **THOUSAND SONS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, all attacks made against your unit with Psychic weapons have the **[HAZARDOUS]** ability and all models in your unit have the Feel No Pain 4+ ability against Psychic Attacks.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44299,
+          "name": "Destined by Fate",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase, just after a saving throw is failed for a **THOUSAND SONS PSYKER** model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.",
+          "targetRules": "That **PSYKER** model.",
+          "effectRules": "Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44042,
+          "name": "Egotistical Power",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One **THOUSAND SONS PSYKER** unit from your army.",
+          "effectRules": "Select the Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium ability (see Kindred Sorcery). Until the start of your next Command phase, that ability applies to your unit instead of any other Kindred Sorcery ability, even if you have already selected that ability this battle.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44308,
+          "name": "Desecration of Worlds",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One **THOUSAND SONS PSYKER** unit from your army within range of an objective marker you control.",
+          "effectRules": "That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44074,
+          "name": "Arcane Focus",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, just after you take a Psychic test for a **THOUSAND SONS** model from your army that Channelled the Warp (before resolving that Ritual).",
+          "targetRules": "That **THOUSAND SONS** model.",
+          "effectRules": "Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44417,
+          "name": "Devastating Sorcery",
+          "cpCost": 2,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **THOUSAND SONS PSYKER** unit from your army that has not been selected to shoot this phase.",
+          "effectRules": "Until the end of the phase, add 9\" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7826,
+          "name": "Kindred Sorcery",
+          "components": [
+            {
+              "id": 49406,
+              "type": "text",
+              "textContent": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49640,
+              "type": "header",
+              "textContent": "Imbued Manifestation",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48924,
+              "type": "text",
+              "textContent": "Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49651,
+              "type": "header",
+              "textContent": "Psychic Maelstrom",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49312,
+              "type": "text",
+              "textContent": "Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49184,
+              "type": "header",
+              "textContent": "Wrath of the Immaterium",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48798,
+              "type": "text",
+              "textContent": "Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49451,
+              "type": "loreAccordion",
+              "textContent": "For an instant, the chanting voices of the Thousand Sons achieve eerie synchronisation. Their words of malign incantation roll out like the peal of some cursed bell amidst the Empyrean to signal the onset of the next fateful tide of ritual power.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10367,
+      "slug": "hexwarp-thrallband",
+      "name": "Hexwarp Thrallband",
+      "pointsCost": 3,
+      "forceDispositions": [
+        "Take and Hold",
+        "Reconnaissance"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1862,
+        "slug": "thousand-sons",
+        "name": "Thousand Sons",
+        "commonName": "Thousand Sons"
+      },
+      "enhancements": [
+        {
+          "id": 36878,
+          "name": "Arcane Might",
+          "points": 20,
+          "rules": "**THOUSAND SONS** model only. Add 1 to the Strength characteristic of Psychic weapons equipped by models in the bearer’s unit. While the bearer’s unit is wholly within your army’s Flow of Magic, add 2 to the Strength characteristic of Psychic weapons equipped by models in that unit instead.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 36972,
+          "name": "Empowered Manifestation",
+          "points": 20,
+          "rules": "**THOUSAND SONS** model only. While the bearer’s unit is wholly within your army’s Flow of Magic, you can add 6\" to the range of Psychic abilities the bearer has that specify a range (including Rituals) and each time a model in the bearer’s unit takes a Hazardous test for a Psychic weapon, you can re‑roll the result.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37274,
+          "name": "Empyric Onslaught",
+          "points": 25,
+          "rules": "**THOUSAND SONS** model only. While the bearer’s unit is wholly within your army’s Flow of Magic, add 3 to the Attacks characteristic of ranged Psychic weapons equipped by the bearer.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37196,
+          "name": "Noctilith Mantle",
+          "points": 15,
+          "rules": "**THOUSAND SONS** model only. While the bearer’s unit is on the battlefield, it is wholly within your army’s Flow of Magic. Models in that unit cannot be selected to use any Rituals.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44460,
+          "name": "Warding Hex",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Command phase.",
+          "targetRules": "One **THOUSAND SONS PSYKER** unit from your army within range of an objective marker you control, if that objective marker is wholly within your army’s Flow of Magic.",
+          "effectRules": "That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.&#x20;",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43806,
+          "name": "Wrath of the Doomed",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **THOUSAND SONS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if your unit is wholly within your army’s Flow of Magic: on a 4+, do not remove it from play. That destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44886,
+          "name": "Strands of Time",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, just after a **THOUSAND SONS PSYKER** unit from your army Falls Back.",
+          "targetRules": "That **THOUSAND SONS PSYKER** unit.",
+          "effectRules": "Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Fell Back. If your unit is wholly within your army’s Flow of Magic when it is targeted with this Stratagem, then until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44830,
+          "name": "Through The Veil",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Start of the Reinforcements step of your Movement phase.",
+          "targetRules": "One **RUBRIC MARINES** or **SCARAB OCCULT TERMINATORS** unit from your army that is in Strategic Reserves.",
+          "effectRules": "If it is a **RUBRIC MARINES** unit, until the end of the phase, it has the Deep Strike ability. When your unit is set up on the battlefield using the Deep Strike ability, if it is a **SCARAB OCCULT TERMINATOR** unit it can be set up anywhere on the battlefield that is wholly within your army’s Flow of Magic and more than 6\" horizontally away from all enemy models.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "If a **SCARAB OCCULT TERMINATORS** unit is targeted with this Stratagem, it is not eligible to declare a charge in the same turn."
+        },
+        {
+          "id": 43765,
+          "name": "Scouring Warpflame",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **THOUSAND SONS PSYKER** unit from your army that has not been selected to shoot this phase and is wholly within your army’s Flow of Magic.",
+          "effectRules": "Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability. After your unit has shot this phase, select one enemy unit hit by one or more of those attacks. Until the end of the phase, models in that unit cannot have the Benefit of Cover.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44874,
+          "name": "Kaleidoscopic Tempest",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **THOUSAND SONS PSYKER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "▫ Your unit has **Stealth**.\n▫ If your unit is wholly within your army’s Flow of Magic, your unit has ‐3 **detection range**.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7933,
+          "name": "Flow of Magic",
+          "components": [
+            {
+              "id": 48942,
+              "type": "text",
+              "textContent": "Certain areas of the battlefield are within your army’s Flow of Magic, as follows:\n\n■ Your deployment zone is always within your army’s Flow of Magic.\n■ At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Flow of Magic.\n■ At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Flow of Magic.\n\nEach time a **THOUSAND SONS** model from your army makes a Psychic Attack, re‑roll a Wound roll of 1. If such a model is wholly within your army’s Flow of Magic, each time it makes a Psychic Attack, add 1 to the Wound roll instead.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49837,
+              "type": "loreAccordion",
+              "textContent": "With each site seized by the thrallband’s warriors, the flow of arcane energies increases, and the veil between reality and the Warp erodes. The resultant influxes of Warp energy are potent enough to invoke the flesh‑change and must be channelled carefully by the thrallband’s Sorcerers. With masterful skill, they wield these mutagenic energies, expertly syphoning excess magic to empower themselves and the warriors at their command while maintaining control of their ever‑expanding ritual.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10292,
+      "slug": "ritual-of-regeneration",
+      "name": "Ritual of Regeneration",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Take and Hold"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1862,
+        "slug": "thousand-sons",
+        "name": "Thousand Sons",
+        "commonName": "Thousand Sons"
+      },
+      "enhancements": [
+        {
+          "id": 37323,
+          "name": "Curse of Life",
+          "points": 20,
+          "rules": "<k>Infantry/Mounted Thousand Sons Psyker</k> model only. When this model <b>heals</b> as a result of the <b>Sorcerous Invigoration detachment rule</b>, you can add 3 to the number of wounds <b>healed</b>. ",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry",
+                "Psyker"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Mounted",
+                "Psyker"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37294,
+          "name": "Eruption of Vitality",
+          "points": 35,
+          "rules": "**INFANTRY/MOUNTED THOUSAND SONS PSYKER** model only. (Once per battle, per army) When this model is **destroyed**, at the end of the phase, roll one D6:\n▫ On a 2+, set up this model on the battlefield, **unengaged** and as close as possible to where it was **destroyed**. This model is not part of an **attached** unit and its unit has a **starting strength** of 1. This model has 3 wounds remaining.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Mounted",
+                "Psyker"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry",
+                "Psyker"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43899,
+          "name": "Relentless Rebirth",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase, when a friendly <k>Infantry/Mounted Thousand Sons Psyker</k> unit suffers a mortal wound.",
+          "targetRules": "That <k>Infantry/Mounted Thousand Sons Psyker</k> unit.",
+          "effectRules": "Your unit has <b>Feel No Pain 5+</b> against <b>mortal wounds</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43942,
+          "name": "Multitudinous Limbs",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Movement phase, when a friendly <k>Infantry/Mounted Thousand Sons Psyker</k> unit is selected to make an <b>advance/fall back move</b>.",
+          "targetRules": "That <k>Infantry/Mounted Thousand Sons Psyker</k> unit.",
+          "effectRules": "That move does not prevent your unit from being <b>eligible to start an action</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44277,
+          "name": "Mutagenic Magicks",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Start of the Fight phase.",
+          "targetRules": "One friendly <b>engaged</b> <k>Thousand Sons Psyker</k> unit.",
+          "effectRules": "Select one enemy unit engaged with your unit. Roll six D6:\r<ul><li>For each 4+, that enemy unit suffers 1 <b>mortal wound</b>.</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7949,
+          "name": "Sorcerous Invigoration",
+          "components": [
+            {
+              "id": 48603,
+              "type": "text",
+              "textContent": "(Once per turn, per unit) When a friendly <k>Thousand Sons Psyker</k> unit (excluding <k>Monster</k> units) successfully manifests a <b>Ritual</b>, that unit <b>heals</b> D3 wounds.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48893,
+              "type": "loreAccordion",
+              "textContent": "<i>The sorcerous workings unleashed by this coven draw upon the energies of the Warp to effect relentless change, reknitting damaged flesh, sealing shattered armour and infusing even the most gruesomely mangled bodies with relentless life.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10385,
+      "slug": "rubricae-phalanx",
+      "name": "Rubricae Phalanx",
+      "pointsCost": 3,
+      "forceDispositions": [
+        "Take and Hold",
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1862,
+        "slug": "thousand-sons",
+        "name": "Thousand Sons",
+        "commonName": "Thousand Sons"
+      },
+      "enhancements": [
+        {
+          "id": 36915,
+          "name": "Arcane Thralls (Aura)",
+          "points": 5,
+          "rules": "**THOUSAND SONS** model only. While a friendly **RUBRICAE** unit is within 9\" of the bearer, you can re-roll Battle-shock tests taken for that unit.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37547,
+          "name": "Lord of the Rubricae",
+          "points": 15,
+          "rules": "**THOUSAND SONS** model only. While the bearer is leading a unit, each time a **RUBRICAE** model in that unit makes an attack, add 1 to the Hit roll.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37028,
+          "name": "Risen Rubricae",
+          "points": 30,
+          "rules": "**THOUSAND SONS** model only. At the start of the Declare Battle Formations step, select either two **RUBRICAE BATTLELINE** units from your army or one other **RUBRICAE** unit from your army; models in the selected units have the Infiltrators ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 36771,
+          "name": "Stave Abominus",
+          "points": 20,
+          "rules": "**THOUSAND SONS INFANTRY** model only. The bearer’s melee weapons have the **[SUSTAINED HITS D3]** and **[DEVASTATING WOUNDS]** abilities.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44255,
+          "name": "Ardent Automata",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, just after a **RUBRICAE** unit from your army Falls Back.",
+          "targetRules": "That **RUBRICAE** unit.",
+          "effectRules": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43952,
+          "name": "Inexorable Advance",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One **RUBRICAE** unit from your army.",
+          "effectRules": "Until the end of the turn, your unit can ignore any or all modifiers to its Move characteristic and to Advance rolls made for it, and ranged weapons equipped by models in your unit have the **[ASSAULT]** ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44185,
+          "name": "Infernal Fusillade",
+          "cpCost": 1,
+          "category": "wargear",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **THOUSAND SONS PSYKER** unit from your army that has not been selected to shoot this phase.",
+          "effectRules": "Until the end of the phase, all inferno bolt pistols, inferno boltguns, inferno combi‑bolters and inferno combi‑weapons equipped by models in your unit have the **[PSYCHIC]** ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44624,
+          "name": "Revenge of the Rubricae",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after a **THOUSAND SONS PSYKER** model from your army is destroyed.",
+          "targetRules": "One **RUBRICAE** unit from your army that was within 6\" of that **PSYKER** model when it was destroyed.",
+          "effectRules": "After the attacking unit has shot, your **RUBRICAE** unit can shoot as if it were your Shooting phase, but when resolving those attacks it can only target the enemy unit that just destroyed your **PSYKER** model (and only if it is an eligible target).",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44896,
+          "name": "Implacable Guardians",
+          "cpCost": 2,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **RUBRIC MARINES PSYKER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time an attack is allocated to a model in your unit (excluding **PSYKER** models), subtract 1 from the Damage characteristic of that attack.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44655,
+          "name": "Unwavering Phalanx",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "opponentsTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your opponent’s Charge phase, just after an enemy unit ends a Charge move.",
+          "targetRules": "One **RUBRIC MARINES** unit from your army within Engagement Range of that enemy unit.",
+          "effectRules": "Until the end of the turn, attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7715,
+          "name": "All is Dust",
+          "components": [
+            {
+              "id": 49111,
+              "type": "text",
+              "textContent": "Each time an attack with an unmodified Damage characteristic of 1 is allocated to a **RUBRICAE** model from your army, add 1 to any armour saving throw made against that attack.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48431,
+              "type": "loreAccordion",
+              "textContent": "When gathered in significant numbers, empyric eddies gust around the eerily silent Rubricae, reinforcing the sorcerous shackles that bind their spirits to their armour. So empowered, the Thousand Sons’ battle-brothers become nigh invulnerable. The rune-etched sarcophagus of their battle plate must be hacked apart piece by piece before the unquiet spirit within submits.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10310,
+      "slug": "sekhetar-cohort",
+      "name": "Sekhetar Cohort",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Disruption"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1862,
+        "slug": "thousand-sons",
+        "name": "Thousand Sons",
+        "commonName": "Thousand Sons"
+      },
+      "enhancements": [
+        {
+          "id": 37044,
+          "name": "Occulus Infernum",
+          "points": 20,
+          "rules": "<k>Sorcerer/Exalted Sorcerer</k> model only. In your Movement phase, at the start or end of this unit’s move, you can select one friendly <k>SEKHETAR ROBOTS</k> unit within 6\" of this unit. That unit’s ranged attacks have +1 <b>BS</b> until the start of your next turn.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Sorcerer"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Exalted Sorcerer"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36911,
+          "name": "Walking Rampart",
+          "points": 30,
+          "rules": "<k>Sorcerer</k>/<k>Exalted Sorcerer</k> model only. This model has the following abilities:\r<ul><li><b>Soul Bound:</b> In your Movement phase, at the start or end of this unit’s move, you can select one friendly <k>SEKHETAR ROBOTS</k> unit within 3\" of this model. That <k>SEKHETAR ROBOTS</k> unit <b>heals</b> D3+1 wounds.</li>\r<li><b>Kine‑shielded Guardians:</b> While this model is within 3\" of a friendly <k>SEKHETAR ROBOTS</k> unit, this model has <b>Lone Operative</b>.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Exalted Sorcerer"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Sorcerer"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44075,
+          "name": "Ectoplasmic Extrusion",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>SEKHETAR ROBOTS</k> unit within 12\" of a friendly <k>Thousand Sons Psyker</k> unit starts an <b>action</b>.",
+          "targetRules": "That <k>SEKHETAR ROBOTS</k> unit.",
+          "effectRules": "That <b>action</b> does not prevent your unit from being <b>eligible to shoot</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44286,
+          "name": "Warp Fields",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, when an enemy unit targets a friendly <k>SEKHETAR ROBOTS</k> unit within 12\" of a friendly <k>Thousand Sons Psyker</k> unit.",
+          "targetRules": "That <k>SEKHETAR ROBOTS</k> unit.",
+          "effectRules": "Ranged attacks that target your unit with a <b>S</b> greater than your unit’s <b>T</b> have ‑1 to <b>wound rolls</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44490,
+          "name": "Arcane Venting",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "End of your Movement phase.",
+          "targetRules": "One friendly <k>SEKHETAR ROBOTS</k> unit.",
+          "effectRules": "Select one <b>objective</b> your unit is controlling. That <b>objective</b> is <b>secured</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7868,
+          "name": "Ensorcelled Animus",
+          "components": [
+            {
+              "id": 49554,
+              "type": "text",
+              "textContent": "<ul><li>Friendly <k>SEKHETAR ROBOTS</k> unit’s attacks have <k>[Psychic]</k>.</li>\r<li>Friendly <k>Thousand Sons Psyker</k> units have the following ability:</li></ul>\r\n\n<b>Infusion (Aura):</b> While a friendly <k>SEKHETAR ROBOTS</k> unit is within 12\" of this unit, that unit’s melee attacks have +1 <b>WS</b>.\n",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49858,
+              "type": "loreAccordion",
+              "textContent": "<i>Some amongst the sorcerers of the Thousand Sons have learned to channel their wills through the mechanical bodies of Sekhetar Robots, rendering the constructs extensions of their own subtle bodies.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10270,
+      "slug": "servants-of-change",
+      "name": "Servants of Change",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Reconnaissance"
+      ],
+      "uniqueKeyword": "Mutant",
+      "faction": {
+        "id": 1862,
+        "slug": "thousand-sons",
+        "name": "Thousand Sons",
+        "commonName": "Thousand Sons"
+      },
+      "enhancements": [
+        {
+          "id": 37404,
+          "name": "Thicket of Bladed Bone (Upgrade)",
+          "points": 10,
+          "rules": "<k>Spawn</k> unit only. This unit’s melee attacks have:\r<ul><li>+1 <b>AP</b>.</li>\r<li><k>[Cleave 1]</k>.</li></ul>",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Chaos Spawn"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36958,
+          "name": "Unravelled Fates",
+          "points": 15,
+          "rules": "<k>Tzaangor Shaman</k> model only. In your Movement phase, at the start or end of this unit's move, you can select one friendly <b>battle-shocked</b> <k>Mutant</k> unit within 6\" of this model. That unit is no longer <b>battle-shocked</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47048,
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44038,
+          "name": "The Land Writhes",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, when a friendly <k>Monster Mutant</k> unit is <b>selected to move</b>.",
+          "targetRules": "That <k>Monster Mutant</k> unit.",
+          "effectRules": "Your unit has <k>MOBILE</k>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44161,
+          "name": "Prismatic Displacement",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Movement phase, when a friendly <k>Infantry/Mounted Mutant</k> unit is selected to make an <b>advance/fall back move</b>.",
+          "targetRules": "That <k>Infantry/Mounted Mutant</k> unit.",
+          "effectRules": "\r<ul><li>Your unit’s ranged attacks have <k>[ASSAULT]</k> until the end of the turn.</li>\r<li>That move does not prevent your unit from being <b>eligible to shoot/declare a charge</b>.</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44657,
+          "name": "Temporal Instability",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Movement phase, when a friendly <k>Infantry/Mounted Mutant</k> unit is selected to make an <b>advance/fall back move</b>.",
+          "targetRules": "That <k>Infantry/Mounted Mutant</k> unit.",
+          "effectRules": "In a turn your unit made an <b>advance/fall-back move</b>, that move does not prevent your unit from being <b>eligible to start an action</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7781,
+          "name": "All-seeing Mutant Hordes",
+          "components": [
+            {
+              "id": 49088,
+              "type": "text",
+              "textContent": "<ul><li>Friendly <k>Tzaangors</k> units have <k>Battleline</k>.</li>\r<li>In your Shooting phase, while a friendly <k>MUTANT</k> unit is shooting, enemy units have +6\" <b>detection range</b>.</li></ul>\rThis <b>detachment</b> has the <k>MUTANT</k> tag and cannot be taken with another <k>MUTANT</k> <b>detachment</b>.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49733,
+              "type": "loreAccordion",
+              "textContent": "<i>Beneath the multitudinous eyes of so many servants of Tzeentch, reality itself shifts and mutates, leaving the foe exposed to the onrushing mutant masses.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10353,
+      "slug": "warpforged-cabal",
+      "name": "Warpforged Cabal",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1862,
+        "slug": "thousand-sons",
+        "name": "Thousand Sons",
+        "commonName": "Thousand Sons"
+      },
+      "enhancements": [
+        {
+          "id": 37357,
+          "name": "Biomechanical Mutation",
+          "points": 15,
+          "rules": "**THOUSAND SONS** model only. In your Command phase, you can select one friendly **THOUSAND SONS VEHICLE** model within 6\" of this model. That model regains up to D3 lost wounds.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37169,
+          "name": "Perplexing Cloak",
+          "points": 20,
+          "rules": "**THOUSAND SONS INFANTRY** model only. While the bearer is within 3\" of one or more friendly **THOUSAND SONS VEHICLE** units, the bearer has the Lone Operative ability",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37446,
+          "name": "Warp Syphon",
+          "points": 5,
+          "rules": "**THOUSAND SONS** model only. While the bearer is within 6\" of one or more friendly **THOUSAND SONS VEHICLE** units, each time the bearer Channels the Warp, after you roll that additional D6 but before checking for doubles or triples, the bearer can use this Enhancement. If it does, select one of those **VEHICLE** units; that **VEHICLE** unit suffers 1 mortal wound and you can re-roll that additional D6.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37022,
+          "name": "Warp-Cursed Runemaster",
+          "points": 10,
+          "rules": "**THOUSAND SONS** model only. While the bearer is within 6\" of one or more friendly **THOUSAND SONS VEHICLE** units, each time the bearer manifests a Ritual, while resolving that Ritual, add 6\" to its range.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44635,
+          "name": "Hex-Marked Armour",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **THOUSAND SONS VEHICLE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44171,
+          "name": "Mutate Landscape",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One **THOUSAND SONS PSYKER** unit from your army within range of an objective marker you control.",
+          "effectRules": "That objective marker is mutated, and remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase. While an objective marker is mutated and under your control, each time an enemy unit ends a Normal, Advance, Fall Back or Charge move within range of that objective marker, roll one D6: on a 4+, that enemy unit suffers D3 mortal wounds.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44623,
+          "name": "Cyberspirit Machinations",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, just after a **THOUSAND SONS VEHICLE** unit from your army Falls Back.",
+          "targetRules": "That **VEHICLE** unit, and one friendly **THOUSAND SONS PSYKER** unit within 6\" of that **VEHICLE** unit.",
+          "effectRules": "Until the end of the turn, your **VEHICLE** unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43936,
+          "name": "Malevolent Animus",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase",
+          "targetRules": "One **THOUSAND SONS VEHICLE** unit from your army within 6\" of one or more friendly **THOUSAND SONS PSYKER** units.",
+          "effectRules": "Until the start of your next Command phase, your **VEHICLE** unit is malevolent. While a unit is malevolent, it can ignore any or all modifiers to the following: the profile characteristics of its models; the Weapon Skill and Ballistic Skill characteristics of weapons equipped by its models; any roll or test made for it (excluding modifiers to saving throws).",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44513,
+          "name": "Ensorcelled Infusion",
+          "cpCost": 2,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **THOUSAND SONS VEHICLE** unit from your army that has not been selected to shoot this phase, that is within 6\" of one or more friendly **THOUSAND SONS PSYKER** units.",
+          "effectRules": "Until the end of the phase, ranged weapons equipped by **VEHICLE** models in your unit have the **[PSYCHIC]** ability and each time an attack is made with such a weapon, add 1 to the Wound roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43716,
+          "name": "Warpflame Gargoyles",
+          "cpCost": 1,
+          "category": "wargear",
+          "turn": "opponentsTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your opponent’s Charge phase, just after an enemy unit ends a Charge move.",
+          "targetRules": "One **THOUSAND SONS VEHICLE** unit from your army within Engagement Range of that enemy unit.",
+          "effectRules": "Roll six D6: for each 5+, that enemy unit suffers 1 mortal wound. That enemy unit must then take a Battle-shock test.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7839,
+          "name": "Warpfire Infusion",
+          "components": [
+            {
+              "id": 49350,
+              "type": "text",
+              "textContent": "Each time a **THOUSAND SONS VEHICLE** unit from your army is selected to shoot or fight, apply one of the following when resolving those attacks:\n\n■ If that **VEHICLE** unit is within 6\" of one or more friendly **THOUSAND SONS PSYKER** models, you can re-roll one Hit roll, one Wound roll and one Damage roll.\n■ Otherwise, you can re-roll one Hit roll, one Wound roll or one Damage roll.\n\nEach time a **THOUSAND SONS VEHICLE** model from your army with the Deadly Demise ability is destroyed while it is within 6\" of one or more friendly **THOUSAND SONS PSYKER** models, that model’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 5+ instead of only a 6.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49020,
+              "type": "loreAccordion",
+              "textContent": "To the Sorcerers of Warpforged Cabals, logic cores and data-wafers, plasma cells and advanced augurs are merely matter, as subservient to their will as flesh and spirit is to others. They infuse dangerous eldritch protocols into the war engines under their command, pouring raw Warp magic into shell casings or capturing malevolent sprites within targeting cogitators, magnifying their vehicles’ power. Such battle tanks and combat walkers seem to throb with barely contained sorcery, and their greater danger is apparent to those with empyric senses.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10383,
+      "slug": "warpmeld-pact",
+      "name": "Warpmeld Pact",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Purge the Foe"
+      ],
+      "uniqueKeyword": "Mutant",
+      "faction": {
+        "id": 1862,
+        "slug": "thousand-sons",
+        "name": "Thousand Sons",
+        "commonName": "Thousand Sons"
+      },
+      "enhancements": [
+        {
+          "id": 37232,
+          "name": "Bray Lord",
+          "points": 15,
+          "rules": "**SORCERER** or **INFERNAL MASTER** model only. The bearer has the **Scouts 6\"** ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infernal Master"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Sorcerer"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37081,
+          "name": "Diamond of Distortion",
+          "points": 20,
+          "rules": "**TZAANGOR SHAMAN** model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Tzaangor Shaman"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37518,
+          "name": "Flowing Flesh",
+          "points": 10,
+          "rules": "**TZAANGOR SHAMAN** model only. The bearer has the Feel No Pain 4+ ability and a Wounds characteristic of 5.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Tzaangor Shaman"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36820,
+          "name": "Warpmeld Dagger",
+          "points": 10,
+          "rules": "**TZAANGOR SHAMAN** model only. Each time the bearer attempts a Ritual, just before determining the Psychic test result, the bearer can use this Enhancement. If it does, the bearer suffers D3 mortal wounds; if it is not destroyed as a result, add 1 to that Psychic test result for each of those mortal wounds suffered.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Tzaangor Shaman"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43753,
+          "name": "Gift of Change",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase.",
+          "targetRules": "One **THOUSAND SONS CHARACTER** model from your army (excluding **MONSTERS**) that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.",
+          "effectRules": "At the end of the phase, add one **TZEENTCH CHAOS SPAWN** unit containing one model to your army, and set it up as close as possible to where your model was destroyed and not within Engagement Range of one or more enemy units.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "You can only use this Stratagem once per battle round."
+        },
+        {
+          "id": 44315,
+          "name": "Warped Vicissitude",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **TZAANGORS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, models in your unit have a 4+ invulnerable save.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44181,
+          "name": "Deranged Ferocity",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after a **TZEENTCH MUTANT** unit from your army is selected to fi ght.",
+          "targetRules": "That **TZEENTCH MUTANT** unit.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\", and when determining which models in it are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within Engagement Range of their unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44281,
+          "name": "Blessed Transmutations",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One **THOUSAND SONS PSYKER** model from your army, and one friendly **TZAANGORS** unit that is below its Starting Strength and within 12\" of that **PSYKER** model.",
+          "effectRules": "Return up to D3+1 destroyed models (excluding **CHARACTERS**) to your **TZAANGORS** unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44498,
+          "name": "Touched by Tzeentch",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Start of your Movement phase.",
+          "targetRules": "One **TZEENTCH MUTANT** unit from your army.",
+          "effectRules": "Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43971,
+          "name": "Twisted Mirage",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Reinforcements step of your Movement phase.",
+          "targetRules": "One **TZEENTCH MUTANT** unit from your army that is arriving from Strategic Reserves this phase.",
+          "effectRules": "Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, or anywhere on the battlefield that is more than 8\" horizontally away from all enemy units if it is a **MONSTER** unit. In either case, until the end of the turn, it is not eligible to declare a charge.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7886,
+          "name": "Warpmeld Sacrifice",
+          "components": [
+            {
+              "id": 48929,
+              "type": "text",
+              "textContent": "Each time an enemy unit is selected to shoot or fight and one or more **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** units from your army are selected as a target of one or more of those attacks, each of those **TZEENTCH MUTANT** units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\n\nEach time a **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48467,
+              "type": "loreAccordion",
+              "textContent": "The flesh and bone of Tzeentch’s malleable servants flow like molten wax when his mutative power is invoked in ritual pleas. Some, such as the devoted Tzaangors, willingly make such requests, while more mindless abominations have their pact made for them by their callous masters. No boon is without its price, however. Some suffer changes so rapid that they burst apart, are absorbed by heaving mounds that were once allies or reduced to mewling piles of bubbling flesh.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": [
+        {
+          "id": 1614,
+          "title": "Keywords",
+          "bulletPoints": [
+            {
+              "id": 1893,
+              "text": "**TZAANGORS** units from your army have the **BATTLELINE** keyword, and while such a unit is not Battle-shocked, add 1 to the Objective Control characteristic of **TZAANGOR** models in that unit."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

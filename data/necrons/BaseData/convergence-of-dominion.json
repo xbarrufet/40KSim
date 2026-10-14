@@ -1,0 +1,228 @@
+{
+  "id": 47612,
+  "slug": "convergence-of-dominion",
+  "name": "Convergence of Dominion",
+  "baseSize": "Hull",
+  "maxModelCount": null,
+  "unitComposition": "■ **1-3 Convergence of Dominion Starsteles**\n\n**Every model is equipped with:** transdimensional abductor.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Reanimation Nodes",
+      "rules": "While a friendly **NECRONS INFANTRY** unit is within 6\" of this **FORTIFICATION**, models in that unit have the Feel No Pain 6+ ability.",
+      "isAura": true,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Ancient Cover",
+      "rules": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this **FORTIFICATION**, that model has the Benefit of Cover against that attack.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 3,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Fortification",
+      "rules": "While an enemy unit is only within Engagement Range of one or more **FORTIFICATIONS** from your army:\n\n■ That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll.\n■ Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 4,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Deployment",
+      "rules": "When this unit is first set up on the battlefield, its models do not have to be set up in Unit Coherency. Instead, each model must be set up wholly within 12\" of one other model from its unit. From that point on, each model in this unit is treated as a separate unit.",
+      "displayOrder": 1
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 61343,
+      "name": "Convergence of Dominion Starsteles",
+      "stats": {
+        "save": "3+",
+        "wounds": "7",
+        "movement": "-",
+        "toughness": "9",
+        "leadership": "8+",
+        "objectiveControl": "0"
+      },
+      "keywords": [
+        {
+          "id": 50760,
+          "name": "Convergence of Dominion"
+        },
+        {
+          "id": 50674,
+          "name": "Fortification"
+        },
+        {
+          "id": 51499,
+          "name": "Frame"
+        },
+        {
+          "id": 51775,
+          "name": "Vehicle"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108436,
+            "name": "Transdimensional abductor",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113082,
+                "name": "Transdimensional abductor",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "3",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 108436,
+            "name": "Transdimensional abductor",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113082,
+                "name": "Transdimensional abductor",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "3",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 61435,
+      "points": 60,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61343,
+          "miniatureName": "Convergence of Dominion Starsteles",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    {
+      "id": 61512,
+      "points": 120,
+      "displayOrder": 2,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 2,
+      "miniatures": [
+        {
+          "miniatureId": 61343,
+          "miniatureName": "Convergence of Dominion Starsteles",
+          "min": 2,
+          "max": 2
+        }
+      ]
+    },
+    {
+      "id": 62451,
+      "points": 180,
+      "displayOrder": 3,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 3,
+      "miniatures": [
+        {
+          "miniatureId": 61343,
+          "miniatureName": "Convergence of Dominion Starsteles",
+          "min": 3,
+          "max": 3
+        }
+      ]
+    }
+  ]
+}

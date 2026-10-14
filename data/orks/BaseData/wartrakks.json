@@ -1,0 +1,314 @@
+{
+  "id": 47337,
+  "slug": "wartrakks",
+  "name": "Wartrakks",
+  "baseSize": "",
+  "maxModelCount": null,
+  "unitComposition": "<ul><li>1‑2 Wartrakk models</li></ul>\rEvery model is equipped with: 1 Kustom Choppa; 1 Kustom Shoota; 1 Multi-busta Launcha.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Waaagh!",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Speednob Support",
+      "rules": "While each model in this unit is within 3\" of a friendly <k>Speed Freeks</k> unit (excluding <k>Wartrakk</k> units), this unit has <b>Lone Operative</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Bust ’Em",
+      "rules": "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That unit is <b>busted</b> until the end of the turn:\r<ul><li>Friendly <k>Speed Freeks</k> units’ attacks that target a <b>busted</b> unit have <k>[Lethal Hits]</k>.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1858,
+    "slug": "orks",
+    "name": "Orks",
+    "commonName": "Orks"
+  },
+  "miniatures": [
+    {
+      "id": 62056,
+      "name": "Wartrakk",
+      "stats": {
+        "save": "4+",
+        "wounds": "7",
+        "movement": "12\"",
+        "toughness": "6",
+        "leadership": "7+",
+        "invulnerableSave": {
+          "save": "6+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "3"
+      },
+      "keywords": [
+        {
+          "id": 51563,
+          "name": "Mounted"
+        },
+        {
+          "id": 51577,
+          "name": "Speed Freeks"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105230,
+            "name": "Kustom Shoota",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111065,
+                "name": "Kustom Shoota",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "4",
+                "ballisticSkill": "5+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3430,
+                    "name": "LETHAL HITS: non-MONSTER/VEHICLE",
+                    "rules": "Each time an attack made with a <b>[LETHAL HITS]</b> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <b>[DEVASTATING WOUNDS]</b>.</i>"
+                  },
+                  {
+                    "id": 3390,
+                    "name": "RAPID FIRE 2",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108746,
+            "name": "Kustom Choppa",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114883,
+                "name": "Kustom Choppa",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107108,
+            "name": "Multi-busta Launcha",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113141,
+                "name": "Multi-busta Launcha",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "D3+3",
+                "ballisticSkill": "5+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 108746,
+            "name": "Kustom Choppa",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114883,
+                "name": "Kustom Choppa",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105230,
+            "name": "Kustom Shoota",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111065,
+                "name": "Kustom Shoota",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "4",
+                "ballisticSkill": "5+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3430,
+                    "name": "LETHAL HITS: non-MONSTER/VEHICLE",
+                    "rules": "Each time an attack made with a <b>[LETHAL HITS]</b> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <b>[DEVASTATING WOUNDS]</b>.</i>"
+                  },
+                  {
+                    "id": 3390,
+                    "name": "RAPID FIRE 2",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107108,
+            "name": "Multi-busta Launcha",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113141,
+                "name": "Multi-busta Launcha",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "D3+3",
+                "ballisticSkill": "5+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 62044,
+      "points": 70,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 62056,
+          "miniatureName": "Wartrakk",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    {
+      "id": 61807,
+      "points": 130,
+      "displayOrder": 1,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 2,
+      "miniatures": [
+        {
+          "miniatureId": 62056,
+          "miniatureName": "Wartrakk",
+          "min": 2,
+          "max": 2
+        }
+      ]
+    }
+  ]
+}

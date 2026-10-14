@@ -1,0 +1,525 @@
+{
+  "id": 46685,
+  "slug": "wazdakka-gutsmek",
+  "name": "Wazdakka Gutsmek",
+  "baseSize": "",
+  "maxModelCount": null,
+  "unitComposition": "<ul><li>1 Wazdakka Gutsmek model</li></ul>\rThis model is equipped with: 1 Speeding Bulk and Flaming Exhaust; 1 Fixit’s Wrench; 1 Grabba Dragga; 1 Psyko‑gatler.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "There are many ways by which to deploy troops to the field of battle including tunnels, teleportation devices and other esoteric means of transportation.",
+      "name": "Deep Strike",
+      "rules": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Waaagh!",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Full Throttle",
+      "rules": "In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [
+        {
+          "name": "Turbo Engine",
+          "rules": "When this unit is selected to make an <b>advance</b>/<b>fall-back move</b>, that move does not prevent this unit from being <b>eligible to declare a charge</b>.",
+          "displayOrder": 0
+        },
+        {
+          "name": "Shokk Attack Engine",
+          "rules": "In your Command phase, if this unit is <b>unengaged</b>, you can place this unit in <b>strategic reserves</b>.",
+          "displayOrder": 1
+        },
+        {
+          "name": "Pulse Jet",
+          "rules": "In your Movement phase, when this unit is <b>selected to move</b>, if this unit is <b>unengaged</b>, this unit can make a <b>pulse jet move</b> (pg 121).",
+          "displayOrder": 2
+        }
+      ],
+      "subAbilityHeader": "Throttlerokkit Shokka Engine Abilities"
+    },
+    {
+      "lore": "From detonating ammo stores to corrosive innards or frenzied death throes, some targets are deadly even in defeat.",
+      "name": "Deadly Demise D3",
+      "rules": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\").",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Assassins and other covert agents are difficult to pinpoint in the storm of battle.",
+      "name": "Lone Operative",
+      "rules": "Unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within 12\" of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within 12\" of this unit.\n\nIf this ability takes the form <b>Lone Operative X\"</b>, unless part of an <b>attached</b> unit, this unit is <u>not</u> <b>visible</b> to enemy models unless they are within <b>X\"</b> of this unit, and it cannot be targeted by <b>[INDIRECT FIRE]</b> weapons unless the attacking model is within <b>X\"</b> of this unit.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1858,
+    "slug": "orks",
+    "name": "Orks",
+    "commonName": "Orks"
+  },
+  "miniatures": [
+    {
+      "id": 62551,
+      "name": "Wazdakka Gutsmek",
+      "stats": {
+        "save": "3+",
+        "wounds": "10",
+        "movement": "14\"",
+        "toughness": "8",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "3"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50746,
+          "name": "Epic Hero"
+        },
+        {
+          "id": 51563,
+          "name": "Mounted"
+        },
+        {
+          "id": 50820,
+          "name": "Smoke"
+        },
+        {
+          "id": 51577,
+          "name": "Speed Freeks"
+        },
+        {
+          "id": 51775,
+          "name": "Vehicle"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105011,
+            "name": "Speeding Bulk and Flaming Exhaust",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110825,
+                "name": "Speeding Bulk and Flaming Exhaust",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3413,
+                    "name": "CLEAVE 1",
+                    "rules": "This ability always takes the form <b>[CLEAVE X]</b>. Each time you gather <b>attack dice</b> for a <b>[CLEAVE]</b> weapon, if you only selected one target for all of that weapon’s attacks, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\n<b>Example:</b> <i>If a <b>[CLEAVE 1]</b> weapon with an <b>A</b> characteristic of 3 targets one unit containing 16 models, you would gather three additional <b>attack dice</b> for that weapon (for a total of six for that weapon).</i>"
+                  },
+                  {
+                    "id": 3482,
+                    "name": "EXTRA ATTACKS",
+                    "rules": "Each time a unit containing one or more models with an <b>[EXTRA ATTACKS]</b> weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:\n<ul><li>All of that model’s <b>[EXTRA ATTACKS]</b> weapons.</li><li>One of that model’s other melee weapons, if possible.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106633,
+            "name": "Grabba Dragga",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112641,
+                "name": "Grabba Dragga",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3489,
+                    "name": "PRECISION",
+                    "rules": "While resolving attacks made with one or more <b>[PRECISION]</b> weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more <b>CHARACTER</b> models <b>visible</b> to one or more of the attacking models, the active player can select one allocation group that contains one of those <b>visible</b> <k>CHARACTER</k> models. If they do, until those attacks are resolved, or until that <k>CHARACTER</k> group is destroyed (whichever happens first), that <k>CHARACTER</k> group is the current allocation group."
+                  }
+                ]
+              },
+              {
+                "id": 114466,
+                "name": "Grabba Dragga",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3463,
+                    "name": "CLEAVE 2",
+                    "rules": "This ability always takes the form <b>[CLEAVE X]</b>. Each time you gather <b>attack dice</b> for a <b>[CLEAVE]</b> weapon, if you only selected one target for all of that weapon’s attacks, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\n<b>Example:</b> <i>If a <b>[CLEAVE 1]</b> weapon with an <b>A</b> characteristic of 3 targets one unit containing 16 models, you would gather three additional <b>attack dice</b> for that weapon (for a total of six for that weapon).</i>"
+                  },
+                  {
+                    "id": 3493,
+                    "name": "LANCE",
+                    "rules": "Each time an attack is made with a <b>[LANCE]</b> weapon, if the attacking model’s unit made a <b>charge</b> move this turn, add 1 to the <b>wound roll</b>."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108195,
+            "name": "Psyko-gatler",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114294,
+                "name": "Psyko-gatler",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "12",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3430,
+                    "name": "LETHAL HITS: non-MONSTER/VEHICLE",
+                    "rules": "Each time an attack made with a <b>[LETHAL HITS]</b> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <b>[DEVASTATING WOUNDS]</b>.</i>"
+                  },
+                  {
+                    "id": 3450,
+                    "name": "SUSTAINED HITS 1",
+                    "rules": "This ability always takes the form <b>[SUSTAINED HITS X]</b>. Each time an attack made with a <b>[SUSTAINED HITS]</b> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <b>[SUSTAINED HITS 2]</b> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <b>[SUSTAINED HITS 2]</b> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105001,
+            "name": "Fixit’s Wrench",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110809,
+                "name": "Fixit’s Wrench",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "1",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "3",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3482,
+                    "name": "EXTRA ATTACKS",
+                    "rules": "Each time a unit containing one or more models with an <b>[EXTRA ATTACKS]</b> weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:\n<ul><li>All of that model’s <b>[EXTRA ATTACKS]</b> weapons.</li><li>One of that model’s other melee weapons, if possible.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 105001,
+            "name": "Fixit’s Wrench",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110809,
+                "name": "Fixit’s Wrench",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "1",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "3",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3482,
+                    "name": "EXTRA ATTACKS",
+                    "rules": "Each time a unit containing one or more models with an <b>[EXTRA ATTACKS]</b> weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:\n<ul><li>All of that model’s <b>[EXTRA ATTACKS]</b> weapons.</li><li>One of that model’s other melee weapons, if possible.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106633,
+            "name": "Grabba Dragga",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112641,
+                "name": "Grabba Dragga",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3489,
+                    "name": "PRECISION",
+                    "rules": "While resolving attacks made with one or more <b>[PRECISION]</b> weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more <b>CHARACTER</b> models <b>visible</b> to one or more of the attacking models, the active player can select one allocation group that contains one of those <b>visible</b> <k>CHARACTER</k> models. If they do, until those attacks are resolved, or until that <k>CHARACTER</k> group is destroyed (whichever happens first), that <k>CHARACTER</k> group is the current allocation group."
+                  }
+                ]
+              },
+              {
+                "id": 114466,
+                "name": "Grabba Dragga",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3463,
+                    "name": "CLEAVE 2",
+                    "rules": "This ability always takes the form <b>[CLEAVE X]</b>. Each time you gather <b>attack dice</b> for a <b>[CLEAVE]</b> weapon, if you only selected one target for all of that weapon’s attacks, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\n<b>Example:</b> <i>If a <b>[CLEAVE 1]</b> weapon with an <b>A</b> characteristic of 3 targets one unit containing 16 models, you would gather three additional <b>attack dice</b> for that weapon (for a total of six for that weapon).</i>"
+                  },
+                  {
+                    "id": 3493,
+                    "name": "LANCE",
+                    "rules": "Each time an attack is made with a <b>[LANCE]</b> weapon, if the attacking model’s unit made a <b>charge</b> move this turn, add 1 to the <b>wound roll</b>."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 108195,
+            "name": "Psyko-gatler",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114294,
+                "name": "Psyko-gatler",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "12",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3409,
+                    "name": "ASSAULT",
+                    "rules": "Units containing one or more models with an <b>[ASSAULT]</b> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3430,
+                    "name": "LETHAL HITS: non-MONSTER/VEHICLE",
+                    "rules": "Each time an attack made with a <b>[LETHAL HITS]</b> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <b>[DEVASTATING WOUNDS]</b>.</i>"
+                  },
+                  {
+                    "id": 3450,
+                    "name": "SUSTAINED HITS 1",
+                    "rules": "This ability always takes the form <b>[SUSTAINED HITS X]</b>. Each time an attack made with a <b>[SUSTAINED HITS]</b> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <b>[SUSTAINED HITS 2]</b> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <b>[SUSTAINED HITS 2]</b> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105011,
+            "name": "Speeding Bulk and Flaming Exhaust",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110825,
+                "name": "Speeding Bulk and Flaming Exhaust",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3413,
+                    "name": "CLEAVE 1",
+                    "rules": "This ability always takes the form <b>[CLEAVE X]</b>. Each time you gather <b>attack dice</b> for a <b>[CLEAVE]</b> weapon, if you only selected one target for all of that weapon’s attacks, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\n<b>Example:</b> <i>If a <b>[CLEAVE 1]</b> weapon with an <b>A</b> characteristic of 3 targets one unit containing 16 models, you would gather three additional <b>attack dice</b> for that weapon (for a total of six for that weapon).</i>"
+                  },
+                  {
+                    "id": 3482,
+                    "name": "EXTRA ATTACKS",
+                    "rules": "Each time a unit containing one or more models with an <b>[EXTRA ATTACKS]</b> weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:\n<ul><li>All of that model’s <b>[EXTRA ATTACKS]</b> weapons.</li><li>One of that model’s other melee weapons, if possible.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 61517,
+      "points": 200,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 62551,
+          "miniatureName": "Wazdakka Gutsmek",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

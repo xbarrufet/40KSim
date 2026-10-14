@@ -1,0 +1,285 @@
+{
+  "id": 47285,
+  "slug": "lokhust-destroyers",
+  "name": "Lokhust Destroyers",
+  "baseSize": "Large Flying Base",
+  "maxModelCount": null,
+  "unitComposition": "■ **1-6 Lokhust Destroyers**\n\n**Every model is equipped with:** gauss cannon; close combat weapon.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Hard-wired for Destruction",
+      "rules": "Each time a model in this unit makes a ranged attack that targets the closest eligible target, re-roll a Hit roll of 1. If the target of that attack is within range of an objective marker your opponent controls, you can re-roll the Hit roll instead.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": 3,
+  "pointsStepPoints": 30,
+  "leads": [],
+  "ledBy": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47607,
+        "name": "Lokhust Lord",
+        "slug": "lokhust-lord",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 61782,
+      "name": "Lokhust Destroyer",
+      "stats": {
+        "save": "3+",
+        "wounds": "3",
+        "movement": "8\"",
+        "toughness": "6",
+        "leadership": "7+",
+        "objectiveControl": "2"
+      },
+      "keywords": [
+        {
+          "id": 51698,
+          "name": "Destroyer Cult"
+        },
+        {
+          "id": 51013,
+          "name": "Fly"
+        },
+        {
+          "id": 51581,
+          "name": "Lokhust Destroyers"
+        },
+        {
+          "id": 51563,
+          "name": "Mounted"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108480,
+            "name": "Close combat weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112177,
+                "name": "Close combat weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "2",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106996,
+            "name": "Gauss cannon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114329,
+                "name": "Gauss cannon",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "3",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3486,
+                    "name": "Lethal Hits",
+                    "rules": "Each time an attack made with a <k>[LETHAL HITS]</k> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <k>[DEVASTATING WOUNDS]</k>.</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 108480,
+            "name": "Close combat weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112177,
+                "name": "Close combat weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "2",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106996,
+            "name": "Gauss cannon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114329,
+                "name": "Gauss cannon",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "3",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3486,
+                    "name": "Lethal Hits",
+                    "rules": "Each time an attack made with a <k>[LETHAL HITS]</k> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <k>[DEVASTATING WOUNDS]</k>.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 61557,
+      "points": 40,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61782,
+          "miniatureName": "Lokhust Destroyer",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    {
+      "id": 61773,
+      "points": 55,
+      "displayOrder": 2,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 2,
+      "miniatures": [
+        {
+          "miniatureId": 61782,
+          "miniatureName": "Lokhust Destroyer",
+          "min": 2,
+          "max": 2
+        }
+      ]
+    },
+    {
+      "id": 62610,
+      "points": 80,
+      "displayOrder": 3,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 3,
+      "miniatures": [
+        {
+          "miniatureId": 61782,
+          "miniatureName": "Lokhust Destroyer",
+          "min": 3,
+          "max": 3
+        }
+      ]
+    },
+    {
+      "id": 62013,
+      "points": 190,
+      "displayOrder": 4,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 6,
+      "miniatures": [
+        {
+          "miniatureId": 61782,
+          "miniatureName": "Lokhust Destroyer",
+          "min": 4,
+          "max": 6
+        }
+      ]
+    }
+  ]
+}

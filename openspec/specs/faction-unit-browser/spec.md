@@ -55,11 +55,12 @@ Tapping a faction card SHALL navigate to the faction detail view (unit list) wit
 
 ### Requirement: Faction Detail Top Bar
 
-The faction detail view SHALL have a top bar with a back button, the faction name, and an upload button.
+The faction detail view SHALL have a top bar with a back button and the faction name. The subtab bar SHALL appear below it.
 
 #### Scenario: Top bar elements visible
 - **WHEN** the user navigates to a faction detail view
-- **THEN** the top bar displays a back button, the faction name, and an upload button
+- **THEN** the top bar displays a back button and the faction name
+- **AND** the subtab bar is displayed below with DATASHEETS, ARMY RULES, and DETACHMENTS tabs
 
 ### Requirement: Unit List
 
@@ -264,37 +265,6 @@ When the user imports an AI proposals JSON file, the created or updated Structur
 - **THEN** matching unit_data records SHALL be upserted in Supabase
 - **AND** the same data SHALL be cached in IndexedDB
 
-## Data Structures
-
-### IndexedDB Schema
-
-| Store | Key | Value |
-|---|---|---|
-| `factions` | faction `id` | `{ id, name, slug, category }` |
-| `units` | `"<faction-slug>/<unit-slug>"` | `{ id, name, slug, factionSlug, category, points, keywords }` |
-| `baseData` | `"<faction-slug>/<unit-slug>"` | Raw BaseData JSON (as uploaded) |
-| `unitData` | `"<faction-slug>/<unit-slug>"` | Processed UnitData JSON (written by future Process Unit screen) |
-
-The `factions` and `units` stores are seeded from `units.json`. The `baseData` and `unitData` stores start empty.
-
-### Seed File
-
-The seed file remains the current `UnitCatalog` shape defined in `app/src/data/schema.ts` (schemaVersion 1). The seeding process unpacks it into the IndexedDB stores.
-
-### BaseData Example (`ancient.json`)
-
-```json
-{
-  "id": 47128,
-  "slug": "ancient",
-  "name": "Ancient",
-  "keywords": ["CHARACTER", "INFANTRY", "IMPERIUM", "TACTICUS"],
-  "stats": { "movement": 6, "toughness": 5, "save": 3, "invulnerableSave": null, "wounds": 4, "leadership": 6, "objectiveControl": 2 },
-  "wargear": [ ... ],
-  "abilities": [ ... ]
-}
-```
-
 ### Requirement: Faction Grid Filters to Factions With Data
 
 The faction grid SHALL display only factions whose unit_count is greater than zero.
@@ -355,6 +325,83 @@ The add-faction modal SHALL allow the user to select a faction without units fro
 
 - **WHEN** the user cancels the modal
 - **THEN** the modal SHALL close with no side effects
+
+### Requirement: Faction Subtab Navigation
+
+The faction detail view SHALL display a horizontal subtab bar below the faction name with three tabs: DATASHEETS, ARMY RULES, and DETACHMENTS. The DATASHEETS tab SHALL be selected by default.
+
+#### Scenario: Subtab bar visible
+- **WHEN** the user navigates to a faction detail view
+- **THEN** a horizontal tab bar is displayed with DATASHEETS, ARMY RULES, and DETACHMENTS tabs
+- **AND** DATASHEETS is the active tab
+
+#### Scenario: Switching tabs
+- **WHEN** the user taps a different subtab
+- **THEN** the content area switches to the corresponding view
+- **AND** the tapped tab becomes visually active
+
+### Requirement: Datasheets Subtab
+
+The DATASHEETS subtab SHALL display the existing unit list with status indicators, upload buttons, and all current functionality.
+
+#### Scenario: Datasheets content
+- **WHEN** the DATASHEETS subtab is active
+- **THEN** the unit list, upload buttons, sync button, backup buttons, and proposals import button are displayed as before
+
+### Requirement: Army Rules Subtab
+
+The ARMY RULES subtab SHALL display the faction's army rules as formatted HTML text. For subfactions, it SHALL display the parent faction's army rules.
+
+#### Scenario: Army rules displayed
+- **WHEN** the ARMY RULES subtab is active and the faction has army rules in Supabase
+- **THEN** each rule is displayed with its name as a heading and its text content rendered with FormattedAbilityText
+
+#### Scenario: Subfaction inherits parent army rules
+- **WHEN** viewing army rules for a subfaction (e.g. Blood Angels)
+- **THEN** the army rules from the parent faction (Space Marines) SHALL be displayed
+
+#### Scenario: No army rules available
+- **WHEN** the faction has no army rules in Supabase
+- **THEN** a message SHALL indicate that no army rules data is available
+
+### Requirement: Detachments Subtab
+
+The DETACHMENTS subtab SHALL display the detachments list view (currently accessible via the "DET" button), including inherited parent detachments for subfactions.
+
+#### Scenario: Detachments content
+- **WHEN** the DETACHMENTS subtab is active
+- **THEN** the detachments list view is displayed with the same functionality as the current DetachmentsView
+
+## Data Structures
+
+### IndexedDB Schema
+
+| Store | Key | Value |
+|---|---|---|
+| `factions` | faction `id` | `{ id, name, slug, category }` |
+| `units` | `"<faction-slug>/<unit-slug>"` | `{ id, name, slug, factionSlug, category, points, keywords }` |
+| `baseData` | `"<faction-slug>/<unit-slug>"` | Raw BaseData JSON (as uploaded) |
+| `unitData` | `"<faction-slug>/<unit-slug>"` | Processed UnitData JSON (written by future Process Unit screen) |
+
+The `factions` and `units` stores are seeded from `units.json`. The `baseData` and `unitData` stores start empty.
+
+### Seed File
+
+The seed file remains the current `UnitCatalog` shape defined in `app/src/data/schema.ts` (schemaVersion 1). The seeding process unpacks it into the IndexedDB stores.
+
+### BaseData Example (`ancient.json`)
+
+```json
+{
+  "id": 47128,
+  "slug": "ancient",
+  "name": "Ancient",
+  "keywords": ["CHARACTER", "INFANTRY", "IMPERIUM", "TACTICUS"],
+  "stats": { "movement": 6, "toughness": 5, "save": 3, "invulnerableSave": null, "wounds": 4, "leadership": 6, "objectiveControl": 2 },
+  "wargear": [ ... ],
+  "abilities": [ ... ]
+}
+```
 
 ## Out of Scope
 

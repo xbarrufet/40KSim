@@ -1,0 +1,269 @@
+{
+  "id": 47364,
+  "slug": "canoptek-tomb-crawlers",
+  "name": "Canoptek Tomb Crawlers",
+  "baseSize": "50mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **2 Canoptek Tomb Crawlers**\n\n**Every model is equipped with:** twin gauss reaper; claws.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": true,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Weapon Sentinels",
+      "rules": "Each time a model in this unit makes a ranged attack that targets a unit within 12\", you can ignore any or all modifiers to the following: that attack’s Ballistic Skill characteristic; the Hit roll; the Wound roll",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Canoptek Retinue",
+      "rules": "At the start of the Declare Battle Formations step, this unit can join one other unit from your army that is being led by a **CRYPTEK** model (a unit cannot have more than one Tomb Crawlers unit joined to it and cannot have both a **TOMB CRAWLERS** and a **CRYPTOTHRALLS** unit joined to it). If it does, until the end of the battle, every model in this unit counts as being part of that Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased accordingly.",
+      "displayOrder": 1
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 61652,
+      "name": "Canoptek Tomb Crawlers",
+      "stats": {
+        "save": "3+",
+        "wounds": "3",
+        "movement": "5\"",
+        "toughness": "4",
+        "leadership": "8+",
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 50944,
+          "name": "Beasts"
+        },
+        {
+          "id": 51167,
+          "name": "Canoptek"
+        },
+        {
+          "id": 50764,
+          "name": "Tomb Crawlers"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105307,
+            "name": "Twin gauss reaper",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111274,
+                "name": "Twin gauss reaper",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "2",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3486,
+                    "name": "Lethal Hits",
+                    "rules": "Each time an attack made with a <k>[LETHAL HITS]</k> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <k>[DEVASTATING WOUNDS]</k>.</i>"
+                  },
+                  {
+                    "id": 3373,
+                    "name": "Twin-linked",
+                    "rules": "Each time an attack is made with a <k>[TWIN‑LINKED]</k> weapon, you can re‑roll the <b>wound roll</b>."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105126,
+            "name": "Claws",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113485,
+                "name": "Claws",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "6",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 105126,
+            "name": "Claws",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113485,
+                "name": "Claws",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "6",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107136,
+            "name": "Transdimensional isolator",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111062,
+                "name": "Transdimensional isolator",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "2",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105307,
+            "name": "Twin gauss reaper",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111274,
+                "name": "Twin gauss reaper",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "2",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3486,
+                    "name": "Lethal Hits",
+                    "rules": "Each time an attack made with a <k>[LETHAL HITS]</k> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <k>[DEVASTATING WOUNDS]</k>.</i>"
+                  },
+                  {
+                    "id": 3373,
+                    "name": "Twin-linked",
+                    "rules": "Each time an attack is made with a <k>[TWIN‑LINKED]</k> weapon, you can re‑roll the <b>wound roll</b>."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 42041,
+      "rulesText": "■ 1 model’s twin gauss reaper can be replaced with 1 transdimensional isolator.",
+      "displayOrder": 1
+    }
+  ],
+  "compositions": [
+    {
+      "id": 62155,
+      "points": 60,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 2,
+      "miniatures": [
+        {
+          "miniatureId": 61652,
+          "miniatureName": "Canoptek Tomb Crawlers",
+          "min": 2,
+          "max": 2
+        }
+      ]
+    }
+  ]
+}

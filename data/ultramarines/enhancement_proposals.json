@@ -1,0 +1,132 @@
+{
+  "ultramarines/blade-of-ultramar": [
+    {
+      "slug": "armour-of-antoninus",
+      "name": "Armour of Antoninus",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "stat": "Save",
+          "mode": "setValue",
+          "value": 2
+        },
+        {
+          "category": "damageMitigation",
+          "appliedTo": "SelfModel",
+          "kind": "fnp",
+          "value": 5,
+          "condition": "any"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. This model has: 2+ Sv. Feel No Pain 5+."
+    },
+    {
+      "slug": "oath-of-macragge",
+      "name": "Oath of Macragge",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "MELEE",
+          "stat": "Strength",
+          "mode": "add",
+          "value": 1
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "MELEE",
+          "stat": "AP",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [
+        {
+          "condition": "assault_doctrine",
+          "effects": [
+            {
+              "category": "statModifier",
+              "appliedTo": "SelfUnit",
+              "weaponTarget": "MELEE",
+              "stat": "Strength",
+              "mode": "add",
+              "value": 2
+            },
+            {
+              "category": "statModifier",
+              "appliedTo": "SelfUnit",
+              "weaponTarget": "MELEE",
+              "stat": "AP",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "originalText": "Adeptus Astartes model only. This model's melee attacks have: +1 S and AP. Or: If the assault doctrine is active for this unit, +2 S and AP."
+    },
+    {
+      "slug": "student-of-the-codex",
+      "name": "Student of the Codex",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Captain"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Captain model only. The tactical doctrine is active for this unit in addition to any other combat doctrine."
+    },
+    {
+      "slug": "veteran-of-behemoth",
+      "name": "Veteran of Behemoth",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "keyword": "SUSTAINED HITS",
+          "value": "1"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. This unit's ranged attacks have [Sustained Hits 1]."
+    }
+  ]
+}

@@ -1,0 +1,944 @@
+{
+  "orks/blitz-brigade": [
+    {
+      "slug": "boss-boomer-upgrade",
+      "name": "Boss Boomer (Upgrade)",
+      "points": 10,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Wagon"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Wagon unit only. While a Warboss model is embarked within this unit, this unit has that Warboss model's Intimidating Motivation/Keep Huntin' ability."
+    },
+    {
+      "slug": "targetin-gizmos-upgrade",
+      "name": "Targetin' Gizmos (Upgrade)",
+      "points": 25,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Wagon"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "keyword": "IGNORES COVER",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [
+        {
+          "condition": "riled_up",
+          "effects": [
+            {
+              "category": "weaponKeyword",
+              "appliedTo": "SelfUnit",
+              "weaponTarget": "RANGE",
+              "keyword": "SUSTAINED HITS",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "originalText": "Wagon unit only. While a Big Mek model is embarked within this unit: This unit's ranged attacks have [Ignores Cover]. If this unit is riled up, this unit's ranged attacks have [Sustained Hits 1]."
+    }
+  ],
+  "orks/brute-bosses": [
+    {
+      "slug": "blitzboss",
+      "name": "Blitzboss",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Warboss"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Warboss model only. A transport unit (excluding Walker units) this unit is embarked within has: +2\" M. 5+ InSv."
+    },
+    {
+      "slug": "brutal-but-kunnin",
+      "name": "Brutal But Kunnin'",
+      "points": 30,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Warboss"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "Damage",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Warboss model only. This model's melee attacks have +1 D."
+    },
+    {
+      "slug": "da-gobshot-thunderbuss",
+      "name": "Da Gobshot Thunderbuss",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Warboss"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Warboss model only. This model has the following weapon:"
+    },
+    {
+      "slug": "morgogs-finkin-cap",
+      "name": "Morgog's Finkin' Cap",
+      "points": 50,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Warboss"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [
+        {
+          "condition": "riled_up",
+          "effects": [
+            {
+              "category": "diceModifier",
+              "appliedTo": "SelfModel",
+              "roll": "charge",
+              "action": "rerollAll"
+            }
+          ]
+        }
+      ],
+      "originalText": "Warboss model only. (Once per battle, per army) At the end of your opponent's Movement phase, if this unit is unengaged, this unit can make a normal move of: Up to D6\". If this unit is riled up, you can re-roll that D6."
+    },
+    {
+      "slug": "proper-killy",
+      "name": "Proper Killy",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Warboss"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfModel",
+          "roll": "toHit",
+          "action": "rerollOnes"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Warboss model only. This model can re-roll hit rolls of 1."
+    },
+    {
+      "slug": "surly-as-a-squiggoth",
+      "name": "Surly as a Squiggoth",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry",
+          "Warboss"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Infantry Warboss model only. (Once per battle, per army) At the end of a phase in which this model is destroyed, roll one D6: On a 2+, set this model back up on the battlefield as close as possible to where it was destroyed, unengaged, with 3 wounds remaining."
+    }
+  ],
+  "orks/bully-boyz": [
+    {
+      "slug": "tellyporta-boss",
+      "name": "Tellyporta Boss",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Mega Armour"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Mega Armour model only. This unit (excluding Vehicle units) has Deep Strike."
+    },
+    {
+      "slug": "wimp-kickaz-upgrade",
+      "name": "Wimp-kickaz (Upgrade)",
+      "points": 15,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [],
+      "conditionalEffects": [
+        {
+          "condition": "riled_up",
+          "effects": [
+            {
+              "category": "diceModifier",
+              "appliedTo": "Enemy",
+              "roll": "hazard",
+              "action": "subtractFromRoll"
+            }
+          ]
+        }
+      ],
+      "originalText": "Nobz unit only. When an enemy unit engaged with this unit is selected to make a fall-back move: That enemy unit must select the desperate escape mode. If this unit is riled up, that enemy unit has -1 to the hazard rolls made for that desperate escape."
+    }
+  ],
+  "orks/da-big-hunt": [
+    {
+      "slug": "glory-hog",
+      "name": "Glory Hog",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Beast Snagga"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Beast Snagga model only. When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to declare a charge."
+    },
+    {
+      "slug": "it-came-from-da-drops",
+      "name": "It Came from da Drops",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "stat": "Toughness",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Beastboss on Squigosaur model only. This model has +1 T."
+    }
+  ],
+  "orks/dread-mob": [
+    {
+      "slug": "cybork-boosta",
+      "name": "Cybork Boosta",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Big Mek"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "stat": "Movement",
+          "mode": "add",
+          "value": 2
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Big Mek/Mek model only. This model has +2\" M."
+    },
+    {
+      "slug": "dreadherder",
+      "name": "Dreadherder",
+      "points": 30,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Big Mek"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Big Mek model only. While this model is within 3\" of a friendly Orks Walker unit (excluding Big Mek units): This model has Lone Operative. In your Shooting phase, you can select one friendly Orks Walker unit within 3\" of this model. That unit's attacks can re-roll hit rolls of 1 until the end of the turn."
+    }
+  ],
+  "orks/flyboyz": [
+    {
+      "slug": "flyboss-upgrade",
+      "name": "Flyboss (Upgrade)",
+      "points": 20,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Aircraft"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfUnit",
+          "keyword": "CHARACTER",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Orks Aircraft unit only. This unit has Character. When this unit ends an ingress move, each friendly Orks Aircraft/Deffkoptas unit within 6\" of this unit is riled up until the start of your next turn."
+    },
+    {
+      "slug": "impulsive-recon-upgrade",
+      "name": "Impulsive Recon (Upgrade)",
+      "points": 15,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Aircraft"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Orks Aircraft unit only. In your first Movement phase, this unit can make an ingress move."
+    }
+  ],
+  "orks/green-tide": [
+    {
+      "slug": "ardboyz-upgrade",
+      "name": "'Ardboyz (Upgrade)",
+      "points": 25,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "stat": "Save",
+          "mode": "setValue",
+          "value": 4
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Boyz unit only. This unit has 4+ Sv."
+    },
+    {
+      "slug": "ferocious-show-off",
+      "name": "Ferocious Show-off",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "Attacks",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [
+        {
+          "condition": "11_or_more_models",
+          "effects": [
+            {
+              "category": "statModifier",
+              "appliedTo": "SelfModel",
+              "weaponTarget": "MELEE",
+              "stat": "Attacks",
+              "mode": "add",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "originalText": "Orks Infantry model only. This model's melee attacks have: +1 A. Or: If this unit has 11+ models, +2 A."
+    }
+  ],
+  "orks/kult-of-speed": [
+    {
+      "slug": "competitive-streak",
+      "name": "Competitive Streak",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "charge",
+          "action": "rerollAll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Deffkilla Wartrike model only. This unit can re-roll charge rolls."
+    },
+    {
+      "slug": "smoky-gubbinz-upgrade",
+      "name": "Smoky Gubbinz (Upgrade)",
+      "points": 10,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Speed Freeks"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfUnit",
+          "keyword": "COVER",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Speed Freeks unit only (excluding Aircraft units). When an attack targets a unit that is not fully visible to the attacking model because of a model in this unit, the target has the benefit of cover against that attack."
+    }
+  ],
+  "orks/madcap-meks": [
+    {
+      "slug": "enhanced-runt-maw-upgrade",
+      "name": "Enhanced Runt-maw (Upgrade)",
+      "points": 10,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "Enemy",
+          "roll": "battleshock",
+          "action": "subtractFromRoll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Big Mek with Shokk Attack Gun model only. When this unit has shot, select one enemy unit hit by those attacks. That unit is infested with Snotlings until the start of your next turn. While an enemy unit is infested with Snotlings, that unit has -1 to leadership rolls."
+    },
+    {
+      "slug": "mekwaaagh-mastermind",
+      "name": "Mekwaaagh! Mastermind",
+      "points": 30,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Big Mek"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "RILED UP",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Big Mek model only. This unit is riled up."
+    },
+    {
+      "slug": "temperamental-shokka-upgrade",
+      "name": "Temperamental Shokka (Upgrade)",
+      "points": 20,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Big Mek with Shokk Attack Gun model only. In your Shooting phase, when this unit is selected to shoot, you can roll one D6: On a 1, this model's Shokk Attack Gun weapon has [Torrent], and when this unit has shot, this model is destroyed. On a 2-5, this model's Shokk Attack Gun weapon has +1 A. On a 6, this model's Shokk Attack Gun weapon has [Sustained Hits 2]."
+    }
+  ],
+  "orks/runt-swarm": [
+    {
+      "slug": "extra-sneaky-upgrade",
+      "name": "Extra Sneaky (Upgrade)",
+      "points": 10,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Gretchin unit only. This unit has -3\" detection range."
+    },
+    {
+      "slug": "minefield-detail-upgrade",
+      "name": "Minefield Detail (Upgrade)",
+      "points": 10,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfUnit",
+          "keyword": "SCOUTS",
+          "value": "6\""
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Gretchin unit only. While this unit is not embarked, this unit has Scouts 6\"."
+    }
+  ],
+  "orks/shoota-boyz": [
+    {
+      "slug": "supa-glowy-fing",
+      "name": "Supa-glowy Fing",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry"
+        ],
+        "excludedKeywords": [
+          "Psyker"
+        ],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "RANGE",
+          "keyword": "ANTI-INFANTRY",
+          "value": "4+"
+        },
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "RANGE",
+          "keyword": "DEVASTATING WOUNDS",
+          "value": null
+        },
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "RANGE",
+          "keyword": "SUPA-HAZARDOUS",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Orks Infantry model only (excluding Weirdboy models). This model's ranged attacks have: [Anti-Infantry 4+]. [Devastating Wounds]. [Supa-hazardous]. [Supa-hazardous]: Each time a unit is selected to shoot, after that unit has resolved all of its attacks, make two hazard rolls for that unit for each [SUPA-HAZARDOUS] weapon you selected in the Select Weapons step."
+    },
+    {
+      "slug": "targetin-squigs",
+      "name": "Targetin' Squigs",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Big Mek",
+          "Warboss"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "stat": "Range",
+          "mode": "add",
+          "value": 3
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Big Mek/bigBoss/Warboss model only. This unit's ranged attacks (excluding [Torrent] attacks) have +3\" R."
+    }
+  ],
+  "orks/taktikal-brigade": [
+    {
+      "slug": "kill-kommanda",
+      "name": "Kill Kommanda",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Big Mek",
+          "Infantry",
+          "Warboss"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "INFILTRATORS",
+          "value": null
+        },
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "STEALTH",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Big Mek/Warboss Infantry model only. While this model is part of an attached unit, this model has: Infiltrators. Stealth."
+    },
+    {
+      "slug": "throat-slittas-upgrade",
+      "name": "Throat-slittas (Upgrade)",
+      "points": 15,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "MELEE",
+          "keyword": "LETHAL HITS",
+          "value": null,
+          "targetCondition": {
+            "keywords": [
+              "MONSTER",
+              "VEHICLE"
+            ],
+            "mode": "excludes"
+          }
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Kommandos/Stormboyz unit only. This unit's melee attacks have [Lethal Hits: non-Monster/Vehicle]."
+    }
+  ],
+  "orks/war-horde": [
+    {
+      "slug": "da-boss-is-watchin",
+      "name": "Da Boss is Watchin'",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Orks model only. (Once per battle, per army) In your Movement phase, you can use this ability. If you do, this unit is riled up until the start of your next turn."
+    },
+    {
+      "slug": "follow-me-ladz",
+      "name": "Follow Me Ladz",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "stat": "Movement",
+          "mode": "add",
+          "value": 2
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Orks model only. This unit has +2\" M."
+    },
+    {
+      "slug": "headwoppa-s-killchoppa",
+      "name": "Headwoppa's Killchoppa",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Orks model only. If this unit made a charge move this turn, this model's melee attacks have +1 AP."
+    },
+    {
+      "slug": "kunnin-but-brutal",
+      "name": "Kunnin' But Brutal",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Orks model only. When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot/declare a charge."
+    }
+  ],
+  "orks/wreckas": [
+    {
+      "slug": "kaptin-s-hat",
+      "name": "Kaptin's Hat",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry",
+          "Warboss",
+          "Big Mek"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Big Mek/Warboss Infantry model only. When both players have deployed their armies, you can redeploy up to three friendly Orks Infantry units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves."
+    },
+    {
+      "slug": "supa-snazz-dakka-upgrade",
+      "name": "Supa-snazz Dakka (Upgrade)",
+      "points": 25,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "keyword": "RAPID FIRE",
+          "value": "1",
+          "targetCondition": {
+            "keywords": [],
+            "mode": "includes"
+          }
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Flash Gitz unit only. This unit's Snazzgun weapons have [Rapid Fire 1]."
+    }
+  ],
+  "orks/wurrband": [
+    {
+      "slug": "eadbanger",
+      "name": "'Eadbanger",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Psyker"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Orks Psyker model only. This model has the following weapon."
+    },
+    {
+      "slug": "da-krunch",
+      "name": "Da Krunch",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Psyker"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Orks Psyker model only. This model has the following weapon."
+    },
+    {
+      "slug": "warphead",
+      "name": "Warphead",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Psyker"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "PSYKER",
+          "value": "level 2"
+        },
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "DEADLY DEMISE",
+          "value": "D6"
+        },
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfModel",
+          "roll": "toHit",
+          "action": "rerollAll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Orks Psyker model only. This model: Has psyker level 2. Has Deadly Demise D6. Can re-roll psychic rolls."
+    }
+  ]
+}

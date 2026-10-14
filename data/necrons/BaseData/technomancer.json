@@ -1,0 +1,262 @@
+{
+  "id": 47467,
+  "slug": "technomancer",
+  "name": "Technomancer",
+  "baseSize": "50mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **1 Technomancer**\n\n**This model is equipped with:** staff of light.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "Specialist combatants may be assigned to front-line squads to bolster their fighting effectiveness.",
+      "name": "Support",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it. \n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19).",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Rites of Reanimation",
+      "rules": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 3,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Technomancer",
+      "rules": "At the end of your Movement phase, you can select one friendly **NECRONS** model within 6\" of the bearer. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 4,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Support",
+      "rules": "This model can be attached to the following units:\n\n■ **CANOPTEK WRAITHS**\n■ **IMMORTALS**\n■ **NECRON WARRIORS**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": 2,
+  "pointsStepPoints": 10,
+  "leads": [
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47013,
+        "name": "Canoptek Wraiths",
+        "slug": "canoptek-wraiths",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47344,
+        "name": "Necron Warriors",
+        "slug": "necron-warriors",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 46778,
+        "name": "Immortals",
+        "slug": "immortals",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 62481,
+      "name": "Technomancer",
+      "stats": {
+        "save": "4+",
+        "wounds": "4",
+        "movement": "10\"",
+        "toughness": "4",
+        "leadership": "6+",
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50765,
+          "name": "Cryptek"
+        },
+        {
+          "id": 51013,
+          "name": "Fly"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51794,
+          "name": "Technomancer"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 104767,
+            "name": "Staff of light",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110918,
+                "name": "Ranged",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "3",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              },
+              {
+                "id": 111861,
+                "name": "Melee",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "2",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 104767,
+            "name": "Staff of light",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110918,
+                "name": "Ranged",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "3",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              },
+              {
+                "id": 111861,
+                "name": "Melee",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "2",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 62392,
+      "points": 80,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 62481,
+          "miniatureName": "Technomancer",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

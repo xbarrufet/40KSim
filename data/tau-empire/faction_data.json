@@ -1,0 +1,1605 @@
+{
+  "faction": "T’au Empire",
+  "slug": "tau-empire",
+  "army_rules": [
+    {
+      "id": 1701,
+      "name": "Drones",
+      "excludedFactionIds": [],
+      "components": [
+        {
+          "id": 48512,
+          "type": "textBold",
+          "textContent": "If you have upgraded a model to have a drone, place a Drone token next to your model as a reminder. These do not count as models for any rules purposes.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49808,
+          "type": "header",
+          "textContent": "Guardian Drone",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49420,
+          "type": "text",
+          "textContent": "Each time a model makes a ranged attack that targets the bearer’s unit, subtract 1 from the Wound roll.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49462,
+          "type": "loreAccordion",
+          "textContent": "Projecting a defensive energy shield over both itself and the squad of warriors that it accompanies, a guardian drone provides vital protection amidst the fury of battle.",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49769,
+          "type": "header",
+          "textContent": "Gun Drone",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49246,
+          "type": "text",
+          "textContent": "The bearer is equipped with the following ranged weapon:",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48754,
+          "type": "image",
+          "textContent": "-",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": "https://d3ocysny7bghv8.cloudfront.net/9305bf76-3170-4449-a490-543f12d529c9",
+          "altText": "Ranged Weapon - Twin Pulse Carbine. Range: 20 inches. Attacks: 2. Ballistic Skill: 5+. Strength: 5. Armour Penetration: 0. Damage: 1. Weapon Abilities: Assault, Twin-Linked.",
+          "bulletPoints": []
+        },
+        {
+          "id": 48795,
+          "type": "loreAccordion",
+          "textContent": "The ubiquitous gun drone provides additional mid- to close-range fire support to warriors in the field, laying down withering hails of pulse rounds from a grav-stabilised ballistic platform.",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49062,
+          "type": "header",
+          "textContent": "Marker Drone",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49617,
+          "type": "text",
+          "textContent": "The bearer’s unit has the **MARKERLIGHT** keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48826,
+          "type": "loreAccordion",
+          "textContent": "These faithful drones mount markerlights which they employ to triangulate optimised targeting solutions against priority enemy battlefield assets.",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49174,
+          "type": "header",
+          "textContent": "Missile Drone",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48428,
+          "type": "text",
+          "textContent": "The bearer is equipped with the following ranged weapon:",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48470,
+          "type": "image",
+          "textContent": "-",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": "https://d3ocysny7bghv8.cloudfront.net/27d3d868-e074-4aab-9555-4a43e77aaae3",
+          "altText": "Ranged Weapon - Missile pod. Range: 30 inches. Attacks: 2. Ballistic Skill: 5+. Strength: 7. Armour Penetration: -1. Damage: 2.",
+          "bulletPoints": []
+        },
+        {
+          "id": 48881,
+          "type": "loreAccordion",
+          "textContent": "Whether knocking out mid-weight enemy fighting vehicles or punching through the heavy battle armour of elite foes, the streaking warheads fired by missile drones are ideally suited.",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49121,
+          "type": "header",
+          "textContent": "Shield Drone",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48476,
+          "type": "text",
+          "textContent": "Add 1 to the bearer’s Wounds characteristic.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49425,
+          "type": "loreAccordion",
+          "textContent": "Most commonly assigned to close escort of T’au battlesuits, the enduringly popular shield drone provides additional layers of personalised force field protection.",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    },
+    {
+      "id": 1703,
+      "name": "For the Greater Good",
+      "excludedFactionIds": [],
+      "components": [
+        {
+          "id": 49215,
+          "type": "text",
+          "textContent": "If your Army Faction is **T'AU EMPIRE**, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding **FORTIFICATION** and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the **[IGNORES COVER]** ability.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49389,
+          "type": "loreAccordion",
+          "textContent": "The Hunter Cadres battle for the betterment of the T’au Empire, not for personal gain or egotistic accomplishments. This burning commitment allows for prodigiously effective covering fire. Enemies are pinned in place by deadly bursts of pulse blasts or the infamous T’au markerlight is used to expose even well-fortified enemy positions, allowing other T’au warriors to enfilade the vulnerable enemies with murderous accuracy.",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    }
+  ],
+  "detachments_count": 7,
+  "detachments": [
+    {
+      "id": 10316,
+      "slug": "advanced-acquisition-cadre",
+      "name": "Advanced Acquisition Cadre",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Reconnaissance"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1860,
+        "slug": "tau-empire",
+        "name": "T’au Empire",
+        "commonName": "T’au Empire"
+      },
+      "enhancements": [
+        {
+          "id": 36809,
+          "name": "Negation Emitters (Upgrade)",
+          "points": 15,
+          "rules": "<k>Stealth Battlesuits</k> unit only. This unit has -3\" <b>detection range</b>.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47651,
+              "keywords": []
+            }
+          ]
+        },
+        {
+          "id": 37515,
+          "name": "Unmasking Suite (Upgrade)",
+          "points": 15,
+          "rules": "<k>Ghostkeel Battlesuit</k>/<k>Pathfinder Team</k>/<k>Stealth Battlesuits</k> unit only. When this unit is <b>selected to shoot</b>, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" <b>detection range</b> until this unit has shot.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47651,
+              "keywords": []
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Pathfinder Team"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Ghostkeel"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44532,
+          "name": "Marker Beacon",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "End of your Movement phase.",
+          "targetRules": "One friendly <k>Pathfinder Team/Stealth Battlesuits</k> unit.",
+          "effectRules": "Select one <b>objective</b> your unit is controlling. That <b>objective</b> is <b>secured</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44627,
+          "name": "Microdrone Support",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Pathfinder Team/Stealth Battlesuits</k> unit <b>starts an action</b>.",
+          "targetRules": "That <k>Pathfinder Team/Stealth Battlesuits</k> unit.",
+          "effectRules": "That <b>action</b> does not prevent your unit from being <b>eligible to shoot</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44834,
+          "name": "Autoreactive Camouflage",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, when an enemy unit targets a friendly <k>PATHFINDER TEAM/ STEALTH BATTLESUITS</k> unit, if that friendly unit is <b>hidden</b>.",
+          "targetRules": "That <k>Pathfinder Team/Stealth Battlesuits</k> unit.",
+          "effectRules": "Your unit has +1 <b>Sv</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7934,
+          "name": "expert fieldcraft",
+          "components": [
+            {
+              "id": 48639,
+              "type": "text",
+              "textContent": "In your Shooting phase, when a friendly <k>PATHFINDER TEAM/ STEALTH BATTLESUITS</k> unit is <b>selected to shoot</b>, those ranged attacks do not prevent your unit from being <b>hidden</b>.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49305,
+              "type": "loreAccordion",
+              "textContent": "<i>Extensive additional training – including tuition by Trail Shapers – enables these warriors to fire and relocate seamlessly while remaining concealed.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10257,
+      "slug": "auxiliary-cadre",
+      "name": "Auxiliary Cadre",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Disruption"
+      ],
+      "uniqueKeyword": "Auxiliary",
+      "faction": {
+        "id": 1860,
+        "slug": "tau-empire",
+        "name": "T’au Empire",
+        "commonName": "T’au Empire"
+      },
+      "enhancements": [
+        {
+          "id": 37479,
+          "name": "Admired Leader",
+          "points": 20,
+          "rules": "<k>T’au Empire</k> model only (excluding <k>Kroot</k> models). In your Command phase, you can select one <k>Kroot/Vespid Stingwings</k> unit within 12\" of this model. If you do, that unit has +1 <b>Ld</b> and <b>OC</b> until the start of your next Command phase.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Kroot"
+          ],
+          "keywordGroups": []
+        },
+        {
+          "id": 37298,
+          "name": "Student of Kauyon",
+          "points": 20,
+          "rules": "<k>Kroot Shaper</k> model only. In the Declare Battle Formations step, you can select up to three friendly <k>Kroot Carnivores/Farstalkers</k> units. Those units have <b>Deep Strike</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Shaper",
+                "Kroot"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43848,
+          "name": "Alien Expertise",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, when a friendly <k>Kroot/Vespid Stingwings</k> unit is selected to make an <b>advance move</b>.",
+          "targetRules": "That <k>Kroot/Vespid Stingwings</k> unit.",
+          "effectRules": "That move does not prevent your unit from being <b>eligible to declare a charge</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44712,
+          "name": "Guided By Unity",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>T’au Empire</k> unit (excluding <k>Kroot/Vespid Stingwings</k> units) is <b>selected to shoot</b>.",
+          "targetRules": "That <k>T’au Empire</k> unit.",
+          "effectRules": "Your unit’s ranged attacks that target a unit within 9\" of a friendly <k>Kroot/Vespid Stingwings</k> unit have <k>[Lethal Hits]</k>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44839,
+          "name": "Experimental Modifications",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase, when a friendly <k>Kroot/Vespid Stingwings</k> unit is <b>selected to attack</b>.",
+          "targetRules": "That <k>Kroot/Vespid Stingwings</k> unit.",
+          "effectRules": "Your unit’s attacks have +1 <b>AP</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7932,
+          "name": "Integrated Command Structure",
+          "components": [
+            {
+              "id": 49648,
+              "type": "text",
+              "textContent": "Friendly <k>Kroot/Vespid Stingwings</k> units have the following ability:\r\n\n<b>Harnessed Alien Instincts:</b> In your Shooting phase, this unit can select one <b>visible</b> enemy unit within 12\". That enemy unit is <b>prey‑marked</b>:\n\r<li>While a unit is <b>prey‑marked</b>, that unit has +3\" <b>detection range</b>.</li>\rFriendly <k>GHOSTKEEL BATTLESUIT/STEALTH BATTLESUITS</k> units have the following ability: \r\n\n<b>Localised Stealth Projectors (Aura):</b> When a friendly <k>Kroot/Vespid Stingwings</k> unit within 6\" of this unit has shot, those attacks do not prevent that unit from being <b>hidden</b>.\n\rThis <b>detachment</b> has the <k>AUXILIARIES</k> tag and cannot be taken with another <k>AUXILIARIES</k> <b>detachment</b>.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48844,
+              "type": "loreAccordion",
+              "textContent": "<i>T’au officers given charge of auxiliary cadres receive additional training in optimised doctrinal and strategic alien amalgamation; this – coupled with specialised translation drones and endless integrated combat drills – allows them to get the best out of their alien subordinates.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10364,
+      "slug": "experimental-prototype-cadre",
+      "name": "Experimental Prototype Cadre",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Priority Assets"
+      ],
+      "uniqueKeyword": "Battlesuit",
+      "faction": {
+        "id": 1860,
+        "slug": "tau-empire",
+        "name": "T’au Empire",
+        "commonName": "T’au Empire"
+      },
+      "enhancements": [
+        {
+          "id": 37355,
+          "name": "Plasma Accelerator Rifle",
+          "points": 20,
+          "rules": "<k>Battlesuit</k> model only. In the Declare Battle Formations step, select one of this model’s Plasma Rifle weapons. That weapon’s attacks have:\r<ul><li>+2 <b>S</b></li>\r<li>+1 <b>A</b>, <b>AP</b> and <b>D</b>.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Battlesuit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37459,
+          "name": "Supernova Launcher",
+          "points": 15,
+          "rules": "<k>Battlesuit</k> model only. In the Declare Battle Formations step, select one of this model’s Airbursting Fragmentation Projector weapons. That weapon’s attacks have:\r<ul><li>+3 <b>S</b></li>\r<li>+1 <b>AP</b> and <b>D</b>.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Battlesuit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36918,
+          "name": "Thermoneutronic Projector",
+          "points": 15,
+          "rules": "<k>Battlesuit</k> model only. In the Declare Battle Formations step, select one of this model’s T’au Flamer weapons. That weapon’s attacks have:\r<ul><li>+2 <b>S</b></li>\r<li>+1 <b>AP</b> and <b>D</b>.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Battlesuit"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44859,
+          "name": "Experimental Ammunition",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Battlesuit Character</k> unit is <b>selected to shoot</b>.",
+          "targetRules": "That <k>Battlesuit Character</k> unit.",
+          "effectRules": "Your unit’s ranged attacks have:\r<ul><li>+1 <b>S</b>.</li>\r<li><u>Or:</u> +1 <b>S</b>, <b>AP</b> and <k>[Hazardous]</k>.</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7940,
+          "name": "Superior Craftsmanship",
+          "components": [
+            {
+              "id": 49182,
+              "type": "text",
+              "textContent": "Friendly <k>Battlesuit Character</k> units’ ranged attacks have +6\" <b>R</b>.\rThis <b>detachment</b> has the <k>RETALIATION</k> tag and cannot be taken with another <k>RETALIATION</k> <b>detachment</b>.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48542,
+              "type": "loreAccordion",
+              "textContent": "<i>The applied science divisions of the Earth caste labour endlessly to provide front‑line units with superior weapons systems with which to destroy the foe from afar.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10393,
+      "slug": "kauyon",
+      "name": "Kauyon",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Reconnaissance"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1860,
+        "slug": "tau-empire",
+        "name": "T’au Empire",
+        "commonName": "T’au Empire"
+      },
+      "enhancements": [
+        {
+          "id": 36889,
+          "name": "Exemplar of the Kauyon",
+          "points": 20,
+          "rules": "**T’AU EMPIRE** model only (excluding **KROOT SHAPER** models). While the bearer is leading a unit, the Patient Hunter Detachment rule applies to that unit from the second battle round onwards instead of from the third.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Shaper"
+          ],
+          "keywordGroups": []
+        },
+        {
+          "id": 37146,
+          "name": "Precision of the Patient Hunter",
+          "points": 15,
+          "rules": "**T’AU EMPIRE** model only. Each time the bearer makes a ranged attack, add 1 to the Hit roll. From the third battle round onwards, add 1 to the Wound roll as well.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 36908,
+          "name": "Solid-image Projection Unit",
+          "points": 20,
+          "rules": "**T’AU EMPIRE** model only. After both players have deployed their armies, select up to three **T’AU EMPIRE** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37553,
+          "name": "Through Unity, Devastation",
+          "points": 30,
+          "rules": "**T’AU EMPIRE** model only (excluding **KROOT SHAPER** models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the **[LETHAL HITS]** ability while targeting their Spotted unit.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Shaper"
+          ],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43837,
+          "name": "A Tempting Trap",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **T’AU EMPIRE** unit from your army that has not been selected to shoot this phase. The first time you use this Stratagem, you must also select one objective marker that is not in your opponent’s deployment zone; until the end of the battle, this becomes your Trap objective marker.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes a ranged attack that targets an enemy unit within range of your Trap objective marker, add 1 to the Wound roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "You cannot use this Stratagem during the first or second battle rounds."
+        },
+        {
+          "id": 44151,
+          "name": "Point-blank Ambush",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **T’AU EMPIRE** unit from your army that has not been selected to shoot this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes a ranged attack that targets an enemy unit within 9\", improve the Armour Penetration characteristic of that attack by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "You cannot use this Stratagem during the first or second battle rounds."
+        },
+        {
+          "id": 43814,
+          "name": "Coordinate to Engage",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **T’AU EMPIRE** unit from your army that has just been selected as an Observer unit (see For the Greater Good).",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack that targets their Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if your unit has the **Markerlight** keyword, that attack has the **[IGNORES COVER]** ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44251,
+          "name": "Combat Embarkation",
+          "cpCost": 1,
+          "category": "wargear",
+          "turn": "opponentsTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your opponent’s Charge phase, just after an enemy unit has declared a charge.",
+          "targetRules": "One **T’AU EMPIRE INFANTRY** unit from your army that was selected as one of the targets of that charge, and one friendly **TRANSPORT**.",
+          "effectRules": "Your unit embarks within that **TRANSPORT**.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "Every model in your **INFANTRY** unit must be within 3\" of that **TRANSPORT** and there must be sufficient transport capacity to embark the entire unit."
+        },
+        {
+          "id": 43892,
+          "name": "Photon Grenades",
+          "cpCost": 1,
+          "category": "wargear",
+          "turn": "opponentsTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your opponent's charge phase, just after an enemy unit has selected its **charge target**.",
+          "targetRules": "One **T’AU EMPIRE GRENADES** unit from your army that was selected as one of the targets of that charge.",
+          "effectRules": "That enemy unit must immediately take a Battle-shock test, and until the end of the phase, subtract 2 from Charge rolls made for that enemy unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "You cannot target a unit that is within Engagement Range of one or more enemy units."
+        },
+        {
+          "id": 44509,
+          "name": "Wall of Mirrors",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "opponentsTurn",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "End of your opponent’s Fight phase.",
+          "targetRules": "One **STEALTH**, **GHOSTKEEL** or **COMMANDER SHADOWSUN** unit from your army.",
+          "effectRules": "Remove your unit from the battlefield and place it into Strategic Reserves.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "You cannot target a unit that is within Engagement Range of one or more enemy units."
+        }
+      ],
+      "rules": [
+        {
+          "id": 7830,
+          "name": "Patient Hunter",
+          "components": [
+            {
+              "id": 48509,
+              "type": "text",
+              "textContent": "During the third, fourth and fifth battle rounds, ranged weapons equipped by **T’AU EMPIRE** models from your army have the **[SUSTAINED HITS 1]** ability. During the third, fourth and fifth battle rounds, while a unit is a Guided unit (see For the Greater Good), each time a ranged attack is made by a model in that unit that targets a Spotted unit, you can ignore any or all modifiers to that attack’s Ballistic skill characteristics and/or all modifiers to the Hit roll.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49676,
+              "type": "loreAccordion",
+              "textContent": "The tactical philosophy known as the Kauyon allows for T’au commanders to draw the enemy into a deadly trap, springing it at the perfect moment to deliver a storm of fatal strikes from which none can escape.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10259,
+      "slug": "kroot-hunting-pack",
+      "name": "Kroot Hunting Pack",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Take and Hold"
+      ],
+      "uniqueKeyword": "Auxiliary",
+      "faction": {
+        "id": 1860,
+        "slug": "tau-empire",
+        "name": "T’au Empire",
+        "commonName": "T’au Empire"
+      },
+      "enhancements": [
+        {
+          "id": 37208,
+          "name": "Borthrod Gland",
+          "points": 15,
+          "rules": "**KROOT FLESH SHAPER** only. While the bearer is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Flesh Shaper"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37322,
+          "name": "Kroothawk Flock",
+          "points": 10,
+          "rules": "**KROOT** model only. Ranged weapons equipped by models in the bearer’s unit have the **[IGNORES COVER]** ability, and enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of the bearer.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Kroot"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37154,
+          "name": "Nomadic Hunter",
+          "points": 20,
+          "rules": "**KROOT TRAIL SHAPER** model only. While the bearer is leading a unit, add 3\" to the Move characteristic of models in that unit and ranged weapons equipped by models in that unit have the **[ASSAULT]** ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Trail Shaper"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37018,
+          "name": "Root-carved Weapons",
+          "points": 10,
+          "rules": "**KROOT WAR SHAPER** model only. All weapons equipped by the bearer have the **[PRECISION]** and **[DEVASTATING WOUNDS]** abilities.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "War Shaper"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44551,
+          "name": "Join the Hunt",
+          "cpCost": 2,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase.",
+          "targetRules": "One **KROOT INFANTRY** or **KROOT HOUNDS** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.",
+          "effectRules": "Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "This Stratagem cannot be used to return destroyed **CHARACTER** units to Attached units. You can only use this Stratagem once per battle."
+        },
+        {
+          "id": 44270,
+          "name": "A Trap Well Laid",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase.",
+          "targetRules": "One **KROOT** unit from your army that has not been selected to shoot or fight this phase.",
+          "effectRules": "After your unit has resolved its attacks this phase, select one enemy unit that was hit by one or more of those attacks. Until the end of the phase, each time a **KROOT** model from your army makes an attack that targets that enemy unit, unless the attacking unit is Battle-shocked, improve the Armour Penetration characteristic of that attack by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44206,
+          "name": "EMP Grenades",
+          "cpCost": 1,
+          "category": "wargear",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, just after an enemy **VEHICLE** unit is selected to shoot or fight.",
+          "targetRules": "One **KROOT GRENADES** unit from your army within 8\" of that enemy **VEHICLE** unit.",
+          "effectRules": "Until the end of the phase, worsen the Weapon Skill and Ballistic Skill characteristics of that enemy **VEHICLE** unit’s weapons by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44767,
+          "name": "The Grisly Feast",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **KROOT** unit from your army that destroyed one or more enemy units this phase.",
+          "effectRules": "In your opponent’s next Command phase, each enemy unit within 6\" of your unit must take a Battle-shock test. If the unit taking that test is Below Half-strength, subtract 1 from that test. Enemy units affected by this Stratagem do not need to take any other Battle-shock tests in the same phase.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43895,
+          "name": "Guerrilla Warriors",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, just after a **KROOT** unit from your army Falls Back.",
+          "targetRules": "That **KROOT** unit.",
+          "effectRules": "Until the end of the turn, your unit is eligible to shoot and declare a charge.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44254,
+          "name": "Hidden Hunters",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **KROOT** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7723,
+          "name": "Hunter’s Instincts",
+          "components": [
+            {
+              "id": 48711,
+              "type": "text",
+              "textContent": "Each time a **KROOT** model from your army makes an attack, add 1 to the Hit roll if the target of that attack is below its Starting Strength, and add 1 to the Wound roll as well if the target of that attack is Below Half-strength.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49380,
+              "type": "loreAccordion",
+              "textContent": "The Kroot naturally predate upon weakened foes, drawn by the scent of spilled blood and viscera.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        },
+        {
+          "id": 7778,
+          "name": "Skirmish Fighters",
+          "components": [
+            {
+              "id": 48590,
+              "type": "text",
+              "textContent": "**Kroot** models from your army have a 6+ invulnerable save against melee attacks and a 5+ invulnerable save against ranged attacks.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49408,
+              "type": "loreAccordion",
+              "textContent": "Though ill-suited to protracted warfare, the Kroot are experts at light, swift skirmishing. Here their fieldcraft and wiry natural agility help them to evade the hostile attentions of their foes.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": [
+        {
+          "id": 1608,
+          "title": "Keywords",
+          "bulletPoints": [
+            {
+              "id": 1876,
+              "text": "If you select this Detachment, **KROOT CARNIVORE** units from your army have the **BATTLELINE** keyword."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10205,
+      "slug": "montka",
+      "name": "Mont’ka",
+      "pointsCost": 3,
+      "forceDispositions": [
+        "Take and Hold",
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1860,
+        "slug": "tau-empire",
+        "name": "T’au Empire",
+        "commonName": "T’au Empire"
+      },
+      "enhancements": [
+        {
+          "id": 37522,
+          "name": "Coordinated Exploitation",
+          "points": 30,
+          "rules": "**T’AU EMPIRE** model only (excluding **KROOT SHAPER** models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the **[SUSTAINED HITS 1]** ability while targeting their Spotted unit.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Shaper"
+          ],
+          "keywordGroups": []
+        },
+        {
+          "id": 36904,
+          "name": "Exemplar of the Mont’ka",
+          "points": 10,
+          "rules": "**T’AU EMPIRE** model only (excluding **KROOT SHAPER** models). While the bearer is leading a unit, the Killing Blow Detachment rule applies to that unit during the fourth battle round as well.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Shaper"
+          ],
+          "keywordGroups": []
+        },
+        {
+          "id": 36865,
+          "name": "Strategic Conqueror",
+          "points": 15,
+          "rules": "**T’AU EMPIRE** model only. At the start of the first battle round, before the first turn begins, select one objective marker on the battlefield. While a friendly **T’AU EMPIRE** model is within range of that objective marker and the bearer is on the battlefield, add 1 to that friendly model’s Objective Control characteristic.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37548,
+          "name": "Strike Swiftly",
+          "points": 45,
+          "rules": "**T’AU EMPIRE** model only. In the Resolve Pre-battle Abilities step, you can select up to two friendly **T'AU EMPIRE** units within 6\" of this model that do not have the Scouts ability. Until the end of the battle, all models in the selected units have the **Scouts 6\"** ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43772,
+          "name": "Pinpoint Counter-offensive",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase.",
+          "targetRules": "One **T’AU EMPIRE** unit (excluding **KROOT** units) from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.",
+          "effectRules": "Until the end of the battle, each time a **T’AU EMPIRE** unit (excluding **KROOT** units) from your army makes an attack that targets the enemy unit that just destroyed your unit, you can re-roll the Hit roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44708,
+          "name": "Aggressive Mobility",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One **T’AU EMPIRE** unit from your army that has not been selected to move this phase.",
+          "effectRules": "Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44011,
+          "name": "Focused Fire",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Start of your Shooting phase.",
+          "targetRules": "Two **T’AU EMPIRE** units from your army that have not been selected to shoot this phase, and one enemy unit.",
+          "effectRules": "Until the end of the phase, each time a model in either of your units makes an attack, it can only target that enemy unit (and only if it is an eligible target for that attack), and when resolving that attack, improve the Armour Penetration characteristic by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "You cannot use this Stratagem during the fourth or fifth battle rounds."
+        },
+        {
+          "id": 44640,
+          "name": "Combat Debarkation",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **T’AU EMPIRE INFANTRY** unit from your army that disembarked from a **TRANSPORT** this turn.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack that targets the closest enemy unit, you can re-roll the Wound roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44253,
+          "name": "Pulse Onslaught",
+          "cpCost": 2,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **T’AU EMPIRE INFANTRY** unit (excluding **KROOT** units) from your army that has just shot, and one enemy unit (excluding **MONSTERS** and **VEHICLES**) hit by one or more of those attacks.",
+          "effectRules": "Until the end of your opponent’s next turn, that enemy unit is shaken. While a unit is shaken, subtract 2 from its Move characteristic and subtract 2 from Advance and Charge rolls made for it.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44012,
+          "name": "Counterfire Defence Systems",
+          "cpCost": 2,
+          "category": "wargear",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **T’AU EMPIRE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time an attack is allocated to your unit, subtract 1 from the Damage characteristic of that attack.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7870,
+          "name": "Killing Blow",
+          "components": [
+            {
+              "id": 49776,
+              "type": "text",
+              "textContent": "During the first, second and third battle rounds, ranged weapons equipped by **T’AU EMPIRE** models from your army have the **[ASSAULT]** ability. During the first, second and third battle rounds, while a unit is a Guided unit (see For the Greater Good), its ranged weapons have the **[LETHAL HITS]** ability.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49788,
+              "type": "loreAccordion",
+              "textContent": "Mont’ka is the most aggressive style of T’au warfare. Its singular focus is the art of identifying a target of opportunity and attacking it swiftly with an overwhelming application of force.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10181,
+      "slug": "retaliation-cadre",
+      "name": "Retaliation Cadre",
+      "pointsCost": 3,
+      "forceDispositions": [
+        "Purge the Foe",
+        "Reconnaissance"
+      ],
+      "uniqueKeyword": "Battlesuit",
+      "faction": {
+        "id": 1860,
+        "slug": "tau-empire",
+        "name": "T’au Empire",
+        "commonName": "T’au Empire"
+      },
+      "enhancements": [
+        {
+          "id": 37555,
+          "name": "Internal Grenade Racks",
+          "points": 20,
+          "rules": "**T’AU EMPIRE BATTLESUIT** model only. The bearer has the **GRENADES** keyword, and each time the bearer ends a Normal move, you can select one enemy unit that it moved over during that move. If you do, roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Battlesuit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36855,
+          "name": "Prototype Weapon System",
+          "points": 15,
+          "rules": "**T’AU EMPIRE BATTLESUIT** model only. Each time the bearer is selected to shoot, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the selected ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Battlesuit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37542,
+          "name": "Puretide Engram Neurochip",
+          "points": 15,
+          "rules": "**T’AU EMPIRE BATTLESUIT** model only. Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 4+, you gain 1CP.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Battlesuit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37166,
+          "name": "Starflare Ignition System",
+          "points": 20,
+          "rules": "**T’au EMPIRE BATTLESUIT** model only. At the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Battlesuit"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44372,
+          "name": "Fail-safe Detonator",
+          "cpCost": 2,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase, just after a **T’AU EMPIRE BATTLESUIT** model from your army is destroyed.",
+          "targetRules": "That destroyed model’s unit. You can use this Stratagem on that unit even if that unit was just destroyed.",
+          "effectRules": "Before removing your model from play, if it has the Deadly Demise ability, do not roll for that ability; instead, you can choose whether the result of that roll is a 1 or a 6. If your model does not have the Deadly Demise ability, roll one D6 for each unit within 6\" of it: on a 4+, that unit suffers D3 mortal wounds.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44473,
+          "name": "Stimm Injectors",
+          "cpCost": 1,
+          "category": "wargear",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **T’AU EMPIRE BATTLESUIT** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, models in your unit have the Feel No Pain 6+ ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44855,
+          "name": "The Shortened Blade",
+          "cpCost": 2,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One **T’AU EMPIRE BATTLESUIT** unit from your  army that is arriving using the Deep Strike ability this phase.",
+          "effectRules": "Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy models.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "A unit targeted with this Stratagem is not eligible to declare a charge in the same turn."
+        },
+        {
+          "id": 44654,
+          "name": "The Arro’kon Protocol",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **T’AU EMPIRE BATTLESUIT** unit from your army that has not been selected to shoot this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit that contains 6 or more models, that attack has the **[SUSTAINED HITS 1]** ability. If that attack targets an enemy unit that contains 11 or more models, it has the **[SUSTAINED HITS 2]** ability instead.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44324,
+          "name": "The Torchstar Gambit",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **T’AU EMPIRE BATTLESUIT** unit from your army that can **FLY** whose attacks have been resolved this phase.",
+          "effectRules": "If your unit is not within Engagement Range of one or more enemy units, it can make a Normal move. If it does, your unit cannot declare a charge this turn.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44362,
+          "name": "Grav-inhibitor Field",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your opponent’s Charge phase, just after an enemy unit has declared a charge.",
+          "targetRules": "One **T’AU EMPIRE BATTLESUIT** unit from your army that was selected as a target of that charge.",
+          "effectRules": "That enemy unit must immediately take a Battle-shock test and you must roll one D6 for each model in that enemy unit: for each 6, that enemy unit suffers 1 mortal wound.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7871,
+          "name": "Bonded Heroes",
+          "components": [
+            {
+              "id": 49802,
+              "type": "text",
+              "textContent": "Each time a **T’AU EMPIRE BATTLESUIT** model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 8\", improve the Armour Penetration characteristic of that attack by 1 as well.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49239,
+              "type": "loreAccordion",
+              "textContent": "Cadres of T’au Battlesuit pilots fight in a manner inspired by the dynamism and determination of famous and beloved war leaders. Indeed, some of the specialist piloting manoeuvres they employ are named after such icons, in a few rare – and sometimes unofficial – cases even after those who have since fallen far from favour with the Ethereal Council. Either way, these bonded veterans are experts in the deadly art of engaging the enemy in close confines. They plunge into the heart of the enemy army where the fighting is fiercest, and prevail in the name of the Greater Good.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    }
+  ]
+}

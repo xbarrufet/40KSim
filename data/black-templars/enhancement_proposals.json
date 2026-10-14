@@ -1,0 +1,192 @@
+{
+  "black-templars/fist-of-the-god-emperor": [
+    {
+      "slug": "oathbound-exemplar",
+      "name": "Oathbound Exemplar",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Infantry unit only. When this unit is selected to make an advance/fall-back move, that advance/fall-back move does not prevent this unit from being eligible to start an action."
+    },
+    {
+      "slug": "righteous-fervour-upgrade",
+      "name": "Righteous Fervour (Upgrade)",
+      "points": 15,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Crusader Squad"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "charge",
+          "action": "rerollAll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "CRUSADER SQUAD unit only. This unit can re-roll Advance rolls."
+    }
+  ],
+  "black-templars/marshals-household": [
+    {
+      "slug": "fervent-exemplars-upgrade",
+      "name": "Fervent Exemplars (Upgrade)",
+      "points": 10,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Sword Brethren Squad"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "charge",
+          "action": "addToRoll",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Sword Brethren Squad unit only. This unit has +1 to charge rolls."
+    },
+    {
+      "slug": "inheritors-of-sigismund-upgrade",
+      "name": "Inheritors of Sigismund (Upgrade)",
+      "points": 15,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Sword Brethren Squad"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfUnit",
+          "keyword": "FIGHTS FIRST",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Sword Brethren Squad unit only. This unit has Fights First."
+    }
+  ],
+  "black-templars/vow-sworn-crusaders": [
+    {
+      "slug": "augury-servo-host",
+      "name": "Augury Servo-host",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That enemy unit cannot have the benefit of cover."
+    },
+    {
+      "slug": "consecrating-aura",
+      "name": "Consecrating Aura",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "stat": "Invulnerable",
+          "mode": "setValue",
+          "value": 5
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. This unit has 5+ InSv."
+    },
+    {
+      "slug": "incendiary-animus",
+      "name": "Incendiary Animus",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Chaplain"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "MELEE",
+          "stat": "Strength",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Chaplain/Judiciar model only. This unit's melee attacks have +1 S."
+    },
+    {
+      "slug": "zealous-vanguard",
+      "name": "Zealous Vanguard",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfUnit",
+          "keyword": "SCOUTS",
+          "value": "6\""
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. This unit has Scouts 6\"."
+    }
+  ]
+}

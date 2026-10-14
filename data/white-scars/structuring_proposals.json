@@ -3,55 +3,55 @@
     "tag": "AI_PROPOSED",
     "abilities": [
       {
-        "type": "Always",
         "name": "Trophy Taker",
-        "attackType": "ANY",
-        "trigger": "¿El objetivo es una unidad de Personaje?",
-        "appliedTo": "SelfModel",
+        "phase": "ANY",
+        "trigger": "¿El objetivo es una unidad CHARACTER?",
         "effects": [
           {
             "category": "diceModifier",
+            "appliedTo": "SelfUnit",
             "roll": "toHit",
             "action": "rerollOnes",
             "attackType": "ALL"
           },
           {
             "category": "diceModifier",
+            "appliedTo": "SelfUnit",
             "roll": "toWound",
             "action": "rerollOnes",
             "attackType": "ALL"
           }
         ],
-        "originalText": "This unit’s attacks that target a <k>Character</k> unit can:\r<ul><li>Re-roll <b>hit rolls</b> of 1 </li>\r<li>Re-roll <b>wound rolls</b> of 1.</li></ul>"
+        "originalText": "This unit’s attacks that target a Character unit can: Re-roll hit rolls of 1  Re-roll wound rolls of 1."
       },
       {
-        "type": "AsLeader",
         "name": "Leader",
         "category": "OTHER",
-        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
-        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
       },
       {
-        "type": "Always",
         "name": "For the Khan!",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
+        "autoApply": true,
         "effects": [
           {
             "category": "weaponKeyword",
+            "appliedTo": "SelfUnit",
             "weaponTarget": "RANGE",
             "keyword": "ASSAULT",
             "value": null
           },
           {
             "category": "weaponKeyword",
+            "appliedTo": "SelfUnit",
             "weaponTarget": "MELEE",
             "keyword": "LANCE",
             "value": null
           }
         ],
-        "originalText": "\r<ul><li>This unit’s ranged attacks have <k>[ASSAULT]</k></li>\r<li>This unit’s melee attacks have <k>[LANCE]</k>.</li></ul>"
+        "originalText": "This unit’s ranged attacks have [ASSAULT] This unit’s melee attacks have [LANCE]."
       }
     ],
     "rawAbilities": []
@@ -60,34 +60,76 @@
     "tag": "AI_PROPOSED",
     "abilities": [
       {
-        "type": "Always",
         "name": "Spear of Chogoris",
-        "attackType": "SHOOTING",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfUnit",
+        "autoApply": true,
         "effects": [
           {
             "category": "weaponKeyword",
+            "appliedTo": "SelfUnit",
             "weaponTarget": "RANGE",
             "keyword": "ASSAULT",
             "value": null
           }
         ],
-        "originalText": "\r<ul><li>This unit’s ranged attacks have <k>[Assault]</k>.</li>\r<li>When this unit is selected to make an <b>advance move</b>, that <b>advance move</b> does not prevent this unit from being <b>eligible to declare a charge</b>.</li>\r<li>If the <b>assault doctrine</b> is active for this unit, this unit has +1 to <b>advance rolls</b> and <b>charge rolls</b>.</li></ul>"
+        "originalText": "This unit’s ranged attacks have [Assault]. When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge. If the assault doctrine is active for this unit, this unit has +1 to advance rolls and charge rolls."
       },
       {
-        "type": "AsLeader",
+        "name": "Spear of Chogoris - Advance and Charge",
+        "phase": "MOVEMENT",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "ADVANCE_AND_CHARGE",
+            "value": null
+          }
+        ]
+      },
+      {
+        "name": "Spear of Chogoris - Assault Doctrine",
+        "phase": "ANY",
+        "trigger": "¿La doctrina de asalto está activa para esta unidad?",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "charge",
+            "action": "addToRoll",
+            "value": 1
+          },
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "stat": "Movement",
+            "mode": "add",
+            "value": 1
+          }
+        ]
+      },
+      {
         "name": "Leader",
         "category": "OTHER",
         "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
-        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
       },
       {
-        "type": "Always",
         "name": "Skilled Riders",
-        "category": "OTHER",
-        "text": "This unit has Mobile.",
-        "originalText": "This unit has <k>Mobile</k>."
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "MOBILE",
+            "value": null
+          }
+        ],
+        "originalText": "This unit has Mobile."
       }
     ],
     "rawAbilities": []

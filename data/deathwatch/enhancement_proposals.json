@@ -1,0 +1,91 @@
+{
+  "deathwatch/black-spear-task-force": [
+    {
+      "slug": "beacon-angelis",
+      "name": "Beacon Angelis",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "ADEPTUS ASTARTES model only. If this unit is a Kill Team unit, this unit has: Deep Strike. When you target this unit with the Rapid Ingress Stratagem, that use is -1CP."
+    },
+    {
+      "slug": "osseus-key-aura",
+      "name": "Osseus Key (Aura)",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Techmarine",
+          "Watch Master"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "Enemy",
+          "stat": "Attacks",
+          "mode": "subtract",
+          "value": 1,
+          "targetCondition": {
+            "keywords": [
+              "VEHICLE"
+            ],
+            "mode": "includes"
+          }
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "WATCH MASTER/TECHMARINE model only. While an enemy VEHICLE unit is within 6\" of this model, that enemy unit's attacks have -1 A."
+    },
+    {
+      "slug": "the-thief-of-secrets",
+      "name": "The Thief of Secrets",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Watch Master",
+          "Captain"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "WATCH MASTER/CAPTAIN model only. This model has the following weapon:"
+    },
+    {
+      "slug": "the-tome-of-ectoclades",
+      "name": "The Tome of Ectoclades",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Captain",
+          "Watch Master"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "WATCH MASTER/CAPTAIN model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, the assault doctrine, devastator doctrine and tactical doctrine are active for this unit until the start of your next Command phase."
+    }
+  ]
+}

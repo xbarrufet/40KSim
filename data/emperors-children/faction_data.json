@@ -1,0 +1,1795 @@
+{
+  "faction": "Emperor’s Children",
+  "slug": "emperors-children",
+  "army_rules": [
+    {
+      "id": 1709,
+      "name": "Thrill Seekers",
+      "excludedFactionIds": [],
+      "components": [
+        {
+          "id": 49152,
+          "type": "text",
+          "textContent": "If your Army Faction is **EMPEROR’S CHILDREN**, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n\n■ It cannot target a unit it was within Engagement Range of at the start of the turn.\n■ It cannot target a unit that was the target of another unit’s charge or attack this phase.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49781,
+          "type": "loreAccordion",
+          "textContent": "The Emperor’s Children are skilled warriors all, their transhuman might enhanced by a lifetime of ceaseless conflict. Their ingrained desire for sensation in all its forms sees them move rapidly across the battlefield, flitting between targets as they attempt to satiate their never‑ending hunger for fresh experience.",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    },
+    {
+      "id": 1714,
+      "name": "Pact of Excess",
+      "excludedFactionIds": [],
+      "components": [
+        {
+          "id": 48807,
+          "type": "text",
+          "textContent": "When mustering your army, unless specifically stated otherwise, you cannot select **LEGIONS OF EXCESS** as your Army Faction.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49262,
+          "type": "loreAccordion",
+          "textContent": "By enacting the most lurid and excessive acts of ritual violence, the Emperor’s Children may shatter reality itself and summon forth the daemons of Slaanesh.",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    }
+  ],
+  "detachments_count": 9,
+  "detachments": [
+    {
+      "id": 10414,
+      "slug": "coterie-of-the-conceited",
+      "name": "Coterie of the Conceited",
+      "pointsCost": 3,
+      "forceDispositions": [
+        "Priority Assets",
+        "Purge the Foe"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1888,
+        "slug": "emperors-children",
+        "name": "Emperor’s Children",
+        "commonName": "Emperor’s Children"
+      },
+      "enhancements": [
+        {
+          "id": 37126,
+          "name": "Pledge of Dark Glory",
+          "points": 25,
+          "rules": "**EMPEROR’S CHILDREN** model only. While the bearer is leading a unit, improve the Leadership and Objective Control characteristics of models in that unit by 1.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37248,
+          "name": "Pledge of Eternal Servitude",
+          "points": 25,
+          "rules": "**EMPEROR’S CHILDREN** model only. The first time the bearer is destroyed, take a Leadership test for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic).",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37580,
+          "name": "Pledge of Mortal Pain",
+          "points": 15,
+          "rules": "**EMPEROR’S CHILDREN** model only. At the start of your Shooting phase, select one enemy unit within 12\" of and visible to the bearer. That unit must take a Leadership test, subtracting 2 from the result if it is Battle-shocked: if failed, that enemy unit suffers 3 mortal wounds.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 36813,
+          "name": "Pledge of Unholy Fortune",
+          "points": 30,
+          "rules": "**EMPEROR’S CHILDREN** model only. Once per turn, just after making a Hit roll, a Wound roll or a saving throw for a model in the bearer’s unit, if the bearer is not Battle-shocked, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44872,
+          "name": "Protection of the Dark Prince",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase, just after a mortal wound or attack is allocated to a model in an **EMPEROR’S CHILDREN** unit from your army.",
+          "targetRules": "That **EMPEROR’S CHILDREN** unit.",
+          "effectRules": "Until the end of the phase, models in your unit have the Feel No Pain 6+ ability, and the Feel No Pain 4+ ability against mortal wounds.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44689,
+          "name": "Unshakeable Opponents",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Command phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army.",
+          "effectRules": "Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the Hit roll; the Wound roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43819,
+          "name": "Embrace the Pain",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Start of the Fight phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN INFANTRY** unit from your army.",
+          "effectRules": "Until the end of the phase, each time an enemy model within Engagement Range of your unit selects targets, it must select your unit as the target of its attacks.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44474,
+          "name": "Martial Perfection",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army that has not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44391,
+          "name": "Unbound Arrogance",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase, just after an **EMPEROR’S CHILDREN** unit from your army destroys an enemy unit.",
+          "targetRules": "That **EMPEROR’S CHILDREN** unit.",
+          "effectRules": "Increase your pledge to Slaanesh by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "You can only use this Stratagem once per battle round."
+        },
+        {
+          "id": 44591,
+          "name": "Armour of Abhorrence",
+          "cpCost": 1,
+          "category": "wargear",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7876,
+          "name": "Pledges to the Dark Prince",
+          "components": [
+            {
+              "id": 49193,
+              "type": "text",
+              "textContent": "At the start of the battle round, if your **WARLORD** is on the battlefield, you must pledge a number to Slaanesh representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain a number of Pact points equal to your pledge. Otherwise, you do not gain any Pact points this battle round and your **WARLORD** model suffers D3 mortal wounds.\n\n**EMPEROR’S CHILDREN** units from your army gain a bonus depending on how many Pact points you have gained during the battle, as shown below (these are all cumulative).",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49127,
+              "type": "image",
+              "textContent": "-",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": "https://d3ocysny7bghv8.cloudfront.net/af85f0ea-5f3c-4f43-9491-dddb02d5e722",
+              "altText": "If you have 1 or more Pact points, each time a model in this unit makes an attack, re‑roll a Hit roll of 1.  If you have 3 or more Pact points, each time a model in this unit makes an attack, re‑roll a Wound roll of 1.  If you have 5 or more Pact points, melee weapons equipped by models in this unit have the [LETHAL HITS] and [SUSTAINED HITS 1] abilities.  If you have 7 or more Pact points, each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+.",
+              "bulletPoints": []
+            },
+            {
+              "id": 48384,
+              "type": "loreAccordion",
+              "textContent": "Few appear as favoured by the Dark Prince as these warriors, their boons of power a reward for committing ever viler deeds in honour of their patron.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10396,
+      "slug": "court-of-the-phoenician",
+      "name": "Court of the Phoenician",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Purge the Foe"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1888,
+        "slug": "emperors-children",
+        "name": "Emperor’s Children",
+        "commonName": "Emperor’s Children"
+      },
+      "enhancements": [
+        {
+          "id": 37029,
+          "name": "Exalted Patron",
+          "points": 15,
+          "rules": "**LORD EXULTANT** model only. Add 1\" to the Move characteristic of the bearer.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Lord Exultant"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36928,
+          "name": "Soulstain Made Manifest",
+          "points": 15,
+          "rules": "**EMPEROR’S CHILDREN** model only. At the start of the Fight phase, you can select one enemy unit within Engagement Range of the bearer; that unit must take a Battle‑shock test, subtracting 1 from the result.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37416,
+          "name": "Spiritsliver",
+          "points": 20,
+          "rules": "**EMPEROR’S CHILDREN DAEMON PRINCE** model only. Add 1 to the Strength and Attacks characteristics of the bearer’s melee weapons.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Daemon Prince"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36836,
+          "name": "Tears of the Phoenix",
+          "points": 25,
+          "rules": "**EMPEROR’S CHILDREN** model only. Each time a model in the bearer’s unit makes a melee attack, you can ignore any or all modifiers to that attack’s Weapon Skill characteristic and any or all modifiers to the Hit roll and Wound roll.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44608,
+          "name": "Contemptuous Disregard",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army.",
+          "effectRules": "Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43964,
+          "name": "Prideful Superiority",
+          "cpCost": 2,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army that has not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack that targets a **CHARACTER** unit, you can re-roll the Hit roll and you can re‑roll the Wound roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44743,
+          "name": "Sinuous Breach",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase",
+            "chargePhase"
+          ],
+          "whenRules": "Your Movement phase or your Charge phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN DAEMON** unit from your army that has not been selected to move or charge this phase.",
+          "effectRules": "Until the end of the phase, each time your unit makes a Normal, Advance or Charge move, it can move horizontally through terrain features.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44645,
+          "name": "Close-quarters Excruciation",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army that has not been selected to shoot this phase.",
+          "effectRules": "Until the end of the phase, each time an **EMPEROR’S CHILDREN** model in your unit makes an attack that targets an eligible unit within 12\", improve the Strength and  Armour Penetration characteristics of that attack by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44606,
+          "name": "Euphoric Inspiration",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your Charge phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN DAEMON** unit from your army.",
+          "effectRules": "Until the end of the phase, you can re-roll Charge rolls for friendly **EMPEROR’S CHILDREN** units within 6\" of your unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44798,
+          "name": "Catalytic Stimulus",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army that lost one or more wounds as a result of those attacks.",
+          "effectRules": "Your unit can make a **surge move** of up to D6\".",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7755,
+          "name": "Sensational Performance",
+          "components": [
+            {
+              "id": 49199,
+              "type": "text",
+              "textContent": "**EMPEROR’S CHILDREN** units from your army have the following ability:\n\n**Sensational Performance:** Each time this unit is selected to fight, if this unit made a Charge move this turn, it can use this ability. If it does, until the end of the phase:\n\n■ This unit cannot target a unit it was within Engagement Range of at the start of the turn.\n■ This unit cannot target a unit that was the target of another unit’s attack this phase.\n■ Improve the Strength and Armour Penetration characteristics of this unit’s melee weapons by 1.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49118,
+              "type": "loreAccordion",
+              "textContent": "The craving for fresh experience and the obsession with enacting ever more excessive destruction drives these warriors to displays of sudden and obscene violence.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        },
+        {
+          "id": 7762,
+          "name": "Master of the Pageant",
+          "components": [
+            {
+              "id": 48879,
+              "type": "text",
+              "textContent": "Once per battle round, when you target a **FULGRIM** unit from your army with the Sinuous Breach or Prideful Superiority Stratagem, you can reduce the CP cost of that use of that Stratagem by 1CP.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48882,
+              "type": "loreAccordion",
+              "textContent": "Fulgrim sees war as a theatrical act, his warriors and the enemy alike a mere chorus to his own egotistical performance of sinuous strategy.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10229,
+      "slug": "elegant-brutes",
+      "name": "Elegant Brutes",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Take and Hold"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1888,
+        "slug": "emperors-children",
+        "name": "Emperor’s Children",
+        "commonName": "Emperor’s Children"
+      },
+      "enhancements": [
+        {
+          "id": 36935,
+          "name": "Cacophonic Accompaniment",
+          "points": 20,
+          "rules": "<k>Lord Kakophonist</k> model only. \r<ul><li>This model has <b>Deep Strike</b>.</li>\r<li>This unit’s ranged attacks have <k>[Ignores Cover]</k>.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47507,
+              "keywords": []
+            }
+          ]
+        },
+        {
+          "id": 37139,
+          "name": "Frenzied Ferocity (Upgrade)",
+          "points": 15,
+          "rules": "<k>Emperor’s Children Terminator Squad</k> unit only. This unit’s attacks have <k>[Sustained Hits 1]</k>.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Terminator Squad"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43997,
+          "name": "Delight in Agony",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly <k>Emperor’s Children Terminator</k> unit.",
+          "targetRules": "That <k>Emperor’s Children Terminator</k> unit.",
+          "effectRules": "Attacks that target your unit with a <b>S</b> greater than your unit’s <b>T</b> have -1 to <b>wound rolls</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44415,
+          "name": "Warp Plunge",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "End of your opponent’s Fight phase.",
+          "targetRules": "One friendly <b>unengaged</b> <k>Emperor’s Children Terminator</k> unit.",
+          "effectRules": "Place your unit in <b>strategic reserves</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44466,
+          "name": "Psychedelic Soulflame",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase, when a friendly <k>Emperor’s Children Terminator</k> unit is <b>selected to attack</b>.",
+          "targetRules": "That <k>Emperor’s Children Terminator</k> unit",
+          "effectRules": "Your unit’s attacks have +2 <b>S</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7825,
+          "name": "Eager to Kill",
+          "components": [
+            {
+              "id": 48610,
+              "type": "text",
+              "textContent": "When a friendly <k>Emperor’s Children Terminator</k> unit is set up, that unit has +1 to <b>charge rolls</b> until the end of the turn.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49430,
+              "type": "loreAccordion",
+              "textContent": "<i>Infused with a ferocious need to exert their superiority before any rival has the chance to outshine them, Chaos Terminators enter their chosen arena with a horrific dynamism.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10203,
+      "slug": "frenzied-host",
+      "name": "Frenzied Host",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Reconnaissance"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1888,
+        "slug": "emperors-children",
+        "name": "Emperor’s Children",
+        "commonName": "Emperor’s Children"
+      },
+      "enhancements": [
+        {
+          "id": 36792,
+          "name": "Euphoric Crown",
+          "points": 20,
+          "rules": "<k>Lord Exultant</k> model only. This model’s melee attacks have +1 <b>S</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47542,
+              "keywords": []
+            }
+          ]
+        },
+        {
+          "id": 37440,
+          "name": "Howling Plate",
+          "points": 20,
+          "rules": "<k>Lord Exultant</k> model only. This unit’s ranged attacks have +1 <b>AP</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47542,
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43689,
+          "name": "Agonised Cacophony",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Start of your Shooting phase.",
+          "targetRules": "One friendly <k>Emperor’s Children Battleline</k> unit.",
+          "effectRules": "Select one <b>visible</b> enemy unit within 12\" of your unit. That enemy unit has +6\" <b>detection range</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43697,
+          "name": "Absolute Sensory Overload",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Emperor’s Children Battleline</k> unit is <b>selected to shoot</b>.",
+          "targetRules": "That <k>Emperor’s Children Battleline</k> unit.",
+          "effectRules": "Those ranged attacks do not prevent your unit from being <b>hidden</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44414,
+          "name": "Possessive Mania",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly <k>Emperor’s Children Battleline</k> unit within range of an <b>objective</b>.",
+          "targetRules": "That <k>Emperor’s Children Battleline</k> unit.",
+          "effectRules": "Attacks that target your unit have -1 <b>AP</b> until that enemy unit has attacked.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7862,
+          "name": "Frantic Focus",
+          "components": [
+            {
+              "id": 48786,
+              "type": "text",
+              "textContent": "When a friendly <k>Emperor’s Children Battleline</k> unit is selected to make an <b>advance/fall‑back move</b>, that unit’s <k>BATTLELINE</k> models' attacks have <b>[SUSTAINED HITS 1]</b> until the end of the turn.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49712,
+              "type": "loreAccordion",
+              "textContent": "<i>Seeming to be everywhere at once, bands of Infractors and Tormentors seek to embrace all the sensations the battlefield can offer, never relenting for a moment.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10358,
+      "slug": "mercurial-host",
+      "name": "Mercurial Host",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Reconnaissance"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1888,
+        "slug": "emperors-children",
+        "name": "Emperor’s Children",
+        "commonName": "Emperor’s Children"
+      },
+      "enhancements": [
+        {
+          "id": 37313,
+          "name": "Intoxicating Musk",
+          "points": 20,
+          "rules": "**EMPEROR’S CHILDREN** model only. Each time a melee attack targets the bearer’s unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37020,
+          "name": "Loathsome Dexterity",
+          "points": 10,
+          "rules": "**EMPEROR’S CHILDREN** model only. Each time a model in the bearer’s unit makes a Normal, Advance or Fall Back move, it can move through enemy models. When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37015,
+          "name": "Steeped in Suffering",
+          "points": 20,
+          "rules": "**EMPEROR’S CHILDREN** model only. Each time a model in the bearer’s unit makes an attack that targets an enemy unit below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half-strength, add 1 to the Wound roll as well.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 36966,
+          "name": "Tactical Perfection",
+          "points": 15,
+          "rules": "**EMPEROR’S CHILDREN** model only. After both players have deployed their armies, select up to two **EMPEROR’S CHILDREN** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44860,
+          "name": "Violent Excess",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army that has not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, melee weapons equipped by models in your unit have the **[SUSTAINED HITS 1]** ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44563,
+          "name": "Combat Stimms",
+          "cpCost": 2,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **EMPEROR’S CHILDREN INFANTRY** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Wound roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43958,
+          "name": "Honour the Prince",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN INFANTRY** unit from your army that has not been selected to move this phase.",
+          "effectRules": "Until the end of the phase, if your unit Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44287,
+          "name": "Dark Vigour",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army (excluding **BEASTS** and **VEHICLES**) that is within 8\" of the enemy unit that just ended that move.",
+          "effectRules": "Your unit can make a Normal move of up to 6\".",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44833,
+          "name": "Capricious Reactions",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44887,
+          "name": "Cruel Raiders",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "End of your opponent’s Fight phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army that is wholly within 9\" of one or more battlefield edges and not within 3\" horizontally of one or more enemy units.",
+          "effectRules": "Remove your unit from the battlefield and place it into Strategic Reserves.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7725,
+          "name": "Quicksilver Grace",
+          "components": [
+            {
+              "id": 49764,
+              "type": "text",
+              "textContent": "You can re-roll Advance rolls made for **EMPEROR’S CHILDREN** units from your army.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49063,
+              "type": "loreAccordion",
+              "textContent": "The Emperor’s Children are consummate raiders, eager to satiate their lust for sensation amid battle and falling upon their foes with impossible swiftness and inhuman grace.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10334,
+      "slug": "peerless-bladesmen",
+      "name": "Peerless Bladesmen",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1888,
+        "slug": "emperors-children",
+        "name": "Emperor’s Children",
+        "commonName": "Emperor’s Children"
+      },
+      "enhancements": [
+        {
+          "id": 37271,
+          "name": "Blinding Speed",
+          "points": 25,
+          "rules": "**EMPEROR’S CHILDREN** model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37130,
+          "name": "Distortion",
+          "points": 25,
+          "rules": "**EMPEROR’S CHILDREN** model only. Add 1 to the Attacks and Damage characteristics of melee weapons equipped by the bearer.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37112,
+          "name": "Faultless Opportunist",
+          "points": 15,
+          "rules": "**EMPEROR’S CHILDREN** model only. You can target this unit with the **Heroic Intervention stratagem**, regardless of any other uses of that **stratagem** this phase. If you do:\n\n▪ That use is -1 CP.\n\n▪ That use does not prevent any uses of that **stratagem** on other units this phase.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37466,
+          "name": "Rise to the Challenge",
+          "points": 30,
+          "rules": "**EMPEROR’S CHILDREN INFANTRY** model only. Once per battle, at the end of the Fight phase, if the bearer is within Engagement Range of three or more enemy models, it can use this Enhancement. If it does, the bearer can fight one additional time. When doing so, you can select one ability using the Exquisite Swordsmanship Detachment rule to apply to those attacks.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43844,
+          "name": "Deft Parry",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase just after an enemy unit has selected its targets.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44137,
+          "name": "Death Ecstasy",
+          "cpCost": 2,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44429,
+          "name": "Incessant Violence",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just before an **EMPEROR’S CHILDREN** unit from your army Consolidates.",
+          "targetRules": "That **EMPEROR’S CHILDREN** unit.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes a Consolidation move, it can move up to 6\" instead of up to 3\", provided your unit ends that Consolidation move within Engagement Range of one or more enemy units.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43969,
+          "name": "Cruel Bladesman",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army that made a Charge move this turn and has not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44573,
+          "name": "Terrifying Spectacle",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your opponent’s Command phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army that made a Charge move in the previous turn and destroyed one or more enemy units in the previous Fight phase.",
+          "effectRules": "Each enemy unit within 6\" of your unit must take a Battle-shock test, subtracting 1 from that test if they are Below Half-strength. Enemy units affected by this Stratagem do not need to take any other Battle-shock tests in the same phase.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44148,
+          "name": "Cut Down the Weak",
+          "cpCost": 2,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your opponent’s Movement phase, just after an enemy unit Falls Back.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army (you can only select a **VEHICLE** if it is a **WALKER)** that is within 6\" of that enemy unit and would be eligible to declare a charge against that enemy unit if it were your Charge phase.",
+          "effectRules": "Your unit can declare a charge. When doing so, you must select that enemy unit as a target of that charge, and your unit does not receive a Charge bonus this turn.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7924,
+          "name": "Exquisite Swordsmanship",
+          "components": [
+            {
+              "id": 48738,
+              "type": "text",
+              "textContent": "Each time an **EMPEROR’S CHILDREN** unit from your army is selected to fight, if it made a Charge move this turn, select one of the abilities below. While resolving those attacks, melee weapons equipped by models in that unit have that ability:\n\n■ **[LETHAL HITS]**\n■ **[SUSTAINED HITS 1]**",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49149,
+              "type": "loreAccordion",
+              "textContent": "These warriors are peerless swordsmen, each demonstrating exquisite fighting form. Those who lock swords with these obsessive warriors do so at their peril.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10348,
+      "slug": "rapid-evisceration",
+      "name": "Rapid Evisceration",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Disruption"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1888,
+        "slug": "emperors-children",
+        "name": "Emperor’s Children",
+        "commonName": "Emperor’s Children"
+      },
+      "enhancements": [
+        {
+          "id": 37131,
+          "name": "Accomplished Tactician",
+          "points": 35,
+          "rules": "**EMPEROR’S CHILDREN INFANTRY** model only. Once per turn, in your opponent’s Shooting phase, just after an enemy unit has shot, you can select one friendly **EMPEROR’S CHILDREN** unit within 9\" of the bearer that was hit by one or more of those attacks, then select one friendly **TRANSPORT** that unit is wholly within 6\" of and is able to embark within. That **EMPEROR’S CHILDREN** unit can embark within that **TRANSPORT.**",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36862,
+          "name": "Heretek Adept",
+          "points": 35,
+          "rules": "**EMPEROR’S CHILDREN INFANTRY** model only. Once per battle round, when a saving throw is failed for a friendly **EMPEROR’S CHILDREN VEHICLE** model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36923,
+          "name": "Spearhead Striker",
+          "points": 20,
+          "rules": "**EMPEROR’S CHILDREN INFANTRY** model only. Each time the bearer disembarks from a **TRANSPORT,** until the end of the turn, you can re-roll Charge rolls made for the bearer’s unit and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36994,
+          "name": "Sublime Prescience",
+          "points": 25,
+          "rules": "**EMPEROR’S CHILDREN INFANTRY** model only. Once per turn, in your Movement phase, the bearer can use this Enhancement. If it does, select one friendly **EMPEROR’S CHILDREN TRANSPORT** that is in Strategic Reserves. Until the end of the phase, for the purposes of setting up that **TRANSPORT** on the battlefield, treat the current battle round number as being one higher than it actually is.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44155,
+          "name": "On to the Next",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "End of the Fight phase.",
+          "targetRules": "One **EMPEROR'S CHILDREN** unit from your army that destroyed an enemy unit this phase, and one friendly **TRANSPORT** it is able to embark within.",
+          "effectRules": "If your **EMPEROR’S CHILDREN** unit is wholly within 6\" of that **TRANSPORT**, it can embark within it. Your unit can embark within that **TRANSPORT** in a turn it disembarked from a **TRANSPORT**.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44107,
+          "name": "Advance and Claim",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN TRANSPORT** from your army that has one or more **TORMENTORS** units embarked within it (excluding Battle-shocked units).",
+          "effectRules": "Select one objective marker you control that your **TRANSPORT** is within range of. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44780,
+          "name": "Dynamic Breakthrough",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN VEHICLE** unit from your army that has not been selected to move this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes a move, it can move through enemy models (excluding **MONSTERS** and **VEHICLES**). When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44747,
+          "name": "Ceaseless Onslaught",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your Charge phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN** unit from your army that disembarked from a **TRANSPORT** that made a Normal move this turn.",
+          "effectRules": "Until the end of the phase, your **EMPEROR’S CHILDREN** unit is eligible to declare a charge.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44183,
+          "name": "Reactive Disembarkation",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **EMPEROR’S CHILDREN TRANSPORT** from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "One **EMPEROR’S CHILDREN** unit embarked within your **TRANSPORT** can disembark. When doing so, models in that unit can be set up anywhere on the battlefield wholly within 6\" of that **TRANSPORT** and not within Engagement Range of one or more enemy units.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44295,
+          "name": "Outflanking Strike",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "End of your opponent’s Fight phase.",
+          "targetRules": "One **EMPEROR’S CHILDREN TRANSPORT** from your army, or up to two **EMPEROR’S CHILDREN DEDICATED TRANSPORTS** from your army.",
+          "effectRules": "For each of those **TRANSPORTS** wholly within 9\" of one or more battlefield edges, remove it from the battlefield and place it into Strategic Reserves.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7911,
+          "name": "Mechanised Murder",
+          "components": [
+            {
+              "id": 49616,
+              "type": "text",
+              "textContent": "Each time an **EMPEROR'S CHILDREN** model from your army makes an attack, if it is a **TRANSPORT** model or disembarked from a **TRANSPORT** this turn, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48766,
+              "type": "loreAccordion",
+              "textContent": "The Emperor’s Children are masters of the mechanised assault, leaping from their growling, daemonically tainted vehicles to fall upon the foe with blade and bolter.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10171,
+      "slug": "slaaneshs-chosen",
+      "name": "Slaanesh’s Chosen",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Purge the Foe"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1888,
+        "slug": "emperors-children",
+        "name": "Emperor’s Children",
+        "commonName": "Emperor’s Children"
+      },
+      "enhancements": [
+        {
+          "id": 37326,
+          "name": "Eager to Prove",
+          "points": 15,
+          "rules": "**EMPEROR’S CHILDREN** model only. You can re-roll Charge rolls made for the bearer’s unit. While the bearer’s unit is your army’s Favoured Champions, add 2\" to the Move characteristic of models in that unit.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37161,
+          "name": "Proud and Vainglorious",
+          "points": 20,
+          "rules": "**EMPEROR’S CHILDREN** model only. You can re-roll Battle-shock and Leadership tests taken for the bearer’s unit. While the bearer’s unit is your army’s Favoured Champions, add 1 to the Objective Control characteristic of models in that unit.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 36849,
+          "name": "Repulsed by Weakness",
+          "points": 25,
+          "rules": "**EMPEROR’S CHILDREN** model only. Each time an enemy unit (excluding **MONSTERS** and **VEHICLES**) within Engagement Range of the bearer’s unit Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if the bearer’s unit is your army’s Favoured Champions, subtract 1 from each of those Desperate Escape tests.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37061,
+          "name": "Slayer of Champions",
+          "points": 15,
+          "rules": "**EMPEROR’S CHILDREN** model only. The bearer’s melee weapons have the **[PRECISION]** ability, and each time the bearer makes a melee attack that targets a **CHARACTER** unit, improve the Strength and Armour Penetration characteristics of that attack by 1.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44285,
+          "name": "Devoted Duellists",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One or more **EMPEROR’S CHILDREN CHARACTER** units from your army that have not been selected to fight this phase.",
+          "effectRules": "Select one enemy unit. Until the end of the phase, melee weapons equipped by models in those **CHARACTER** units have the **[SUSTAINED HITS 1]** ability while targeting that enemy unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43685,
+          "name": "Beautiful Death",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **EMPEROR’S CHILDREN CHARACTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if your unit is your army’s Favoured Champions. On a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44069,
+          "name": "Heightened Jealousy",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase, just after an **EMPEROR’S CHILDREN CHARACTER** unit becomes your army’s Favoured Champions, or just after your army’s Favoured Champions unit destroys an enemy unit.",
+          "targetRules": "Your army’s Favoured Champions unit.",
+          "effectRules": "Until the end of the phase, each time a model in an **EMPEROR’S CHILDREN CHARACTER** unit from your army that is not your army’s Favoured Champions makes an attack, add 1 to the Strength characteristic of that attack.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44043,
+          "name": "Diabolic Majesty",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase, just after an **EMPEROR’S CHILDREN CHARACTER** unit becomes your army’s Favoured Champions.",
+          "targetRules": "That **EMPEROR’S CHILDREN** unit.",
+          "effectRules": "Each enemy unit within 6\" of your unit must take a Battle-shock test, subtracting 1 from the result.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "You can only use this Stratagem once per battle round."
+        },
+        {
+          "id": 44858,
+          "name": "Refusal to be Outdone",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your Charge phase, when a friendly **EMPEROR’S CHILDREN CHARACTER** unit within 12” of an **engaged** enemy unit **declares a charge**.",
+          "targetRules": "That **EMPEROR’S CHILDREN CHARACTER** unit.",
+          "effectRules": "Your unit can re-roll **charge rolls**.\nYour unit must end that **charge move engaged** with one or more of those enemy units.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44846,
+          "name": "Vengeful Surge",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly **unengaged EMPEROR’S CHILDREN CHARACTER** unit this phase has shot.",
+          "targetRules": "That **EMPEROR’S CHILDREN CHARACTER** unit.",
+          "effectRules": "Your unit can make a **surge move** of up to D6\". If your unit is not your army’s Favoured Champions, you can re-roll the dice to determine the distance of that **surge move**.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7712,
+          "name": "Internal Rivalries",
+          "components": [
+            {
+              "id": 49613,
+              "type": "text",
+              "textContent": "**EMPEROR’S CHILDREN CHARACTER** units from your army can ignore any or all modifiers to their Move characteristic and any or all modifiers to Advance and Charge rolls made for them.\n\nAt the start of the battle, your **WARLORD**’s unit is your army’s Favoured Champions. The first time in each player’s turn that an **EMPEROR’S CHILDREN CHARACTER** unit from your army destroys an enemy unit, after resolving all of its attacks, that **CHARACTER** unit becomes your army’s new Favoured Champions, replacing the old one.\n\nEach time a model in your army’s Favoured Champions unit makes an attack, you can re-roll the Wound roll",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49844,
+              "type": "loreAccordion",
+              "textContent": "The boldest and most debased champions of Slaanesh may gain the benefit of the Dark Prince’s boons. Yet none hold Slaanesh’s favour for long, for always another seeks to wrest his favour from their rivals.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10208,
+      "slug": "spectacle-of-slaughter",
+      "name": "Spectacle of Slaughter",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Disruption"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1888,
+        "slug": "emperors-children",
+        "name": "Emperor’s Children",
+        "commonName": "Emperor’s Children"
+      },
+      "enhancements": [
+        {
+          "id": 37531,
+          "name": "Beguiling Grotesquerie (Upgrade)",
+          "points": 15,
+          "rules": "<k>Flawless Blades</k> unit only. Enemy units cannot target this unit with <b>snap shooting</b> attacks.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47330,
+              "keywords": []
+            }
+          ]
+        },
+        {
+          "id": 37174,
+          "name": "Eager Patrons (Upgrade)",
+          "points": 20,
+          "rules": "<k>Flawless Blades</k> unit only. This unit has +2\" <b>M</b>.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47330,
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43818,
+          "name": "Honour Is for Fools",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, when a friendly <k>Flawless Blades</k> unit is <b>selected to fight</b>.",
+          "targetRules": "That <k>Flawless Blades</k> unit.",
+          "effectRules": "Your unit’s melee attacks have <k>[Precision]</k>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44508,
+          "name": "Intoxicated By Triumph",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your opponent’s Movement phase, when an enemy unit that was <b>engaged</b> with a friendly <k>Flawless Blades</k> unit ends a <b>fall‑back move</b>, if that <k>Flawless Blades</k> unit is <b>unengaged</b>.",
+          "targetRules": "That <k>Flawless Blades</k> unit.",
+          "effectRules": "Your unit can make a <b>normal move</b> of up to D3+3\".",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44778,
+          "name": "Single-minded Strike",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your Charge phase, when a friendly <k>Flawless Blades</k> unit starts a <b>charge move</b>.",
+          "targetRules": "That <k>Flawless Blades</k> unit.",
+          "effectRules": "Your unit can move through models (excluding <k>MONSTER/VEHICLE</k> models).",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7809,
+          "name": "Entitled to Victory",
+          "components": [
+            {
+              "id": 48846,
+              "type": "text",
+              "textContent": "Friendly <k>Flawless Blades</k> units have <b>Fights First</b>.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49878,
+              "type": "loreAccordion",
+              "textContent": "<i>So certain are the Flawless Blades in their arrogant pre‑eminence, so sure they have already won before the first blow is struck, that they are filled with swift assurance that no foe can match.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    }
+  ]
+}

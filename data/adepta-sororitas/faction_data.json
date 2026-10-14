@@ -1,0 +1,1669 @@
+{
+  "faction": "Adepta Sororitas",
+  "slug": "adepta-sororitas",
+  "army_rules": [
+    {
+      "id": 1694,
+      "name": "Acts of Faith",
+      "excludedFactionIds": [],
+      "components": [
+        {
+          "id": 49762,
+          "type": "text",
+          "textContent": "If your Army Faction is **ADEPTA SORORITAS**, each unit from your army with this ability can perform one Act of Faith per phase. This is done using Miracle dice.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48771,
+          "type": "header",
+          "textContent": "Gaining Miracle Dice",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49153,
+          "type": "text",
+          "textContent": "If your Army Faction is **ADEPTA SORORITAS**, you gain 1 Miracle dice:\n\n■ At the start of each turn.\n■ Each time an **ADEPTA SORORITAS** unit from your army is destroyed.\n\nEach time you gain a Miracle dice, roll one D6. The number you roll is the value of that Miracle dice. This value cannot be changed or re‐rolled, unless a rule specifically states otherwise. Keep your Miracle dice to one side – this is your Miracle dice pool.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48892,
+          "type": "header",
+          "textContent": "Performing an Act of Faith",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49668,
+          "type": "text",
+          "textContent": "$1f",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49266,
+          "type": "quote",
+          "textContent": "***Example:** Instead of rolling 2D6 to take a Battle-shock test for a unit, you could use one dice from your Miracle dice pool. If the value of that dice was 4, the unit’s Battle-shock test would be determined by rolling one D6 and adding 4 to it (i.e. it would be D6+4).*",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48864,
+          "type": "loreAccordion",
+          "textContent": "It is said the Emperor’s benediction touches the Adepta Sororitas, manifesting as a nimbus of holy light in which his power is revealed in miraculous deeds of fortitude and divine strength.",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    }
+  ],
+  "detachments_count": 8,
+  "detachments": [
+    {
+      "id": 10413,
+      "slug": "army-of-faith",
+      "name": "Army of Faith",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Take and Hold"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1886,
+        "slug": "adepta-sororitas",
+        "name": "Adepta Sororitas",
+        "commonName": "Adepta Sororitas"
+      },
+      "enhancements": [
+        {
+          "id": 36828,
+          "name": "Blade of Saint Ellynor",
+          "points": 15,
+          "rules": "**ADEPTA SORORITAS** model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1, and those weapons have the **[PRECISION]** ability. In addition, each time the bearer fights, if one or more enemy models are destroyed by those attacks, you gain 1 Miracle dice.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37194,
+          "name": "Divine Aspect",
+          "points": 5,
+          "rules": "**ADEPTA SORORITAS** model only. In your Movement phase, you can select one enemy unit within 12\" of the bearer; that unit must take a Battle-shock test. If that test is failed, you gain 1 Miracle dice.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37335,
+          "name": "Litanies of Faith",
+          "points": 10,
+          "rules": "**CANONESS** or **PALATINE** model only. At the start of your Command phase, if the bearer is on the battlefield, take a Leadership test for the bearer. If that test is passed, you gain 1 Miracle dice.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Canoness"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Palatine"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37372,
+          "name": "Triptych of the Macharian Crusade",
+          "points": 20,
+          "rules": "**ADEPTA SORORITAS** model only. Each time the bearer uses an Act of Faith to substitute a saving throw, that saving throw is successful, irrespective of the value of the Miracle dice used.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44512,
+          "name": "Shield of Faith",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase, just after an **ADEPTA SORORITAS** unit from your army suffers a mortal wound.",
+          "targetRules": "That **ADEPTA SORORITAS** unit, or one friendly **ADEPTA SORORITAS JUMP PACK** unit within 3\" of it.",
+          "effectRules": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds. If you targeted an **ADEPTA SORORITAS JUMP PACK** unit from your army with this Stratagem, then until the end of the phase, while a friendly **ADEPTA SORORITAS** unit is within 3\" of your unit, models in that unit have the Feel No Pain 5+ ability against mortal wounds.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44367,
+          "name": "Light of the Emperor",
+          "cpCost": 2,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Command phase.",
+          "targetRules": "One **ADEPTA SORORITAS** unit from your army.",
+          "effectRules": "Until the end of the turn, your unit is blessed. While a unit is blessed, it can ignore any or all modifiers to the following: the profile characteristics of its models; the Weapon Skill or Ballistic Skill characteristics of weapons equipped by its models; any roll or test made for it (excluding modifiers to saving throws). If your unit has the **JUMP PACK** keyword, until the end of the turn, while a friendly **ADEPTA SORORITAS** unit is within 3\" of your unit, that friendly unit is also blessed.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44236,
+          "name": "Faith and Fury",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **ADEPTA SORORITAS** unit from your army that has not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, melee weapons equipped by models in your unit have the **[LANCE]** ability. If one or more enemy models are destroyed as the result of your unit’s attacks this phase, you gain 1 Miracle dice.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44819,
+          "name": "Blinding Radiance",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **ADEPTA SORORITAS** **INFANTRY** unit from your army that was selected as the target of one or more of the attacking unit’s attacks, or one friendly **ADEPTA SORORITAS JUMP PACK** unit within 3\" of such a unit.",
+          "effectRules": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll. If you targeted an **ADEPTA SORORITAS JUMP PACK** unit from your army with this Stratagem, then until the end of the phase, while a friendly **ADEPTA SORORITAS** **INFANTRY** unit is within 3\" of your unit, each time an attack targets that unit, subtract 1 from the Hit roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44822,
+          "name": "Divine Guidance",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase.",
+          "targetRules": "One **ADEPTA SORORITAS** unit from your army that has not been selected to shoot or fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1. If one or more enemy models are destroyed as the result of any of those attacks, you gain 1 Miracle dice.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44163,
+          "name": "Angelic Descent",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "End of your opponent’s Fight phase.",
+          "targetRules": "One **ADEPTA SORORITAS JUMP PACK** unit from your army.",
+          "effectRules": "Remove your unit from the battlefield and place to into Strategic Reserves.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "You cannot select a unit that is within Engagement Range of one or more enemy units."
+        }
+      ],
+      "rules": [
+        {
+          "id": 7769,
+          "name": "Sacred Rites",
+          "components": [
+            {
+              "id": 48627,
+              "type": "text",
+              "textContent": "Each **ADEPTA SORORITAS** unit from your army can perform up to two Acts of Faith per phase, instead of just one.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49674,
+              "type": "loreAccordion",
+              "textContent": "At times of war, the Adepta Sororitas make offerings to the Emperor in prayer, incense and blood. In such pious devotion, they may attract his blessings and enact miraculous deeds in his holy name.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10361,
+      "slug": "bringers-of-flame",
+      "name": "Bringers of Flame",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1886,
+        "slug": "adepta-sororitas",
+        "name": "Adepta Sororitas",
+        "commonName": "Adepta Sororitas"
+      },
+      "enhancements": [
+        {
+          "id": 36838,
+          "name": "Fire and Fury",
+          "points": 30,
+          "rules": "**ADEPTA SORORITAS** model only. While the bearer is leading a unit, add 1 to the Attacks characteristic of Torrent weapons equipped by models in that unit, and all other ranged weapons equipped by models in that unit have the **[SUSTAINED HITS 1]** ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37217,
+          "name": "Iron Surplice of Saint Istalela",
+          "points": 10,
+          "rules": "**CANONESS** or **PALATINE** model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Palatine"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Canoness"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37058,
+          "name": "Manual of Saint Griselda",
+          "points": 20,
+          "rules": "**ADEPTA SORORITAS** model only. At the start of your Command phase, you can discard up to 2 Miracle dice. Then, add 1 Miracle dice to your Miracle Dice pool showing a value equal to the sum of the two Miracle dice you just discarded (to a maximum of 6).",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37380,
+          "name": "Righteous Rage",
+          "points": 15,
+          "rules": "**ADEPTA SORORITAS** model only. Each time the bearer is selected to fight, you can first discard up to 3 Miracle dice. For each Miracle dice just discarded, until the end of the phase, add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44073,
+          "name": "Shield of Aversion",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **ADEPTA SORORITAS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43721,
+          "name": "Righteous Blows",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **ADEPTA SORORITAS** unit from your army that has not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, melee weapons equipped by models in your unit have the **[LETHAL HITS]** ability. If one or more enemy models are destroyed as the result of attacks made by those weapons this phase, select one of those destroyed models; that destroyed model’s unit must take a Battle-shock test.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44296,
+          "name": "Carry Forth the Faithful",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, just before an **ADEPTA SORORITAS TRANSPORT** model from your army Advances.",
+          "targetRules": "That **ADEPTA SORORITAS TRANSPORT** model.",
+          "effectRules": "Until the end of the turn, you can re-roll Advance rolls made for your **TRANSPORT**, and units can disembark from your **TRANSPORT** even though it Advanced. Units that do so count as having made a Normal move, and cannot declare a charge this turn.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44818,
+          "name": "Cleansing Flames",
+          "cpCost": 2,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **ADEPTA SORORITAS** unit from your army that has not been selected to shoot this phase.",
+          "effectRules": "Until the end of the phase, Torrent weapons equipped by models in your unit have the **[DEVASTATING WOUNDS]** ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44439,
+          "name": "Rites of Fire",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **ADEPTA SORORITAS** unit from your army that disembarked from a **TRANSPORT** this turn and has not been selected to shoot this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes a ranged attack that targets an enemy unit within 6\" that is also within range of an objective marker, add 1 to the Wound roll. If one or more enemy models are destroyed as the result of those attacks, select one of those destroyed models; that destroyed model’s unit must take a Battle-shock test.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43995,
+          "name": "Blazing Ire",
+          "cpCost": 2,
+          "category": "battleTactic",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+          "targetRules": "One **ADEPTA SORORITAS TRANSPORT** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "One unit embarked within your **TRANSPORT** can disembark as if it were your Movement phase, and can then shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7903,
+          "name": "Fervent Purgation",
+          "components": [
+            {
+              "id": 48501,
+              "type": "text",
+              "textContent": "Ranged weapons equipped by **ADEPTA SORORITAS** models from your army have the **[ASSAULT]** ability, and each time an attack made with such a weapon targets a unit within 6\", add 1 to the Strength characteristic of that attack.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48529,
+              "type": "loreAccordion",
+              "textContent": "These warriors carry the fiery wrath of the Emperor into the darkest corners of his realm. Through the weapons of the faithful is the Master of Mankind’s immortal anger made manifest. With the holy trinity of boltgun, flamer and melta weapons are his enemies purged from the Imperium’s worlds.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10363,
+      "slug": "champions-of-faith",
+      "name": "Champions of Faith",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Disruption"
+      ],
+      "uniqueKeyword": "Reverend",
+      "faction": {
+        "id": 1886,
+        "slug": "adepta-sororitas",
+        "name": "Adepta Sororitas",
+        "commonName": "Adepta Sororitas"
+      },
+      "enhancements": [
+        {
+          "id": 37195,
+          "name": "Eyes of the Oracle",
+          "points": 10,
+          "rules": "**ADEPTA SORORITAS** model only. The bearer’s weapons have the **[PRECISION]** ability. Each time the bearer’s unit destroys an enemy **CHARACTER** model, you gain 1CP.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37116,
+          "name": "Mark of Devotion",
+          "points": 30,
+          "rules": "**ADEPTA SORORITAS** model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. While the bearer’s unit is Righteous, add 2 to the Attacks characteristic and add 1 to the Damage characteristic of the bearer’s melee weapons instead.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37556,
+          "name": "Sanctified Amulet",
+          "points": 25,
+          "rules": "**ADEPTA SORORITAS** model only. Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37533,
+          "name": "Triptych of Judgement",
+          "points": 15,
+          "rules": "**ADEPTA SORORITAS** model only. Each time a model in the bearer’s unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or any or all modifiers to the Hit roll.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43863,
+          "name": "Shield of Denial",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase, just after a mortal wound is allocated to an **ADEPTA SORORITAS** unit from your army.",
+          "targetRules": "That **ADEPTA SORORITAS** unit.",
+          "effectRules": "Until the end of the phase, models in your unit have the Feel No Pain 6+ ability against mortal wounds. If your unit is Righteous, until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds instead.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43834,
+          "name": "Suffer Not The Unfaithful",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase.",
+          "targetRules": "One **ADEPTA SORORITAS** unit from your army that is Righteous and that has not been selected to shoot or fight this phase.",
+          "effectRules": "Select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until the end of the phase, weapons equipped by models in your unit have the selected ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43840,
+          "name": "To The Heart Of Heresy",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **ADEPTA SORORITAS** unit from your army that has not been selected to fight this phase.",
+          "effectRules": "Until the end of the turn, improve the Strength characteristic of melee weapons equipped by models in your unit by 1. If your unit is Righteous, until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1 as well.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43991,
+          "name": "Path of the Righteous",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **ADEPTA SORORITAS** unit from your army that has not been selected to fight this phase.",
+          "effectRules": "Until the end of the turn, each time a model in your unit makes a Pile‑in or Consolidation move, it can move up to 6\" instead of up to 3\". When doing so, if your unit is Righteous, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the closest enemy unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43726,
+          "name": "Bastion of Faith",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **CELESTIAN SACRESANTS** unit that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll. In addition, if your unit is Righteous, you can select one other **CELESTIAN SACRESANTS** unit from your army that is not Battle‑shocked and is within 6\" of your unit. Until the end of the phase, each time an attack targets that **CELESTIAN SACRESANTS** unit, subtract 1 from the Hit roll as well.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44252,
+          "name": "Indefatigable Dedication",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, just after an **ADEPTA SORORITAS** unit from your army Falls Back.",
+          "targetRules": "That **ADEPTA SORORITAS** unit.",
+          "effectRules": "Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. If your unit is Righteous, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back instead.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7817,
+          "name": "Righteous Purpose",
+          "components": [
+            {
+              "id": 49207,
+              "type": "text",
+              "textContent": "In your Command phase, you can select up to 3 **ADEPTA SORORITAS** units from your army (including units that are embarked within **TRANSPORTS**), until the start of your next Command phase, those units are Righteous. While a unit is Righteous:\n\n■ Add 1\" to the Move characteristic of models in that unit.\n■ Improve the Leadership characteristic of models in that unit by 1.\n■ Improve the Weapon Skill and Ballistic Skill characteristics of weapons equipped by **BATTLE SISTERS SQUAD**, **CELESTIAN INSIDIANTS**, **CELESTIAN SACRESANTS** and **PARAGON WARSUITS** models in that unit by 1.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48534,
+              "type": "loreAccordion",
+              "textContent": "Whether high‑ranking clergy must be rescued, a priceless relic recovered, or some archheretic slain, these warriors know that to fail after promising victory to the God‑Emperor would be infinitely worse than death; this knowledge fills them with righteous purpose and the unflinching will to succeed no matter the odds.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": [
+        {
+          "id": 1623,
+          "title": "KEYWORDS",
+          "bulletPoints": [
+            {
+              "id": 1875,
+              "text": "While a **CELESTIAN SACRESANTS** unit from your army is not Battle‑shocked, add 1 to the Objective Control characteristic of **CELESTIAN SACRESANTS** models in that unit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10276,
+      "slug": "chorus-of-condemnation",
+      "name": "Chorus of Condemnation",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Reconnaissance"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1886,
+        "slug": "adepta-sororitas",
+        "name": "Adepta Sororitas",
+        "commonName": "Adepta Sororitas"
+      },
+      "enhancements": [
+        {
+          "id": 37245,
+          "name": "Clarion of Urgency",
+          "points": 15,
+          "rules": "<k>Canoness with Jump Pack</k> model only. At the end of your opponent’s Fight phase, if this unit is <b>unengaged</b>, you can place this unit in <b>strategic reserves</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47254,
+              "keywords": []
+            }
+          ]
+        },
+        {
+          "id": 37549,
+          "name": "Symphonic Payload (Upgrade)",
+          "points": 10,
+          "rules": "<k>Exorcist</k> unit only. This unit can re‑roll rolls to determine the <b>A</b> of a weapon.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47130,
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43917,
+          "name": "Devastating Reprise",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Exorcist</k> unit has shot.",
+          "targetRules": "One friendly <k>ADEPTA SORORITAS INFANTRY FLY</k> unit. ",
+          "effectRules": "Select one enemy unit (excluding <k>Monster/Vehicle</k> units) hit by those ranged attacks. Your unit’s ranged attacks that target that unit have <k>[Devastating Wounds]</k>. ",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44177,
+          "name": "Harmonised Exorcism",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Exorcist</k> unit is <b>selected to shoot</b>.",
+          "targetRules": "That <k>Exorcist</k> unit.",
+          "effectRules": "Select one unit <b>visible</b> to and within 9\" of a friendly <k>Adepta Sororitas Infantry Fly</k> unit. Your unit’s ranged attacks that target that unit have +1 to <b>hit rolls</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44759,
+          "name": "Inspirational Battle canticles",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Start of the Command phase.",
+          "targetRules": "One friendly <k>Adepta Sororitas Infantry Fly</k> unit or one friendly <k>Exorcist</k> unit.",
+          "effectRules": "Select one friendly <b>battle‑shocked</b> <k>Adepta Sororitas</k> unit within 6\" of your unit. That unit is no longer <b>battle‑shocked</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7731,
+          "name": "Angelic Judgement",
+          "components": [
+            {
+              "id": 49078,
+              "type": "text",
+              "textContent": "Friendly <k>Adepta Sororitas Infantry Fly</k> units have the following ability:\r\n\n<b>Condemnatory Psalms:</b> In your Shooting phase, this unit can select one <b>visible</b> enemy unit within 12\". That enemy unit is <b>condemned</b>: \n\r<li>While a unit is <b>condemned</b>, that unit has +3\" <b>detection range</b>. </li>",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48576,
+              "type": "loreAccordion",
+              "textContent": "<i>Granted a greater perspective of the heretical foe’s disposition, an Order’s angelic veterans roar condemnatory psalms of revelation that unmask the enemy’s evil for all to see.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10258,
+      "slug": "hallowed-martyrs",
+      "name": "Hallowed Martyrs",
+      "pointsCost": 3,
+      "forceDispositions": [
+        "Take and Hold",
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1886,
+        "slug": "adepta-sororitas",
+        "name": "Adepta Sororitas",
+        "commonName": "Adepta Sororitas"
+      },
+      "enhancements": [
+        {
+          "id": 37216,
+          "name": "Chaplet of Sacrifice",
+          "points": 25,
+          "rules": "**ADEPTA SORORITAS** model only. At the end of your Command phase, if the bearer is on the battlefield, you can re-roll 1 Miracle dice from your Miracle dice pool and return it to your Miracle dice pool showing the new result you rolled. When doing so, if the bearer’s unit is below its Starting Strength, you can re-roll up to 3 Miracle dice in this way instead.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37348,
+          "name": "Mantle of Ophelia",
+          "points": 20,
+          "rules": "**CANONESS** or **PALATINE** model only. Each time an attack is allocated to the bearer, change the Damage characteristic of that attack to 1.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Palatine"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Canoness"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37295,
+          "name": "Saintly Example",
+          "points": 10,
+          "rules": "**ADEPTA SORORITAS** model only. When the bearer is destroyed, you gain an additional D3 Miracle dice.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37314,
+          "name": "Through Suffering, Strength",
+          "points": 25,
+          "rules": "**ADEPTA SORORITAS** model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. If the bearer has lost one or more wounds, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44746,
+          "name": "Divine Intervention",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase.",
+          "targetRules": "One **ADEPTA SORORITAS CHARACTER** model from your army that was just **destroyed**. You can use this Stratagem on that model even though it was just **destroyed**.",
+          "effectRules": "You can discard 1-3 Miracle dice. At the end of the phase, set up that model on the battlefield, **unengaged** and as close as possible to where it was **destroyed**. That model is not part of an **attached** unit and its unit has a **starting strength** of 1. Roll one D3, adding 1 to the result for each Miracle dice you discarded. That model has that number of wounds remaining (up to its starting number of wounds).",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "You cannot select **SAINT CELESTINE** as the target of this Stratagem. You cannot select the same **CHARACTER** as the target of this Stratagem more than once per battle."
+        },
+        {
+          "id": 44083,
+          "name": "Suffering and Sacrifice",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Start of the Fight phase.",
+          "targetRules": "One **ADEPTA SORORITAS INFANTRY** or **ADEPTA SORORITAS WALKER** unit from your army.",
+          "effectRules": "Until the end of the phase, each time an enemy model within Engagement Range of your unit selects its targets, it must select your unit as the target of its attacks.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44065,
+          "name": "Righteous Vengeance",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **ADEPTA SORORITAS** unit from your army that has not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes a melee attack, you can re-roll the Hit roll and, if your unit is Below Half-strength, you can re-roll the Wound roll as well.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43978,
+          "name": "Sanctified Immolation",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase.",
+          "targetRules": "One **ADEPTA SORORITAS VEHICLE** model from your army with the Deadly Demise ability that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.",
+          "effectRules": "Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43687,
+          "name": "Spirit of the Martyr",
+          "cpCost": 2,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **ADEPTA SORORITAS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44033,
+          "name": "Praise the Fallen",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+          "targetRules": "One **ADEPTA SORORITAS** unit from your army that had one or more of its models destroyed as a result of the attacking unit’s attacks.",
+          "effectRules": "Your unit can shoot as if it were your Shooting phase, but it must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7916,
+          "name": "The Blood of Martyrs",
+          "components": [
+            {
+              "id": 48685,
+              "type": "text",
+              "textContent": "Each time an **ADEPTA SORORITAS** model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49261,
+              "type": "loreAccordion",
+              "textContent": "The blood of martyrs is the life force of the Imperium. So do the tenets of this Order joyously proclaim, and in its warriors’ darkest hour does the sacrifice of their fallen Sisters shine brightest.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10249,
+      "slug": "penitent-host",
+      "name": "Penitent Host",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Purge the Foe"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1886,
+        "slug": "adepta-sororitas",
+        "name": "Adepta Sororitas",
+        "commonName": "Adepta Sororitas"
+      },
+      "enhancements": [
+        {
+          "id": 37584,
+          "name": "Catechism of Divine Penitence",
+          "points": 15,
+          "rules": "**CANONESS**, **PALATINE** or **MINISTORUM PRIEST** model only. The bearer gains the **PENITENT** keyword.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Ministorum Priest"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Palatine"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Canoness"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36846,
+          "name": "Psalm of Righteous Judgement",
+          "points": 20,
+          "rules": "**ADEPTA SORORITAS** model only. While the bearer is on the battlefield, each time an enemy unit is destroyed by a **PENITENT** unit from your army, you can discard 1 Miracle dice then gain 1 Miracle dice showing a value of 6.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 36863,
+          "name": "Refrain of Enduring Faith",
+          "points": 15,
+          "rules": "**PENITENT** model only. While the bearer is leading a unit, models in that unit have a 5+ invulnerable save.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Penitent"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37569,
+          "name": "Verse of Holy Piety",
+          "points": 15,
+          "rules": "**PENITENT** model only. Once per battle, at the start of the battle round, select one Vow of Atonement (see the Desperate for Redemption detachment rule). Until the start of the next battle round, that Vow of Atonement is active for the bearer’s unit in addition to any that is active for your army, even if you have already selected that Vow of Atonement this battle.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Penitent"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44029,
+          "name": "Final Redemption",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase.",
+          "targetRules": "One **PENITENT** unit from your army that was just destroyed while it was within range of an objective marker you controlled. You can use this Stratagem on that unit even though it was just destroyed.",
+          "effectRules": "That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44517,
+          "name": "Purity of Suffering",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **PENITENT** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, **PENITENT** models in your unit have the Feel No Pain 4+ ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44450,
+          "name": "Passion of the Penitent",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **PENITENT** unit from your army that has not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, each time a **PENITENT** model in your unit makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44677,
+          "name": "Lash of Guilt",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, just before a **PENITENT** unit from your army Advances.",
+          "targetRules": "That **PENITENT** unit.",
+          "effectRules": "Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced. If your unit has the **PENITENT ENGINES** keyword, do not make an Advance roll for it; instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44653,
+          "name": "Boundless Zeal",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, just after an **ADEPTA SORORITAS** unit from your army Falls Back.",
+          "targetRules": "That **ADEPTA SORORITAS** unit.",
+          "effectRules": "Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Fell Back. If your unit has the **PENITENT** keyword, it is eligible to shoot and declare a charge in a turn in which it Fell Back instead.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44639,
+          "name": "Devout Fanaticism",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+          "targetRules": "One **PENITENT** unit from your army that was selected as the target as one or more of the attacking unit’s attacks.",
+          "effectRules": "Your unit can make a **surge move** of up to D6\".",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7863,
+          "name": "Desperate For Redemption",
+          "components": [
+            {
+              "id": 48569,
+              "type": "text",
+              "textContent": "At the start of the battle round, you can select one of the following Vows of Atonement to be active for your army until the start of the next battle round. You can only select each Vow of Atonement once per battle.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48824,
+              "type": "loreAccordion",
+              "textContent": "The penitent masses vow to wash clean their dishonour with their foe’s blood.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48414,
+              "type": "header",
+              "textContent": "The Path of the Penitent",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48390,
+              "type": "text",
+              "textContent": "Add 3\" to the Move characteristic of **PENITENT** models from your army.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49695,
+              "type": "loreAccordion",
+              "textContent": "With psalms on their lips, the faithful hurl themselves forward.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48616,
+              "type": "header",
+              "textContent": "Absolution in Battle",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48643,
+              "type": "text",
+              "textContent": "Each time a unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks and Strength characteristics of melee weapons equipped by **PENITENT** models in that unit.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49657,
+              "type": "loreAccordion",
+              "textContent": "The penitents smite the Emperor’s foes with unmatched zeal.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49891,
+              "type": "header",
+              "textContent": "Death Before Disgrace",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48620,
+              "type": "text",
+              "textContent": "Each time a **PENITENT** model from your army is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48758,
+              "type": "loreAccordion",
+              "textContent": "Even the most grievous wound cannot stop a penitent warrior in their quest to earn redemption in the eyes of the Emperor.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10384,
+      "slug": "sacred-champions",
+      "name": "Sacred Champions",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Take and Hold"
+      ],
+      "uniqueKeyword": "Reverend",
+      "faction": {
+        "id": 1886,
+        "slug": "adepta-sororitas",
+        "name": "Adepta Sororitas",
+        "commonName": "Adepta Sororitas"
+      },
+      "enhancements": [
+        {
+          "id": 37319,
+          "name": "Perfervid Haste",
+          "points": 10,
+          "rules": "<k>Adepta Sororitas</k> model only. This unit has +1\" <b>M</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 36822,
+          "name": "Writ of Compunction (Upgrade)",
+          "points": 20,
+          "rules": "<k>Celestian Sacresants</k> unit only. This unit has +1 <b>OC</b>.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47211,
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44203,
+          "name": "Sanctified Blows",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, when a friendly <k>Celestian Sacresants</k> unit is <b>selected to fight</b>.",
+          "targetRules": "That <k>Celestian Sacresants</k> unit.",
+          "effectRules": "Your unit’s melee attacks have +1 <b>A</b> and <b>S</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44363,
+          "name": "Unflinching Determination",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, when a friendly <k>Celestian Sacresants</k> unit is selected to make an <b>advance/fall-back move</b>.",
+          "targetRules": "That <k>Celestian Sacresants</k> unit.",
+          "effectRules": "\r<ul><li>Your unit’s ranged attacks have <k>[ASSAULT]</k> until the end of the turn.</li>\r<li>That move does not prevent your unit from being <b>eligible to shoot/declare a charge</b>.</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44633,
+          "name": "Faithful Fortitude",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase, when a friendly <k>Celestian Sacresants</k> unit suffers a <b>mortal wound</b>.",
+          "targetRules": "That <k>Celestian Sacresants</k> unit.",
+          "effectRules": "Your unit has <b>Feel No Pain 5+</b> against <b>mortal wounds</b> until the end of the phase.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7855,
+          "name": "Holy Quest",
+          "components": [
+            {
+              "id": 49015,
+              "type": "text",
+              "textContent": "Friendly <k>Celestian</k> units’ attacks have +1 <b>BS</b> and <b>WS</b>.\nThis <b>detachment</b> has the <k>REVEREND</k> tag and cannot be taken with another <k>REVEREND</k> <b>detachment</b>.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49326,
+              "type": "loreAccordion",
+              "textContent": "<i>Charged with a holy quest in service to the God-Emperor, the veteran Sacresant elite of an Order Militant are relentless in their pursuit of victory.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10283,
+      "slug": "sanctified-orators",
+      "name": "Sanctified Orators",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Disruption"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1886,
+        "slug": "adepta-sororitas",
+        "name": "Adepta Sororitas",
+        "commonName": "Adepta Sororitas"
+      },
+      "enhancements": [
+        {
+          "id": 36936,
+          "name": "Hagiomnifex (Upgrade)",
+          "points": 25,
+          "rules": "<k>Adepta Sororitas Character</k> model only (excluding <k>Penitent</k> units). (Once per turn, per unit) At the start of a phase, you can use this ability. If you do, select one of the abilities below:\n<ul><li><b>Rite of Revelation:</b> While this unit is shooting, enemy units have +6\" <b>detection range</b>.</li>\n<li><b>Sermon of Intolerance:</b> This unit’s <b>battle‑shock rolls</b> automatically succeed.</li>\n<li><b>Catechism of Raging Fervour:</b> This unit has +1\" <b>M</b>.</li>\n<li><b>Psalm of Righteous Smiting:</b> This unit’s attacks have +1 <b>S</b>.</li>\n<li><b>Chorus of Repudiation:</b> Attacks that target this unit with a <b>S</b> greater than this unit’s <b>T</b> have ‑1 to <b>wound rolls</b>.</li></ul>",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": false,
+          "excludedKeywords": [
+            "Penitent"
+          ],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Character"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [],
+      "rules": [
+        {
+          "id": 7789,
+          "name": "Hymns of Battle",
+          "components": [
+            {
+              "id": 48688,
+              "type": "text",
+              "textContent": "<ul><li>Enhancements selected from this <b>detachment</b> do not count towards the total number of enhancements in your army.</li>\r<li>Friendly <k>Adepta Sororitas Character</k> units have +1 <b>Ld</b>.</li></ul>",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48527,
+              "type": "loreAccordion",
+              "textContent": "<i>On the battlefield, the faithful warriors of the Adepta Sororitas heed the stirring hymns recited by their commanders, whose inspirational words stoke their righteous fervour.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    }
+  ]
+}

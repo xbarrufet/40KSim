@@ -1,0 +1,184 @@
+{
+  "blood-angels/angelic-inheritors": [
+    {
+      "slug": "blazing-icon",
+      "name": "Blazing Icon",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. Enemy units cannot target this unit with snap shooting attacks."
+    },
+    {
+      "slug": "ordained-sacrifice",
+      "name": "Ordained Sacrifice",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. (Once per battle, per army) At the end of a phase in which this model is destroyed, roll one D6: On a 2+, set this model back up on the battlefield as close as possible to where it was destroyed, unengaged, with 3 wounds remaining."
+    },
+    {
+      "slug": "prescient-flash",
+      "name": "Prescient Flash",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "SCOUTS",
+          "value": "6"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. This unit has Scouts 6\"."
+    },
+    {
+      "slug": "unto-death",
+      "name": "Unto Death",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. (Once per battle, per army) In your Command phase you can use this ability. If you do, until the end of the turn this unit can: Re-roll advance rolls. Re-roll charge rolls."
+    }
+  ],
+  "blood-angels/encarmine-speartip": [
+    {
+      "slug": "angelic-executioner",
+      "name": "Angelic Executioner",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Jump Pack"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "keyword": "LETHAL HITS",
+          "value": null
+        },
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "keyword": "SUSTAINED HITS",
+          "value": "1"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Jump Pack model only. When this unit is selected to fight, this unit's melee attacks have:[LETHAL HITS].Or: [SUSTAINED HITS 1]"
+    },
+    {
+      "slug": "shadow-of-abomination",
+      "name": "Shadow of Abomination",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Jump Pack"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "Damage",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Jump Pack model only. (once per battle, per army) When this unit is selected to fight you can use this ability. If you do, this model's melee attacks have +1 D."
+    }
+  ],
+  "blood-angels/wrath-of-the-doomed": [
+    {
+      "slug": "instinctive-interception",
+      "name": "Instinctive Interception",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Death Company"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Death Company model only. When you target this unit with the Heroic Intervention stratagem, that use is -1 CP."
+    },
+    {
+      "slug": "on-the-archtraitors-bridge",
+      "name": "On the Archtraitor's Bridge",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Death Company"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "Attacks",
+          "mode": "add",
+          "value": 2
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Death Company model only. This model's melee attacks have +2 A."
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
-import type { StructuredAbilitiesData, StructuredLoadoutData } from './schema'
+import type { DetachmentData, StructuredAbilitiesData, StructuredLoadoutData } from './schema'
+import { getParentFaction } from './factions'
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined
@@ -23,6 +24,7 @@ interface FactionRow {
   category: string | null
   icon: string | null
   unit_count: number
+  army_rules: unknown[] | null
 }
 
 interface UnitRow {
@@ -49,6 +51,27 @@ export async function fetchFactions(): Promise<FactionRow[]> {
   const { data, error } = await sb.from('factions').select('*')
   if (error) throw error
   return data ?? []
+}
+
+export async function fetchArmyRules(factionSlug: string): Promise<unknown[] | null> {
+  const sb = getClient()
+  if (!sb) return null
+  const { data, error } = await sb
+    .from('factions')
+    .select('army_rules')
+    .eq('slug', factionSlug)
+    .maybeSingle()
+  if (error) throw error
+  if (data?.army_rules) return data.army_rules as unknown[]
+  const parent = getParentFaction(factionSlug)
+  if (!parent) return null
+  const { data: parentData, error: parentError } = await sb
+    .from('factions')
+    .select('army_rules')
+    .eq('slug', parent)
+    .maybeSingle()
+  if (parentError) throw parentError
+  return (parentData?.army_rules as unknown[] | null) ?? null
 }
 
 export async function upsertFaction(faction: FactionRow): Promise<void> {
@@ -188,6 +211,65 @@ export async function fetchAllUnitDataByFaction(factionSlug: string): Promise<Un
   if (!sb) return []
   const { data, error } = await sb
     .from('unit_data')
+    .select('*')
+    .eq('faction_slug', factionSlug)
+  if (error) throw error
+  return data ?? []
+}
+
+interface DetachmentDataRow {
+  faction_slug: string
+  detachment_slug: string
+  tag: string
+  data: unknown
+  enhancements: unknown[] | null
+}
+
+export async function fetchDetachmentsByFaction(factionSlug: string): Promise<DetachmentDataRow[]> {
+  const sb = getClient()
+  if (!sb) return []
+  const { data, error } = await sb
+    .from('detachment_data')
+    .select('*')
+    .eq('faction_slug', factionSlug)
+  if (error) throw error
+  return data ?? []
+}
+
+export async function fetchDetachmentData(factionSlug: string, detachmentSlug: string): Promise<DetachmentDataRow | null> {
+  const sb = getClient()
+  if (!sb) return null
+  const { data, error } = await sb
+    .from('detachment_data')
+    .select('*')
+    .eq('faction_slug', factionSlug)
+    .eq('detachment_slug', detachmentSlug)
+    .maybeSingle()
+  if (error) throw error
+  return data ?? null
+}
+
+export async function upsertDetachmentData(factionSlug: string, detachmentSlug: string, detachmentData: DetachmentData): Promise<void> {
+  const sb = getClient()
+  if (!sb) return
+  const { error } = await sb.from('detachment_data').upsert(
+    {
+      faction_slug: factionSlug,
+      detachment_slug: detachmentSlug,
+      tag: detachmentData.tag,
+      data: detachmentData.data,
+      enhancements: detachmentData.enhancements as unknown[] | null,
+    },
+    { onConflict: 'faction_slug,detachment_slug' },
+  )
+  if (error) throw error
+}
+
+export async function fetchAllDetachmentDataByFaction(factionSlug: string): Promise<DetachmentDataRow[]> {
+  const sb = getClient()
+  if (!sb) return []
+  const { data, error } = await sb
+    .from('detachment_data')
     .select('*')
     .eq('faction_slug', factionSlug)
   if (error) throw error

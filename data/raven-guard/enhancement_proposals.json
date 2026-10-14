@@ -1,0 +1,94 @@
+{
+  "raven-guard/shadowmark-talon": [
+    {
+      "slug": "blackwing-shroud",
+      "name": "Blackwing Shroud",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "INFILTRATORS",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Infantry model only. This unit has Infiltrators."
+    },
+    {
+      "slug": "coronal-susurrant",
+      "name": "Coronal Susurrant",
+      "points": 30,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Phobos"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Phobos model only. Each enemy unit (excluding Monster/Vehicle units) engaged with this unit cannot be targeted by controlling player stratagems."
+    },
+    {
+      "slug": "hunters-instincts",
+      "name": "Hunter's Instincts",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. In your first Movement phase, this unit can make an ingress move."
+    },
+    {
+      "slug": "umbral-raptor",
+      "name": "Umbral Raptor",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "FIGHTS FIRST",
+          "value": null
+        },
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "LONE OPERATIVE",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes infantry model only. This model has: Fights First. Lone Operative."
+    }
+  ]
+}

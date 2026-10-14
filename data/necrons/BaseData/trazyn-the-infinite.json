@@ -1,0 +1,252 @@
+{
+  "id": 46697,
+  "slug": "trazyn-the-infinite",
+  "name": "Trazyn the Infinite",
+  "baseSize": "25mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **1 Trazyn the Infinite – EPIC HERO**\n\n**This model is equipped with:** Empathic Obliterator.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "Mighty heroes fight at the forefront of battle.",
+      "name": "Leader",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it. \n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Ancient Collector",
+      "rules": "While this model is leading a unit, at the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 3,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Surrogate Hosts",
+      "rules": "At the start of your Command phase, if this model is on the battlefield, you can select one other friendly **NECRONS INFANTRY CHARACTER** model on the battlefield (excluding **SKORPEKH LORD** and **EPIC HERO** models). The selected model is destroyed (ignoring any rules that are triggered when a model is destroyed) and this model is put in its place, with all of its wounds remaining (if the selected model was leading a unit, this model now attaches to that unit as its Leader).",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 4,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Leader",
+      "rules": "This model can be attached to the following units:\n\n■ **IMMORTALS**\n■ **LYCHGUARD**\n■ **NECRON WARRIORS**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47344,
+        "name": "Necron Warriors",
+        "slug": "necron-warriors",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46887,
+        "name": "Lychguard",
+        "slug": "lychguard",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46778,
+        "name": "Immortals",
+        "slug": "immortals",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 61759,
+      "name": "Trazyn the Infinite",
+      "stats": {
+        "save": "2+",
+        "wounds": "6",
+        "movement": "5\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50746,
+          "name": "Epic Hero"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51640,
+          "name": "Noble"
+        },
+        {
+          "id": 50964,
+          "name": "Trazyn the Infinite"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106702,
+            "name": "Empathic Obliterator",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113968,
+                "name": "Empathic Obliterator",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "7",
+                "armourPenetration": "0",
+                "damage": "D3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3465,
+                    "name": "Sustained Hits D3",
+                    "rules": "This ability always takes the form <k>[SUSTAINED HITS X]</k>. Each time an attack made with a <k>[SUSTAINED HITS]</k> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <k>[SUSTAINED HITS 2]</k> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <k>[SUSTAINED HITS 2]</k> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 106702,
+            "name": "Empathic Obliterator",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113968,
+                "name": "Empathic Obliterator",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "7",
+                "armourPenetration": "0",
+                "damage": "D3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3465,
+                    "name": "Sustained Hits D3",
+                    "rules": "This ability always takes the form <k>[SUSTAINED HITS X]</k>. Each time an attack made with a <k>[SUSTAINED HITS]</k> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <k>[SUSTAINED HITS 2]</k> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <k>[SUSTAINED HITS 2]</k> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 62644,
+      "points": 60,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61759,
+          "miniatureName": "Trazyn the Infinite",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

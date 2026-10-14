@@ -1,0 +1,65 @@
+{
+  "faction": "Titan Legions",
+  "slug": "titan-legions",
+  "army_rules": [
+    {
+      "id": 1755,
+      "name": "Towering Example",
+      "excludedFactionIds": [],
+      "components": [
+        {
+          "id": 49146,
+          "type": "text",
+          "textContent": "When mustering your army, if your Army Faction is **ADEPTUS TITANICUS**, ignore the Select Detachment Rules step. In the Select Warlord step, select one **ADEPTUS TITANICUS** model from your army to be your **WARLORD**, even though that model does not have the **CHARACTER** keyword. Your army has the Take and Hold force disposition.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    },
+    {
+      "id": 1708,
+      "name": "Titanic Support",
+      "excludedFactionIds": [],
+      "components": [
+        {
+          "id": 49535,
+          "type": "text",
+          "textContent": "If every model in your army has the **IMPERIUM** keyword, you can include 1 **ADEPTUS TITANICUS** model in your army, even if it does not have the Faction keyword you selected in the Select Army Faction step.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    },
+    {
+      "id": 1696,
+      "name": "Titanicus Traitoris",
+      "excludedFactionIds": [],
+      "components": [
+        {
+          "id": 49845,
+          "type": "text",
+          "textContent": "You can use the **ADEPTUS TITANICUS** datasheets in this document to represent **TITANICUS TRAITORIS** models if you wish. To do so, on those datasheets and on this Army Rules card, replace all instances of the Imperium keyword with **CHAOS**, and replace all instances of the **ADEPTUS TITANICUS** Faction keyword with **TITANICUS TRAITORIS**. For the purposes of points values, use those published for the equivalent **ADEPTUS TITANICUS** models.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    }
+  ],
+  "detachments_count": 0,
+  "detachments": []
+}

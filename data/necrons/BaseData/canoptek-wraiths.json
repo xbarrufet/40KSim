@@ -1,0 +1,296 @@
+{
+  "id": 47013,
+  "slug": "canoptek-wraiths",
+  "name": "Canoptek Wraiths",
+  "baseSize": "50mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **3-6 Canoptek Wraiths**\n\n**Every model is equipped with:** vicious claws.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Wraith Form",
+      "rules": "Each time this unit ends a Normal move, you can select one enemy unit it moved over during that move and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": 2,
+  "pointsStepPoints": 20,
+  "leads": [],
+  "ledBy": [
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47467,
+        "name": "Technomancer",
+        "slug": "technomancer",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 62116,
+      "name": "Canoptek Wraith",
+      "stats": {
+        "save": "3+",
+        "wounds": "4",
+        "movement": "10\"",
+        "toughness": "6",
+        "leadership": "8+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "2"
+      },
+      "keywords": [
+        {
+          "id": 50944,
+          "name": "Beasts"
+        },
+        {
+          "id": 51167,
+          "name": "Canoptek"
+        },
+        {
+          "id": 51013,
+          "name": "Fly"
+        },
+        {
+          "id": 50729,
+          "name": "Wraiths"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107115,
+            "name": "Vicious claws",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113755,
+                "name": "Vicious claws",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "6",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 106066,
+            "name": "Particle caster",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110672,
+                "name": "Particle caster",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "3",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3350,
+                    "name": "Devastating Wounds",
+                    "rules": "Each time an attack made with a <k>[DEVASTATING WOUNDS]</k> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <k>[DEVASTATING WOUNDS]</k> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <k>[DEVASTATING WOUNDS]</k> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  },
+                  {
+                    "id": 3375,
+                    "name": "Pistol",
+                    "rules": "Units containing one or more models with a <k>[CLOSE‑QUARTERS]</k> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <k>[CLOSE‑QUARTERS]</k> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 108346,
+            "name": "Transdimensional beamer",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114008,
+                "name": "Transdimensional beamer",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107115,
+            "name": "Vicious claws",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113755,
+                "name": "Vicious claws",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "6",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106847,
+            "name": "Whip coils",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111434,
+                "name": "Whip coils",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "8",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "5",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 42011,
+      "rulesText": "■ Any number of models can each be equipped with one of the following: \n◦ 1 particle caster\n◦ 1 transdimensional beamer",
+      "displayOrder": 1
+    },
+    {
+      "id": 41849,
+      "rulesText": "■ Any number of models can each have their vicious claws replaced with whip coils. ",
+      "displayOrder": 2
+    }
+  ],
+  "compositions": [
+    {
+      "id": 61550,
+      "points": 95,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 3,
+      "miniatures": [
+        {
+          "miniatureId": 62116,
+          "miniatureName": "Canoptek Wraith",
+          "min": 3,
+          "max": 3
+        }
+      ]
+    },
+    {
+      "id": 61470,
+      "points": 220,
+      "displayOrder": 2,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 6,
+      "miniatures": [
+        {
+          "miniatureId": 62116,
+          "miniatureName": "Canoptek Wraith",
+          "min": 4,
+          "max": 6
+        }
+      ]
+    }
+  ]
+}

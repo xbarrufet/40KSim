@@ -1,0 +1,87 @@
+{
+  "iron-hands/medusas-wrath": [
+    {
+      "slug": "adept-of-the-omnissiah",
+      "name": "Adept of the Omnissiah",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Techmarine"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "TECHMARINE model only. (Once per battle round, per army) When an enemy unit targets a friendly ADEPTUS ASTARTES VEHICLE unit within 6\" of this unit, you can use this ability. If you do, that VEHICLE unit has Feel No Pain 5+ until that enemy unit has attacked."
+    },
+    {
+      "slug": "master-of-the-machine-war",
+      "name": "Master of the Machine War",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "ADEPTUS ASTARTES model only. In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES VEHICLE unit within 6\" of this model and then select the devastator doctrine or tactical doctrine. That doctrine is active for that VEHICLE unit until the start of your next Command phase."
+    },
+    {
+      "slug": "target-augury-web",
+      "name": "Target Augury Web",
+      "points": 30,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Techmarine"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "TECHMARINE model only. In your movement phase, at the start or end of this unit's move, you can select one friendly ADEPTUS ASTARTES VEHICLE model within 3\" of this unit. That VEHICLE model's attacks have [LETHAL HITS] until the start of your next Command phase"
+    },
+    {
+      "slug": "the-flesh-is-weak",
+      "name": "The Flesh is Weak",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "stat": "Toughness",
+          "mode": "add",
+          "value": 1
+        },
+        {
+          "category": "damageMitigation",
+          "appliedTo": "SelfModel",
+          "kind": "fnp",
+          "value": 5,
+          "condition": "any"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "ADEPTUS ASTARTES model only. This model: Has +1 T.Has Feel No Pain 5+."
+    }
+  ]
+}

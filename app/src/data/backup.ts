@@ -4,18 +4,21 @@ import {
   fetchAllBaseDataByFaction,
   fetchAllUnitDataByFaction,
   fetchAllLoadoutDataByFaction,
+  fetchAllDetachmentDataByFaction,
   upsertUnit,
   upsertBaseData,
   upsertUnitData,
   upsertLoadoutData,
+  upsertDetachmentData,
 } from './supabase'
 
 export async function exportFactionBackup(factionSlug: string): Promise<void> {
-  const [units, baseData, unitData, loadoutData] = await Promise.all([
+  const [units, baseData, unitData, loadoutData, detachmentData] = await Promise.all([
     fetchUnitsByFaction(factionSlug),
     fetchAllBaseDataByFaction(factionSlug),
     fetchAllUnitDataByFaction(factionSlug),
     fetchAllLoadoutDataByFaction(factionSlug),
+    fetchAllDetachmentDataByFaction(factionSlug),
   ])
 
   const backup: FactionBackup = {
@@ -42,6 +45,12 @@ export async function exportFactionBackup(factionSlug: string): Promise<void> {
       unitSlug: l.unit_slug,
       tag: l.tag,
       options: l.options,
+    })),
+    detachmentData: detachmentData.map(d => ({
+      detachmentSlug: d.detachment_slug,
+      tag: d.tag,
+      data: d.data,
+      enhancements: d.enhancements,
     })),
   }
 
@@ -107,6 +116,14 @@ export async function importFactionBackup(factionSlug: string, backup: FactionBa
     await upsertLoadoutData(factionSlug, ld.unitSlug, {
       tag: ld.tag as 'PENDING' | 'AI_PROPOSED' | 'CONFIRMED',
       options: ld.options as never[],
+    })
+  }
+
+  for (const dd of backup.detachmentData ?? []) {
+    await upsertDetachmentData(factionSlug, dd.detachmentSlug, {
+      tag: dd.tag as 'SCRAPED' | 'PENDING' | 'AI_PROPOSED' | 'CONFIRMED',
+      data: dd.data,
+      enhancements: dd.enhancements as never[] | null,
     })
   }
 }

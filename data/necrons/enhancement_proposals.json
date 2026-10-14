@@ -1,0 +1,1025 @@
+{
+  "necrons/annihilation-legion": [
+    {
+      "slug": "eldritch-nightmare",
+      "name": "Eldritch Nightmare",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Destroyer Cult"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "Enemy",
+          "roll": "battleshock",
+          "action": "autoSuccess"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "DESTROYER CULT model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test."
+    },
+    {
+      "slug": "eternal-madness",
+      "name": "Eternal Madness",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "NECRONS model only. In the Fight phase, each time a model in the bearer's unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking model's unit has finished making its attacks, and is then removed from play."
+    },
+    {
+      "slug": "ingrained-superiority",
+      "name": "Ingrained Superiority",
+      "points": 5,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "ALL",
+          "stat": "AP",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "NECRONS model only. Each time a model in the bearer's unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+    },
+    {
+      "slug": "soulless-reaper",
+      "name": "Soulless Reaper",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Destroyer Cult"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "DESTROYER CULT model only. Each time an enemy unit within Engagement Range of the bearer's unit is selected to Fall Back, roll one D6: on a 3+, that unit cannot Fall Back this phase and must Remain Stationary."
+    }
+  ],
+  "necrons/awakened-dynasty": [
+    {
+      "slug": "enaegic-dermal-bond",
+      "name": "Enaegic Dermal Bond",
+      "points": 30,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "damageMitigation",
+          "appliedTo": "SelfModel",
+          "kind": "fnp",
+          "value": 4,
+          "condition": "any"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "NECRONS model only. The bearer has the Feel No Pain 4+ ability"
+    },
+    {
+      "slug": "nether-realm-casket",
+      "name": "Nether-realm Casket",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfUnit",
+          "keyword": "STEALTH",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "NECRONS model only. While the bearer is leading a unit, models in that unit have the Stealth ability."
+    },
+    {
+      "slug": "phasal-subjugator-aura",
+      "name": "Phasal Subjugator (Aura)",
+      "points": 35,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "Ally",
+          "roll": "toHit",
+          "action": "addToRoll",
+          "targetCondition": {
+            "keywords": [
+              "CHARACTER"
+            ],
+            "mode": "excludes"
+          }
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "NECRONS model only. While a friendly NECRONS unit (excluding CHARACTER units) is within 6\" of the bearer, each time a model in that unit makes an attack, add 1 to the Hit roll."
+    },
+    {
+      "slug": "veil-of-darkness",
+      "name": "Veil of Darkness",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "(Once per battle, per army) At the end of your opponent's turn, if this unit is unengaged, you can use this ability. If you do: • Place this unit in strategic reserves. • This unit has Deep Strike until the start of your next Shooting phase. • This unit must make an ingress move in your next Movement phase (including in your first turn)."
+    }
+  ],
+  "necrons/canoptek-court": [
+    {
+      "slug": "autodivinator",
+      "name": "Autodivinator",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Cryptek"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "CRYPTEK model only. Each time your opponent gains a CP as the result of an ability, roll one D6: on a 2+, you also gain 1CP"
+    },
+    {
+      "slug": "dimensional-sanctum",
+      "name": "Dimensional Sanctum",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Cryptek"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfUnit",
+          "keyword": "INFILTRATORS",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "CRYPTEK model only. Models in the bearer's unit have the Infiltrators ability."
+    },
+    {
+      "slug": "hyperphasic-fulcrum",
+      "name": "Hyperphasic Fulcrum",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Cryptek"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "toWound",
+          "action": "rerollOnes"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "CRYPTEK model only. While the bearer is leading a unit, if that unit is wholly within your army's Power Matrix, each time a model in that unit makes an attack, re-roll a Wound roll of 1."
+    },
+    {
+      "slug": "metalodermal-tesla-weave",
+      "name": "Metalodermal Tesla Weave",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Cryptek"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "mortalWounds",
+          "appliedTo": "Enemy",
+          "unitType": "ALL",
+          "hits": {
+            "kind": "notation",
+            "value": "1D3 or 3"
+          },
+          "resolution": {
+            "kind": "roll",
+            "threshold": 2
+          },
+          "damagePerSuccess": "1"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "CRYPTEK model only. Once per phase, when an enemy unit selects the bearer's unit as a target of a charge, roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+    }
+  ],
+  "necrons/cryptek-conclave": [
+    {
+      "slug": "atomic-disintegrators",
+      "name": "Atomic Disintegrators",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Cryptek"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "CRYPTEK model only. In your Shooting phase, each time the bearer's unit is selected to shoot, when selecting an ability for the Technosorcerous Augmentations Detachment rule, you can also select from the following abilities: [ANTI-MONSTER 5+], [ANTI-VEHICLE 5+]."
+    },
+    {
+      "slug": "gauntlet-of-compression",
+      "name": "Gauntlet of Compression",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "stat": "Range",
+          "mode": "add",
+          "value": 6
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "NECRONS model only. Add 6\" to the Range characteristic of ranged weapons equipped by models in the bearer's unit."
+    },
+    {
+      "slug": "gravitic-bolas",
+      "name": "Gravitic Bolas",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Cryptek"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "Enemy",
+          "stat": "Movement",
+          "mode": "subtract",
+          "value": 2,
+          "targetCondition": {
+            "keywords": [
+              "TITANIC"
+            ],
+            "mode": "excludes"
+          }
+        },
+        {
+          "category": "diceModifier",
+          "appliedTo": "Enemy",
+          "roll": "charge",
+          "action": "subtractFromRoll",
+          "targetCondition": {
+            "keywords": [
+              "TITANIC"
+            ],
+            "mode": "excludes"
+          }
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "CRYPTEK model only. In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks (excluding TITANIC units); until the start of your next turn, that enemy unit is pinned. While a unit is pinned, subtract 2 from that unit's Move characteristic and subtract 2 from Charge rolls made for that unit."
+    },
+    {
+      "slug": "quantum-abacus",
+      "name": "Quantum Abacus",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "NECRONS model only. Each time you select the bearer's unit as the target of a Stratagem, roll one D6, adding 1 if it is within range of one or more objectives: on a 4+, you gain 1CP."
+    }
+  ],
+  "necrons/cursed-legion": [
+    {
+      "slug": "cursed-circlet",
+      "name": "Cursed Circlet",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Destroyer Cult"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "DESTROYER CULT model only. In your opponent's Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed by those attacks, this unit can make a surge move of up to D6\"."
+    },
+    {
+      "slug": "destroyer-ankh",
+      "name": "Destroyer Ankh",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Catacomb Command Barge",
+          "Overlord"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "DESTROYER CULT",
+          "value": null
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "stat": "Movement",
+          "mode": "add",
+          "value": 2
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "Attacks",
+          "mode": "add",
+          "value": 2
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "CATACOMB COMMAND BARGE or OVERLORD model only. The bearer has the DESTROYER CULT keyword. Add 2\" to the Move characteristic of models in the bearer's unit and add 2 to the Attacks characteristic of melee weapons equipped by the bearer."
+    },
+    {
+      "slug": "mark-of-the-nekrosor",
+      "name": "Mark of the Nekrosor",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Destroyer Cult"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "toHit",
+          "action": "addToRoll",
+          "attackType": "ALL"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "DESTROYER CULT model only. Each time a model in the bearer's unit makes an attack, add 1 to the Hit roll."
+    },
+    {
+      "slug": "murdermind",
+      "name": "Murdermind",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Cryptek"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "DESTROYER CULT",
+          "value": null
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "stat": "Movement",
+          "mode": "add",
+          "value": 3
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "CRYPTEK model only. The bearer has the DESTROYER CULT keyword. Add 3\" to the Move characteristic of the bearer."
+    }
+  ],
+  "necrons/hand-of-the-dynasty": [
+    {
+      "slug": "enlivened-sentinels-upgrade",
+      "name": "Enlivened Sentinels (Upgrade)",
+      "points": 20,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfUnit",
+          "keyword": "SCOUTS",
+          "value": "5"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Necron Warriors unit only. This unit has Scouts 5\"."
+    },
+    {
+      "slug": "tools-of-dominion-upgrade",
+      "name": "Tools of Dominion (Upgrade)",
+      "points": 15,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "keyword": "RAPID FIRE",
+          "value": "1"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Immortals unit only. This unit's ranged attacks have [Rapid Fire 1]."
+    }
+  ],
+  "necrons/hypercrypt-legion": [
+    {
+      "slug": "arisen-tyrant",
+      "name": "Arisen Tyrant",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "toHit",
+          "action": "rerollOnes"
+        }
+      ],
+      "conditionalEffects": [
+        {
+          "condition": "set_up_this_turn",
+          "effects": [
+            {
+              "category": "diceModifier",
+              "appliedTo": "SelfUnit",
+              "roll": "toHit",
+              "action": "rerollAll"
+            }
+          ]
+        }
+      ],
+      "originalText": "NECRONS model only. Each time a model in the bearer's unit makes an attack, re-roll a Hit roll of 1. If the bearer's unit was set up on the battlefield this turn, you can re-roll the Hit roll instead."
+    },
+    {
+      "slug": "dimensional-overseer",
+      "name": "Dimensional Overseer",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "NECRONS model only. While the bearer is on the battlefield or in Strategic Reserves, add one to the number of units from your army that you can select for the Hyperphasing rule."
+    },
+    {
+      "slug": "hyperspatial-transfer-node",
+      "name": "Hyperspatial Transfer Node",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "NECRONS model only. Each time the bearer's unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in the bearer's unit."
+    },
+    {
+      "slug": "osteoclave-fulcrum",
+      "name": "Osteoclave Fulcrum",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfUnit",
+          "keyword": "DEEP STRIKE",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "NECRONS model only. Models in the bearer's unit have the Deep Strike ability."
+    }
+  ],
+  "necrons/obeisance-phalanx": [
+    {
+      "slug": "eternal-conqueror",
+      "name": "Eternal Conqueror",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Overlord"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "toHit",
+          "action": "rerollAll",
+          "attackType": "ALL",
+          "targetCondition": {
+            "keywords": [],
+            "mode": "includes"
+          }
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "OVERLORD model only. Each time a model in the bearer's unit makes an attack that targets an enemy unit within range of an objective marker, you can re-roll the Hit roll."
+    },
+    {
+      "slug": "honourable-combatant",
+      "name": "Honourable Combatant",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Overlord"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "OVERLORD model only. Each time the bearer's unit destroys an enemy CHARACTER unit, your opponent loses 1CP if they have any."
+    },
+    {
+      "slug": "unflinching-will",
+      "name": "Unflinching Will",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Overlord"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "keyword": "PRECISION",
+          "value": null
+        },
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "keyword": "ANTI-INFANTRY",
+          "value": "5+"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "OVERLORD model only. The bearer's melee weapons have the [PRECISION] and [ANTI-INFANTRY 5+] abilities."
+    },
+    {
+      "slug": "warrior-noble",
+      "name": "Warrior Noble",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Overlord"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "Enemy",
+          "roll": "toHit",
+          "action": "subtractFromRoll",
+          "attackType": "MELEE"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "OVERLORD model only. Each time a melee attack targets the bearer's unit, subtract 1 from the Hit roll."
+    }
+  ],
+  "necrons/pantheon-of-woe": [
+    {
+      "slug": "animus-damper",
+      "name": "Animus Damper",
+      "points": 35,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "DNU"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "C'TAN SHARD OF THE VOIDDRAGON model only. Once per turn, at the start of your opponent's Shooting phase, select one enemy Vehicle unit visible to the bearer. That unit must take a Leadership test. Until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll and, if that Leadership test was failed, subtract 1 from the Wound roll as well."
+    },
+    {
+      "slug": "quantum-goad",
+      "name": "Quantum Goad",
+      "points": 45,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "DNU"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "C'TAN SHARD OF THE NIGHTBRINGER model only. This model is eligible to declare a charge in a turn in which it Advanced."
+    },
+    {
+      "slug": "reletavistic-tether",
+      "name": "Reletavistic Tether",
+      "points": 40,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "DNU"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "TRANSCENDENT C'TAN model only. In your turn, when this unit makes an ingress/advance move using its Transdimensional Displacement ability, this unit can end that move more than 6\" horizontally from all enemy units (instead of more than 8\"). When this unit ends that move within 8\" of an enemy unit, this unit is not eligible to declare a charge until the end of the turn"
+    },
+    {
+      "slug": "singularity-matrix",
+      "name": "Singularity Matrix",
+      "points": 45,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "DNU"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "C'TAN SHARD OF THE DECEIVER model only. This model has the following ability: Lord of Deceit (Aura): Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP."
+    }
+  ],
+  "necrons/skyshroud-spearhead": [
+    {
+      "slug": "deepening-madness-upgrade",
+      "name": "Deepening Madness (Upgrade)",
+      "points": 20,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Mounted",
+          "Destroyer Cult"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "keyword": "ASSAULT",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Destroyer Cult Mounted unit only. This unit's ranged attacks have [Assault]."
+    },
+    {
+      "slug": "recursive-reanimation-upgrade",
+      "name": "Recursive Reanimation (Upgrade)",
+      "points": 5,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Tomb Blades unit only. When this unit activates its Reanimation Protocols, +1 to the roll."
+    }
+  ],
+  "necrons/starshatter-arsenal": [
+    {
+      "slug": "chrono-impedance-fields",
+      "name": "Chrono-impedance Fields",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "NECRONS model only. In your Command phase, select one friendly NECRONS VEHICLE or NECRONS MOUNTED unit (excluding TITANIC units) within 6\" of the bearer. Until the start of your next Command phase, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack."
+    },
+    {
+      "slug": "demanding-leader",
+      "name": "Demanding Leader",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "NECRONS model only. In your Command phase, select one friendly NECRONS VEHICLE or NECRONS MOUNTED unit (excluding TITANIC units) within 6\" of the bearer. Until the start of your next Command phase, that unit is eligible to shoot in a turn in which it Fell Back."
+    },
+    {
+      "slug": "dread-majesty-aura",
+      "name": "Dread Majesty (Aura)",
+      "points": 30,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Overlord",
+          "Catacomb Command Barge"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "Ally",
+          "roll": "toHit",
+          "action": "rerollOnes",
+          "attackType": "ALL",
+          "targetCondition": {
+            "keywords": [
+              "MONSTER",
+              "TITANIC"
+            ],
+            "mode": "excludes"
+          }
+        },
+        {
+          "category": "diceModifier",
+          "appliedTo": "Ally",
+          "roll": "toWound",
+          "action": "rerollOnes",
+          "attackType": "ALL",
+          "targetCondition": {
+            "keywords": [
+              "MONSTER",
+              "TITANIC"
+            ],
+            "mode": "excludes"
+          }
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "OVERLORD or CATACOMB COMMAND BARGE model only. While a friendly NECRONS unit (excluding MONSTER and TITANIC units) is within 6\" of the bearer, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+    },
+    {
+      "slug": "miniaturised-nebuloscope",
+      "name": "Miniaturised Nebuloscope",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "keyword": "IGNORES COVER",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "NECRONS model only. Ranged weapons equipped by models in the bearer's unit have the [IGNORES COVER] ability."
+    }
+  ],
+  "necrons/the-phaerons-armoury": [
+    {
+      "slug": "mortality-shroud-aura-upgrade",
+      "name": "Mortality Shroud (Aura) (Upgrade)",
+      "points": 10,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "Enemy",
+          "roll": "battleshock",
+          "action": "autoSuccess"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Obelisk unit only. In your opponent's Battle-shock step, if an enemy unit within 8\" of this unit is below starting strength, that enemy unit makes a battle-shock roll."
+    },
+    {
+      "slug": "prelocational-optimiser",
+      "name": "Prelocational Optimiser",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Necrons model only. When this unit is selected to shoot, if this unit was set up using a Monolith's Eternity Gate ability this turn, this unit's ranged attacks have: [Lethal Hits]. Or: [Sustained Hits 1]."
+    }
+  ]
+}

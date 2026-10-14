@@ -3,44 +3,49 @@
     "tag": "AI_PROPOSED",
     "abilities": [
       {
-        "type": "Always",
         "name": "Lord of the Pyroclasts",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
+        "phase": "ANY",
+        "trigger": "¿Hay una unidad enemiga en contacto con esta unidad?",
         "effects": [
           {
             "category": "statModifier",
-            "target": "unit",
+            "appliedTo": "Enemy",
             "stat": "ObjectiveControl",
             "mode": "subtract",
             "value": 1
           }
         ],
-        "originalText": "While an enemy unit is <b>engaged</b> with this unit, that enemy unit has -1 <b>OC</b>."
+        "originalText": "While an enemy unit is engaged with this unit, that enemy unit has -1 OC."
       },
       {
-        "type": "AsLeader",
         "name": "Leader",
         "category": "OTHER",
         "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
-        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
       },
       {
-        "type": "Always",
         "name": "Unto the Anvil",
-        "attackType": "FIGHT",
-        "trigger": "¿Está activa la doctrina de asalto para esta unidad?",
-        "appliedTo": "SelfModel",
+        "phase": "FIGHT",
+        "trigger": "ALWAYS",
+        "autoApply": false,
+        "effectsOperator": "OR",
         "effects": [
           {
             "category": "diceModifier",
+            "appliedTo": "SelfModel",
             "roll": "toWound",
-            "action": "rerollAll",
+            "action": "rerollOnes",
+            "attackType": "MELEE"
+          },
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toWound",
+            "action": "rerollFailed",
             "attackType": "MELEE"
           }
         ],
-        "originalText": "This unit’s melee attacks can:\r<ul><li>Re-roll <b>wound rolls</b> of 1.</li>\r<li><u>Or:</u> If the <b>assault doctrine</b> is active for this unit, re-roll <b>wound rolls</b>.</li></ul>"
+        "originalText": "This unit’s melee attacks can: Re-roll wound rolls of 1. Or: If the assault doctrine is active for this unit, re-roll wound rolls."
       }
     ],
     "rawAbilities": []
@@ -49,73 +54,77 @@
     "tag": "AI_PROPOSED",
     "abilities": [
       {
-        "type": "Always",
         "name": "Seeker of the Unfound",
-        "attackType": "ANY",
-        "trigger": "¿Este modelo está dentro del rango del objetivo seleccionado?",
-        "appliedTo": "SelfModel",
+        "phase": "ANY",
+        "trigger": "¿Está este modelo a rango del objetivo seleccionado?",
+        "autoApply": false,
         "effects": [
           {
             "category": "statModifier",
-            "target": "unit",
+            "appliedTo": "SelfModel",
             "stat": "ObjectiveControl",
             "mode": "setValue",
             "value": 10
           },
           {
             "category": "statModifier",
-            "target": "unit",
+            "appliedTo": "SelfModel",
             "stat": "Leadership",
             "mode": "setValue",
             "value": 5
           },
           {
             "category": "damageMitigation",
+            "appliedTo": "SelfModel",
             "kind": "fnp",
             "value": 4
           }
         ],
-        "originalText": "The first time this model is set up on the battlefield, select one objective on the battlefield. While this model is within range of that <b>objective</b>, this model has:\r<ul><li>10 <b>OC</b>.</li>\r<li>5+ <b>Ld</b>.</li>\r<li><b>Feel No Pain 4+</b>.</li></ul>"
+        "originalText": "The first time this model is set up on the battlefield, select one objective on the battlefield. While this model is within range of that objective, this model has: 10 OC. 5+ Ld. Feel No Pain 4+."
       },
       {
-        "type": "AsLeader",
         "name": "Leader",
         "category": "OTHER",
         "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
-        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
       },
       {
-        "type": "Always",
         "name": "Forgefather",
-        "attackType": "SHOOTING",
-        "trigger": "ALWAYS",
-        "appliedTo": "Ally",
+        "phase": "SHOOTING",
+        "trigger": "¿Hay una unidad enemiga visible a 24\" o menos de este modelo?",
+        "autoApply": false,
         "effects": [
           {
             "category": "statModifier",
-            "target": "weapon",
+            "appliedTo": "Ally",
             "weaponTarget": "RANGE",
             "stat": "Strength",
             "mode": "add",
-            "value": 2
+            "value": 2,
+            "targetCondition": {
+              "keywords": [
+                "Adeptus Astartes"
+              ],
+              "mode": "includes"
+            }
           }
         ],
-        "originalText": "In your Shooting phase, select one <b>visible</b> enemy unit within 24\" of this model. Friendly <k>Adeptus Astartes</k> units’ <k>[Melta]/[Torrent]</k> attacks that target that enemy unit have +2 <b>S</b>."
+        "originalText": "In your Shooting phase, select one visible enemy unit within 24\" of this model. Friendly Adeptus Astartes units’ [Melta]/[Torrent] attacks that target that enemy unit have +2 S."
       },
       {
-        "type": "Always",
         "name": "Feel No Pain 6+",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
+        "autoApply": true,
         "effects": [
           {
             "category": "damageMitigation",
+            "appliedTo": "SelfModel",
             "kind": "fnp",
             "value": 6
           }
         ],
-        "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
+        "originalText": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
       }
     ],
     "rawAbilities": []

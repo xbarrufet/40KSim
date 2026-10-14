@@ -10,17 +10,20 @@ data/                              Local-only: Python-scraped raw data from 40k.
   fetch_factions.py                Scrape faction list
   fetch_units.py                   Scrape units for a faction (arg: faction name)
   fetch_datasheets.py              Scrape datasheets (arg: faction name or --all)
-  fetch_faction_data.py            Scrape army rules (arg: faction name or --all)
-  auto_structure.py                AI: genera propuestas de habilidades estructuradas
+  fetch_faction_data.py            Scrape army rules + detachments (arg: faction name or --all)
+  auto_structure_all.py             AI: genera propuestas de abilities + enhancements (unificado)
   auto_loadout.py                  AI: genera propuestas de loadout estructurado
-  seed_supabase.py                 Sube datos a Supabase (--loadout-only, --override-confirmed)
+  auto_structure.py                DEPRECATED: usar auto_structure_all.py --mode abilities
+  auto_structure_enhancements.py   DEPRECATED: usar auto_structure_all.py --mode enhancements
+  seed_supabase.py                 Sube datos a Supabase (--faction, --detachments-only, etc.)
   <faction-slug>/
     units.json                     Unit list (name, category, slug, points)
-    faction_data.json              Army rules and detachments (Space Marines only)
-    BaseData/<unit-slug>.json      Scraped datasheet per unit (Space Marines only)
+    faction_data.json              Army rules and detachments
+    BaseData/<unit-slug>.json      Scraped datasheet per unit
     structuring_proposals.json     AI ability proposals (auto_structure.py output)
     loadout_proposals.json         AI loadout proposals (auto_loadout.py output, batch)
     ai-loadout/<unit-slug>.json    AI loadout proposals (auto_loadout.py --unit output)
+    enhancement_proposals.json     AI enhancement proposals (auto_structure_enhancements.py)
 
 app/                               Vite + React 19 + TypeScript 6
   public/data/units.json           Seed file: imported into IndexedDB on first launch
@@ -61,19 +64,30 @@ python3 data/fetch_datasheets.py --all
 python3 data/fetch_faction_data.py "Space Marines"
 
 # AI structuring (need anthropic: pip install "anthropic[bedrock]")
-# Genera propuestas de habilidades estructuradas
-python3 data/auto_structure.py "Space Marines"           # toda la facción
-python3 data/auto_structure.py "Space Marines" --unit captain  # una unidad
+# Script unificado para abilities + enhancements
+python3 data/auto_structure_all.py "Space Marines"                        # todo (abilities + enhancements + hijos)
+python3 data/auto_structure_all.py "Space Marines" --mode abilities       # solo abilities
+python3 data/auto_structure_all.py "Space Marines" --mode enhancements    # solo enhancements
+python3 data/auto_structure_all.py "Space Marines" --unit captain         # una unidad
+python3 data/auto_structure_all.py "Space Marines" --detachment gladius-task-force
+python3 data/auto_structure_all.py "Space Marines" --no-children          # solo facción padre
 
 # Genera propuestas de loadout estructurado
 python3 data/auto_loadout.py "Space Marines"             # toda la facción
 python3 data/auto_loadout.py "Space Marines" --unit intercessor-squad  # una unidad
 
+# DEPRECATED: scripts anteriores (usar auto_structure_all.py en su lugar)
+# python3 data/auto_structure.py "Space Marines"
+# python3 data/auto_structure_enhancements.py "Space Marines"
+
 # Subir datos a Supabase (need supabase: pip install supabase)
 # Requiere SUPABASE_URL y SUPABASE_SERVICE_KEY
-python3 data/seed_supabase.py "Space Marines"            # todo (respeta CONFIRMED)
-python3 data/seed_supabase.py "Space Marines" --loadout-only  # solo loadout
-python3 data/seed_supabase.py "Space Marines" --override-confirmed  # fuerza sobreescritura
+# Si la facción tiene hijos (e.g. Space Marines), se suben automáticamente
+python3 data/seed_supabase.py --faction "Space Marines"            # todo (respeta CONFIRMED)
+python3 data/seed_supabase.py --faction "Space Marines" --loadout-only       # solo loadout
+python3 data/seed_supabase.py --faction "Space Marines" --detachments-only   # solo detachments
+python3 data/seed_supabase.py --faction "Space Marines" --override-confirmed # fuerza sobreescritura
+python3 data/seed_supabase.py --faction ALL                        # todas las facciones
 ```
 
 ## Key conventions

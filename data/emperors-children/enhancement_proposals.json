@@ -1,0 +1,768 @@
+{
+  "emperors-children/coterie-of-the-conceited": [
+    {
+      "slug": "pledge-of-dark-glory",
+      "name": "Pledge of Dark Glory",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "Ally",
+          "stat": "Leadership",
+          "mode": "add",
+          "value": 1
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "Ally",
+          "stat": "ObjectiveControl",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN model only. While the bearer is leading a unit, improve the Leadership and Objective Control characteristics of models in that unit by 1."
+    },
+    {
+      "slug": "pledge-of-eternal-servitude",
+      "name": "Pledge of Eternal Servitude",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN model only. The first time the bearer is destroyed, take a Leadership test for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic)."
+    },
+    {
+      "slug": "pledge-of-mortal-pain",
+      "name": "Pledge of Mortal Pain",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN model only. At the start of your Shooting phase, select one enemy unit within 12\" of and visible to the bearer. That unit must take a Leadership test, subtracting 2 from the result if it is Battle-shocked: if failed, that enemy unit suffers 3 mortal wounds."
+    },
+    {
+      "slug": "pledge-of-unholy-fortune",
+      "name": "Pledge of Unholy Fortune",
+      "points": 30,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN model only. Once per turn, just after making a Hit roll, a Wound roll or a saving throw for a model in the bearer's unit, if the bearer is not Battle-shocked, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead."
+    }
+  ],
+  "emperors-children/court-of-the-phoenician": [
+    {
+      "slug": "exalted-patron",
+      "name": "Exalted Patron",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Lord Exultant"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "stat": "Movement",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer."
+    },
+    {
+      "slug": "soulstain-made-manifest",
+      "name": "Soulstain Made Manifest",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "Enemy",
+          "roll": "battleshock",
+          "action": "subtractFromRoll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN model only. At the start of the Fight phase, you can select one enemy unit within Engagement Range of the bearer; that unit must take a Battle-shock test, subtracting 1 from the result."
+    },
+    {
+      "slug": "spiritsliver",
+      "name": "Spiritsliver",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Daemon Prince"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "Strength",
+          "mode": "add",
+          "value": 1
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "Attacks",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN DAEMON PRINCE model only. Add 1 to the Strength and Attacks characteristics of the bearer's melee weapons."
+    },
+    {
+      "slug": "tears-of-the-phoenix",
+      "name": "Tears of the Phoenix",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "toHit",
+          "action": "ignoreModifiers",
+          "attackType": "MELEE"
+        },
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "toWound",
+          "action": "ignoreModifiers",
+          "attackType": "MELEE"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN model only. Each time a model in the bearer's unit makes a melee attack, you can ignore any or all modifiers to that attack's Weapon Skill characteristic and any or all modifiers to the Hit roll and Wound roll."
+    }
+  ],
+  "emperors-children/elegant-brutes": [
+    {
+      "slug": "cacophonic-accompaniment",
+      "name": "Cacophonic Accompaniment",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "DEEP STRIKE",
+          "value": null
+        },
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "keyword": "IGNORES COVER",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Lord Kakophonist model only. This model has Deep Strike. This unit's ranged attacks have [Ignores Cover]."
+    },
+    {
+      "slug": "frenzied-ferocity-upgrade",
+      "name": "Frenzied Ferocity (Upgrade)",
+      "points": 15,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Terminator Squad"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "ALL",
+          "keyword": "SUSTAINED HITS",
+          "value": "1"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Emperor's Children Terminator Squad unit only. This unit's attacks have [Sustained Hits 1]."
+    }
+  ],
+  "emperors-children/frenzied-host": [
+    {
+      "slug": "euphoric-crown",
+      "name": "Euphoric Crown",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "Strength",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Lord Exultant model only. This model's melee attacks have +1 S."
+    },
+    {
+      "slug": "howling-plate",
+      "name": "Howling Plate",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "stat": "AP",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Lord Exultant model only. This unit's ranged attacks have +1 AP."
+    }
+  ],
+  "emperors-children/mercurial-host": [
+    {
+      "slug": "intoxicating-musk",
+      "name": "Intoxicating Musk",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "Enemy",
+          "roll": "toWound",
+          "action": "subtractFromRoll",
+          "attackType": "MELEE"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN model only. Each time a melee attack targets the bearer's unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll."
+    },
+    {
+      "slug": "loathsome-dexterity",
+      "name": "Loathsome Dexterity",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN model only. Each time a model in the bearer's unit makes a Normal, Advance or Fall Back move, it can move through enemy models. When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+    },
+    {
+      "slug": "steeped-in-suffering",
+      "name": "Steeped in Suffering",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "toHit",
+          "action": "addToRoll"
+        }
+      ],
+      "conditionalEffects": [
+        {
+          "condition": "target_below_half_strength",
+          "effects": [
+            {
+              "category": "diceModifier",
+              "appliedTo": "SelfUnit",
+              "roll": "toWound",
+              "action": "addToRoll"
+            }
+          ]
+        }
+      ],
+      "originalText": "EMPEROR'S CHILDREN model only. Each time a model in the bearer's unit makes an attack that targets an enemy unit below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half-strength, add 1 to the Wound roll as well."
+    },
+    {
+      "slug": "tactical-perfection",
+      "name": "Tactical Perfection",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN model only. After both players have deployed their armies, select up to two EMPEROR'S CHILDREN units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+    }
+  ],
+  "emperors-children/peerless-bladesmen": [
+    {
+      "slug": "blinding-speed",
+      "name": "Blinding Speed",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfUnit",
+          "keyword": "FIGHTS FIRST",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Fights First ability."
+    },
+    {
+      "slug": "distortion",
+      "name": "Distortion",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "Attacks",
+          "mode": "add",
+          "value": 1
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "Damage",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN model only. Add 1 to the Attacks and Damage characteristics of melee weapons equipped by the bearer."
+    },
+    {
+      "slug": "faultless-opportunist",
+      "name": "Faultless Opportunist",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN model only. You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: • That use is -1 CP. • That use does not prevent any uses of that stratagem on other units this phase."
+    },
+    {
+      "slug": "rise-to-the-challenge",
+      "name": "Rise to the Challenge",
+      "points": 30,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN INFANTRY model only. Once per battle, at the end of the Fight phase, if the bearer is within Engagement Range of three or more enemy models, it can use this Enhancement. If it does, the bearer can fight one additional time. When doing so, you can select one ability using the Exquisite Swordsmanship Detachment rule to apply to those attacks."
+    }
+  ],
+  "emperors-children/rapid-evisceration": [
+    {
+      "slug": "accomplished-tactician",
+      "name": "Accomplished Tactician",
+      "points": 35,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN INFANTRY model only. Once per turn, in your opponent's Shooting phase, just after an enemy unit has shot, you can select one friendly EMPEROR'S CHILDREN unit within 9\" of the bearer that was hit by one or more of those attacks, then select one friendly TRANSPORT that unit is wholly within 6\" of and is able to embark within. That EMPEROR'S CHILDREN unit can embark within that TRANSPORT."
+    },
+    {
+      "slug": "heretek-adept",
+      "name": "Heretek Adept",
+      "points": 35,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "damageMitigation",
+          "appliedTo": "Ally",
+          "kind": "damageReduction",
+          "value": 0,
+          "condition": "any"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN INFANTRY model only. Once per battle round, when a saving throw is failed for a friendly EMPEROR'S CHILDREN VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0."
+    },
+    {
+      "slug": "spearhead-striker",
+      "name": "Spearhead Striker",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "charge",
+          "action": "rerollAll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN INFANTRY model only. Each time the bearer disembarks from a TRANSPORT, until the end of the turn, you can re-roll Charge rolls made for the bearer's unit and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer's unit."
+    },
+    {
+      "slug": "sublime-prescience",
+      "name": "Sublime Prescience",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN INFANTRY model only. Once per turn, in your Movement phase, the bearer can use this Enhancement. If it does, select one friendly EMPEROR'S CHILDREN TRANSPORT that is in Strategic Reserves. Until the end of the phase, for the purposes of setting up that TRANSPORT on the battlefield, treat the current battle round number as being one higher than it actually is."
+    }
+  ],
+  "emperors-children/slaaneshs-chosen": [
+    {
+      "slug": "eager-to-prove",
+      "name": "Eager to Prove",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "charge",
+          "action": "rerollAll"
+        }
+      ],
+      "conditionalEffects": [
+        {
+          "condition": "favoured_champions",
+          "effects": [
+            {
+              "category": "statModifier",
+              "appliedTo": "SelfUnit",
+              "stat": "Movement",
+              "mode": "add",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "originalText": "EMPEROR'S CHILDREN model only. You can re-roll Charge rolls made for the bearer's unit. While the bearer's unit is your army's Favoured Champions, add 2\" to the Move characteristic of models in that unit."
+    },
+    {
+      "slug": "proud-and-vainglorious",
+      "name": "Proud and Vainglorious",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "battleshock",
+          "action": "rerollAll"
+        }
+      ],
+      "conditionalEffects": [
+        {
+          "condition": "favoured_champions",
+          "effects": [
+            {
+              "category": "statModifier",
+              "appliedTo": "SelfUnit",
+              "stat": "ObjectiveControl",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "originalText": "EMPEROR'S CHILDREN model only. You can re-roll Battle-shock and Leadership tests taken for the bearer's unit. While the bearer's unit is your army's Favoured Champions, add 1 to the Objective Control characteristic of models in that unit."
+    },
+    {
+      "slug": "repulsed-by-weakness",
+      "name": "Repulsed by Weakness",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN model only. Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer's unit Falls Back, models in that enemy unit must take Desperate Escape tests. When doing so, if the bearer's unit is your army's Favoured Champions, subtract 1 from each of those Desperate Escape tests."
+    },
+    {
+      "slug": "slayer-of-champions",
+      "name": "Slayer of Champions",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "keyword": "PRECISION",
+          "value": null
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "Strength",
+          "mode": "add",
+          "value": 1,
+          "targetCondition": {
+            "keywords": [
+              "CHARACTER"
+            ],
+            "mode": "includes"
+          }
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "AP",
+          "mode": "add",
+          "value": 1,
+          "targetCondition": {
+            "keywords": [
+              "CHARACTER"
+            ],
+            "mode": "includes"
+          }
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "EMPEROR'S CHILDREN model only. The bearer's melee weapons have the [PRECISION] ability, and each time the bearer makes a melee attack that targets a CHARACTER unit, improve the Strength and Armour Penetration characteristics of that attack by 1."
+    }
+  ],
+  "emperors-children/spectacle-of-slaughter": [
+    {
+      "slug": "beguiling-grotesquerie-upgrade",
+      "name": "Beguiling Grotesquerie (Upgrade)",
+      "points": 15,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Flawless Blades unit only. Enemy units cannot target this unit with snap shooting attacks."
+    },
+    {
+      "slug": "eager-patrons-upgrade",
+      "name": "Eager Patrons (Upgrade)",
+      "points": 20,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "stat": "Movement",
+          "mode": "add",
+          "value": 2
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Flawless Blades unit only. This unit has +2\" M."
+    }
+  ]
+}

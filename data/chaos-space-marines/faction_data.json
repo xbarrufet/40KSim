@@ -1,0 +1,3816 @@
+{
+  "faction": "Chaos Space Marines",
+  "slug": "chaos-space-marines",
+  "army_rules": [
+    {
+      "id": 1744,
+      "name": "Dark Pacts",
+      "excludedFactionIds": [
+        1868
+      ],
+      "components": [
+        {
+          "id": 49608,
+          "type": "text",
+          "textContent": "If your Army Faction is **HERETIC ASTARTES**, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of that Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n\n■ **[LETHAL HITS]**\n■ **[SUSTAINED HITS 1]**",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48753,
+          "type": "loreAccordion",
+          "textContent": "Beseeching the Chaos Gods with fanatical fervour, the profane champions of the Heretic Astartes pray for diabolic boons, promising the vilest of offerings in return for their power.",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    },
+    {
+      "id": 1722,
+      "name": "Cults of the Dark Gods",
+      "excludedFactionIds": [],
+      "components": [
+        {
+          "id": 48901,
+          "type": "text",
+          "textContent": "If your Army Faction is **HERETIC ASTARTES**, you can include any of the following units in your army, and when you do so their Faction keywords are replaced with **HERETIC ASTARTES**:\n\n■ **KHORNE BERZERKERS** (see World Eaters)\n■ **RUBRIC MARINES** (see Thousand Sons)\n■ **PLAGUE MARINES** (see Death Guard)\n■ **NOISE MARINES** (see Emperor’s Children)\n\nThe combined points value of such units you can include in your army depends on the battle size, as follows:\n\n■ **Incursion**: Up to 250 pts\n■ **Strike Force**: Up to 500 pts\n■ **Onslaught**: Up to 750 pts",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49715,
+          "type": "loreAccordion",
+          "textContent": "Some traitors have given themselves entirely to the service of the Dark Gods, and they are so lost to damnation that they barely resemble the warriors they once were.",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    }
+  ],
+  "detachments_count": 17,
+  "detachments": [
+    {
+      "id": 10375,
+      "slug": "cabal-of-chaos",
+      "name": "Cabal of Chaos",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Disruption"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37441,
+          "name": "Conduit of Chaos",
+          "points": 20,
+          "rules": "<k>Heretic Astartes Daemon</k> model only (excluding <k>Khorne</k> models). This model’s melee attacks have <k>[Lance]</k>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Khorne"
+          ],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Daemon"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37214,
+          "name": "Touched by the Warp",
+          "points": 10,
+          "rules": "<k>Heretic Astartes</k> model only (excluding <k>Khorne</k> models).\r<ul><li>This model has <k>Psyker</k>.</li>\r<li>This model’s weapons have <k>[Psychic]</k>.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Khorne"
+          ],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43708,
+          "name": "Fleshy Curse",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Start of your Shooting phase.",
+          "targetRules": "One friendly <k>Heretic Astartes Psyker</k> unit.",
+          "effectRules": "Select one <b>visible</b> enemy unit within 12\" of your unit. Roll one D6:\r<ul><li>On a 1, that enemy unit suffers 1 <b>mortal wound</b>.</li>\r<li>On a 2‑4, that enemy unit suffers D3 <b>mortal wounds</b>.</li>\r<li>On a 5‑6, that enemy unit suffers 2D3 <b>mortal wounds</b>.</li></ul>\rThese <b>mortal wounds</b> are inflicted by a <b>psychic attack</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43795,
+          "name": "Infernal Vigour",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One friendly <k>Heretic Astartes Psyker/Daemon</k> unit (excluding <k>Khorne</k> units).",
+          "effectRules": "Your unit <b>heals</b> D3+1 wounds.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44841,
+          "name": "Wreathed in Warpflame",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Heretic Astartes Psyker</k> unit is <b>selected to shoot</b>.",
+          "targetRules": "That <k>Heretic Astartes Psyker</k> unit.",
+          "effectRules": "Your unit’s ranged attacks have <k>[Ignores Cover]</k>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7841,
+          "name": "Empyric Wellspring",
+          "components": [
+            {
+              "id": 48426,
+              "type": "text",
+              "textContent": "■ In your Shooting phase, when a friendly **HERETIC ASTARTES PSYKER** unit (excluding **DAEMON** units) is **selected to shoot**, if that unit makes a **Dark Pact**, that unit’s ranged attacks have +1 **S**.\n■ In the Fight phase, when a friendly **HERETIC ASTARTES DAEMON PRINCE**/**DAEMON PRINCE WITH WINGS** unit (excluding **KHORNE** units) is **selected to fight**, if that unit makes a **Dark Pact**, that unit’s melee attacks have:\n■ +2 **S**.\n■ +1 **AP**.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48987,
+              "type": "loreAccordion",
+              "textContent": "<i>The sorcerous powers wielded by a cabal inevitably draw the attention of the Dark Gods, flooding the battlefield with immaterial energies that empower their dark magicks and their daemonically gifted comrades alike.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10303,
+      "slug": "chaos-cult",
+      "name": "Chaos Cult",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37075,
+          "name": "Amulet of Tainted Vigour",
+          "points": 20,
+          "rules": "**DARK APOSTLE** model only. In your Command phase, you can return up to D3 destroyed **DAMNED** models (excluding **CHARACTER** models) to the bearer’s unit.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Dark Apostle"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37381,
+          "name": "Cultist’s Brand",
+          "points": 30,
+          "rules": "**DARK APOSTLE** or **DAMNED** model only. If every other model in the bearer’s unit (excluding Dark Disciples) is **DAMNED**, you can re-roll Advance and Charge rolls made for the bearer’s unit.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Dark Apostle"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Damned"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37562,
+          "name": "Incendiary Goad",
+          "points": 25,
+          "rules": "**DARK APOSTLE** or **DAMNED** model only. While the bearer’s unit is below its Starting Strength, add 1 to the Strength characteristic of melee weapons equipped by **DAMNED** models in that unit, and while that unit is Below Half-strength, add 1 to the Attacks characteristic of those weapons as well.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Dark Apostle"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Damned"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37546,
+          "name": "Warped Foresight",
+          "points": 10,
+          "rules": "**DARK APOSTLE** or **DAMNED** model only. While the bearer is leading a unit with the Scouts 6\" ability, every model in the bearer’s unit has the Scouts 6\" ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Damned"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Dark Apostle"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43715,
+          "name": "Chosen for Glory",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase.",
+          "targetRules": "One **DAMNED** unit from your army that has not been selected to shoot or fight this phase.",
+          "effectRules": "Your unit can make a Desperate Pact. If it does, until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, you can re-roll the Wound roll as well.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44060,
+          "name": "Selfless Demise",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **DAMNED** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the attacking unit has resolved all of its attacks, each time a model in your unit is destroyed, roll one D6: on a 6, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44371,
+          "name": "Infernal Sacrifice",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **DAMNED** unit from your army that has not been selected to fight this phase.",
+          "effectRules": "Your unit can make a Desperate Pact. If it does, your unit suffers D3 mortal wounds (in addition to any suffered for failing the resulting Leadership test), and until the end of the phase, add 1 to the Attacks characteristic of the melee weapons equipped by models in your unit, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, until the end of the phase, improve the Strength characteristic of those weapons by 1 as well.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43754,
+          "name": "Crazed Focus",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **DAMNED** unit from your army that has not been selected to shoot this phase.",
+          "effectRules": "Your unit can make a Desperate Pact. If it does, until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, improve the Strength characteristic of that attack by 1 as well.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44034,
+          "name": "Reckless Haste",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your Charge phase.",
+          "targetRules": "One **DAMNED** unit from your army.",
+          "effectRules": "Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44400,
+          "name": "Mortal Thralls",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that was selected as the target of one or more of the attacking unit’s attacks, and one friendly **DAMNED** unit within 3\" of your unit and visible to both your unit and the attacking unit.",
+          "effectRules": "Until the end of the phase, while your **DAMNED** unit is on the battlefield, each time your opponent would make a Wound roll for an attack that targets your **HERETIC ASTARTES** unit, if your **DAMNED** unit is visible to the attacking model and is an eligible target for that attack, no roll is made; instead, your **DAMNED** unit suffers a number of mortal wounds equal to the Damage characteristic of that attack.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7904,
+          "name": "Desperate Devotion",
+          "components": [
+            {
+              "id": 49348,
+              "type": "text",
+              "textContent": "Each time a **DAMNED** unit from your army with the Dark Pacts ability is selected  to make a Normal or Advance move or declare a charge (excluding units that arrived from Reserves this turn), it can make a Desperate Pact (see below). If it does, until the end of the phase, add 2\" to the Move characteristic of models in that unit and add 2 to Charge rolls made for that unit.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49897,
+              "type": "textBold",
+              "textContent": "Desperate Pacts",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49124,
+              "type": "text",
+              "textContent": "Each time a unit makes a Desperate Pact, it must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds before any effects of that Desperate Pact are resolved.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49165,
+              "type": "loreAccordion",
+              "textContent": "Utterly dedicated to the worship of the Dark Gods, thronging mortal cultists and regiments of Traitor Guardsmen are more than willing to make bloody sacrifices and take desperate actions in the hope of attaining favour.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": [
+        {
+          "id": 1613,
+          "title": "Keywords",
+          "bulletPoints": [
+            {
+              "id": 1892,
+              "text": "**TRAITOR GUARDSMEN SQUAD** units from your army gain the **BATTLELINE** keyword."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10380,
+      "slug": "creations-of-bile",
+      "name": "Creations of Bile",
+      "pointsCost": 3,
+      "forceDispositions": [
+        "Take and Hold",
+        "Purge the Foe"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37142,
+          "name": "Helm of All-Seeing",
+          "points": 25,
+          "rules": "**HERETIC ASTARTES INFANTRY** model (excluding **DAMNED** models) only. Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Damned"
+          ],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37339,
+          "name": "Living Carapace",
+          "points": 15,
+          "rules": "**CHAOS LORD** model only. Add 1 to the bearer’s Wounds characteristic and the bearer has the Feel No Pain 5+ ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Chaos Lord"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37197,
+          "name": "Prime Test Subject",
+          "points": 35,
+          "rules": "**HERETIC ASTARTES INFANTRY** model (excluding **DAMNED** models) only. Add 1 to the Damage characteristic of melee weapons equipped by the bearer. Each time the bearer makes a melee attack, you can re‑roll the Hit roll.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Damned"
+          ],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37287,
+          "name": "Surgical Precision",
+          "points": 10,
+          "rules": "**HERETIC ASTARTES** model (excluding **DAMNED** models) only. The bearer’s melee weapons have the **[PRECISION]** ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Damned"
+          ],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43970,
+          "name": "Monstrous Visages",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44638,
+          "name": "Masters Are Watching",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, subtracting 1 from the result if it is a **DAMNED** unit: on a 4+, do not remove it from play. That destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43785,
+          "name": "Specimens For The Spider",
+          "cpCost": 2,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** unit from your army that has not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes a melee attack that targets a **CHARACTER** unit, you can re‑roll the Wound roll. After your unit has fought, if one or more enemy **CHARACTER** models were destroyed as a result of those attacks, select one enemy unit within 6\" of your unit. That enemy unit must take a Battle‑shock test. If the enemy **WARLORD** was destroyed as a result of those attacks, each enemy unit within 6\" of your unit must take a Battle‑shock test instead.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44741,
+          "name": "Delayed Mutations",
+          "cpCost": 2,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** unit (excluding **DAMNED** units) from your army.",
+          "effectRules": "Your unit suffers D3 mortal wounds. Then select one augmentation (see Experimental Augmentations). Until the start of your next Command phase, models in your unit have the selected augmentation in addition to any other augmentations they have.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44632,
+          "name": "Diabolic Regeneration",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** unit (excluding **DAMNED** units) from your army.",
+          "effectRules": "One destroyed model (excluding **CHARACTER** models) is returned to your unit. If your unit is a **BATTLELINE** unit, D3 destroyed models (excluding **CHARACTER** models) are returned to your unit instead.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44094,
+          "name": "Autostimulants",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Start of your Charge phase.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** unit from your army.",
+          "effectRules": "Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7752,
+          "name": "Experimental Augmentations",
+          "components": [
+            {
+              "id": 49592,
+              "type": "text",
+              "textContent": "$1f",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49144,
+              "type": "loreAccordion",
+              "textContent": "Bile’s creations, the Terata, possess a variety of mutations, all of which increase their transhuman lethality – for now.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10369,
+      "slug": "cult-of-the-arkifane",
+      "name": "Cult of the Arkifane",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37407,
+          "name": "Crown of Worms",
+          "points": 15,
+          "rules": "&#x20;**WARPSMITH** model only. Add 3” to the range of the bearer’s Warpsmith, Master of Mechanisms and Enrage Machine Spirits abilities",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Warpsmith"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37544,
+          "name": "Cybinfernal Font",
+          "points": 20,
+          "rules": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). Models in the bearer’s unit have the **SOUL FORGE** keyword.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Damned"
+          ],
+          "keywordGroups": []
+        },
+        {
+          "id": 37475,
+          "name": "Mark of the Soul Forges",
+          "points": 20,
+          "rules": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Damned"
+          ],
+          "keywordGroups": []
+        },
+        {
+          "id": 37227,
+          "name": "Wyredjinn",
+          "points": 25,
+          "rules": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Damned"
+          ],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44445,
+          "name": "Touch of the Arkifane",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units) that has not been selected to shoot or fight this phase.",
+          "effectRules": "Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44545,
+          "name": "Balefire Boon",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase.",
+          "targetRules": "One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44265,
+          "name": "Soul-Tally Offerings",
+          "cpCost": 2,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase.",
+          "targetRules": "One **SOUL FORGE** unit from your army that has not been selected to shoot or fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack that targets a **CHARACTER**, **MONSTER** or **VEHICLE** unit, you can re-roll the Wound roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44685,
+          "name": "Biomechanoid Regeneration",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units).",
+          "effectRules": "One model in your unit regains up to D3 lost wounds. If your unit has the **SOUL FORGE** keyword, one model in your unit regains up to 3 lost wounds instead.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44597,
+          "name": "Forge-Fire Surge",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, just after a **HERETIC ASTARTES** unit from your army Advances.&#x20;",
+          "targetRules": "That **HERETIC ASTARTES** unit.",
+          "effectRules": "Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the **SOUL FORGE** keyword, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced instead.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44518,
+          "name": "Unholy Fortitude",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **SOUL FORGE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, add 1 to the Toughness characteristic of models in your unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7756,
+          "name": "Soul Forge Boons",
+          "components": [
+            {
+              "id": 49064,
+              "type": "text",
+              "textContent": "**HERETIC ASTARTES VEHICLE** units from your army gain the **DAEMON** keyword.\n\n**HERETIC ASTARTES VEHICLE**, **LORD DISCORDANT** and **VASHTORR THE ARKIFANE** units from your army gain the **SOUL FORGE** keyword.\n\n**SOUL FORGE** units from your army have a 5+ invulnerable save.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49499,
+              "type": "loreAccordion",
+              "textContent": "The cybersorcerous power of Vashtorr’s boons is much in evidence amongst his worshippers. Nowhere is this more true than in the war engines that his cults take into battle, and which exhibit a nightmarish variety of biomechanoid mutations and daemon‑spawned powers. Whether wreathed in balefire, shimmeringly insubstantial or constantly regrowing battle‑damaged hull plating, these accursed war machines are incredibly hard to destroy.&#x20;",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10235,
+      "slug": "deceptors",
+      "name": "Deceptors",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Disruption"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37513,
+          "name": "Cursed Fang",
+          "points": 10,
+          "rules": "**HERETIC ASTARTES INFANTRY** model only. Improve the Armour Penetration characteristic of the bearer’s melee weapons by 1, and the bearer’s melee weapons have the **[PRECISION]** ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37378,
+          "name": "Falsehood",
+          "points": 10,
+          "rules": "**CHAOS LORD** model only (excluding **TERMINATOR** and **JUMP PACK** models). In the Declare Battle Formations step, you can set the bearer up in Reserves instead of setting it up on the battlefield. If you do, in one of your Movement phases, you can select one model in a friendly **LEGIONARIES** or **CHOSEN** unit that has two or more models remaining and is on the battlefield (excluding Attached units). The selected model is destroyed (ignoring any rules that are triggered when a model is destroyed) and the bearer is set up as close as possible to where that model was destroyed and only within Engagement Range of any enemy units if the destroyed model was within Engagement Range of those units. The bearer now attaches to that unit as its Leader.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Jump Pack",
+            "Terminator"
+          ],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Chaos Lord"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36996,
+          "name": "Shroud of Obfuscation",
+          "points": 15,
+          "rules": "**HERETIC ASTARTES INFANTRY** model only. The bearer has the Stealth and Lone Operative abilities.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37557,
+          "name": "Soul Link",
+          "points": 5,
+          "rules": "**HERETIC ASTARTES INFANTRY** model only. At the start of your Command phase, you can select one other **HERETIC ASTARTES INFANTRY CHARACTER** model from your army (excluding **EPIC HEROES**). Until the start of your next Command phase, the bearer gains the **PSYKER** keyword, and replace the bearer’s datasheet abilities with the datasheet abilities of the **CHARACTER** you selected.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43723,
+          "name": "Detonator",
+          "cpCost": 1,
+          "category": "wargear",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase, just after an enemy model with the Deadly Demise ability (excluding **TITANIC** models) is destroyed.",
+          "targetRules": "One **HERETIC ASTARTES CHARACTER** unit from your army that was within 18\" of that enemy model when it was destroyed.",
+          "effectRules": "Your opponent does not roll to determine whether mortal wounds are inflicted by their model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted (if that ability inflicts a random number of mortal wounds, your opponent rolls to determine that number as normal).",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44172,
+          "name": "From All Sides",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Start of your Charge phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army.",
+          "effectRules": "Until the end of the phase, add 1 to Charge rolls made for your unit for each other **HERETIC ASTARTES** unit from your army that made a Charge move this phase (to a maximum of +3).",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44783,
+          "name": "Pick Them Off",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that has not been selected to shoot this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is below its Starting Strength, you can re-roll the Hit roll. If the target is Below Half-strength, you can re-roll the Wound roll as well.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44186,
+          "name": "Coils of Deception",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, just after a **HERETIC ASTARTES** unit from your army Falls Back.",
+          "targetRules": "That **HERETIC ASTARTES** unit.",
+          "effectRules": "Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43767,
+          "name": "Relentless Pursuit",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** or **HERETIC ASTARTES MOUNTED** unit from your army that is within 8\" of that enemy unit and not within Engagement Range of one or more enemy units.",
+          "effectRules": "Your unit can make a Normal move of up to 6\".",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44207,
+          "name": "Scrambled Coordinates",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Start of the Reinforcements step of your opponent’s Movement phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army.",
+          "effectRules": "Until the end of the phase, enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" horizontally of your unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7785,
+          "name": "Masters of Misdirection",
+          "components": [
+            {
+              "id": 49224,
+              "type": "text",
+              "textContent": "In the Declare Battle Formations step, you can select a number of **LEGIONARIES** and **CULTIST MOB** units from your army: until the end of the battle, those units, and any **CHARACTER** units attached to them (excluding **EPIC HEROES**), have the Infiltrators ability. The maximum number of units you can select in this way depends on the battle size, as shown below.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49200,
+              "type": "image",
+              "textContent": "-",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": "https://d3ocysny7bghv8.cloudfront.net/aef80b04-f8d1-4844-942d-e42dc2651fd8",
+              "altText": "A table showing the number of units that gain the Infiltrators ability, depending on the battle size. In Incursion games, up to 2 Legionaries units and up to 2 Cultist Mob units. In Strike Force games, up to 3 Legionaries units and up to 3 Cultist Mob units. In Onslaught games, up to 4 Legionaries units and up to 4 Cultist Mob units.",
+              "bulletPoints": []
+            },
+            {
+              "id": 48747,
+              "type": "loreAccordion",
+              "textContent": "There are those warbands that number amongst their ranks liars, schemers and infiltrators of far more prodigious skill than most heretics. Employing labyrinthine ploys, they unnerve their enemies and force them to chase ghosts and shadows. They embed themselves within combat zones long before showing their hand, seeding Chaos cults, identifying key targets and feeding misinformation to their foes.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10285,
+      "slug": "devotees-of-destruction",
+      "name": "Devotees of Destruction",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37458,
+          "name": "Eye of Oblivion",
+          "points": 20,
+          "rules": "<k>Warpsmith</k> model only. When this unit is <b>selected to shoot</b>, select one enemy unit within 24\" of this unit. That enemy unit has +6\" <b>detection range</b> until this unit has shot.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Warpsmith"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37244,
+          "name": "Pact of Destruction",
+          "points": 15,
+          "rules": "<k>Warpsmith</k> model only.\r<ul><li>When this unit uses its <b>Dark Pacts</b> ability, this unit can re‑roll <b>Leadership rolls</b>.</li>\r<li>In your Shooting phase, when this unit has shot, if this unit used its <b>Dark Pacts</b> ability and if those attacks <b>destroyed</b> an enemy model, this unit <b>heals</b> 3 wounds.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Warpsmith"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43902,
+          "name": "Ruination’s Bounty",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Havocs/Obliterators</k> unit is <b>selected to shoot</b>.",
+          "targetRules": "That <k>Havocs/Obliterators</k> unit.",
+          "effectRules": "When your unit uses the <b>Dark Pacts</b> ability, your unit’s ranged attacks have:\r<ul><li><k>[Lethal Hits]</k>.</li>\r<li><k>[Sustained Hits 1]</k>.</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44228,
+          "name": "Snare of Fire",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly <b>unengaged</b> <k>Havocs</k> unit.",
+          "targetRules": "That <k>Havocs</k> unit.",
+          "effectRules": "Your unit can make a <b>normal move</b> of up to D3+3\".",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44409,
+          "name": "Undying Hatred",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, when an enemy unit targets a friendly <k>Havocs/Obliterators</k> unit.",
+          "targetRules": "That <k>Havocs/Obliterators</k> unit.",
+          "effectRules": "Attacks that target your unit with a <b>S</b> greater than your unit’s <b>T</b> have -1 to <b>wound rolls</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7788,
+          "name": "Rain of Ruin",
+          "components": [
+            {
+              "id": 48962,
+              "type": "text",
+              "textContent": "Friendly <k>Havocs/Obliterators</k> units’ ranged attacks have <k>[Heavy]</k>.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49021,
+              "type": "loreAccordion",
+              "textContent": "<i>It is not enough for these heretical reavers merely to defeat their foes. Instead, they must pound all before them to smouldering oblivion with overwhelming salvoes of fire.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10300,
+      "slug": "dread-talons",
+      "name": "Dread Talons",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Disruption"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37225,
+          "name": "Eater of Dread",
+          "points": 15,
+          "rules": "**HERETIC ASTARTES** model only. At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result for each Battle-shocked enemy unit that is on the battlefield: on a 5+, you gain 1CP",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37428,
+          "name": "Night’s Shroud",
+          "points": 10,
+          "rules": "**CHAOS LORD** model only (excluding **TERMINATOR** models). Models in the bearer’s unit have the Stealth ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Terminator"
+          ],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Chaos Lord"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36960,
+          "name": "Warp-Fuelled Thrusters",
+          "points": 20,
+          "rules": "**JUMP PACK CHAOS LORD** model only. At the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Chaos Lord",
+                "Jump Pack"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36835,
+          "name": "Willbreaker",
+          "points": 10,
+          "rules": "**HERETIC ASTARTES** model only. In the Fight phase, after the bearer has made its attacks, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44736,
+          "name": "Depthless Cruelty",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** unit from your army that has not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle-shocked and/or Below Half-strength, improve the Armour Penetration characteristic of that attack by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43800,
+          "name": "Bloody Example",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after a **HERETIC ASTARTES** unit from your army destroys a **CHARACTER** unit.",
+          "targetRules": "That **HERETIC ASTARTES** unit.",
+          "effectRules": "Each enemy unit within 12\" of and visible to your unit must take a Battle-shock test.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44006,
+          "name": "Pitiless Hunters",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** unit from your army that has not been selected to shoot this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle-shocked and/or Below Half-strength, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44499,
+          "name": "Relentless Terror",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, just after a **HERETIC ASTARTES INFANTRY** unit from your army Falls Back.",
+          "targetRules": "That **HERETIC ASTARTES INFANTRY** unit.",
+          "effectRules": "Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Fell Back.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44300,
+          "name": "Screaming Descent",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Reinforcements step of your Movement phase, from the second battle round onwards.",
+          "targetRules": "One **HERETIC ASTARTES JUMP PACK** unit from your army that is in Reserves.",
+          "effectRules": "Set your unit up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge. Then select one enemy **INFANTRY** or **MOUNTED** unit within 9\" of and visible to your unit: that unit must take a Battle‐shock test.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44061,
+          "name": "Merciless Pursuit",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "End of your opponent’s Movement phase.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** unit from your army that is not within Engagement Range of one or more enemy units.",
+          "effectRules": "Select one enemy unit that Fell Back this turn and is within 6\" of your unit. Your unit can declare a charge as if it were your Charge phase. When doing so, you can only select that enemy unit as the target of that charge (and only if it is an eligible target). Note that even if this charge is successful, your unit does not receive any Charge bonus this turn.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7792,
+          "name": "Terror Descends (Aura)",
+          "components": [
+            {
+              "id": 49328,
+              "type": "text",
+              "textContent": "In the Battle-shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more **HERETIC ASTARTES** units from your army, that enemy unit must take a Battle-shock test.\n\nEach time an enemy unit within 12\" of one or more **HERETIC ASTARTES** units from your army takes a Battle-shock test, subtract 1 from the result.\n\nEnemy units affected by this Detachment rule do not need to take any other Battle-shock tests in the same phase.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48714,
+              "type": "loreAccordion",
+              "textContent": "Bedecked in the flayed skins and leering skulls of former victims, their armour flecked with blood and gore, these reavers descend in a howling gale of enraged screams and soul-piercing shrieks. To look upon their ghastly visages is to feel a terrible and paralysing fear.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10231,
+      "slug": "fellhammer-siege-host",
+      "name": "Fellhammer Siege-host",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Take and Hold"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 36989,
+          "name": "Bastion Plate",
+          "points": 10,
+          "rules": "**CHAOS LORD** model only (excluding **JUMP PACK** models). Once per battle round, when a saving throw is failed for the bearer’s unit, you can change the Damage characteristic of that attack to 0.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Jump Pack"
+          ],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Chaos Lord"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37340,
+          "name": "Iron Artifice",
+          "points": 10,
+          "rules": "**HERETIC ASTARTES INFANTRY** model only. The bearer’s weapons have the **[ANTI-VEHICLE 4+]** and **[ANTI-FORTIFICATION 4+]** abilities.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36873,
+          "name": "Ironbound Enmity",
+          "points": 15,
+          "rules": "**HERETIC ASTARTES** model only. Each time the bearer makes an attack while within range of an objective marker, add 1 to the Wound roll.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37220,
+          "name": "Warp Tracer",
+          "points": 20,
+          "rules": "**HERETIC ASTARTES** model only. In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44812,
+          "name": "Persistent Assailants",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that was selected as the target of one or more attacks this phase and has not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll, and if your unit is Below Half-strength you can re-roll the Wound roll as well.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44844,
+          "name": "Brutal Attrition",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** unit from your army (excluding **DAMNED** units) that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time a melee attack is allocated to your unit, after the attacking unit has finished making its attacks, roll one D6 (to a maximum of six D6 per attacking unit): for each 4+, the attacking unit suffers 1 mortal wound.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43945,
+          "name": "Pitiless Cannonade",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that has not been selected to shoot this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Below Half-strength, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43919,
+          "name": "Point-blank Destruction",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that is within Engagement Range of one or more enemy units and has not been selected to shoot this phase.",
+          "effectRules": "Until the end of the phase, your unit’s ranged weapons (excluding Blast weapons) have the **[PISTOL]** ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44268,
+          "name": "Steadfast Determination",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units) that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44427,
+          "name": "Siegecraft",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Start of your opponent’s Charge phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army.",
+          "effectRules": "Until the end of the phase, each time an enemy unit selects your unit as a target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll).",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7760,
+          "name": "Iron Fortitude",
+          "components": [
+            {
+              "id": 49522,
+              "type": "text",
+              "textContent": "Each time a ranged attack targets a **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units), if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48706,
+              "type": "loreAccordion",
+              "textContent": "The most indefatigable of Heretic Astartes warbands possess a grim determination that matches the resilience of their superhuman physiques and formidable ceramite armour. They go to war amidst formations of daemonic war machines and growling vehicles. Some even embrace the worship of the Dark Gods, trading their souls for supernatural protection.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10188,
+      "slug": "hurons-marauders",
+      "name": "Huron’s Marauders",
+      "pointsCost": 3,
+      "forceDispositions": [
+        "Disruption",
+        "Purge the Foe"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37240,
+          "name": "Dread Reputation",
+          "points": 25,
+          "rules": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). Each time the bearer’s unit is set up on the battlefield, each enemy unit within 6\" of the bearer’s unit (or within 12\" if the bearer’s unit was set up using the Deep Strike ability) takes a Battle‑shock test.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Damned"
+          ],
+          "keywordGroups": []
+        },
+        {
+          "id": 36801,
+          "name": "Eager for Bloodshed",
+          "points": 30,
+          "rules": "**Heretic Astartes** model only. The bearer has the Infiltrators ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37087,
+          "name": "Raid Leader",
+          "points": 20,
+          "rules": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). Each time the bearer’s unit is set up after disembarking from a **TRANSPORT** that has made a Normal move this turn, the bearer’s unit is still eligible to declare a charge.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Damned"
+          ],
+          "keywordGroups": []
+        },
+        {
+          "id": 36857,
+          "name": "Voice of the Tyrant",
+          "points": 25,
+          "rules": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). The bearer’s unit has both abilities from the Tyrannical Motivation Detachment rule.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Damned"
+          ],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43989,
+          "name": "Hardened Killers",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One **DAMNED** unit from your army.",
+          "effectRules": "Select one of the following effects:\n\n• Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n• Improve the Attacks characteristic of Rapid Fire weapons equipped by models in this unit by 1.\n• Improve the Save characteristic of models in this unit by 1.\n\nUntil the start of your next turn, your unit has the benefit of that effect.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43746,
+          "name": "At the Tyrant’s Command",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit (excluding **MONSTERS** and **VEHICLES**) from your army.",
+          "effectRules": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43776,
+          "name": "Seize the Prize",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, just after a **HERETIC ASTARTES** unit (excluding **MONSTERS** and **VEHICLES**) from your army has been selected to Advance.",
+          "targetRules": "That **HERETIC ASTARTES** unit.",
+          "effectRules": "Do not make an Advance roll for your unit. Instead, until the end of the phase add 6\" to the Move characteristic of models in your unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44636,
+          "name": "Reavers’ Flurry",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Your Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that made a Charge move this turn.",
+          "effectRules": "Until the end of the phase, add 1 to the Attacks characteristics of melee weapons equipped by models in your unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44305,
+          "name": "To the Favoured the Spoils",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that lost one or more wounds as a result of those attacks.",
+          "effectRules": "Your unit can make a **surge move** of up to D6\".",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44820,
+          "name": "Encircling Surge",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "End of your opponent’s Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit (excluding **MONSTERS** and **VEHICLES**) from your army that is within 6\" of one or more battlefield edges and not within Engagement Range of one or more enemy units.",
+          "effectRules": "Remove your unit from the battlefield and place it into Strategic Reserves.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7718,
+          "name": "Tyrannical Motivation",
+          "components": [
+            {
+              "id": 48679,
+              "type": "text",
+              "textContent": "In your Command phase, select one of the following abilities. Until the start of your next Command phase, each **HERETIC ASTARTES INFANTRY** unit from your army has that ability. At the start of each phase, if such a unit is visible to a friendly **HURON BLACKHEART** model, until the end of the phase, it has both of the following abilities.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48488,
+              "type": "header",
+              "textContent": "Huron’s Elite",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48553,
+              "type": "loreAccordion",
+              "textContent": "Hand‑picked by Huron Blackheart himself, these warriors strive to retain his favour with feats of arms.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49794,
+              "type": "text",
+              "textContent": "Each time a model in this unit makes an attack, add 1 to the Hit roll.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49034,
+              "type": "header",
+              "textContent": "Mobile Marauders",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49650,
+              "type": "loreAccordion",
+              "textContent": "The Red Corsairs utilise a highly mobile form of warfare and, under Huron’s watch, are relentless in their aggression.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49510,
+              "type": "text",
+              "textContent": "This unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n\n**Designer’s Not&#x65;*:*** *If a unit is gaining eligibility to shoot and declare a charge in a turn in which it Fell Back as a result of being visible to Huron Blackheart, but after making a Fall Back move it is no longer visible to Huron Blackheart, that unit will not be eligible to shoot in your Shooting phase or to declare a charge in your Charge phase unless it is visible again at the start of the respective phase.*",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48401,
+              "type": "loreAccordion",
+              "textContent": "Murderers and renegades all, the Red Corsairs strive to meet their master’s standards, fighting hardest of all when his gaze is upon them.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10262,
+      "slug": "murdertalon-raiders",
+      "name": "Murdertalon Raiders",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Reconnaissance"
+      ],
+      "uniqueKeyword": "Nightmare",
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37571,
+          "name": "Pact of Cursed Pinions",
+          "points": 20,
+          "rules": "<k>Chaos Lord with Jump Pack</k> model only.\r<ul><li>This model has <k>Daemon</k>.</li>\r<li>This model’s melee attacks have +1 <b>A</b>.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47735,
+              "keywords": []
+            }
+          ]
+        },
+        {
+          "id": 37101,
+          "name": "Shadowcowl Talisman",
+          "points": 20,
+          "rules": "<k>Chaos Lord with Jump Pack</k> model only. This unit has 5+ <b>InSv</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47735,
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44088,
+          "name": "Plunging Talons",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, when a friendly <k>Heretic Astartes Infantry Fly</k> unit that made a <b>charge move</b> this turn is <b>selected to fight</b>.",
+          "targetRules": "That <k>Heretic Astartes Infantry Fly</k> unit.",
+          "effectRules": "Your unit’s melee attacks have <k>[Lance]</k>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44317,
+          "name": "Raking Pass",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, when a friendly <k>Heretic Astartes Infantry Fly</k> unit is selected to make a <b>fall-back move</b>.",
+          "targetRules": "That <k>Heretic Astartes Infantry Fly</k> unit.",
+          "effectRules": "That move does not prevent your unit from being <b>eligible to declare a charge</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44530,
+          "name": "Warp-twisted Terrors",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, when a friendly <k>Warp Talons</k> unit ends a move.",
+          "targetRules": "That <k>Warp Talons</k> unit.",
+          "effectRules": "Select one <b>visible</b> enemy unit (excluding <k>Monster/Vehicle</k> units) within 9\" of your unit. That enemy unit makes a <b>battle-shock roll</b>, with -1 to that <b>battle-shock roll</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7845,
+          "name": "Prey on the Weak",
+          "components": [
+            {
+              "id": 48565,
+              "type": "text",
+              "textContent": "<ul><li>Friendly <k>Heretic Astartes Infantry Fly</k> units’ attacks that target a <b>battle-shocked</b> unit or a unit at or below <b>half-strength</b> can re-roll <b>hit rolls</b> of 1.</li>\r<li>When an enemy unit’s attacks target a friendly <k>Heretic Astartes Infantry Fly</k> unit, if that enemy unit is <b>battle-shocked</b> or at or below <b>half-strength</b>, those attacks have -1 to <b>hit rolls</b>.</li></ul>\rThis <b>detachment</b> has the <k>NIGHTMARE</k> tag and cannot be taken with another <k>NIGHTMARE</k> <b>detachment</b>.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48486,
+              "type": "loreAccordion",
+              "textContent": "<i>The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10344,
+      "slug": "nightmare-hunt",
+      "name": "Nightmare Hunt",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Disruption"
+      ],
+      "uniqueKeyword": "Nightmare",
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 36769,
+          "name": "Greyveil Hex",
+          "points": 25,
+          "rules": "**CHAOS LORD** model only. Models in the bearer’s unit have the Stealth ability.\n\nWhile the bearer’s unit is within range of one or more objective markers you control, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Chaos Lord"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37096,
+          "name": "Sorrowscent Vulture",
+          "points": 35,
+          "rules": "**CHAOS LORD JUMP PACK** model only. Models in the bearer’s unit have the Scouts 6\" ability.\n\nIn the Declare Battle Formations step, the bearer can be attached to a **WARP TALONS** unit.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Chaos Lord",
+                "Jump Pack"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36914,
+          "name": "Terrorglut Parasite",
+          "points": 20,
+          "rules": "**HERETIC ASTARTES** model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle‑shock test, subtracting 1 from the result.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37385,
+          "name": "Warp-fuelled Thrusters",
+          "points": 20,
+          "rules": "**CHAOS LORD JUMP PACK** model only. At the end of your opponent’s Fight phase, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Chaos Lord",
+                "Jump Pack"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44108,
+          "name": "Talons Sunk Deep",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** unit from your army that has not been selected to shoot or fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle‑shocked and/or Below Half‑strength, improve the Armour Penetration characteristic of that attack by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44314,
+          "name": "Prey on the Weak",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** unit from your army that has not been selected to shoot or fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle‑shocked and/or Below Half‑strength, you can re‑roll the Hit roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44352,
+          "name": "Sadistic Display",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after a **HERETIC ASTARTES** unit from your army destroys an enemy unit.",
+          "targetRules": "That **HERETIC ASTARTES** unit.",
+          "effectRules": "Each enemy unit within 6\" of and visible to your unit (excluding **MONSTER** and **VEHICLE** units) must take a Battle‑shock test.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44536,
+          "name": "Malicious Surge",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your Charge phase.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** unit from your army.",
+          "effectRules": "Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44900,
+          "name": "Relentless Terror",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, just after a **HERETIC ASTARTES INFANTRY** unit from your army Falls Back.",
+          "targetRules": "That **HERETIC ASTARTES** unit.",
+          "effectRules": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44683,
+          "name": "Horrific Incursion",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that arrived from Reserves this turn.",
+          "effectRules": "Select one enemy unit (excluding **MONSTER** and **VEHICLE** units) within 12\" of and visible to your unit: that unit must take a Battle‑shock test, subtracting 1 from the result.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7738,
+          "name": "Terror Made Manifest",
+          "components": [
+            {
+              "id": 49076,
+              "type": "text",
+              "textContent": "In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more **HERETIC ASTARTES** units from your army, that enemy unit must take a Battle‑shock test, subtracting 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle‑shock tests in the same phase.\n\nEach time a **HERETIC ASTARTES** model from your army makes an attack that targets a unit that is Below Half‑strength, add 1 to the Hit roll.\n\nEach time an attack targets a **HERETIC ASTARTES** unit from your army, if the attacking model is Battle‐shocked, subtract 1 from the Hit roll.\n\nEach time a **HERETIC ASTARTES** model from your army makes an attack that targets a Battle‐shocked unit, add 1 to the Wound roll.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49576,
+              "type": "loreAccordion",
+              "textContent": "With vox-augmented screams or bedecked in grisly trophies, these nightmarish raiders possess a terrifying presence. Even the most stoic of opponents can be shaken by their sadistic cruelty. Once fear has its hooks into them, they become easier prey.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10347,
+      "slug": "pactbound-zealots",
+      "name": "Pactbound Zealots",
+      "pointsCost": 3,
+      "forceDispositions": [
+        "Disruption",
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37327,
+          "name": "Eye of Tzeentch",
+          "points": 15,
+          "rules": "**HERETIC ASTARTES TZEENTCH** model only. Each time the bearer’s unit makes a Dark Pact and does not fail the resulting Leadership test, if the result of that test was 8 or more, you gain 1CP.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Tzeentch"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36910,
+          "name": "Intoxicating Elixir",
+          "points": 15,
+          "rules": "**HERETIC ASTARTES SLAANESH** model only. The bearer has the Feel No Pain 5+ ability. Each time the bearer shoots or fights, if the bearer’s unit made a Dark Pact this phase and did not fail the resulting Leadership test, after the bearer has resolved those attacks, select one enemy unit that was hit by one or more of those attacks; that enemy unit must take a Battle-shock test.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Slaanesh"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37086,
+          "name": "Orbs of Unlife",
+          "points": 15,
+          "rules": "**HERETIC ASTARTES NURGLE** model only. At the end of the Fight phase, roll one D6 for every enemy unit within 3\" of the bearer, adding 1 to the result if the bearer’s unit made a Dark Pact that phase and did not fail the resulting Leadership test: on a 4+, that enemy unit suffers D3 mortal wounds.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Nurgle"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37575,
+          "name": "Talisman of Burning Blood",
+          "points": 15,
+          "rules": "**HERETIC ASTARTES KHORNE** model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. Each time the bearer’s unit makes a Dark Pact and does not fail the resulting Leadership test, roll one D3: until the end of the phase, add the result to the Attacks and Strength characteristics of the bearer’s melee weapons instead.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Khorne"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44199,
+          "name": "Eye of the Gods",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after a **HERETIC ASTARTES CHARACTER** unit from your army (excluding **DAMNED**, **DAEMON** AND **EPIC HERO** units) destroys an enemy unit.",
+          "targetRules": "One **HERETIC ASTARTES CHARACTER** model in that unit.",
+          "effectRules": "Until the end of the battle, add 1 to the Move, Toughness and Wounds characteristics of that Character model, and add 1 to the Attacks, Strength and Damage characteristics of that **CHARACTER** models melee weapons.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44771,
+          "name": "Eternal Hate",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if it is a **KHORNE** unit: on a 4+, do not remove it from play. That destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44630,
+          "name": "Profane Zeal",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES CHAOS UNDIVIDED** unit from your army that has not been selected to shoot or fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Wound roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44359,
+          "name": "Skinshift",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army.",
+          "effectRules": "One model in your unit regains up to 3 lost wounds. In addition, if your unit is a **TZEENTCH** unit below its Starting Strength, one destroyed model (excluding **CHARACTER** models) is returned to your unit with its full wounds remaining.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44195,
+          "name": "Torpefying Refrain",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army.",
+          "effectRules": "Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Fell Back. If your unit is a **SLAANESH** unit, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44890,
+          "name": "Festering Miasma",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, your unit has the Stealth ability. In addition, if your unit is a **NURGLE** unit, it can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7914,
+          "name": "Marks of Chaos",
+          "components": [
+            {
+              "id": 48736,
+              "type": "text",
+              "textContent": "When mustering your army, when you select a **HERETIC ASTARTES** unit to include in your army, if that unit is not an **EPIC HERO** and does not already have one of the following keywords, you must select one for that unit and note it on your Army Roster: **KHORNE**, **TZEENTCH**, **NURGLE**, **SLAANESH**, **CHAOS UNDIVIDED**. Each time a unit with one of these keywords gains a weapon ability as the result of a Dark Pact and does not fail the resulting Leadership test, until the end of the phase, that unit gains the associated ability below.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48900,
+              "type": "header",
+              "textContent": "Units That Gained [LETHAL HITS]",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49652,
+              "type": "text",
+              "textContent": "■ **KHORNE**: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.\n■ **TZEENTCH**: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit.\n■ **CHAOS UNDIVIDED**: Each time a model in this unit makes an attack, re-roll a Hit roll of 1.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49734,
+              "type": "header",
+              "textContent": "Units That Gained [SUSTAINED HITS 1]",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49502,
+              "type": "text",
+              "textContent": "■ **NURGLE**: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit.\n■ **SLAANESH**: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.\n■ **CHAOS UNDIVIDED**: Each time a model in this unit makes an attack, re-roll a Hit roll of 1.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": [
+        {
+          "id": 1629,
+          "title": "Restrictions",
+          "bulletPoints": [
+            {
+              "id": 1883,
+              "text": "You cannot select the **KHORNE** keyword for a **PSYKER** unit."
+            },
+            {
+              "id": 1899,
+              "text": "A **CHARACTER** unit can only be attached to a unit if both units share the same keyword from the list below."
+            },
+            {
+              "id": 1885,
+              "text": "A unit can only embark within (or start the battle embarked within) a **TRANSPORT** if both of those units share the same keyword from the list below."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10195,
+      "slug": "renegade-raiders",
+      "name": "Renegade Raiders",
+      "pointsCost": 3,
+      "forceDispositions": [
+        "Priority Assets",
+        "Reconnaissance"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37083,
+          "name": "Despot’s Claim",
+          "points": 15,
+          "rules": "**HERETIC ASTARTES** model only. At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is wholly within 12\" of your opponent’s deployment zone: on a 5+, you gain 1CP.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37338,
+          "name": "Dread Reaver",
+          "points": 15,
+          "rules": "**HERETIC ASTARTES** model only. Each time the bearer makes a melee attack, if the bearer is wholly within 12\" of your opponent’s deployment zone, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37449,
+          "name": "Mark of the Hound",
+          "points": 25,
+          "rules": "**HERETIC ASTARTES** model only. Models in the bearer’s unit have the Scouts 6\" ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37134,
+          "name": "Tyrant’s Lash",
+          "points": 20,
+          "rules": "**HERETIC ASTARTES** model only. You can re-roll Advance rolls made for the bearer’s unit, and the bearer’s unit is eligible to shoot in a turn in which it Fell Back.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44752,
+          "name": "Unfailingly Obdurate",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units) that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44469,
+          "name": "Scour and Seize",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that has not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack that targets a unit within range of an objective marker, that attack has the **[PRECISION]** ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43784,
+          "name": "Opportunistic Raiders",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "End of the Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that was eligible to fight this phase.",
+          "effectRules": "If your unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\" or up to 12\" if it is a **MOUNTED** unit. Otherwise, your unit can make a Fall Back move. It cannot embark within a **TRANSPORT** at the end of this move if it disembarked from a **TRANSPORT** this turn.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44770,
+          "name": "Warpcharged Engines",
+          "cpCost": 1,
+          "category": "wargear",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One **HERETIC ASTARTES TRANSPORT** or **HERETIC ASTARTES MOUNTED** unit from your army that has not been selected to move this phase.",
+          "effectRules": "Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44337,
+          "name": "Ruinous Raid",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or your Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that disembarked from a **TRANSPORT** this turn and has not been selected to shoot or fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack, if the target of that attack is within range of an objective marker, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43711,
+          "name": "Reaver’s Haste",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your Charge phase.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** or **HERETIC ASTARTES MOUNTED** unit from your army.",
+          "effectRules": "Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced. If you select one or more units within range of an objective marker as a target of that charge, add 1 to the Charge roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7947,
+          "name": "Raiders and Reavers",
+          "components": [
+            {
+              "id": 49777,
+              "type": "text",
+              "textContent": "Ranged weapons equipped by **HERETIC ASTARTES** models from your army have the **[ASSAULT]** ability, and each time a **HERETIC ASTARTES** model from your army makes an attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48491,
+              "type": "loreAccordion",
+              "textContent": "Some Heretic Astartes warbands are piratical by nature, launching swift attacks focused upon destroying their foes in a storm of bloody violence, seizing territory and spoils of war before the enemy can bring reinforcements to bear.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10299,
+      "slug": "renegade-warband",
+      "name": "Renegade Warband",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37496,
+          "name": "Empyric Symbiote",
+          "points": 15,
+          "rules": "**HERETIC ASTARTES** model only. Add 1 to Advance and Charge rolls made for the bearer’s unit.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37336,
+          "name": "Eyes of the Hunter",
+          "points": 15,
+          "rules": "**HERETIC ASTARTES** model only. Ranged weapons equipped by models in the bearer’s unit have the **[IGNORES COVER]** ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37283,
+          "name": "Fratricidal Trophies",
+          "points": 5,
+          "rules": "**HERETIC ASTARTES TERMINATOR** model only. In a turn in which the bearer’s unit chose to Default to Doctrine, until the end of the turn, each time a model in this unit makes an attack, you can re‑roll the Hit roll.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Terminator"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37545,
+          "name": "Weaponised Hatred",
+          "points": 35,
+          "rules": "**HERETIC ASTARTES** model only. Once per battle round, after your Vendetta target is destroyed, if the bearer is on the battlefield, you can select one enemy unit visible to the bearer. That enemy unit becomes your Vendetta target until you select a new one.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43847,
+          "name": "Never Outgunned",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that has just been selected to shoot or fight.",
+          "effectRules": "Select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until the end of the phase, weapons equipped by models in your unit have the selected ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44753,
+          "name": "Vengeful Destruction",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** (excluding **DAMNED** units) or **HERETIC ASTARTES MOUNTED** unit from your army that has not been selected to shoot or fight this phase.",
+          "effectRules": "Until the end of the phase, each time your unit makes an attack that targets your Vendetta target, add 1 to the Wound roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44843,
+          "name": "Undying Hatred",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44013,
+          "name": "Renegade Claim",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army within range of an objective marker you control.",
+          "effectRules": "That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43869,
+          "name": "Corrupted Munitions",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase",
+          "targetRules": "One **HERETIC ASTARTES** unit in your army that has just been selected to shoot.",
+          "effectRules": "Until the end of the phase, each time a model in this unit makes a ranged attack, improve the Armour Penetration of that attack by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44878,
+          "name": "Reavers’ Reaction",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+          "targetRules": "One **HERETIC ASTARTES** unit (excluding **MONSTERS** and **VEHICLES**) from your army that was hit by one or more of those attacks.",
+          "effectRules": "Your unit can make a Normal move of up to D6\".",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7879,
+          "name": "Slaves to None",
+          "components": [
+            {
+              "id": 49068,
+              "type": "text",
+              "textContent": "**HERETIC ASTARTES** models from your army lose the Dark Pacts ability.\n\nRanged weapons equipped by **HERETIC ASTARTES** models from your army have the **[ASSAULT]** ability.\n\nWhen mustering your army, you cannot use the Cults of the Dark Gods rule.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49591,
+              "type": "header",
+              "textContent": "Vendetta",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49866,
+              "type": "loreAccordion",
+              "textContent": "Bitter minds hold on to lasting grudges.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48613,
+              "type": "text",
+              "textContent": "At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Vendetta target. Each time a **HERETIC ASTARTES** model from your army (excluding **DAMNED** models) makes an attack that targets your Vendetta target, you can re‑roll the Hit roll.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49141,
+              "type": "header",
+              "textContent": "Twisted Doctrine",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49331,
+              "type": "loreAccordion",
+              "textContent": "These Renegades ally their knowledge of the Codex Astartes with their own unrestrained savagery to horrific effect.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49819,
+              "type": "text",
+              "textContent": "In your Movement phase, each time you set up or select a **HERETIC ASTARTES** unit (excluding Battle‑shocked units) from your army to move, it can choose to Default to Doctrine. If it does, it must first take a Battle‑shock test. Then, select one of the following:\n\n■ Until the end of the turn, this unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n■ Until the end of the turn, this unit is eligible to declare a charge in a turn in which it Advanced.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48759,
+              "type": "loreAccordion",
+              "textContent": "Many Renegades eschew the gifts of Dark Gods, relying only upon their own martial prowess to sweep forth and destroy the foe.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10286,
+      "slug": "soulforged-warpack",
+      "name": "Soulforged Warpack",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Take and Hold"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37347,
+          "name": "Forge’s Blessing",
+          "points": 20,
+          "rules": "**HERETIC ASTARTES** model only. In your Command phase, select one friendly **HERETIC ASTARTES VEHICLE** unit within 12\" of the bearer. Until the start of your next Command phase, that unit has the Feel No Pain 6+ ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 36841,
+          "name": "Invigorated Mechatendrils",
+          "points": 15,
+          "rules": "**WARPSMITH** model only. Add 4\" to the bearer’s Move characteristic.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Warpsmith"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37079,
+          "name": "Soul Harvester",
+          "points": 15,
+          "rules": "**HERETIC ASTARTES** model only. While the bearer is on the battlefield, each time an enemy unit within 12\" of the bearer is destroyed, roll one D6: on a 5+, you gain 1CP.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37218,
+          "name": "Tempting Addendum",
+          "points": 40,
+          "rules": "**HERETIC ASTARTES** model only. Each time a **HERETIC ASTARTES DAEMON VEHICLE** unit from your army invokes its contract while within 3\" of the bearer:\n\n• If it suffers one or more mortal wounds as a result of that Dark Pact, add 1 to the number of mortal wounds it suffers.\n• Until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44593,
+          "name": "Desperate Pledge",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES DAEMON VEHICLE** unit from your army that has not been selected to shoot or fight this phase.",
+          "effectRules": "Until the end of the phase, if your unit invokes its contract, each time it makes an attack, improve the Armour Penetration characteristic of that attack by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44737,
+          "name": "Glut of Souls",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES DAEMON VEHICLE** unit from your army (excluding **TITANIC** units) that has not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, if your unit invokes its contract, each time it makes an attack that destroys an enemy model, roll one D6: on a 5+, your unit regains 1 lost wound after all of its attacks have been resolved (to a maximum of 6 wounds).",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44664,
+          "name": "Daemonic Possession",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One **HERETIC ASTARTES VEHICLE** unit from your army (excluding **DAEMON** units).",
+          "effectRules": "Until the end of the battle, your unit has the **DAEMON** keyword.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44330,
+          "name": "Unstoppable Rampage",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase",
+            "chargePhase"
+          ],
+          "whenRules": "Your Movement phase or your Charge phase.",
+          "targetRules": "One **HERETIC ASTARTES VEHICLE** or **VASHTORR THE ARKIFANE** unit from your army that has not been selected to move or charge this phase.",
+          "effectRules": "Until the end of the phase, each time your unit makes a Normal, Advance or Charge move, it can move horizontally through terrain features as if they were not there.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43871,
+          "name": "Predatory Pursuit",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
+          "targetRules": "One **HERETIC ASTARTES VEHICLE** or **VASHTORR THE ARKIFANE** unit from your army that is within 8\" of that enemy unit and not within Engagement Range of one or more enemy units.",
+          "effectRules": "Your unit can make a Normal move of up to 6\", but must end that move as close as possible to that enemy unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43831,
+          "name": "Feeding Frenzy",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your opponent’s Movement phase, when an enemy unit (excluding **MONSTERS** and **VEHICLES**) is selected to Fall Back.",
+          "targetRules": "One **HERETIC ASTARTES DAEMON VEHICLE** or **VASHTORR THE ARKIFANE** unit from your army that is within Engagement Range of that enemy unit.",
+          "effectRules": "Until the end of the phase, each time an enemy unit (excluding **MONSTERS** and **VEHICLES**) that is within Engagement Range of your unit Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7708,
+          "name": "Debt to the Soul Forge",
+          "components": [
+            {
+              "id": 49681,
+              "type": "text",
+              "textContent": "Each time a **HERETIC ASTARTES DAEMON VEHICLE** unit from your army makes a Dark Pact, it can invoke its contract. If it does, subtract 1 from the resulting Leadership test when making that Dark Pact, and until the end of the phase:\n\n• Each time a model in that unit makes a ranged attack, add 1 to the Wound roll.\n• Add 2 to the Attacks characteristic of melee weapons equipped by models in that unit.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48898,
+              "type": "loreAccordion",
+              "textContent": "Many are the daemons who have forged pacts with Vashtorr the Arkifane. Once bound into such a contract, a soul debt must be paid, one that the daemon strives endlessly, and with all its desperation, to fulfil.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10314,
+      "slug": "veterans-of-the-long-war",
+      "name": "Veterans of the Long War",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Take and Hold"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37365,
+          "name": "Eager for Vengeance",
+          "points": 20,
+          "rules": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). The bearer’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Each time a model in the bearer’s unit makes an attack that targets your focus of hatred, if the bearer’s unit Fell Back this turn, add 1 to the Hit roll, and each time you select your focus of hatred as a target of that unit’s charge, add 1 to the Charge roll.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Damned"
+          ],
+          "keywordGroups": []
+        },
+        {
+          "id": 37413,
+          "name": "Eye of Abaddon",
+          "points": 15,
+          "rules": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). While the bearer is on the battlefield, each time your focus of hatred is destroyed, roll one D6: on a 4+, you gain 1CP.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Damned"
+          ],
+          "keywordGroups": []
+        },
+        {
+          "id": 37384,
+          "name": "Mark of Legend",
+          "points": 10,
+          "rules": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). Once per turn, you can re-roll one Hit roll, one Wound roll or one saving throw made for the bearer.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Damned"
+          ],
+          "keywordGroups": []
+        },
+        {
+          "id": 37354,
+          "name": "Warmaster’s Gift",
+          "points": 15,
+          "rules": "**CHAOS LORD** model only. Each time the bearer makes an attack that targets your focus of hatred, an unmodified successful Wound roll of 5+ scores a Critical Wound.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Chaos Lord"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43761,
+          "name": "Endless Ire",
+          "cpCost": 2,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase, just after your focus of hatred is destroyed.",
+          "targetRules": "One **HERETIC ASTARTES CHARACTER** unit from your army (excluding **Damned** units).",
+          "effectRules": "Select one enemy unit within 12\" of and visible to your unit. Until the start of your next Command phase, that enemy unit is considered to be your focus of hatred.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44892,
+          "name": "Contemptuous Disregard",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units) that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44165,
+          "name": "Bringers of Despair",
+          "cpCost": 1,
+          "category": "epicDeed",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units) that is within Engagement Range of your focus of hatred.",
+          "effectRules": "Until the end of the phase, your unit has the Fights First ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44443,
+          "name": "Black Crusade",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** unit or **HERETIC ASTARTES MOUNTED** unit from your army (excluding **DAMNED** units).",
+          "effectRules": "Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced or Fell Back, and bolt pistols, boltguns and combi-bolters equipped by models in your unit have the **[DEVASTATING WOUNDS]** ability while your unit has not already inflicted 6 wounds this turn using that ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44326,
+          "name": "Let the Galaxy Burn",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army (excluding **TZEENTCH** units) that has not been selected to shoot this phase.",
+          "effectRules": "Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability, and change the Attacks characteristic of Torrent weapons equipped by models in your unit to 6.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44374,
+          "name": "Millennia of Experience",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
+          "targetRules": "One **HERETIC ASTARTES INFANTRY** or **HERETIC ASTARTES MOUNTED** unit from your army (excluding **DAMNED** units) that is within 8\" of that enemy unit and not within Engagement Range of one or more enemy units.",
+          "effectRules": "Your unit can make a Normal move of up to 6\".",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7827,
+          "name": "Focus of Hatred",
+          "components": [
+            {
+              "id": 49354,
+              "type": "text",
+              "textContent": "At the start of your Command phase, select one unit from your opponent’s army to be your focus of hatred. Until the start of your next Command phase, each time a **HERETIC ASTARTES** model from your army (excluding **DAMNED** models) makes an attack that targets your focus of hatred, you can re-roll the Hit roll.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49564,
+              "type": "loreAccordion",
+              "textContent": "The eldest of the Chaos Space Marines harbour within their corrupted souls a burning desire for vengeance upon the Imperium and the galaxy as a whole. They channel this ire against their chosen targets, relentlessly pursuing their victims until every last foe lies dead upon the battlefield.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10345,
+      "slug": "warpstrike-champions",
+      "name": "Warpstrike Champions",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Disruption"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1894,
+        "slug": "chaos-space-marines",
+        "name": "Heretic Astartes",
+        "commonName": "Chaos Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37484,
+          "name": "Akshur’s Binding Runes",
+          "points": 20,
+          "rules": "**HERETIC ASTARTES** model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37108,
+          "name": "Eye of the Warp",
+          "points": 15,
+          "rules": "**HERETIC ASTARTES** model with the Deep Strike ability only. Each time the bearer’s unit is set up on the battlefield, until the end of the turn, you can re-roll Charge rolls made for that unit.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37421,
+          "name": "Infernal Fulgurite",
+          "points": 20,
+          "rules": "**HERETIC ASTARTES** model only (excluding **DAMNED** models). Once per battle, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Damned"
+          ],
+          "keywordGroups": []
+        },
+        {
+          "id": 37239,
+          "name": "Tzagulla",
+          "points": 25,
+          "rules": "**HERETIC ASTARTES** model with the Deep Strike ability only. Improve the Attacks, Strength and Armour Penetration characteristics of the bearer’s weapons by 1. In addition, each time the bearer’s unit is set up on the battlefield from Reserves, until the end of the turn, improve the Damage characteristic of the bearer’s weapons by 1.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44159,
+          "name": "Empyric Dislocation",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army (excluding **DAMNED** units) that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "You cannot target the same unit with the Empyric Dislocation and Armour of Corruption Stratagems in the same phase."
+        },
+        {
+          "id": 44506,
+          "name": "Armour of Corruption",
+          "cpCost": 2,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **HERETIC ASTARTES TERMINATOR**, **OBLITERATORS** or **MUTILATORS** unit from your army  that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "You cannot target the same unit with the Armour of Corruption and Empyric Dislocation Stratagems in the same phase."
+        },
+        {
+          "id": 44880,
+          "name": "Warp Flicker",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One **HERETIC ASTARTES TERMINATOR**, **OBLITERATORS** or **MUTILATORS** unit from your army.",
+          "effectRules": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44721,
+          "name": "Warp-Tainted",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One **HERETIC ASTARTES TERMINATOR**, **OBLITERATORS** or **MUTILATORS** unit from your army, within range of an objective marker you control.",
+          "effectRules": "That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43953,
+          "name": "Siegebreaker Strike",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "Up to two **HERETIC ASTARTES** units from your army that were set up using the Deep Strike ability this turn and have not been selected to shoot this phase.",
+          "effectRules": "Until the end of the phase, ranged weapons equipped by models in your units have the **[IGNORES COVER]** ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44601,
+          "name": "Portal of Spite",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your Charge phase.",
+          "targetRules": "One **HERETIC ASTARTES** unit from your army that was set up using the Deep Strike ability this turn and has not declared a charge this phase.",
+          "effectRules": "Your unit has +2 to **charge rolls.**",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7803,
+          "name": "Warp Portals",
+          "components": [
+            {
+              "id": 48420,
+              "type": "text",
+              "textContent": "At the end of your opponent’s turn, you can select a number of **HERETIC ASTARTES TERMINATOR**, **OBLITERATORS** and **MUTILATORS** units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows:\n\nBattle Size - Number of Units\nIncursion - Up to 1 unit\nStrike Force - Up to 2 units\nOnslaught Up - to 3 units\n\nOnce you have made your selections, remove those units from the battlefield and place them into Strategic Reserves.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49498,
+              "type": "loreAccordion",
+              "textContent": "Conjured warp portals flicker across the battlefield, tearing through the fabric of reality according to arcane designs. They are a means, however perilous and unnatural, for the warband’s most elite warriors to traverse the battlefield in a matter of strides and strike again at new locations.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    }
+  ]
+}

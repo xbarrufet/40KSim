@@ -74,7 +74,7 @@ A structured ability MAY include an `originalText` field containing the verbatim
 The `effects` array entries SHALL use a `category` field to identify their type. Each effect SHALL also carry an `appliedTo: AppliesTo` field identifying which unit entity the effect targets. `AppliesTo` values: `"SelfModel"`, `"SelfUnit"`, `"Enemy"`, `"Ally"`. Effect categories and their own required fields:
 
 - **`statModifier`** — modifies a characteristic. Fields: `appliedTo`, `weaponTarget` (required only when the selected `stat` is a `WeaponStat`: `"ALL"` | `"RANGE"` | `"MELEE"` | `<weapon-name>`), `stat` (`UnitStat` or `WeaponStat`), `mode` (`"add"` | `"subtract"` | `"setValue"` | `"halve"`), and `value` (number, absent for `"halve"`). When `weaponTarget` is a string that is not `"ALL"`, `"RANGE"`, or `"MELEE"`, it SHALL be interpreted as a specific weapon name and the effect SHALL apply only to weapon profiles whose name matches that string (case-insensitive). The `target: "unit" | "weapon"` field is removed; the stat value itself determines whether it is a unit or weapon stat.
-- **`diceModifier`** — modifies a dice roll. Fields: `appliedTo`, `roll` (`"toHit"` | `"toWound"` | `"savingThrow"` | `"damage"` | `"hazard"` | `"charge"`), `action` (`"rerollOnes"` | `"rerollFailed"` | `"rerollAll"` | `"addToRoll"` | `"subtractFromRoll"` | `"autoSuccess"` | `"ignoreModifiers"`), optional `attackType` (`"RANGE"` | `"MELEE"` | `"ALL"` | `<weapon-name>`). When `attackType` is a string that is not `"RANGE"`, `"MELEE"`, or `"ALL"`, it SHALL be interpreted as a specific weapon name and the effect SHALL apply only to attacks made with weapon profiles whose name matches that string (case-insensitive).
+- **`diceModifier`** — modifies a dice roll. Fields: `appliedTo`, `roll` (`"toHit"` | `"toWound"` | `"savingThrow"` | `"damage"` | `"hazard"` | `"charge"` | `"battleshock"`), `action` (`"rerollOnes"` | `"rerollFailed"` | `"rerollAll"` | `"addToRoll"` | `"subtractFromRoll"` | `"autoSuccess"` | `"ignoreModifiers"`), optional `attackType` (`"RANGE"` | `"MELEE"` | `"ALL"` | `<weapon-name>`). When `attackType` is a string that is not `"RANGE"`, `"MELEE"`, or `"ALL"`, it SHALL be interpreted as a specific weapon name and the effect SHALL apply only to attacks made with weapon profiles whose name matches that string (case-insensitive).
 - **`weaponKeyword`** — grants a keyword to weapon profiles. Fields: `appliedTo`, `weaponTarget` (`"ALL"` | `"RANGE"` | `"MELEE"` | `<weapon-name>`), `keyword` (from the project's known ability vocabulary, e.g. `IGNORES COVER`, `LETHAL HITS`, `DEVASTATING WOUNDS`), optional `value`. When `weaponTarget` is a specific weapon name, the keyword SHALL be granted only to that weapon's profiles.
 - **`unitKeyword`** — grants a keyword to a unit. Fields: `appliedTo`, `keyword` (from a known unit keyword vocabulary: `BENEFIT OF COVER`, `STEALTH`, `SCOUTS`, `DEEP STRIKE`, `LONE OPERATIVE`, `FIGHTS FIRST`), optional `value` (string, for parameterised keywords like `SCOUTS 6"`).
 - **`damageMitigation`** — reduces or prevents damage. Fields: `appliedTo`, `kind`, optional `value`, optional `condition`.
@@ -122,6 +122,11 @@ The ability-level `appliedTo` field is removed. Each effect carries its own `app
 
 - **WHEN** a rule adds +1 to the charge roll
 - **THEN** use `diceModifier` with `roll: "charge"` and `action: "addToRoll"`
+
+#### Scenario: Modify battleshock roll
+
+- **WHEN** a rule modifies the battleshock test (e.g. +1 to the battleshock test)
+- **THEN** use `diceModifier` with `roll: "battleshock"` and the appropriate action
 
 #### Scenario: Effect targeting the unit itself
 
@@ -457,6 +462,81 @@ A `StructuredAbility` SHALL support an optional `frequency` field with values `'
 - **WHEN** a structured ability has `frequency: 'perRound'` and has been activated in the current battle round
 - **THEN** the simulator SHALL NOT present or evaluate the ability again until the next battle round
 
+### Requirement: Target Condition on Combat Effects
+
+The effect categories `statModifier`, `diceModifier`, and `weaponKeyword` SHALL support an optional `targetCondition` field that filters effect application based on the defending unit's keywords. When present, the simulator SHALL check the defending unit's keywords before applying the effect. When absent, the effect applies unconditionally (existing behavior).
+
+`TargetCondition` SHALL have two fields:
+- `keywords`: a non-empty array of unit keyword strings (e.g. `["VEHICLE"]`, `["MONSTER", "VEHICLE"]`)
+- `mode`: `"includes"` (effect applies only when the defender has at least one listed keyword) or `"excludes"` (effect applies only when the defender has none of the listed keywords)
+
+#### Scenario: Lethal Hits non-Vehicle (excludes mode)
+
+- **WHEN** a `weaponKeyword` effect has `targetCondition: { keywords: ["VEHICLE"], mode: "excludes" }` and the defending unit has the `VEHICLE` keyword
+- **THEN** the effect is NOT applied to attacks against that unit
+
+#### Scenario: Lethal Hits non-Vehicle against Infantry (excludes mode, no match)
+
+- **WHEN** a `weaponKeyword` effect has `targetCondition: { keywords: ["VEHICLE"], mode: "excludes" }` and the defending unit does NOT have the `VEHICLE` keyword
+- **THEN** the effect IS applied to attacks against that unit
+
+#### Scenario: Reroll vs Monster/Vehicle (includes mode)
+
+- **WHEN** a `diceModifier` effect has `targetCondition: { keywords: ["MONSTER", "VEHICLE"], mode: "includes" }` and the defending unit has the `MONSTER` keyword
+- **THEN** the effect IS applied to attacks against that unit
+
+#### Scenario: Reroll vs Monster/Vehicle against Infantry (includes mode, no match)
+
+- **WHEN** a `diceModifier` effect has `targetCondition: { keywords: ["MONSTER", "VEHICLE"], mode: "includes" }` and the defending unit has neither `MONSTER` nor `VEHICLE` keyword
+- **THEN** the effect is NOT applied to attacks against that unit
+
+#### Scenario: No targetCondition means unconditional
+
+- **WHEN** an effect does not have a `targetCondition` field
+- **THEN** the effect applies regardless of the defending unit's keywords (backward compatible)
+
+#### Scenario: Multiple keywords in excludes mode
+
+- **WHEN** a `statModifier` effect has `targetCondition: { keywords: ["MONSTER", "VEHICLE"], mode: "excludes" }` and the defending unit has the `VEHICLE` keyword
+- **THEN** the effect is NOT applied (any match in excludes mode blocks the effect)
+
+### Requirement: Target Condition Keyword Vocabulary
+
+The keywords available for `targetCondition` SHALL be: `VEHICLE`, `MONSTER`, `INFANTRY`, `CHARACTER`, `MOUNTED`, `FLY`, `WALKER`, `TITANIC`. These match the `MortalWoundsUnitType` values (excluding `ALL`, which is implicit when no `targetCondition` is set).
+
+#### Scenario: Known keyword used in condition
+
+- **WHEN** the user selects `VEHICLE` as a target condition keyword
+- **THEN** it matches units whose keywords include `VEHICLE`
+
+#### Scenario: Vocabulary matches MortalWoundsUnitType
+
+- **WHEN** listing available keywords for targetCondition
+- **THEN** they are identical to `MortalWoundsUnitType` values minus `ALL`
+
+### Requirement: Effects Operator on Structured Abilities
+A `StructuredAbility` SHALL support an optional `effectsOperator` field with values `'AND'` | `'OR'`. When absent or `'AND'`, the simulator SHALL apply all effects in the `effects[]` array. When `'OR'`, the effects are mutually exclusive — the simulator SHALL evaluate each effect's conditions (e.g. `unitType`, `targetCondition`) against the target and apply only the matching one, without presenting a choice to the player.
+
+#### Scenario: AND operator — all effects apply (default)
+- **WHEN** a structured ability has no `effectsOperator` field and contains two effects
+- **THEN** the simulator SHALL apply both effects
+
+#### Scenario: AND operator explicit — same as absent
+- **WHEN** a structured ability has `effectsOperator: 'AND'` and contains two effects
+- **THEN** the simulator SHALL apply both effects, identical to the absent case
+
+#### Scenario: OR operator — simulator picks by condition
+- **WHEN** a structured ability has `effectsOperator: 'OR'` and contains two mortal wounds effects, one with `unitType: "VEHICLE"` and one with `unitType: "ALL"`, and the target has the `VEHICLE` keyword
+- **THEN** the simulator SHALL apply only the `VEHICLE` effect and SHALL NOT apply the `ALL` effect
+
+#### Scenario: OR operator — fallback to general
+- **WHEN** a structured ability has `effectsOperator: 'OR'` and contains two mortal wounds effects, one with `unitType: "VEHICLE"` and one with `unitType: "ALL"`, and the target does NOT have the `VEHICLE` keyword
+- **THEN** the simulator SHALL apply only the `ALL` effect
+
+#### Scenario: Backward compatibility
+- **WHEN** existing structured abilities have no `effectsOperator` field
+- **THEN** they SHALL behave identically to before (all effects applied)
+
 ## Data Structures
 
 ### Simulation Unit Example
@@ -560,58 +640,6 @@ Army Data is built by combining an imported army list with Simulation Unit data.
 - `wargear[].wargearItemId` references a `wargearItem.id` in the Simulation Unit; stats resolved at simulation time
 - `points` is informational only (not recalculated)
 - Army list construction (slots, points validation, wargear combos) is out of scope — the imported list is assumed correct
-
-### Requirement: Target Condition on Combat Effects
-
-The effect categories `statModifier`, `diceModifier`, and `weaponKeyword` SHALL support an optional `targetCondition` field that filters effect application based on the defending unit's keywords. When present, the simulator SHALL check the defending unit's keywords before applying the effect. When absent, the effect applies unconditionally (existing behavior).
-
-`TargetCondition` SHALL have two fields:
-- `keywords`: a non-empty array of unit keyword strings (e.g. `["VEHICLE"]`, `["MONSTER", "VEHICLE"]`)
-- `mode`: `"includes"` (effect applies only when the defender has at least one listed keyword) or `"excludes"` (effect applies only when the defender has none of the listed keywords)
-
-#### Scenario: Lethal Hits non-Vehicle (excludes mode)
-
-- **WHEN** a `weaponKeyword` effect has `targetCondition: { keywords: ["VEHICLE"], mode: "excludes" }` and the defending unit has the `VEHICLE` keyword
-- **THEN** the effect is NOT applied to attacks against that unit
-
-#### Scenario: Lethal Hits non-Vehicle against Infantry (excludes mode, no match)
-
-- **WHEN** a `weaponKeyword` effect has `targetCondition: { keywords: ["VEHICLE"], mode: "excludes" }` and the defending unit does NOT have the `VEHICLE` keyword
-- **THEN** the effect IS applied to attacks against that unit
-
-#### Scenario: Reroll vs Monster/Vehicle (includes mode)
-
-- **WHEN** a `diceModifier` effect has `targetCondition: { keywords: ["MONSTER", "VEHICLE"], mode: "includes" }` and the defending unit has the `MONSTER` keyword
-- **THEN** the effect IS applied to attacks against that unit
-
-#### Scenario: Reroll vs Monster/Vehicle against Infantry (includes mode, no match)
-
-- **WHEN** a `diceModifier` effect has `targetCondition: { keywords: ["MONSTER", "VEHICLE"], mode: "includes" }` and the defending unit has neither `MONSTER` nor `VEHICLE` keyword
-- **THEN** the effect is NOT applied to attacks against that unit
-
-#### Scenario: No targetCondition means unconditional
-
-- **WHEN** an effect does not have a `targetCondition` field
-- **THEN** the effect applies regardless of the defending unit's keywords (backward compatible)
-
-#### Scenario: Multiple keywords in excludes mode
-
-- **WHEN** a `statModifier` effect has `targetCondition: { keywords: ["MONSTER", "VEHICLE"], mode: "excludes" }` and the defending unit has the `VEHICLE` keyword
-- **THEN** the effect is NOT applied (any match in excludes mode blocks the effect)
-
-### Requirement: Target Condition Keyword Vocabulary
-
-The keywords available for `targetCondition` SHALL be: `VEHICLE`, `MONSTER`, `INFANTRY`, `CHARACTER`, `MOUNTED`, `FLY`, `WALKER`, `TITANIC`. These match the `MortalWoundsUnitType` values (excluding `ALL`, which is implicit when no `targetCondition` is set).
-
-#### Scenario: Known keyword used in condition
-
-- **WHEN** the user selects `VEHICLE` as a target condition keyword
-- **THEN** it matches units whose keywords include `VEHICLE`
-
-#### Scenario: Vocabulary matches MortalWoundsUnitType
-
-- **WHEN** listing available keywords for targetCondition
-- **THEN** they are identical to `MortalWoundsUnitType` values minus `ALL`
 
 ## Out of Scope
 

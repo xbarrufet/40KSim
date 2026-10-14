@@ -1,0 +1,204 @@
+{
+  "dark-angels/darkflight-pursuit": [
+    {
+      "slug": "nightforged-battery-upgrade",
+      "name": "Nightforged Battery (Upgrade)",
+      "points": 10,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "damage",
+          "action": "rerollAll"
+        },
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "hazard",
+          "action": "rerollAll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Landspeeder Vengeance unit only. This unit can re-roll: Rolls to determine the A of a weapon. Hazard rolls."
+    },
+    {
+      "slug": "thundercowl-turbines-upgrade",
+      "name": "Thundercowl Turbines (Upgrade)",
+      "points": 15,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Fly",
+          "Ravenwing",
+          "Mounted"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Ravenwing Fly/Mounted unit only. In your first Movement phase, this unit can make an ingress move."
+    }
+  ],
+  "dark-angels/inner-circle-task-force": [
+    {
+      "slug": "champion-of-the-deathwing",
+      "name": "Champion of the Deathwing",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Deathwing"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "ALL",
+          "keyword": "SUSTAINED HITS",
+          "value": "1",
+          "targetCondition": {
+            "keywords": [],
+            "mode": "includes"
+          }
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Deathwing model only. This unit's attacks that target an enemy unit within range of your vowed objective have [SUSTAINED HITS 1]."
+    },
+    {
+      "slug": "singular-will",
+      "name": "Singular Will",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Deathwing"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Deathwing model only. When this unit is selected to make a consolidation move, this unit can move up to D3+3\"."
+    }
+  ],
+  "dark-angels/wrath-of-the-rock": [
+    {
+      "slug": "ancient-weapons",
+      "name": "Ancient Weapons",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "Strength",
+          "mode": "add",
+          "value": 2
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "AP",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. This model's melee attacks: Have +2 S. Have +1 AP."
+    },
+    {
+      "slug": "deathwing-assault",
+      "name": "Deathwing Assault",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Deathwing"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Deathwing model with the Deep Strike ability only. In your first Movement phase, this unit can make an ingress move."
+    },
+    {
+      "slug": "lord-of-the-ravenwing",
+      "name": "Lord of the Ravenwing",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Ravenwing"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "charge",
+          "action": "rerollAll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Ravenwing model only. This unit can re-roll charge rolls."
+    },
+    {
+      "slug": "tempered-in-battle-aura",
+      "name": "Tempered in Battle (Aura)",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "Ally",
+          "roll": "battleshock",
+          "action": "rerollAll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. Friendly Adeptus Astartes units within 6\" of this model can re-roll leadership rolls."
+    }
+  ]
+}

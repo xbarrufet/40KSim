@@ -3,71 +3,91 @@
     "tag": "AI_PROPOSED",
     "abilities": [
       {
-        "type": "Always",
         "name": "Feel No Pain 5+",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
+        "autoApply": true,
         "effects": [
           {
             "category": "damageMitigation",
+            "appliedTo": "SelfModel",
             "kind": "fnp",
             "value": 5
           }
         ],
-        "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
+        "originalText": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
       },
       {
-        "type": "Always",
         "name": "Press the Attack",
-        "attackType": "FIGHT",
-        "trigger": "¿Es el objetivo un MONSTRUO o VEHÍCULO, o está activa la doctrina de asalto?",
-        "appliedTo": "SelfModel",
+        "phase": "FIGHT",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effectsOperator": "OR",
         "effects": [
           {
             "category": "weaponKeyword",
+            "appliedTo": "SelfModel",
+            "weaponTarget": "MELEE",
+            "keyword": "SUSTAINED HITS",
+            "value": "1",
+            "targetCondition": {
+              "keywords": [
+                "MONSTER",
+                "VEHICLE"
+              ],
+              "mode": "excludes"
+            }
+          },
+          {
+            "category": "weaponKeyword",
+            "appliedTo": "SelfModel",
             "weaponTarget": "MELEE",
             "keyword": "SUSTAINED HITS",
             "value": "1"
           }
         ],
-        "originalText": "This unit’s melee attacks have:\r<ul><li><k>[Sustained Hits 1:</k> <b>non-</b><k>Monster/vehicle]</k>.</li>\r<li><u>Or:</u> If the <b>assault doctrine</b> is active for this unit, <k>[Sustained Hits 1]</k>.</li></ul>"
+        "originalText": "This unit’s melee attacks have: [Sustained Hits 1: non-Monster/vehicle]. Or: If the assault doctrine is active for this unit, [Sustained Hits 1]."
       },
       {
-        "type": "AsLeader",
         "name": "Leader",
         "category": "OTHER",
         "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
-        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
       },
       {
-        "type": "Always",
-        "name": "Righteous Fury (Once per battle, per army)",
-        "attackType": "FIGHT",
-        "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
+        "name": "Righteous Fury",
+        "phase": "FIGHT",
+        "trigger": "¿Deseas usar esta habilidad en la fase de Combate?",
+        "frequency": "perBattle",
         "effects": [
           {
             "category": "statModifier",
-            "target": "weapon",
+            "appliedTo": "SelfModel",
             "weaponTarget": "MELEE",
             "stat": "Strength",
             "mode": "add",
             "value": 1
           },
           {
-            "category": "damageMitigation",
-            "kind": "fightOnDeath"
+            "category": "heal",
+            "appliedTo": "SelfModel",
+            "amount": "D3"
           }
-        ],
-        "originalText": "In the Fight phase, you can use this ability. If you do, this unit’s melee attacks have +1 <b>S</b>, and when this unit has fought: \n▪ This model <b>heals</b> D3 wounds.  \n▪  <u>Or:</u> If this model <b>destroyed</b> an enemy model this phase, this model <b>heals</b> 2D3 wounds."
+        ]
       },
       {
-        "type": "Always",
         "name": "Honour of Ultramar",
-        "category": "OTHER",
-        "text": "In the fight phase, when this model is destroyed, if this unit has not been selected to fight this phase, roll one D6: On a 2+, do not remove this model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.",
-        "originalText": "In the fight phase, when this model is <b>destroyed</b>, if this unit has not been <b>selected to fight</b> this phase, roll one D6:\r<ul><li>On a 2+, do not remove this model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.</li></ul>"
+        "phase": "FIGHT",
+        "trigger": "¿Este modelo ha sido destruido en la fase de Combate y esta unidad aún no ha sido seleccionada para combatir en esta fase?",
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfModel",
+            "keyword": "HONOUR OF ULTRAMAR",
+            "value": null
+          }
+        ],
+        "originalText": "In the fight phase, when this model is destroyed, if this unit has not been selected to fight this phase, roll one D6: On a 2+, do not remove this model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield."
       }
     ],
     "rawAbilities": []
@@ -76,31 +96,37 @@
     "tag": "AI_PROPOSED",
     "abilities": [
       {
-        "type": "AsLeader",
-        "name": "Leader",
-        "category": "OTHER",
-        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
-        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
-      },
-      {
-        "type": "Always",
         "name": "Captain of the Honour Guard",
         "category": "OTHER",
         "text": "If your army includes a Marneus Calgar unit, replace this unit's Leader ability with the Support ability (this unit can still be attached to the same units).",
-        "originalText": "If your army includes a <k>Marneus Calgar</k> unit, replace this unit’s Leader ability with the Support ability (this unit can still be attached to the same units)."
+        "originalText": "If your army includes a Marneus Calgar unit, replace this unit’s Leader ability with the Support ability (this unit can still be attached to the same units)."
       },
       {
-        "type": "Always",
-        "name": "Knight Champion of Macragge",
+        "name": "Leader",
         "category": "OTHER",
-        "text": "In your opponent's Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can make a normal move of up to 6\"."
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
       },
       {
-        "type": "Always",
+        "name": "Knight Champion of Macragge",
+        "phase": "MOVEMENT",
+        "trigger": "¿Un enemigo se ha movido a 8\" o menos de esta unidad y esta unidad no está enfrentada?",
+        "frequency": "perPhase",
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "stat": "Movement",
+            "mode": "setValue",
+            "value": 6
+          }
+        ]
+      },
+      {
         "name": "Honour or Death",
         "category": "OTHER",
         "text": "When you target this unit with the Heroic Intervention stratagem, that use is -1 CP.",
-        "originalText": "When you target this unit with the <b>Heroic Intervention stratagem</b>, that use is -1 CP."
+        "originalText": "When you target this unit with the Heroic Intervention stratagem, that use is -1 CP."
       }
     ],
     "rawAbilities": []
@@ -109,40 +135,32 @@
     "tag": "AI_PROPOSED",
     "abilities": [
       {
-        "type": "AsLeader",
         "name": "Leader",
         "category": "OTHER",
-        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
-        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
       },
       {
-        "type": "Always",
         "name": "Chief Librarian (psyker level 3)",
         "category": "OTHER",
         "text": "This model has the psychic abilities listed in the Psychic Abilities section.",
-        "originalText": "This model has the <b>psychic abilities</b> listed in the Psychic Abilities section."
+        "originalText": "This model has the psychic abilities listed in the Psychic Abilities section."
       },
       {
-        "type": "Always",
         "name": "Hood of Hellfire (Psychic)",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
+        "autoApply": true,
         "effects": [
           {
             "category": "damageMitigation",
+            "appliedTo": "SelfModel",
             "kind": "fnp",
             "value": 4,
-            "condition": "vsPsychic"
-          },
-          {
-            "category": "damageMitigation",
-            "kind": "fnp",
-            "value": 4,
-            "condition": "vsMortalWounds"
+            "condition": "any"
           }
         ],
-        "originalText": "This unit has <b>Feel No Pain 4+</b> against <b>psychic attacks</b> and <b>mortal wounds</b>."
+        "originalText": "This unit has Feel No Pain 4+ against psychic attacks and mortal wounds."
       }
     ],
     "rawAbilities": []
@@ -151,42 +169,40 @@
     "tag": "AI_PROPOSED",
     "abilities": [
       {
-        "type": "Always",
         "name": "Veteran Bodyguard",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Ally",
+        "phase": "ANY",
+        "trigger": "¿Este modelo está adjunto a una unidad?",
         "effects": [
           {
             "category": "damageMitigation",
+            "appliedTo": "Ally",
             "kind": "fnp",
             "value": 4
           }
         ],
-        "originalText": "While this model is attached to a unit, other <k>Character</k> models in this unit have <b>Feel No Pain 4+</b>."
+        "originalText": "While this model is attached to a unit, other Character models in this unit have Feel No Pain 4+."
       },
       {
-        "type": "AsLeader",
         "name": "Support",
         "category": "OTHER",
         "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
-        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it. \n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)."
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.  Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)."
       },
       {
-        "type": "Always",
         "name": "Calgar's Champion",
-        "attackType": "SHOOTING",
-        "trigger": "¿El objetivo es un CHARACTER?",
-        "appliedTo": "SelfModel",
+        "phase": "ANY",
+        "trigger": "¿El objetivo es una unidad CHARACTER?",
         "effects": [
           {
             "category": "diceModifier",
+            "appliedTo": "SelfModel",
             "roll": "toHit",
             "action": "rerollOnes",
             "attackType": "ALL"
           },
           {
             "category": "diceModifier",
+            "appliedTo": "SelfModel",
             "roll": "toWound",
             "action": "rerollOnes",
             "attackType": "ALL"
@@ -200,39 +216,55 @@
     "tag": "AI_PROPOSED",
     "abilities": [
       {
-        "type": "Always",
         "name": "Codex Adept",
-        "category": "OTHER",
-        "text": "The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.",
-        "originalText": "The <b>assault doctrine</b>, <b>devastator doctrine</b> and <b>tactical doctrine</b> are active for this unit."
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "COMBAT_DOCTRINE",
+            "value": "assault_doctrine"
+          },
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "COMBAT_DOCTRINE",
+            "value": "devastator_doctrine"
+          },
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "COMBAT_DOCTRINE",
+            "value": "tactical_doctrine"
+          }
+        ],
+        "originalText": "The assault doctrine, devastator doctrine and tactical doctrine are active for this unit."
       },
       {
-        "type": "AsLeader",
         "name": "Leader",
         "category": "OTHER",
-        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
-        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
       },
       {
-        "type": "Always",
         "name": "Master Tactician",
         "category": "OTHER",
         "text": "In your Movement phase, you can select one visible friendly Adeptus Astartes unit within 9\" of this model, and select one combat doctrine. That combat doctrine is active for that unit until the start of your next Command phase.",
-        "originalText": "In your Movement phase, you can select one <b>visible</b> friendly <k>Adeptus Astartes</k> unit within 9\" of this model, and select one <b>combat doctrine</b>. That <b>combat doctrine</b> is active for that unit until the start of your next Command phase."
+        "originalText": "In your Movement phase, you can select one visible friendly Adeptus Astartes unit within 9\" of this model, and select one combat doctrine. That combat doctrine is active for that unit until the start of your next Command phase."
       },
       {
-        "type": "Always",
         "name": "Deep Strike",
         "category": "OTHER",
-        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
-        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
       },
       {
-        "type": "Always",
         "name": "Thunderhawk Insertion",
         "category": "OTHER",
         "text": "In the Declare Battle Formations step, you can select one friendly Gravis/Phobos/Tacticus unit. That unit has Deep Strike.",
-        "originalText": "In the Declare Battle Formations step, you can select one friendly <k>Gravis/Phobos/Tacticus</k> unit. That unit has <b>Deep Strike</b>."
+        "originalText": "In the Declare Battle Formations step, you can select one friendly Gravis/Phobos/Tacticus unit. That unit has Deep Strike."
       }
     ],
     "rawAbilities": []
@@ -241,62 +273,85 @@
     "tag": "AI_PROPOSED",
     "abilities": [
       {
-        "type": "Always",
         "name": "Codex Adept",
-        "category": "OTHER",
-        "text": "The assault doctrine, devastator doctrine and tactical doctrine are active for this unit.",
-        "originalText": "The <b>assault doctrine</b>, <b>devastator doctrine</b> and <b>tactical doctrine</b> are active for this unit."
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "ACTIVE_DOCTRINE",
+            "value": "ASSAULT_DOCTRINE"
+          },
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "ACTIVE_DOCTRINE",
+            "value": "DEVASTATOR_DOCTRINE"
+          },
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "ACTIVE_DOCTRINE",
+            "value": "TACTICAL_DOCTRINE"
+          }
+        ],
+        "originalText": "The assault doctrine, devastator doctrine and tactical doctrine are active for this unit."
       },
       {
-        "type": "Always",
         "name": "Feel No Pain 5+",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
+        "autoApply": true,
         "effects": [
           {
             "category": "damageMitigation",
+            "appliedTo": "SelfModel",
             "kind": "fnp",
             "value": 5
           }
         ],
-        "originalText": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost."
+        "originalText": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
       },
       {
-        "type": "Always",
-        "name": "Primarch of the XIII (Aura)",
-        "attackType": "ANY",
-        "trigger": "¿El aliado es una unidad Adeptus Astartes dentro de 6\" de esta unidad?",
-        "appliedTo": "Ally",
+        "name": "Primarch of the XIII",
+        "phase": "ANY",
+        "trigger": "¿Hay una unidad aliada Adeptus Astartes a 6\" o menos de esta unidad?",
         "effects": [
           {
             "category": "diceModifier",
+            "appliedTo": "Ally",
             "roll": "toHit",
-            "action": "rerollOnes",
-            "attackType": "ALL"
+            "action": "rerollOnes"
           },
           {
             "category": "diceModifier",
+            "appliedTo": "Ally",
             "roll": "toWound",
-            "action": "rerollOnes",
-            "attackType": "ALL"
+            "action": "rerollOnes"
           }
-        ],
-        "originalText": "While a friendly <k>Adeptus Astartes</k> unit is within 6\" of this unit, that unit’s attacks can:\r<ul><li>Re-roll <b>hit rolls</b> of 1.</li>\r<li>Re-roll <b>wound rolls</b> of 1.</li></ul>"
+        ]
       },
       {
-        "type": "Always",
         "name": "Author of the Codex",
         "category": "OTHER",
         "text": "In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12\" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase.",
-        "originalText": "In your Movement phase, you can select one <b>visible</b> friendly <k>ADEPTUS ASTARTES</k> unit within 12\" of this model, and select one <b>combat doctrine</b>. That <b>combat doctrine</b> is active for that unit <u>in addition</u> to any other <b>combat doctrines</b> that are active for that unit until the start of your next Command phase."
+        "originalText": "In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12\" of this model, and select one combat doctrine. That combat doctrine is active for that unit in addition to any other combat doctrines that are active for that unit until the start of your next Command phase."
       },
       {
-        "type": "Always",
         "name": "Leader of Astartes",
-        "category": "OTHER",
-        "text": "While this unit is within 3\" of a friendly Adeptus Astartes Infantry unit, this unit has Lone Operative.",
-        "originalText": "While this unit is within 3\" of a friendly <k>Adeptus Astartes Infantry</k> unit, this unit has <b>Lone Operative</b>."
+        "phase": "ANY",
+        "trigger": "¿Hay una unidad aliada Adeptus Astartes Infantry a 3\" o menos de esta unidad?",
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "LONE_OPERATIVE",
+            "value": null
+          }
+        ],
+        "originalText": "While this unit is within 3\" of a friendly Adeptus Astartes Infantry unit, this unit has Lone Operative."
       }
     ],
     "rawAbilities": []
@@ -305,29 +360,35 @@
     "tag": "AI_PROPOSED",
     "abilities": [
       {
-        "type": "Always",
         "name": "Glory of Ultramar",
-        "attackType": "ANY",
-        "trigger": "¿Fue destruido un modelo de esta unidad por ataques enemigos en la fase de disparo?",
-        "appliedTo": "SelfUnit",
-        "effects": [],
-        "originalText": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was <b>destroyed</b> by those attacks, this unit can make a <b>surge move</b> of up to D6\"."
+        "phase": "SHOOTING",
+        "trigger": "¿Fue destruido un modelo de esta unidad por los ataques enemigos?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "SURGE_MOVE",
+            "value": "D6\""
+          }
+        ],
+        "originalText": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed by those attacks, this unit can make a surge move of up to D6\"."
       },
       {
-        "type": "Always",
         "name": "Honour Guard of Macragge",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfUnit",
+        "autoApply": true,
         "effects": [
           {
             "category": "diceModifier",
+            "appliedTo": "SelfUnit",
             "roll": "toWound",
             "action": "subtractFromRoll",
             "attackType": "ALL"
           }
         ],
-        "originalText": "Attacks that target this unit have -1 to <b>wound rolls</b>."
+        "originalText": "Attacks that target this unit have -1 to wound rolls."
       }
     ],
     "rawAbilities": []
@@ -336,25 +397,31 @@
     "tag": "AI_PROPOSED",
     "abilities": [
       {
-        "type": "Always",
         "name": "Raise the Banner",
-        "category": "OTHER",
-        "text": "At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.",
-        "originalText": "At the end of your Movement phase, if this unit is controlling an <b>objective</b>, that <b>objective</b> is <b>secured</b>."
+        "phase": "MOVEMENT",
+        "trigger": "¿Esta unidad controla un objetivo?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "OBJECTIVE_SECURED",
+            "value": null
+          }
+        ],
+        "originalText": "At the end of your Movement phase, if this unit is controlling an objective, that objective is secured."
       },
       {
-        "type": "Always",
         "name": "Support",
         "category": "OTHER",
-        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
-        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it. \n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)."
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19).",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.  Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)."
       },
       {
-        "type": "Always",
         "name": "Strategium Command",
         "category": "OTHER",
         "text": "When both players have deployed their armies, you can redeploy up to three friendly Adeptus Astartes units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves.",
-        "originalText": "When both players have deployed their armies, you can redeploy up to three friendly <k>Adeptus Astartes</k> units. When doing so, you can set those units up in <b>strategic reserves</b>, regardless of how many units are already in <b>strategic reserves</b>."
+        "originalText": "When both players have deployed their armies, you can redeploy up to three friendly Adeptus Astartes units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves."
       }
     ],
     "rawAbilities": []

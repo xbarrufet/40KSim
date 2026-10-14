@@ -1,0 +1,203 @@
+{
+  "id": 46944,
+  "slug": "skorpekh-destroyers",
+  "name": "Skorpekh Destroyers",
+  "baseSize": "50mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **3-6 Skorpekh Destroyers**\n\n**Every model is equipped with:** Skorpekh hyperphase weapons.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Whirling Onslaught",
+      "rules": "Each time a model in this unit makes a melee attack, re-roll a Hit roll of 1. If this unit made a Charge move this turn, you can re-roll the Hit roll instead.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": 3,
+  "pointsStepPoints": 10,
+  "leads": [],
+  "ledBy": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46868,
+        "name": "Skorpekh Lord",
+        "slug": "skorpekh-lord",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 61755,
+      "name": "Skorpekh Destroyer",
+      "stats": {
+        "save": "3+",
+        "wounds": "3",
+        "movement": "8\"",
+        "toughness": "6",
+        "leadership": "7+",
+        "objectiveControl": "2"
+      },
+      "keywords": [
+        {
+          "id": 51698,
+          "name": "Destroyer Cult"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 50850,
+          "name": "Skorpekh Destroyers"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107905,
+            "name": "Skorpekh hyperphase weapons",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114410,
+                "name": "Skorpekh hyperphase weapons",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 108584,
+            "name": "Plasmacyte",
+            "wargearType": "wargear",
+            "ruleText": "Once per battle for each Plasmacyte this unit has, when this unit is selected to fight, you can use this ability. If you do, until the end of the phase, melee weapons equipped by models in this unit have the **[DEVASTATING WOUNDS]** ability.\n\n**Designer’s Note:** *Place the relevant number of Plasmacyte tokens next to the unit, removing one each time this unit uses this ability.*",
+            "profiles": []
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107905,
+            "name": "Skorpekh hyperphase weapons",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114410,
+                "name": "Skorpekh hyperphase weapons",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "7",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 42334,
+      "rulesText": "■ For every 3 models in this unit, this unit can have 1 Plasmacyte.",
+      "displayOrder": 1
+    }
+  ],
+  "compositions": [
+    {
+      "id": 61428,
+      "points": 85,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 3,
+      "miniatures": [
+        {
+          "miniatureId": 61755,
+          "miniatureName": "Skorpekh Destroyer",
+          "min": 3,
+          "max": 3
+        }
+      ]
+    },
+    {
+      "id": 61740,
+      "points": 170,
+      "displayOrder": 2,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 6,
+      "miniatures": [
+        {
+          "miniatureId": 61755,
+          "miniatureName": "Skorpekh Destroyer",
+          "min": 4,
+          "max": 6
+        }
+      ]
+    }
+  ]
+}

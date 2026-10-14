@@ -1,0 +1,225 @@
+{
+  "id": 46993,
+  "slug": "cryptothralls",
+  "name": "Cryptothralls",
+  "baseSize": "32mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **2 Cryptothralls**\n\n**Every model is equipped with:** scouring eye; scythed limbs.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Bound Creation",
+      "rules": "While this unit is in the same unit as a **CRYPTEK** model, that **CRYPTEK** model has the Feel No Pain 4+ ability.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 3,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Systematic Vigour",
+      "rules": "Each time a **CRYPTOTHRALL** model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 2+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 4,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Cryptek Retinue",
+      "rules": "At the start of the Declare Battle Formations step, this unit can join one other unit from your army that is being led by a **CRYPTEK** model (a unit cannot have more than one **CRYPTOTHRALLS** unit joined to it). If it does, until the end of the battle, every model in this unit counts as being part of that Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased accordingly.",
+      "displayOrder": 1
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 61839,
+      "name": "Cryptothrall",
+      "stats": {
+        "save": "3+",
+        "wounds": "3",
+        "movement": "5\"",
+        "toughness": "4",
+        "leadership": "8+",
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51412,
+          "name": "Cryptothralls"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105879,
+            "name": "Scythed limbs",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112066,
+                "name": "Scythed limbs",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105672,
+            "name": "Scouring eye",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114586,
+                "name": "Scouring eye",
+                "type": "ranged",
+                "range": "6\"",
+                "attacks": "2",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 105672,
+            "name": "Scouring eye",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114586,
+                "name": "Scouring eye",
+                "type": "ranged",
+                "range": "6\"",
+                "attacks": "2",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105879,
+            "name": "Scythed limbs",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112066,
+                "name": "Scythed limbs",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "5",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 62198,
+      "points": 60,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 2,
+      "miniatures": [
+        {
+          "miniatureId": 61839,
+          "miniatureName": "Cryptothrall",
+          "min": 2,
+          "max": 2
+        }
+      ]
+    }
+  ]
+}

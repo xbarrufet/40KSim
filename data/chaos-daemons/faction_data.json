@@ -1,0 +1,2116 @@
+{
+  "faction": "Chaos Daemons",
+  "slug": "chaos-daemons",
+  "army_rules": [
+    {
+      "id": 1737,
+      "name": "The Shadow of Chaos",
+      "excludedFactionIds": [
+        1859,
+        1862,
+        1866,
+        1870,
+        1880,
+        1888,
+        1894
+      ],
+      "components": [
+        {
+          "id": 49405,
+          "type": "text",
+          "textContent": "If your Army Faction is **LEGIONES DAEMONICA**, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows:\n\n■ Your deployment zone is always within your army’s Shadow of Chaos.\n■ At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.\n■ At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49191,
+          "type": "header",
+          "textContent": "DAEMONIC MANIFESTATION",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49393,
+          "type": "text",
+          "textContent": "While a friendly **LEGIONES DAEMONICA** unit is within your army’s Shadow of Chaos, each time that unit makes a **battle-shock roll**, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit **heals** D3 wounds (if that unit is a **BATTLELINE** unit and that roll is successful, up to D3 **destroyed** models (excluding **CHARACTER** models) can be returned to that unit instead).",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48694,
+          "type": "header",
+          "textContent": "DAEMONIC TERROR",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48404,
+          "type": "text",
+          "textContent": "While an enemy unit is within your army’s Shadow of Chaos and/or it is within 6\" of one or more **BLOODTHIRSTER**, **GREAT UNCLEAN ONE**, **KAIROS FATEWEAVER**, **KEEPER OF SECRETS**, **LORD OF CHANGE**, **ROTIGUS**, **SHALAXI HELBANE** or **SKARBRAND** units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    },
+    {
+      "id": 1720,
+      "name": "Daemonic Pact",
+      "excludedFactionIds": [],
+      "components": [
+        {
+          "id": 49297,
+          "type": "text",
+          "textContent": "If every model from your army has the **CHAOS KNIGHTS** or **HERETIC ASTARTES** keyword, you can include **LEGIONES DAEMONICA** units in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. The combined points cost of such units you can include depends on your battle size, as shown below.\n\n■ Incursion - Up to 250 pts\n■ Strike Force - Up to 500 pts\n■ Onslaught - Up to 750 pts\n\nNone of these models can be your **WARLORD**, and they cannot be given Enhancements.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49625,
+          "type": "text",
+          "textContent": "In addition, for each of the following keywords, the number of non-**BATTLELINE** units with that keyword you include in this way cannot be greater than the number of **BATTLELINE** units with that keyword you include in this way:\n\n■ **KHORNE**\n■ **TZEENTCH**\n■ **NURGLE**\n■ **SLAANESH**",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48671,
+          "type": "loreAccordion",
+          "textContent": "When the mortal servants of the Dark Gods march to war, the most favoured may find daemonic entities accompanying them.",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    }
+  ],
+  "detachments_count": 9,
+  "detachments": [
+    {
+      "id": 10238,
+      "slug": "blood-legion",
+      "name": "Blood Legion",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Purge the Foe"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1868,
+        "slug": "chaos-daemons",
+        "name": "Legiones Daemonica",
+        "commonName": "Chaos Daemons"
+      },
+      "enhancements": [
+        {
+          "id": 36890,
+          "name": "Brazenmaw",
+          "points": 15,
+          "rules": "**LEGIONES DAEMONICA KHORNE** model only. Add 2 to Charge rolls made for the bearer’s unit.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Khorne"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36781,
+          "name": "Fury’s Cage",
+          "points": 20,
+          "rules": "**LEGIONES DAEMONICA KHORNE MONSTER** model only. Each time the bearer is selected to fight, it can use this Enhancement. If it does, the bearer suffers D3+1 mortal wounds, and until the end of the phase, each time it makes an attack, you can re‑roll the Hit roll and you can re‑roll the Wound roll.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Monster",
+                "Khorne"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36774,
+          "name": "Gateway Unto Damnation",
+          "points": 10,
+          "rules": "**LEGIONES DAEMONICA KHORNE MONSTER** model only. The bearer’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6. In addition, if the bearer has destroyed one or more enemy units this battle, the bearer has the Deadly Demise D3+3 ability, instead of any other Deadly Demise ability on its datasheet.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Monster",
+                "Khorne"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37561,
+          "name": "Slaughterthirst (Aura)",
+          "points": 25,
+          "rules": "**LEGIONES DAEMONICA KHORNE** model only. While a friendly **LEGIONES DAEMONICA KHORNE** unit (excluding **MONSTERS**) is within 6\" of the bearer, weapons equipped by models in that unit have the **[LANCE]** ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Khorne"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44303,
+          "name": "Wrath Undeniable",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **LEGIONES DAEMONICA KHORNE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time a model in your unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43903,
+          "name": "Gore-hungry Onslaught",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase",
+            "chargePhase"
+          ],
+          "whenRules": "Your Movement phase or your Charge phase.",
+          "targetRules": "One **LEGIONES DAEMONICA KHORNE** unit from your army.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44099,
+          "name": "Skulls Beget Blood",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **LEGIONES DAEMONICA KHORNE INFANTRY** or **LEGIONES DAEMONICA KHORNE MOUNTED** unit from your army (excluding units that Fell Back this turn) that is not within Engagement Range of one or more enemy units.",
+          "effectRules": "Select one enemy unit that is not within Engagement Range of one or more units from your army and is within 8\" of and visible to your unit. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43798,
+          "name": "Blood Begets Skulls",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your Charge phase.",
+          "targetRules": "One **LEGIONES DAEMONICA KHORNE** unit from your army that has not been selected to charge this phase.",
+          "effectRules": "Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43728,
+          "name": "Fool’s Flight",
+          "cpCost": 2,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your opponent’s Movement phase, when an enemy unit ends a **fall‑back move**.",
+          "targetRules": "One friendly unengaged **LEGIONES DAEMONICA KHORNE** unit that is within 6\" of that enemy unit.",
+          "effectRules": "Declare a charge with your unit. When selecting **charge targets**, you can only select enemy units that made a **fall‑back move** this phase and are within the **maximum distance**.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44345,
+          "name": "Sheathed In Brass",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **LEGIONES DAEMONICA KHORNE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, models in your unit have a Save characteristic of 3+.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7898,
+          "name": "Murdercall",
+          "components": [
+            {
+              "id": 49581,
+              "type": "text",
+              "textContent": "In your opponent's movement phase, each time an enemy unit (excluding **AIRCRAFT**) ends a move within 8\" of one or more **LEGIONES DAEMONICA KHORNE** units from your army, one of those **LEGIONES DAEMONICA KHORNE** units can make a **surge move** of up to D6\".'",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49673,
+              "type": "loreAccordion",
+              "textContent": "The daemons of Khorne are physical manifestations of rage, hate and the desperate need to shed blood. For as long as their physical forms remain in realspace, they will never cease their murderous rampage.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        },
+        {
+          "id": 7783,
+          "name": "Blood Tainted",
+          "components": [
+            {
+              "id": 49471,
+              "type": "text",
+              "textContent": "At the end of a phase in which a **LEGIONES DAEMONICA KHORNE** unit from your army destroyed an enemy unit that was within range of an objective marker at the start of the phase, if your unit has a higher Level of Control over that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48908,
+              "type": "loreAccordion",
+              "textContent": "Lifeblood spilt by the daemons of Khorne is tainted by their infernal touch, staining the ground dark with murder.&#x20;",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10339,
+      "slug": "cavalcade-of-chaos",
+      "name": "Cavalcade of Chaos",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Disruption"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1868,
+        "slug": "chaos-daemons",
+        "name": "Legiones Daemonica",
+        "commonName": "Chaos Daemons"
+      },
+      "enhancements": [
+        {
+          "id": 37211,
+          "name": "Apocalyptic Steeds (Upgrade)",
+          "points": 10,
+          "rules": "<k>Legiones Daemonica Mounted</k> unit only. This unit has +1\" <b>M</b>.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Mounted"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37221,
+          "name": "Soul-shattering Charge (Upgrade)",
+          "points": 10,
+          "rules": "<k>Legiones Daemonica Mounted</k> unit only. When this unit is <b>selected to fight</b>, if this unit made a <b>charge move</b> this turn, you can use this ability. If you do, when determining which models in this unit can fight, friendly models that are within 3\" of enemy units <b>engaged</b> with this unit can target those enemy units.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Mounted"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44402,
+          "name": "From Beyond the Veil",
+          "cpCost": 2,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "End of the Movement phase, from the start of the battle.",
+          "targetRules": "One friendly <k>Legiones Daemonica Mounted</k> unit in <b>strategic reserves</b>.",
+          "effectRules": "Your unit can make an <b>ingress move</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44463,
+          "name": "Inescapable Manifestations",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your opponent’s Movement phase, when a unit is selected to make a <b>fall‑back move</b>, if that unit is <b>engaged</b> with a friendly <k>Legiones Daemonica Mounted</k> unit.",
+          "targetRules": "That <k>Legiones Daemonica Mounted</k> unit.",
+          "effectRules": "When an enemy unit <b>engaged</b> with your unit is selected to make a <b>fall‑back move</b>, that enemy unit must use the <b>desperate escape mode</b>. If that enemy unit is <b>battle‑shocked</b>, -1 from those <b>hazard rolls</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44538,
+          "name": "Warp-riders",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, when a friendly <k>Legiones Daemonica Mounted</k> unit is <b>selected to move</b>.",
+          "targetRules": "That <k>Legiones Daemonica Mounted</k> unit.",
+          "effectRules": "Your unit has <k>Mobile</k>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7735,
+          "name": "Unholy Avalanche",
+          "components": [
+            {
+              "id": 48745,
+              "type": "text",
+              "textContent": "If a friendly <k>Legiones Daemonica Mounted</k> unit made a <b>fall‑back move</b> this turn, that move does not prevent that unit from being <b>eligible to shoot/eligible to declare a charge</b>.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49208,
+              "type": "loreAccordion",
+              "textContent": "<i>Infused with the Warp’s unholy power, temporary ebbs of slaughter can be twisted into thundering advances of daemonic power in a heartbeat.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10250,
+      "slug": "daemonic-incursion",
+      "name": "Daemonic Incursion",
+      "pointsCost": 3,
+      "forceDispositions": [
+        "Take and Hold",
+        "Disruption"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1868,
+        "slug": "chaos-daemons",
+        "name": "Legiones Daemonica",
+        "commonName": "Chaos Daemons"
+      },
+      "enhancements": [
+        {
+          "id": 37516,
+          "name": "A’rgath, The King of Blades",
+          "points": 20,
+          "rules": "**KHORNE LEGIONES DAEMONICA** model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is within your army’s Shadow of Chaos, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Khorne"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37256,
+          "name": "Soulstealer",
+          "points": 15,
+          "rules": "**SLAANESH LEGIONES DAEMONICA** model only. Each time the bearer destroys an enemy model with a melee attack, roll one D6, adding 1 to the result if the bearer is within your army’s Shadow of Chaos. On a 4+, the bearer regains 1 lost wound.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Slaanesh"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37503,
+          "name": "The Endless Gift",
+          "points": 30,
+          "rules": "**NURGLE LEGIONES DAEMONICA** model only. The bearer has the Feel No Pain 5+ ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Nurgle"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36869,
+          "name": "The Everstave",
+          "points": 25,
+          "rules": "**TZEENTCH LEGIONES DAEMONICA** model only. Add 1 to the Strength characteristic of the bearer’s ranged weapons and increase the Range characteristic of such weapons by 3\". While the bearer is within your army’s Shadow of Chaos, add 2 to the Strength characteristic of the bearer’s ranged weapons and increase the Range characteristic of such weapons by 6\" instead.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Tzeentch"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44610,
+          "name": "Corrupt Realspace",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Start of any Command phase.",
+          "targetRules": "One **LEGIONES DAEMONICA** unit from your army that is within range of an objective marker you control.",
+          "effectRules": "That objective marker is said to be Corrupted and remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn. In addition, while an objective marker is Corrupted and under your control, the area of the battlefield within 6\" of that objective marker is considered to be within your army’s Shadow of Chaos.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44226,
+          "name": "Draught of Terror",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase.",
+          "targetRules": "One **LEGIONES DAEMONICA** unit from your army that has not been selected to shoot or fight this phase.",
+          "effectRules": "Until the end of the phase, improve the Armour Penetration characteristic of weapons equipped by models in that unit by 1. In addition, until the end of the phase, each time such a weapon targets a unit that is Battle-shocked, you can re-roll the Wound roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43777,
+          "name": "Warp Surge",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your Charge phase.",
+          "targetRules": "One **LEGIONES DAEMONICA** unit from your army that is within your army’s Shadow of Chaos.",
+          "effectRules": "Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43880,
+          "name": "Denizens of the Warp",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One **LEGIONES DAEMONICA** unit from your army that is arriving using the Deep Strike ability this phase.",
+          "effectRules": "Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy models.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44750,
+          "name": "The Realm of Chaos",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "opponentsTurn",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "End of your opponent’s turn.",
+          "targetRules": "Up to two **LEGIONES DAEMONICA** units from your army that are within your army’s Shadow of Chaos, or one other **LEGIONES DAEMONICA** unit from your army.",
+          "effectRules": "• Place your unit in **strategic reserves**.\n• Your unit must make an **ingress move** in your next Movement phase (including in your first turn).",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": "You cannot target units that are within Engagement Range of one or more enemy units with this Stratagem."
+        },
+        {
+          "id": 44405,
+          "name": "Daemonic Invulnerability",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **LEGIONES DAEMONICA** unit from your army that was selected as the target of one or more of that enemy unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time an invulnerable saving throw is made for a model in your unit, re-roll a saving throw of 1.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7873,
+          "name": "Warp Rifts",
+          "components": [
+            {
+              "id": 49484,
+              "type": "text",
+              "textContent": "Each time a **LEGIONES DAEMONICA** unit from your army is set up on the battlefield using the Deep Strike ability, if it is set up wholly within your army’s Shadow of Chaos, and/or if it is set up wholly within 6\" of one or more friendly **BLOODTHIRSTER**, **GREAT UNCLEAN ONE**, **KAIROS FATEWEAVER**, **KEEPER OF SECRETS**, **LORD OF CHANGE**, **ROTIGUS**, **SHALAXI HELBANE** or **SKARBRAND** units with which it shares the **KHORNE**, **TZEENTCH**, **NURGLE** or **SLAANESH** keyword, it can be set up anywhere that is more than 6\" horizontally away from all enemy models, instead of more than 8\".",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48749,
+              "type": "loreAccordion",
+              "textContent": "Daemonic legions tear through the fabric of realspace, malevolent entities flickering into being like phantasms from a nightmare. Worse still, as terror and panic take hold of their victims, so their mortal souls become ever easier prey for the entities pouring through from the warp.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10398,
+      "slug": "legion-of-excess",
+      "name": "Legion of Excess",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1868,
+        "slug": "chaos-daemons",
+        "name": "Legiones Daemonica",
+        "commonName": "Chaos Daemons"
+      },
+      "enhancements": [
+        {
+          "id": 37366,
+          "name": "Avatar of Perfection",
+          "points": 15,
+          "rules": "**LEGIONES DAEMONICA SLAANESH MONSTER** model only. At the start of each phase, if there are no other friendly units within 6\" of the bearer, you can: re‑roll Advance rolls made for the bearer; re‑roll Charge rolls made for the bearer; ignore any or all modifiers to its Move characteristic and to any Advance and/or Charge rolls made for the bearer.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Monster",
+                "Slaanesh"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37346,
+          "name": "Dreaming Crown (Aura)",
+          "points": 30,
+          "rules": "**LEGIONES DAEMONICA SLAANESH** model only. While a friendly **LEGIONES DAEMONICA SLAANESH** unit (excluding **MONSTERS**) is within 6\" of the bearer, each time a model in that unit makes a melee attack, add 1 to the Hit roll.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Slaanesh"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37434,
+          "name": "False Majesty (Aura)",
+          "points": 30,
+          "rules": "**LEGIONES DAEMONICA SLAANESH** model only. While a friendly **LEGIONES DAEMONICA SLAANESH** unit (excluding **MONSTERS**) is within 6\" of the bearer, each time a model in that unit makes a melee attack, add 1 to the Wound roll.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Slaanesh"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37024,
+          "name": "Soul Glutton",
+          "points": 10,
+          "rules": "**LEGIONES DAEMONICA SLAANESH MONSTER** model only. At the end of the Fight phase, if one or more enemy models were destroyed this phase as a result of one or more of the bearer’s attacks, it can use this Enhancement. If it does, it regains up to D3 lost wounds.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Monster",
+                "Slaanesh"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44507,
+          "name": "Rapturous Agony",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **LEGIONES DAEMONICA SLAANESH** unit (excluding **MONSTER/VEHICLE** units).",
+          "targetRules": "That **LEGIONES DAEMONICA SLAANESH** unit.",
+          "effectRules": "Attacks that target your unit with a **S** greater than your unit’s **T** have -1 to wound rolls.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43924,
+          "name": "Archagonists",
+          "cpCost": 2,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **LEGIONES DAEMONICA SLAANESH MONSTER** unit or up to two **LEGIONES DAEMONICA SLAANESH** units (excluding **MONSTERS**) from your army that have not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in one of those units makes an attack, add 1 to the Wound roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44805,
+          "name": "Sensory Excruciation",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "&#x20;One **LEGIONES DAEMONICA SLAANESH MONSTER** unit from your army that is on the battlefield.",
+          "effectRules": "Each unit on the battlefield that is within your army’s Shadow of Chaos must take a Battle‑shock test, subtracting 1 from that test if they are Below Half‑strength.\n\n**Designer’s Note**: *This Stratagem forces all friendly and enemy units alike within your army’s Shadow of Chaos to take a Battle‑shock test. This can allow a Chaos Daemons player to heal units from their army through the Daemonic Manifestation army rule, at the risk of causing some of their own units to become Battle‑shocked.*",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43855,
+          "name": "Phantasmal Longing",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase",
+            "chargePhase"
+          ],
+          "whenRules": "Your Movement phase or your Charge phase.",
+          "targetRules": "One **LEGIONES DAEMONICA SLAANESH** unit from your army.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44382,
+          "name": "Cavalcade of Blades",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your Charge phase, just after a **LEGIONES DAEMONICA SLAANESH** unit from your army ends a Charge move.",
+          "targetRules": "That **LEGIONES DAEMONICA SLAANESH** unit.",
+          "effectRules": "Select one enemy unit within Engagement Range of your unit, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit, or roll six D6 instead if your unit is a **MONSTER** unit: for each 4+, that enemy unit suffers 1 mortal wound.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43966,
+          "name": "Overwhelming Excess",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets",
+          "targetRules": "One **LEGIONES DAEMONICA SLAANESH** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7743,
+          "name": "Beguiling Aura",
+          "components": [
+            {
+              "id": 49413,
+              "type": "text",
+              "textContent": "**LEGIONES DAEMONICA SLAANESH** units from your army are eligible to declare a charge in a turn in which they Fell Back.&#x20;",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49039,
+              "type": "loreAccordion",
+              "textContent": "The daemons of the Dark Prince can bewitch the minds of their foes, appearing in one moment as their true and nightmarish selves and in the next as the object of their foes’ most forbidden desires or devoted affections. Enemies are left foundering and bewildered as the daemons weave their sinuous dances around them and trill their nerve‑shredding siren songs.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        },
+        {
+          "id": 7878,
+          "name": "Seductive Gambit",
+          "components": [
+            {
+              "id": 48479,
+              "type": "text",
+              "textContent": "**LEGIONES DAEMONICA SLAANESH** units from your army have the following ability:\n\n**Seductive Gambit**: Each time this unit ends a Charge move, you can declare it will perform a Seductive Gambit. If you do, until the end of the turn, this unit does not have the Fights First ability, but instead, each time a model in this unit makes an attack, you can re‐roll the Hit roll and you can re‐roll a Wound roll of 1.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49580,
+              "type": "loreAccordion",
+              "textContent": "Temptation is a deadly weapon in the arsenal of the daemons of Slaanesh. To tease warriors’ pride with visions of martial glory or to lure the deluded and desperate into a bladed embrace, they delight in dangling themselves like bait or feigning helpless weakness, then striking with savage release at their overextended foes.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10419,
+      "slug": "lords-of-the-warp",
+      "name": "Lords of the Warp",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Take and Hold"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1868,
+        "slug": "chaos-daemons",
+        "name": "Legiones Daemonica",
+        "commonName": "Chaos Daemons"
+      },
+      "enhancements": [
+        {
+          "id": 37030,
+          "name": "Swollen with Power (Upgrade)",
+          "points": 10,
+          "rules": "<k>Legiones Daemonica Character</k> model only (excluding <k>Monster</k> units). This model has +2 <b>W</b>.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Monster"
+          ],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Character"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44492,
+          "name": "Bilious Blessing",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Start of your Shooting phase.",
+          "targetRules": "One friendly <k>Legiones Daemonica Character Nurgle</k> unit (excluding <k>Monster</k> units).",
+          "effectRules": "Select one <b>visible</b> enemy unit within 8\" of your unit and roll seven D6:\r<ul><li>For each 4+, that enemy unit suffers 1 <b>mortal wound</b>.</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44510,
+          "name": "Carnival of Excess",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, when an enemy unit has <b>fought</b>.",
+          "targetRules": "One friendly <k>Legiones Daemonica Character Slaanesh</k> unit (excluding <k>Monster</k> units) that has not been <b>selected to fight</b> this phase.",
+          "effectRules": "Your unit has <b>Fights First</b> and must be the next unit you <b>select to fight</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44838,
+          "name": "Call to Murder",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, when a friendly <k>Legiones Daemonica Khorne Character</k> unit (excluding <k>Monster</k> units) that made a <b>charge move</b> this turn is <b>selected to fight</b>.",
+          "targetRules": "That <k>Legiones Daemonica Character Khorne</k> unit.",
+          "effectRules": "Your unit’s melee attacks have +1 <b>A</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44866,
+          "name": "Skirling Magicks",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>LEGIONES DAEMONICA CHARACTER TZEENTCH</k> unit (excluding <k>MONSTER</k> units) is <b>selected to shoot</b>.",
+          "targetRules": "That <k>LEGIONES DAEMONICA CHARACTER TZEENTCH</k> unit.",
+          "effectRules": "Your unit’s ranged attacks have <k>[LETHAL HITS]</k>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7799,
+          "name": "Loci of Power",
+          "components": [
+            {
+              "id": 49324,
+              "type": "text",
+              "textContent": "Friendly <k>Legiones Daemonica Character</k> models (excluding <k>Monster</k> models) have +1 <b>Ld</b> and <b>OC</b>.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49160,
+              "type": "loreAccordion",
+              "textContent": "<i>Seething with the baleful energies of the Immaterium, the dark nobility of the daemon legions manifest as living icons of their gods’ powers burned into the very flesh of realspace.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10279,
+      "slug": "plague-legion",
+      "name": "Plague Legion",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Take and Hold"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1868,
+        "slug": "chaos-daemons",
+        "name": "Legiones Daemonica",
+        "commonName": "Chaos Daemons"
+      },
+      "enhancements": [
+        {
+          "id": 36939,
+          "name": "Cankerblight (Aura)",
+          "points": 15,
+          "rules": "**LEGIONES DAEMONICA NURGLE** model only. Each time an enemy unit (excluding **MONSTERS** and **VEHICLES**) that is within 6\" of the bearer fails a Battle‑shock test, the bearer can use this Enhancement. If it does, one model in that unit is destroyed (chosen by its controlling player). Each time the bearer uses this Enhancement, no mortal wounds are inflicted by your army’s Daemonic Terror rule.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Nurgle"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36954,
+          "name": "Droning Shroud (Aura)",
+          "points": 35,
+          "rules": "**LEGIONES DAEMONICA NURGLE MONSTER** model only. While a friendly **LEGIONES DAEMONICA NURGLE** unit is within 6\" of the bearer, that unit can only be targeted by a ranged attack if the attacking model is within 18\".",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Monster",
+                "Nurgle"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37391,
+          "name": "Font of Spores (Aura)",
+          "points": 20,
+          "rules": "**LEGIONES DAEMONICA NURGLE MONSTER** model only. While a friendly **LEGIONES DAEMONICA NURGLE** unit is within 6\" of the bearer, improve the Armour Penetration characteristic of weapons equipped by models in that unit by 1.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Monster",
+                "Nurgle"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36780,
+          "name": "Maggot Maws",
+          "points": 15,
+          "rules": "**LEGIONES DAEMONICA NURGLE** model only. In your Shooting phase, select one enemy unit within 6\" of the bearer; that enemy unit must take a Battle‑shock test. Then roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds. Each time the bearer uses this Enhancement, no mortal wounds are inflicted by your army’s Daemonic Terror rule.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Nurgle"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44160,
+          "name": "Seeping Virulence",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "&#x20;Fight phase.",
+          "targetRules": "One **LEGIONES DAEMONICA NURGLE** unit from your army that has not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in that unit makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44410,
+          "name": "Fever Visions",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase.&#x20;",
+          "targetRules": "One **LEGIONES DAEMONICA NURGLE** unit from your army that has not been selected to shoot or fight this phase.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes an attack, add 1 to the Hit roll. After your unit has finished making its attacks, select one enemy unit hit by one or more of those attacks; that enemy unit must take a Battle‑shock test.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44648,
+          "name": "Foetid Resurgence",
+          "cpCost": 2,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One **LEGIONES DAEMONICA NURGLE** unit from your army that is on the battlefield.",
+          "effectRules": "Return up to 1 **destroyed** model to your unit (excluding **CHARACTER** models) or up to D3 **destroyed** models instead (excluding **CHARACTER** models) if your unit is a **BATTLELINE** unit, with their full wounds remaining. If your unit is a **MONSTER** unit, one model in your unit regains up to D3+1 lost wounds instead.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44456,
+          "name": "Rot and Renewal",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase",
+            "chargePhase"
+          ],
+          "whenRules": "Your Movement phase or your Charge phase.",
+          "targetRules": "One **LEGIONES DAEMONICA NURGLE** unit from your army.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44527,
+          "name": "Murkshadows",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One **LEGIONES DAEMONICA NURGLE INFANTRY** unit from your army.",
+          "effectRules": "Until the end of the phase, each time your unit makes a Normal move, add 5\" to the Move characteristic of models in your unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44176,
+          "name": "Plague of Woes",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your opponent’s Command phase, before selecting any targets for the Melancholic Miasma Detachment rule.",
+          "targetRules": "One **LEGIONES DAEMONICA NURGLE** unit from your army.",
+          "effectRules": "Until the end of the phase, after an enemy unit takes a Battle‑shock test as a result of the Melancholic Miasma Detachment rule, select one other enemy unit within 9\" of your unit; that enemy unit must take a Battle‑shock test.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7951,
+          "name": "Melancholic Miasma",
+          "components": [
+            {
+              "id": 48416,
+              "type": "text",
+              "textContent": "While an enemy unit is within 9\" of one or more **LEGIONES DAEMONICA NURGLE** units from your army, that enemy unit is within your army’s Shadow of Chaos. In each player’s Command phase, select one enemy unit within your army’s Shadow of Chaos. That unit must take a Battle‑shock test.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49686,
+              "type": "loreAccordion",
+              "textContent": "To fight the daemons of Nurgle is to endure their entropic assaults upon both the physical and spiritual battlefields. The horror of inevitable decay claws at the souls of their victims even as the daemons’ splintered talons rake their flesh, heralding nightmarish putrefaction and impending doom.&#x20;",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10381,
+      "slug": "scintillating-legion",
+      "name": "Scintillating Legion",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1868,
+        "slug": "chaos-daemons",
+        "name": "Legiones Daemonica",
+        "commonName": "Chaos Daemons"
+      },
+      "enhancements": [
+        {
+          "id": 36842,
+          "name": "Improbable Shield (Aura)",
+          "points": 30,
+          "rules": "**LEGIONES DAEMONICA TZEENTCH** model only. While a friendly **LEGIONES DAEMONICA TZEENTCH** unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Tzeentch"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37279,
+          "name": "Inescapable Eye",
+          "points": 15,
+          "rules": "**LEGIONES DAEMONICA TZEENTCH** model only. In your Command phase, if the bearer is on the battlefield, if your opponent has one or more Flux tokens, you gain one additional Flux token.&#x20;",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Tzeentch"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37007,
+          "name": "Infernal Puppeteer",
+          "points": 20,
+          "rules": "**LEGIONES DAEMONICA TZEENTCH MONSTER** model onl&#x79;**.** In your Shooting phase, when this unit is **selected to shoot**, while an enemy unit is visible to a friendly **LEGIONES DAEMONICA TZEENTCH** unit, that enemy unit has +9\" **detection range** until this unit has shot.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Monster",
+                "Tzeentch"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37350,
+          "name": "Neverblade",
+          "points": 25,
+          "rules": "**LEGIONES DAEMONICA TZEENTCH MONSTER** model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, improve the Attacks and Armour Penetration characteristics of melee weapons equipped by the bearer by 1, and each time the bearer makes a melee attack, add 1 to the Hit roll.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Monster",
+                "Tzeentch"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44465,
+          "name": "Impossible Eclipse",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase.",
+          "targetRules": "One **LEGIONES DAEMONICA TZEENTCH MONSTER** unit from your army that is on the battlefield.",
+          "effectRules": "Select No Man’s Land or your opponent’s deployment zone, or spend one Flux token and select both. Until the end of the phase, the selected areas of the battlefield are within your army’s Shadow of Chaos.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44594,
+          "name": "Pyrogenesis",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase.",
+          "targetRules": "One **LEGIONES DAEMONICA TZEENTCH** unit from your army that has not been selected to shoot or fight that phase.",
+          "effectRules": "Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44009,
+          "name": "Flickering Reality",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, just after an enemy unit has selected its targets.",
+          "targetRules": "One **LEGIONES DAEMONICA TZEENTCH** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effectRules": "Roll one D6, then you can spend one Flux token to re‑roll the result: until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll (after any re‑roll) of that result, the attack sequence ends, even if the original Hit roll would have been a Critical Hit.\n\n**Example**: *If you roll a 2 and choose to spend one Flux token to re-roll the result, and the re-roll is a 6, then until the end of the phase, each time an attack targets your unit, on an unmodified Hit roll of 6 the attack sequence ends, that attack fails to hit and no Critical Hit effects (e.g. Lethal Hits) are resolved.*",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44687,
+          "name": "Fateborne Nightmares",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase",
+            "chargePhase"
+          ],
+          "whenRules": "Your Movement phase or your Charge phase.",
+          "targetRules": "One **LEGIONES DAEMONICA TZEENTCH** unit from your army.",
+          "effectRules": "Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44738,
+          "name": "Ficklefire",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "One **LEGIONES DAEMONICA TZEENTCH** unit from your army that is within Engagement Range of one or more enemy units.",
+          "effectRules": "Until the end of the phase, enemy units are not considered to be within Engagement Range of your unit for the purposes of selecting targets for, and resolving attacks with, ranged weapons. Until the end of the phase, each time an enemy model is destroyed while its unit is within Engagement Range of your unit, roll one D6: on a 5+, your unit suffers 1 mortal wound after the attacking unit has finished making its attacks.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43808,
+          "name": "Delirium Unmade",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "End of your opponent’s Fight phase.",
+          "targetRules": "One **LEGIONES DAEMONICA TZEENTCH** unit from your army that is not within Engagement Range of one or more enemy units. Alternatively, you can spend one Flux token when you use this Stratagem and target up to two **LEGIONES DAEMONICA TZEENTCH** units from your army instead (including those within Engagement Range of one or more enemy units).",
+          "effectRules": "Remove your units from the battlefield and place them into Strategic Reserves.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7929,
+          "name": "Fates In Flux",
+          "components": [
+            {
+              "id": 49684,
+              "type": "text",
+              "textContent": "$1f",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49728,
+              "type": "loreAccordion",
+              "textContent": "With every chance for change seized, every new fraying of fate’s weave, the daemons and their foes alike fuel the power of Tzeentch, however inadvertently.&#x20;",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10304,
+      "slug": "shadow-legion",
+      "name": "Shadow Legion",
+      "pointsCost": 2,
+      "forceDispositions": [
+        "Purge the Foe"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1868,
+        "slug": "chaos-daemons",
+        "name": "Legiones Daemonica",
+        "commonName": "Chaos Daemons"
+      },
+      "enhancements": [
+        {
+          "id": 37189,
+          "name": "Fade to Darkness",
+          "points": 30,
+          "rules": "**SHADOW LEGION** model only. At the end of the Fight phase, if the bearer’s unit destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Shadow Legion"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36948,
+          "name": "Leaping Shadows",
+          "points": 25,
+          "rules": "**SHADOW LEGION** model only. Models in the bearer’s unit have the Scouts 9” ability.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Shadow Legion"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37320,
+          "name": "Malice Made Manifest",
+          "points": 25,
+          "rules": "**SHADOW LEGION** model only. At the start of the Fight phase, select one enemy unit within Engagement Range of the bearer’s unit and roll one D6: on a 2‐5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Shadow Legion"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37088,
+          "name": "Mantle of Gloom (Aura)",
+          "points": 20,
+          "rules": "**SHADOW LEGION** model only. While an enemy unit is within Engagement Range of the bearer’s unit, subtract 1 from the Objective Control characteristic of models in that enemy unit.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Shadow Legion"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44862,
+          "name": "Spiteful Demise",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase, just after a **SHADOW LEGION** unit from your army is destroyed, before removing the last model in that unit from the battlefield and before rolling any dice for the Deadly Demise ability.",
+          "targetRules": "That **SHADOW LEGION** unit. You can use this Stratagem on that unit even though it was just destroyed.",
+          "effectRules": "Roll one D6 for each enemy unit that is within Engagement Range of the last model in your unit, adding 2 to the result if your unit has the **SLAANESH** keyword: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers 3 mortal wounds.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44564,
+          "name": "Channelled Wrath",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase.",
+          "targetRules": "One **SHADOW LEGION** unit from your army that has not been selected to fight this phase.",
+          "effectRules": "Until the end of the phase, melee weapons equipped by models in your unit have the **[LANCE]** ability. If your unit has the **KHORNE** keyword, until the end of the phase, improve the Armour Penetration characteristic of those weapons by 1 as well.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43850,
+          "name": "Death Denied",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One **SHADOW LEGION** unit from your army.",
+          "effectRules": "One model in your unit regains up to 3 lost wounds. In addition, If your unit has the **TZEENTCH** keyword, return up to one destroyed model (excluding **CHARACTER** models) to your unit with its full wounds remaining.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43957,
+          "name": "Encroaching Darkness",
+          "cpCost": 1,
+          "category": "battleTactic",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase.",
+          "targetRules": "Up to one **SHADOW LEGION HERETIC ASTARTES** unit from your army and up to one **SHADOW LEGION LEGIONES DAEMONICA** unit from your army. You can only select units that arrived from Reserves this turn.",
+          "effectRules": "Until the end of the phase, weapons equipped by models in your selected units have the **[IGNORES COVER]** ability.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43982,
+          "name": "Shade Path",
+          "cpCost": 2,
+          "category": "battleTactic",
+          "turn": "opponentsTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Start of your opponent's Charge phase.",
+          "targetRules": "One friendly **SHADOW LEGION** unit.",
+          "effectRules": "Select one visible enemy unit within 12\" of your unit. When that enemy unit declares a charge, that enemy unit has -1 to charge rolls. If your unit has **Nurgle**, that enemy unit must make a battle-shock roll.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44406,
+          "name": "Binding Shadow",
+          "cpCost": 1,
+          "category": "strategicPloy",
+          "turn": "opponentsTurn",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "End of your opponent’s Fight phase.",
+          "targetRules": "Up to one **SHADOW LEGION HERETIC ASTARTES** unit from your army and up to one **SHADOW LEGION LEGIONES DAEMONICA** unit from your army. You can only select units that are not within Engagement Range of one or more enemy units.",
+          "effectRules": "Remove those selected units from the battlefield and place them into Strategic Reserves.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7860,
+          "name": "First Prince of Chaos",
+          "components": [
+            {
+              "id": 48701,
+              "type": "text",
+              "textContent": "If your Army Faction is **LEGIONES DAEMONICA**, you can use this Shadow Legion Detachment rule.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49288,
+              "type": "header",
+              "textContent": "First Prince of Chaos",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49041,
+              "type": "text",
+              "textContent": "Units from your army have the relevant abilities presented below.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48580,
+              "type": "accordion",
+              "textContent": "*The most murderous seek not to hide in the Dark Master’s pall. The shadows extend before them, offering a rapid route to slaughter.*\n\n**SHADOW LEGION KHORNE** units only. This unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
+              "title": "Murderer’s Cowl",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49443,
+              "type": "accordion",
+              "textContent": "*Mutative agents of change, touched by the Dark Master’s umbral aura, summon llusory magicks to confound and confuse their desperate foes.*\n\n**SHADOW LEGION TZEENTCH** units only. This unit has **Stealth**. Each time a melee attack targets this unit, subtract 1 from the Hit roll.",
+              "title": "Penumbral Puppetry",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49357,
+              "type": "accordion",
+              "textContent": "*Borne upon the gloaming wisp of Be’lakor’s shadow, this debilitating curse atrophies muscle and withers flesh, greatly weakening its victims.*\n\n**SHADOW LEGION NURGLE** units only. Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic, subtract 1 from the Wound roll.",
+              "title": "Gloam Rot",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48831,
+              "type": "accordion",
+              "textContent": "*The Dark Master’s shadow falls across his thralls, masking their approach.*\n\n**SHADOW LEGION SLAANESH** units only. Enemy units cannot target this unit with snap shooting attacks.",
+              "title": "Shadow’s Caress",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49241,
+              "type": "accordion",
+              "textContent": "*Be’lakor’s immortal ego draws into his orbit those as yet unclaimed by any one Chaos God. Their hate‐filled pacts are made to the entire fell pantheon, and the dangerous boons they receive see them plunged along paths of perpetual night straight into the enemy’s midst.*\n\n**SHADOW LEGION UNDIVIDED** units only.\n■ This unit has the Dark Pacts army rule, and can use it as described in *Codex: Chaos Space Marines*, even though your Army Faction is not **HERETIC ASTARTES**. If this unit is **BE’LAKOR**, it automatically passes the Leadership test required for Dark Pacts.\n■ **SHADOW LEGION HERETIC ASTARTES** models in this unit have the Deep Strike ability.",
+              "title": "Disciples of Be’lakor",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49723,
+              "type": "loreAccordion",
+              "textContent": "Elevated to the status of Daemon Prince by the combined might of the four Dark Gods of Chaos, Be’lakor exudes unimaginable power.",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": [
+        {
+          "id": 1624,
+          "title": "Thralls of the First Prince",
+          "bulletPoints": [
+            {
+              "id": 1868,
+              "text": "When mustering your army, you cannot include any **DAEMON PRINCE**, **DAEMON PRINCE WITH WINGS** or **EPIC HERO** units (excluding **BE’LAKOR**), but you can include the following **HERETIC ASTARTES** units:\n\n■ **CHAOS LORD**\n■ **CHAOS LORD IN TERMINATOR ARMOUR**\n■ **CHAOS LORD WITH JUMP PACK**\n■ **CHAOS TERMINATOR SQUAD**\n■ **CHOSEN**\n■ **DAMNED** units\n■ **DARK APOSTLE**\n■ **HAVOCS**\n■ **LEGIONARIES**\n■ **MASTER OF POSSESSION**\n■ **POSSESSED**\n■ **RAPTORS**\n■ **SORCERER**\n■ **SORCERER IN TERMINATOR ARMOUR**\n■ **WARP TALONS**\n\nThe combined points value of such units depends on your battle size, as shown below.\n\n■ **Incursion:** Up to 500 pts\n■ **Strike Force:** Up to 1000 pts\n■ **Onslaught:** Up to 1500 pts"
+            }
+          ]
+        },
+        {
+          "id": 1622,
+          "title": "Keywords",
+          "bulletPoints": [
+            {
+              "id": 1900,
+              "text": "**BE’LAKOR** and **HERETIC ASTARTES** units from your army gain the **SHADOW LEGION** and **UNDIVIDED** keywords.\n\n**LEGIONES DAEMONICA** units from your army gain the **SHADOW LEGION** keyword."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10356,
+      "slug": "warptide",
+      "name": "Warptide",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Reconnaissance"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1868,
+        "slug": "chaos-daemons",
+        "name": "Legiones Daemonica",
+        "commonName": "Chaos Daemons"
+      },
+      "enhancements": [
+        {
+          "id": 36866,
+          "name": "Bane-forged Weapons (Upgrade)",
+          "points": 15,
+          "rules": "<k>Legiones Daemonica Battleline</k> unit only. This unit’s attacks have +1 <b>S</b>.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Battleline"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37524,
+          "name": "Soul-hungry Slaughterers (Upgrade)",
+          "points": 10,
+          "rules": "<k>Legiones Daemonica Battleline</k> unit only. When you target this unit with the <b>Heroic Intervention/Fire Overwatch stratagem</b>, that use is ‑1 CP.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Battleline"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44347,
+          "name": "Soulseeing",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Start of your Shooting phase.",
+          "targetRules": "One friendly <k>Legiones Daemonica Battleline</k> unit.",
+          "effectRules": "Select one <b>visible</b> enemy unit within 12\" of your unit. That enemy unit has +6\" <b>detection range</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44524,
+          "name": "Incorporeal Entities",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, when an enemy unit targets a friendly <k>Legiones Daemonica Battleline</k> unit.",
+          "targetRules": "That <k>Legiones Daemonica Battleline</k> unit.",
+          "effectRules": "Ranged attacks that target your unit with a <b>S</b> greater than your unit’s <b>T</b> have ‑1 to <b>wound rolls</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44671,
+          "name": "Daemonic Infestation",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One friendly <k>Legiones Daemonica Battleline</k> unit (excluding <k>PINK HORRORS</k> units).",
+          "effectRules": "Your unit <b>heals</b> 3 wounds.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7821,
+          "name": "shudderblink",
+          "components": [
+            {
+              "id": 48726,
+              "type": "text",
+              "textContent": "When a friendly <k>Legiones Daemonica Battleline</k> unit is selected to make an <b>advance move</b>:\r<ul><li>That unit’s ranged attacks have <k>[ASSAULT]</k> until the end of the turn.</li>\r<li>That move does not prevent that unit from being <b>eligible to declare a charge</b>.</li></ul>",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48975,
+              "type": "loreAccordion",
+              "textContent": "<i>These daemons’ physical manifestations flicker in and out of being like a pict‑reel skipping and projecting too quickly. One moment, they are a distant threat; the next, they are upon their horrified victims.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    }
+  ]
+}

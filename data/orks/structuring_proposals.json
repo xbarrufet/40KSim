@@ -1,0 +1,3072 @@
+{
+  "orks/bannernob": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Support",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19).",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.  Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)."
+      },
+      {
+        "name": "Waaagh! Banner",
+        "phase": "CHARGE",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "charge",
+            "action": "addToRoll",
+            "value": 1
+          }
+        ],
+        "originalText": "This unit has +1 to charge rolls."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/battlewagon": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Mobile Fortress",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfModel",
+            "stat": "Damage",
+            "mode": "subtract",
+            "value": 1
+          }
+        ],
+        "originalText": "Ranged attacks that target this unit have -1 D."
+      },
+      {
+        "name": "Deadly Demise D6",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1d6"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "D6"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Damaged 6",
+        "phase": "SHOOTING",
+        "trigger": "¿Las heridas restantes de este modelo son iguales o menores a 6?",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged:While a model is damaged, that model's attacks have -1 to hit rolls."
+      },
+      {
+        "name": "Firing Deck 11",
+        "category": "OTHER",
+        "text": "In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to 11 models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
+        "originalText": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/beast-snagga-boyz": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Mobbed",
+        "phase": "CHARGE",
+        "trigger": "¿Ha terminado esta unidad un movimiento de carga?",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "Enemy",
+            "roll": "battleshock",
+            "action": "subtractFromRoll",
+            "value": 1,
+            "targetCondition": {
+              "keywords": [
+                "MONSTER",
+                "VEHICLE"
+              ],
+              "mode": "includes"
+            }
+          },
+          {
+            "category": "diceModifier",
+            "appliedTo": "Enemy",
+            "roll": "battleshock",
+            "action": "subtractFromRoll",
+            "value": 2,
+            "targetCondition": {
+              "keywords": [
+                "MONSTER",
+                "VEHICLE"
+              ],
+              "mode": "includes"
+            }
+          }
+        ],
+        "originalText": "When this unit ends a charge move, each enemy Monster/Vehicle unit engaged with this unit makes a battle-shock roll: With -1 to that battle-shock roll. Or: With -2 to that battle-shock roll if this unit has 13+ models."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/beastboss-on-squigosaur": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Thundering Stampede",
+        "phase": "CHARGE",
+        "trigger": "¿Hay unidades Snagga Beast aliadas a 6\" o menos de esta unidad?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "Ally",
+            "stat": "Attacks",
+            "mode": "add",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "name": "Feel No Pain 5+",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "appliedTo": "SelfModel",
+            "kind": "fnp",
+            "value": 5
+          }
+        ],
+        "originalText": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+      },
+      {
+        "name": "Keep Huntin'!",
+        "category": "OTHER",
+        "text": "In your Movement phase, at the start or end of this unit's move, you can select one friendly Beast Snagga unit within 6\" of this unit. That unit: Is no longer battle-shocked. Is riled up until the start of your next turn."
+      },
+      {
+        "name": "Boss of da Hunt",
+        "phase": "ANY",
+        "trigger": "¿Hay una unidad Snagga Beast aliada a 3\" o menos de esta unidad (excluyendo unidades MONSTRUO PERSONAJE)?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfModel",
+            "keyword": "LONE OPERATIVE",
+            "value": null
+          }
+        ],
+        "originalText": "While this unit is within 3\" of a friendly Beast Snagga unit (excluding MONSTER CHARACTER units), this unit has Lone Operative."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/beastboss": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
+      },
+      {
+        "name": "Keep Huntin'!",
+        "phase": "MOVEMENT",
+        "trigger": "ALWAYS",
+        "autoApply": false,
+        "frequency": "perRound",
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Ally",
+            "keyword": "RILED UP",
+            "value": null
+          }
+        ]
+      },
+      {
+        "name": "Feel No Pain 6+",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "appliedTo": "SelfModel",
+            "kind": "fnp",
+            "value": 6
+          }
+        ],
+        "originalText": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+      },
+      {
+        "name": "Dodge Dis!",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "attackType": "RANGE"
+          }
+        ],
+        "originalText": "This unit's attacks have +1 to hit rolls."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/big-mek-dakkarig": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Deadly Demise 1",
+        "phase": "ANY",
+        "trigger": "¿Ha sido destruido este modelo?",
+        "autoApply": false,
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "roll",
+              "value": "1d6"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "1"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Even More Dakka",
+        "phase": "SHOOTING",
+        "trigger": "¿Está esta unidad enfurecida?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "RANGE",
+            "keyword": "SUSTAINED HITS",
+            "value": "1"
+          }
+        ],
+        "originalText": "If this unit is riled up, this unit’s ranged attacks have [Sustained Hits 1]."
+      },
+      {
+        "name": "Blitz Dem Gitz!",
+        "phase": "SHOOTING",
+        "trigger": "¿El objetivo no es un MONSTRUO o VEHÍCULO?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfModel",
+            "weaponTarget": "RANGE",
+            "stat": "Attacks",
+            "mode": "add",
+            "value": 6,
+            "targetCondition": {
+              "keywords": [
+                "MONSTER",
+                "VEHICLE"
+              ],
+              "mode": "excludes"
+            }
+          }
+        ],
+        "originalText": "In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding Monster/Vehicle units), that weapon has +6 A."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/big-mek-in-mega-armour": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Fix Dat Armour Up",
+        "phase": "COMMAND",
+        "trigger": "ALWAYS",
+        "autoApply": false,
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "heal",
+            "appliedTo": "SelfUnit",
+            "amount": "3"
+          }
+        ]
+      },
+      {
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
+      },
+      {
+        "name": "More Dakka",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "RANGE",
+            "keyword": "IGNORES COVER",
+            "value": null
+          }
+        ],
+        "originalText": "This unit’s ranged attacks have:  [Ignores Cover].  If this unit is riled up, [Sustained Hits 1]."
+      },
+      {
+        "name": "More Dakka (Riled Up)",
+        "phase": "SHOOTING",
+        "trigger": "¿Esta unidad está enfurecida?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "RANGE",
+            "keyword": "SUSTAINED HITS",
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/big-mek-with-shokk-attack-gun": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
+      },
+      {
+        "name": "More Dakka",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effectsOperator": "AND",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "RANGE",
+            "keyword": "IGNORES COVER",
+            "value": null
+          }
+        ],
+        "originalText": "This unit’s ranged attacks have:  [Ignores Cover].  If this unit is riled up, [Sustained Hits 1]."
+      },
+      {
+        "name": "More Dakka (Riled Up)",
+        "phase": "SHOOTING",
+        "trigger": "¿Está esta unidad furiosa?",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "RANGE",
+            "keyword": "SUSTAINED HITS",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "name": "Support Shokka",
+        "phase": "ANY",
+        "trigger": "¿Hay una unidad de INFANTERÍA Orks amiga a 3\" o menos (excluyendo otras unidades BIG MEK WITH SHOKK ATTACK GUN)?",
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfModel",
+            "keyword": "LONE OPERATIVE",
+            "value": null
+          }
+        ],
+        "originalText": "While this model is within 3\" of a friendly Orks Infantry unit (excluding BIG MEK WITH SHOKK ATTACK GUN units), this model has Lone Operative."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/big-mek": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "More Dakka",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "RANGE",
+            "keyword": "IGNORES COVER",
+            "value": null
+          }
+        ],
+        "originalText": "This unit’s ranged attacks have:  [Ignores Cover]. If this unit is riled up, [Sustained Hits 1]."
+      },
+      {
+        "name": "More Dakka (Riled Up)",
+        "phase": "SHOOTING",
+        "trigger": "¿Está esta unidad alborotada?",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "RANGE",
+            "keyword": "SUSTAINED HITS",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
+      },
+      {
+        "name": "Shokk-boosta",
+        "category": "OTHER",
+        "text": "In your Movement phase, when this unit is selected to make an advance move, you can use this ability. If you do: This unit can change that advance roll to a 6. This unit can move through all types of model. When this unit ends that advance move, make a hazard roll for each model in this unit.",
+        "originalText": "In your Movement phase, when this unit is selected to make an advance move, you can use this ability. If you do: This unit can change that advance roll to a 6. This unit can move through all types of model. When this unit ends that advance move, make a hazard roll for each model in this unit."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/bigboss": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Support",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19).",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.  Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)."
+      },
+      {
+        "name": "Sumfin' to Prove",
+        "phase": "FIGHT",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "attackType": "MELEE"
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/biged-bossbunka": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Raucous Occupants",
+        "phase": "ANY",
+        "trigger": "¿Está este modelo a rango del objetivo principal de tu ejército?",
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfModel",
+            "stat": "ObjectiveControl",
+            "mode": "add",
+            "value": null
+          }
+        ],
+        "originalText": "While this model is within range of your home objective, add the OC of models embarked within this model to this model's OC."
+      },
+      {
+        "name": "Firing Deck 11",
+        "category": "OTHER",
+        "text": "In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to 11 models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
+        "originalText": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+      },
+      {
+        "name": "Fortification",
+        "category": "OTHER",
+        "text": "While an enemy unit is engaged with only Fortification units: That enemy unit can be selected as a target of ranged attacks. When shooting that enemy unit, those ranged attacks have -1 to hit rolls (excluding [Close-quarters] attacks). When that enemy unit is selected to make a fall-back move, if that enemy unit is only engaged with Fortification units, and that enemy unit is not battle-shocked, hazard rolls made for that enemy unit are automatically passed.",
+        "originalText": "While an enemy unit is engaged with only Fortification units: That enemy unit can be selected as a target of ranged attacks. When shooting that enemy unit, those ranged attacks have -1 to hit rolls (excluding [Close-quarters] attacks). When that enemy unit is selected to make a fall-back move, if that enemy unit is only engaged with Fortification units, and that enemy unit is not battle-shocked, hazard rolls made for that enemy unit are automatically passed."
+      },
+      {
+        "name": "Deadly Demise D3",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1d3"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "1d3"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Ramshackle Cover",
+        "phase": "SHOOTING",
+        "trigger": "¿El objetivo está total o parcialmente oculto a causa de esta unidad?",
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Enemy",
+            "keyword": "COVER",
+            "value": null
+          }
+        ],
+        "originalText": "When an attack targets a unit that is not fully visible to the attacking model because of this unit, the target has the benefit of cover against that attack."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/blitza-bommer": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Deadly Demise D3",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "D3"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Boom Bomb",
+        "phase": "ANY",
+        "trigger": "¿Hay una unidad enemiga visible a 24\" o menos de esta unidad?",
+        "autoApply": false,
+        "frequency": "perRound",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1D6"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 1
+            },
+            "damagePerSuccess": "varies"
+          }
+        ],
+        "originalText": "At the end of your opponent’s Fight phase, select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit, and roll one D6 for that unit: On a 1-3, that enemy unit suffers D3 mortal wounds. On a 4-5, that enemy unit suffers 3 mortal wounds. On a 6, that enemy unit suffers D3+3 mortal wounds."
+      },
+      {
+        "name": "Damaged 4",
+        "phase": "ANY",
+        "trigger": "¿Las heridas restantes de este modelo son 4 o menos?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged:While a model is damaged, that model's attacks have -1 to hit rolls."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/boss-snikrot": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
+      },
+      {
+        "name": "Kunnin' Infiltrator",
+        "phase": "FIGHT",
+        "trigger": "¿Cada modelo de esta unidad está oculto y descomprometido al final de la fase de Combate del oponente?",
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "IN_STRATEGIC_RESERVES",
+            "value": null
+          }
+        ]
+      },
+      {
+        "name": "Lone Operative",
+        "phase": "ANY",
+        "trigger": "¿Esta unidad no forma parte de una unidad adjunta?",
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "LONE_OPERATIVE",
+            "value": "12\""
+          }
+        ],
+        "originalText": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+      },
+      {
+        "name": "Deff from the Shadows",
+        "phase": "MOVEMENT",
+        "trigger": "¿Esta unidad está en reservas estratégicas y es la primera ronda de batalla en adelante?",
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "INGRESS_MOVE",
+            "value": null
+          }
+        ]
+      },
+      {
+        "name": "Infiltrators",
+        "category": "OTHER",
+        "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent's deployment zone and all enemy units.",
+        "originalText": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+      },
+      {
+        "name": "Stealth",
+        "phase": "SHOOTING",
+        "trigger": "¿Cada modelo de esta unidad tiene esta habilidad?",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "COVER",
+            "value": null
+          }
+        ],
+        "originalText": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/boyz": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Ammo Runts",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "autoApply": false,
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "value": 1,
+            "attackType": "RANGE"
+          }
+        ]
+      },
+      {
+        "name": "Tide of Muscle",
+        "phase": "FIGHT",
+        "trigger": "¿Esta unidad realizó un movimiento de carga en este turno?",
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "MELEE",
+            "keyword": "LETHAL HITS",
+            "value": null
+          }
+        ],
+        "originalText": "In the Fight phase, if this unit made a charge move this turn, this unit's melee attacks have [Lethal Hits]."
+      },
+      {
+        "name": "Never Too Busy to Fight",
+        "category": "OTHER",
+        "text": "Being engaged does not prevent this unit from being eligible to start an action.",
+        "originalText": "Being engaged does not prevent this unit from being eligible to start an action."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/breaka-boyz": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Bomb Squigs",
+        "phase": "MOVEMENT",
+        "trigger": "¿Ha terminado este movimiento a 12\" o menos de una unidad enemiga visible?",
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "D3"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 3
+            },
+            "damagePerSuccess": "1"
+          }
+        ]
+      },
+      {
+        "name": "Trophy Hunters",
+        "phase": "CHARGE",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "charge",
+            "action": "addToRoll",
+            "value": 1
+          }
+        ],
+        "originalText": "This unit has +1 to charge rolls."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/burna-bommer": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Burna Bomb",
+        "phase": "FIGHT",
+        "trigger": "¿Hay una unidad enemiga visible (excluyendo Lone Operative y unidades MONSTER/VEHICLE) a 36\" o menos de esta unidad?",
+        "frequency": "perPhase",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1D3"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 2
+            },
+            "damagePerSuccess": "1D3",
+            "targetCondition": {
+              "keywords": [
+                "LONE_OPERATIVE",
+                "MONSTER",
+                "VEHICLE"
+              ],
+              "mode": "excludes"
+            }
+          },
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Enemy",
+            "keyword": "CANNOT BE HIDDEN",
+            "value": "until end of next turn",
+            "targetCondition": {
+              "keywords": [
+                "LONE_OPERATIVE",
+                "MONSTER",
+                "VEHICLE"
+              ],
+              "mode": "excludes"
+            }
+          },
+          {
+            "category": "weaponKeyword",
+            "appliedTo": "Enemy",
+            "weaponTarget": "RANGE",
+            "keyword": "IGNORES COVER",
+            "value": "until end of next turn",
+            "targetCondition": {
+              "keywords": [
+                "LONE_OPERATIVE",
+                "MONSTER",
+                "VEHICLE"
+              ],
+              "mode": "excludes"
+            }
+          }
+        ],
+        "originalText": "At the end of your opponent’s Fight phase, select one visible enemy unit (excluding Lone Operative and Monster/Vehicle units) within 36\" of this unit, and roll one D6 for that unit. On a 2+:  That enemy unit suffers D3 mortal wounds. That enemy unit cannot be hidden until the end of your next turn. Ranged attacks that target that enemy unit have [IGNORES COVER] until the end of your next turn."
+      },
+      {
+        "name": "Deadly Demise D3",
+        "category": "OTHER",
+        "text": "Each time this model is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers D3 mortal wounds.",
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Damaged 4",
+        "phase": "SHOOTING",
+        "trigger": "¿Las heridas restantes de este modelo son 4 o menos?",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged:While a model is damaged, that model's attacks have -1 to hit rolls."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/dakkajet": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Damaged 4",
+        "phase": "ANY",
+        "trigger": "¿Las heridas restantes del modelo son iguales o menores a 4?",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "value": 1
+          }
+        ],
+        "originalText": "This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged:While a model is damaged, that model's attacks have -1 to hit rolls."
+      },
+      {
+        "name": "Strafing Run",
+        "phase": "SHOOTING",
+        "trigger": "¿El objetivo no tiene la palabra clave FLY?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "value": 1,
+            "attackType": "RANGE",
+            "targetCondition": {
+              "keywords": [
+                "FLY"
+              ],
+              "mode": "excludes"
+            }
+          }
+        ],
+        "originalText": "In your Shooting phase, this unit's ranged attacks that target a unit (excluding Fly units) have +1 to hit rolls."
+      },
+      {
+        "name": "Deadly Demise D3",
+        "category": "OTHER",
+        "text": "Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by D3 (if this is a random number, roll separately for each unit within 6\").",
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/deff-dread": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Deadly Demise 1",
+        "phase": "ANY",
+        "trigger": "¿Ha sido destruido este modelo?",
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "1"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Dread 'Ard",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "ALL",
+            "stat": "Damage",
+            "mode": "subtract",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/deffkilla-wartrike": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Deadly Demise 1",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1d6"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "1"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Get Back in da Race!",
+        "phase": "MOVEMENT",
+        "trigger": "¿Hay una unidad aliada Speed Freeks a 6\" o menos de esta unidad?",
+        "frequency": "perRound",
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Ally",
+            "keyword": "RILED UP",
+            "value": null
+          }
+        ]
+      },
+      {
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
+      },
+      {
+        "name": "Fuel-mixa Grot",
+        "phase": "MOVEMENT",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "stat": "Movement",
+            "mode": "add",
+            "value": 1
+          }
+        ],
+        "originalText": "This unit has +1 to advance rolls."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/deffkoptas": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "name": "Deff from Above",
+        "phase": "SHOOTING",
+        "trigger": "¿Esta unidad realizó un movimiento de ingreso en esta ronda?",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "value": 1,
+            "attackType": "RANGE"
+          }
+        ],
+        "originalText": "In your Shooting phase, if this unit made an ingress move this turn, this unit's ranged attacks have +1 to hit rolls."
+      },
+      {
+        "name": "Aerial Manoover",
+        "category": "OTHER",
+        "text": "At the end of your opponent's Fight phase, if this unit is unengaged, you can place this unit in strategic reserves.",
+        "originalText": "At the end of your opponent's Fight phase, if this unit is unengaged, you can place this unit in strategic reserves."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/flash-gitz": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Finderz Keeperz",
+        "phase": "SHOOTING",
+        "trigger": "¿Esta unidad o el objetivo está dentro del rango de un objetivo?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "RANGE",
+            "stat": "AP",
+            "mode": "add",
+            "value": 1
+          }
+        ],
+        "originalText": "In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 AP: This unit is within range of an objective. The target of that attack is within range of an objective."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/gargantuan-squiggoth": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Walking Bastion",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "toHit",
+            "action": "ignoreModifiers",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This unit's attacks can ignore modifiers to:BS/WS.Hit rolls."
+      },
+      {
+        "name": "Deadly Demise 2D6",
+        "phase": "ANY",
+        "trigger": "¿Ha sido destruido este modelo?",
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "roll",
+              "value": "1D6"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "2D6"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Super-heavy Walker",
+        "phase": "MOVEMENT",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "category": "OTHER",
+        "text": "Each time a unit with this ability makes a normal, advance or fall-back move: Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height. Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.",
+        "originalText": "Each time a unit with this ability makes a normal, advance or fall-back move: Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height.Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06)."
+      },
+      {
+        "name": "Damaged 10",
+        "phase": "SHOOTING",
+        "trigger": "¿Las heridas restantes de este modelo son iguales a 10 o menos?",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "value": 1,
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged:While a model is damaged, that model's attacks have -1 to hit rolls."
+      },
+      {
+        "name": "Firing Deck 11",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "category": "OTHER",
+        "text": "In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to 11 models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
+        "originalText": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/ghazghkull-thraka": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Da Grand Warlord's Ladz",
+        "phase": "ANY",
+        "trigger": "¿Esta unidad está a 3\" o menos de otra unidad aliada de Infantería Ork?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "LONE OPERATIVE",
+            "value": null
+          }
+        ],
+        "originalText": "While this unit is within 3\" of another friendly Orks Infantry unit, this unit has Lone Operative."
+      },
+      {
+        "name": "Makari, Hoist Dat Banner!",
+        "phase": "MOVEMENT",
+        "trigger": "ALWAYS",
+        "autoApply": false,
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Ally",
+            "keyword": "RILED UP",
+            "value": null
+          }
+        ]
+      },
+      {
+        "name": "Prophet of da Great Waaagh!",
+        "phase": "ANY",
+        "trigger": "¿Hay una unidad aliada Ork a 6\" o menos de esta unidad?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "Ally",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "attackType": "MELEE",
+            "value": 1
+          },
+          {
+            "category": "diceModifier",
+            "appliedTo": "Ally",
+            "roll": "toWound",
+            "action": "addToRoll",
+            "attackType": "MELEE",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/gorkanaut": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Gut Hatch",
+        "phase": "MOVEMENT",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "category": "OTHER",
+        "text": "In your Movement phase, when this unit ends a normal move, units embarked within this unit can make an assault disembark move (pg 121).",
+        "originalText": "In your Movement phase, when this unit ends a normal move, units embarked within this unit can make an assault disembark move (pg 121)."
+      },
+      {
+        "name": "Super-heavy Walker",
+        "phase": "MOVEMENT",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "category": "OTHER",
+        "text": "Each time a unit with this ability makes a normal, advance or fall-back move: Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height. Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.",
+        "originalText": "Each time a unit with this ability makes a normal, advance or fall-back move: Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height.Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06)."
+      },
+      {
+        "name": "Big an' Stompy",
+        "phase": "FIGHT",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toHit",
+            "action": "rerollOnes",
+            "attackType": "MELEE"
+          }
+        ]
+      },
+      {
+        "name": "Damaged 7",
+        "phase": "ANY",
+        "trigger": "¿Las heridas restantes de este modelo son 7 o menos?",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged:While a model is damaged, that model's attacks have -1 to hit rolls."
+      },
+      {
+        "name": "Deadly Demise D6",
+        "phase": "ANY",
+        "trigger": "¿Ha sido este modelo destruido?",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "D6"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/gretchin": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Downtrodden",
+        "category": "OTHER",
+        "text": "For the purposes of transport capacity, each 2 Gretchin models (rounding up) take up the space of 1 model.",
+        "originalText": "For the purposes of transport capacity, each 2 Gretchin models (rounding up) take up the space of 1 model."
+      },
+      {
+        "name": "Thievin' Scavengers",
+        "phase": "MOVEMENT",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "SECURED",
+            "value": null
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/gunwagon": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Deadly Demise D6",
+        "phase": "ANY",
+        "trigger": "¿Ha sido destruido este modelo?",
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "roll",
+              "value": "1d6"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "1d6"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Mobile Arsenal",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "toHit",
+            "action": "rerollOnes",
+            "attackType": "RANGE"
+          }
+        ],
+        "originalText": "In your Shooting phase, this unit’s ranged attacks can re‑roll hit rolls of 1."
+      },
+      {
+        "name": "Damaged 6",
+        "phase": "ANY",
+        "trigger": "¿Las heridas restantes de este modelo son 6 o menos?",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "value": 1,
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged:While a model is damaged, that model's attacks have -1 to hit rolls."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/hunta-rig": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Deadly Demise D6",
+        "phase": "ANY",
+        "trigger": "¿Ha sido destruido este modelo?",
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1d6"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "D6"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Fully Loaded Butchery",
+        "phase": "SHOOTING",
+        "trigger": "¿Hay modelos embarcados en esta unidad?",
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfModel",
+            "weaponTarget": "MELEE",
+            "stat": "Attacks",
+            "mode": "add",
+            "value": 2
+          }
+        ],
+        "originalText": "This unit’s Butcha Boyz weapon has +2 A for each model embarked within this unit (to a maximum of +22 A)."
+      },
+      {
+        "name": "Tramplasquig Charge",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "CRUSHING IMPACT STRATAGEM DISCOUNT",
+            "value": "1 CP"
+          }
+        ],
+        "originalText": "When you target this unit with the Crushing Impact stratagem, that use is -1 CP."
+      },
+      {
+        "name": "Feel No Pain 5+",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "appliedTo": "SelfModel",
+            "kind": "fnp",
+            "value": 5
+          }
+        ],
+        "originalText": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+      },
+      {
+        "name": "Firing Deck 11",
+        "category": "OTHER",
+        "text": "In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to 11 models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
+        "originalText": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+      },
+      {
+        "name": "Damaged 6",
+        "phase": "ANY",
+        "trigger": "¿Las heridas restantes de este modelo son 6 o menos?",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged:While a model is damaged, that model's attacks have -1 to hit rolls."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/kill-rig": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Deadly Demise D6",
+        "phase": "ANY",
+        "trigger": "¿Ha sido destruido este modelo?",
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1d6"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "1d6"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Wurrboy",
+        "category": "OTHER",
+        "text": "This model has the psychic abilities listed in the Psychic Abilities section."
+      },
+      {
+        "name": "Damaged 6",
+        "phase": "SHOOTING",
+        "trigger": "¿Las heridas restantes de este modelo son iguales o menores a 6?",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged:While a model is damaged, that model's attacks have -1 to hit rolls."
+      },
+      {
+        "name": "Feel No Pain 5+",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "appliedTo": "SelfModel",
+            "kind": "fnp",
+            "value": 5
+          }
+        ],
+        "originalText": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/killa-kans": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Deadly Demise 1",
+        "phase": "ANY",
+        "trigger": "¿Ha sido esta unidad destruida?",
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1D6"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "1"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Spiteful Power Trip",
+        "phase": "SHOOTING",
+        "trigger": "¿El objetivo tiene ningún modelo con T de 7 o más?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "attackType": "RANGE"
+          }
+        ],
+        "originalText": "This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/kommandos": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Infiltrators",
+        "category": "OTHER",
+        "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent's deployment zone and all enemy units.",
+        "originalText": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+      },
+      {
+        "name": "Found 'Em!",
+        "phase": "MOVEMENT",
+        "trigger": "¿Hay una unidad enemiga a 12\" o menos de esta unidad?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Enemy",
+            "keyword": "DETECTION RANGE",
+            "value": "+3\""
+          }
+        ]
+      },
+      {
+        "name": "Taktikal Know-wotz",
+        "category": "OTHER",
+        "text": "In the Declare Battle Formations step, you can split this unit into two units, each with a starting strength of 5. If you do, select which one of those units will have the Bomb Squig ability and which one of those units will have the Found 'Em! ability.",
+        "originalText": "In the Declare Battle Formations step, you can split this unit into two units, each with a starting strength of 5. If you do, select which one of those units will have the Bomb Squig ability and which one of those units will have the Found ’Em! ability."
+      },
+      {
+        "name": "Stealth",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "RANGE",
+            "stat": "Save",
+            "mode": "setValue",
+            "value": 2
+          }
+        ],
+        "originalText": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+      },
+      {
+        "name": "Nowhere to Hide",
+        "phase": "SHOOTING",
+        "trigger": "¿El objetivo es una unidad oculta?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This unit’s attacks that target a hidden unit have +1 to hit rolls."
+      },
+      {
+        "name": "Bomb Squig",
+        "phase": "MOVEMENT",
+        "trigger": "¿Ha terminado un movimiento normal y hay una unidad enemiga visible a 12\" o menos?",
+        "autoApply": false,
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "D3"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 3
+            },
+            "damagePerSuccess": "1"
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/meganobz": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Arrogant Invulnerability",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "ALL",
+            "stat": "AP",
+            "mode": "subtract",
+            "value": 1
+          }
+        ],
+        "originalText": "Attacks that target this unit have -1 AP."
+      },
+      {
+        "name": "Krumpin' Time",
+        "phase": "FIGHT",
+        "trigger": "¿Esta unidad está furiosa?",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/mek-gunz": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Madcap Artillery",
+        "phase": "SHOOTING",
+        "trigger": "¿Todos los armas a distancia equipados por cada modelo Mek Gunz en esta unidad son iguales?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Enemy",
+            "keyword": "WOBBLED",
+            "value": null
+          },
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Enemy",
+            "keyword": "ZAPPED",
+            "value": null
+          },
+          {
+            "category": "statModifier",
+            "appliedTo": "Enemy",
+            "stat": "Leadership",
+            "mode": "subtract",
+            "value": 1
+          },
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Enemy",
+            "keyword": "SMASHED",
+            "value": null
+          },
+          {
+            "category": "statModifier",
+            "appliedTo": "Enemy",
+            "stat": "Movement",
+            "mode": "subtract",
+            "value": 2
+          },
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Enemy",
+            "keyword": "GROUNDED",
+            "value": null
+          }
+        ],
+        "originalText": "In your Shooting phase, when this unit has shot, if all ranged weapons equipped by each Mek Gunz model in this unit are the same, select one enemy unit hit by those attacks. That enemy unit has the ability below that matches that weapon's name until the start of your next turn: Bubblechukka: This unit is wobbled. While a wobbled unit is attacking, its targets have the benefit of cover against those attacks. Kustom Mega-kannon: This unit is zapped. While a unit is zapped, that unit has -1 Ld. Smasha Gun: This unit is smashed. While a unit is smashed, that unit has -2\" M. Traktor Kannon: This unit is grounded. While a unit is grounded, it cannot take to the skies. Place five Grot Crew tokens next to each Mek Gun model, removing one each time its Mek Gun model loses a wound (a Mek Gun model itself is considered to represent its final wound)."
+      },
+      {
+        "name": "Grot Crew Tokens",
+        "category": "OTHER",
+        "text": "Place five Grot Crew tokens next to each Mek Gun model, removing one each time its Mek Gun model loses a wound (a Mek Gun model itself is considered to represent its final wound)."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/mek": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Kustom Dakka",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "RANGE",
+            "keyword": "IGNORES COVER",
+            "value": null
+          }
+        ],
+        "originalText": "This unit’s ranged attacks have [Ignores Cover]."
+      },
+      {
+        "name": "Support",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.  Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)."
+      },
+      {
+        "name": "Clever Know-wotz",
+        "phase": "MOVEMENT",
+        "trigger": "¿Hay un modelo de Vehículo Ork aliado (excluyendo Aeronaves/Titánico) a 3\" o menos de este modelo?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "heal",
+            "appliedTo": "Ally",
+            "amount": "D3"
+          },
+          {
+            "category": "diceModifier",
+            "appliedTo": "Ally",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "attackType": "ALL",
+            "targetCondition": {
+              "keywords": [
+                "VEHICLE"
+              ],
+              "mode": "includes"
+            }
+          }
+        ],
+        "originalText": "In your Movement phase, at the start or end of this unit's move, you can select one friendly Orks Vehicle model (excluding Aircraft/Titanic models) within 3\" of this model:  That Vehicle model heals D3 wounds. That Vehicle model's attacks have +1 to hit rolls until the start of your next Movement phase."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/morkanaut": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Super-heavy Walker",
+        "phase": "MOVEMENT",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "category": "OTHER",
+        "text": "Each time a unit with this ability makes a normal, advance or fall-back move: Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height. Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.",
+        "originalText": "Each time a unit with this ability makes a normal, advance or fall-back move: Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height.Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06)."
+      },
+      {
+        "name": "Big an' Shooty",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "toHit",
+            "action": "rerollOnes",
+            "attackType": "RANGE"
+          }
+        ]
+      },
+      {
+        "name": "Damaged 7",
+        "phase": "ANY",
+        "trigger": "¿Las heridas restantes de este modelo son 7 o menos?",
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfModel",
+            "weaponTarget": "ALL",
+            "stat": "Skill",
+            "mode": "subtract",
+            "value": 1
+          }
+        ],
+        "originalText": "This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged:While a model is damaged, that model's attacks have -1 to hit rolls."
+      },
+      {
+        "name": "Gut Hatch",
+        "phase": "MOVEMENT",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "category": "OTHER",
+        "text": "In your Movement phase, when this unit ends a normal move, units embarked within this unit can make an assault disembark move.",
+        "originalText": "In your Movement phase, when this unit ends a normal move, units embarked within this unit can make an assault disembark move (pg 121)."
+      },
+      {
+        "name": "Deadly Demise D6",
+        "phase": "ANY",
+        "trigger": "¿Ha sido destruido este modelo?",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "D6"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/mozrog-skragbad": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Feel No Pain 5+",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "damageMitigation",
+            "appliedTo": "SelfModel",
+            "kind": "fnp",
+            "value": 5
+          }
+        ],
+        "originalText": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+      },
+      {
+        "name": "One Last Kill",
+        "phase": "FIGHT",
+        "trigger": "¿Este modelo ha sido destruido y esta unidad aún no ha sido seleccionada para luchar esta fase?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfModel",
+            "keyword": "FIGHT ON DEATH",
+            "value": null
+          }
+        ],
+        "originalText": "In the Fight phase, when this model is destroyed, if this unit has not been selected to fight this phase, roll one D6: On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield."
+      },
+      {
+        "name": "Da Bigger Dey Iz…",
+        "phase": "FIGHT",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toWound",
+            "action": "rerollFailed",
+            "attackType": "MELEE",
+            "targetCondition": {
+              "keywords": [
+                "MONSTER",
+                "VEHICLE"
+              ],
+              "mode": "includes"
+            }
+          }
+        ],
+        "originalText": "This unit’s melee attacks that target a Monster/Vehicle unit can re‑roll wound rolls."
+      },
+      {
+        "name": "Beast Snagga Following",
+        "phase": "ANY",
+        "trigger": "¿Esta unidad está a 3\" o menos de una unidad Beast Snagga aliada (excluyendo MONSTER Character)?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "LONE OPERATIVE",
+            "value": null
+          }
+        ],
+        "originalText": "While this unit is within 3\" of a friendly Beast Snagga unit (excluding MONSTER Character units), this unit has Lone Operative."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/nazdreg": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
+      },
+      {
+        "name": "Intimidating Motivation",
+        "phase": "MOVEMENT",
+        "trigger": "ALWAYS",
+        "autoApply": false,
+        "frequency": "perRound",
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Ally",
+            "keyword": "RILED UP",
+            "value": null
+          },
+          {
+            "category": "diceModifier",
+            "appliedTo": "Ally",
+            "roll": "battleshock",
+            "action": "autoSuccess"
+          }
+        ]
+      },
+      {
+        "name": "Nazdreg's Know-wotz",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "weaponKeyword",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "RANGE",
+            "keyword": "IGNORES COVER",
+            "value": null
+          }
+        ]
+      },
+      {
+        "name": "Supreme Kunnin'",
+        "phase": "ANY",
+        "trigger": "¿Ha terminado un enemigo su movimiento a 8\" o menos de esta unidad y esta unidad no está comprometida?",
+        "autoApply": false,
+        "frequency": "perPhase",
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "stat": "Movement",
+            "mode": "setValue",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "name": "Supreme Kunnin' (Riled Up)",
+        "phase": "ANY",
+        "trigger": "¿Ha terminado un enemigo su movimiento a 8\" o menos de esta unidad, esta unidad no está comprometida y esta unidad está furiosa?",
+        "autoApply": false,
+        "frequency": "perPhase",
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "stat": "Movement",
+            "mode": "setValue",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/nobz": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Get Out da Way!",
+        "phase": "CHARGE",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "CAN_MOVE_THROUGH_MODELS",
+            "value": "excludes MONSTER/VEHICLE"
+          }
+        ],
+        "originalText": "While making a charge move, this unit can move through models (excluding Monster/Vehicle models)."
+      },
+      {
+        "name": "Ammo Runts",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "value": 1,
+            "attackType": "RANGE"
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/painboss": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Push Dat Bit Back In",
+        "phase": "COMMAND",
+        "trigger": "¿Hay una unidad amiga Beast Snagga a 6\" o menos de esta unidad?",
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "heal",
+            "appliedTo": "Ally",
+            "amount": "3"
+          }
+        ]
+      },
+      {
+        "name": "Support",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.  Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)."
+      },
+      {
+        "name": "Hardy Bioniks",
+        "phase": "ANY",
+        "trigger": "¿La fuerza del ataque es mayor que la resistencia de esta unidad?",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toWound",
+            "action": "subtractFromRoll",
+            "value": 1
+          }
+        ],
+        "originalText": "Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls."
+      },
+      {
+        "name": "Runnin' wiv da Herd",
+        "phase": "ANY",
+        "trigger": "¿Este modelo está adjunto a una unidad Mounted?",
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfModel",
+            "keyword": "INFANTRY",
+            "value": null
+          },
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfModel",
+            "keyword": "MOBILE",
+            "value": null
+          },
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfModel",
+            "keyword": "MOUNTED",
+            "value": null
+          },
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfModel",
+            "stat": "Movement",
+            "mode": "add",
+            "value": 4
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/painboy": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Crude Surgery",
+        "phase": "COMMAND",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "frequency": "perRound",
+        "effects": [
+          {
+            "category": "heal",
+            "appliedTo": "SelfUnit",
+            "amount": "3"
+          }
+        ],
+        "originalText": "In your Command phase, this unit heals 3 wounds."
+      },
+      {
+        "name": "Support",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19).",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.  Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)."
+      },
+      {
+        "name": "Catch Dat Red Bit",
+        "phase": "COMMAND",
+        "trigger": "¿Se está usando la habilidad Crude Surgery en este turno?",
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "heal",
+            "appliedTo": "SelfUnit",
+            "amount": "D3"
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/rukkatrukk-squigbuggies": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Squig Barrage",
+        "phase": "SHOOTING",
+        "trigger": "¿Ha disparado esta unidad y ha golpeado a una unidad enemiga que no sea MONSTRUO ni VEHÍCULO?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "Enemy",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "value": 1,
+            "targetCondition": {
+              "keywords": [
+                "MONSTER",
+                "VEHICLE"
+              ],
+              "mode": "excludes"
+            }
+          }
+        ],
+        "originalText": "In your Shooting phase, when this unit has shot, select one enemy unit (excluding Monster/Vehicle units) hit by this unit’s Squig Launchas weapons. That enemy unit is covered in Squigs until the start of your next turn: While a unit is covered in Squigs, that unit’s attacks have -1 to hit rolls."
+      },
+      {
+        "name": "Deadly Demise 1",
+        "phase": "ANY",
+        "trigger": "¿Ha sido destruido este modelo?",
+        "autoApply": false,
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "1"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/runtherd": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "That'll Learn Ya",
+        "phase": "ANY",
+        "trigger": "¿Esta unidad contiene 4+ modelos de Gretchin y se vuelve conmocionada en batalla?",
+        "frequency": "perRound",
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "stat": "Wounds",
+            "mode": "subtract",
+            "value": 0
+          },
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "BATTLE_SHOCKED",
+            "value": null
+          }
+        ]
+      },
+      {
+        "name": "Support",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.  Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/squighog-boyz": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Bomb Squig",
+        "phase": "MOVEMENT",
+        "trigger": "¿Ha terminado esta unidad un movimiento normal?",
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1d6"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 3
+            },
+            "damagePerSuccess": "D3"
+          }
+        ]
+      },
+      {
+        "name": "Brutal Impact",
+        "phase": "FIGHT",
+        "trigger": "¿Ha realizado esta unidad un movimiento de carga este turno?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfModel",
+            "weaponTarget": "MELEE",
+            "stat": "Damage",
+            "mode": "add",
+            "value": 1
+          }
+        ],
+        "originalText": "If this unit made a charge move this turn, this unit’s attacks have +1 D."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/stompa": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Deadly Demise 2D6",
+        "phase": "ANY",
+        "trigger": "¿Ha sido destruido este modelo?",
+        "autoApply": false,
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "2D6"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "2D6"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Idol of Belligerence",
+        "phase": "MOVEMENT",
+        "trigger": "¿Se está desembarcando una unidad desde esta unidad?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Ally",
+            "keyword": "RILED UP",
+            "value": null
+          }
+        ],
+        "originalText": "In your Movement phase, when a unit embarked within this unit is selected to make a disembark move, that unit is riled up until the start of your next turn."
+      },
+      {
+        "name": "Waaagh! Effigy",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "RILED UP",
+            "value": null
+          }
+        ],
+        "originalText": "This unit is riled up."
+      },
+      {
+        "name": "Super-heavy Walker",
+        "category": "OTHER",
+        "text": "Each time a unit with this ability makes a normal, advance or fall-back move: Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height. Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.",
+        "originalText": "Each time a unit with this ability makes a normal, advance or fall-back move: Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height.Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06)."
+      },
+      {
+        "name": "Damaged 10",
+        "phase": "SHOOTING",
+        "trigger": "¿Las heridas restantes de este modelo son iguales o inferiores a 10?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "attackType": "ALL"
+          }
+        ],
+        "originalText": "This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged:While a model is damaged, that model's attacks have -1 to hit rolls."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/stormboyz": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "name": "Rokkit Charge",
+        "phase": "FIGHT",
+        "trigger": "¿Esta unidad realizó un movimiento de carga este turno?",
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "MELEE",
+            "stat": "Attacks",
+            "mode": "add",
+            "value": 1
+          },
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "MELEE",
+            "stat": "Strength",
+            "mode": "add",
+            "value": 1
+          },
+          {
+            "category": "weaponKeyword",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "MELEE",
+            "keyword": "HAZARDOUS",
+            "value": null
+          }
+        ],
+        "originalText": "When this unit is selected to fight, if this unit made a charge move this turn, you can use this ability. If you do, this unit’s melee attacks have: +1 A and S. [Hazardous]."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/tankbustas": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Rokkit Barrage",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "Enemy",
+            "roll": "battleshock",
+            "action": "subtractFromRoll",
+            "value": 1
+          }
+        ],
+        "originalText": "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That unit makes a battle-shock roll, with -1 to that battle-shock roll."
+      },
+      {
+        "name": "Bomb Squigs",
+        "phase": "MOVEMENT",
+        "trigger": "¿Esta unidad ha completado un movimiento normal y hay un enemigo visible a 12\" o menos?",
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1D6"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 3
+            },
+            "damagePerSuccess": "D3"
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/trukk": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Deadly Demise D3",
+        "phase": "ANY",
+        "trigger": "¿Ha sido destruido este modelo?",
+        "autoApply": false,
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "D3"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Pilin' Out",
+        "category": "OTHER",
+        "text": "In your opponent's Movement phase, when an enemy unit ends a move within 8\" of this model, units embarked within this model can make a disembark move using the rapid disembark mode."
+      },
+      {
+        "name": "Firing Deck 12",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "FIRING DECK",
+            "value": "12"
+          }
+        ],
+        "originalText": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/warbikers": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "High-speed Carnage",
+        "phase": "FIGHT",
+        "trigger": "¿Realizó esta unidad un movimiento de carga este turno?",
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "MELEE",
+            "stat": "Strength",
+            "mode": "add",
+            "value": 1
+          },
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "MELEE",
+            "stat": "Damage",
+            "mode": "add",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/warboss-in-mega-armour": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
+      },
+      {
+        "name": "Krushin' Impetus",
+        "phase": "CHARGE",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "byStat",
+              "stat": "modelsEngaged"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 3
+            },
+            "damagePerSuccess": "1"
+          }
+        ]
+      },
+      {
+        "name": "Intimidating Motivation",
+        "phase": "MOVEMENT",
+        "trigger": "¿Hay una unidad aliada de Orkos a 6\" o menos de esta unidad?",
+        "frequency": "perRound",
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Ally",
+            "keyword": "RILED UP",
+            "value": null
+          },
+          {
+            "category": "diceModifier",
+            "appliedTo": "Ally",
+            "roll": "battleshock",
+            "action": "autoSuccess"
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/warboss": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Might Is Right",
+        "phase": "FIGHT",
+        "trigger": "¿Esta unidad realizó un movimiento de carga este turno?",
+        "effects": [
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfModel",
+            "weaponTarget": "MELEE",
+            "stat": "Attacks",
+            "mode": "add",
+            "value": 3
+          },
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfModel",
+            "weaponTarget": "MELEE",
+            "stat": "Strength",
+            "mode": "add",
+            "value": 2
+          }
+        ],
+        "originalText": "If this unit made a charge move this turn, this model’s melee attacks have: +3 A. +2 S."
+      },
+      {
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
+      },
+      {
+        "name": "Boss' Ammo Runt",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "autoApply": false,
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toHit",
+            "action": "addToRoll",
+            "attackType": "RANGE",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "name": "Intimidating Motivation",
+        "phase": "MOVEMENT",
+        "trigger": "¿Hay una unidad aliada Orks a 6\" o menos de esta unidad?",
+        "frequency": "perRound",
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Ally",
+            "keyword": "BATTLE-SHOCKED",
+            "value": null
+          },
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Ally",
+            "keyword": "RILED UP",
+            "value": null
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/warbuggies": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Drive-by Skorchin'",
+        "phase": "MOVEMENT",
+        "trigger": "¿Hay una unidad enemiga visible (excluyendo MONSTRUOS/VEHÍCULOS) a 6\" o menos de esta unidad?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Enemy",
+            "keyword": "CANNOT_BE_TARGETED_BY_FIRE_OVERWATCH",
+            "value": "until end of turn"
+          }
+        ]
+      },
+      {
+        "name": "Deadly Demise 1",
+        "phase": "ANY",
+        "trigger": "¿Ha sido destruido este modelo?",
+        "autoApply": false,
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "1"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/wartrakks": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Speednob Support",
+        "phase": "ANY",
+        "trigger": "¿Está cada modelo de esta unidad a 3\" o menos de una unidad aliada Speed Freeks (excluyendo Wartrakks)?",
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "LONE OPERATIVE",
+            "value": null
+          }
+        ],
+        "originalText": "While each model in this unit is within 3\" of a friendly Speed Freeks unit (excluding Wartrakk units), this unit has Lone Operative."
+      },
+      {
+        "name": "Bust 'Em",
+        "phase": "SHOOTING",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "Enemy",
+            "keyword": "BUSTED",
+            "value": null
+          },
+          {
+            "category": "weaponKeyword",
+            "appliedTo": "Ally",
+            "weaponTarget": "ALL",
+            "keyword": "LETHAL HITS",
+            "value": null,
+            "targetCondition": {
+              "keywords": [],
+              "mode": "includes"
+            }
+          }
+        ]
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/wazbom-blastajet": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Damaged 4",
+        "phase": "ANY",
+        "trigger": "¿Los puntos de herida restantes de este modelo son 4 o menos?",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfModel",
+            "roll": "toHit",
+            "action": "subtractFromRoll",
+            "value": 1
+          }
+        ],
+        "originalText": "This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged:While a model is damaged, that model's attacks have -1 to hit rolls."
+      },
+      {
+        "name": "Go fer da Weak Spot",
+        "phase": "SHOOTING",
+        "trigger": "¿El objetivo es un MONSTRUO o VEHÍCULO?",
+        "effects": [
+          {
+            "category": "diceModifier",
+            "appliedTo": "SelfUnit",
+            "roll": "toWound",
+            "action": "addToRoll",
+            "value": 1,
+            "attackType": "RANGE",
+            "targetCondition": {
+              "keywords": [
+                "MONSTER",
+                "VEHICLE"
+              ],
+              "mode": "includes"
+            }
+          }
+        ],
+        "originalText": "In your Shooting phase, this unit's ranged attacks that target a Monster/Vehicle unit have +1 to wound rolls."
+      },
+      {
+        "name": "Deadly Demise D3",
+        "phase": "ANY",
+        "trigger": "¿Ha sido destruido este modelo?",
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1d6"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "D3"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/wazdakka-gutsmek": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "category": "OTHER",
+        "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
+        "originalText": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+      },
+      {
+        "name": "Full Throttle",
+        "category": "OTHER",
+        "text": "In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.",
+        "originalText": "In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase."
+      },
+      {
+        "name": "Deadly Demise D3",
+        "phase": "ANY",
+        "trigger": "¿Ha sido destruido este modelo?",
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1d3"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "1d3"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Lone Operative",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "LONE OPERATIVE",
+            "value": "12\""
+          }
+        ],
+        "originalText": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/weirdboy": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Support",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.  Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)."
+      },
+      {
+        "name": "Waaagh! Energy (psyker level 1)",
+        "category": "OTHER",
+        "text": "This model has the psychic abilities listed in the Psychic Abilities section.",
+        "originalText": "This model has the psychic abilities listed in the Psychic Abilities section."
+      },
+      {
+        "name": "Deadly Demise D3",
+        "phase": "ANY",
+        "trigger": "¿Ha sido este modelo destruido?",
+        "frequency": "perBattle",
+        "effects": [
+          {
+            "category": "mortalWounds",
+            "appliedTo": "Enemy",
+            "unitType": "ALL",
+            "hits": {
+              "kind": "notation",
+              "value": "1d6"
+            },
+            "resolution": {
+              "kind": "roll",
+              "threshold": 6
+            },
+            "damagePerSuccess": "D3"
+          }
+        ],
+        "originalText": "This ability always takes the form Deadly Demise X. Each time a model with this ability is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\")."
+      }
+    ],
+    "rawAbilities": []
+  },
+  "orks/zodgrod-wortsnagga": {
+    "tag": "AI_PROPOSED",
+    "abilities": [
+      {
+        "name": "Super Runts",
+        "phase": "ANY",
+        "trigger": "ALWAYS",
+        "autoApply": true,
+        "effects": [
+          {
+            "category": "unitKeyword",
+            "appliedTo": "SelfUnit",
+            "keyword": "riled up",
+            "value": null
+          },
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "MELEE",
+            "stat": "Attacks",
+            "mode": "add",
+            "value": 1,
+            "targetCondition": {
+              "keywords": [],
+              "mode": "includes"
+            }
+          },
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "MELEE",
+            "stat": "Skill",
+            "mode": "add",
+            "value": 1,
+            "targetCondition": {
+              "keywords": [],
+              "mode": "includes"
+            }
+          },
+          {
+            "category": "statModifier",
+            "appliedTo": "SelfUnit",
+            "weaponTarget": "MELEE",
+            "stat": "Strength",
+            "mode": "add",
+            "value": 1,
+            "targetCondition": {
+              "keywords": [],
+              "mode": "includes"
+            }
+          }
+        ],
+        "originalText": "This unit is riled up. This unit's Scavenged Shivs weapons have +1 A, WS and S."
+      },
+      {
+        "name": "Leader",
+        "category": "OTHER",
+        "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)",
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
+      }
+    ],
+    "rawAbilities": []
+  }
+}

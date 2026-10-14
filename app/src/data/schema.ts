@@ -289,6 +289,43 @@ export interface FactionBackupLoadoutData {
   options: unknown[]
 }
 
+export interface EnhancementEligibility {
+  keywords: string[]
+  excludedKeywords: string[]
+  isEquipableByEpicHero: boolean
+  isEquipableByNonCharacterUnit: boolean
+}
+
+export interface ConditionalEffects {
+  condition: string
+  effects: Effect[]
+}
+
+export interface StructuredEnhancement {
+  slug: string
+  name: string
+  points: number
+  enhancementType: 'upgrade' | 'miniature'
+  limit: number
+  eligibility: EnhancementEligibility
+  effects: Effect[]
+  conditionalEffects: ConditionalEffects[]
+  originalText: string
+}
+
+export interface DetachmentData {
+  tag: UnitDataTag | 'SCRAPED'
+  data: unknown
+  enhancements: StructuredEnhancement[] | null
+}
+
+export interface FactionBackupDetachmentData {
+  detachmentSlug: string
+  tag: string
+  data: unknown
+  enhancements: unknown[] | null
+}
+
 export interface FactionBackup {
   format: '40ksim-faction-backup'
   version: 1
@@ -298,6 +335,7 @@ export interface FactionBackup {
   baseData: FactionBackupBaseData[]
   unitData: FactionBackupUnitData[]
   loadoutData: FactionBackupLoadoutData[]
+  detachmentData: FactionBackupDetachmentData[]
 }
 
 export type MatchStatus = 'matched' | 'unmatched'

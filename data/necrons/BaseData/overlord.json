@@ -1,0 +1,405 @@
+{
+  "id": 47410,
+  "slug": "overlord",
+  "name": "Overlord",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **1 Overlord**\n\n**This model is equipped with:** tachyon arrow; Overlord’s blade.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "Mighty heroes fight at the forefront of battle.",
+      "name": "Leader",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it. \n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "My Will Be Done",
+      "rules": "Once per battle round, one unit from your army with this ability can use it when it is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 3,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Implacable Resilience",
+      "rules": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 4,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Leader",
+      "rules": "This model can be attached to the following units:\n\n■ **IMMORTALS**\n■ **LYCHGUARD**\n■ **NECRON WARRIORS**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47344,
+        "name": "Necron Warriors",
+        "slug": "necron-warriors",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46778,
+        "name": "Immortals",
+        "slug": "immortals",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46887,
+        "name": "Lychguard",
+        "slug": "lychguard",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 62307,
+      "name": "Overlord",
+      "stats": {
+        "save": "2+",
+        "wounds": "6",
+        "movement": "5\"",
+        "toughness": "5",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51640,
+          "name": "Noble"
+        },
+        {
+          "id": 51533,
+          "name": "Overlord"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107784,
+            "name": "Tachyon arrow",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111278,
+                "name": "Tachyon arrow",
+                "type": "ranged",
+                "range": "72\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "16",
+                "armourPenetration": "-5",
+                "damage": "D6+2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3433,
+                    "name": "One Shot",
+                    "rules": "Each weapon with this ability can only be selected to make attacks with once per battle.\n\nIf a <b>destroyed</b> model is returned to a unit, all of its <k>[ONE SHOT]</k> weapons that have already been selected to make attacks with during the battle cannot be selected to make attacks with again.\n\nIf a new unit is added to an army, all <k>[ONE SHOT]</k> weapons in that unit can be selected to make attacks with once per battle."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105121,
+            "name": "Overlord’s blade",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112369,
+                "name": "Overlord’s blade",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "8",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3350,
+                    "name": "Devastating Wounds",
+                    "rules": "Each time an attack made with a <k>[DEVASTATING WOUNDS]</k> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <k>[DEVASTATING WOUNDS]</k> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <k>[DEVASTATING WOUNDS]</k> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 105288,
+            "name": "Resurrection Orb",
+            "wargearType": "wargear",
+            "ruleText": "(Once per battle, per unit) At the end of any phase, you can use this ability. If you do, this unit **resurrects**:\n▪ When a unit **resurrects**, that unit’s Reanimation Protocols activate, but that unit **heals** D6 wounds (instead of D3 wounds). You cannot **resurrect** more than one unit per turn.’",
+            "profiles": []
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105121,
+            "name": "Overlord’s blade",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112369,
+                "name": "Overlord’s blade",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "8",
+                "armourPenetration": "-3",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3350,
+                    "name": "Devastating Wounds",
+                    "rules": "Each time an attack made with a <k>[DEVASTATING WOUNDS]</k> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <k>[DEVASTATING WOUNDS]</k> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <k>[DEVASTATING WOUNDS]</k> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106965,
+            "name": "Staff of light",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111986,
+                "name": "Ranged",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "3",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              },
+              {
+                "id": 110605,
+                "name": "Melee",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "5",
+                "armourPenetration": "-2",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107784,
+            "name": "Tachyon arrow",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111278,
+                "name": "Tachyon arrow",
+                "type": "ranged",
+                "range": "72\"",
+                "attacks": "1",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "16",
+                "armourPenetration": "-5",
+                "damage": "D6+2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3433,
+                    "name": "One Shot",
+                    "rules": "Each weapon with this ability can only be selected to make attacks with once per battle.\n\nIf a <b>destroyed</b> model is returned to a unit, all of its <k>[ONE SHOT]</k> weapons that have already been selected to make attacks with during the battle cannot be selected to make attacks with again.\n\nIf a new unit is added to an army, all <k>[ONE SHOT]</k> weapons in that unit can be selected to make attacks with once per battle."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106490,
+            "name": "Voidscythe",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114330,
+                "name": "Voidscythe",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "12",
+                "armourPenetration": "-3",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3350,
+                    "name": "Devastating Wounds",
+                    "rules": "Each time an attack made with a <k>[DEVASTATING WOUNDS]</k> weapon results in a <b>critical wound</b>, the attack sequence for that attack ends and the target unit suffers a number of <b>mortal wounds</b> equal to the <b>D</b> characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.\n\n<b>Mortal wounds</b> inflicted by <k>[DEVASTATING WOUNDS]</k> weapons can damage a maximum of one model for each <b>critical wound</b>; any remaining <b>mortal wounds</b> inflicted by that attack are lost.\n\n<b>Example</b>: <i>An attack made with a <k>[DEVASTATING WOUNDS]</k> weapon with a <b>D</b> characteristic of 3 results in a <b>critical wound</b> against an Intercessor Squad, so inflicts 3 <b>mortal wounds</b>. The first 2 <b>mortal wounds</b> are sufficient to destroy 1 Intercessor model, so the remaining <b>mortal wound</b> is lost.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 41576,
+      "rulesText": "■ This model’s tachyon arrow and Overlord’s blade can be replaced with one of the following: \n◦ 1 staff of light\n◦ 1 voidscythe",
+      "displayOrder": 1
+    },
+    {
+      "id": 40988,
+      "rulesText": "■ If this model is not equipped with a tachyon arrow, it can be equipped with 1 resurrection orb. ",
+      "displayOrder": 2
+    }
+  ],
+  "compositions": [
+    {
+      "id": 61473,
+      "points": 90,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 62307,
+          "miniatureName": "Overlord",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

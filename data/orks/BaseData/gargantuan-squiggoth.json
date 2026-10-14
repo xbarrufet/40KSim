@@ -1,0 +1,402 @@
+{
+  "id": 47241,
+  "slug": "gargantuan-squiggoth",
+  "name": "Gargantuan Squiggoth",
+  "baseSize": "Hull",
+  "maxModelCount": null,
+  "unitComposition": "• 1 Gargantuan Squiggoth model\n\nThis model is equipped with: 1 Huge Tusks; 1 Kannon - Shell.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": true,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Walking Bastion",
+      "rules": "This unit's attacks can ignore modifiers to:<ul><li><b>BS/WS</b>.</li><li><b>Hit rolls</b>.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "From detonating ammo stores to corrosive innards or frenzied death throes, some targets are deadly even in defeat.",
+      "name": "Deadly Demise 2D6",
+      "rules": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\").",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Waaagh!",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Monstrous creatures and gigantic engines of war loom over the battlefield like gods given form, striding over combatants and smashing through almost any obstacle that bars their passage.",
+      "name": "Super-heavy Walker",
+      "rules": "Each time a unit with this ability makes a <b>normal</b>, <b>advance</b> or <b>fall-back move</b>:\n<ul><li>Models in that unit can move through models (including <k>MONSTER/VEHICLE</k> models, but excluding <k>TITANIC</k> models) and can move horizontally through sections of <b>terrain features</b> that are 4\" or less in height.</li><li>Before moving that unit, you can select for all models in that unit to have the <k>MOBILE</k> keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is <b>battle-shocked</b>.</li></ul><b>Designer’s Note:</b> <i>Gaining the <k>MOBILE</k> keyword for the duration of a move will enable models in that unit to move horizontally through <b>dense terrain features</b></i> (13.06).",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Damaged 10",
+      "rules": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "Some transports have dedicated platforms or firing ports from which embarked passengers can lay down a withering hail of munitions",
+      "name": "Firing Deck 11",
+      "rules": "This ability always takes the form <b>Firing Deck X</b>. In your Shooting phase, each time this <k>TRANSPORT</k> is <b>selected to shoot</b>, if one or more units are embarked within it, resolve the following sequence:\n\n1. Select up to <b>X</b> models embarked within this <k>TRANSPORT</k> (excluding models whose units have already been <b>selected to shoot</b> this phase).\n\n2. For each selected model, select one of its ranged weapons (excluding <k>[ONE SHOT]</k> weapons).\n\n3. Until this <k>TRANSPORT</k> has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons.\n\n4. Until the end of the turn, units embarked within this <k>TRANSPORT</k> are <u>not</u> <b>eligible to shoot</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 3,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": [
+    {
+      "name": "DAMAGED",
+      "rules": null,
+      "displayOrder": 0
+    }
+  ],
+  "rules": [
+    {
+      "name": "Transport",
+      "rules": "This model has a transport capacity of 22 Orks Infantry models. Each Mega Armour, Jump Pack model takes up the space of 2 models. Each Ghazghkull Thraka model takes up the space of 4 models.",
+      "displayOrder": 0
+    }
+  ],
+  "pointsStepAt": 2,
+  "pointsStepPoints": 100,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1858,
+    "slug": "orks",
+    "name": "Orks",
+    "commonName": "Orks"
+  },
+  "miniatures": [
+    {
+      "id": 62123,
+      "name": "Gargantuan Squiggoth",
+      "stats": {
+        "save": "3+",
+        "wounds": "30",
+        "movement": "10\"",
+        "toughness": "13",
+        "leadership": "7+",
+        "objectiveControl": "12"
+      },
+      "keywords": [
+        {
+          "id": 51499,
+          "name": "Frame"
+        },
+        {
+          "id": 51249,
+          "name": "Monster"
+        },
+        {
+          "id": 50883,
+          "name": "Titanic"
+        },
+        {
+          "id": 51593,
+          "name": "Towering"
+        },
+        {
+          "id": 51093,
+          "name": "Transport"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105538,
+            "name": "Huge Tusks",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111406,
+                "name": "Huge Tusks",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "14",
+                "armourPenetration": "-3",
+                "damage": "12",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3463,
+                    "name": "CLEAVE 2",
+                    "rules": "This ability always takes the form <b>[CLEAVE X]</b>. Each time you gather <b>attack dice</b> for a <b>[CLEAVE]</b> weapon, if you only selected one target for all of that weapon’s attacks, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\n<b>Example:</b> <i>If a <b>[CLEAVE 1]</b> weapon with an <b>A</b> characteristic of 3 targets one unit containing 16 models, you would gather three additional <b>attack dice</b> for that weapon (for a total of six for that weapon).</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106454,
+            "name": "Kannon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112430,
+                "name": "Frag",
+                "type": "ranged",
+                "range": "36\"",
+                "attacks": "6",
+                "ballisticSkill": "5+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3443,
+                    "name": "BLAST 1",
+                    "rules": "Each time you gather <b>attack dice</b> for a <b>[BLAST]</b> weapon, add one additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\nIf this ability takes the form <b>[BLAST X]</b>, each time you gather <b>attack dice</b> for such a weapon, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n\n<b>Example:</b> <i>If a <b>[BLAST 2]</b> weapon with an <b>A</b> characteristic of 3 targets a unit containing 12 models, you would gather four additional <b>attack dice</b> for that weapon (for a total of seven for that weapon).</i>"
+                  },
+                  {
+                    "id": 3466,
+                    "name": "RAPID FIRE 6",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              },
+              {
+                "id": 112596,
+                "name": "Shell",
+                "type": "ranged",
+                "range": "36\"",
+                "attacks": "2",
+                "ballisticSkill": "5+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "D6+1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3390,
+                    "name": "RAPID FIRE 2",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 105538,
+            "name": "Huge Tusks",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111406,
+                "name": "Huge Tusks",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "14",
+                "armourPenetration": "-3",
+                "damage": "12",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3463,
+                    "name": "CLEAVE 2",
+                    "rules": "This ability always takes the form <b>[CLEAVE X]</b>. Each time you gather <b>attack dice</b> for a <b>[CLEAVE]</b> weapon, if you only selected one target for all of that weapon’s attacks, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\n<b>Example:</b> <i>If a <b>[CLEAVE 1]</b> weapon with an <b>A</b> characteristic of 3 targets one unit containing 16 models, you would gather three additional <b>attack dice</b> for that weapon (for a total of six for that weapon).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106454,
+            "name": "Kannon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112430,
+                "name": "Frag",
+                "type": "ranged",
+                "range": "36\"",
+                "attacks": "6",
+                "ballisticSkill": "5+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3443,
+                    "name": "BLAST 1",
+                    "rules": "Each time you gather <b>attack dice</b> for a <b>[BLAST]</b> weapon, add one additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\nIf this ability takes the form <b>[BLAST X]</b>, each time you gather <b>attack dice</b> for such a weapon, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n\n<b>Example:</b> <i>If a <b>[BLAST 2]</b> weapon with an <b>A</b> characteristic of 3 targets a unit containing 12 models, you would gather four additional <b>attack dice</b> for that weapon (for a total of seven for that weapon).</i>"
+                  },
+                  {
+                    "id": 3466,
+                    "name": "RAPID FIRE 6",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              },
+              {
+                "id": 112596,
+                "name": "Shell",
+                "type": "ranged",
+                "range": "36\"",
+                "attacks": "2",
+                "ballisticSkill": "5+",
+                "weaponSkill": null,
+                "strength": "10",
+                "armourPenetration": "-2",
+                "damage": "D6+1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3390,
+                    "name": "RAPID FIRE 2",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105629,
+            "name": "Supa-kannon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111501,
+                "name": "Supa-kannon",
+                "type": "ranged",
+                "range": "60\"",
+                "attacks": "8",
+                "ballisticSkill": "5+",
+                "weaponSkill": null,
+                "strength": "12",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3443,
+                    "name": "BLAST 1",
+                    "rules": "Each time you gather <b>attack dice</b> for a <b>[BLAST]</b> weapon, add one additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\nIf this ability takes the form <b>[BLAST X]</b>, each time you gather <b>attack dice</b> for such a weapon, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n\n<b>Example:</b> <i>If a <b>[BLAST 2]</b> weapon with an <b>A</b> characteristic of 3 targets a unit containing 12 models, you would gather four additional <b>attack dice</b> for that weapon (for a total of seven for that weapon).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 41883,
+      "rulesText": "This model's Kannon can be replaced with 1 Supa-kannon.",
+      "displayOrder": 0
+    },
+    {
+      "id": 41833,
+      "rulesText": "This model can be equipped with one of the following:\n◦ 1 kannon\n◦ 1 supa-kannon",
+      "displayOrder": 1
+    }
+  ],
+  "compositions": [
+    {
+      "id": 61311,
+      "points": 500,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 62123,
+          "miniatureName": "Gargantuan Squiggoth",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

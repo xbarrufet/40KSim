@@ -1,0 +1,270 @@
+{
+  "id": 47626,
+  "slug": "gretchin",
+  "name": "Gretchin",
+  "baseSize": "25mm",
+  "maxModelCount": null,
+  "unitComposition": "<ul><li>10‑20 Gretchin models</li></ul>\rEvery model is equipped with: 1 Scavenged Shivs; 1 Grot Blasta.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Downtrodden",
+      "rules": "For the purposes of <b>transport capacity</b>, each 2 Gretchin models (rounding up) take up the space of 1 model.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Waaagh!",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Thievin’ Scavengers",
+      "rules": "At the end of your Movement phase, if this unit is controlling an <b>objective</b>, that <b>objective</b> is <b>secured</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [],
+  "ledBy": [
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 46765,
+        "name": "Runtherd",
+        "slug": "runtherd",
+        "factionSlug": "orks"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46720,
+        "name": "Zodgrod Wortsnagga",
+        "slug": "zodgrod-wortsnagga",
+        "factionSlug": "orks"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1858,
+    "slug": "orks",
+    "name": "Orks",
+    "commonName": "Orks"
+  },
+  "miniatures": [
+    {
+      "id": 61260,
+      "name": "Gretchin",
+      "stats": {
+        "save": "6+",
+        "wounds": "1",
+        "movement": "6\"",
+        "toughness": "2",
+        "leadership": "8+",
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51097,
+          "name": "Grots"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105947,
+            "name": "Scavenged Shivs",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111849,
+                "name": "Scavenged Shivs",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "1",
+                "ballisticSkill": null,
+                "weaponSkill": "5+",
+                "strength": "2",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107695,
+            "name": "Grot Blasta",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113750,
+                "name": "Grot Blasta",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "3",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 107695,
+            "name": "Grot Blasta",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113750,
+                "name": "Grot Blasta",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "3",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3459,
+                    "name": "CLOSE-QUARTERS",
+                    "rules": "Units containing one or more models with a <b>[CLOSE‑QUARTERS]</b> weapon can shoot using <b>close‑quarters shooting</b> (10.06).\n\nWhen using another <b>shooting type</b>, for each model in that unit (excluding <b>MONSTER/VEHICLE</b> models), you can only select <u>one</u> of the following to make attacks with:<ul><li>One or more of its <b>[CLOSE‑QUARTERS]</b> weapons.</li><li>One or more of its other ranged weapons.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105947,
+            "name": "Scavenged Shivs",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111849,
+                "name": "Scavenged Shivs",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "1",
+                "ballisticSkill": null,
+                "weaponSkill": "5+",
+                "strength": "2",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 62002,
+      "points": 45,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 10,
+      "miniatures": [
+        {
+          "miniatureId": 61260,
+          "miniatureName": "Gretchin",
+          "min": 10,
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": 61787,
+      "points": 80,
+      "displayOrder": 1,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 20,
+      "miniatures": [
+        {
+          "miniatureId": 61260,
+          "miniatureName": "Gretchin",
+          "min": 11,
+          "max": 20
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "id": 47643,
+  "slug": "big-mek-with-shokk-attack-gun",
+  "name": "Big Mek with Shokk Attack Gun",
+  "baseSize": "40mm",
+  "maxModelCount": null,
+  "unitComposition": "<ul><li>1 Big Mek with Shokk Attack Gun model</li></ul>\rThis model is equipped with: 1 Big Mek’s Toolz; 1 Shokk Attack Gun.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "Mighty heroes fight at the forefront of battle.",
+      "name": "Leader",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "More Dakka",
+      "rules": "This unit’s ranged attacks have: \r<ul><li><k>[Ignores Cover]</k>. </li>\r<li>If this unit is <b>riled up</b>, <k>[Sustained Hits 1]</k>.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Waaagh!",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Support Shokka",
+      "rules": "While this model is within 3\" of a friendly <k>Orks Infantry</k> unit (excluding <k>BIG MEK WITH SHOKK ATTACK GUN</k> units), this model has <b>Lone Operative</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Leader",
+      "rules": "This model can be attached to the following units:\n\n■ **BOYZ**\n■ **MEK GUNZ**\n■ **NOBZ**\n■ **TANKBUSTAS**",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": 2,
+  "pointsStepPoints": 15,
+  "leads": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46690,
+        "name": "Boyz",
+        "slug": "boyz",
+        "factionSlug": "orks"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47539,
+        "name": "Nobz",
+        "slug": "nobz",
+        "factionSlug": "orks"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47179,
+        "name": "Mek Gunz",
+        "slug": "mek-gunz",
+        "factionSlug": "orks"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47533,
+        "name": "Tankbustas",
+        "slug": "tankbustas",
+        "factionSlug": "orks"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1858,
+    "slug": "orks",
+    "name": "Orks",
+    "commonName": "Orks"
+  },
+  "miniatures": [
+    {
+      "id": 62354,
+      "name": "Big Mek with Shokk Attack Gun",
+      "stats": {
+        "save": "4+",
+        "wounds": "5",
+        "movement": "6\"",
+        "toughness": "5",
+        "leadership": "7+",
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51306,
+          "name": "Big Mek"
+        },
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50918,
+          "name": "Explosives"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105290,
+            "name": "Big Mek’s Toolz",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111147,
+                "name": "Big Mek’s Toolz",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 104774,
+            "name": "Shokk Attack Gun",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110597,
+                "name": "Shokk Attack Gun",
+                "type": "ranged",
+                "range": "60\"",
+                "attacks": "D3+3",
+                "ballisticSkill": "5+",
+                "weaponSkill": null,
+                "strength": "12",
+                "armourPenetration": "-4",
+                "damage": "D6+1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3443,
+                    "name": "BLAST 1",
+                    "rules": "Each time you gather <b>attack dice</b> for a <b>[BLAST]</b> weapon, add one additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\nIf this ability takes the form <b>[BLAST X]</b>, each time you gather <b>attack dice</b> for such a weapon, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n\n<b>Example:</b> <i>If a <b>[BLAST 2]</b> weapon with an <b>A</b> characteristic of 3 targets a unit containing 12 models, you would gather four additional <b>attack dice</b> for that weapon (for a total of seven for that weapon).</i>"
+                  },
+                  {
+                    "id": 3383,
+                    "name": "HEAVY",
+                    "rules": "In your Shooting phase, each time an attack is made with a <b>[HEAVY]</b> weapon, add 1 to the <b>hit roll</b> if <u>all</u> of the following apply to the attacking unit:<ul><li>That unit is <b>unengaged</b>.\u0007</li><li>That unit was not set up on the battlefield this turn.</li><li>No model in that unit has moved more than 3\" this turn.</li>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 105290,
+            "name": "Big Mek’s Toolz",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111147,
+                "name": "Big Mek’s Toolz",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "4",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "5",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 104774,
+            "name": "Shokk Attack Gun",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110597,
+                "name": "Shokk Attack Gun",
+                "type": "ranged",
+                "range": "60\"",
+                "attacks": "D3+3",
+                "ballisticSkill": "5+",
+                "weaponSkill": null,
+                "strength": "12",
+                "armourPenetration": "-4",
+                "damage": "D6+1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3443,
+                    "name": "BLAST 1",
+                    "rules": "Each time you gather <b>attack dice</b> for a <b>[BLAST]</b> weapon, add one additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\nIf this ability takes the form <b>[BLAST X]</b>, each time you gather <b>attack dice</b> for such a weapon, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n\n<b>Example:</b> <i>If a <b>[BLAST 2]</b> weapon with an <b>A</b> characteristic of 3 targets a unit containing 12 models, you would gather four additional <b>attack dice</b> for that weapon (for a total of seven for that weapon).</i>"
+                  },
+                  {
+                    "id": 3383,
+                    "name": "HEAVY",
+                    "rules": "In your Shooting phase, each time an attack is made with a <b>[HEAVY]</b> weapon, add 1 to the <b>hit roll</b> if <u>all</u> of the following apply to the attacking unit:<ul><li>That unit is <b>unengaged</b>.\u0007</li><li>That unit was not set up on the battlefield this turn.</li><li>No model in that unit has moved more than 3\" this turn.</li>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 62408,
+      "points": 110,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 62354,
+          "miniatureName": "Big Mek with Shokk Attack Gun",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

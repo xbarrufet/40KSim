@@ -1,0 +1,336 @@
+{
+  "id": 47014,
+  "slug": "transcendent-ctan",
+  "name": "Transcendent C’tan",
+  "baseSize": "60mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **1 Transcendent C’tan**\n\n**This model is equipped with:** seismic assault; crackling tendrils.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": true,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "From detonating ammo stores to corrosive innards or frenzied death throes, some targets are deadly even in defeat.",
+      "name": "Deadly Demise D6",
+      "rules": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\").",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "There are many ways by which to deploy troops to the field of battle including tunnels, teleportation devices and other esoteric means of transportation.",
+      "name": "Deep Strike",
+      "rules": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "The hardiest warriors refuse to be laid low, even by wounds that should by all rights prove lethal.",
+      "name": "Feel No Pain 5+",
+      "rules": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 3,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 4,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Transdimensional Displacement",
+      "rules": "In your Movement phase, when this unit is selected to make an **advance move**, you can use this ability. If you do:\n■ That **advance move** has no **maximum distance**.\n■ This unit can move through all types of model (including enemy models and **MONSTER**/**VEHICLE** models).\n■ After moving, this unit must be more than 8\" horizontally from all enemy units.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 5,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Necrodermis",
+      "rules": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 6,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Enslaved Star God",
+      "rules": "This model cannot be your **WARLORD**.",
+      "displayOrder": 1
+    },
+    {
+      "name": "C’tan Shard",
+      "rules": "This model cannot be given Enhancements.",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": 2,
+  "pointsStepPoints": 20,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 61992,
+      "name": "Transcendent C’tan",
+      "stats": {
+        "save": "3+",
+        "wounds": "16",
+        "movement": "8\"",
+        "toughness": "11",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "4"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 51013,
+          "name": "Fly"
+        },
+        {
+          "id": 51249,
+          "name": "Monster"
+        },
+        {
+          "id": 51598,
+          "name": "Transcendent C’tan"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108477,
+            "name": "Seismic assault",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112277,
+                "name": "Seismic assault",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "6",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3349,
+                    "name": "Assault",
+                    "rules": "Units containing one or more models with an <k>[ASSAULT]</k> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3402,
+                    "name": "Sustained Hits 1",
+                    "rules": "This ability always takes the form <k>[SUSTAINED HITS X]</k>. Each time an attack made with a <k>[SUSTAINED HITS]</k> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <k>[SUSTAINED HITS 2]</k> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <k>[SUSTAINED HITS 2]</k> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106616,
+            "name": "Crackling tendrils",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114418,
+                "name": "Crackling tendrils",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "8",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-3",
+                "damage": "D6",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3402,
+                    "name": "Sustained Hits 1",
+                    "rules": "This ability always takes the form <k>[SUSTAINED HITS X]</k>. Each time an attack made with a <k>[SUSTAINED HITS]</k> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <k>[SUSTAINED HITS 2]</k> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <k>[SUSTAINED HITS 2]</k> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 106616,
+            "name": "Crackling tendrils",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114418,
+                "name": "Crackling tendrils",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "8",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "10",
+                "armourPenetration": "-3",
+                "damage": "D6",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3402,
+                    "name": "Sustained Hits 1",
+                    "rules": "This ability always takes the form <k>[SUSTAINED HITS X]</k>. Each time an attack made with a <k>[SUSTAINED HITS]</k> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <k>[SUSTAINED HITS 2]</k> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <k>[SUSTAINED HITS 2]</k> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 108477,
+            "name": "Seismic assault",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112277,
+                "name": "Seismic assault",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "6",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3349,
+                    "name": "Assault",
+                    "rules": "Units containing one or more models with an <k>[ASSAULT]</k> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3402,
+                    "name": "Sustained Hits 1",
+                    "rules": "This ability always takes the form <k>[SUSTAINED HITS X]</k>. Each time an attack made with a <k>[SUSTAINED HITS]</k> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <k>[SUSTAINED HITS 2]</k> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <k>[SUSTAINED HITS 2]</k> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 62028,
+      "points": 340,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61992,
+          "miniatureName": "Transcendent C’tan",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    {
+      "id": 61798,
+      "points": 380,
+      "displayOrder": 2,
+      "isDefault": true,
+      "requiredFactionLabel": "Pantheon of Woe",
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61992,
+          "miniatureName": "Transcendent C’tan",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

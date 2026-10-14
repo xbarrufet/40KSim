@@ -1,0 +1,327 @@
+{
+  "id": 47670,
+  "slug": "lokhust-heavy-destroyers",
+  "name": "Lokhust Heavy Destroyers",
+  "baseSize": "60mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **1-3 Lokhust Heavy Destroyers**\n\n**Every model is equipped with:** gauss destructor; close combat weapon.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Optimised for Slaughter",
+      "rules": "Each time a model in this unit makes an attack with an enmitic exterminator that targets a unit (excluding **MONSTERS** and **VEHICLES**), re-roll a Wound roll of 1. Each time a model in this unit makes an attack with a gauss destructor that targets a **MONSTER** or **VEHICLE**, re-roll a Wound roll of 1.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": 3,
+  "pointsStepPoints": 10,
+  "leads": [],
+  "ledBy": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47607,
+        "name": "Lokhust Lord",
+        "slug": "lokhust-lord",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 62427,
+      "name": "Lokhust Heavy Destroyer",
+      "stats": {
+        "save": "3+",
+        "wounds": "4",
+        "movement": "8\"",
+        "toughness": "6",
+        "leadership": "7+",
+        "objectiveControl": "2"
+      },
+      "keywords": [
+        {
+          "id": 51698,
+          "name": "Destroyer Cult"
+        },
+        {
+          "id": 51013,
+          "name": "Fly"
+        },
+        {
+          "id": 51693,
+          "name": "Lokhust Heavy Destroyers"
+        },
+        {
+          "id": 51563,
+          "name": "Mounted"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108480,
+            "name": "Close combat weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112177,
+                "name": "Close combat weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "2",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105368,
+            "name": "Gauss destructor",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113897,
+                "name": "Gauss destructor",
+                "type": "ranged",
+                "range": "48\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "14",
+                "armourPenetration": "-4",
+                "damage": "6",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3370,
+                    "name": "Heavy",
+                    "rules": "In your Shooting phase, each time an attack is made with a <k>[HEAVY]</k> weapon, add 1 to the <b>hit roll</b> if <u>all</u> of the following apply to the attacking unit:<ul><li>That unit is <b>unengaged</b>.\u0007</li><li>That unit was not set up on the battlefield this turn.</li><li>No model in that unit has moved moret han 3\" this turn.</li>"
+                  },
+                  {
+                    "id": 3486,
+                    "name": "Lethal Hits",
+                    "rules": "Each time an attack made with a <k>[LETHAL HITS]</k> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <k>[DEVASTATING WOUNDS]</k>.</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 108480,
+            "name": "Close combat weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112177,
+                "name": "Close combat weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "2",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105333,
+            "name": "Enmitic exterminator",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113931,
+                "name": "Enmitic exterminator",
+                "type": "ranged",
+                "range": "36\"",
+                "attacks": "6",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3370,
+                    "name": "Heavy",
+                    "rules": "In your Shooting phase, each time an attack is made with a <k>[HEAVY]</k> weapon, add 1 to the <b>hit roll</b> if <u>all</u> of the following apply to the attacking unit:<ul><li>That unit is <b>unengaged</b>.\u0007</li><li>That unit was not set up on the battlefield this turn.</li><li>No model in that unit has moved moret han 3\" this turn.</li>"
+                  },
+                  {
+                    "id": 3441,
+                    "name": "Rapid Fire 6",
+                    "rules": "This ability always takes the form <k>[RAPID FIRE X]</k>. Each time you gather <b>attack dice</b> for a <k>[RAPID FIRE]</k> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <k>[RAPID FIRE 1]</k> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  },
+                  {
+                    "id": 3402,
+                    "name": "Sustained Hits 1",
+                    "rules": "This ability always takes the form <k>[SUSTAINED HITS X]</k>. Each time an attack made with a <k>[SUSTAINED HITS]</k> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <k>[SUSTAINED HITS 2]</k> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <k>[SUSTAINED HITS 2]</k> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105368,
+            "name": "Gauss destructor",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113897,
+                "name": "Gauss destructor",
+                "type": "ranged",
+                "range": "48\"",
+                "attacks": "1",
+                "ballisticSkill": "3+",
+                "weaponSkill": null,
+                "strength": "14",
+                "armourPenetration": "-4",
+                "damage": "6",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3370,
+                    "name": "Heavy",
+                    "rules": "In your Shooting phase, each time an attack is made with a <k>[HEAVY]</k> weapon, add 1 to the <b>hit roll</b> if <u>all</u> of the following apply to the attacking unit:<ul><li>That unit is <b>unengaged</b>.\u0007</li><li>That unit was not set up on the battlefield this turn.</li><li>No model in that unit has moved moret han 3\" this turn.</li>"
+                  },
+                  {
+                    "id": 3486,
+                    "name": "Lethal Hits",
+                    "rules": "Each time an attack made with a <k>[LETHAL HITS]</k> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <k>[DEVASTATING WOUNDS]</k>.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 41630,
+      "rulesText": "■ Any number of models can each have their gauss destructor replaced with 1 enmitic exterminator.",
+      "displayOrder": 1
+    }
+  ],
+  "compositions": [
+    {
+      "id": 61914,
+      "points": 50,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 62427,
+          "miniatureName": "Lokhust Heavy Destroyer",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    {
+      "id": 62597,
+      "points": 100,
+      "displayOrder": 2,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 2,
+      "miniatures": [
+        {
+          "miniatureId": 62427,
+          "miniatureName": "Lokhust Heavy Destroyer",
+          "min": 2,
+          "max": 2
+        }
+      ]
+    },
+    {
+      "id": 61671,
+      "points": 165,
+      "displayOrder": 3,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 3,
+      "miniatures": [
+        {
+          "miniatureId": 62427,
+          "miniatureName": "Lokhust Heavy Destroyer",
+          "min": 3,
+          "max": 3
+        }
+      ]
+    }
+  ]
+}

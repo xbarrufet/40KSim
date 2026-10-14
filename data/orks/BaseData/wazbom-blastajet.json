@@ -1,0 +1,453 @@
+{
+  "id": 46896,
+  "slug": "wazbom-blastajet",
+  "name": "Wazbom Blastajet",
+  "baseSize": "120x92mm",
+  "maxModelCount": null,
+  "unitComposition": "<ul><li>1 Wazbom Blastajet model</li></ul>\rThis model is equipped with: 1 Armoured Impact; 1 Smasha Gun; 1 Dual Wazbom Mega-kannon.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Damaged 4",
+      "rules": "This ability always takes the form <b>Damaged X</b>. While a model’s remaining wounds are equal to or less than <b>X</b>, that model is <b>damaged</b>:<ul><li>While a model is <b>damaged</b>, that model's attacks have -1 to <b>hit rolls</b>.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Go fer da Weak Spot",
+      "rules": "In your Shooting phase, this unit's ranged attacks that target a <k>Monster/Vehicle</k> unit have +1 to <b>wound rolls</b>.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Waaagh!",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 0,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "From detonating ammo stores to corrosive innards or frenzied death throes, some targets are deadly even in defeat.",
+      "name": "Deadly Demise D3",
+      "rules": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\").",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": [
+    {
+      "name": "DAMAGED",
+      "rules": null,
+      "displayOrder": 0
+    }
+  ],
+  "rules": null,
+  "pointsStepAt": 3,
+  "pointsStepPoints": 20,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1858,
+    "slug": "orks",
+    "name": "Orks",
+    "commonName": "Orks"
+  },
+  "miniatures": [
+    {
+      "id": 62457,
+      "name": "Wazbom Blastajet",
+      "stats": {
+        "save": "3+",
+        "wounds": "12",
+        "movement": "-",
+        "toughness": "9",
+        "leadership": "7+",
+        "invulnerableSave": {
+          "save": "6+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "-"
+      },
+      "keywords": [
+        {
+          "id": 51603,
+          "name": "Aircraft"
+        },
+        {
+          "id": 51013,
+          "name": "Fly"
+        },
+        {
+          "id": 50820,
+          "name": "Smoke"
+        },
+        {
+          "id": 51577,
+          "name": "Speed Freeks"
+        },
+        {
+          "id": 51775,
+          "name": "Vehicle"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105016,
+            "name": "Armoured Impact",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110832,
+                "name": "Armoured Impact",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "6",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106527,
+            "name": "Dual Wazbom Mega-kannon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112517,
+                "name": "Dual Wazbom Mega-kannon",
+                "type": "ranged",
+                "range": "36\"",
+                "attacks": "4",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "12",
+                "armourPenetration": "-2",
+                "damage": "4",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3348,
+                    "name": "HAZARDOUS",
+                    "rules": "Each time a unit is <b>selected to shoot</b> or <b>selected to fight</b>, after that unit has resolved all of its attacks, make a number of <b>hazard rolls</b> (06.03) for that unit equal to the number of <b>[HAZARDOUS]</b> weapons you selected in the Select Weapons step."
+                  },
+                  {
+                    "id": 3420,
+                    "name": "IGNORES COVER",
+                    "rules": "Each time an attack is made with an <b>[IGNORES COVER]</b> weapon, the target cannot have the <b>benefit of cover</b> against that attack (13.08), including from rules that give a model or unit the <b>benefit of cover</b> (e.g. <b>Stealth</b>)."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 106833,
+            "name": "Smasha Gun",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112826,
+                "name": "Smasha Gun",
+                "type": "ranged",
+                "range": "48\"",
+                "attacks": "4",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-3",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3420,
+                    "name": "IGNORES COVER",
+                    "rules": "Each time an attack is made with an <b>[IGNORES COVER]</b> weapon, the target cannot have the <b>benefit of cover</b> against that attack (13.08), including from rules that give a model or unit the <b>benefit of cover</b> (e.g. <b>Stealth</b>)."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 108650,
+            "name": "Blastajet Force Field",
+            "wargearType": "wargear",
+            "ruleText": "Models in this unit:\n<ul><li>Have 5+ <b>InSv</b>.</li>\n<li>Do not have <k>smoke</k>.</li></ul>",
+            "profiles": []
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105016,
+            "name": "Armoured Impact",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 110832,
+                "name": "Armoured Impact",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "3",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "6",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107890,
+            "name": "Dual Supa-shoota",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113936,
+                "name": "Dual Supa-shoota",
+                "type": "ranged",
+                "range": "36\"",
+                "attacks": "8",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3420,
+                    "name": "IGNORES COVER",
+                    "rules": "Each time an attack is made with an <b>[IGNORES COVER]</b> weapon, the target cannot have the <b>benefit of cover</b> against that attack (13.08), including from rules that give a model or unit the <b>benefit of cover</b> (e.g. <b>Stealth</b>)."
+                  },
+                  {
+                    "id": 3430,
+                    "name": "LETHAL HITS: non-MONSTER/VEHICLE",
+                    "rules": "Each time an attack made with a <b>[LETHAL HITS]</b> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <b>[DEVASTATING WOUNDS]</b>.</i>"
+                  },
+                  {
+                    "id": 3389,
+                    "name": "RAPID FIRE 4",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105613,
+            "name": "Dual Tellyport Mega-blasta",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111480,
+                "name": "Dual Tellyport Mega-blasta",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "6",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "9",
+                "armourPenetration": "-2",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3443,
+                    "name": "BLAST 1",
+                    "rules": "Each time you gather <b>attack dice</b> for a <b>[BLAST]</b> weapon, add one additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\nIf this ability takes the form <b>[BLAST X]</b>, each time you gather <b>attack dice</b> for such a weapon, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n\n<b>Example:</b> <i>If a <b>[BLAST 2]</b> weapon with an <b>A</b> characteristic of 3 targets a unit containing 12 models, you would gather four additional <b>attack dice</b> for that weapon (for a total of seven for that weapon).</i>"
+                  },
+                  {
+                    "id": 3420,
+                    "name": "IGNORES COVER",
+                    "rules": "Each time an attack is made with an <b>[IGNORES COVER]</b> weapon, the target cannot have the <b>benefit of cover</b> against that attack (13.08), including from rules that give a model or unit the <b>benefit of cover</b> (e.g. <b>Stealth</b>)."
+                  },
+                  {
+                    "id": 3466,
+                    "name": "RAPID FIRE 6",
+                    "rules": "This ability always takes the form <b>[RAPID FIRE X]</b>. Each time you gather <b>attack dice</b> for a <b>[RAPID FIRE]</b> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <b>[RAPID FIRE 1]</b> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106527,
+            "name": "Dual Wazbom Mega-kannon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112517,
+                "name": "Dual Wazbom Mega-kannon",
+                "type": "ranged",
+                "range": "36\"",
+                "attacks": "4",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "12",
+                "armourPenetration": "-2",
+                "damage": "4",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3348,
+                    "name": "HAZARDOUS",
+                    "rules": "Each time a unit is <b>selected to shoot</b> or <b>selected to fight</b>, after that unit has resolved all of its attacks, make a number of <b>hazard rolls</b> (06.03) for that unit equal to the number of <b>[HAZARDOUS]</b> weapons you selected in the Select Weapons step."
+                  },
+                  {
+                    "id": 3420,
+                    "name": "IGNORES COVER",
+                    "rules": "Each time an attack is made with an <b>[IGNORES COVER]</b> weapon, the target cannot have the <b>benefit of cover</b> against that attack (13.08), including from rules that give a model or unit the <b>benefit of cover</b> (e.g. <b>Stealth</b>)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106833,
+            "name": "Smasha Gun",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112826,
+                "name": "Smasha Gun",
+                "type": "ranged",
+                "range": "48\"",
+                "attacks": "4",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-3",
+                "damage": "3",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3420,
+                    "name": "IGNORES COVER",
+                    "rules": "Each time an attack is made with an <b>[IGNORES COVER]</b> weapon, the target cannot have the <b>benefit of cover</b> against that attack (13.08), including from rules that give a model or unit the <b>benefit of cover</b> (e.g. <b>Stealth</b>)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 41318,
+      "rulesText": "This model’s Dual Wazbom Mega-kannon can be replaced with 1 Dual Tellyport Mega‑blasta.",
+      "displayOrder": 1
+    },
+    {
+      "id": 42027,
+      "rulesText": "This model can be equipped with 1 Blastajet Force Field.",
+      "displayOrder": 2
+    },
+    {
+      "id": 42151,
+      "rulesText": "This model can be equipped with 1 Dual Supa‑shoota.",
+      "displayOrder": 3
+    }
+  ],
+  "compositions": [
+    {
+      "id": 62043,
+      "points": 215,
+      "displayOrder": 0,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 62457,
+          "miniatureName": "Wazbom Blastajet",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

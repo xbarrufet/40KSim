@@ -1,0 +1,78 @@
+{
+  "imperial-fists/ceramite-sentinels": [
+    {
+      "slug": "castellum-omnivox",
+      "name": "Castellum Omnivox",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes unit only. When this unit makes a advance/fall-back move, that move does not prevent this unit from being eligible to start an action."
+    },
+    {
+      "slug": "defensive-mastery",
+      "name": "Defensive Mastery",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. When both players have deployed their armies, you can redeploy up to three friendly Adeptus Astartes Infantry units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves."
+    },
+    {
+      "slug": "honour-indefatigable",
+      "name": "Honour Indefatigable",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Gravis"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Gravis model only. (Once per battle, per army) At the end of a phase in which this model is destroyed, roll one D6:On a 2+, set this model back up on the battlefield as close as possible to where it was destroyed, unengaged, with 3 wounds remaining."
+    },
+    {
+      "slug": "spy-skull-data-link",
+      "name": "Spy-skull Data Link",
+      "points": 10,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "keyword": "IGNORES COVER",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes unit only. This unit's ranged weapons have [IGNORES COVER]."
+    }
+  ]
+}

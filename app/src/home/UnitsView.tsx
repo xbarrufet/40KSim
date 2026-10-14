@@ -4,6 +4,8 @@ import { getUnitsByFaction, getUnitStatuses, syncUnitCatalog, type UnitStatus } 
 import type { FactionBackup, UnitCatalog } from '../data/schema'
 import { exportFactionBackup, importFactionBackup, validateBackupFile } from '../data/backup'
 import { ProcessUnitView } from './ProcessUnitView'
+import { DetachmentsView } from './DetachmentsView'
+import { ArmyRulesView } from './ArmyRulesView'
 import { UploadModal } from './UploadModal'
 import { ProposalsImportModal } from './ProposalsImportModal'
 
@@ -21,6 +23,7 @@ interface UnitRow {
 }
 
 type GridItem = { type: 'category'; label: string } | { type: 'unit'; unit: UnitRow }
+type Subtab = 'datasheets' | 'armyRules' | 'detachments'
 
 function distributeToColumns(items: GridItem[]): [GridItem[], GridItem[], GridItem[], GridItem[]] {
   const total = items.length
@@ -52,6 +55,7 @@ export function UnitsView({ faction, onBack }: UnitsViewProps) {
   const [importing, setImporting] = useState(false)
   const [backupToConfirm, setBackupToConfirm] = useState<FactionBackup | null>(null)
   const [backupError, setBackupError] = useState<string | null>(null)
+  const [subtab, setSubtab] = useState<Subtab>('datasheets')
 
   const loadUnits = useCallback(() => {
     getUnitsByFaction(faction.slug)
@@ -140,8 +144,6 @@ export function UnitsView({ faction, onBack }: UnitsViewProps) {
     }
   }, [faction.slug, backupToConfirm, loadUnits])
 
-  const categories = units ? Array.from(new Set(units.map((u) => u.category ?? 'Unidades'))) : []
-
   if (selectedUnit) {
     return (
       <ProcessUnitView
@@ -156,6 +158,7 @@ export function UnitsView({ faction, onBack }: UnitsViewProps) {
     )
   }
 
+  const categories = units ? Array.from(new Set(units.map((u) => u.category ?? 'Unidades'))) : []
   const gridItems: GridItem[] = []
   if (units) {
     for (const category of categories) {
@@ -174,101 +177,120 @@ export function UnitsView({ faction, onBack }: UnitsViewProps) {
           <ArrowLeft size={14} /> Facciones
         </button>
         <h1>{faction.name}</h1>
-        <button
-          type="button"
-          className="upload-btn"
-          onClick={handleSync}
-          disabled={syncing}
-          title="Sincronizar catálogo"
-        >
-          <RefreshCw size={16} />
-        </button>
-        <button type="button" className="upload-btn" onClick={() => setShowUpload(true)} title="Subir BaseData">
-          <Upload size={16} />
-        </button>
-        <button type="button" className="upload-btn" onClick={() => setShowProposalsImport(true)} title="Importar propuestas IA">
-          IA
-        </button>
-        <button type="button" className="upload-btn" onClick={handleExport} disabled={exporting} title="Descargar backup">
-          <Download size={16} />
-        </button>
-        <label className="upload-btn" title="Restaurar backup" style={{ cursor: importing ? 'not-allowed' : 'pointer' }}>
-          <Upload size={16} />
-          <input type="file" accept=".json" onChange={handleRestoreFile} disabled={importing} hidden />
-        </label>
+        {subtab === 'datasheets' && (
+          <>
+            <button type="button" className="upload-btn" onClick={handleSync} disabled={syncing} title="Sincronizar catálogo">
+              <RefreshCw size={16} />
+            </button>
+            <button type="button" className="upload-btn" onClick={() => setShowUpload(true)} title="Subir BaseData">
+              <Upload size={16} />
+            </button>
+            <button type="button" className="upload-btn" onClick={() => setShowProposalsImport(true)} title="Importar propuestas IA">
+              IA
+            </button>
+            <button type="button" className="upload-btn" onClick={handleExport} disabled={exporting} title="Descargar backup">
+              <Download size={16} />
+            </button>
+            <label className="upload-btn" title="Restaurar backup" style={{ cursor: importing ? 'not-allowed' : 'pointer' }}>
+              <Upload size={16} />
+              <input type="file" accept=".json" onChange={handleRestoreFile} disabled={importing} hidden />
+            </label>
+          </>
+        )}
       </div>
 
-      {error && <p className="board-alert">{error}</p>}
-      {syncResult && (
-        <p className={syncResult.startsWith('No hay') || syncResult.startsWith('Error') || syncResult.startsWith('HTTP') ? 'board-alert' : 'board-success'}>
-          {syncResult}
-        </p>
-      )}
+      <nav className="faction-subtabs">
+        <button type="button" className={subtab === 'datasheets' ? 'active' : ''} onClick={() => setSubtab('datasheets')}>
+          DATASHEETS
+        </button>
+        <button type="button" className={subtab === 'armyRules' ? 'active' : ''} onClick={() => setSubtab('armyRules')}>
+          ARMY RULES
+        </button>
+        <button type="button" className={subtab === 'detachments' ? 'active' : ''} onClick={() => setSubtab('detachments')}>
+          DETACHMENTS
+        </button>
+      </nav>
 
-      <div className="unit-columns">
-        {columns.map((col, colIdx) => (
-          <div key={colIdx}>
-            {col.map((item, itemIdx) =>
-              item.type === 'category' ? (
-                <h2 key={`cat-${itemIdx}`} className="unit-cat-header">
-                  {item.label.toUpperCase()}
-                </h2>
-              ) : (
-                <div key={item.unit.slug} className="unit-row">
-                  <button
-                    type="button"
-                    className="unit-row-name unit-link"
-                    onClick={() => setSelectedUnit(item.unit.slug)}
-                  >
-                    {item.unit.name}
-                  </button>
-                  <span className={`status-light is-${item.unit.status}`} aria-hidden="true" />
-                  <span className="unit-row-spacer" />
-                  <span className="unit-row-points">{item.unit.points ?? 0}</span>
+      {subtab === 'datasheets' && (
+        <>
+          {error && <p className="board-alert">{error}</p>}
+          {syncResult && (
+            <p className={syncResult.startsWith('No hay') || syncResult.startsWith('Error') || syncResult.startsWith('HTTP') ? 'board-alert' : 'board-success'}>
+              {syncResult}
+            </p>
+          )}
+
+          <div className="unit-columns">
+            {columns.map((col, colIdx) => (
+              <div key={colIdx}>
+                {col.map((item, itemIdx) =>
+                  item.type === 'category' ? (
+                    <h2 key={`cat-${itemIdx}`} className="unit-cat-header">
+                      {item.label.toUpperCase()}
+                    </h2>
+                  ) : (
+                    <div key={item.unit.slug} className="unit-row">
+                      <button
+                        type="button"
+                        className="unit-row-name unit-link"
+                        onClick={() => setSelectedUnit(item.unit.slug)}
+                      >
+                        {item.unit.name}
+                      </button>
+                      <span className={`status-light is-${item.unit.status}`} aria-hidden="true" />
+                      <span className="unit-row-spacer" />
+                      <span className="unit-row-points">{item.unit.points ?? 0}</span>
+                    </div>
+                  ),
+                )}
+              </div>
+            ))}
+          </div>
+
+          {showUpload && (
+            <UploadModal
+              factionSlug={faction.slug}
+              units={units ?? []}
+              onClose={() => setShowUpload(false)}
+              onUploaded={loadUnits}
+            />
+          )}
+          {showProposalsImport && (
+            <ProposalsImportModal
+              factionSlug={faction.slug}
+              onClose={() => setShowProposalsImport(false)}
+              onImported={loadUnits}
+            />
+          )}
+          {backupError && <p className="board-alert">{backupError}</p>}
+          {importing && <p>Importando backup…</p>}
+          {backupToConfirm && (
+            <div className="modal-overlay" onClick={() => setBackupToConfirm(null)}>
+              <div className="modal" onClick={(e) => e.stopPropagation()}>
+                <h2>Restaurar backup</h2>
+                <p>Facción: <strong>{backupToConfirm.factionSlug}</strong></p>
+                <p>Exportado: {new Date(backupToConfirm.exportedAt).toLocaleString()}</p>
+                <ul style={{ margin: '1rem 0', paddingLeft: '1.2rem' }}>
+                  <li>{backupToConfirm.units.length} unidades</li>
+                  <li>{backupToConfirm.baseData.length} base data</li>
+                  <li>{backupToConfirm.unitData.length} habilidades estructuradas</li>
+                  <li>{backupToConfirm.loadoutData.length} loadout</li>
+                  <li>{(backupToConfirm.detachmentData ?? []).length} detachments</li>
+                </ul>
+                <p>Los registros existentes serán sobreescritos.</p>
+                <div className="modal-actions">
+                  <button type="button" onClick={() => setBackupToConfirm(null)}>Cancelar</button>
+                  <button type="button" className="confirm-btn" onClick={confirmImport}>Importar</button>
                 </div>
-              ),
-            )}
-          </div>
-        ))}
-      </div>
-
-      {showUpload && (
-        <UploadModal
-          factionSlug={faction.slug}
-          units={units ?? []}
-          onClose={() => setShowUpload(false)}
-          onUploaded={loadUnits}
-        />
-      )}
-      {showProposalsImport && (
-        <ProposalsImportModal
-          factionSlug={faction.slug}
-          onClose={() => setShowProposalsImport(false)}
-          onImported={loadUnits}
-        />
-      )}
-      {backupError && <p className="board-alert">{backupError}</p>}
-      {importing && <p>Importando backup…</p>}
-      {backupToConfirm && (
-        <div className="modal-overlay" onClick={() => setBackupToConfirm(null)}>
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <h2>Restaurar backup</h2>
-            <p>Facción: <strong>{backupToConfirm.factionSlug}</strong></p>
-            <p>Exportado: {new Date(backupToConfirm.exportedAt).toLocaleString()}</p>
-            <ul style={{ margin: '1rem 0', paddingLeft: '1.2rem' }}>
-              <li>{backupToConfirm.units.length} unidades</li>
-              <li>{backupToConfirm.baseData.length} base data</li>
-              <li>{backupToConfirm.unitData.length} habilidades estructuradas</li>
-              <li>{backupToConfirm.loadoutData.length} loadout</li>
-            </ul>
-            <p>Los registros existentes serán sobreescritos.</p>
-            <div className="modal-actions">
-              <button type="button" onClick={() => setBackupToConfirm(null)}>Cancelar</button>
-              <button type="button" className="confirm-btn" onClick={confirmImport}>Importar</button>
+              </div>
             </div>
-          </div>
-        </div>
+          )}
+        </>
       )}
+
+      {subtab === 'armyRules' && <ArmyRulesView factionSlug={faction.slug} />}
+
+      {subtab === 'detachments' && <DetachmentsView faction={faction} inline />}
     </section>
   )
 }

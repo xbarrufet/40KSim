@@ -12,32 +12,18 @@ import {
   type WeaponNameEntry,
 } from '../data/preprocessBaseData'
 import type {
-  AppliesTo,
-  Phase,
-  DamageMitigationEffect,
-  DiceModifierEffect,
   Effect,
   Frequency,
   MortalWoundsHits,
-  MortalWoundsResolution,
-  MortalWoundsUnitType,
   OtherAbility,
-  StatModifierEffect,
+  Phase,
   StructuredAbilitiesData,
   StructuredLoadoutData,
   TargetCondition,
-  TargetConditionKeyword,
-  UnitKeywordEffect,
-  UnitStat,
   WargearEntry,
   WargearOption,
-  WeaponKeywordEffect,
-  WeaponStat,
-  WeaponTarget,
 } from '../data/schema'
 import { isValidDiceNotation } from '../data/diceNotation'
-import { KNOWN_UNIT_KEYWORDS, TARGET_CONDITION_KEYWORDS, type KnownUnitKeyword } from '../data/schema'
-import { KNOWN_WEAPON_KEYWORDS, type KnownAttribute } from '../data/weaponKeywords'
 import {
   buildOtherAbility,
   buildStructuredAbilities,
@@ -46,6 +32,7 @@ import {
 } from './processUnitLogic'
 import { FormattedAbilityText } from './FormattedAbilityText'
 import { UnitDatasheet } from './UnitDatasheet'
+import { AppliedToSelect, CategorySelect, EffectFields, defaultEffectForCategory } from './EffectEditor'
 
 async function computeBaseDataHash(baseData: unknown): Promise<string> {
   const encoded = new TextEncoder().encode(JSON.stringify(baseData))
@@ -71,27 +58,6 @@ function toDraft(structuredAbilitiesData: StructuredAbilitiesData): Draft {
   }
 }
 
-const WEAPON_STATS = new Set<string>(['Strength', 'Damage', 'Range', 'Attacks', 'AP', 'Skill'])
-function isWeaponStat(s: string): boolean { return WEAPON_STATS.has(s) }
-
-function defaultEffectForCategory(category: Effect['category']): Effect {
-  switch (category) {
-    case 'statModifier':
-      return { category, appliedTo: 'SelfModel', stat: 'ObjectiveControl', mode: 'add', value: 1 }
-    case 'diceModifier':
-      return { category, appliedTo: 'SelfModel', roll: 'toHit', action: 'rerollOnes' }
-    case 'weaponKeyword':
-      return { category, appliedTo: 'SelfModel', weaponTarget: 'ALL', keyword: KNOWN_WEAPON_KEYWORDS[0], value: null }
-    case 'damageMitigation':
-      return { category, appliedTo: 'SelfModel', kind: 'fnp', value: 5, condition: 'any' }
-    case 'mortalWounds':
-      return { category, appliedTo: 'Enemy', unitType: 'ALL', hits: { kind: 'notation', value: '1' }, resolution: { kind: 'always' }, damagePerSuccess: '1' }
-    case 'unitKeyword':
-      return { category, appliedTo: 'SelfUnit', keyword: 'BENEFIT OF COVER' as const, value: null }
-    case 'heal':
-      return { category, appliedTo: 'SelfUnit', amount: '1' }
-  }
-}
 
 function describeHits(hits: MortalWoundsHits): string {
   switch (hits.kind) {
@@ -891,22 +857,8 @@ function StructuringForm({ rows, weaponNames, onChangeRow, onAddRow, onAddEffect
             {row.effects.map((effect, effectIndex) => (
               <div key={effectIndex} className="structuring-effect-row">
                 <div className="effect-target-category-row">
-                  {TARGET_SELECT(effect, (e) => onUpdateEffect(rowIndex, effectIndex, e))}
-                  <label>
-                    Categoría
-                    <select
-                      value={effect.category}
-                      onChange={(e) => onUpdateEffect(rowIndex, effectIndex, { ...defaultEffectForCategory(e.target.value as Effect['category']), appliedTo: effect.appliedTo })}
-                    >
-                      <option value="statModifier">Stats</option>
-                      <option value="diceModifier">Tirada</option>
-                      <option value="weaponKeyword">Palabra Clave</option>
-                      <option value="unitKeyword">Keyword Unidad</option>
-                      <option value="damageMitigation">Mitigación Daño</option>
-                      <option value="mortalWounds">Heridas Mortales</option>
-                      <option value="heal">Curar</option>
-                    </select>
-                  </label>
+                  <AppliedToSelect value={effect.appliedTo} onChange={(v) => onUpdateEffect(rowIndex, effectIndex, { ...effect, appliedTo: v })} />
+                  <CategorySelect value={effect.category} onChange={(cat) => onUpdateEffect(rowIndex, effectIndex, { ...defaultEffectForCategory(cat), appliedTo: effect.appliedTo })} />
                 </div>
                 <EffectFields effect={effect} weaponNames={weaponNames} onChange={(e) => onUpdateEffect(rowIndex, effectIndex, e)} />
                 {row.effects.length > 1 && (
@@ -950,364 +902,6 @@ function StructuringForm({ rows, weaponNames, onChangeRow, onAddRow, onAddEffect
         <button type="button" className="confirm-btn" onClick={onCommit}>Guardar habilidad estructurada</button>
       </div>
     </div>
-  )
-}
-
-const TARGET_SELECT = (effect: Effect, onChange: (e: Effect) => void) => (
-  <label>
-    Target
-    <select value={effect.appliedTo} onChange={(e) => onChange({ ...effect, appliedTo: e.target.value as AppliesTo })}>
-      <option value="SelfModel">Modelo</option>
-      <option value="SelfUnit">Unidad</option>
-      <option value="Ally">Aliado</option>
-      <option value="Enemy">Enemigo</option>
-    </select>
-  </label>
-)
-
-function WeaponSelect({ value, weaponNames, onChange }: { value: string; weaponNames: WeaponNameEntry[]; onChange: (v: string) => void }) {
-  const ranged = weaponNames.filter((w) => w.type === 'ranged')
-  const melee = weaponNames.filter((w) => w.type === 'melee')
-  return (
-    <select value={value} onChange={(e) => onChange(e.target.value)}>
-      <option value="ALL">Todas</option>
-      <option value="RANGE">Distancia</option>
-      <option value="MELEE">Cuerpo a Cuerpo</option>
-      {ranged.length > 0 && (
-        <optgroup label="Distancia">
-          {ranged.map((w) => <option key={w.name} value={w.name}>{w.name}</option>)}
-        </optgroup>
-      )}
-      {melee.length > 0 && (
-        <optgroup label="Cuerpo a Cuerpo">
-          {melee.map((w) => <option key={w.name} value={w.name}>{w.name}</option>)}
-        </optgroup>
-      )}
-    </select>
-  )
-}
-
-function EffectFields({ effect, weaponNames, onChange }: { effect: Effect; weaponNames: WeaponNameEntry[]; onChange: (e: Effect) => void }) {
-  switch (effect.category) {
-    case 'statModifier':
-      return (
-        <>
-          {isWeaponStat(effect.stat) && (
-            <label>
-              Arma
-              <WeaponSelect value={effect.weaponTarget ?? 'ALL'} weaponNames={weaponNames} onChange={(v) => onChange({ ...effect, weaponTarget: v as WeaponTarget })} />
-            </label>
-          )}
-          <label>
-            Stat
-            <select value={effect.stat} onChange={(e) => onChange({ ...effect, stat: e.target.value as UnitStat | WeaponStat })}>
-              <optgroup label="Unidad">
-                <option value="Movement">Movement</option>
-                <option value="Toughness">Toughness</option>
-                <option value="Save">Save</option>
-                <option value="Invulnerable">Invulnerable</option>
-                <option value="Wounds">Wounds</option>
-                <option value="ObjectiveControl">ObjectiveControl</option>
-                <option value="Leadership">Leadership</option>
-              </optgroup>
-              <optgroup label="Arma">
-                <option value="Strength">Strength</option>
-                <option value="Damage">Damage</option>
-                <option value="Range">Range</option>
-                <option value="Attacks">Attacks</option>
-                <option value="AP">AP</option>
-                <option value="Skill">Skill</option>
-              </optgroup>
-            </select>
-          </label>
-          <label>
-            Modo
-            <select value={effect.mode} onChange={(e) => onChange({ ...effect, mode: e.target.value as StatModifierEffect['mode'] })}>
-              <option value="add">Sumar</option>
-              <option value="subtract">Restar</option>
-              <option value="setValue">Fijar valor</option>
-              <option value="halve">Dividir 2</option>
-            </select>
-          </label>
-          {effect.mode !== 'halve' && (
-            <label>
-              Valor
-              <input type="number" value={effect.value ?? ''} onChange={(e) => onChange({ ...effect, value: e.target.value ? Number(e.target.value) : undefined })} />
-            </label>
-          )}
-          <TargetConditionFields condition={effect.targetCondition} onChange={(tc) => onChange({ ...effect, targetCondition: tc })} />
-        </>
-      )
-    case 'diceModifier':
-      return (
-        <>
-          <label>
-            Tirada
-            <select value={effect.roll} onChange={(e) => onChange({ ...effect, roll: e.target.value as DiceModifierEffect['roll'] })}>
-              <option value="toHit">Impactar</option>
-              <option value="toWound">Herir</option>
-              <option value="savingThrow">Salvación</option>
-              <option value="damage">Daño</option>
-              <option value="hazard">Hazard</option>
-              <option value="charge">Carga</option>
-              <option value="battleshock">Battleshock</option>
-            </select>
-          </label>
-          <label>
-            Acción
-            <select value={effect.action} onChange={(e) => onChange({ ...effect, action: e.target.value as DiceModifierEffect['action'] })}>
-              <option value="rerollOnes">Reroll 1s</option>
-              <option value="rerollFailed">Reroll fallos</option>
-              <option value="rerollAll">Reroll todos</option>
-              <option value="addToRoll">+1 a la tirada</option>
-              <option value="subtractFromRoll">-1 a la tirada</option>
-              <option value="autoSuccess">Éxito automático</option>
-              <option value="ignoreModifiers">Ignorar modificadores</option>
-            </select>
-          </label>
-          <label>
-            Arma
-            <WeaponSelect value={effect.attackType ?? 'ALL'} weaponNames={weaponNames} onChange={(v) => onChange({ ...effect, attackType: v as DiceModifierEffect['attackType'] })} />
-          </label>
-          <TargetConditionFields condition={effect.targetCondition} onChange={(tc) => onChange({ ...effect, targetCondition: tc })} />
-        </>
-      )
-    case 'weaponKeyword':
-      return (
-        <>
-          <label>
-            Arma
-            <WeaponSelect value={effect.weaponTarget} weaponNames={weaponNames} onChange={(v) => onChange({ ...effect, weaponTarget: v as WeaponTarget })} />
-          </label>
-          <label>
-            Keyword
-            <select value={effect.keyword} onChange={(e) => onChange({ ...effect, keyword: e.target.value as KnownAttribute })}>
-              {KNOWN_WEAPON_KEYWORDS.map((k) => <option key={k} value={k}>{k}</option>)}
-            </select>
-          </label>
-          <label>
-            Valor (opc.)
-            <input value={effect.value ?? ''} onChange={(e) => onChange({ ...effect, value: e.target.value || null } as WeaponKeywordEffect)} />
-          </label>
-          <TargetConditionFields condition={effect.targetCondition} onChange={(tc) => onChange({ ...effect, targetCondition: tc })} />
-        </>
-      )
-    case 'unitKeyword':
-      return (
-        <>
-          <label>
-            Keyword
-            <select value={effect.keyword} onChange={(e) => onChange({ ...effect, keyword: e.target.value as KnownUnitKeyword })}>
-              {KNOWN_UNIT_KEYWORDS.map((k) => <option key={k} value={k}>{k}</option>)}
-            </select>
-          </label>
-          <label>
-            Valor (opc.)
-            <input value={effect.value ?? ''} onChange={(e) => onChange({ ...effect, value: e.target.value || null } as UnitKeywordEffect)} />
-          </label>
-        </>
-      )
-    case 'damageMitigation':
-      return (
-        <>
-          <label>
-            Tipo
-            <select value={effect.kind} onChange={(e) => onChange({ ...effect, kind: e.target.value as DamageMitigationEffect['kind'] })}>
-              <option value="fnp">Feel No Pain</option>
-              <option value="damageReduction">Reducción daño</option>
-              <option value="damageHalved">Daño a la mitad</option>
-              <option value="fightOnDeath">Pelear al morir</option>
-            </select>
-          </label>
-          {(effect.kind === 'fnp' || effect.kind === 'damageReduction') && (
-            <label>
-              Valor
-              <input type="number" value={effect.value ?? ''} onChange={(e) => onChange({ ...effect, value: e.target.value ? Number(e.target.value) : undefined })} />
-            </label>
-          )}
-          {effect.kind === 'fnp' && (
-            <label>
-              Condición
-              <select value={effect.condition ?? 'any'} onChange={(e) => onChange({ ...effect, condition: e.target.value as DamageMitigationEffect['condition'] })}>
-                <option value="any">Cualquiera</option>
-                <option value="vsMortalWounds">vs Heridas Mortales</option>
-                <option value="vsPsychic">vs Ataques Psíquicos</option>
-              </select>
-            </label>
-          )}
-        </>
-      )
-    case 'mortalWounds': {
-      return (
-        <>
-          <label>
-            Tipo Unidad
-            <select value={effect.unitType} onChange={(e) => onChange({ ...effect, unitType: e.target.value as MortalWoundsUnitType })}>
-              <option value="ALL">Todas</option>
-              <option value="VEHICLE">Vehicle</option>
-              <option value="INFANTRY">Infantry</option>
-              <option value="MONSTER">Monster</option>
-              <option value="CHARACTER">Character</option>
-              <option value="MOUNTED">Mounted</option>
-              <option value="FLY">Fly</option>
-              <option value="WALKER">Walker</option>
-              <option value="TITANIC">Titanic</option>
-            </select>
-          </label>
-          <fieldset>
-            <legend>Impactos</legend>
-            <MortalWoundsHitsFields hits={effect.hits} onChange={(hits) => onChange({ ...effect, hits })} />
-          </fieldset>
-          <fieldset>
-            <legend>Resolución</legend>
-            <MortalWoundsResolutionFields resolution={effect.resolution} onChange={(resolution) => onChange({ ...effect, resolution })} />
-          </fieldset>
-          <label>
-            MW por éxito
-            <DiceNotationInput value={effect.damagePerSuccess} onChange={(damagePerSuccess) => onChange({ ...effect, damagePerSuccess })} />
-          </label>
-        </>
-      )
-    }
-    case 'heal':
-      return (
-        <label>
-          Cantidad
-          <DiceNotationInput
-            value={effect.amount ?? '1'}
-            onChange={v => onChange({ ...effect, amount: v })}
-          />
-        </label>
-      )
-  }
-}
-
-function DiceNotationInput({ value, onChange, error }: { value: string; onChange: (v: string) => void; error?: boolean }) {
-  return (
-    <input
-      className={`dice-notation-input${error ? ' dice-notation-error' : ''}`}
-      value={value}
-      placeholder="ej: 3, D6, 2D3+1"
-      onChange={(e) => onChange(e.target.value)}
-    />
-  )
-}
-
-function TargetConditionFields({ condition, onChange }: { condition: TargetCondition | undefined; onChange: (tc: TargetCondition | undefined) => void }) {
-  const active = condition !== undefined
-  return (
-    <div className="target-condition-block">
-      <label className="target-condition-toggle">
-        <input
-          type="checkbox"
-          checked={active}
-          onChange={(e) => {
-            if (e.target.checked) {
-              onChange({ keywords: [], mode: 'excludes' })
-            } else {
-              onChange(undefined)
-            }
-          }}
-        />
-        Condición objetivo
-      </label>
-      {active && condition && (
-        <div className="target-condition-fields">
-          <select
-            value={condition.mode}
-            onChange={(e) => onChange({ ...condition, mode: e.target.value as TargetCondition['mode'] })}
-          >
-            <option value="excludes">Excepto contra</option>
-            <option value="includes">Solo contra</option>
-          </select>
-          <div className="target-condition-chips">
-            {TARGET_CONDITION_KEYWORDS.map((kw) => {
-              const selected = condition.keywords.includes(kw)
-              return (
-                <button
-                  key={kw}
-                  type="button"
-                  className={`target-condition-chip${selected ? ' selected' : ''}`}
-                  onClick={() => {
-                    const next = selected
-                      ? condition.keywords.filter((k: TargetConditionKeyword) => k !== kw)
-                      : [...condition.keywords, kw]
-                    onChange({ ...condition, keywords: next })
-                  }}
-                >
-                  {kw}
-                </button>
-              )
-            })}
-          </div>
-        </div>
-      )}
-    </div>
-  )
-}
-
-function MortalWoundsHitsFields({ hits, onChange }: { hits: MortalWoundsHits; onChange: (h: MortalWoundsHits) => void }) {
-  return (
-    <>
-      <label>
-        Tipo
-        <select value={hits.kind} onChange={(e) => {
-          const kind = e.target.value as MortalWoundsHits['kind']
-          if (kind === 'notation') onChange({ kind, value: '1' })
-          else onChange({ kind, stat: 'models' })
-        }}>
-          <option value="notation">Notación</option>
-          <option value="byStat">Por Stats</option>
-        </select>
-      </label>
-      {hits.kind === 'notation' && (
-        <label>
-          Valor
-          <DiceNotationInput value={hits.value} onChange={(value) => onChange({ ...hits, value })} />
-        </label>
-      )}
-      {hits.kind === 'byStat' && (
-        <label>
-          Stat
-          <select value={hits.stat} onChange={(e) => onChange({ ...hits, stat: e.target.value })}>
-            <option value="models">Nº Modelos</option>
-            <option value="Movement">Movement</option>
-            <option value="Toughness">Toughness</option>
-            <option value="Save">Save</option>
-            <option value="Invulnerable">Invulnerable</option>
-            <option value="Wounds">Wounds</option>
-            <option value="ObjectiveControl">ObjectiveControl</option>
-            <option value="Leadership">Leadership</option>
-          </select>
-        </label>
-      )}
-    </>
-  )
-}
-
-function MortalWoundsResolutionFields({ resolution, onChange }: { resolution: MortalWoundsResolution; onChange: (r: MortalWoundsResolution) => void }) {
-  return (
-    <>
-      <label>
-        Tipo
-        <select value={resolution.kind} onChange={(e) => {
-          const kind = e.target.value as MortalWoundsResolution['kind']
-          if (kind === 'always') onChange({ kind })
-          else onChange({ kind, threshold: 4 })
-        }}>
-          <option value="always">Siempre</option>
-          <option value="roll">Tirada</option>
-        </select>
-      </label>
-      {resolution.kind === 'roll' && (
-        <label>
-          Umbral (N+) en 1D6
-          <select value={resolution.threshold} onChange={(e) => onChange({ ...resolution, threshold: Number(e.target.value) })}>
-            {[2, 3, 4, 5, 6].map((v) => <option key={v} value={v}>{v}+</option>)}
-          </select>
-        </label>
-      )}
-    </>
   )
 }
 

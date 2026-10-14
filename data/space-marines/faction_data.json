@@ -10,7 +10,7 @@
         {
           "id": 49583,
           "type": "text",
-          "textContent": "$27",
+          "textContent": "$1f",
           "title": null,
           "subtitle": null,
           "trigger": null,
@@ -380,7 +380,7 @@
             {
               "id": 48721,
               "type": "text",
-              "textContent": "$29",
+              "textContent": "$1f",
               "title": null,
               "subtitle": null,
               "trigger": null,
@@ -697,6 +697,231 @@
       "details": []
     },
     {
+      "id": 10184,
+      "slug": "gladius-task-force",
+      "name": "Gladius Task Force",
+      "pointsCost": 3,
+      "forceDispositions": [
+        "Take and Hold",
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1857,
+        "slug": "space-marines",
+        "name": "Adeptus Astartes",
+        "commonName": "Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37205,
+          "name": "Adept of the Codex",
+          "points": 20,
+          "rules": "<k>Captain</k> model only. The <b>tactical doctrine</b> is active for this unit <u>in addition</u> to any other <b>combat doctrine</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Captain"
+              ]
+            },
+            {
+              "datasheetId": 47059,
+              "keywords": []
+            }
+          ]
+        },
+        {
+          "id": 37353,
+          "name": "Artificer Armour",
+          "points": 15,
+          "rules": "<k>Adeptus Astartes</k> model only. This model has:\r<ul><li>2+ <b>Sv</b>.</li>\r<li><b>Feel No Pain 5+</b>.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37053,
+          "name": "Laurels of Triumph",
+          "points": 20,
+          "rules": "<k>Adeptus Astartes</k> model only. This model’s melee attacks have:\r<ul><li>+1 <b>S</b> and <b>AP</b>. </li>\r<li><u>Or:</u> If the <b>assault doctrine</b> is active for this unit, +2 <b>S</b> and <b>AP</b>.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 36931,
+          "name": "Standard of the Emperor Ascendant",
+          "points": 25,
+          "rules": "<k>Ancient</k> model only. This model has:\r<ul><li>+1 <b>OC</b> and <b>Ld</b>.</li>\r<li><b>Feel No Pain 5+</b>.</li>\r<li>The following ability:</li></ul>\r<nest>Ancient Exhortation (Once per battle, per army): When this unit is <b>selected to fight</b>, you can use this ability. If you do, this unit’s melee attacks have +1 <b>A</b> until the end of the phase.</nest>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Ancient"
+              ]
+            },
+            {
+              "datasheetId": 47128,
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43928,
+          "name": "Armour of Contempt",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly <k>Adeptus Astartes</k> unit.",
+          "targetRules": "That <k>Adeptus Astartes</k> unit.",
+          "effectRules": "Attacks that target your unit have -1 <b>AP</b> until that enemy unit has attacked.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44055,
+          "name": "Adaptive Strategy",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Your Command phase.",
+          "targetRules": "One friendly <k>Adeptus Astartes</k> unit.",
+          "effectRules": "Select one <b>combat doctrine</b>. That <b>combat doctrine</b> is active for your unit until the start of your next Command phase.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44193,
+          "name": "A Worthy Death",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, when an enemy unit targets a friendly <k>Adeptus Astartes</k> unit.",
+          "targetRules": "That <k>Adeptus Astartes</k> unit.",
+          "effectRules": "When a model in your unit is <b>destroyed</b>, if your unit has not been <b>selected to fight</b> this phase, roll one D6:\r<ul><li>On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44481,
+          "name": "Responsive Tactics",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly <b>unengaged</b> <k>Adeptus Astartes Infantry/Mounted</k> unit.",
+          "targetRules": "That <k>Adeptus Astartes Infantry/Mounted</k> unit.",
+          "effectRules": "Your unit can make a <b>normal move</b> of up to D6\".",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44562,
+          "name": "Storm of devastation",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Adeptus Astartes</k> unit is <b>selected to shoot</b>.",
+          "targetRules": "That <k>Adeptus Astartes</k> unit.",
+          "effectRules": "Your unit’s ranged attacks have <k>[IGNORES COVER]</k>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44586,
+          "name": "Might of angels",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, when a friendly <k>Adeptus Astartes</k> unit is <b>selected to fight</b>.",
+          "targetRules": "That <k>Adeptus Astartes</k> unit.",
+          "effectRules": "Your unit’s melee attacks have <k>[Lance]</k>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7722,
+          "name": "Codex Discipline",
+          "components": [
+            {
+              "id": 49855,
+              "type": "text",
+              "textContent": "You can select one <b>combat doctrine</b> one additional time per battle.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49030,
+              "type": "loreAccordion",
+              "textContent": "<i>Deployed as a mutually supportive strike force that epitomises the flexibility and martial wisdom of the Codex Astartes, Space Marines have the answer to any strategic or tactical challenge.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
       "id": 10366,
       "slug": "gravis-linebreaker-force",
       "name": "Gravis Linebreaker Force",
@@ -825,6 +1050,146 @@
               "id": 49114,
               "type": "loreAccordion",
               "textContent": "<i>With their plan in motion and targets designated, Gravis-armoured warriors stride unstoppably into battle as they lay down withering hails of firepower.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10214,
+      "slug": "gravis-siege-force",
+      "name": "Gravis Siege Force",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Take and Hold"
+      ],
+      "uniqueKeyword": "Gravis",
+      "faction": {
+        "id": 1857,
+        "slug": "space-marines",
+        "name": "Adeptus Astartes",
+        "commonName": "Space Marines"
+      },
+      "enhancements": [
+        {
+          "id": 37006,
+          "name": "Immovable Conquerors (Upgrade)",
+          "points": 15,
+          "rules": "<k>Gravis</k> unit only. This unit has +1 <b>OC</b>.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Gravis"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37422,
+          "name": "Narthecis Gauntlet",
+          "points": 20,
+          "rules": "<k>Apothecary Biologis</k> model only. in your Command phase, this unit <b>heals</b> D3+1 wounds.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47072,
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43717,
+          "name": "Annihilating Force",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase, when a friendly <k>Gravis</k> unit is <b>selected to attack</b>.",
+          "targetRules": "That <k>Gravis</k> unit.",
+          "effectRules": "Your unit’s attacks have <k>[Lethal Hits]</k>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43894,
+          "name": "Suppression Volleys",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Gravis</k> unit has shot.",
+          "targetRules": "That <k>Gravis</k> unit.",
+          "effectRules": "Select one enemy unit hit by those attacks. That enemy unit makes a <b>battle-shock roll</b>, with -1 to that <b>battle-shock roll</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44040,
+          "name": "Stand Unyielding",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "End of your Movement phase.",
+          "targetRules": "One friendly <k>Gravis</k> unit.",
+          "effectRules": "Select one <b>objective</b> your unit is controlling. That <b>objective</b> is <b>secured</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7864,
+          "name": "Indomitable Defence",
+          "components": [
+            {
+              "id": 48884,
+              "type": "text",
+              "textContent": "While a friendly <k>Gravis</k> unit is within range of an <b>objective</b>, attacks that target that unit with a <b>S</b> greater than that unit’s <b>T</b> have -1 to <b>wound rolls</b>.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48744,
+              "type": "loreAccordion",
+              "textContent": "<i>The Adeptus Astartes stand as an adamantine wall against any who would assail the Emperor’s realm.</i>",
               "title": "Lore",
               "subtitle": null,
               "trigger": null,
@@ -1969,371 +2334,6 @@
               "id": 48594,
               "type": "loreAccordion",
               "textContent": "<i>Faced with multiple threats that must be efficiently eliminated, the Space Marines employ time-honoured ballistic doctrines to great effect.</i>",
-              "title": "Lore",
-              "subtitle": null,
-              "trigger": null,
-              "effect": null,
-              "imageUrl": null,
-              "altText": null,
-              "bulletPoints": []
-            }
-          ]
-        }
-      ],
-      "details": []
-    },
-    {
-      "id": 10184,
-      "slug": "gladius-task-force",
-      "name": "Gladius Task Force",
-      "pointsCost": 3,
-      "forceDispositions": [
-        "Take and Hold",
-        "Priority Assets"
-      ],
-      "uniqueKeyword": null,
-      "faction": {
-        "id": 1857,
-        "slug": "space-marines",
-        "name": "Adeptus Astartes",
-        "commonName": "Space Marines"
-      },
-      "enhancements": [
-        {
-          "id": 37205,
-          "name": "Adept of the Codex",
-          "points": 20,
-          "rules": "<k>Captain</k> model only. The <b>tactical doctrine</b> is active for this unit <u>in addition</u> to any other <b>combat doctrine</b>.",
-          "enhancementType": "miniature",
-          "limit": 1,
-          "isEquipableByNonCharacterUnit": false,
-          "isEquipableByEpicHero": false,
-          "isIncludedInEnhancementLimit": true,
-          "excludedKeywords": [],
-          "keywordGroups": [
-            {
-              "datasheetId": null,
-              "keywords": [
-                "Captain"
-              ]
-            },
-            {
-              "datasheetId": 47059,
-              "keywords": []
-            }
-          ]
-        },
-        {
-          "id": 37353,
-          "name": "Artificer Armour",
-          "points": 15,
-          "rules": "<k>Adeptus Astartes</k> model only. This model has:\r<ul><li>2+ <b>Sv</b>.</li>\r<li><b>Feel No Pain 5+</b>.</li></ul>",
-          "enhancementType": "miniature",
-          "limit": 1,
-          "isEquipableByNonCharacterUnit": false,
-          "isEquipableByEpicHero": false,
-          "isIncludedInEnhancementLimit": true,
-          "excludedKeywords": [],
-          "keywordGroups": []
-        },
-        {
-          "id": 37053,
-          "name": "Laurels of Triumph",
-          "points": 20,
-          "rules": "<k>Adeptus Astartes</k> model only. This model’s melee attacks have:\r<ul><li>+1 <b>S</b> and <b>AP</b>. </li>\r<li><u>Or:</u> If the <b>assault doctrine</b> is active for this unit, +2 <b>S</b> and <b>AP</b>.</li></ul>",
-          "enhancementType": "miniature",
-          "limit": 1,
-          "isEquipableByNonCharacterUnit": false,
-          "isEquipableByEpicHero": false,
-          "isIncludedInEnhancementLimit": true,
-          "excludedKeywords": [],
-          "keywordGroups": []
-        },
-        {
-          "id": 36931,
-          "name": "Standard of the Emperor Ascendant",
-          "points": 25,
-          "rules": "<k>Ancient</k> model only. This model has:\r<ul><li>+1 <b>OC</b> and <b>Ld</b>.</li>\r<li><b>Feel No Pain 5+</b>.</li>\r<li>The following ability:</li></ul>\r<nest>Ancient Exhortation (Once per battle, per army): When this unit is <b>selected to fight</b>, you can use this ability. If you do, this unit’s melee attacks have +1 <b>A</b> until the end of the phase.</nest>",
-          "enhancementType": "miniature",
-          "limit": 1,
-          "isEquipableByNonCharacterUnit": false,
-          "isEquipableByEpicHero": false,
-          "isIncludedInEnhancementLimit": true,
-          "excludedKeywords": [],
-          "keywordGroups": [
-            {
-              "datasheetId": null,
-              "keywords": [
-                "Ancient"
-              ]
-            },
-            {
-              "datasheetId": 47128,
-              "keywords": []
-            }
-          ]
-        }
-      ],
-      "stratagems": [
-        {
-          "id": 43928,
-          "name": "Armour of Contempt",
-          "cpCost": 1,
-          "category": "",
-          "turn": "eitherPlayer",
-          "phases": [
-            "shootingPhase",
-            "fightPhase"
-          ],
-          "whenRules": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly <k>Adeptus Astartes</k> unit.",
-          "targetRules": "That <k>Adeptus Astartes</k> unit.",
-          "effectRules": "Attacks that target your unit have -1 <b>AP</b> until that enemy unit has attacked.",
-          "secondaryEffect": null,
-          "secondaryEffectCpCost": null,
-          "restrictionRules": null
-        },
-        {
-          "id": 44055,
-          "name": "Adaptive Strategy",
-          "cpCost": 1,
-          "category": "",
-          "turn": "yourTurn",
-          "phases": [
-            "commandPhase"
-          ],
-          "whenRules": "Your Command phase.",
-          "targetRules": "One friendly <k>Adeptus Astartes</k> unit.",
-          "effectRules": "Select one <b>combat doctrine</b>. That <b>combat doctrine</b> is active for your unit until the start of your next Command phase.",
-          "secondaryEffect": null,
-          "secondaryEffectCpCost": null,
-          "restrictionRules": null
-        },
-        {
-          "id": 44193,
-          "name": "A Worthy Death",
-          "cpCost": 1,
-          "category": "",
-          "turn": "eitherPlayer",
-          "phases": [
-            "fightPhase"
-          ],
-          "whenRules": "Fight phase, when an enemy unit targets a friendly <k>Adeptus Astartes</k> unit.",
-          "targetRules": "That <k>Adeptus Astartes</k> unit.",
-          "effectRules": "When a model in your unit is <b>destroyed</b>, if your unit has not been <b>selected to fight</b> this phase, roll one D6:\r<ul><li>On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.</li></ul>",
-          "secondaryEffect": null,
-          "secondaryEffectCpCost": null,
-          "restrictionRules": null
-        },
-        {
-          "id": 44481,
-          "name": "Responsive Tactics",
-          "cpCost": 1,
-          "category": "",
-          "turn": "opponentsTurn",
-          "phases": [
-            "movementPhase"
-          ],
-          "whenRules": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly <b>unengaged</b> <k>Adeptus Astartes Infantry/Mounted</k> unit.",
-          "targetRules": "That <k>Adeptus Astartes Infantry/Mounted</k> unit.",
-          "effectRules": "Your unit can make a <b>normal move</b> of up to D6\".",
-          "secondaryEffect": null,
-          "secondaryEffectCpCost": null,
-          "restrictionRules": null
-        },
-        {
-          "id": 44562,
-          "name": "Storm of devastation",
-          "cpCost": 1,
-          "category": "",
-          "turn": "yourTurn",
-          "phases": [
-            "shootingPhase"
-          ],
-          "whenRules": "Your Shooting phase, when a friendly <k>Adeptus Astartes</k> unit is <b>selected to shoot</b>.",
-          "targetRules": "That <k>Adeptus Astartes</k> unit.",
-          "effectRules": "Your unit’s ranged attacks have <k>[IGNORES COVER]</k>.",
-          "secondaryEffect": null,
-          "secondaryEffectCpCost": null,
-          "restrictionRules": null
-        },
-        {
-          "id": 44586,
-          "name": "Might of angels",
-          "cpCost": 1,
-          "category": "",
-          "turn": "eitherPlayer",
-          "phases": [
-            "fightPhase"
-          ],
-          "whenRules": "Fight phase, when a friendly <k>Adeptus Astartes</k> unit is <b>selected to fight</b>.",
-          "targetRules": "That <k>Adeptus Astartes</k> unit.",
-          "effectRules": "Your unit’s melee attacks have <k>[Lance]</k>.",
-          "secondaryEffect": null,
-          "secondaryEffectCpCost": null,
-          "restrictionRules": null
-        }
-      ],
-      "rules": [
-        {
-          "id": 7722,
-          "name": "Codex Discipline",
-          "components": [
-            {
-              "id": 49855,
-              "type": "text",
-              "textContent": "You can select one <b>combat doctrine</b> one additional time per battle.",
-              "title": null,
-              "subtitle": null,
-              "trigger": null,
-              "effect": null,
-              "imageUrl": null,
-              "altText": null,
-              "bulletPoints": []
-            },
-            {
-              "id": 49030,
-              "type": "loreAccordion",
-              "textContent": "<i>Deployed as a mutually supportive strike force that epitomises the flexibility and martial wisdom of the Codex Astartes, Space Marines have the answer to any strategic or tactical challenge.</i>",
-              "title": "Lore",
-              "subtitle": null,
-              "trigger": null,
-              "effect": null,
-              "imageUrl": null,
-              "altText": null,
-              "bulletPoints": []
-            }
-          ]
-        }
-      ],
-      "details": []
-    },
-    {
-      "id": 10214,
-      "slug": "gravis-siege-force",
-      "name": "Gravis Siege Force",
-      "pointsCost": 1,
-      "forceDispositions": [
-        "Take and Hold"
-      ],
-      "uniqueKeyword": "Gravis",
-      "faction": {
-        "id": 1857,
-        "slug": "space-marines",
-        "name": "Adeptus Astartes",
-        "commonName": "Space Marines"
-      },
-      "enhancements": [
-        {
-          "id": 37006,
-          "name": "Immovable Conquerors (Upgrade)",
-          "points": 15,
-          "rules": "<k>Gravis</k> unit only. This unit has +1 <b>OC</b>.",
-          "enhancementType": "upgrade",
-          "limit": 3,
-          "isEquipableByNonCharacterUnit": true,
-          "isEquipableByEpicHero": false,
-          "isIncludedInEnhancementLimit": true,
-          "excludedKeywords": [],
-          "keywordGroups": [
-            {
-              "datasheetId": null,
-              "keywords": [
-                "Gravis"
-              ]
-            }
-          ]
-        },
-        {
-          "id": 37422,
-          "name": "Narthecis Gauntlet",
-          "points": 20,
-          "rules": "<k>Apothecary Biologis</k> model only. in your Command phase, this unit <b>heals</b> D3+1 wounds.",
-          "enhancementType": "miniature",
-          "limit": 1,
-          "isEquipableByNonCharacterUnit": false,
-          "isEquipableByEpicHero": false,
-          "isIncludedInEnhancementLimit": true,
-          "excludedKeywords": [],
-          "keywordGroups": [
-            {
-              "datasheetId": 47072,
-              "keywords": []
-            }
-          ]
-        }
-      ],
-      "stratagems": [
-        {
-          "id": 43717,
-          "name": "Annihilating Force",
-          "cpCost": 1,
-          "category": "",
-          "turn": "eitherPlayer",
-          "phases": [
-            "shootingPhase",
-            "fightPhase"
-          ],
-          "whenRules": "Your Shooting phase or the Fight phase, when a friendly <k>Gravis</k> unit is <b>selected to attack</b>.",
-          "targetRules": "That <k>Gravis</k> unit.",
-          "effectRules": "Your unit’s attacks have <k>[Lethal Hits]</k>.",
-          "secondaryEffect": null,
-          "secondaryEffectCpCost": null,
-          "restrictionRules": null
-        },
-        {
-          "id": 43894,
-          "name": "Suppression Volleys",
-          "cpCost": 1,
-          "category": "",
-          "turn": "yourTurn",
-          "phases": [
-            "shootingPhase"
-          ],
-          "whenRules": "Your Shooting phase, when a friendly <k>Gravis</k> unit has shot.",
-          "targetRules": "That <k>Gravis</k> unit.",
-          "effectRules": "Select one enemy unit hit by those attacks. That enemy unit makes a <b>battle-shock roll</b>, with -1 to that <b>battle-shock roll</b>.",
-          "secondaryEffect": null,
-          "secondaryEffectCpCost": null,
-          "restrictionRules": null
-        },
-        {
-          "id": 44040,
-          "name": "Stand Unyielding",
-          "cpCost": 1,
-          "category": "",
-          "turn": "yourTurn",
-          "phases": [
-            "movementPhase"
-          ],
-          "whenRules": "End of your Movement phase.",
-          "targetRules": "One friendly <k>Gravis</k> unit.",
-          "effectRules": "Select one <b>objective</b> your unit is controlling. That <b>objective</b> is <b>secured</b>.",
-          "secondaryEffect": null,
-          "secondaryEffectCpCost": null,
-          "restrictionRules": null
-        }
-      ],
-      "rules": [
-        {
-          "id": 7864,
-          "name": "Indomitable Defence",
-          "components": [
-            {
-              "id": 48884,
-              "type": "text",
-              "textContent": "While a friendly <k>Gravis</k> unit is within range of an <b>objective</b>, attacks that target that unit with a <b>S</b> greater than that unit’s <b>T</b> have -1 to <b>wound rolls</b>.",
-              "title": null,
-              "subtitle": null,
-              "trigger": null,
-              "effect": null,
-              "imageUrl": null,
-              "altText": null,
-              "bulletPoints": []
-            },
-            {
-              "id": 48744,
-              "type": "loreAccordion",
-              "textContent": "<i>The Adeptus Astartes stand as an adamantine wall against any who would assail the Emperor’s realm.</i>",
               "title": "Lore",
               "subtitle": null,
               "trigger": null,

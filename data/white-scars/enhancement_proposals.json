@@ -1,0 +1,132 @@
+{
+  "white-scars/spearpoint-task-force": [
+    {
+      "slug": "chogorian-huntmaster-upgrade",
+      "name": "Chogorian Huntmaster (Upgrade)",
+      "points": 20,
+      "enhancementType": "upgrade",
+      "limit": 3,
+      "eligibility": {
+        "keywords": [
+          "Speeder",
+          "Mounted"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": true
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Mounted/Speeder unit only. When this unit is selected to make an ingress move, treat the current battle round number as being one higher than it actually is."
+    },
+    {
+      "slug": "hunters-eye",
+      "name": "Hunter's Eye",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "keyword": "IGNORES COVER",
+          "value": null
+        },
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "keyword": "SUSTAINED HITS",
+          "value": "1"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. This unit's ranged attacks: Have [IGNORES COVER]. Have [SUSTAINED HITS 1]."
+    },
+    {
+      "slug": "spearpoint-paragon",
+      "name": "Spearpoint Paragon",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "Strength",
+          "mode": "add",
+          "value": 1
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "AP",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [
+        {
+          "condition": "charged_this_turn",
+          "effects": [
+            {
+              "category": "statModifier",
+              "appliedTo": "SelfModel",
+              "weaponTarget": "MELEE",
+              "stat": "Strength",
+              "mode": "add",
+              "value": 2
+            },
+            {
+              "category": "statModifier",
+              "appliedTo": "SelfModel",
+              "weaponTarget": "MELEE",
+              "stat": "AP",
+              "mode": "add",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "originalText": "Adeptus Astartes model only. This model's melee attacks have: +1 S and AP. Or: If this unit made a charge move this turn, +2 S and AP."
+    },
+    {
+      "slug": "stormseers-wisdom",
+      "name": "Stormseer's Wisdom",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "charge",
+          "action": "rerollAll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. This unit can re-roll advance rolls."
+    }
+  ]
+}

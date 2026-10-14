@@ -1,0 +1,407 @@
+{
+  "id": 47344,
+  "slug": "necron-warriors",
+  "name": "Necron Warriors",
+  "baseSize": "32mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **10-20 Necron Warriors**\n\n**Every model is equipped with:** gauss flayer; close combat weapon.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Their Number is Legion",
+      "rules": "Each time this unit’s Reanimation Protocols activate, you can re-roll the dice to see how many wounds are reanimated.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [],
+  "ledBy": [
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46697,
+        "name": "Trazyn the Infinite",
+        "slug": "trazyn-the-infinite",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47467,
+        "name": "Technomancer",
+        "slug": "technomancer",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47064,
+        "name": "Orikan the Diviner",
+        "slug": "orikan-the-diviner",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47410,
+        "name": "Overlord",
+        "slug": "overlord",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 46945,
+        "name": "Overlord with Translocation Shroud",
+        "slug": "overlord-with-translocation-shroud",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47433,
+        "name": "Psychomancer",
+        "slug": "psychomancer",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47296,
+        "name": "Chronomancer",
+        "slug": "chronomancer",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47594,
+        "name": "Imotekh the Stormlord",
+        "slug": "imotekh-the-stormlord",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "leader",
+      "datasheet": {
+        "id": 47429,
+        "name": "Royal Warden",
+        "slug": "royal-warden",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47396,
+        "name": "Geomancer",
+        "slug": "geomancer",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47036,
+        "name": "Plasmancer",
+        "slug": "plasmancer",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 61551,
+      "name": "Necron Warrior",
+      "stats": {
+        "save": "4+",
+        "wounds": "1",
+        "movement": "5\"",
+        "toughness": "4",
+        "leadership": "7+",
+        "objectiveControl": "2"
+      },
+      "keywords": [
+        {
+          "id": 50780,
+          "name": "Battleline"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51655,
+          "name": "Necron Warriors"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107791,
+            "name": "Close combat weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112809,
+                "name": "Close combat weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "1",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105588,
+            "name": "Gauss flayer",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111856,
+                "name": "Gauss flayer",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "1",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3486,
+                    "name": "Lethal Hits",
+                    "rules": "Each time an attack made with a <k>[LETHAL HITS]</k> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <k>[DEVASTATING WOUNDS]</k>.</i>"
+                  },
+                  {
+                    "id": 3367,
+                    "name": "Rapid Fire 1",
+                    "rules": "This ability always takes the form <k>[RAPID FIRE X]</k>. Each time you gather <b>attack dice</b> for a <k>[RAPID FIRE]</k> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <k>[RAPID FIRE 1]</k> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 107791,
+            "name": "Close combat weapon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112809,
+                "name": "Close combat weapon",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "1",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105588,
+            "name": "Gauss flayer",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111856,
+                "name": "Gauss flayer",
+                "type": "ranged",
+                "range": "24\"",
+                "attacks": "1",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3486,
+                    "name": "Lethal Hits",
+                    "rules": "Each time an attack made with a <k>[LETHAL HITS]</k> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <k>[DEVASTATING WOUNDS]</k>.</i>"
+                  },
+                  {
+                    "id": 3367,
+                    "name": "Rapid Fire 1",
+                    "rules": "This ability always takes the form <k>[RAPID FIRE X]</k>. Each time you gather <b>attack dice</b> for a <k>[RAPID FIRE]</k> weapon, add <b>X</b> additional <b>attack dice</b> if the target unit was within half range of that weapon in the Select Targets step.\n\n<b>Example:</b> If a <k>[RAPID FIRE 1]</k> weapon with an <b>A</b> characteristic of 1 targets a unit that is within half range, you would gather one additional <b>attack dice</b> for that weapon (for a total of two for that weapon)."
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 106124,
+            "name": "Gauss reaper",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112254,
+                "name": "Gauss reaper",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "2",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3486,
+                    "name": "Lethal Hits",
+                    "rules": "Each time an attack made with a <k>[LETHAL HITS]</k> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <k>[DEVASTATING WOUNDS]</k>.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 41723,
+      "rulesText": "■ Any number of models can each have their gauss flayer replaced with 1 gauss reaper. ",
+      "displayOrder": 1
+    }
+  ],
+  "compositions": [
+    {
+      "id": 62004,
+      "points": 85,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 10,
+      "miniatures": [
+        {
+          "miniatureId": 61551,
+          "miniatureName": "Necron Warrior",
+          "min": 10,
+          "max": 10
+        }
+      ]
+    },
+    {
+      "id": 62328,
+      "points": 190,
+      "displayOrder": 2,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 20,
+      "miniatures": [
+        {
+          "miniatureId": 61551,
+          "miniatureName": "Necron Warrior",
+          "min": 11,
+          "max": 20
+        }
+      ]
+    }
+  ]
+}

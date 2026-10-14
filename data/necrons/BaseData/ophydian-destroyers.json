@@ -1,0 +1,205 @@
+{
+  "id": 47540,
+  "slug": "ophydian-destroyers",
+  "name": "Ophydian Destroyers",
+  "baseSize": "50mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **3-6 Ophydian Destroyers**\n\n**Every model is equipped with:** Ophydian hyperphase weapons.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": false,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "There are many ways by which to deploy troops to the field of battle including tunnels, teleportation devices and other esoteric means of transportation.",
+      "name": "Deep Strike",
+      "rules": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Tunnelling Horrors",
+      "rules": "At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n■ Place this unit in **strategic reserves**.\n■ This unit must make an **ingress move** in your next Movement phase (including in your first turn).",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 3,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": 3,
+  "pointsStepPoints": 10,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 61727,
+      "name": "Ophydian Destroyer",
+      "stats": {
+        "save": "4+",
+        "wounds": "3",
+        "movement": "10\"",
+        "toughness": "5",
+        "leadership": "7+",
+        "objectiveControl": "2"
+      },
+      "keywords": [
+        {
+          "id": 51698,
+          "name": "Destroyer Cult"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        },
+        {
+          "id": 51761,
+          "name": "Ophydian Destroyers"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 104935,
+            "name": "Ophydian hyperphase weapons",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114023,
+                "name": "Ophydian hyperphase weapons",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "4",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 108584,
+            "name": "Plasmacyte",
+            "wargearType": "wargear",
+            "ruleText": "Once per battle for each Plasmacyte this unit has, when this unit is selected to fight, you can use this ability. If you do, until the end of the phase, melee weapons equipped by models in this unit have the **[DEVASTATING WOUNDS]** ability.\n\n**Designer’s Note:** *Place the relevant number of Plasmacyte tokens next to the unit, removing one each time this unit uses this ability.*",
+            "profiles": []
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 104935,
+            "name": "Ophydian hyperphase weapons",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114023,
+                "name": "Ophydian hyperphase weapons",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "3+",
+                "strength": "4",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 41859,
+      "rulesText": "■ For every 3 models in this unit, this unit can have 1 Plasmacyte.",
+      "displayOrder": 1
+    }
+  ],
+  "compositions": [
+    {
+      "id": 61995,
+      "points": 80,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 3,
+      "miniatures": [
+        {
+          "miniatureId": 61727,
+          "miniatureName": "Ophydian Destroyer",
+          "min": 3,
+          "max": 3
+        }
+      ]
+    },
+    {
+      "id": 61681,
+      "points": 150,
+      "displayOrder": 2,
+      "isDefault": false,
+      "requiredFactionLabel": null,
+      "models": 6,
+      "miniatures": [
+        {
+          "miniatureId": 61727,
+          "miniatureName": "Ophydian Destroyer",
+          "min": 4,
+          "max": 6
+        }
+      ]
+    }
+  ]
+}

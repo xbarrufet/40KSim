@@ -1,0 +1,466 @@
+{
+  "id": 47443,
+  "slug": "ctan-shard-of-the-void-dragon",
+  "name": "C’tan Shard of the Void Dragon",
+  "baseSize": "80mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **1 C’tan Shard of the Void Dragon – EPIC HERO**\n\n**This model is equipped with:** Spear of the Void Dragon; voltaic storm; Canoptek tail blades.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": true,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "From detonating ammo stores to corrosive innards or frenzied death throes, some targets are deadly even in defeat.",
+      "name": "Deadly Demise D6",
+      "rules": "This ability always takes the form <b>Deadly Demise X</b>. Each time a model with this ability is <b>destroyed</b>, after the units embarked within it (if any) have made their <b>emergency disembark moves</b>, roll one D6. On a 6, that model suffers a <b>deadly demise</b>; each unit within 6\" of that model suffers a number of <b>mortal wounds</b> denoted by <b>X</b> (if this is a random number, roll separately for each unit within 6\").",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "There are many ways by which to deploy troops to the field of battle including tunnels, teleportation devices and other esoteric means of transportation.",
+      "name": "Deep Strike",
+      "rules": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": "The hardiest warriors refuse to be laid low, even by wounds that should by all rights prove lethal.",
+      "name": "Feel No Pain 5+",
+      "rules": "This ability always takes the form <b>Feel No Pain X+</b>. Each time a model with this ability would lose a wound, roll one D6: on an <b>X+</b>, that wound is not lost.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 3,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 4,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Matter Absorption",
+      "rules": "At the start of your Shooting phase, select one enemy **VEHICLE** unit within 12\" of this model and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds and this model regains up to that many lost wounds.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 5,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Necrodermis",
+      "rules": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 6,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Enslaved Star God",
+      "rules": "This model cannot be your **WARLORD**.",
+      "displayOrder": 1
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 61379,
+      "name": "C’tan Shard of the Void Dragon",
+      "stats": {
+        "save": "3+",
+        "wounds": "16",
+        "movement": "10\"",
+        "toughness": "11",
+        "leadership": "6+",
+        "invulnerableSave": {
+          "save": "4+",
+          "rules": null,
+          "meleeSave": null,
+          "rangedSave": null
+        },
+        "objectiveControl": "4"
+      },
+      "keywords": [
+        {
+          "id": 50767,
+          "name": "C’tan Shard of the Void Dragon"
+        },
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50746,
+          "name": "Epic Hero"
+        },
+        {
+          "id": 51013,
+          "name": "Fly"
+        },
+        {
+          "id": 51249,
+          "name": "Monster"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105969,
+            "name": "Voltaic storm",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113059,
+                "name": "Voltaic storm",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "D6+3",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "7",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3435,
+                    "name": "Blast",
+                    "rules": "Each time you gather <b>attack dice</b> for a <k>[BLAST]</k> weapon, add one additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\nIf this ability takes the form <k>[BLAST X]</k>, each time you gather <b>attack dice</b> for such a weapon, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n\n<b>Example:</b> <i>If a <k>[BLAST 2]</k> weapon with an <b>A</b> characteristic of 3 targets a unit containing 12 models, you would gather four additional <b>attack dice</b> for that weapon (for a total of seven for that weapon).</i>"
+                  },
+                  {
+                    "id": 3444,
+                    "name": "Sustained Hits 2",
+                    "rules": "This ability always takes the form <k>[SUSTAINED HITS X]</k>. Each time an attack made with a <k>[SUSTAINED HITS]</k> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <k>[SUSTAINED HITS 2]</k> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <k>[SUSTAINED HITS 2]</k> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 108331,
+            "name": "Canoptek tail blades",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112176,
+                "name": "Canoptek tail blades",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3406,
+                    "name": "Extra Attacks",
+                    "rules": "Each time a unit containing one or more models with an <k>[EXTRA ATTACKS]</k> weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:\n<ul><li>All of that model’s <k>[EXTRA ATTACKS]</k> weapons.</li><li>One of that model’s other melee weapons, if possible.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107777,
+            "name": "Spear of the Void Dragon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111668,
+                "name": "Ranged",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "D3",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-3",
+                "damage": "D6+2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3419,
+                    "name": "Anti-vehicle 2+",
+                    "rules": "This ability always takes the form <k>[ANTI‑X Y+]</k>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <k>[ANTI‑VEHICLE 4+]</k> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <k>[ANTI‑PSYKER 2+]</k> weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  }
+                ]
+              },
+              {
+                "id": 113754,
+                "name": "strike",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "12",
+                "armourPenetration": "-4",
+                "damage": "D6+2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3419,
+                    "name": "Anti-vehicle 2+",
+                    "rules": "This ability always takes the form <k>[ANTI‑X Y+]</k>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <k>[ANTI‑VEHICLE 4+]</k> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <k>[ANTI‑PSYKER 2+]</k> weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  }
+                ]
+              },
+              {
+                "id": 113552,
+                "name": "sweep",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "10",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "8",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 108331,
+            "name": "Canoptek tail blades",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 112176,
+                "name": "Canoptek tail blades",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "6",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "6",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3406,
+                    "name": "Extra Attacks",
+                    "rules": "Each time a unit containing one or more models with an <k>[EXTRA ATTACKS]</k> weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:\n<ul><li>All of that model’s <k>[EXTRA ATTACKS]</k> weapons.</li><li>One of that model’s other melee weapons, if possible.</li></ul>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107777,
+            "name": "Spear of the Void Dragon",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111668,
+                "name": "Ranged",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "D3",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-3",
+                "damage": "D6+2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3419,
+                    "name": "Anti-vehicle 2+",
+                    "rules": "This ability always takes the form <k>[ANTI‑X Y+]</k>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <k>[ANTI‑VEHICLE 4+]</k> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <k>[ANTI‑PSYKER 2+]</k> weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  }
+                ]
+              },
+              {
+                "id": 113754,
+                "name": "strike",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "5",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "12",
+                "armourPenetration": "-4",
+                "damage": "D6+2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3419,
+                    "name": "Anti-vehicle 2+",
+                    "rules": "This ability always takes the form <k>[ANTI‑X Y+]</k>. Each time an attack is made with an <b>[ANTI]</b> weapon, if the target unit has the keyword denoted by <b>X</b>, an unmodified <b>wound roll</b> of <b>Y+</b> is a <b>critical wound.</b>\n<b>Example:</b> <i>An attack made with an <k>[ANTI‑VEHICLE 4+]</k> weapon against a <k>VEHICLE</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 4+, while an attack made with an <k>[ANTI‑PSYKER 2+]</k> weapon against a <k>PSYKER</k> unit will result in a <b>critical wound</b>  on an unmodified wound roll of 2+.</i>"
+                  }
+                ]
+              },
+              {
+                "id": 113552,
+                "name": "sweep",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "10",
+                "ballisticSkill": null,
+                "weaponSkill": "2+",
+                "strength": "8",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105969,
+            "name": "Voltaic storm",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113059,
+                "name": "Voltaic storm",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "D6+3",
+                "ballisticSkill": "2+",
+                "weaponSkill": null,
+                "strength": "7",
+                "armourPenetration": "-1",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3435,
+                    "name": "Blast",
+                    "rules": "Each time you gather <b>attack dice</b> for a <k>[BLAST]</k> weapon, add one additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down).\n\nIf this ability takes the form <k>[BLAST X]</k>, each time you gather <b>attack dice</b> for such a weapon, add <b>X</b> additional <b>attack dice</b> for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n\n<b>Example:</b> <i>If a <k>[BLAST 2]</k> weapon with an <b>A</b> characteristic of 3 targets a unit containing 12 models, you would gather four additional <b>attack dice</b> for that weapon (for a total of seven for that weapon).</i>"
+                  },
+                  {
+                    "id": 3444,
+                    "name": "Sustained Hits 2",
+                    "rules": "This ability always takes the form <k>[SUSTAINED HITS X]</k>. Each time an attack made with a <k>[SUSTAINED HITS]</k> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <k>[SUSTAINED HITS 2]</k> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <k>[SUSTAINED HITS 2]</k> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 61648,
+      "points": 345,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61379,
+          "miniatureName": "C’tan Shard of the Void Dragon",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    {
+      "id": 61551,
+      "points": 380,
+      "displayOrder": 2,
+      "isDefault": true,
+      "requiredFactionLabel": "Pantheon of Woe",
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61379,
+          "miniatureName": "C’tan Shard of the Void Dragon",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

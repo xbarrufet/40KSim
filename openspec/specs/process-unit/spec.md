@@ -459,12 +459,12 @@ The structuring form SHALL include a "Frecuencia" dropdown on the first descript
 
 ### Requirement: Damage Roll in Dice Modifier Form
 
-The dice modifier effect's roll dropdown SHALL include "Daño", "Hazard", and "Carga" options mapping to `'damage'`, `'hazard'`, and `'charge'`, alongside the existing "Impactar", "Herir", and "Salvación" options.
+The dice modifier effect's roll dropdown SHALL include "Daño", "Hazard", "Carga", and "Battleshock" options mapping to `'damage'`, `'hazard'`, `'charge'`, and `'battleshock'`, alongside the existing "Impactar", "Herir", and "Salvación" options.
 
 #### Scenario: All roll options in dropdown
 
 - **WHEN** the user opens the roll dropdown for a dice modifier effect
-- **THEN** six options are visible: Impactar, Herir, Salvación, Daño, Hazard, Carga
+- **THEN** seven options are visible: Impactar, Herir, Salvación, Daño, Hazard, Carga, Battleshock
 
 #### Scenario: Structuring a reroll damage ability
 
@@ -611,3 +611,26 @@ The "Guardar Loadout" action SHALL be independent of the abilities "Guardar" act
 #### Scenario: Save abilities without saving loadout
 - **WHEN** the user saves abilities without changes to loadout
 - **THEN** only the `unit_data` record SHALL be updated; the `loadout_data` record SHALL remain unchanged
+
+### Requirement: Effects Operator Selector in Structuring Form
+The structuring form SHALL display an "Operador efectos" dropdown on the descriptors row (alongside Fase, Frecuencia, Trigger) when the current ability row has **2 or more effects**. The dropdown SHALL offer two options: `AND — Aplicar todos` (default) and `OR — Según condición`. When the ability has only 1 effect, the dropdown SHALL NOT be visible. The selected value SHALL be stored as `effectsOperator` on the `StructuredAbility`.
+
+#### Scenario: Hidden when single effect
+- **WHEN** the structuring form has exactly 1 effect in the current row
+- **THEN** no "Operador efectos" dropdown is shown
+
+#### Scenario: Visible when multiple effects
+- **WHEN** the user adds a second effect to the current row via "+ Añadir efecto"
+- **THEN** the "Operador efectos" dropdown appears on the descriptors row
+
+#### Scenario: Default is AND
+- **WHEN** the "Operador efectos" dropdown first appears
+- **THEN** it defaults to `AND — Aplicar todos`
+
+#### Scenario: Value persisted on save
+- **WHEN** the user sets the operator to OR and saves the ability
+- **THEN** the resulting `StructuredAbility` has `effectsOperator: 'OR'`
+
+#### Scenario: Hidden again when effect removed
+- **WHEN** the user removes effects until only 1 remains
+- **THEN** the "Operador efectos" dropdown disappears and `effectsOperator` is reset to undefined

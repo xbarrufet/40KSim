@@ -158,6 +158,7 @@ function AddFactionModal({ onClose, onAdded }: { onClose: () => void; onAdded: (
           category: faction.category ?? null,
           icon: faction.icon ?? null,
           unit_count: unitsFile.units.length,
+          army_rules: null,
         })
       }
       const catalogUnits = unitsFile.units.map(u => ({

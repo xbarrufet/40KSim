@@ -1,0 +1,325 @@
+{
+  "id": 47396,
+  "slug": "geomancer",
+  "name": "Geomancer",
+  "baseSize": "50mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **1 Geomancer**\n\n**This model is equipped with:** tremorglaive.",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": true,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "Specialist combatants may be assigned to front-line squads to bolster their fighting effectiveness.",
+      "name": "Support",
+      "rules": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it. \n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19).",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Tectonic Reverberations",
+      "rules": "In your Movement phase, you can select one enemy unit within 18\" of and visible to this model. Until the start of your next Movement phase that enemy unit is pinned. While a unit is pinned, subtract 2 from that unit’s Move characteristic and subtract 2 from Charge rolls made for it.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 3,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Obelisk Node Control",
+      "rules": "While this model is within range of an objective marker you control, enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of this model.",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 4,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": [
+    {
+      "name": "Support",
+      "rules": "This model can be attached to the following units:\n\n■ **CANOPTEK MACROCYTES**\n■ **IMMORTALS**\n■ **NECRON WARRIORS**",
+      "displayOrder": 2
+    },
+    {
+      "name": "Vanguard Protocols",
+      "rules": "If this model is attached to a **CANOPTEK MACROCYTES** unit during the Declare Battle Formations step, this model has the Scouts 8\" ability.",
+      "displayOrder": 2
+    }
+  ],
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47344,
+        "name": "Necron Warriors",
+        "slug": "necron-warriors",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47079,
+        "name": "Canoptek Macrocytes",
+        "slug": "canoptek-macrocytes",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    },
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 46778,
+        "name": "Immortals",
+        "slug": "immortals",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "ledBy": [],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 61642,
+      "name": "Geomancer",
+      "stats": {
+        "save": "4+",
+        "wounds": "4",
+        "movement": "8\"",
+        "toughness": "4",
+        "leadership": "6+",
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 51681,
+          "name": "Character"
+        },
+        {
+          "id": 50765,
+          "name": "Cryptek"
+        },
+        {
+          "id": 50973,
+          "name": "Geomancer"
+        },
+        {
+          "id": 51518,
+          "name": "Infantry"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 104819,
+            "name": "Tremorglaive",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113944,
+                "name": "reverberating beam",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3352,
+                    "name": "Melta 2",
+                    "rules": "This ability always takes the form <k>[MELTA X]</k>. Each time a model makes an attack with a <k>[MELTA]</k> weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add <b>X</b> to that weapon’s <b>D</b> characteristic.\n\n<b>Example:</b> <i>A model targets a unit that is within half range of a <k>[MELTA 2]</k> weapon with a <b>D</b> characteristic of D6. While resolving those attacks, that weapon has a <b>D</b> characteristic of D6+2 </i>"
+                  }
+                ]
+              },
+              {
+                "id": 114805,
+                "name": "shock wave pulse",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "D6+2",
+                "ballisticSkill": "-",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3468,
+                    "name": "Ignores Cover",
+                    "rules": "Each time an attack is made with an <k>[IGNORES COVER]</k> weapon, the target cannot have the <b>benefit of cover</b> against that attack (13.08), including from rules that give a model or unit the <b>benefit of cover</b> (e.g. <b>Stealth</b>)."
+                  },
+                  {
+                    "id": 3358,
+                    "name": "Torrent",
+                    "rules": "Each time an attack is made with a <k>[TORRENT]</k> weapon, that attack automatically hits the target."
+                  }
+                ]
+              },
+              {
+                "id": 111032,
+                "name": "Tremorglaive",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "2",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "8",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 104819,
+            "name": "Tremorglaive",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113944,
+                "name": "reverberating beam",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "2",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "8",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3352,
+                    "name": "Melta 2",
+                    "rules": "This ability always takes the form <k>[MELTA X]</k>. Each time a model makes an attack with a <k>[MELTA]</k> weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add <b>X</b> to that weapon’s <b>D</b> characteristic.\n\n<b>Example:</b> <i>A model targets a unit that is within half range of a <k>[MELTA 2]</k> weapon with a <b>D</b> characteristic of D6. While resolving those attacks, that weapon has a <b>D</b> characteristic of D6+2 </i>"
+                  }
+                ]
+              },
+              {
+                "id": 114805,
+                "name": "shock wave pulse",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "D6+2",
+                "ballisticSkill": "-",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3468,
+                    "name": "Ignores Cover",
+                    "rules": "Each time an attack is made with an <k>[IGNORES COVER]</k> weapon, the target cannot have the <b>benefit of cover</b> against that attack (13.08), including from rules that give a model or unit the <b>benefit of cover</b> (e.g. <b>Stealth</b>)."
+                  },
+                  {
+                    "id": 3358,
+                    "name": "Torrent",
+                    "rules": "Each time an attack is made with a <k>[TORRENT]</k> weapon, that attack automatically hits the target."
+                  }
+                ]
+              },
+              {
+                "id": 111032,
+                "name": "Tremorglaive",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "2",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "8",
+                "armourPenetration": "-2",
+                "damage": "2",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [],
+  "compositions": [
+    {
+      "id": 61465,
+      "points": 75,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 1,
+      "miniatures": [
+        {
+          "miniatureId": 61642,
+          "miniatureName": "Geomancer",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    }
+  ]
+}

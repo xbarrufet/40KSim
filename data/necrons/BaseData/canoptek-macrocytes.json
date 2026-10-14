@@ -1,0 +1,352 @@
+{
+  "id": 47079,
+  "slug": "canoptek-macrocytes",
+  "name": "Canoptek Macrocytes",
+  "baseSize": "28.5mm",
+  "maxModelCount": null,
+  "unitComposition": "■ **5 Canoptek Macrocytes**\n\n**Every model is equipped with:** gauss scalpel; claws",
+  "isSuccessorChapter": false,
+  "isFreeFromEntitlements": true,
+  "isLegends": false,
+  "abilities": [
+    {
+      "lore": "Scouts form the vanguard of many armies. Unnoticed by the enemy, they range ahead of the main force.",
+      "name": "Scouts 8\"",
+      "rules": "This ability always takes the form <b>Scouts X\"</b>. In the Resolve Pre‑battle Abilities step, if every model in a unit has this ability, you can do <u>one</u> of the following:\n<ul><li>If that unit is in <b>strategic reserves</b>, you can set up that unit anywhere that is wholly within your deployment zone.</li><li>If that unit is wholly within your deployment zone, it can make a <b>scout move</b> (24.32).</li><li>If that unit is embarked within a <k>DEDICATED TRANSPORT</k> that is wholly within your deployment zone, and if every model embarked within that <k>DEDICATED TRANSPORT</k> has the <b>Scouts</b> ability, that <k>DEDICATED TRANSPORT</k> can make a <b>scout move</b>.</li></ul>",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "core",
+      "restriction": null,
+      "displayOrder": 1,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Reanimation Protocols",
+      "rules": "-",
+      "isAura": false,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "faction",
+      "restriction": null,
+      "displayOrder": 2,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    },
+    {
+      "lore": null,
+      "name": "Harassment Swarm",
+      "rules": "While an enemy unit (excluding **MONSTERS** and **VEHICLES**) is within 3\" of this unit, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+      "isAura": true,
+      "isPain": false,
+      "isPsychic": false,
+      "isBondsman": false,
+      "abilityType": "datasheet",
+      "restriction": null,
+      "displayOrder": 3,
+      "subAbilities": [],
+      "subAbilityHeader": null
+    }
+  ],
+  "damage": null,
+  "rules": null,
+  "pointsStepAt": null,
+  "pointsStepPoints": null,
+  "leads": [],
+  "ledBy": [
+    {
+      "attachType": "support",
+      "datasheet": {
+        "id": 47396,
+        "name": "Geomancer",
+        "slug": "geomancer",
+        "factionSlug": "necrons"
+      },
+      "targetKeywords": [],
+      "secondLeader": false
+    }
+  ],
+  "relatedUnits": [],
+  "wargearOptions": [],
+  "allegianceAbilityGroup": null,
+  "faction": {
+    "id": 1871,
+    "slug": "necrons",
+    "name": "Necrons",
+    "commonName": "Necrons"
+  },
+  "miniatures": [
+    {
+      "id": 61700,
+      "name": "Canoptek Macrocytes",
+      "stats": {
+        "save": "4+",
+        "wounds": "1",
+        "movement": "8\"",
+        "toughness": "3",
+        "leadership": "8+",
+        "objectiveControl": "1"
+      },
+      "keywords": [
+        {
+          "id": 50944,
+          "name": "Beasts"
+        },
+        {
+          "id": 51167,
+          "name": "Canoptek"
+        },
+        {
+          "id": 51013,
+          "name": "Fly"
+        },
+        {
+          "id": 50811,
+          "name": "Macrocytes"
+        }
+      ],
+      "defaultWargear": [
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 107182,
+            "name": "Gauss scalpel",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111357,
+                "name": "Gauss scalpel",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3486,
+                    "name": "Lethal Hits",
+                    "rules": "Each time an attack made with a <k>[LETHAL HITS]</k> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <k>[DEVASTATING WOUNDS]</k>.</i>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "count": 1,
+          "wargearItem": {
+            "id": 105058,
+            "name": "Claws",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113884,
+                "name": "Claws",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "2",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "4",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          }
+        }
+      ],
+      "wargear": [
+        {
+          "wargearItem": {
+            "id": 108618,
+            "name": "Accelerator Mandible",
+            "wargearType": "wargear",
+            "ruleText": "At the start of the Fight phase, select one friendly **CANOPTEK** unit within 3\" of this unit. Until the end of the phase, improve the Weapon Skill characteristic of models in that unit by 1.",
+            "profiles": []
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105706,
+            "name": "Nanoscarab Projector",
+            "wargearType": "wargear",
+            "ruleText": "Once per battle round, when a friendly **NECRONS** unit within 3\" of this model’s Reanimation Protocols activate, it can use this ability. If it does, that unit reanimates 1 additional wound.",
+            "profiles": []
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107587,
+            "name": "Atomiser beam",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111224,
+                "name": "Atomiser beam",
+                "type": "ranged",
+                "range": "12\"",
+                "attacks": "1",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "6",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105058,
+            "name": "Claws",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 113884,
+                "name": "Claws",
+                "type": "melee",
+                "range": "Melee",
+                "attacks": "2",
+                "ballisticSkill": null,
+                "weaponSkill": "4+",
+                "strength": "4",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": []
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 107182,
+            "name": "Gauss scalpel",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 111357,
+                "name": "Gauss scalpel",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "4",
+                "armourPenetration": "-1",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3486,
+                    "name": "Lethal Hits",
+                    "rules": "Each time an attack made with a <k>[LETHAL HITS]</k> weapon results in a <b>critical hit</b>, you can choose for that attack to automatically wound the target.\n\n<b>Designer’s Note:</b> <i>Choosing to automatically wound the target means that no <b>wound roll</b> is made for that attack. You may decide against this, as it means that attack cannot result in a <b>critical wound</b> and so cannot trigger other abilities such as <k>[DEVASTATING WOUNDS]</k>.</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": true,
+          "isConfigurable": true
+        },
+        {
+          "wargearItem": {
+            "id": 105780,
+            "name": "Tesla caster",
+            "wargearType": "weapon",
+            "ruleText": null,
+            "profiles": [
+              {
+                "id": 114162,
+                "name": "Tesla caster",
+                "type": "ranged",
+                "range": "18\"",
+                "attacks": "1",
+                "ballisticSkill": "4+",
+                "weaponSkill": null,
+                "strength": "5",
+                "armourPenetration": "0",
+                "damage": "1",
+                "hunterProfileKeyword": null,
+                "abilities": [
+                  {
+                    "id": 3349,
+                    "name": "Assault",
+                    "rules": "Units containing one or more models with an <k>[ASSAULT]</k> weapon can shoot using <b>assault shooting</b> (10.05)."
+                  },
+                  {
+                    "id": 3402,
+                    "name": "Sustained Hits 1",
+                    "rules": "This ability always takes the form <k>[SUSTAINED HITS X]</k>. Each time an attack made with a <k>[SUSTAINED HITS]</k> weapon results in a <b>critical hit</b>, that attack results in a number of additional hits on the target as denoted by <b>X</b>.\n\n<b>Example:</b> <i>An attack made with a <k>[SUSTAINED HITS 2]</k> weapon results in a <b>critical hit</b>. That attack therefore hits the target three times (once from the <b>critical hit</b>, and twice more from the <k>[SUSTAINED HITS 2]</k> ability).</i>"
+                  }
+                ]
+              }
+            ]
+          },
+          "isDefault": false,
+          "isConfigurable": true
+        }
+      ]
+    }
+  ],
+  "wargearRules": [
+    {
+      "id": 41357,
+      "rulesText": "■ All models in this unit can each have their gauss scalpel replaced with 1 tesla caster.",
+      "displayOrder": 1
+    },
+    {
+      "id": 42218,
+      "rulesText": "■ 1 model’s gauss scalpel or tesla caster can be replaced with 1 atomiser beam and 1 nanoscarab projector.",
+      "displayOrder": 2
+    },
+    {
+      "id": 42342,
+      "rulesText": "■ 1 model’s gauss scalpel or tesla caster can be replaced with 1 accelerator mandible.",
+      "displayOrder": 3
+    }
+  ],
+  "compositions": [
+    {
+      "id": 61771,
+      "points": 70,
+      "displayOrder": 1,
+      "isDefault": true,
+      "requiredFactionLabel": null,
+      "models": 5,
+      "miniatures": [
+        {
+          "miniatureId": 61700,
+          "miniatureName": "Canoptek Macrocytes",
+          "min": 5,
+          "max": 5
+        }
+      ]
+    }
+  ]
+}

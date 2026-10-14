@@ -1,0 +1,1661 @@
+{
+  "orks/battlewagon": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Wreckin' Ball",
+                "wargearItemId": 105992
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42077,
+        "originalText": "This model can be equipped with 1 Wreckin' Ball."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 4,
+                "name": "Big Shoota",
+                "wargearItemId": 107747
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42263,
+        "originalText": "This model can be equipped with up to 4 Big Shoota."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Grabbin' Klaw",
+                "wargearItemId": 107651
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41250,
+        "originalText": "This model can be equipped with 1 Grabbin' Klaw."
+      }
+    ]
+  },
+  "orks/beast-snagga-boyz": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 10,
+            "count": 1
+          }
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Thump Gun",
+                "wargearItemId": 107429
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41289,
+        "originalText": "For every 10 models in this unit, 1 Beast Snagga Boy model can be equipped with 1 Thump Gun."
+      }
+    ]
+  },
+  "orks/beastboss-on-squigosaur": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Thump Gun",
+                "wargearItemId": 106536
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41034,
+        "originalText": "This model can be equipped with 1 Thump Gun."
+      }
+    ]
+  },
+  "orks/big-mek-in-mega-armour": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Tellyport Blasta",
+                "wargearItemId": 106237
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Kustom Force Field",
+                "wargearItemId": 107658
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41907,
+        "originalText": "This model can be equipped with one of the following:\n▫ 1 Tellyport Blasta\n▫ 1 Kustom Force Field"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Kustom Shoota",
+            "wargearItemId": 106114
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Killsaw",
+                "wargearItemId": 108562
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Kombi-weapon",
+                "wargearItemId": 108736
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Kustom Mega-blasta",
+                "wargearItemId": 105043
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42187,
+        "originalText": "This model’s Kustom Shoota can be replaced with one of the following:\n▫ 1 Killsaw\n▫ 1 Kombi‑weapon\n▫ 1 Kustom Mega‑blasta"
+      }
+    ]
+  },
+  "orks/big-mek": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Power Klaw",
+            "wargearItemId": 106033
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Drilla",
+                "wargearItemId": 107306
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41354,
+        "originalText": "This model's Power Klaw can be replaced with 1 Drilla."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Kustom Mega-blasta",
+            "wargearItemId": 108619
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Traktor Blasta",
+                "wargearItemId": 107188
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42299,
+        "originalText": "This model's Kustom Mega-blasta can be replaced with 1 Traktor Blasta."
+      }
+    ]
+  },
+  "orks/biged-bossbunka": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Big Shoota",
+                "wargearItemId": 107427
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 2,
+                "name": "Big Shoota",
+                "wargearItemId": 107427
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 3,
+                "name": "Big Shoota",
+                "wargearItemId": 107427
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42311,
+        "originalText": "This model can be equipped with up to 3 Big Shootas."
+      }
+    ]
+  },
+  "orks/boyz": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber",
+          "role": "Nob"
+        },
+        "replaces": [
+          {
+            "name": "Kustom Choppa",
+            "wargearItemId": 106037
+          },
+          {
+            "name": "Kombi-skorcha",
+            "wargearItemId": 108446
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Big Choppa",
+                "wargearItemId": 106549
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41393,
+        "originalText": "Any number of Nob models can each have their Kustom Choppa and Kombi-skorcha replaced with 1 Big Choppa."
+      },
+      {
+        "scope": {
+          "type": "anyNumber",
+          "role": "Nob"
+        },
+        "replaces": [
+          {
+            "name": "Kustom Choppa",
+            "wargearItemId": 106037
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Klaw",
+                "wargearItemId": 106037
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41203,
+        "originalText": "Any number of Nob models can each have their Kustom Choppa replaced with 1 Power Klaw."
+      },
+      {
+        "scope": {
+          "type": "anyNumber",
+          "role": "Nob"
+        },
+        "replaces": [
+          {
+            "name": "Kombi-skorcha",
+            "wargearItemId": 108446
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Kombi-rokkit",
+                "wargearItemId": 105701
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Kustom Shoota",
+                "wargearItemId": 105745
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41486,
+        "originalText": "Any number of Nob models can each have their Kombi-skorcha replaced with one of the following:\n▫ 1 Kombi-rokkit\n▫ 1 Kustom Shoota"
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 10,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Shoota",
+            "wargearItemId": 105745
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Big Shoota",
+                "wargearItemId": 106549
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41254,
+        "originalText": "For every 10 models in this unit, 1 Boy model can have their Shoota replaced with 1 Big Shoota."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 10,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Shoota",
+            "wargearItemId": 105745
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Rokkit Launcha",
+                "wargearItemId": 105701
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41681,
+        "originalText": "For every 10 models in this unit, 1 Boy model can have their Shoota replaced with 1 Rokkit Launcha."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 10,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Shoota",
+            "wargearItemId": 105745
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Burna",
+                "wargearItemId": 108446
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42103,
+        "originalText": "For every 10 models in this unit, 1 Boy model can have their Shoota replaced with 1 Burna."
+      }
+    ]
+  },
+  "orks/breaka-boyz": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Nob"
+        },
+        "replaces": [
+          {
+            "name": "Smash Hammer",
+            "wargearItemId": 105838
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Rokkit Pistol",
+                "wargearItemId": 0
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42105,
+        "originalText": "The Nob can have their Smash Hammer replaced with 1 Rokkit Pistol."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Smash Hammer",
+            "wargearItemId": 105838
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Knucklebustas",
+                "wargearItemId": 106755
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41069,
+        "originalText": "1 Breaka Boy model can have their Smash Hammer replaced with 1 Knucklebustas."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Smash Hammer",
+            "wargearItemId": 105838
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Tankhammer",
+                "wargearItemId": 106233
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41106,
+        "originalText": "1 Breaka Boy model can have their Smash Hammer replaced with 1 Tankhammer."
+      }
+    ]
+  },
+  "orks/burna-bommer": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Skorcha Missile Rack",
+                "wargearItemId": 105783
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41442,
+        "originalText": "This model can be equipped with 1 Skorcha Missile Rack."
+      }
+    ]
+  },
+  "orks/dakkajet": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Dual Supa-shoota",
+                "wargearItemId": 108130
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42175,
+        "originalText": "This model can be equipped with 1 Dual Supa‑shoota."
+      }
+    ]
+  },
+  "orks/deff-dread": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Big Shoota",
+            "wargearItemId": 105031
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Extra Klaw",
+                "wargearItemId": 106291
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Kustom Mega-blasta",
+                "wargearItemId": 105841
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Rokkit Launcha",
+                "wargearItemId": 107565
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41029,
+        "originalText": "This model's Big Shoota can be replaced with one of the following:\n▫ 1 Extra Klaw\n▫ 1 Kustom Mega‐blasta\n▫ 1 Rokkit Launcha"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Skorcha",
+            "wargearItemId": 108010
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Extra Klaw",
+                "wargearItemId": 106291
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Big Shoota",
+                "wargearItemId": 105031
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Kustom Mega-blasta",
+                "wargearItemId": 105841
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Rokkit Launcha",
+                "wargearItemId": 107565
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41136,
+        "originalText": "This model's Skorcha can be replaced with one of the following:\n▫ 1 Extra Klaw\n▫ 1 Big Shoota\n▫ 1 Kustom Mega‐blasta\n▫ 1 Rokkit Launcha"
+      }
+    ]
+  },
+  "orks/deffkoptas": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 3,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Rokkit Launcha",
+            "wargearItemId": 108136
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Kustom Mega-blasta",
+                "wargearItemId": 105408
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41111,
+        "originalText": "For every 3 models in this unit, 1 model can have their Rokkit Launcha replaced with 1 Kustom Mega‑blasta."
+      }
+    ]
+  },
+  "orks/gargantuan-squiggoth": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Kannon",
+            "wargearItemId": 106454
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Supa-kannon",
+                "wargearItemId": 105629
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41883,
+        "originalText": "This model's Kannon can be replaced with 1 Supa-kannon."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "kannon",
+                "wargearItemId": 106454
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "supa-kannon",
+                "wargearItemId": 105629
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41833,
+        "originalText": "This model can be equipped with one of the following:\n◦ 1 kannon\n◦ 1 supa-kannon"
+      }
+    ]
+  },
+  "orks/gunwagon": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Wreckin' Ball",
+                "wargearItemId": 107350
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41376,
+        "originalText": "This model can be equipped with 1 Wreckin' Ball."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Grabbin' Klaw",
+                "wargearItemId": 105541
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41026,
+        "originalText": "This model can be equipped with 1 Grabbin' Klaw."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Lobba",
+                "wargearItemId": 108444
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41802,
+        "originalText": "This model can be equipped with 1 Lobba."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 4,
+                "name": "Big Shoota",
+                "wargearItemId": 105759
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41786,
+        "originalText": "This model can be equipped with up to 4 Big Shoota."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Kannon",
+            "wargearItemId": 105202
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Killkannon",
+                "wargearItemId": 108672
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Zzap Gun",
+                "wargearItemId": 106367
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41443,
+        "originalText": "This model's Kannon can be replaced with one of the following:\n▫ 1 Killkannon\n▫ 1 Zzap Gun"
+      }
+    ]
+  },
+  "orks/kommandos": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Nob"
+        },
+        "replaces": [
+          {
+            "name": "Choppa",
+            "wargearItemId": 106645
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Big Choppa",
+                "wargearItemId": 106645
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Klaw",
+                "wargearItemId": 106645
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42381,
+        "originalText": "The Nob can have their Choppa replaced with one of the following:\n▫ 1 Big Choppa\n▫ 1 Power Klaw"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Burna",
+                "wargearItemId": 107619
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42157,
+        "originalText": "1 Kommando model can be equipped with 1 Burna."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Rokkit Launcha",
+                "wargearItemId": 108321
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41623,
+        "originalText": "1 Kommando model can be equipped with 1 Rokkit Launcha."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Choppa",
+            "wargearItemId": 106645
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Breacha Ram",
+                "wargearItemId": 106184
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41722,
+        "originalText": "1 Kommando model can have their Choppa replaced with 1 Breacha Ram."
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Kustom Shoota",
+                "wargearItemId": 107960
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42286,
+        "originalText": "Up to 2 Kommando models can each be equipped with 1 Kustom Shoota."
+      }
+    ]
+  },
+  "orks/meganobz": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Power Klaw",
+            "wargearItemId": 104966
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Killsaw",
+                "wargearItemId": 108678
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41380,
+        "originalText": "Any number of models can each have their Power Klaw replaced with 1 Killsaw."
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Kustom Shoota",
+            "wargearItemId": 106652
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Kombi-weapon",
+                "wargearItemId": 106747
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41635,
+        "originalText": "Any number of models can each have their Kustom Shoota replaced with 1 Kombi‑weapon."
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Power Klaw",
+            "wargearItemId": 104966
+          },
+          {
+            "name": "Kustom Shoota",
+            "wargearItemId": 106652
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin Killsaws",
+                "wargearItemId": 108445
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41926,
+        "originalText": "Any number of models can each have their Power Klaw and Kustom Shoota replaced with 1 Twin Killsaws."
+      }
+    ]
+  },
+  "orks/mek-gunz": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Smasha Gun",
+            "wargearItemId": 106330
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Bubblechukka",
+                "wargearItemId": 106161
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Kustom Mega-kannon",
+                "wargearItemId": 106558
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Traktor Kannon",
+                "wargearItemId": 106621
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42072,
+        "originalText": "Any number of models can each have their Smasha Gun replaced with one of the following:\n▫ 1 Bubblechukka\n▫ 1 Kustom Mega‐kannon\n▫ 1 Traktor Kannon"
+      }
+    ]
+  },
+  "orks/nobz": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Kustom Krumpa",
+            "wargearItemId": 105904
+          },
+          {
+            "name": "Kustom Shoota",
+            "wargearItemId": 106047
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Big Skorcha",
+                "wargearItemId": 106235
+              },
+              {
+                "count": 1,
+                "name": "Kustom Choppa",
+                "wargearItemId": 107778
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42069,
+        "originalText": "For every 5 models in this unit, 1 model can have their Kustom Krumpa and Kustom Shoota replaced with 1 Big Skorcha and 1 Kustom Choppa."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Kustom Krumpa",
+            "wargearItemId": 105904
+          },
+          {
+            "name": "Kustom Shoota",
+            "wargearItemId": 106047
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Kustom Big Shoota",
+                "wargearItemId": 105625
+              },
+              {
+                "count": 1,
+                "name": "Kustom Choppa",
+                "wargearItemId": 107778
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41989,
+        "originalText": "For every 5 models in this unit, 1 model can have their Kustom Krumpa and Kustom Shoota replaced with 1 Kustom Big Shoota and 1 Kustom Choppa."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Kustom Krumpa",
+            "wargearItemId": 105904
+          },
+          {
+            "name": "Kustom Shoota",
+            "wargearItemId": 106047
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Big Choppa",
+                "wargearItemId": 106977
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42047,
+        "originalText": "For every 5 models in this unit, 1 model can have their Kustom Krumpa and Kustom Shoota replaced with 1 Big Choppa."
+      },
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 5,
+            "count": 1
+          }
+        },
+        "replaces": [
+          {
+            "name": "Kustom Shoota",
+            "wargearItemId": 106047
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Paired Krumpas",
+                "wargearItemId": 106138
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41001,
+        "originalText": "For every 5 models in this unit, 1 model can have their Kustom Shoota replaced with 1 Paired Krumpas."
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Kustom Shoota",
+            "wargearItemId": 106047
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Kombi-rokkit",
+                "wargearItemId": 105800
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41997,
+        "originalText": "Any number of models can each have their Kustom Shoota replaced with 1 Kombi-rokkit."
+      }
+    ]
+  },
+  "orks/stormboyz": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Nob"
+        },
+        "replaces": [
+          {
+            "name": "Kustom Choppa",
+            "wargearItemId": 105192
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Klaw",
+                "wargearItemId": 105192
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41286,
+        "originalText": "The Nob can have their Kustom Choppa replaced with 1 Power Klaw."
+      }
+    ]
+  },
+  "orks/tankbustas": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model",
+          "role": "Nob"
+        },
+        "replaces": [
+          {
+            "name": "Rokkit Pistol",
+            "wargearItemId": 107031
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Smash Hammer",
+                "wargearItemId": 106171
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41003,
+        "originalText": "The Nob can have their Rokkit Pistol replaced with 1 Smash Hammer."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Busta Rokkit Launcha",
+                "wargearItemId": null
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Pulsa Rokkit",
+                "wargearItemId": null
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41085,
+        "originalText": "1 Tankbusta model can be equipped with one of the following:\n▫ 1 Busta Rokkit Launcha\n▫ 1 Pulsa Rokkit"
+      }
+    ]
+  },
+  "orks/trukk": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Dual Big Shoota",
+            "wargearItemId": 107955
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Rokkit Launcha",
+                "wargearItemId": 105321
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42359,
+        "originalText": "This model's Dual Big Shoota can be replaced with 1 Rokkit Launcha."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Buzzsaw",
+                "wargearItemId": 105720
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Grabbin' Klaw",
+                "wargearItemId": 106008
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41416,
+        "originalText": "This model can be equipped with one of the following:\n▫ 1 Buzzsaw\n▫ 1 Grabbin' Klaw"
+      }
+    ]
+  },
+  "orks/warboss": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Kustom Choppa",
+            "wargearItemId": 107970
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Power Klaw",
+                "wargearItemId": 106598
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41233,
+        "originalText": "This model's Kustom Choppa can be replaced with 1 Power Klaw."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Kustom Shoota",
+            "wargearItemId": 107536
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Kombi-rokkit",
+                "wargearItemId": 105377
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Kombi-skorcha",
+                "wargearItemId": 105184
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41063,
+        "originalText": "This model's Kustom Shoota can be replaced with one of the following:\n▫ 1 Kombi‑rokkit\n▫ 1 Kombi‑skorcha"
+      }
+    ]
+  },
+  "orks/warbuggies": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Mek Speshul",
+            "wargearItemId": 105200
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Rivet Kannon",
+                "wargearItemId": 106254
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41138,
+        "originalText": "Any number of models can each have their Mek Speshul replaced with 1 Rivet Kannon."
+      }
+    ]
+  },
+  "orks/wazbom-blastajet": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Dual Wazbom Mega-kannon",
+            "wargearItemId": 106527
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Dual Tellyport Mega-blasta",
+                "wargearItemId": 105613
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41318,
+        "originalText": "This model's Dual Wazbom Mega-kannon can be replaced with 1 Dual Tellyport Mega-blasta."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Blastajet Force Field",
+                "wargearItemId": 108650
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42027,
+        "originalText": "This model can be equipped with 1 Blastajet Force Field."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Dual Supa-shoota",
+                "wargearItemId": 107890
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42151,
+        "originalText": "This model can be equipped with 1 Dual Supa-shoota."
+      }
+    ]
+  }
+}

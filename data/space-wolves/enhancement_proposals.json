@@ -1,0 +1,200 @@
+{
+  "space-wolves/champions-of-fenris": [
+    {
+      "slug": "a-giant-amongst-giants",
+      "name": "A Giant Amongst Giants",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "stat": "Wounds",
+          "mode": "add",
+          "value": 2
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "MELEE",
+          "stat": "Strength",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Infantry model only. This model has +2W. This model's melee attacks have +1S."
+    },
+    {
+      "slug": "preyslayer",
+      "name": "Preyslayer",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Infantry"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfUnit",
+          "roll": "charge",
+          "action": "rerollAll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Infantry model only. This unit can re-roll charge rolls."
+    }
+  ],
+  "space-wolves/saga-of-the-beastslayer": [
+    {
+      "slug": "hunters-guile",
+      "name": "Hunter's Guile",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. When both players have deployed their armies, you can redeploy up to three friendly Blood Claws/Thunderwolf Cavalry/Wulfen units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves."
+    },
+    {
+      "slug": "wolf-touched",
+      "name": "Wolf-Touched",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "unitKeyword",
+          "appliedTo": "SelfModel",
+          "keyword": "WULFEN",
+          "value": null
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "stat": "Movement",
+          "mode": "add",
+          "value": 2
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. This unit has: Wulfen. +2\" M."
+    }
+  ],
+  "space-wolves/saga-of-the-great-wolf": [
+    {
+      "slug": "chariots-of-the-storm",
+      "name": "Chariots of the Storm",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. When both players have deployed their armies, you can redeploy up to three friendly Adeptus Astartes units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves."
+    },
+    {
+      "slug": "grimnar-s-mark",
+      "name": "Grimnar's Mark",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Captain",
+          "Terminator"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes Terminator Captain model only. (Once per battle round, per army) You can target this unit with the Rapid Ingress/Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: That use is -1CP. That use does not prevent any uses of that stratagem on other units this phase."
+    },
+    {
+      "slug": "howlmaw",
+      "name": "Howlmaw",
+      "points": 15,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Wolf Priest"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "Enemy",
+          "roll": "battleshock",
+          "action": "subtractFromRoll"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Wolf Priest model only. (Once per turn, per unit) At the start of the fight phase, you can select one enemy unit within 6\" of this model. That unit makes a battle-shock roll with -1 to that battle-shock roll."
+    },
+    {
+      "slug": "skjald-s-foretelling",
+      "name": "Skjald's Foretelling",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [
+          "Battle Leader",
+          "Wolf Guard"
+        ],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "weaponKeyword",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "MELEE",
+          "keyword": "LANCE",
+          "value": null
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Wolf Guard Battle Leader model only. This unit's melee attacks have [Lance]."
+    }
+  ]
+}

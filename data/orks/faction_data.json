@@ -1,0 +1,2365 @@
+{
+  "faction": "Orks",
+  "slug": "orks",
+  "army_rules": [
+    {
+      "id": 1707,
+      "name": "Waaagh!",
+      "excludedFactionIds": [],
+      "components": [
+        {
+          "id": 49431,
+          "type": "text",
+          "textContent": "Friendly <k>Orks</k> units with this ability can:\r<ul><li>Re‑roll <b>advance rolls.</b></li>\r<li>Become <b>riled up</b>, as stated in other rules. While a unit is <b>riled up</b>:</li>\r<ul><li>That unit has 5+ <b>InSv</b>.</li>\r<li>That unit’s ranged attacks have <k>[ASSAULT]</k>.</li>\r<li>When that unit is selected to make an <b>advance move</b>, that <b>advance move</b> does not prevent that unit from being <b>eligible to declare a charge</b>.</li></ul></ul>\r<nest><b>War Cry (Once per battle, per army): </b>At the start of the Command phase, you can use this ability. If you do, friendly <k>Orks</k> units with the <b>Waaagh! </b>ability are<b> riled up</b> until the end of the next turn. </nest>",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48790,
+          "type": "loreAccordion",
+          "textContent": "<i>The infamous war cry of the Orks is known and feared throughout the galaxy. When it echoes across the battlefield, bellowed from countless toothy maws, it galvanises the Orks and riles them into a raucous state of excited aggression.</i>",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    },
+    {
+      "id": 1753,
+      "name": "Da Boss",
+      "excludedFactionIds": [],
+      "components": [
+        {
+          "id": 48400,
+          "type": "text",
+          "textContent": "At the start of the battle round, if a model with this ability is your <k>Warlord</k>, gain 1CP.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 48540,
+          "type": "loreAccordion",
+          "textContent": "<i>Whether capable of kunnin' strategy or favouring something far less complicated, the biggest Ork tends to have a voice as aggressive and brutal as the rest of him. His bellows can be heard over the thickest fighting and his reputation ensures the ladz do as they're told.</i>",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    },
+    {
+      "id": 1712,
+      "name": "Unstable energies",
+      "excludedFactionIds": [],
+      "components": [
+        {
+          "id": 49889,
+          "type": "text",
+          "textContent": "<k>Orks Psyker</k> units with this ability have a <b>psyker level</b> of 1 or higher, specified in that unit's abilities. Each <b>psychic ability</b> has a <b>psychic level</b> of 1 or higher, specified in that ability's name.\nIn a battle round, a friendly <k>Orks Psyker</k> unit can use a number of <b>psychic abilities</b> whose total <b>psychic level</b> does not exceed that <k>Psyker</k> unit's <b>psyker level</b>.\nExample: In a battle round, a <b><i>psyker level 3</i></b> <k>Psyker</k> unit could use three <b><i>psychic level 1</i></b> abilities, or one <b><i>psychic level 1</i></b> ability and one <b><i>psychic level 2</i></b> ability, or one <b><i>psychic level 3</i></b> ability.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49081,
+          "type": "loreAccordion",
+          "textContent": "<i>Ork psykers – Weirdboyz and their unsavoury ilk – release the painful build-up of Waaagh! energy in sudden discharges of power, usually with spectacularly lethal results.</i>",
+          "title": "Lore",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    },
+    {
+      "id": 1758,
+      "name": "Special Move Types",
+      "excludedFactionIds": [],
+      "components": [
+        {
+          "id": 48689,
+          "type": "text",
+          "textContent": "The following are special **move types** that certain or all of your units are eligible to make.",
+          "title": null,
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49903,
+          "type": "accordion",
+          "textContent": "<b>When eligible:</b> As stated in the rule allowing this <b>move type</b>.<br/><b>Maximum distance:</b> Pulse roll + 18\"<br/><b>Effect:</b> Your unit moves as described in Moving (Core Rules, 03).<br/><b>Before moving:</b> <ul><li>Make a <b>pulse roll</b> by rolling one D6.</li></ul><br/><b>While moving:</b> <ul><li>Ignore all vertical distance for the purposes of how far your unit has moved.</li>\r<li>Your unit can move through all types of model.</li>\r<li>Your unit can move horizontally and vertically through all categories of <b>terrain feature</b>.</li></ul><br/><b>After moving:</b> <ul><li>Your unit must be <b>unengaged</b>.</li>\r<li>Until the end of the turn, your unit is <u>not</u><b> eligible to declare a charge</b> or <b>start an action</b>.</li>\r<li>Until the start of your next turn, attacks that target your unit have -1 to <b>hit rolls</b>.</li></ul>",
+          "title": "Pulse Jet move",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        },
+        {
+          "id": 49900,
+          "type": "accordion",
+          "textContent": "<b>When eligible:</b> As stated in the rule allowing this <b>move type</b>, if all of the following apply to your unit:\r<ul><li>Embarked within a <k>TRANSPORT</k> model that is on the battlefield.</li>\r<li>Did not embark within that <k>TRANSPORT</k> this phase.</li>\r<li>That <k>TRANSPORT</k> has not made an <b>advance/fall-back move</b> this phase.</li></ul><br/><b>Set-up distance:</b> 3\"<br/><b>Effect:</b> Your unit is set up as described in Set Up (Core Rules, 03.02).<br/><b>While moving:</b> <ul><li>Set up each model in your unit wholly within the <b>set-up distance</b> of that <k>TRANSPORT</k>.</li></ul>",
+          "title": "Assault Disembark move",
+          "subtitle": null,
+          "trigger": null,
+          "effect": null,
+          "imageUrl": null,
+          "altText": null,
+          "bulletPoints": []
+        }
+      ]
+    }
+  ],
+  "detachments_count": 15,
+  "detachments": [
+    {
+      "id": 10182,
+      "slug": "blitz-brigade",
+      "name": "Blitz Brigade",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Take and Hold"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1858,
+        "slug": "orks",
+        "name": "Orks",
+        "commonName": "Orks"
+      },
+      "enhancements": [
+        {
+          "id": 37043,
+          "name": "Boss Boomer (Upgrade)",
+          "points": 10,
+          "rules": "<k>Wagon</k> unit only. While a <k>Warboss</k> model is embarked within this unit, this unit has that <k>Warboss</k> model’s <b>Intimidating Motivation/Keep Huntin’</b> ability.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Wagon"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37476,
+          "name": "Targetin’ Gizmos (Upgrade)",
+          "points": 25,
+          "rules": "<k>Wagon</k> unit only. While a <k>Big Mek</k> model is embarked within this unit:\r<ul><li>This unit’s ranged attacks have <k>[Ignores Cover]</k>.</li>\r<li>If this unit is <b>riled up</b>, this unit’s ranged attacks have <k>[Sustained Hits 1]</k>.</li></ul>",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Wagon"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44031,
+          "name": "Readied Brawlers",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, when a friendly <k>Wagon</k> unit ends a <b>normal move</b>.",
+          "targetRules": "That <k>Wagon</k> unit.",
+          "effectRules": "Units embarked within your unit can make an <b>assault disembark move</b> (pg 121).",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44149,
+          "name": "Impending Krunch",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "chargePhase"
+          ],
+          "whenRules": "Your Charge phase, when a friendly <k>Wagon</k> unit ends a <b>charge move</b>.",
+          "targetRules": "That <k>Wagon</k> unit.",
+          "effectRules": "Each enemy unit <b>engaged</b> with your unit makes a <b>battle-shock roll</b>, with -1 to that <b>battle-shock roll</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44625,
+          "name": "Keep It Runnin’",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "End of the Fight phase.",
+          "targetRules": "One friendly <b>unengaged</b> <k>Orks Infantry</k> unit that was <b>eligible to fight</b> this phase and is wholly within 6\" of a friendly <k>Transport</k> unit that <k>Infantry</k> unit is able to embark within.",
+          "effectRules": "Your <k>Infantry</k> unit embarks within that <k>Transport</k> unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7814,
+          "name": "Unstoppable Momentum",
+          "components": [
+            {
+              "id": 48669,
+              "type": "text",
+              "textContent": "<ul><li>Friendly <k>Wagon</k> units can re-roll <b>charge rolls</b>.</li>\r<li>When a friendly <k>Wagon</k> unit is selected to make an <b>advance move</b>, that unit can change <b>advance rolls</b> to a 6.</li></ul>",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49320,
+              "type": "loreAccordion",
+              "textContent": "<i>Like mobile armoured fortresses, little can stop the crushing impetus of the Orks’ hulking wagons.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10183,
+      "slug": "brute-bosses",
+      "name": "Brute Bosses",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Purge the Foe"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1858,
+        "slug": "orks",
+        "name": "Orks",
+        "commonName": "Orks"
+      },
+      "enhancements": [
+        {
+          "id": 37184,
+          "name": "Blitzboss",
+          "points": 20,
+          "rules": "<k>Warboss</k> model only. A <k>transport</k> unit (excluding <k>Walker</k> units) this unit is embarked within has: \r<ul><li>+2\" <b>M</b>.</li>\r<li>5+ <b>InSv</b>.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Warboss"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36859,
+          "name": "Brutal But Kunnin’",
+          "points": 30,
+          "rules": "<k>Warboss</k> model only. This model’s melee attacks have +1 <b>D</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Warboss"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37467,
+          "name": "Da Gobshot Thunderbuss",
+          "points": 20,
+          "rules": "<k>Warboss</k> model only. This model has the following weapon:\n\n<img src=\"https://custom.40k-app.local/orks/da-gobshot-thunderbuss-weapon-profile\" alt=\"Da Gobshot Thunderbuss weapon profile\">",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Warboss"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37255,
+          "name": "Morgog’s Finkin’ Cap",
+          "points": 50,
+          "rules": "<k>Warboss</k> model only. (Once per battle, per army) At the end of your opponent’s Movement phase, if this unit is <b>unengaged</b>, this unit can make a <b>normal move</b> of:\r<ul><li>Up to D6\".</li>\r<li>If this unit is <b>riled up</b>, you can re-roll that D6.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Warboss"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37202,
+          "name": "Proper Killy",
+          "points": 15,
+          "rules": "<k>Warboss</k> model only. This model can re-roll <b>hit rolls</b> of 1.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Warboss"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 36831,
+          "name": "Surly as a Squiggoth",
+          "points": 25,
+          "rules": "<k>Infantry Warboss</k> model only. (Once per battle, per army)At the end of a phase in which this model is <b>destroyed</b>, roll one D6:\r<ul><li>On a 2+, set this model back up on the battlefield as close as possible to where it was <b>destroyed</b>, <b>unengaged</b>, with 3 wounds remaining.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry",
+                "Warboss"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [],
+      "rules": [
+        {
+          "id": 7935,
+          "name": "’Ard as Nails",
+          "components": [
+            {
+              "id": 48973,
+              "type": "text",
+              "textContent": "When a friendly <k>Warboss</k> model is <b>destroyed</b>, if this unit has not been <b>selected to fight</b> this phase, roll one D6, with +1 to the roll if your unit is <b>riled up</b>: \r<ul><li>On a 3+, do not remove this <k>Warboss</k> model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this <k>Warboss</k> model is removed from the battlefield.</li></ul>",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48819,
+              "type": "loreAccordion",
+              "textContent": "<i>The largest Orks have risen to their position through strength, savagery and being harder than anyone else.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10198,
+      "slug": "bully-boyz",
+      "name": "Bully Boyz",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Purge the Foe"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1858,
+        "slug": "orks",
+        "name": "Orks",
+        "commonName": "Orks"
+      },
+      "enhancements": [
+        {
+          "id": 37443,
+          "name": "Tellyporta Boss",
+          "points": 20,
+          "rules": "<k>Mega Armour</k> model only. This unit (excluding <k>Vehicle</k> units) has <b>Deep Strike</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Mega Armour"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37005,
+          "name": "Wimp-kickaz (Upgrade)",
+          "points": 15,
+          "rules": "<k>Nobz</k> unit only. When an enemy unit <b>engaged</b> with this unit is selected to make a <b>fall-back move</b>:\r<ul><li>That enemy unit must select the <b>desperate escape</b> mode.</li>\r<li>If this unit is <b>riled up</b>, that enemy unit has -1 to the <b>hazard rolls</b> made for that <b>desperate escape</b>.</li></ul>",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47539,
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43702,
+          "name": "Armed To Da Teef",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "shootingPhase",
+            "fightPhase"
+          ],
+          "whenRules": "Your Shooting phase or the Fight phase, when a friendly <k>Meganobz/Nobz</k> unit is <b>selected to attack</b>.",
+          "targetRules": "That <k>Meganobz/Nobz</k> unit.",
+          "effectRules": "Your unit’s attacks can:\r<ul><li>Re-roll <b>hit rolls</b> of 1.</li>\r<li>If your unit is <b>riled up</b>, re-roll <b>hit rolls</b>.</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44063,
+          "name": "Hulking Brutes",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, when an enemy unit targets a friendly <k>Meganobz/Nobz</k> unit.",
+          "targetRules": "That <k>Meganobz/Nobz</k> unit.",
+          "effectRules": "Ranged attacks that target your unit with a <b>S</b> greater than your unit’s <b>T</b> have -1 to <b>wound rolls</b>.",
+          "secondaryEffect": "\u0007<u>Or:</u> Ranged attacks that target your unit have -1 to <b>wound rolls</b>.",
+          "secondaryEffectCpCost": 1,
+          "restrictionRules": null
+        },
+        {
+          "id": 44393,
+          "name": "Too Arrogant to Die",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, when an enemy unit targets a friendly <k>Meganobz/Nobz</k> unit.",
+          "targetRules": "That <k>Meganobz/Nobz</k> unit.",
+          "effectRules": "When a model in your unit is <b>destroyed</b>, if your unit has not been <b>selected to fight</b> this phase, roll one D6, with +1 to that roll if your unit is <b>riled up</b>:\r<ul><li>On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7890,
+          "name": "Displays of Savagery",
+          "components": [
+            {
+              "id": 49027,
+              "type": "text",
+              "textContent": "Friendly <k>Meganobz/Nobz</k> units’ melee attacks have <k>[Sustained Hits 1]</k>.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49634,
+              "type": "loreAccordion",
+              "textContent": "<i>Nobz have a position of dominance to maintain, and do so in vicious eruptions of violence.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10324,
+      "slug": "da-big-hunt",
+      "name": "Da Big Hunt",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Purge the Foe"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1858,
+        "slug": "orks",
+        "name": "Orks",
+        "commonName": "Orks"
+      },
+      "enhancements": [
+        {
+          "id": 36858,
+          "name": "Glory Hog",
+          "points": 25,
+          "rules": "<k>Beast Snagga</k> model only. When this unit is selected to make a <b>fall-back move</b>, that <b>fall-back move</b> does not prevent this unit from being <b>eligible to declare a charge</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Beast Snagga"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37148,
+          "name": "It Came from da Drops",
+          "points": 20,
+          "rules": "<k>Beastboss on Squigosaur</k> model only. This model has +1 <b>T</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47480,
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43965,
+          "name": "Instinctive Hunters",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "End of your opponent’s Fight phase.",
+          "targetRules": "One friendly <b>unengaged</b> <k>Beast Snagga</k> unit within 6\" of a battlefield edge.",
+          "effectRules": "Place your unit in <b>strategic reserves</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44136,
+          "name": "Where D’ya Fink You’re Going?",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your opponent’s Movement phase, when an enemy unit is selected to make a <b>fall-back move</b>, if that enemy unit is <b>engaged</b> with a friendly <k>Beast Snagga</k> unit.",
+          "targetRules": "That <k>Beast Snagga</k> unit.",
+          "effectRules": "When an enemy unit <b>engaged</b> with your unit is selected to make a <b>fall-back move</b>, that enemy unit must use the <b>desperate escape </b>mode. If that enemy unit is a <k>Monster/Vehicle</k> unit, that enemy unit makes three additional <b>hazard rolls</b> for each <k>Beast Snagga</k> unit it is <b>engaged</b> with, with -1 from those <b>hazard rolls</b> if that enemy unit is <b>battle-shocked</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44248,
+          "name": "Goaded Into Action",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, when an enemy unit has shot.",
+          "targetRules": "One friendly <b>unengaged</b> <k>Beast Snagga</k> unit that lost a wound as a result of those attacks.",
+          "effectRules": "Your unit can make a <b>surge move</b> of up to D6\". If your unit is <b>riled up</b>, it can re-roll that D6.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7750,
+          "name": "Da Hunt is On",
+          "components": [
+            {
+              "id": 49013,
+              "type": "text",
+              "textContent": "Friendly <k>Beast Snagga</k> units’ attacks that target a <k>Monster/Vehicle</k> unit have +1 <b>AP</b>.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48463,
+              "type": "loreAccordion",
+              "textContent": "<i>Beast Snaggas fanatically hunt the biggest targets and are experts in finding their weak spots.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10327,
+      "slug": "dread-mob",
+      "name": "Dread Mob",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Purge the Foe"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1858,
+        "slug": "orks",
+        "name": "Orks",
+        "commonName": "Orks"
+      },
+      "enhancements": [
+        {
+          "id": 37498,
+          "name": "Cybork Boosta",
+          "points": 10,
+          "rules": "<k>Big Mek/Mek</k> model only. This model has +2\" <b>M</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Big Mek"
+              ]
+            },
+            {
+              "datasheetId": 47675,
+              "keywords": []
+            },
+            {
+              "datasheetId": 47430,
+              "keywords": []
+            }
+          ]
+        },
+        {
+          "id": 37577,
+          "name": "Dreadherder",
+          "points": 30,
+          "rules": "<k>Big Mek</k> model only. While this model is within 3\" of a friendly <k>Orks Walker</k> unit (excluding <k>Big Mek</k> units):\r<ul><li>This model has <b>Lone Operative</b>. </li>\r<li>In your Shooting phase, you can select one friendly <k>Orks Walker</k> unit within 3\" of this model. That unit’s attacks can re-roll <b>hit rolls</b> of 1 until the end of the turn.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47675,
+              "keywords": []
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Big Mek"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44288,
+          "name": "Stomping Juggernaut",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase",
+            "chargePhase"
+          ],
+          "whenRules": "Your Movement/Charge phase, when a friendly <k>Orks Walker</k> unit is <b>selected to move</b> or <b>declares a charge</b>.",
+          "targetRules": "That <k>Orks Walker</k> unit.",
+          "effectRules": "Your unit has <k>Mobile</k>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44452,
+          "name": "Dread Power",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One friendly <k>Orks Walker</k> unit.",
+          "effectRules": "Your unit is <b>riled up</b> until the start of your next turn.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44666,
+          "name": "Crazed Rampage",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, when an enemy unit targets a friendly <k>Orks Walker</k> unit (excluding <k>Titanic</k> units).",
+          "targetRules": "That <k>Orks Walker</k> unit.",
+          "effectRules": "When a model in your unit is <b>destroyed</b>, if your unit has not been <b>selected to fight</b> this phase, roll one D6, with +3 to the result if your unit has <k>Deff Dread</k>:\r<ul><li>On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7874,
+          "name": "Try Dat Button!",
+          "components": [
+            {
+              "id": 49879,
+              "type": "text",
+              "textContent": "In your Shooting phase or the Fight phase, when a friendly <k>Orks Walker</k> unit (excluding <k>Titanic</k> units) is <b>selected to attack</b>, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s): \n<table>\n<tr><td>Try Dat Button!</td></tr>\n<tr><td>D6</td>\n<td>Result</td></tr>\n<tr><td>1‑2</td>\n<td>+1<b> A</b></td></tr>\n<tr><td>3‑4</td>\n<td>+2<b> S</b></td></tr>\n<tr><td>5‑6</td>\n<td>+1<b> AP</b></td></tr></table>\nIf you rolled two D6, when this unit has attacked, this unit makes one <b>hazard roll</b>.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49391,
+              "type": "loreAccordion",
+              "textContent": "<i>Inviting Mek-wired buttons offer varied and erratic lethality.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10210,
+      "slug": "flyboyz",
+      "name": "Flyboyz",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Reconnaissance"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1858,
+        "slug": "orks",
+        "name": "Orks",
+        "commonName": "Orks"
+      },
+      "enhancements": [
+        {
+          "id": 36929,
+          "name": "Flyboss (Upgrade)",
+          "points": 20,
+          "rules": "<k>Orks Aircraft</k> unit only.\r<ul><li>This unit has <k>Character</k>.</li>\r<li>When this unit ends an <b>ingress move</b>, each friendly <k>Orks Aircraft/Deffkoptas</k> unit within 6\" of this unit is <b>riled up</b> until the start of your next turn.</li></ul>",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Aircraft"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37145,
+          "name": "Impulsive Recon (Upgrade)",
+          "points": 15,
+          "rules": "<k>Orks Aircraft</k> unit only. In your first Movement phase, this unit can make an <b>ingress move</b>.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Aircraft"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43793,
+          "name": "Long, Uncontrolled Bursts",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Orks Aircraft/Deffkoptas</k> unit is <b>selected to shoot</b>.",
+          "targetRules": "That <k>Orks Aircraft/Deffkoptas</k> unit.",
+          "effectRules": "When your unit’s ranged attacks target a <k>Fly</k> unit, those attacks can re-roll <b>hit rolls</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44368,
+          "name": "Flyin’ Headbutt",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase, when a friendly <k>Orks Aircraft</k> unit is <b>destroyed</b>, before rolling for any <b>Deadly Demise</b>.",
+          "targetRules": "That <k>Orks</k> unit.",
+          "effectRules": "Your unit does not have the <b>Deadly Demise</b> ability. Select one enemy unit within 12\" of your unit and roll eight D6:\r<ul><li>For each 4+, that enemy unit suffers 1 <b>mortal wound</b>.</li></ul>\rThen remove your unit from the battlefield.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44883,
+          "name": "Whirligig Evasion",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your opponent’s Movement phase, when an enemy unit ends a move.",
+          "targetRules": "One friendly <b>unengaged</b> <k>Deffkoptas</k> unit within 8\" of that enemy unit.",
+          "effectRules": "Your unit can make a <b>normal move</b> of: \r<ul><li>Up to D6\".</li>\r<li><u>Or:</u> If your unit is <b>riled up</b>, up to 6\".</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7908,
+          "name": "Skyborne Loons",
+          "components": [
+            {
+              "id": 48811,
+              "type": "text",
+              "textContent": "<ul><li>Friendly <k>Orks Aircraft</k> units do not count towards the combined points value of your <b>strategic reserves</b> units.</li>\r<li>While a friendly <k>Orks Aircraft/Deffkoptas</k> unit is <b>riled up</b>, this unit’s ranged attacks have +1 to <b>hit rolls</b>.</li></ul>",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49731,
+              "type": "loreAccordion",
+              "textContent": "<i>When attacking en masse, crazed and excitable Flyboyz unleash torrential quantities of dakka.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10351,
+      "slug": "green-tide",
+      "name": "Green Tide",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Take and Hold"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1858,
+        "slug": "orks",
+        "name": "Orks",
+        "commonName": "Orks"
+      },
+      "enhancements": [
+        {
+          "id": 37501,
+          "name": "'Ardboyz (Upgrade)",
+          "points": 25,
+          "rules": "<k>Boyz</k> unit only. This unit has 4+ <b>Sv</b>.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 46690,
+              "keywords": []
+            }
+          ]
+        },
+        {
+          "id": 36952,
+          "name": "Ferocious Show-off",
+          "points": 15,
+          "rules": "<k>Orks Infantry</k> model only. This model’s melee attacks have:\r<ul><li>+1 <b>A</b>.</li>\r<li><u>Or:</u> If this unit has 11+ models, +2 <b>A</b>.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43987,
+          "name": "’Ere We Go",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, when a friendly <k>Beast Snagga Boyz/Boyz</k> unit is <b>selected to move</b>.",
+          "targetRules": "That <k>Beast Snagga Boyz/Boyz</k> unit.",
+          "effectRules": "Your unit has +2 to <b>advance rolls</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44090,
+          "name": "Unbridled Carnage",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, when a friendly <k>Boyz</k> unit that made a <b>charge move</b> this turn is <b>selected to fight</b>.",
+          "targetRules": "That <k>Boyz</k> unit.",
+          "effectRules": "Your unit’s melee attacks have +1 <b>A</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44134,
+          "name": "Mob Mentality",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "commandPhase"
+          ],
+          "whenRules": "Start of the Battle-shock step of your Command phase.",
+          "targetRules": "One friendly <k>Orks Infantry</k> unit of 13+ models.",
+          "effectRules": "Select one <b>visible</b> friendly <k>Orks</k> unit within 12\" of your unit. That unit’s <b>battle-shock rolls</b> are automatically successful.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7798,
+          "name": "Mob-handed Brutality",
+          "components": [
+            {
+              "id": 49661,
+              "type": "text",
+              "textContent": "<ul><li>Friendly <k>Boyz</k> units’ melee attacks have <k>[Sustained Hits 1]</k>.</li>\r<li>If a friendly <k>Orks Infantry</k> unit made a <b>charge move</b> this turn, that unit’s melee attacks have <k>[Lethal Hits:</k> <b>non-</b><k>Monster/Vehicle]</k>.</li></ul>",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49701,
+              "type": "loreAccordion",
+              "textContent": "<i>In the massive fights that Orks enjoy, the only way to ensure a slice of the action is to fight harder.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10197,
+      "slug": "kult-of-speed",
+      "name": "Kult of Speed",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Reconnaissance"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1858,
+        "slug": "orks",
+        "name": "Orks",
+        "commonName": "Orks"
+      },
+      "enhancements": [
+        {
+          "id": 37427,
+          "name": "Competitive Streak",
+          "points": 15,
+          "rules": "<k>Deffkilla Wartrike</k> model only. This unit can re‑roll <b>charge rolls</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47074,
+              "keywords": []
+            }
+          ]
+        },
+        {
+          "id": 37223,
+          "name": "Smoky Gubbinz (Upgrade)",
+          "points": 10,
+          "rules": "<k>Speed Freeks</k> unit only (excluding <k>Aircraft</k> units). When an attack targets a unit that is not <b>fully visible</b> to the attacking model because of a model in this unit, the target has the <b>benefit of cover</b> against that attack.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Speed Freeks"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44125,
+          "name": "Delicious Eating Squigs",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase.",
+          "targetRules": "One friendly <k>Rukkatrukk Squigbuggies</k> unit.",
+          "effectRules": "Select any number of friendly <k>Orks Infantry</k> units within 3\" of your unit. Each selected unit <b>heals</b> 3 wounds.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44397,
+          "name": "Dakkastorm",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Speed Freeks</k> unit is <b>selected to shoot</b>.",
+          "targetRules": "That <k>Speed Freeks</k> unit.",
+          "effectRules": "Your unit’s ranged attacks have <k>[Sustained Hits 1]</k>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44570,
+          "name": "Speediest Freeks",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, when an enemy unit targets a friendly <k>Speed Freeks</k> unit.",
+          "targetRules": "That <k>Speed Freeks</k> unit.",
+          "effectRules": "Ranged attacks that target your unit fail on an unmodified <b>hit roll</b> of 1‑3.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7772,
+          "name": "Adrenaline Junkies",
+          "components": [
+            {
+              "id": 49437,
+              "type": "text",
+              "textContent": "<ul><li>Friendly <k>Warbikers</k> units have <k>Battleline</k>.</li>\r<li>When a friendly <k>Speed Freeks</k> unit is selected to make an <b>advance/fall-back move</b>: </li>\r<ul><li>That unit’s ranged attacks have <k>[Assault]</k> until the end of the turn.</li>\r<li>That move does not prevent that unit from being <b>eligible to declare a charge</b>.</li></ul></ul>",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48874,
+              "type": "loreAccordion",
+              "textContent": "<i>After smashing into the foe at full tilt, a Speed Freek will pull hairpin turns to do it all again.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10359,
+      "slug": "madcap-meks",
+      "name": "Madcap Meks",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Disruption"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1858,
+        "slug": "orks",
+        "name": "Orks",
+        "commonName": "Orks"
+      },
+      "enhancements": [
+        {
+          "id": 37302,
+          "name": "Enhanced Runt-maw (Upgrade)",
+          "points": 10,
+          "rules": "<k>Big Mek with Shokk Attack Gun</k> model only. When this unit has shot, select one enemy unit hit by those attacks. That unit is <b>infested with Snotlings</b> until the start of your next turn.\r<ul><li>While an enemy unit is <b>infested with Snotlings</b>, that unit has -1 to <b>leadership rolls</b>.</li></ul>",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47643,
+              "keywords": []
+            }
+          ]
+        },
+        {
+          "id": 37241,
+          "name": "Mekwaaagh! Mastermind",
+          "points": 30,
+          "rules": "<k>Big Mek</k> model only. This unit is <b>riled up</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Big Mek"
+              ]
+            },
+            {
+              "datasheetId": 47675,
+              "keywords": []
+            }
+          ]
+        },
+        {
+          "id": 37260,
+          "name": "Temperamental Shokka (Upgrade)",
+          "points": 20,
+          "rules": "<k>Big Mek with Shokk Attack Gun</k> model only. In your Shooting phase, when this unit is <b>selected to shoot</b>, you can roll one D6:\r<ul><li>On a 1, this model’s Shokk Attack Gun weapon has <k>[Torrent]</k>, and when this unit has shot, this model is <b>destroyed</b>.</li>\r<li>On a 2-5, this model’s Shokk Attack Gun weapon has +1 <b>A</b>.</li>\r<li>On a 6, this model’s Shokk Attack Gun weapon has <k>[Sustained Hits 2]</k>.</li></ul>",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47643,
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44278,
+          "name": "Vindictive Artillerists",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Mek Gunz</k> unit is <b>selected to shoot</b>.",
+          "targetRules": "That <k>Mek Gunz</k> unit.",
+          "effectRules": "Your unit’s ranged attacks have: \r<ul><li><k>[Lethal Hits]</k>.</li>\r<li><u>Or:</u> <k>[Sustained Hits 1]</k>.</li>\r<li><u>Or:</u> <k>[Hazardous]</k>, <k>[Lethal Hits]</k>, <k>[Sustained Hits 1]</k>.</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7795,
+          "name": "Unpredictable Genius",
+          "components": [
+            {
+              "id": 48718,
+              "type": "text",
+              "textContent": "In your Shooting phase, when all of a friendly <k>Big Mek/Mek Gunz/Morkanaut/Wazbom Blastajet</k> unit's ranged attacks target a single enemy unit, roll one D6:\n<table>\n<tr><td>Unpredictable Genius</td></tr>\n<tr><td>D6</td>\n<td>Result</td></tr>\n<tr><td>1</td>\n<td><b>Dat's Weird:</b> The target unit has 4+ <b>InSv</b> until your unit has shot.</td></tr>\n<tr><td>2‑3</td>\n<td><b>Hop Splat:</b> Select one other enemy unit within 3\" of the target. That unit suffers D3 <b>mortal wounds</b>.</td></tr>\n<tr><td>4</td>\n<td><b>Seekerz:</b> Those attacks have +1 to <b>hit rolls</b>. </td></tr>\n<tr><td>5</td>\n<td><b>Lifted:</b> The target unit has <k>Fly</k>, and cannot have the <b>benefit of cover</b>, until your unit has shot.</td></tr>\n<tr><td>6</td>\n<td><b>Runtified:</b> The target unit has -1 <b>T</b> until your unit has shot.</td></tr></table>",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49508,
+              "type": "loreAccordion",
+              "textContent": "<i>Meks haul all manner of weird bullets, unstable power cells and kustomised extras to battle. </i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10261,
+      "slug": "runt-swarm",
+      "name": "Runt Swarm",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1858,
+        "slug": "orks",
+        "name": "Orks",
+        "commonName": "Orks"
+      },
+      "enhancements": [
+        {
+          "id": 37401,
+          "name": "Extra Sneaky (Upgrade)",
+          "points": 10,
+          "rules": "<k>Gretchin</k> unit only. This unit has -3\" <b>detection range</b>.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47626,
+              "keywords": []
+            }
+          ]
+        },
+        {
+          "id": 37463,
+          "name": "Minefield Detail (Upgrade)",
+          "points": 10,
+          "rules": "<k>Gretchin</k> unit only. While this unit is not embarked, this unit has <b>Scouts 6\"</b>.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47626,
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43824,
+          "name": "Scarper!",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly <b>unengaged</b> <k>Gretchin</k> unit.",
+          "targetRules": "That <k>Gretchin</k> unit.",
+          "effectRules": "Your unit can make a <b>normal move</b> of:\r<ul><li>Up to D6\".</li>\r<li><u>Or:</u> Up to 6\" instead if your unit is an <b>attached</b> unit.</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44468,
+          "name": "Infested War Zone",
+          "cpCost": 2,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase, when an enemy unit has attacked.",
+          "targetRules": "One friendly <k>Gretchin</k> unit that was just <b>destroyed</b>. You can target that unit with this <b>stratagem</b> even though that unit was just <b>destroyed</b>.",
+          "effectRules": "Add a new <k>Gretchin</k> unit to your army identical to your <b>destroyed</b> unit, in <b>strategic reserves</b>, at its <b>starting strength</b>, with its full wounds remaining.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44471,
+          "name": "Grot Shields",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, when an enemy unit targets a friendly <k>Orks Infantry</k> unit (excluding <k>Gretchin</k> units).",
+          "targetRules": "One friendly <k>Gretchin</k> unit within 3\" of that <k>Orks Infantry</k> unit.",
+          "effectRules": "When a <b>hit roll</b> for that enemy unit’s ranged attacks that target that <k>Orks</k> unit results in a hit, if a model in your <k>Gretchin</k> unit is on the battlefield, end the attack sequence for that attack and your <k>Gretchin</k> unit suffers 1 <b>mortal wound</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7889,
+          "name": "Sneaky Little Gitz",
+          "components": [
+            {
+              "id": 49125,
+              "type": "text",
+              "textContent": "<ul><li>Friendly <k>Gretchin</k> units have <k>Battleline</k>.</li>\r<li>When a friendly <k>Gretchin</k> unit is selected to make an <b>advance/fall-back move</b>, that move does not prevent this unit from being <b>eligible to start an action</b>.</li></ul>",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48551,
+              "type": "loreAccordion",
+              "textContent": "<i>Given no position of importance, Grots find their niche as sneaks, thieves and mischief-makers.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10284,
+      "slug": "shoota-boyz",
+      "name": "Shoota Boyz",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Purge the Foe"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1858,
+        "slug": "orks",
+        "name": "Orks",
+        "commonName": "Orks"
+      },
+      "enhancements": [
+        {
+          "id": 36824,
+          "name": "Supa-glowy Fing",
+          "points": 25,
+          "rules": "<k>Orks Infantry</k> model only (excluding <k>Weirdboy</k> models). This model’s ranged attacks have:\r<ul><li><k>[Anti-Infantry 4+]</k>.</li>\r<li><k>[Devastating Wounds]</k>.</li>\r<li><k>[Supa-hazardous]</k>.</li></ul>\r<k>[Supa-hazardous]</k><b>:</b> Each time a unit is selected to shoot, after that unit has resolved all of its attacks, make two <b>hazard rolls</b> for that unit for each <k>[SUPA-HAZARDOUS]</k> weapon you selected in the Select Weapons step.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [
+            "Psyker"
+          ],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37001,
+          "name": "Targetin' Squigs",
+          "points": 20,
+          "rules": "<k>Big Mek/bigBoss/Warboss</k> model only. This unit’s ranged attacks (excluding <k>[Torrent]</k> attacks) have +3\" <b>R</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Big Mek"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Warboss"
+              ]
+            },
+            {
+              "datasheetId": 47361,
+              "keywords": []
+            },
+            {
+              "datasheetId": 47675,
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43724,
+          "name": "Kustom Dakka",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Orks Infantry</k> unit is <b>selected to shoot</b>.",
+          "targetRules": "That <k>Orks Infantry</k> unit.",
+          "effectRules": "Your unit’s ranged attacks that target a unit (excluding <k>Monster/Vehicle</k> units) have +1 to <b>wound rolls</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44147,
+          "name": "Glowin’ Dakka",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Orks Infantry</k> unit is <b>selected to shoot</b>.",
+          "targetRules": "That <k>Orks Infantry</k> unit.",
+          "effectRules": "Your unit’s ranged attacks that target a unit within 9\" have +1 <b>AP</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44323,
+          "name": "Never Enough Dakka",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Orks Infantry</k> unit is <b>selected to shoot</b>.",
+          "targetRules": "That <k>Orks Infantry</k> unit.",
+          "effectRules": "Your unit’s ranged attacks have <k>[Sustained Hits 1]</k>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7937,
+          "name": "Dakka! Dakka! Dakka!",
+          "components": [
+            {
+              "id": 49636,
+              "type": "text",
+              "textContent": "Friendly <k>Orks Infantry</k> units’ ranged attacks have:\r<ul><li><k>[Assault]</k>.</li>\r<li>While this unit is <b>riled up</b>, +3\" <b>R</b>.</li></ul>",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48703,
+              "type": "loreAccordion",
+              "textContent": "<i>Always hunting for something to kill, when Orks spot a target they saturate it with dakka.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10196,
+      "slug": "taktikal-brigade",
+      "name": "Taktikal Brigade",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Take and Hold"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1858,
+        "slug": "orks",
+        "name": "Orks",
+        "commonName": "Orks"
+      },
+      "enhancements": [
+        {
+          "id": 36912,
+          "name": "Kill Kommanda",
+          "points": 20,
+          "rules": "<k>Big Mek/Warboss</k> <k>Infantry</k> model only. While this model is part of an <b>attached</b> unit, this model has:\r<ul><li><b>Infiltrators</b>.</li>\r<li><b>Stealth</b>.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47675,
+              "keywords": []
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Big Mek"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry",
+                "Warboss"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37238,
+          "name": "Throat-slittas (Upgrade)",
+          "points": 15,
+          "rules": "<k>Kommandos</k>/<k>Stormboyz</k> unit only. This unit’s melee attacks have <k>[Lethal Hits:</k> <b>non</b><k>-Monster/Vehicle]</k>.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47529,
+              "keywords": []
+            },
+            {
+              "datasheetId": 46966,
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43993,
+          "name": "While Their Backs are Turned",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "End of your opponent’s Movement phase.",
+          "targetRules": "One friendly <b>unengaged</b> <k>Boyz</k>/<k>Kommandos/Stormboyz</k> unit that was <b>engaged</b> at the start of the phase.",
+          "effectRules": "Your unit can make a <b>normal move</b> of up to 6\".",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44146,
+          "name": "Mind Mostly on the Mission",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, when a friendly <k>Boyz/Kommandos/Stormboyz</k> unit is selected to make an <b>advance/fall-back move</b>.",
+          "targetRules": "That <k>Boyz/Kommandos/Stormboyz</k> unit.",
+          "effectRules": "That move does not prevent your unit from being <b>eligible to start an action</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44748,
+          "name": "Dubious Restraint",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Start/end of your Movement phase.",
+          "targetRules": "One friendly <k>Boyz</k>/<k>Kommandos/Stormboyz</k> unit.",
+          "effectRules": "Select one <b>objective</b> your unit is controlling. That <b>objective</b> is <b>secured</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7713,
+          "name": "Suspiciously Well Organised",
+          "components": [
+            {
+              "id": 48514,
+              "type": "text",
+              "textContent": "<ul><li>Friendly <k>Stormboyz</k> units have <k>Battleline</k>.</li>\r<li>When a friendly <k>Boyz/Kommandos/Stormboyz</k> unit is selected to make a <b>fall-back move</b>, that <b>fall-back move</b> does not prevent that unit from being <b>eligible to declare a charge</b>.</li></ul>",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49383,
+              "type": "loreAccordion",
+              "textContent": "<i>An un-Orky compulsion for discipline can wrongfoot enemies expecting anarchic disorder.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10256,
+      "slug": "war-horde",
+      "name": "War Horde",
+      "pointsCost": 3,
+      "forceDispositions": [
+        "Take and Hold",
+        "Purge the Foe"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1858,
+        "slug": "orks",
+        "name": "Orks",
+        "commonName": "Orks"
+      },
+      "enhancements": [
+        {
+          "id": 37032,
+          "name": "Da Boss is Watchin'",
+          "points": 25,
+          "rules": "<k>Orks</k> model only. (Once per battle, per army) In your Movement phase, you can use this ability. If you do, this unit is <b>riled up</b> until the start of your next turn.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37538,
+          "name": "Follow Me Ladz",
+          "points": 20,
+          "rules": "<k>Orks</k> model only. This unit has +2\" <b>M</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 36877,
+          "name": "Headwoppa's Killchoppa",
+          "points": 15,
+          "rules": "<k>Orks</k> model only. If this unit made a <b>charge move</b> this turn, this model’s melee attacks have +1 <b>AP</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        },
+        {
+          "id": 37052,
+          "name": "Kunnin’ But Brutal",
+          "points": 20,
+          "rules": "<k>Orks</k> model only. When this unit is selected to make a <b>fall-back move</b>, that <b>fall-back move</b> does not prevent this unit from being <b>eligible to shoot/declare a charge</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": []
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 43817,
+          "name": "Breakin’ Heads",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "commandPhase",
+            "movementPhase",
+            "shootingPhase",
+            "chargePhase",
+            "fightPhase"
+          ],
+          "whenRules": "Any phase, when a friendly <b>attached</b> <k>Orks Infantry</k> unit becomes <b>battle‑shocked</b>.",
+          "targetRules": "That <k>Orks infantry</k> unit. You can target that unit with this <b>stratagem</b> even though it is <b>battle-shocked</b>.",
+          "effectRules": "Roll one D3: \r<ul><li>Your unit suffers a number of <b>mortal wounds</b> equal to the result.</li>\r<li>Your unit is no longer <b>battle‑shocked</b>.</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 43949,
+          "name": "Hit ’Em Harder",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, when a friendly <k>Orks</k> unit is selected to fight.",
+          "targetRules": "That <k>Orks</k> unit.",
+          "effectRules": "Your unit’s melee attacks have <k>[Lethal Hits]</k>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44495,
+          "name": "Fungus-fuel Injection",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "movementPhase"
+          ],
+          "whenRules": "Your Movement phase, when a friendly <k>Orks mounted/vehicle</k> unit is <b>selected to move</b>.",
+          "targetRules": "That <k>Orks Mounted/Vehicle</k> unit.",
+          "effectRules": "Your unit has +2\" <b>M</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44674,
+          "name": "Close-range Dakka",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Orks</k> unit is <b>selected to shoot</b>.",
+          "targetRules": "That <k>Orks</k> unit.",
+          "effectRules": "Your unit’s ranged attacks have:\r<ul><li><k>[Rapid Fire 1]</k>.</li>\r<li><u>Or:</u> If that attack already has <k>[Rapid Fire]</k>, +1 to the value of that <k>[Rapid Fire]</k> (e.g. <k>[Rapid Fire 1]</k> becomes <k>[Rapid Fire 2]</k>).</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44848,
+          "name": "Orks Is Never Beaten",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, when an enemy unit targets a friendly <k>Orks</k> unit (excluding <k>Titanic</k> units).",
+          "targetRules": "That <k>Orks</k> unit.",
+          "effectRules": "When a model in your unit is <b>destroyed</b>, if your unit has not been <b>selected to fight</b> this phase, roll one D6, with +1 to that roll if your unit is <b>riled up</b>:\r<ul><li>On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44865,
+          "name": "Mow ’Em Down",
+          "cpCost": 1,
+          "category": "",
+          "turn": "eitherPlayer",
+          "phases": [
+            "fightPhase"
+          ],
+          "whenRules": "Fight phase, when a friendly <k>Orks</k> <k>Vehicle</k> unit (excluding <k>Walker</k> units) that made a <b>charge move</b> this turn is <b>selected to fight</b>.",
+          "targetRules": "That <k>Orks Vehicle</k> unit.",
+          "effectRules": "Your unit’s melee attacks have:\r<ul><li><k>[Cleave 1]</k>.</li>\r<li><u>Or:</u> If that attack already has <k>[Cleave]</k>, +1 to the value of that <k>[Cleave]</k> (e.g. <k>[Cleave 1]</k> becomes <k>[Cleave 2]</k>).</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7751,
+          "name": "Get Stuck In",
+          "components": [
+            {
+              "id": 49201,
+              "type": "text",
+              "textContent": "Friendly <k>Orks</k> units’ melee attacks have <k>[Sustained Hits 1]</k>.",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49173,
+              "type": "loreAccordion",
+              "textContent": "<i>Joyously anarchic and recklessly destructive, all Orks eagerly get stuck in to every fight. </i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10253,
+      "slug": "wreckas",
+      "name": "Wreckas",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Priority Assets"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1858,
+        "slug": "orks",
+        "name": "Orks",
+        "commonName": "Orks"
+      },
+      "enhancements": [
+        {
+          "id": 37129,
+          "name": "Kaptin's Hat",
+          "points": 25,
+          "rules": "<k>Big Mek/Warboss Infantry</k> model only. When both players have deployed their armies, you can redeploy up to three friendly <k>Orks Infantry</k> units. When doing so, you can set those units up in <b>strategic reserves</b>, regardless of how many units are already in <b>strategic reserves</b>.",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47675,
+              "keywords": []
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Infantry",
+                "Warboss"
+              ]
+            },
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Big Mek",
+                "Infantry"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37231,
+          "name": "Supa-snazz Dakka (Upgrade)",
+          "points": 25,
+          "rules": "<k>Flash Gitz</k> unit only. This unit’s Snazzgun weapons have <k>[Rapid Fire 1]</k>.",
+          "enhancementType": "upgrade",
+          "limit": 3,
+          "isEquipableByNonCharacterUnit": true,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": 47365,
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "stratagems": [
+        {
+          "id": 44476,
+          "name": "Drive-By Bustin’",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <k>Orks Transport</k> unit is <b>selected to shoot</b>.",
+          "targetRules": "That <k>Orks Transport</k> unit.",
+          "effectRules": "Your unit’s ranged attacks with weapons selected for the <b>Firing Deck</b> ability have +1 to <b>hit rolls</b>.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44522,
+          "name": "Grab It",
+          "cpCost": 1,
+          "category": "",
+          "turn": "yourTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your Shooting phase, when a friendly <b>unengaged</b> <k>Breaka Boyz/Flash Gitz/Tankbustas</k> unit has shot.",
+          "targetRules": "That <k>Breaka Boyz/Flash Gitz/Tankbustas</k> unit.",
+          "effectRules": "<ul><li>Your unit can make a <b>normal move</b> of up to 6\", and must end that move within range of an <b>objective</b>.</li>\r<li>Your unit is <u>not</u> <b>eligible to declare a charge</b> until the end of the turn.</li></ul>",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        },
+        {
+          "id": 44784,
+          "name": "Gun-crazy Show-offs",
+          "cpCost": 1,
+          "category": "",
+          "turn": "opponentsTurn",
+          "phases": [
+            "shootingPhase"
+          ],
+          "whenRules": "Your opponent’s Shooting phase, when an enemy unit has shot.",
+          "targetRules": "One friendly <k>Flash Gitz/Tankbustas</k> unit hit by those attacks.",
+          "effectRules": "Your unit shoots using <b>normal shooting</b>, but while doing so your unit can only target that enemy unit.",
+          "secondaryEffect": null,
+          "secondaryEffectCpCost": null,
+          "restrictionRules": null
+        }
+      ],
+      "rules": [
+        {
+          "id": 7923,
+          "name": "Wreckin’ and Lootin’",
+          "components": [
+            {
+              "id": 49237,
+              "type": "text",
+              "textContent": "In your Shooting phase, when a friendly <k>Breaka Boyz/Flash Gitz/Tankbustas</k> unit is <b>selected to shoot</b>, if any of the following apply, that unit’s attacks can re-roll <b>hit rolls</b> of 1:\r<ul><li>That unit is within range of an <b>objective</b>.</li>\r<li>The target of that attack is within range of an <b>objective</b>.</li></ul>",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 49671,
+              "type": "loreAccordion",
+              "textContent": "<i>Whether piratical or merely larcenous, Orks with an eye for loot react forcefully to rival claims.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    },
+    {
+      "id": 10293,
+      "slug": "wurrband",
+      "name": "Wurrband",
+      "pointsCost": 1,
+      "forceDispositions": [
+        "Disruption"
+      ],
+      "uniqueKeyword": null,
+      "faction": {
+        "id": 1858,
+        "slug": "orks",
+        "name": "Orks",
+        "commonName": "Orks"
+      },
+      "enhancements": [
+        {
+          "id": 37311,
+          "name": "'Eadbanger",
+          "points": 15,
+          "rules": "<k>Orks Psyker</k> model only. This model has the following weapon.\n\n<img src=\"https://custom.40k-app.local/orks/eadbanger-weapon-profile\" alt=\"Eadbanger weapon profile\">",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Psyker"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37036,
+          "name": "Da Krunch",
+          "points": 10,
+          "rules": "<k>Orks Psyker</k> model only. This model has the following weapon.\n\n<img src=\"https://custom.40k-app.local/orks/da-krunch-weapon-profile\" alt=\"Da Krunch weapon profile\">",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Psyker"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37448,
+          "name": "Warphead",
+          "points": 25,
+          "rules": "<k>Orks Psyker</k> model only. This model:\r<ul><li>Has <b>psyker level 2</b>.</li>\r<li>Has <b>Deadly Demise D6</b>.</li>\r<li>Can re-roll <b>psychic rolls</b>.</li></ul>",
+          "enhancementType": "miniature",
+          "limit": 1,
+          "isEquipableByNonCharacterUnit": false,
+          "isEquipableByEpicHero": false,
+          "isIncludedInEnhancementLimit": true,
+          "excludedKeywords": [],
+          "keywordGroups": [
+            {
+              "datasheetId": null,
+              "keywords": [
+                "Psyker"
+              ]
+            }
+          ]
+        }
+      ],
+      "stratagems": [],
+      "rules": [
+        {
+          "id": 7843,
+          "name": "Powers of da Waaagh!",
+          "components": [
+            {
+              "id": 49571,
+              "type": "text",
+              "textContent": "$20",
+              "title": null,
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            },
+            {
+              "id": 48650,
+              "type": "loreAccordion",
+              "textContent": "<i>Surrounded by mobs of excitable Orks, Weirdboyz’ shamanic powers build to spectacular phenomena.</i>",
+              "title": "Lore",
+              "subtitle": null,
+              "trigger": null,
+              "effect": null,
+              "imageUrl": null,
+              "altText": null,
+              "bulletPoints": []
+            }
+          ]
+        }
+      ],
+      "details": []
+    }
+  ]
+}

@@ -132,3 +132,47 @@ The Supabase client module SHALL provide `fetchLoadoutData(factionSlug, unitSlug
 #### Scenario: Upserting loadout data
 - **WHEN** `upsertLoadoutData` is called
 - **THEN** it SHALL write to Supabase first, then update IndexedDB cache on success
+
+### Requirement: Detachment Data Table
+
+The Supabase database SHALL have a `detachment_data` table with columns: `faction_slug` (text), `detachment_slug` (text), `tag` (text), `data` (JSONB), `enhancements` (JSONB, nullable). The primary key SHALL be `(faction_slug, detachment_slug)`.
+
+#### Scenario: Table schema
+- **WHEN** the `detachment_data` table is queried
+- **THEN** it SHALL contain columns `faction_slug`, `detachment_slug`, `tag`, `data`, and `enhancements` with `(faction_slug, detachment_slug)` as the composite primary key
+
+### Requirement: Detachment Data Client Functions
+
+The Supabase client module SHALL provide `fetchDetachmentsByFaction(factionSlug)`, `fetchDetachmentData(factionSlug, detachmentSlug)`, `upsertDetachmentData(factionSlug, detachmentSlug, detachmentData)`, and `fetchAllDetachmentDataByFaction(factionSlug)` functions following the same Supabase-first write pattern as existing data functions.
+
+#### Scenario: Fetching all detachments for a faction
+- **WHEN** `fetchDetachmentsByFaction` is called with a faction slug
+- **THEN** it SHALL return all `detachment_data` rows for that faction
+
+#### Scenario: Upserting detachment data
+- **WHEN** `upsertDetachmentData` is called
+- **THEN** it SHALL write to Supabase first with `(faction_slug, detachment_slug)` as the conflict key, following the Supabase-first write pattern
+
+### Requirement: Army Rules in Factions Table
+
+The `factions` table SHALL have an `army_rules` column (JSONB, nullable) storing the faction's army rules as an array of rule objects with `name` and `components`.
+
+#### Scenario: Faction with army rules
+- **WHEN** the `factions` table is queried for a faction with army rules
+- **THEN** the `army_rules` column SHALL contain a JSON array of rule objects
+
+#### Scenario: Faction without army rules
+- **WHEN** the `factions` table is queried for a faction without army rules
+- **THEN** the `army_rules` column SHALL be null
+
+### Requirement: Army Rules Client Function
+
+The Supabase client module SHALL provide `fetchArmyRules(factionSlug)` that returns the army rules for a faction, falling back to the parent faction for subfactions.
+
+#### Scenario: Fetching army rules for a parent faction
+- **WHEN** `fetchArmyRules("space-marines")` is called
+- **THEN** it SHALL return the army rules from the `factions` row
+
+#### Scenario: Fetching army rules for a subfaction
+- **WHEN** `fetchArmyRules("blood-angels")` is called and Blood Angels has no army rules
+- **THEN** it SHALL fall back to the parent faction (Space Marines) army rules

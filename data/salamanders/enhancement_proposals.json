@@ -1,0 +1,109 @@
+{
+  "salamanders/forgefathers-seekers": [
+    {
+      "slug": "adamantine-mantle",
+      "name": "Adamantine Mantle",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "Enemy",
+          "stat": "Damage",
+          "mode": "subtract",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. Attacks allocated to this model have -1D."
+    },
+    {
+      "slug": "forged-in-battle",
+      "name": "Forged in Battle",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "diceModifier",
+          "appliedTo": "SelfModel",
+          "roll": "toHit",
+          "action": "ignoreModifiers"
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. This unit can ignore modifiers to: BS.WS.Hit rolls."
+    },
+    {
+      "slug": "immolator",
+      "name": "Immolator",
+      "points": 20,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfUnit",
+          "weaponTarget": "RANGE",
+          "stat": "Attacks",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. This unit's [TORRENT] weapons have +1A."
+    },
+    {
+      "slug": "war-tempered-artifice",
+      "name": "War Tempered Artifice",
+      "points": 25,
+      "enhancementType": "miniature",
+      "limit": 1,
+      "eligibility": {
+        "keywords": [],
+        "excludedKeywords": [],
+        "isEquipableByEpicHero": false,
+        "isEquipableByNonCharacterUnit": false
+      },
+      "effects": [
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "Strength",
+          "mode": "add",
+          "value": 1
+        },
+        {
+          "category": "statModifier",
+          "appliedTo": "SelfModel",
+          "weaponTarget": "MELEE",
+          "stat": "Damage",
+          "mode": "add",
+          "value": 1
+        }
+      ],
+      "conditionalEffects": [],
+      "originalText": "Adeptus Astartes model only. This model's melee attacks have: +1S.+1D."
+    }
+  ]
+}

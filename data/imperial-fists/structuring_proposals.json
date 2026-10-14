@@ -3,51 +3,51 @@
     "tag": "AI_PROPOSED",
     "abilities": [
       {
-        "type": "Always",
         "name": "Deep Strike",
+        "phase": "MOVEMENT",
+        "trigger": "ALWAYS",
+        "autoApply": true,
         "category": "OTHER",
         "text": "Each time this unit makes an ingress move, if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent's deployment zone.",
-        "originalText": "Each time this unit makes an <b>ingress move</b> (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        "originalText": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
       },
       {
-        "type": "Always",
-        "name": "Rampart (Once per battle, per army)",
-        "attackType": "ANY",
+        "name": "Rampart",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfModel",
+        "autoApply": true,
+        "frequency": "perBattle",
         "effects": [
           {
             "category": "statModifier",
-            "target": "unit",
+            "appliedTo": "SelfModel",
             "stat": "Invulnerable",
             "mode": "setValue",
             "value": 2
           }
-        ],
-        "originalText": "At the start of any phase, you can use this ability. If you do, this model has 2+ <b>InSv</b> until the end of the phase."
+        ]
       },
       {
-        "type": "AsLeader",
         "name": "Leader",
         "category": "OTHER",
         "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
-        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
       },
       {
-        "type": "Always",
         "name": "Icon of Obstinacy",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "ALWAYS",
-        "appliedTo": "SelfUnit",
+        "autoApply": true,
         "effects": [
           {
             "category": "diceModifier",
+            "appliedTo": "SelfModel",
             "roll": "toHit",
             "action": "subtractFromRoll",
-            "attackType": "ALL"
+            "value": 1
           }
         ],
-        "originalText": "Attacks that target this unit have -1 to <b>hit rolls</b>."
+        "originalText": "Attacks that target this unit have -1 to hit rolls."
       }
     ],
     "rawAbilities": []
@@ -56,59 +56,77 @@
     "tag": "AI_PROPOSED",
     "abilities": [
       {
-        "type": "Always",
         "name": "Siege Captain",
-        "attackType": "ANY",
+        "phase": "ANY",
         "trigger": "¿El objetivo es una Fortificación, Monstruo o Vehículo?",
-        "appliedTo": "SelfModel",
         "effects": [
           {
             "category": "statModifier",
-            "target": "weapon",
+            "appliedTo": "SelfModel",
             "weaponTarget": "ALL",
             "stat": "Strength",
             "mode": "add",
-            "value": 2
+            "value": 2,
+            "targetCondition": {
+              "keywords": [
+                "VEHICLE",
+                "MONSTER"
+              ],
+              "mode": "includes"
+            }
           },
           {
             "category": "statModifier",
-            "target": "weapon",
+            "appliedTo": "SelfModel",
             "weaponTarget": "ALL",
             "stat": "AP",
             "mode": "add",
-            "value": 2
+            "value": 2,
+            "targetCondition": {
+              "keywords": [
+                "VEHICLE",
+                "MONSTER"
+              ],
+              "mode": "includes"
+            }
           },
           {
             "category": "statModifier",
-            "target": "weapon",
+            "appliedTo": "SelfModel",
             "weaponTarget": "ALL",
             "stat": "Damage",
             "mode": "add",
-            "value": 2
+            "value": 2,
+            "targetCondition": {
+              "keywords": [
+                "VEHICLE",
+                "MONSTER"
+              ],
+              "mode": "includes"
+            }
           }
         ],
-        "originalText": "This model’s attacks that target a <k>Fortification/Monster/Vehicle</k> unit have +2 <b>S</b>, <b>AP</b> and <b>D</b>."
+        "originalText": "This model’s attacks that target a Fortification/Monster/Vehicle unit have +2 S, AP and D."
       },
       {
-        "type": "AsLeader",
         "name": "Leader",
         "category": "OTHER",
         "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
-        "originalText": "Before the battle, in the Muster Armies step, for each <b>leader</b> and <b>support</b> unit in your army, you can select one friendly <b>bodyguard</b> unit that unit can <b>lead</b>. That unit will then <b>lead</b> that <b>bodyguard</b> unit for the battle and form an <b>attached</b> unit with it.\n\nUnless otherwise stated, each <b>bodyguard</b> unit can only have one <b>leader</b> unit and one <b>support</b> unit attached to it.\n\nSee Attached Units (19)"
+        "originalText": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it. See Attached Units (19)"
       },
       {
-        "type": "Always",
         "name": "Signum Array",
-        "attackType": "ANY",
-        "trigger": "ALWAYS",
-        "appliedTo": "Enemy",
+        "phase": "SHOOTING",
+        "trigger": "¿Hay una unidad enemiga visible a 18\" o menos de esta unidad?",
         "effects": [
           {
-            "category": "OTHER",
-            "text": "In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That enemy unit cannot have the benefit of cover."
+            "category": "unitKeyword",
+            "appliedTo": "Enemy",
+            "keyword": "COVER",
+            "value": null
           }
         ],
-        "originalText": "In your Shooting phase, you can select one <b>visible</b> enemy unit within 18\" of this unit. That enemy unit cannot have the <b>benefit of cover</b>."
+        "originalText": "In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That enemy unit cannot have the benefit of cover."
       }
     ],
     "rawAbilities": []

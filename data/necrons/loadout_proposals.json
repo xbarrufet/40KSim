@@ -1,0 +1,902 @@
+{
+  "necrons/annihilation-barge": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Gauss cannon",
+            "wargearItemId": 106996
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Tesla cannon",
+                "wargearItemId": 108694
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41144,
+        "originalText": "■ This model's gauss cannon can be replaced with 1 tesla cannon."
+      }
+    ]
+  },
+  "necrons/canoptek-macrocytes": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "allModels"
+        },
+        "replaces": [
+          {
+            "name": "Gauss scalpel",
+            "wargearItemId": 107182
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Tesla caster",
+                "wargearItemId": 105780
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41357,
+        "originalText": "■ All models in this unit can each have their gauss scalpel replaced with 1 tesla caster."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Gauss scalpel",
+            "wargearItemId": 107182
+          },
+          {
+            "name": "Tesla caster",
+            "wargearItemId": 105780
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Atomiser beam",
+                "wargearItemId": 107587
+              },
+              {
+                "count": 1,
+                "name": "Nanoscarab Projector",
+                "wargearItemId": 105706
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42218,
+        "originalText": "■ 1 model's gauss scalpel or tesla caster can be replaced with 1 atomiser beam and 1 nanoscarab projector."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Gauss scalpel",
+            "wargearItemId": 107182
+          },
+          {
+            "name": "Tesla caster",
+            "wargearItemId": 105780
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Accelerator Mandible",
+                "wargearItemId": 108618
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42342,
+        "originalText": "■ 1 model's gauss scalpel or tesla caster can be replaced with 1 accelerator mandible."
+      }
+    ]
+  },
+  "necrons/canoptek-spyders": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 2,
+                "name": "Particle beamer",
+                "wargearItemId": 107899
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41984,
+        "originalText": "■ Any number of models can each be equipped with 2 particle beamers."
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Fabricator Claw Array (Aura)",
+                "wargearItemId": 108403
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42312,
+        "originalText": "■ Any number of models can each be equipped with 1 fabricator claw array. "
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Gloom Prism (Aura)",
+                "wargearItemId": 105996
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41919,
+        "originalText": "■ Any number of models can each be equipped with 1 gloom prism. "
+      }
+    ]
+  },
+  "necrons/canoptek-tomb-crawlers": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Twin gauss reaper",
+            "wargearItemId": 105307
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Transdimensional isolator",
+                "wargearItemId": 107136
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42041,
+        "originalText": "■ 1 model's twin gauss reaper can be replaced with 1 transdimensional isolator."
+      }
+    ]
+  },
+  "necrons/canoptek-wraiths": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "particle caster",
+                "wargearItemId": 106066
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "transdimensional beamer",
+                "wargearItemId": 108346
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42011,
+        "originalText": "■ Any number of models can each be equipped with one of the following: \n▫ 1 particle caster\n▫ 1 transdimensional beamer"
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "vicious claws",
+            "wargearItemId": 107115
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "whip coils",
+                "wargearItemId": 106847
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41849,
+        "originalText": "■ Any number of models can each have their vicious claws replaced with whip coils. "
+      }
+    ]
+  },
+  "necrons/catacomb-command-barge": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "gauss cannon",
+            "wargearItemId": 106996
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "tesla cannon",
+                "wargearItemId": 108694
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41102,
+        "originalText": "■ This model's gauss cannon can be replaced with 1 tesla cannon."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "staff of light",
+            "wargearItemId": 105395
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Overlord's blade",
+                "wargearItemId": 105121
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41642,
+        "originalText": "■ This model's staff of light can be replaced with 1 Overlord's blade."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Resurrection Orb",
+                "wargearItemId": 105599
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42322,
+        "originalText": "■ This model can be equipped with 1 resurrection orb."
+      }
+    ]
+  },
+  "necrons/immortals": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "allModels"
+        },
+        "replaces": [
+          {
+            "name": "Gauss blaster",
+            "wargearItemId": 107394
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Tesla carbine",
+                "wargearItemId": 106185
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41384,
+        "originalText": "■ All models in this unit can each have their gauss blaster replaced with 1 tesla carbine. "
+      }
+    ]
+  },
+  "necrons/lokhust-heavy-destroyers": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Gauss destructor",
+            "wargearItemId": 105368
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Enmitic exterminator",
+                "wargearItemId": 105333
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41630,
+        "originalText": "■ Any number of models can each have their gauss destructor replaced with 1 enmitic exterminator."
+      }
+    ]
+  },
+  "necrons/lokhust-lord": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Staff of light",
+            "wargearItemId": 106965
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Lord's blade",
+                "wargearItemId": 106242
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41596,
+        "originalText": "■ This model's staff of light can be replaced with 1 Lord's blade."
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Nanoscarab Amulet",
+                "wargearItemId": 107754
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Resurrection Orb",
+                "wargearItemId": 105288
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41567,
+        "originalText": "■ This model can be equipped with one of the following: \n◆ 1 nanoscarab amulet\n◆ 1 resurrection orb"
+      }
+    ]
+  },
+  "necrons/lychguard": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "allModels"
+        },
+        "replaces": [
+          {
+            "name": "Warscythe",
+            "wargearItemId": 105827
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Hyperphase sword",
+                "wargearItemId": 106701
+              },
+              {
+                "count": 1,
+                "name": "Dispersion Shield",
+                "wargearItemId": 106538
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42366,
+        "originalText": "■ All models in this unit can each have their warscythe replaced with 1 hyperphase sword and 1 dispersion shield."
+      }
+    ]
+  },
+  "necrons/monolith": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Gauss flux arc",
+            "wargearItemId": 107748
+          },
+          {
+            "name": "Gauss flux arc",
+            "wargearItemId": 107748
+          },
+          {
+            "name": "Gauss flux arc",
+            "wargearItemId": 107748
+          },
+          {
+            "name": "Gauss flux arc",
+            "wargearItemId": 107748
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 4,
+                "name": "Death ray",
+                "wargearItemId": 108157
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41871,
+        "originalText": "■ This model's 4 gauss flux arcs can be replaced with 4 death rays."
+      }
+    ]
+  },
+  "necrons/necron-warriors": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Gauss flayer",
+            "wargearItemId": 105588
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Gauss reaper",
+                "wargearItemId": 106124
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41723,
+        "originalText": "■ Any number of models can each have their gauss flayer replaced with 1 gauss reaper. "
+      }
+    ]
+  },
+  "necrons/ophydian-destroyers": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 3,
+            "count": 1
+          }
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasmacyte",
+                "wargearItemId": 108584
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41859,
+        "originalText": "■ For every 3 models in this unit, this unit can have 1 Plasmacyte."
+      }
+    ]
+  },
+  "necrons/overlord": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Tachyon arrow",
+            "wargearItemId": 107784
+          },
+          {
+            "name": "Overlord's blade",
+            "wargearItemId": 105121
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Staff of light",
+                "wargearItemId": 106965
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Voidscythe",
+                "wargearItemId": 106490
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41576,
+        "originalText": "■ This model's tachyon arrow and Overlord's blade can be replaced with one of the following: \n▫ 1 staff of light\n▫ 1 voidscythe"
+      },
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Resurrection Orb",
+                "wargearItemId": 105288
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 40988,
+        "originalText": "■ If this model is not equipped with a tachyon arrow, it can be equipped with 1 resurrection orb. "
+      }
+    ]
+  },
+  "necrons/seraptek-heavy-construct": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Singularity generator",
+            "wargearItemId": 106288
+          },
+          {
+            "name": "Singularity generator",
+            "wargearItemId": 106288
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 2,
+                "name": "Synaptic obliterator",
+                "wargearItemId": 105181
+              },
+              {
+                "count": 2,
+                "name": "Transdimensional projector",
+                "wargearItemId": 107097
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42364,
+        "originalText": "■ This model's 2 singularity generators can be replaced with 2 synaptic obliterators and 2 transdimensional projectors."
+      }
+    ]
+  },
+  "necrons/skorpekh-destroyers": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "ratio",
+          "ratio": {
+            "per": 3,
+            "count": 1
+          }
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Plasmacyte",
+                "wargearItemId": 108584
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 42334,
+        "originalText": "■ For every 3 models in this unit, this unit can have 1 Plasmacyte."
+      }
+    ]
+  },
+  "necrons/tomb-blades": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [
+          {
+            "name": "Twin gauss blaster",
+            "wargearItemId": 104959
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Particle beamer",
+                "wargearItemId": 104921
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Twin tesla carbine",
+                "wargearItemId": 104865
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 41527,
+        "originalText": "■ Any number of models can each have their twin gauss blaster replaced with one of the following: \n▫ 1 particle beamer\n▫ 1 twin tesla carbine"
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Shieldvanes",
+                "wargearItemId": 104978
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41036,
+        "originalText": "■ Any number of models can each be equipped with 1 shieldvanes. "
+      },
+      {
+        "scope": {
+          "type": "anyNumber"
+        },
+        "replaces": [],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Nebuloscope",
+                "wargearItemId": 104793
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Shadowloom",
+                "wargearItemId": 104929
+              }
+            ]
+          }
+        ],
+        "isAdditional": true,
+        "originalRuleId": 41531,
+        "originalText": "■ Any number of models can each be equipped with one of the following: \n▫ 1 nebuloscope\n▫ 1 shadowloom"
+      }
+    ]
+  },
+  "necrons/triarch-praetorians": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "allModels"
+        },
+        "replaces": [
+          {
+            "name": "Rod of covenant",
+            "wargearItemId": 107880
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Particle caster",
+                "wargearItemId": 108271
+              },
+              {
+                "count": 1,
+                "name": "Voidblade",
+                "wargearItemId": 106305
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42098,
+        "originalText": "■ All models in this unit can each have their rod of covenant replaced with 1 particle caster and 1 voidblade."
+      }
+    ]
+  },
+  "necrons/triarch-stalker": {
+    "tag": "AI_PROPOSED",
+    "options": [
+      {
+        "scope": {
+          "type": "model"
+        },
+        "replaces": [
+          {
+            "name": "Heat ray",
+            "wargearItemId": 106322
+          }
+        ],
+        "choices": [
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Particle shredder",
+                "wargearItemId": 108323
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "count": 1,
+                "name": "Heavy gauss cannon array",
+                "wargearItemId": 104752
+              }
+            ]
+          }
+        ],
+        "isAdditional": false,
+        "originalRuleId": 42110,
+        "originalText": "■ This model's heat ray can be replaced with one of the following: \n▫ 1 particle shredder\n▫ 1 heavy gauss cannon array"
+      }
+    ]
+  }
+}
