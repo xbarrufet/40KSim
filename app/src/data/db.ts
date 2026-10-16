@@ -1,4 +1,4 @@
-import type { ArmyList, Effect, StructuredAbilitiesData, StructuredLoadoutData, UnitDataAbility, WargearOption, WeaponTarget } from './schema'
+import type { ArmyList, Effect, StructuredAbilitiesData, StructuredLoadoutData, UnitDataAbility, WeaponTarget } from './schema'
 import { getParentFaction } from './factions'
 import {
   fetchFactions as sbFetchFactions,
@@ -14,8 +14,19 @@ import {
   upsertLoadoutData as sbUpsertLoadoutData,
 } from './supabase'
 
-function migrateAbility(raw: unknown): UnitDataAbility {
-  const a = raw as Record<string, unknown>
+async function withParentFallback<T>(
+  factionSlug: string,
+  fetcher: (slug: string) => Promise<T | null>,
+): Promise<{ data: T; resolvedFaction: string } | null> {
+  const direct = await fetcher(factionSlug)
+  if (direct) return { data: direct, resolvedFaction: factionSlug }
+  const parent = getParentFaction(factionSlug)
+  if (!parent) return null
+  const fallback = await fetcher(parent)
+  return fallback ? { data: fallback, resolvedFaction: parent } : null
+}
+
+function migrateAbility(a: Record<string, unknown>): UnitDataAbility {
   if (a.phase === 'ALL_COMBAT') a.phase = 'ANY'
   if ('effects' in a) return a as unknown as UnitDataAbility
   if (a.category === 'OTHER') return a as unknown as UnitDataAbility
@@ -32,11 +43,13 @@ function migrateAbility(raw: unknown): UnitDataAbility {
   if (ruleType === 'unitStatsModifier') {
     const raw_value = rule.value as string
     const num = parseFloat(raw_value?.replace('+', '') ?? '0')
-    effect = { category: 'statModifier', appliedTo: ap, stat: rule.stat as never, mode: num < 0 ? 'subtract' : 'add', value: Math.abs(num) }
+    const stat = rule.stat as string
+    effect = { category: 'statModifier', appliedTo: ap, stat: stat as import('./schema').UnitStat, mode: num < 0 ? 'subtract' : 'add', value: Math.abs(num) }
   } else if (ruleType === 'weaponStatsModifier') {
     const raw_value = rule.value as string
     const num = parseFloat(raw_value?.replace('+', '') ?? '0')
-    effect = { category: 'statModifier', appliedTo: ap, weaponTarget: (rule.weaponTarget as WeaponTarget) ?? 'ALL', stat: rule.stat as never, mode: num < 0 ? 'subtract' : 'add', value: Math.abs(num) }
+    const stat = rule.stat as string
+    effect = { category: 'statModifier', appliedTo: ap, weaponTarget: (rule.weaponTarget as WeaponTarget) ?? 'ALL', stat: stat as import('./schema').WeaponStat, mode: num < 0 ? 'subtract' : 'add', value: Math.abs(num) }
   } else if (ruleType === 'diceModifier') {
     const modifier = rule.modifier as Record<string, unknown>
     const rollMap: Record<string, 'toHit' | 'toWound' | 'savingThrow'> = { Hit: 'toHit', Wound: 'toWound', Save: 'savingThrow' }
@@ -48,7 +61,7 @@ function migrateAbility(raw: unknown): UnitDataAbility {
       effect = { category: 'diceModifier', appliedTo: ap, roll, action: val < 0 ? 'subtractFromRoll' : 'addToRoll' }
     }
   } else {
-    effect = { category: 'weaponKeyword', appliedTo: ap, weaponTarget: (rule.weaponTarget as WeaponTarget) ?? 'ALL', keyword: rule.attribute as never, value: (rule.value as string) ?? null }
+    effect = { category: 'weaponKeyword', appliedTo: ap, weaponTarget: (rule.weaponTarget as WeaponTarget) ?? 'ALL', keyword: rule.attribute as import('./weaponKeywords').KnownAttribute, value: (rule.value as string) ?? null }
   }
 
   return {
@@ -156,11 +169,11 @@ interface UnitRecord {
   keywords: string[]
 }
 
-function remoteToStructuredAbilitiesData(remote: { tag: string; abilities: unknown[]; raw_abilities: unknown[]; base_data_hash: string | null }): StructuredAbilitiesData {
+function remoteToStructuredAbilitiesData(remote: { tag: string; abilities: UnitDataAbility[]; raw_abilities: StructuredAbilitiesData['rawAbilities']; base_data_hash: string | null }): StructuredAbilitiesData {
   return {
     tag: remote.tag as StructuredAbilitiesData['tag'],
-    abilities: (remote.abilities as StructuredAbilitiesData['abilities']).map(migrateAbility),
-    rawAbilities: remote.raw_abilities as StructuredAbilitiesData['rawAbilities'],
+    abilities: remote.abilities.map(a => migrateAbility(a as unknown as Record<string, unknown>)),
+    rawAbilities: remote.raw_abilities,
     baseDataHash: remote.base_data_hash ?? undefined,
   }
 }
@@ -210,27 +223,16 @@ export async function getBaseDataUnitsByFaction(factionSlug: string): Promise<{ 
 }
 
 export async function getBaseData(factionSlug: string, unitSlug: string): Promise<unknown> {
-  const own = await sbFetchBaseData(factionSlug, unitSlug)
-  if (own != null) return own
-  const parent = getParentFaction(factionSlug)
-  if (parent) return await sbFetchBaseData(parent, unitSlug) ?? undefined
-  return undefined
+  const result = await withParentFallback(factionSlug, slug => sbFetchBaseData(slug, unitSlug))
+  return result?.data ?? undefined
 }
 
 export async function hasBaseData(factionSlug: string, unitSlug: string): Promise<boolean> {
-  const data = await sbFetchBaseData(factionSlug, unitSlug)
-  if (data != null) return true
-  const parent = getParentFaction(factionSlug)
-  if (parent) return (await sbFetchBaseData(parent, unitSlug)) != null
-  return false
+  return (await withParentFallback(factionSlug, slug => sbFetchBaseData(slug, unitSlug))) != null
 }
 
 export async function hasStructuredAbilitiesData(factionSlug: string, unitSlug: string): Promise<boolean> {
-  const data = await sbFetchUnitData(factionSlug, unitSlug)
-  if (data != null) return true
-  const parent = getParentFaction(factionSlug)
-  if (parent) return (await sbFetchUnitData(parent, unitSlug)) != null
-  return false
+  return (await withParentFallback(factionSlug, slug => sbFetchUnitData(slug, unitSlug))) != null
 }
 
 export type UnitStatus = 'red' | 'amber' | 'green'
@@ -256,17 +258,12 @@ export async function getUnitStatuses(factionSlug: string, unitSlugs: string[]):
 }
 
 export async function getStructuredAbilitiesData(factionSlug: string, unitSlug: string): Promise<{ data: StructuredAbilitiesData; resolvedFaction: string } | undefined> {
-  const remote = await sbFetchUnitData(factionSlug, unitSlug)
-  if (remote) return { data: remoteToStructuredAbilitiesData(remote), resolvedFaction: factionSlug }
-  const parent = getParentFaction(factionSlug)
-  if (parent) {
-    const parentRemote = await sbFetchUnitData(parent, unitSlug)
-    if (parentRemote) return { data: remoteToStructuredAbilitiesData(parentRemote), resolvedFaction: parent }
-  }
-  return undefined
+  const result = await withParentFallback(factionSlug, slug => sbFetchUnitData(slug, unitSlug))
+  if (!result) return undefined
+  return { data: remoteToStructuredAbilitiesData(result.data), resolvedFaction: result.resolvedFaction }
 }
 
-export async function putBaseData(factionSlug: string, unitSlug: string, data: unknown): Promise<void> {
+export async function putBaseData(factionSlug: string, unitSlug: string, data: Record<string, unknown>): Promise<void> {
   await sbUpsertBaseData(factionSlug, unitSlug, data)
 }
 
@@ -317,14 +314,10 @@ export async function getConfirmedUnitDataCount(factionSlug: string): Promise<nu
 }
 
 export async function getLoadoutData(factionSlug: string, unitSlug: string): Promise<{ data: StructuredLoadoutData; resolvedFaction: string } | undefined> {
-  const remote = await sbFetchLoadoutData(factionSlug, unitSlug)
-  if (remote) return { data: { tag: remote.tag as StructuredLoadoutData['tag'], options: remote.options as WargearOption[] }, resolvedFaction: factionSlug }
-  const parent = getParentFaction(factionSlug)
-  if (parent) {
-    const parentRemote = await sbFetchLoadoutData(parent, unitSlug)
-    if (parentRemote) return { data: { tag: parentRemote.tag as StructuredLoadoutData['tag'], options: parentRemote.options as WargearOption[] }, resolvedFaction: parent }
-  }
-  return undefined
+  const result = await withParentFallback(factionSlug, slug => sbFetchLoadoutData(slug, unitSlug))
+  if (!result) return undefined
+  const remote = result.data
+  return { data: { tag: remote.tag as StructuredLoadoutData['tag'], options: remote.options }, resolvedFaction: result.resolvedFaction }
 }
 
 export async function putLoadoutData(factionSlug: string, unitSlug: string, data: StructuredLoadoutData): Promise<void> {

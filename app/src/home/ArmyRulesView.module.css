@@ -1,0 +1,5 @@
+.content { padding: 0 1rem; }
+.loading { padding: 1rem; opacity: 0.6; }
+.emptyMessage { padding: 2rem; opacity: 0.6; }
+.ruleBlock { margin-bottom: 1.5rem; }
+.abilityTextBlock { margin-bottom: 0.5rem; }

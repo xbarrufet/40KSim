@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { getAllLists } from '../data/db'
 import { ListDetailView } from '../list/ListDetailView'
 import type { ArmyList } from '../data/schema'
+import styles from './GameView.module.css'
 
 export function GameView() {
   const [lists, setLists] = useState<ArmyList[]>([])
@@ -38,13 +39,13 @@ export function GameView() {
       {error && <p className="board-alert">{error}</p>}
 
       {sortedLists.length === 0 ? (
-        <p className="saved-lists-empty">Todavía no has subido ninguna lista. Súbela desde la pestaña LIST.</p>
+        <p className="home-empty">Todavía no has subido ninguna lista. Súbela desde la pestaña LIST.</p>
       ) : (
-        <ul className="game-picker-list">
+        <ul className={styles.list}>
           {sortedLists.map((list) => (
             <li key={list.id}>
-              <button type="button" className="game-picker-row" onClick={() => setOpenList(list)}>
-                <span className="game-picker-row-name">{list.armyName ?? list.title}</span>
+              <button type="button" className={styles.row} onClick={() => setOpenList(list)}>
+                <span className={styles.rowName}>{list.armyName ?? list.title}</span>
                 <span className="profile-meta">{list.declaredPoints ? `${list.declaredPoints} pts` : ''}</span>
               </button>
             </li>

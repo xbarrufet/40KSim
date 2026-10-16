@@ -83,6 +83,65 @@ Las reglas y modificadores se irán incorporando de forma explícita: los datos 
 
 La interfaz se plantea como una aplicación web adaptable a móvil e instalable desde Safari en iOS. Para ofrecer la instalación PWA en un despliegue real se necesitarán, como mínimo, un manifiesto web, un service worker y alojamiento mediante HTTPS. El uso sin conexión podrá cubrir la consulta de los datos previamente descargados cuando se implemente el almacenamiento local.
 
+## API de consulta
+
+Los datos de facciones y unidades están disponibles a través de una API REST (Supabase Edge Functions). Todas las peticiones requieren la anon key del proyecto en la cabecera `Authorization`.
+
+**Base URL:** `https://<project>.supabase.co/functions/v1/factions`
+
+**Cabeceras requeridas:**
+
+```
+Authorization: Bearer <SUPABASE_ANON_KEY>
+```
+
+### Endpoints
+
+| Método | Ruta | Descripción |
+|--------|------|-------------|
+| `GET` | `/factions` | Lista todas las facciones con conteo de unidades |
+| `GET` | `/factions/:factionSlug` | Datos completos de una facción: unidades (con baseData, abilities, loadout) y destacamentos |
+| `GET` | `/factions/:factionSlug/units/:unitSlug` | Datos completos de una unidad individual |
+
+### Ejemplos
+
+Listar facciones:
+
+```bash
+curl -H "Authorization: Bearer $ANON_KEY" \
+  https://<project>.supabase.co/functions/v1/factions
+```
+
+Obtener una facción con todas sus unidades y destacamentos:
+
+```bash
+curl -H "Authorization: Bearer $ANON_KEY" \
+  https://<project>.supabase.co/functions/v1/factions/space-marines
+```
+
+Obtener una unidad individual:
+
+```bash
+curl -H "Authorization: Bearer $ANON_KEY" \
+  https://<project>.supabase.co/functions/v1/factions/space-marines/units/intercessor-squad
+```
+
+### Respuestas
+
+- `/factions` devuelve `{ "factions": [{ slug, name, category, icon, unitCount }] }`
+- `/factions/:factionSlug` devuelve `{ "factionSlug", "units": [UnitFull], "detachments": [...] }`
+- `/factions/:slug/units/:unit` devuelve `{ "factionSlug", "unit": UnitFull }`
+
+Cada `UnitFull` agrupa los datos de la unidad en un solo objeto: `slug`, `name`, `category`, `points`, `keywords`, `baseData` (datasheet crudo o null), `abilities` (habilidades estructuradas o null), `loadout` (opciones de equipamiento o null).
+
+Las subfacciones (e.g. Blood Angels) heredan datos de la facción padre (Space Marines) cuando no tienen datos propios.
+
+La especificación completa de tipos está en `docs/api-spec.md`.
+
+### Errores
+
+Todas las respuestas de error siguen el formato `{ "error": "mensaje" }` con los códigos HTTP estándar (404 para recurso no encontrado, 500 para errores internos).
+
 ## Fuente y atribución
 
 Los scripts obtienen datos de [40k.app](https://www.40k.app). No se garantiza que los datos sean completos, estén actualizados o representen todas las reglas aplicables en una partida. Antes de publicar o redistribuir la aplicación o los datos, revisa las condiciones y derechos correspondientes. Este proyecto no está afiliado ni respaldado por Games Workshop ni por 40k.app.

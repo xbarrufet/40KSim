@@ -3,6 +3,7 @@ import { ArrowLeft } from 'lucide-react'
 import { fetchDetachmentsByFaction } from '../data/supabase'
 import { getParentFaction } from '../data/factions'
 import { DetachmentDetailView } from './DetachmentDetailView'
+import styles from './DetachmentsView.module.css'
 
 interface DetachmentsViewProps {
   faction: { slug: string; name: string }
@@ -105,15 +106,15 @@ export function DetachmentsView({ faction, onBack, inline }: DetachmentsViewProp
       {error && <p className="board-alert">{error}</p>}
 
       {detachments && detachments.length === 0 && (
-        <p style={{ padding: '2rem', opacity: 0.6 }}>
+        <p className={styles.emptyMessage}>
           No hay datos de detachments para esta facción. Ejecuta <code>fetch_faction_data.py</code> y <code>seed_supabase.py</code>.
         </p>
       )}
 
       {detachments && detachments.length > 0 && (
-        <div style={{ padding: '0 1rem' }}>
+        <div className={styles.content}>
           {detachments.map((det) => (
-            <div key={det.detachmentSlug} className="unit-row" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <div key={det.detachmentSlug} className="unit-row">
               <button
                 type="button"
                 className="unit-row-name unit-link"
@@ -121,10 +122,10 @@ export function DetachmentsView({ faction, onBack, inline }: DetachmentsViewProp
               >
                 {det.name}
               </button>
-              {det.inherited && <span style={{ fontSize: '0.65rem', opacity: 0.5 }}>heredado</span>}
+              {det.inherited && <span className={styles.inherited}>heredado</span>}
               <span className={`status-light is-${tagColor(det.tag)}`} aria-hidden="true" />
               <span className="unit-row-spacer" />
-              <span style={{ fontSize: '0.75rem', opacity: 0.6 }}>
+              <span className={styles.detMeta}>
                 {det.enhancementCount} enh / {det.stratagemCount} strat
               </span>
               <span className="unit-row-points">{det.pointsCost} CP</span>

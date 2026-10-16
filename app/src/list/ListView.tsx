@@ -4,6 +4,7 @@ import { deleteList, getAllFactionsUnfiltered, getAllLists } from '../data/db'
 import { ImportListModal } from './ImportListModal'
 import { ListDetailView } from './ListDetailView'
 import type { ArmyList } from '../data/schema'
+import styles from './ListView.module.css'
 
 export function ListView() {
   const [lists, setLists] = useState<ArmyList[]>([])
@@ -49,21 +50,21 @@ export function ListView() {
 
       {error && <p className="board-alert">{error}</p>}
 
-      <div className="saved-lists-panel">
-        <div className="saved-lists-toolbar">
-          <button type="button" className="add-list-btn" onClick={() => setImporting(true)} aria-label="Subir lista">
+      <div className={styles.panel}>
+        <div className={styles.toolbar}>
+          <button type="button" className={styles.addBtn} onClick={() => setImporting(true)} aria-label="Subir lista">
             <Plus size={16} />
           </button>
         </div>
 
         {sortedLists.length === 0 ? (
-          <p className="saved-lists-empty">Todavía no has subido ninguna lista.</p>
+          <p className={styles.empty}>Todavía no has subido ninguna lista.</p>
         ) : (
-          <div className="saved-lists-table-wrap">
-            <table className="saved-lists-table">
+          <div className={styles.tableWrap}>
+            <table className={styles.table}>
               <thead>
                 <tr>
-                  <th className="saved-lists-date-col">Fecha</th>
+                  <th className={styles.dateCol}>Fecha</th>
                   <th>Nombre</th>
                   <th>Facción</th>
                   <th>Destacamento</th>
@@ -106,16 +107,16 @@ function SavedListRow({
   onDelete: () => void
 }) {
   return (
-    <tr className="saved-list-row" onClick={onOpen}>
-      <td className="saved-lists-date-col">{formatUploadedAt(list.uploadedAt)}</td>
+    <tr className={styles.listRow} onClick={onOpen}>
+      <td className={styles.dateCol}>{formatUploadedAt(list.uploadedAt)}</td>
       <td>{list.armyName ?? list.title}</td>
       <td>{factionName ?? 'Facción desconocida'}</td>
       <td>{list.detachment ?? '—'}</td>
       <td>{list.declaredPoints ? `${list.declaredPoints} pts` : '—'}</td>
-      <td className="saved-lists-actions-col">
+      <td className={styles.actionsCol}>
         <button
           type="button"
-          className="delete-list-btn"
+          className={styles.deleteBtn}
           onClick={(e) => {
             e.stopPropagation()
             onDelete()

@@ -1,0 +1,14 @@
+.table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 13px; }
+.table th { text-align: left; padding: 4px 8px; font-size: 11px; font-weight: 700; color: var(--muted); border-bottom: 1px solid var(--line); }
+.table td { padding: 4px 8px; vertical-align: top; }
+.abilityMainRow td { padding-top: 8px; border-top: 1px solid var(--line); }
+.abilityMainRow td:first-child { font-weight: 600; }
+.triggerCell { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--muted); font-size: 12px; }
+.actionsCell { display: flex; gap: 6px; }
+.actionsCell button { height: 26px; padding: 0 10px; background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 2px; font-size: 11px; font-weight: 600; cursor: pointer; }
+.effectSubrow td { padding: 2px 8px 2px 24px; color: var(--muted); font-size: 12px; }
+.originalTextSubrow td { padding: 2px 8px 2px 24px; color: var(--muted); font-size: 12px; }
+.colPhase { width: 70px; }
+.colFreq { width: 60px; }
+.colTrigger { width: 180px; }
+.colActions { width: 120px; }

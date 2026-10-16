@@ -1,5 +1,5 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
-import type { DetachmentData, StructuredAbilitiesData, StructuredLoadoutData } from './schema'
+import type { DetachmentData, StructuredAbilitiesData, StructuredEnhancement, StructuredLoadoutData, UnitDataAbility, RawAbility, WargearOption } from './schema'
 import { getParentFaction } from './factions'
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined
@@ -24,7 +24,7 @@ interface FactionRow {
   category: string | null
   icon: string | null
   unit_count: number
-  army_rules: unknown[] | null
+  army_rules: Record<string, unknown>[] | null
 }
 
 interface UnitRow {
@@ -40,8 +40,8 @@ interface UnitDataRow {
   faction_slug: string
   unit_slug: string
   tag: string
-  abilities: unknown[]
-  raw_abilities: unknown[]
+  abilities: UnitDataAbility[]
+  raw_abilities: RawAbility[]
   base_data_hash: string | null
 }
 
@@ -53,7 +53,7 @@ export async function fetchFactions(): Promise<FactionRow[]> {
   return data ?? []
 }
 
-export async function fetchArmyRules(factionSlug: string): Promise<unknown[] | null> {
+export async function fetchArmyRules(factionSlug: string): Promise<Record<string, unknown>[] | null> {
   const sb = getClient()
   if (!sb) return null
   const { data, error } = await sb
@@ -62,7 +62,7 @@ export async function fetchArmyRules(factionSlug: string): Promise<unknown[] | n
     .eq('slug', factionSlug)
     .maybeSingle()
   if (error) throw error
-  if (data?.army_rules) return data.army_rules as unknown[]
+  if (data?.army_rules) return data.army_rules as Record<string, unknown>[]
   const parent = getParentFaction(factionSlug)
   if (!parent) return null
   const { data: parentData, error: parentError } = await sb
@@ -71,7 +71,7 @@ export async function fetchArmyRules(factionSlug: string): Promise<unknown[] | n
     .eq('slug', parent)
     .maybeSingle()
   if (parentError) throw parentError
-  return (parentData?.army_rules as unknown[] | null) ?? null
+  return (parentData?.army_rules as Record<string, unknown>[] | null) ?? null
 }
 
 export async function upsertFaction(faction: FactionRow): Promise<void> {
@@ -96,7 +96,7 @@ export async function upsertUnit(unit: UnitRow): Promise<void> {
   if (error) throw error
 }
 
-export async function fetchBaseData(factionSlug: string, unitSlug: string): Promise<unknown | null> {
+export async function fetchBaseData(factionSlug: string, unitSlug: string): Promise<Record<string, unknown> | null> {
   const sb = getClient()
   if (!sb) return null
   const { data, error } = await sb
@@ -109,7 +109,7 @@ export async function fetchBaseData(factionSlug: string, unitSlug: string): Prom
   return data?.data ?? null
 }
 
-export async function upsertBaseData(factionSlug: string, unitSlug: string, baseData: unknown): Promise<void> {
+export async function upsertBaseData(factionSlug: string, unitSlug: string, baseData: Record<string, unknown>): Promise<void> {
   const sb = getClient()
   if (!sb) return
   const { error } = await sb.from('base_data').upsert(
@@ -140,8 +140,8 @@ export async function upsertUnitData(factionSlug: string, unitSlug: string, unit
       faction_slug: factionSlug,
       unit_slug: unitSlug,
       tag: unitData.tag,
-      abilities: unitData.abilities as unknown[],
-      raw_abilities: unitData.rawAbilities as unknown[],
+      abilities: unitData.abilities,
+      raw_abilities: unitData.rawAbilities,
       base_data_hash: unitData.baseDataHash ?? null,
     },
     { onConflict: 'faction_slug,unit_slug' },
@@ -149,7 +149,7 @@ export async function upsertUnitData(factionSlug: string, unitSlug: string, unit
   if (error) throw error
 }
 
-export async function fetchAllBaseDataByFaction(factionSlug: string): Promise<{ unit_slug: string; data: unknown }[]> {
+export async function fetchAllBaseDataByFaction(factionSlug: string): Promise<{ unit_slug: string; data: Record<string, unknown> }[]> {
   const sb = getClient()
   if (!sb) return []
   const { data, error } = await sb
@@ -164,7 +164,7 @@ interface LoadoutDataRow {
   faction_slug: string
   unit_slug: string
   tag: string
-  options: unknown[]
+  options: WargearOption[]
 }
 
 export async function fetchLoadoutData(factionSlug: string, unitSlug: string): Promise<LoadoutDataRow | null> {
@@ -188,7 +188,7 @@ export async function upsertLoadoutData(factionSlug: string, unitSlug: string, l
       faction_slug: factionSlug,
       unit_slug: unitSlug,
       tag: loadoutData.tag,
-      options: loadoutData.options as unknown[],
+      options: loadoutData.options,
     },
     { onConflict: 'faction_slug,unit_slug' },
   )
@@ -221,8 +221,8 @@ interface DetachmentDataRow {
   faction_slug: string
   detachment_slug: string
   tag: string
-  data: unknown
-  enhancements: unknown[] | null
+  data: Record<string, unknown>
+  enhancements: StructuredEnhancement[] | null
 }
 
 export async function fetchDetachmentsByFaction(factionSlug: string): Promise<DetachmentDataRow[]> {
@@ -258,7 +258,7 @@ export async function upsertDetachmentData(factionSlug: string, detachmentSlug: 
       detachment_slug: detachmentSlug,
       tag: detachmentData.tag,
       data: detachmentData.data,
-      enhancements: detachmentData.enhancements as unknown[] | null,
+      enhancements: detachmentData.enhancements,
     },
     { onConflict: 'faction_slug,detachment_slug' },
   )

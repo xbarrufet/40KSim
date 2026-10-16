@@ -107,10 +107,14 @@ export type Phase = 'ANY' | 'MOVEMENT' | 'SHOOTING' | 'CHARGE' | 'FIGHT' | 'COMM
 export type AppliesTo = 'SelfModel' | 'SelfUnit' | 'Enemy' | 'Ally'
 
 export type UnitStat = 'Movement' | 'Toughness' | 'Save' | 'Invulnerable' | 'Wounds' | 'ObjectiveControl' | 'Leadership'
+const UNIT_STATS: Set<string> = new Set<UnitStat>(['Movement', 'Toughness', 'Save', 'Invulnerable', 'Wounds', 'ObjectiveControl', 'Leadership'])
+export function isUnitStat(s: string): s is UnitStat { return UNIT_STATS.has(s) }
 
 export type WeaponTarget = 'ALL' | 'RANGE' | 'MELEE' | (string & {})
 
 export type WeaponStat = 'Strength' | 'Damage' | 'Range' | 'Attacks' | 'AP' | 'Skill'
+const WEAPON_STATS: Set<string> = new Set<WeaponStat>(['Strength', 'Damage', 'Range', 'Attacks', 'AP', 'Skill'])
+export function isWeaponStat(s: string): s is WeaponStat { return WEAPON_STATS.has(s) }
 
 export interface StatModifierEffect {
   category: 'statModifier'
@@ -272,21 +276,21 @@ export interface FactionBackupUnit {
 
 export interface FactionBackupBaseData {
   unitSlug: string
-  data: unknown
+  data: Record<string, unknown>
 }
 
 export interface FactionBackupUnitData {
   unitSlug: string
   tag: string
-  abilities: unknown[]
-  rawAbilities: unknown[]
+  abilities: UnitDataAbility[]
+  rawAbilities: RawAbility[]
   baseDataHash?: string
 }
 
 export interface FactionBackupLoadoutData {
   unitSlug: string
   tag: string
-  options: unknown[]
+  options: WargearOption[]
 }
 
 export interface EnhancementEligibility {
@@ -315,15 +319,15 @@ export interface StructuredEnhancement {
 
 export interface DetachmentData {
   tag: UnitDataTag | 'SCRAPED'
-  data: unknown
+  data: Record<string, unknown>
   enhancements: StructuredEnhancement[] | null
 }
 
 export interface FactionBackupDetachmentData {
   detachmentSlug: string
   tag: string
-  data: unknown
-  enhancements: unknown[] | null
+  data: Record<string, unknown>
+  enhancements: StructuredEnhancement[] | null
 }
 
 export interface FactionBackup {

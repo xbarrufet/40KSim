@@ -65,7 +65,7 @@ export function UploadModal({ factionSlug, units, onClose, onUploaded }: UploadM
           points: bd.compositions?.[0]?.points,
           keywords: [],
         })
-        await putBaseData(factionSlug, entry.slug, entry.data)
+        await putBaseData(factionSlug, entry.slug, entry.data as Record<string, unknown>)
 
         const existingResult = await getStructuredAbilitiesData(factionSlug, entry.slug)
         if (!existingResult) {

@@ -3,6 +3,7 @@ import type { DatasheetContext } from '../data/preprocessBaseData'
 import type { WargearEntry } from '../data/schema'
 import { FormattedAbilityText } from './FormattedAbilityText'
 import { splitWeaponProfiles, type WeaponRow } from './processUnitLogic'
+import styles from './UnitDatasheet.module.css'
 
 interface UnitDatasheetProps {
   datasheet: DatasheetContext | null
@@ -28,7 +29,7 @@ export function UnitDatasheet({ datasheet, wargear, keywords, showExtendedContex
       {datasheet && datasheet.miniatures.length > 0 && (
         <section className="process-unit-section">
           <h2>Models</h2>
-          <table className="datasheet-table">
+          <table className={styles.datasheetTable}>
             <thead>
               <tr>
                 <th>Nombre</th>
@@ -45,7 +46,7 @@ export function UnitDatasheet({ datasheet, wargear, keywords, showExtendedContex
                 <tr key={miniature.name}>
                   <td>
                     {miniature.name}
-                    {miniature.baseSize && <span className="base-size-tag"> base: {miniature.baseSize}</span>}
+                    {miniature.baseSize && <span className={styles.baseSizeTag}> base: {miniature.baseSize}</span>}
                   </td>
                   <td>{miniature.stats.movement}"</td>
                   <td>{miniature.stats.toughness}</td>
@@ -64,10 +65,10 @@ export function UnitDatasheet({ datasheet, wargear, keywords, showExtendedContex
       {showExtendedContext && datasheet && datasheet.costs.length > 0 && (
         <section className="process-unit-section">
           <h2>Costs</h2>
-          <ul className="costs-list">
+          <ul className={styles.costsList}>
             {datasheet.costs.map((cost, index) => (
               <li key={index}>
-                {cost.models} models <span className="points-tag">{cost.points} pts</span>
+                {cost.models} models <span className={styles.pointsTag}>{cost.points} pts</span>
               </li>
             ))}
           </ul>
@@ -109,7 +110,7 @@ export function UnitDatasheet({ datasheet, wargear, keywords, showExtendedContex
       {ranged.length > 0 && (
         <section className="process-unit-section">
           <h2>Ranged Weapons</h2>
-          <table className="datasheet-table weapon-table">
+          <table className={`${styles.datasheetTable} ${styles.weaponTable}`}>
             <thead>
               <tr>
                 {modelNames && <th>Modelo</th>}
@@ -149,7 +150,7 @@ export function UnitDatasheet({ datasheet, wargear, keywords, showExtendedContex
       {melee.length > 0 && (
         <section className="process-unit-section">
           <h2>Melee Weapons</h2>
-          <table className="datasheet-table weapon-table">
+          <table className={`${styles.datasheetTable} ${styles.weaponTable}`}>
             <thead>
               <tr>
                 {modelNames && <th>Modelo</th>}
@@ -211,14 +212,14 @@ function WeaponRowGroup({
 }) {
   return (
     <>
-      <tr className={isNewOwner ? 'weapon-owner-divider' : undefined}>
-        {modelNames && <td className="weapon-owner-cell">{modelNames.get(row.wargearItemId) ?? '—'}</td>}
+      <tr className={isNewOwner ? styles.weaponOwnerDivider : undefined}>
+        {modelNames && <td className={styles.weaponOwnerCell}>{modelNames.get(row.wargearItemId) ?? '—'}</td>}
         <td>{row.label}</td>
         {modelCounts && <td>×{modelCounts.get(row.wargearItemId) ?? '—'}</td>}
         {children}
       </tr>
       {row.profile.abilities.length > 0 && (
-        <tr className="ability-chip-row">
+        <tr className={styles.abilityChipRow}>
           <td colSpan={columnCount}>
             {row.profile.abilities.map((ability) => (
               <span key={ability.id} className="tag-chip">

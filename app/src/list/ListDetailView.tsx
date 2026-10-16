@@ -6,6 +6,7 @@ import type { ArmyList, ArmyListEntry, RawAbility, WargearEntry } from '../data/
 import { FormattedAbilityText } from '../home/FormattedAbilityText'
 import { dedupeAbilitiesByName, matchLoadoutWargear, resolveAttachedEntry } from '../home/processUnitLogic'
 import { UnitDatasheet } from '../home/UnitDatasheet'
+import styles from './ListDetailView.module.css'
 
 interface ListDetailViewProps {
   list: ArmyList
@@ -116,7 +117,7 @@ export function ListDetailView({ list, onBack }: ListDetailViewProps) {
   })
 
   return (
-    <section className="workspace list-detail-workspace">
+    <section className={`workspace ${styles.workspace}`}>
       <div className="unit-board-topbar">
         <button type="button" className="back-link" onClick={onBack}>
           <ArrowLeft size={14} /> Listas
@@ -124,26 +125,26 @@ export function ListDetailView({ list, onBack }: ListDetailViewProps) {
         <h1>{list.armyName ?? list.title}</h1>
       </div>
 
-      <div className="list-detail-grid">
-        <aside className="list-detail-roster">
+      <div className={styles.grid}>
+        <aside className={styles.roster}>
           {categories.map((category) => (
-            <div key={category.name} className="roster-category">
+            <div key={category.name} className={styles.rosterCategory}>
               <h2>{category.name}</h2>
-              <ul className="roster-rows">
+              <ul className={styles.rosterRows}>
                 {category.entries.map(({ entry, index }) => (
                   <li key={index}>
                     <button
                       type="button"
-                      className={`roster-row${index === selectedIndex ? ' is-selected' : ''}`}
+                      className={`${styles.rosterRow}${index === selectedIndex ? ` ${styles.rosterRowSelected}` : ''}`}
                       onClick={() => setSelectedIndex(index)}
                     >
-                      <div className="roster-row-main">
-                        <span className="roster-row-name">{entry.unitName}</span>
-                        <span className="roster-row-points">{entry.points !== undefined ? `${entry.points} pts` : '—'}</span>
+                      <div className={styles.rosterRowMain}>
+                        <span className={styles.rosterRowName}>{entry.unitName}</span>
+                        <span className={styles.rosterRowPoints}>{entry.points !== undefined ? `${entry.points} pts` : '—'}</span>
                       </div>
-                      <div className="roster-row-meta">
+                      <div className={styles.rosterRowMeta}>
                         {entry.modelCount !== undefined && <span>{entry.modelCount} models</span>}
-                        {entry.attachmentText && <span className="roster-row-attachment">{entry.attachmentText}</span>}
+                        {entry.attachmentText && <span className={styles.rosterRowAttachment}>{entry.attachmentText}</span>}
                       </div>
                     </button>
                   </li>
@@ -153,7 +154,7 @@ export function ListDetailView({ list, onBack }: ListDetailViewProps) {
           ))}
         </aside>
 
-        <section className="list-detail-panel">
+        <section className={styles.panel}>
           {selectedEntry && <EntryPanel entry={selectedEntry} state={entryDatasheet} />}
         </section>
       </div>
@@ -165,7 +166,7 @@ function EntryPanel({ entry, state }: { entry: ArmyListEntry; state: EntryDatash
   return (
     <>
       <div className="process-unit-section">
-        <h1 className="entry-panel-title">{entry.unitName}</h1>
+        <h1 className={styles.entryPanelTitle}>{entry.unitName}</h1>
         <p className="profile-meta">
           {entry.points !== undefined ? `${entry.points} pts` : '—'}
           {entry.modelCount !== undefined && <> <span>·</span> {entry.modelCount} models</>}
@@ -182,7 +183,7 @@ function EntryPanel({ entry, state }: { entry: ArmyListEntry; state: EntryDatash
 
       {state.status === 'unavailable' && (
         <div className="process-unit-section">
-          <p className="no-datasheet-notice">No hay datos de esta unidad todavía.</p>
+          <p className={styles.noDatasheetNotice}>No hay datos de esta unidad todavía.</p>
           {entry.rawWargearText && <p className="composition-text">{entry.rawWargearText}</p>}
         </div>
       )}

@@ -1,0 +1,104 @@
+/* ============================================================
+   shared.css — global utility classes used across components
+   ============================================================ */
+
+/* Alerts */
+.board-alert { margin-bottom: 16px; padding: 12px 15px; color: var(--alert-text); background: var(--alert-bg); border-left: 3px solid var(--rust); font-size: 13px; }
+.board-success { margin-bottom: 16px; padding: 12px 15px; color: #3a5e28; background: #eaf3e0; border-left: 3px solid var(--success); font-size: 13px; }
+
+/* Status lights */
+.status-light { width: 8px; height: 8px; display: inline-block; border-radius: 50%; flex-shrink: 0; }
+.status-light.is-red { background: var(--rust); }
+.status-light.is-amber { background: #e6a830; }
+.status-light.is-green { background: var(--success); }
+
+/* Modal system */
+.modal-overlay { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; background: #00000066; }
+.modal-content { width: min(500px, calc(100% - 32px)); max-height: 80vh; display: flex; flex-direction: column; background: var(--panel); border: 1px solid var(--line); box-shadow: 0 12px 40px #0003; overflow: hidden; }
+.modal-header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--line); }
+.modal-header h2 { margin-bottom: 0; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 600; }
+.modal-close { padding: 0; color: var(--muted); background: none; border: none; cursor: pointer; }
+.modal-body { padding: 16px 20px; display: flex; flex-direction: column; gap: 12px; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; padding: 16px 20px; border-top: 1px solid var(--line); }
+.modal-actions button { height: 36px; padding: 0 18px; border: 1px solid #ddded0; border-radius: 2px; font-size: 12px; font-weight: 600; cursor: pointer; }
+.modal-actions .confirm-btn { color: var(--on-accent); background: var(--olive); border-color: var(--olive); }
+.modal-actions .confirm-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.confirm-btn { color: var(--on-accent); background: var(--olive); border-color: var(--olive); }
+
+/* Heading action button */
+.heading-action { display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 16px; color: var(--on-accent); background: var(--olive); border: none; border-radius: 2px; font-size: 12px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap; }
+
+/* Form elements */
+.form-label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; color: var(--ink); }
+.form-label select { height: 36px; padding: 0 10px; border: 1px solid var(--line); background: var(--paper); font-size: 13px; font-family: inherit; }
+
+/* Topbar + back link (used in multiple views) */
+.unit-board-topbar { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.unit-board-topbar h1 { flex: 1; margin-bottom: 0; font-family: var(--heading); color: var(--ink); font-size: 28px; font-weight: 600; }
+.back-link { display: flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 4px; color: var(--muted); background: none; border: none; font-size: 12px; font-weight: 600; cursor: pointer; transition: color 0.1s; }
+.back-link:hover, .back-link:active { color: var(--ink); }
+
+/* Upload button */
+.upload-btn { width: 34px; height: 34px; display: grid; place-items: center; color: var(--ink); background: #262e37; border: 1px solid var(--line); border-radius: 2px; cursor: pointer; }
+.upload-btn:hover { background: #2f3842; }
+
+/* Section headers */
+.process-unit-section { margin-bottom: 28px; }
+.process-unit-section h2 { font-family: var(--mono); color: var(--muted); font-size: 15px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; margin-bottom: 10px; }
+.unit-cat-header { margin: 12px 0 6px; color: var(--muted); font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px; }
+.unit-cat-header:first-child { margin-top: 0; }
+
+/* Unit row (shared between UnitsView and DetachmentsView) */
+.unit-row { display: flex; align-items: center; gap: 8px; padding: 6px 4px; border-radius: 2px; }
+.unit-row:nth-child(even) { background: rgba(255, 255, 255, 0.03); }
+.unit-row:hover { background: rgba(255, 255, 255, 0.07); }
+.unit-row-name { font-size: 13px; font-weight: 500; background: none; border: none; padding: 0; text-align: left; font-family: inherit; }
+.unit-row-spacer { flex: 1; }
+.unit-link { color: var(--olive); text-decoration: none; cursor: pointer; }
+.unit-row-points { background: #262e37; color: var(--ink); font-family: var(--mono); font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 2px; white-space: nowrap; }
+
+/* Profile stats (shared by UnitDatasheet and eyebrow) */
+.profile-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid #e1e1d6; }
+.stat-cell { display: flex; flex-direction: column; align-items: center; padding: 7px 4px 6px; border-right: 1px solid #e1e1d6; }
+.stat-cell:last-child { border-right: 0; }
+.stat-cell span { color: #85867a; font-size: 8px; }
+.stat-cell strong { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; }
+.profile-meta { margin: 9px 0 0; color: var(--muted); font-family: var(--mono); font-size: 12px; }
+.profile-meta span { padding: 0 3px; color: var(--rust); }
+
+/* Ability text formatting */
+.ability-type-tag { padding: 2px 7px; color: var(--muted); background: #262e37; border-radius: 2px; font-family: var(--mono); font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.effect-category-label { display: inline-block; min-width: 48px; padding: 1px 5px; margin-right: 6px; background: #262e37; border-radius: 2px; font-family: var(--mono); font-size: 11px; font-weight: 700; text-align: center; }
+.ability-keyword { color: var(--olive); font-weight: 600; }
+.raw-ability-text p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+.raw-ability-text ul, .composition-text ul { margin: 4px 0 0; padding-left: 18px; }
+.raw-ability-text li, .composition-text li { margin: 2px 0; }
+.composition-text p { color: var(--muted); font-size: 13px; line-height: 1.5; margin: 4px 0 0; }
+.composition-text p:first-child { margin-top: 0; }
+
+/* Tag chips */
+.tag-chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.tag-chip { display: inline-block; padding: 3px 9px; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 2px; font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: 0.3px; text-transform: uppercase; margin-right: 6px; }
+
+/* Drop zone */
+.drop-zone { margin: 16px 20px; padding: 32px; text-align: center; color: var(--muted); background: #f8f7f0; border: 2px dashed #c9cabe; font-size: 13px; }
+.drop-zone.drag-over { border-color: var(--olive); background: #f0f0e4; }
+
+/* File list (shared between UploadModal and ProposalsImportModal) */
+.file-list-header { display: flex; align-items: center; gap: 10px; padding: 8px 20px; font-size: 12px; font-weight: 600; border-bottom: 1px solid var(--line); }
+.file-list { flex: 1; padding: 0 20px; overflow-y: auto; }
+.file-list ul { list-style: none; margin: 0; padding: 0; }
+.file-entry { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #eae9e0; font-size: 13px; }
+.file-name { flex: 1; font-weight: 500; }
+.file-match { color: var(--success); font-size: 12px; }
+.file-new { color: var(--olive); font-size: 12px; font-weight: 600; }
+.file-skip { color: var(--muted); font-size: 12px; }
+
+/* List paste panel (shared by ImportListModal) */
+.list-paste-panel { padding: 0 20px 16px; }
+.list-paste-panel > p { margin: 0 0 14px; color: var(--muted); font-size: 13px; }
+.list-paste-input { width: 100%; padding: 12px; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 2px; font-family: inherit; font-size: 12px; line-height: 1.5; resize: vertical; }
+
+/* Raw ability list (shared by RawAbilitiesList and ListDetailView) */
+.raw-ability-list { list-style: none; margin: 0; padding: 0; }
+.raw-ability-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 13px; flex-direction: column; align-items: stretch; }

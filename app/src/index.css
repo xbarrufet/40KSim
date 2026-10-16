@@ -30,6 +30,12 @@
   --mono: 'JetBrains Mono', ui-monospace, monospace;
   --text-h: var(--ink);
   --code-bg: var(--panel);
+  --alert-text: #853e2b;
+  --alert-bg: #f8e9df;
+  --success: #6a9a3a;
+  --warning-bg: #fff3cd;
+  --warning-text: #7a5c00;
+  --warning-border: #e6c24a;
 }
 
 * { box-sizing: border-box; }

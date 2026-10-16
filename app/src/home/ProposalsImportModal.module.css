@@ -1,0 +1,4 @@
+.dropLabel { cursor: pointer; display: block; }
+.dropText { margin: 0; }
+.dropHint { margin: 4px 0 0; font-size: 11px; }
+.hiddenInput { display: none; }

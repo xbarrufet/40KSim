@@ -18,9 +18,10 @@ import type {
 import { KNOWN_UNIT_KEYWORDS, TARGET_CONDITION_KEYWORDS, type KnownUnitKeyword } from '../data/schema'
 import { KNOWN_WEAPON_KEYWORDS, type KnownAttribute } from '../data/weaponKeywords'
 import type { WeaponNameEntry } from '../data/preprocessBaseData'
+import styles from './EffectEditor.module.css'
 
-export const WEAPON_STATS = new Set<string>(['Strength', 'Damage', 'Range', 'Attacks', 'AP', 'Skill'])
-export function isWeaponStat(s: string): boolean { return WEAPON_STATS.has(s) }
+import { isWeaponStat } from '../data/schema'
+export { isWeaponStat } from '../data/schema'
 
 export const EFFECT_CATEGORY_LABELS: Record<string, string> = {
   statModifier: 'Stats',
@@ -113,7 +114,7 @@ export function WeaponSelect({ value, weaponNames, onChange, compact }: { value:
 export function DiceNotationInput({ value, onChange, error }: { value: string; onChange: (v: string) => void; error?: boolean }) {
   return (
     <input
-      className={`dice-notation-input${error ? ' dice-notation-error' : ''}`}
+      className={`${styles.diceNotationInput}${error ? ` ${styles.diceNotationError}` : ''}`}
       value={value}
       placeholder="ej: 3, D6, 2D3+1"
       onChange={(e) => onChange(e.target.value)}
@@ -210,7 +211,7 @@ export function TargetConditionFields({ condition, onChange, compact }: { condit
   if (compact) {
     return (
       <>
-        <label style={{ fontSize: '0.7rem', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+        <label className={styles.compactLabel}>
           <input type="checkbox" checked={active} onChange={(e) => {
             if (e.target.checked) onChange({ keywords: [], mode: 'excludes' })
             else onChange(undefined)
@@ -219,12 +220,12 @@ export function TargetConditionFields({ condition, onChange, compact }: { condit
         </label>
         {active && condition && (
           <>
-            <select value={condition.mode} style={{ fontSize: '0.7rem' }} onChange={(e) => onChange({ ...condition, mode: e.target.value as TargetCondition['mode'] })}>
+            <select value={condition.mode} className={styles.compactSelect} onChange={(e) => onChange({ ...condition, mode: e.target.value as TargetCondition['mode'] })}>
               <option value="excludes">non-</option>
               <option value="includes">vs</option>
             </select>
             {TARGET_CONDITION_KEYWORDS.map((kw) => (
-              <label key={kw} style={{ fontSize: '0.65rem', display: 'flex', alignItems: 'center', gap: '0.15rem' }}>
+              <label key={kw} className={styles.compactChipLabel}>
                 <input
                   type="checkbox"
                   checked={condition.keywords.includes(kw)}
@@ -245,8 +246,8 @@ export function TargetConditionFields({ condition, onChange, compact }: { condit
   }
 
   return (
-    <div className="target-condition-block">
-      <label className="target-condition-toggle">
+    <div className={styles.targetConditionBlock}>
+      <label className={styles.targetConditionToggle}>
         <input
           type="checkbox"
           checked={active}
@@ -261,7 +262,7 @@ export function TargetConditionFields({ condition, onChange, compact }: { condit
         Condición objetivo
       </label>
       {active && condition && (
-        <div className="target-condition-fields">
+        <div className={styles.targetConditionFields}>
           <select
             value={condition.mode}
             onChange={(e) => onChange({ ...condition, mode: e.target.value as TargetCondition['mode'] })}
@@ -269,14 +270,14 @@ export function TargetConditionFields({ condition, onChange, compact }: { condit
             <option value="excludes">Excepto contra</option>
             <option value="includes">Solo contra</option>
           </select>
-          <div className="target-condition-chips">
+          <div className={styles.targetConditionChips}>
             {TARGET_CONDITION_KEYWORDS.map((kw) => {
               const selected = condition.keywords.includes(kw)
               return (
                 <button
                   key={kw}
                   type="button"
-                  className={`target-condition-chip${selected ? ' selected' : ''}`}
+                  className={`${styles.targetConditionChip}${selected ? ` ${styles.targetConditionChipSelected}` : ''}`}
                   onClick={() => {
                     const next = selected
                       ? condition.keywords.filter((k: TargetConditionKeyword) => k !== kw)

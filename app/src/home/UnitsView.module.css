@@ -1,0 +1,10 @@
+.disabledUpload { cursor: not-allowed; }
+.backupList { margin: 1rem 0; padding-left: 1.2rem; }
+.subtabs { display: flex; gap: 0; margin-bottom: 24px; border-bottom: 1px solid var(--line); }
+.subtabs button { height: 40px; padding: 0 20px; color: var(--muted); background: transparent; border: none; border-bottom: 2px solid transparent; font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.5px; cursor: pointer; transition: color 0.1s, border-color 0.1s; }
+.subtabs button:hover { color: var(--ink); }
+.subtabs button.active { color: var(--ink); border-bottom-color: var(--olive); }
+.columns { margin-top: 12px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 24px; align-items: start; }
+.category { margin-bottom: 20px; }
+.category h2 { margin-bottom: 8px; color: var(--muted); font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px; }
+.rows { list-style: none; margin: 0; padding: 0; }

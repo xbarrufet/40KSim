@@ -3,6 +3,7 @@ import { AlertTriangle, Plus } from 'lucide-react'
 import { useCatalog } from '../data/useCatalog'
 import { getBaseDataCount, getConfirmedUnitDataCount, getFactionsWithoutUnits, syncUnitCatalog } from '../data/db'
 import { upsertFaction } from '../data/supabase'
+import styles from './FactionsView.module.css'
 
 interface FactionsViewProps {
   onSelectFaction: (faction: { slug: string; name: string }) => void
@@ -25,7 +26,7 @@ export function FactionsView({ onSelectFaction }: FactionsViewProps) {
       </div>
 
       {catalogState.status === 'error' && (
-        <div className="catalog-alert" role="alert">
+        <div className={styles.alert} role="alert">
           <AlertTriangle size={17} />
           <span>{catalogState.message}</span>
         </div>
@@ -66,9 +67,9 @@ function FactionCategories({
   return (
     <>
       {categories.map((category) => (
-        <section key={category} className="faction-category">
+        <section key={category} className={styles.category}>
           <h2>{category.toUpperCase()}</h2>
-          <div className="faction-grid">
+          <div className={styles.grid}>
             {factions
               .filter((f) => (f.category ?? 'Facciones') === category)
               .map((faction) => (
@@ -96,17 +97,17 @@ function FactionCard({ faction, onSelect }: { faction: FactionData; onSelect: ()
   }, [faction.slug])
 
   return (
-    <button type="button" className="faction-card" onClick={onSelect}>
+    <button type="button" className={styles.card} onClick={onSelect}>
       {faction.icon && !iconError && (
         <img
-          className="faction-icon"
+          className={styles.icon}
           src={faction.icon}
           alt=""
           onError={() => setIconError(true)}
         />
       )}
-      <span className="faction-name">{faction.name}</span>
-      <span className="faction-counts">{baseCount} base / {unitDataCount} processed</span>
+      <span className={styles.name}>{faction.name}</span>
+      <span className={styles.counts}>{baseCount} base / {unitDataCount} processed</span>
     </button>
   )
 }

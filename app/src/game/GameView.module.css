@@ -1,0 +1,4 @@
+.list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.row { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 14px 16px; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 2px; text-align: left; font: inherit; cursor: pointer; }
+.row:hover { border-color: var(--olive); }
+.rowName { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 600; }

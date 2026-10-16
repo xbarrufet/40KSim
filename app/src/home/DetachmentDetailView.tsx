@@ -7,6 +7,7 @@ import type {
 } from '../data/schema'
 import { FormattedAbilityText } from './FormattedAbilityText'
 import { CategorySelect, EffectFields, defaultEffectForCategory } from './EffectEditor'
+import styles from './DetachmentDetailView.module.css'
 
 interface DetachmentDetailViewProps {
   faction: { slug: string; name: string }
@@ -79,7 +80,7 @@ export function DetachmentDetailView({ faction, ownerFactionSlug, detachmentSlug
     try {
       await upsertDetachmentData(ownerFactionSlug, detachmentSlug, {
         tag: 'CONFIRMED',
-        data: rawData,
+        data: rawData as unknown as Record<string, unknown>,
         enhancements,
       })
       setTag('CONFIRMED')
@@ -145,22 +146,22 @@ export function DetachmentDetailView({ faction, ownerFactionSlug, detachmentSlug
         </button>
         <h1>{detachmentName}</h1>
         <span className={`status-light is-${tag === 'CONFIRMED' ? 'green' : tag === 'AI_PROPOSED' ? 'amber' : 'red'}`} />
-        {ownerFactionSlug !== faction.slug && <span style={{ fontSize: '0.65rem', opacity: 0.5 }}>heredado</span>}
-        <span style={{ fontSize: '0.75rem', opacity: 0.6 }}>{rawData.pointsCost ?? 0} CP</span>
+        {ownerFactionSlug !== faction.slug && <span className={styles.inherited}>heredado</span>}
+        <span className={styles.cpLabel}>{rawData.pointsCost ?? 0} CP</span>
       </div>
 
       {error && <p className="board-alert">{error}</p>}
 
       {/* Detachment Rule */}
-      <div style={{ padding: '0 1rem' }}>
+      <div className={styles.content}>
         <h2 className="unit-cat-header">REGLA DE DETACHMENT</h2>
         {rules.map((rule) => (
-          <div key={rule.id} style={{ marginBottom: '1rem' }}>
-            <h3 style={{ fontSize: '0.9rem', marginBottom: '0.25rem' }}>{rule.name}</h3>
+          <div key={rule.id} className={styles.ruleBlock}>
+            <h3 className={styles.ruleTitle}>{rule.name}</h3>
             {rule.components
               .filter((c) => c.type === 'text' && c.textContent)
               .map((c, i) => (
-                <div key={i} className="ability-text-block">
+                <div key={i} className={styles.abilityTextBlock}>
                   <FormattedAbilityText text={c.textContent!} />
                 </div>
               ))}
@@ -168,14 +169,14 @@ export function DetachmentDetailView({ faction, ownerFactionSlug, detachmentSlug
         ))}
 
         {/* Stratagems */}
-        <h2 className="unit-cat-header" style={{ marginTop: '1.5rem' }}>STRATAGEMS ({stratagems.length})</h2>
+        <h2 className={`unit-cat-header ${styles.sectionGap}`}>STRATAGEMS ({stratagems.length})</h2>
         {stratagems.map((strat) => (
-          <div key={strat.id} style={{ marginBottom: '1rem', borderLeft: '3px solid var(--border)', paddingLeft: '0.75rem' }}>
-            <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'baseline', marginBottom: '0.25rem' }}>
-              <strong style={{ fontSize: '0.85rem' }}>{strat.name}</strong>
-              <span style={{ fontSize: '0.75rem', opacity: 0.6 }}>{strat.cpCost} CP · {strat.phases.join(', ')}</span>
+          <div key={strat.id} className={styles.stratagemBlock}>
+            <div className={styles.stratagemHeader}>
+              <strong className={styles.stratagemName}>{strat.name}</strong>
+              <span className={styles.stratagemMeta}>{strat.cpCost} CP · {strat.phases.join(', ')}</span>
             </div>
-            <div style={{ fontSize: '0.8rem' }}>
+            <div className={styles.stratagemBody}>
               <div><strong>When:</strong> <FormattedAbilityText text={strat.whenRules} /></div>
               <div><strong>Target:</strong> <FormattedAbilityText text={strat.targetRules} /></div>
               <div><strong>Effect:</strong> <FormattedAbilityText text={strat.effectRules} /></div>
@@ -184,52 +185,52 @@ export function DetachmentDetailView({ faction, ownerFactionSlug, detachmentSlug
         ))}
 
         {/* Enhancements */}
-        <h2 className="unit-cat-header" style={{ marginTop: '1.5rem' }}>ENHANCEMENTS ({rawEnhancements.length})</h2>
+        <h2 className={`unit-cat-header ${styles.sectionGap}`}>ENHANCEMENTS ({rawEnhancements.length})</h2>
         {rawEnhancements.map((rawEnh, rawIdx) => {
           const structured = enhancements?.[rawIdx] ?? null
           const isExpanded = expandedEnh === rawIdx
 
           return (
-            <div key={rawEnh.id} style={{ marginBottom: '1.5rem', border: '1px solid var(--border)', borderRadius: '4px', padding: '0.75rem' }}>
+            <div key={rawEnh.id} className={styles.enhancementBlock}>
               <div
-                style={{ display: 'flex', gap: '0.5rem', alignItems: 'baseline', cursor: 'pointer' }}
+                className={styles.enhancementHeader}
                 onClick={() => setExpandedEnh(isExpanded ? null : rawIdx)}
               >
-                <strong style={{ fontSize: '0.85rem' }}>{rawEnh.name}</strong>
-                <span style={{ fontSize: '0.75rem', opacity: 0.6 }}>{rawEnh.points} pts · {rawEnh.enhancementType} · limit {rawEnh.limit}</span>
-                <span style={{ marginLeft: 'auto', fontSize: '0.75rem' }}>{isExpanded ? '▼' : '▶'}</span>
+                <strong className={styles.enhancementName}>{rawEnh.name}</strong>
+                <span className={styles.enhancementMeta}>{rawEnh.points} pts · {rawEnh.enhancementType} · limit {rawEnh.limit}</span>
+                <span className={styles.enhancementToggle}>{isExpanded ? '▼' : '▶'}</span>
               </div>
 
               {/* Raw text always visible */}
-              <div className="ability-text-block" style={{ fontSize: '0.8rem', marginTop: '0.5rem' }}>
+              <div className={styles.enhancementRawText}>
                 <FormattedAbilityText text={rawEnh.rules} />
               </div>
 
               {isExpanded && structured && (
-                <div style={{ marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid var(--border)' }}>
-                  <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.5rem' }}>
+                <div className={styles.enhancementStructured}>
+                  <div className={styles.eligibility}>
                     Eligibilidad: {structured.eligibility.keywords.length > 0 ? structured.eligibility.keywords.join(', ') : 'Cualquiera'}
                     {structured.eligibility.excludedKeywords.length > 0 && ` (excluye: ${structured.eligibility.excludedKeywords.join(', ')})`}
                   </div>
 
                   {/* Base effects */}
-                  <div style={{ marginBottom: '0.5rem' }}>
-                    <strong style={{ fontSize: '0.8rem' }}>Efectos base:</strong>
+                  <div>
+                    <strong className={styles.effectsLabel}>Efectos base:</strong>
                     {structured.effects.map((effect, effIdx) => (
-                      <div key={effIdx} className="structuring-effect-row" style={{ display: 'flex', gap: '0.5rem', alignItems: 'flex-start', marginTop: '0.25rem', flexWrap: 'wrap' }}>
+                      <div key={effIdx} className={styles.effectRowInline}>
                         <CategorySelect compact value={effect.category} onChange={(cat) => updateEffect(rawIdx, effIdx, defaultEffectForCategory(cat))} />
                         <EffectFields effect={effect} onChange={(e) => updateEffect(rawIdx, effIdx, e)} compact />
-                        <button type="button" onClick={() => removeEffect(rawIdx, effIdx)} style={{ fontSize: '0.75rem', color: 'var(--danger)' }}>×</button>
+                        <button type="button" className={styles.removeEffectBtn} onClick={() => removeEffect(rawIdx, effIdx)}>×</button>
                       </div>
                     ))}
-                    <button type="button" onClick={() => addEffect(rawIdx)} style={{ fontSize: '0.75rem', marginTop: '0.25rem' }}>+ Efecto</button>
+                    <button type="button" className={styles.addEffectBtn} onClick={() => addEffect(rawIdx)}>+ Efecto</button>
                   </div>
 
                 </div>
               )}
 
               {isExpanded && !structured && (
-                <p style={{ fontSize: '0.8rem', opacity: 0.6, marginTop: '0.5rem' }}>
+                <p className={styles.noStructured}>
                   Sin datos estructurados. Ejecuta <code>auto_structure_enhancements.py</code> y vuelve a subir.
                 </p>
               )}
@@ -238,7 +239,7 @@ export function DetachmentDetailView({ faction, ownerFactionSlug, detachmentSlug
         })}
 
         {/* Save button */}
-        <div style={{ marginTop: '1.5rem', marginBottom: '2rem', display: 'flex', gap: '0.5rem' }}>
+        <div className={styles.saveBar}>
           <button
             type="button"
             className="confirm-btn"

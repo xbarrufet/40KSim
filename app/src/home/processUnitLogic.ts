@@ -1,13 +1,16 @@
 import type {
   ArmyListEntry,
-  Frequency,
-  Phase,
   Effect,
+  Frequency,
+  MortalWoundsHits,
   OtherAbility,
+  Phase,
   RawAbility,
   StructuredAbility,
+  TargetCondition,
   UnitDataAbility,
   WargearEntry,
+  WargearOption,
   WeaponProfileData,
 } from '../data/schema'
 
@@ -148,4 +151,64 @@ export function splitWeaponProfiles(wargear: WargearEntry[]): { ranged: WeaponRo
   }
 
   return { ranged, melee }
+}
+
+export async function computeBaseDataHash(baseData: unknown): Promise<string> {
+  const encoded = new TextEncoder().encode(JSON.stringify(baseData))
+  const hashBuffer = await crypto.subtle.digest('SHA-256', encoded)
+  return Array.from(new Uint8Array(hashBuffer))
+    .map((b) => b.toString(16).padStart(2, '0'))
+    .join('')
+}
+
+export const FREQUENCY_LABELS: Record<string, string> = { perPhase: '1/fase', perRound: '1/ronda', perBattle: '1/partida' }
+
+export const PHASE_SHORT_LABELS: Record<string, string> = { ANY: 'Cualq.', MOVEMENT: 'Mov.', SHOOTING: 'Disp.', CHARGE: 'Carga', FIGHT: 'Comb.', COMMAND: 'Mando' }
+
+export const EFFECT_CATEGORY_SHORT_LABELS: Record<string, string> = { statModifier: 'stat', diceModifier: 'tirada', weaponKeyword: 'wkw', unitKeyword: 'ukw', damageMitigation: 'dmgMit', mortalWounds: 'MW', heal: 'heal' }
+
+function describeHits(hits: MortalWoundsHits): string {
+  switch (hits.kind) {
+    case 'notation': return hits.value
+    case 'byStat': return hits.stat
+  }
+}
+
+function describeTargetCondition(tc?: TargetCondition): string {
+  if (!tc || tc.keywords.length === 0) return ''
+  const label = tc.mode === 'excludes' ? 'non-' : 'vs '
+  return ` [${label}${tc.keywords.join('/')}]`
+}
+
+export function describeEffect(effect: Effect): string {
+  switch (effect.category) {
+    case 'statModifier':
+      return `${effect.mode} ${effect.stat}${effect.value !== undefined ? ` ${effect.value}` : ''}${describeTargetCondition(effect.targetCondition)}`
+    case 'diceModifier':
+      return `${effect.action} ${effect.roll}${describeTargetCondition(effect.targetCondition)}`
+    case 'weaponKeyword':
+      return `${effect.keyword}${effect.value ? ` ${effect.value}` : ''} (${effect.weaponTarget})${describeTargetCondition(effect.targetCondition)}`
+    case 'damageMitigation':
+      return `${effect.kind}${effect.value !== undefined ? ` ${effect.value}` : ''}${effect.condition ? ` vs ${effect.condition}` : ''}`
+    case 'mortalWounds': {
+      const res = effect.resolution.kind === 'always' ? '' : ` ${effect.resolution.threshold}+`
+      const unitStr = effect.unitType !== 'ALL' ? ` vs${effect.unitType}` : ''
+      return `MW ${describeHits(effect.hits)}imp${res} →${effect.damagePerSuccess}MW${unitStr}`
+    }
+    case 'unitKeyword':
+      return `${effect.keyword}${effect.value ? ` ${effect.value}` : ''}`
+    case 'heal':
+      return `Curar ${effect.amount ?? '1'}`
+  }
+}
+
+export function formatScope(option: WargearOption): string {
+  const { scope } = option
+  if (scope.role) return scope.role
+  switch (scope.type) {
+    case 'model': return 'Modelo'
+    case 'allModels': return 'Todos los modelos'
+    case 'anyNumber': return 'Cualquier número'
+    case 'ratio': return `${scope.ratio?.count ?? 1} por cada ${scope.ratio?.per ?? 5} modelos`
+  }
 }

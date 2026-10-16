@@ -1,0 +1,23 @@
+.workspace { width: min(1200px, calc(100% - 48px)); }
+.grid { display: grid; grid-template-columns: minmax(260px, 340px) 1fr; gap: 24px; align-items: start; }
+.roster { padding: 16px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; max-height: calc(100vh - 220px); overflow-y: auto; }
+.rosterCategory { margin-bottom: 18px; }
+.rosterCategory:last-child { margin-bottom: 0; }
+.rosterCategory h2 { margin-bottom: 8px; color: var(--muted); font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.rosterRows { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.rosterRow { width: 100%; min-height: 44px; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 10px 12px; color: var(--ink); background: #20262d; border: 1px solid var(--line); border-radius: 4px; text-align: left; font: inherit; cursor: pointer; transition: background-color 0.1s, border-color 0.1s; }
+.rosterRow:hover, .rosterRow:active { background: #262f38; border-color: var(--line); }
+.rosterRowSelected { background: #1c2733; border-color: var(--olive); border-left: 3px solid var(--olive); }
+.rosterRowMain { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.rosterRowName { font-family: var(--heading); font-size: 14px; font-weight: 600; }
+.rosterRowPoints { color: var(--muted); font-family: var(--mono); font-size: 12px; font-weight: 700; white-space: nowrap; }
+.rosterRowMeta { display: flex; flex-wrap: wrap; gap: 8px; color: var(--muted); font-family: var(--mono); font-size: 12px; }
+.rosterRowAttachment { color: var(--olive); }
+.panel { min-width: 0; }
+.entryPanelTitle { margin-bottom: 6px; font-family: var(--heading); color: var(--ink); font-size: 24px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; }
+.noDatasheetNotice { color: var(--muted); font-size: 13px; font-style: italic; }
+
+@media (max-width: 1023px) {
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .roster { max-height: none; }
+}

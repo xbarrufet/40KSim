@@ -8,6 +8,7 @@ import { DetachmentsView } from './DetachmentsView'
 import { ArmyRulesView } from './ArmyRulesView'
 import { UploadModal } from './UploadModal'
 import { ProposalsImportModal } from './ProposalsImportModal'
+import styles from './UnitsView.module.css'
 
 interface UnitsViewProps {
   faction: { slug: string; name: string }
@@ -191,7 +192,7 @@ export function UnitsView({ faction, onBack }: UnitsViewProps) {
             <button type="button" className="upload-btn" onClick={handleExport} disabled={exporting} title="Descargar backup">
               <Download size={16} />
             </button>
-            <label className="upload-btn" title="Restaurar backup" style={{ cursor: importing ? 'not-allowed' : 'pointer' }}>
+            <label className={`upload-btn${importing ? ` ${styles.disabledUpload}` : ''}`} title="Restaurar backup">
               <Upload size={16} />
               <input type="file" accept=".json" onChange={handleRestoreFile} disabled={importing} hidden />
             </label>
@@ -199,7 +200,7 @@ export function UnitsView({ faction, onBack }: UnitsViewProps) {
         )}
       </div>
 
-      <nav className="faction-subtabs">
+      <nav className={styles.subtabs}>
         <button type="button" className={subtab === 'datasheets' ? 'active' : ''} onClick={() => setSubtab('datasheets')}>
           DATASHEETS
         </button>
@@ -220,7 +221,7 @@ export function UnitsView({ faction, onBack }: UnitsViewProps) {
             </p>
           )}
 
-          <div className="unit-columns">
+          <div className={styles.columns}>
             {columns.map((col, colIdx) => (
               <div key={colIdx}>
                 {col.map((item, itemIdx) =>
@@ -270,7 +271,7 @@ export function UnitsView({ faction, onBack }: UnitsViewProps) {
                 <h2>Restaurar backup</h2>
                 <p>Facción: <strong>{backupToConfirm.factionSlug}</strong></p>
                 <p>Exportado: {new Date(backupToConfirm.exportedAt).toLocaleString()}</p>
-                <ul style={{ margin: '1rem 0', paddingLeft: '1.2rem' }}>
+                <ul className={styles.backupList}>
                   <li>{backupToConfirm.units.length} unidades</li>
                   <li>{backupToConfirm.baseData.length} base data</li>
                   <li>{backupToConfirm.unitData.length} habilidades estructuradas</li>

@@ -1,0 +1,14 @@
+.panel { padding: 20px 24px; background: var(--panel); border: 1px solid var(--line); }
+.toolbar { display: flex; justify-content: flex-end; margin-bottom: 14px; }
+.addBtn { width: 32px; height: 32px; display: grid; place-items: center; color: var(--on-accent); background: var(--olive); border: 1px solid var(--olive); border-radius: 2px; cursor: pointer; }
+.empty { color: var(--muted); font-size: 13px; }
+.tableWrap { overflow-x: auto; }
+.table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 13px; }
+.table th, .table td { padding: 10px; text-align: left; border-bottom: 1px solid #eae9e0; }
+.table th { color: var(--muted); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; }
+.listRow { cursor: pointer; }
+.listRow:hover td { background: #262f38; }
+.dateCol { width: 160px; }
+.actionsCol { width: 44px; text-align: right; }
+.deleteBtn { width: 32px; height: 32px; display: grid; place-items: center; flex-shrink: 0; color: var(--muted); background: none; border: 1px solid #ddded0; border-radius: 2px; cursor: pointer; }
+.deleteBtn:hover { color: var(--rust); border-color: var(--rust); }

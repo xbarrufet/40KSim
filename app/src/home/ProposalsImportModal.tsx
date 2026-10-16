@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, type DragEvent, type ChangeEvent } from 'r
 import { X } from 'lucide-react'
 import { getStructuredAbilitiesData, putStructuredAbilitiesData } from '../data/db'
 import type { StructuredAbilitiesData } from '../data/schema'
+import modalStyles from './ProposalsImportModal.module.css'
 
 interface ProposalsImportModalProps {
   factionSlug: string
@@ -121,13 +122,13 @@ export function ProposalsImportModal({ factionSlug, onClose, onImported }: Propo
           onDragOver={(e) => { e.preventDefault(); setDragging(true) }}
           onDragLeave={() => setDragging(false)}
         >
-          <label style={{ cursor: 'pointer', display: 'block' }}>
-            <p style={{ margin: 0 }}>Arrastra <code>structuring_proposals.json</code> o un archivo de la carpeta <code>ai-abilities/</code></p>
-            <p style={{ margin: '4px 0 0', fontSize: 11 }}>o haz clic para seleccionar</p>
+          <label className={modalStyles.dropLabel}>
+            <p className={modalStyles.dropText}>Arrastra <code>structuring_proposals.json</code> o un archivo de la carpeta <code>ai-abilities/</code></p>
+            <p className={modalStyles.dropHint}>o haz clic para seleccionar</p>
             <input
               type="file"
               accept=".json"
-              style={{ display: 'none' }}
+              className={modalStyles.hiddenInput}
               onChange={handleFileInput}
             />
           </label>

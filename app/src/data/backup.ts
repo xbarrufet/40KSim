@@ -106,8 +106,8 @@ export async function importFactionBackup(factionSlug: string, backup: FactionBa
   for (const ud of backup.unitData) {
     await upsertUnitData(factionSlug, ud.unitSlug, {
       tag: ud.tag as 'PENDING' | 'AI_PROPOSED' | 'CONFIRMED',
-      abilities: ud.abilities as never[],
-      rawAbilities: ud.rawAbilities as never[],
+      abilities: ud.abilities,
+      rawAbilities: ud.rawAbilities,
       baseDataHash: ud.baseDataHash,
     })
   }
@@ -115,7 +115,7 @@ export async function importFactionBackup(factionSlug: string, backup: FactionBa
   for (const ld of backup.loadoutData) {
     await upsertLoadoutData(factionSlug, ld.unitSlug, {
       tag: ld.tag as 'PENDING' | 'AI_PROPOSED' | 'CONFIRMED',
-      options: ld.options as never[],
+      options: ld.options,
     })
   }
 
@@ -123,7 +123,7 @@ export async function importFactionBackup(factionSlug: string, backup: FactionBa
     await upsertDetachmentData(factionSlug, dd.detachmentSlug, {
       tag: dd.tag as 'SCRAPED' | 'PENDING' | 'AI_PROPOSED' | 'CONFIRMED',
       data: dd.data,
-      enhancements: dd.enhancements as never[] | null,
+      enhancements: dd.enhancements,
     })
   }
 }

@@ -1,0 +1,4 @@
+.content { padding: 0 1rem; }
+.emptyMessage { padding: 2rem; opacity: 0.6; }
+.inherited { font-size: 0.65rem; opacity: 0.5; }
+.detMeta { font-size: 0.75rem; opacity: 0.6; }

@@ -1,0 +1,13 @@
+.datasheetTable { width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 15px; }
+.datasheetTable th, .datasheetTable td { padding: 10px; text-align: left; border-bottom: 1px solid var(--line); }
+.datasheetTable th { color: var(--muted); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; }
+.datasheetTable th:not(:first-child), .datasheetTable td:not(:first-child) { text-align: center; }
+.weaponOwnerCell { color: var(--muted); }
+.weaponTable td { border-bottom: none; }
+.weaponTable .abilityChipRow td { border-bottom: none; }
+.weaponOwnerDivider td { border-top: 2px solid var(--line); }
+.baseSizeTag { color: var(--muted); font-size: 12px; font-weight: 500; }
+.abilityChipRow td { padding-top: 0; border-bottom: 1px solid var(--line); }
+.costsList { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; font-family: var(--mono); font-size: 13px; }
+.costsList li { display: flex; align-items: center; gap: 10px; }
+.pointsTag { padding: 2px 8px; color: var(--ink); background: #262e37; border-radius: 2px; font-family: var(--mono); font-size: 12px; font-weight: 700; }

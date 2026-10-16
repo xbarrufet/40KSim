@@ -1,0 +1,26 @@
+.content { padding: 0 1rem; }
+.inherited { font-size: 0.65rem; opacity: 0.5; }
+.cpLabel { font-size: 0.75rem; opacity: 0.6; }
+.ruleBlock { margin-bottom: 1rem; }
+.ruleTitle { font-size: 0.9rem; margin-bottom: 0.25rem; }
+.abilityTextBlock { margin-bottom: 0.5rem; }
+.stratagemBlock { margin-bottom: 1rem; border-left: 3px solid var(--line); padding-left: 0.75rem; }
+.stratagemHeader { display: flex; gap: 0.5rem; align-items: baseline; margin-bottom: 0.25rem; }
+.stratagemName { font-size: 0.85rem; font-weight: 700; }
+.stratagemMeta { font-size: 0.75rem; opacity: 0.6; }
+.stratagemBody { font-size: 0.8rem; }
+.enhancementBlock { margin-bottom: 1.5rem; border: 1px solid var(--line); border-radius: 4px; padding: 0.75rem; }
+.enhancementHeader { display: flex; gap: 0.5rem; align-items: baseline; cursor: pointer; }
+.enhancementName { font-size: 0.85rem; font-weight: 700; }
+.enhancementMeta { font-size: 0.75rem; opacity: 0.6; }
+.enhancementToggle { margin-left: auto; font-size: 0.75rem; }
+.enhancementRawText { font-size: 0.8rem; margin-top: 0.5rem; }
+.enhancementStructured { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--line); }
+.eligibility { font-size: 0.75rem; opacity: 0.6; margin-bottom: 0.5rem; }
+.effectsLabel { font-size: 0.8rem; font-weight: 700; }
+.effectRowInline { display: flex; gap: 0.5rem; align-items: flex-start; margin-top: 0.25rem; flex-wrap: wrap; }
+.removeEffectBtn { font-size: 0.75rem; color: var(--rust); background: none; border: none; cursor: pointer; padding: 0; }
+.addEffectBtn { font-size: 0.75rem; margin-top: 0.25rem; background: none; border: none; cursor: pointer; padding: 0; color: var(--muted); }
+.noStructured { font-size: 0.8rem; opacity: 0.6; margin-top: 0.5rem; }
+.saveBar { margin-top: 1.5rem; margin-bottom: 2rem; display: flex; gap: 0.5rem; }
+.sectionGap { margin-top: 1.5rem; }
